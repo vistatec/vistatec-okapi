@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2">
+
+<file original="subdoc1" source-language="en" target-language="fr" datatype="xml">
+<body>
+ <trans-unit id="f1-sd1-1" resname="f1-sd1-1">
+  <source xml:lang="en">Source TU f1-sd1-1</source>
+  <target xml:lang="fr">Target TU f1-sd1-1</target>
+ </trans-unit>
+ <trans-unit id="f1-sd1-2" resname="f1-sd1-2">
+  <source xml:lang="en">Source TU f1-sd1-2</source>
+  <target xml:lang="fr">Target TU f1-sd1-2</target>
+ </trans-unit>
+
+ <group id="f1-sd1-g1" resname="f1-sd1-g1">
+  <trans-unit id="f1-sd1-g1-1" resname="f1-sd1-g1-1">
+   <source xml:lang="en">Source TU f1-sd1-g1-1</source>
+   <target xml:lang="fr">Target TU f1-sd1-g1-1</target>
+  </trans-unit>
+ </group>
+
+ <trans-unit id="f1-sd1-3" resname="f1-sd1-3">
+  <source xml:lang="en">Source TU f1-sd1-3</source>
+  <target xml:lang="fr">Target TU f1-sd1-3</target>
+ </trans-unit>
+
+</body>
+</file>
+
+<file original="subdoc2" source-language="en" target-language="fr" datatype="xml">
+<body>
+ <trans-unit id="f1-sd2-1" resname="f1-sd2-1">
+  <source xml:lang="en">Source TU f1-sd2-1</source>
+  <target xml:lang="fr">Target TU f1-sd2-1</target>
+ </trans-unit>
+</body>
+</file>
+
+<file original="subdoc3" source-language="en" target-language="fr" datatype="xml">
+<body>
+ <group id="f1-sd3-g1" resname="f1-sd3-g1">
+  <group id="f1-sd3-g1-g1" resname="f1-sd3-g1-g1">
+   <trans-unit id="f1-sd3-g1-g1-1" resname="f1-sd3-g1-g1-1">
+    <source xml:lang="en">Source TU f1-sd3-g1-g1-1</source>
+    <target xml:lang="fr">Target TU f1-sd3-g1-g1-1</target>
+   </trans-unit>
+  </group>
+ </group>
+</body>
+</file>
+
+</xliff>

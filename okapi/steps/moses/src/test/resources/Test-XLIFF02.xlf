@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"
+ xmlns:x="someNamespace">
+<file original="test.html" source-language="en" target-language="fr" datatype="x-test">
+<body>
+
+<trans-unit id="1" x:attr="someValue">
+<source xml:lang="en">Text in entry one.</source>
+</trans-unit>
+
+<?some PI to preserve ?>
+<!-- Some comments that should be preserved too.-->
+
+<trans-unit id="2">
+<source xml:lang="en" x:attr="someValue">Sentence one. Sentence two.</source>
+<seg-source><mrk mtype="seg" mid="1">Sentence one.</mrk> <mrk mtype="seg" mid="2">Sentence two.</mrk></seg-source>
+</trans-unit>
+
+<trans-unit id="3">
+<source xml:lang="en">Text in entry one.</source>
+<alt-trans x:attr="someValue">
+ <source>The text in entry one.</source>
+ <target>Le texte de la première entrée.</target>
+</alt-trans>
+</trans-unit>
+
+<trans-unit id="4">
+<source xml:lang="en">Sentence one bis. Sentence two bis.</source>
+<seg-source><mrk mtype="seg" mid="1">Sentence one bis.</mrk> <mrk mtype="seg" mid="2">Sentence two bis.</mrk></seg-source>
+<alt-trans mid="1">
+ <source>The sentence one.</source>
+ <target>La première phrase.</target>
+</alt-trans>
+<alt-trans mid="2">
+ <source>The sentence two.</source>
+ <target>La seconde phrase.</target>
+</alt-trans>
+</trans-unit>
+
+</body>
+</file>
+</xliff>

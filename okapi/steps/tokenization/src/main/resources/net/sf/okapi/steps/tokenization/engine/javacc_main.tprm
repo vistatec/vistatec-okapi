@@ -1,0 +1,11 @@
+#v1
+RuleCount.i=1
+
+Rule0.name=Company
+Rule0.description=Extracts company names like AT&T and P&G 
+Rule0.inTokens=
+Rule0.outTokens=COMPANY
+Rule0.userTokens=
+Rule0.lexemId.i=5
+Rule0.pattern=
+Rule0.languages=

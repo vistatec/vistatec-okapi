@@ -1,0 +1,60 @@
+# TEST UTF-8 without BOM, DOS Linebreaks
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-25 15:39-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Text with an approved translation %s"
+msgstr "Texte avec une traducion approuvée %s"
+
+#, fuzzy, c-format
+msgid "Text with non-approved translation %s"
+msgstr "Text avec une traduction non-approuvée %s"
+
+#, c-format, fuzzy
+msgid "Text 2 with non-approved translation %s"
+msgstr "Text 2 avec une traduction non-approuvée %s et d'autre codes %d."
+
+#, c-format
+msgid "Text without translation"
+msgstr ""
+
+msgid "Special chars: \"=quot, &=amp, <=lt, >=gt, '=apos, Ą=U+0104"
+msgstr "Characters spéciaux : \"=quot, &=amp, <=lt, >=gt, '=apos, Ą=U+0104"
+
+msgid "%d file"
+msgid_plural "%d files"
+msgstr[0]
+"%d fichier"
+msgstr[1]
+"%d fichiers"
+
+#, fuzzy, c-format
+msgid "%d file left to trash"
+msgid_plural "%d files left to trash"
+msgstr[0] "Encore %d fichier à détruire"
+msgstr[1] "Encore %d fichiers à détruire"
+
+msgid "%d directory left"
+msgid_plural "%d directories left"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "bslashes=\\\\"
+msgstr "bslashes=\\\\"
+
+msgid "quoted-bslash=\"\\\""
+msgstr "quoted-bslash=\"\\\""

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-strict.xsd">
+    <file original="\Test01.xml" source-language="en" target-language="fr" datatype="xml" okp:settings="okf_xml@P%P3DDAFFAE" okp:encoding="utf-8">
+        <header>
+            <tool tool-id="P25CBF2C2" tool-name="Okapi.Utilities.Set01" tool-version="1.0.21.0" />
+        </header>
+        <body>
+            <trans-unit id="1">
+                <source xml:lang="en">BlackTerm4</source>
+                <target xml:lang="fr">Texte de l'attribute con BlackTerm4</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source xml:lang="en">Source sentence with words.</source>
+                <target xml:lang="fr">Target BlackTerm1 also with BlackTerm1.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

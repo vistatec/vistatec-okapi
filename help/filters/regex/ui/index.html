@@ -1,0 +1,286 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ID-Based Alignment</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Regex Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#actions">Actions</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Regex_Filter">http://okapiframework.org/wiki/index.php?title=Regex_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The Regex Filter is an Okapi component that implements the <code>IFilter</code> 
+interface for any type of text-based formats where the 
+text can be captured using regular expressions. The filter is implemented in the class <code>
+net.sf.okapi.filters.regex.RegexFilter</code> of the Okapi library.</p>
+<p>The filter can work with any text-based document. You define rules with 
+regular expressions that indicate what part of the document to process. Each 
+rule is associated with an action telling the filter what to do with the parts 
+corresponding to its regular expression. Capturing groups in the regular 
+expression allow you have the action do different things with sections of the 
+matched text.</p>
+<p>For example, if you have the following input document:</p>
+<pre>[ID1]=Text for ID1
+[ID2]:Text for ID2</pre>
+<p>...and a rule with the following regular expression:</p>
+<pre>^\[(.*?)](=|:)(.*?)$</pre>
+<p>...and that rule is set to the action <cite>Extract the content</cite> and 
+has the capturing group 3 assigned to the source group and the capturing group 1 
+assigned to the identifier group.</p>
+<p>Then:</p>
+<ul>
+	<li>Each line in the input document will match the rule.</li>
+	<li>A new text unit will be created for each match, with its name set to the 
+	content of the capturing group 1, and its source text set to the content of 
+	the capturing group 3.</li>
+</ul>
+<pre>[<span style="background-color: #FFFF00">ID1</span>]=<span style="background-color: #00FF00">Text for ID1</span>
+[<span style="background-color: #FFFF00">ID2</span>]:<span style="background-color: #00FF00">Text for ID2</span>
+
+^\[<span style="background-color: #FFFF00">(.*?)</span>](=|:)<span style="background-color: #00FF00">(.*?)</span>$</pre>
+<p>And if you were to represent the parsed information in XLIFF, it would look 
+something like this:</p>
+<pre>...
+&lt;body&gt;
+ &lt;trans-unit id=&quot;1&quot; resname=&quot;<span style="background-color: #FFFF00">ID1</span>&quot; xml:space=&quot;preserve&quot;&gt;
+  &lt;source xml:lang=&quot;EN-US&quot;&gt;<span style="background-color: #00FF00">Text for ID1</span>&lt;/source&gt;
+ &lt;/trans-unit&gt;
+ &lt;trans-unit id=&quot;2&quot; resname=&quot;<span style="background-color: #FFFF00">ID2</span>&quot; xml:space=&quot;preserve&quot;&gt;
+  &lt;source xml:lang=&quot;EN-US&quot;&gt;<span style="background-color: #00FF00">Text for ID2</span>&lt;/source&gt;
+ &lt;/trans-unit&gt;
+&lt;/body&gt;
+...</pre>
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	opening the document.</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>The filter does not recognize any encoding declarations in the document, and 
+therefore cannot update them.</p>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Parsing</h3>
+<p>Here is how an input document is parsed:</p>
+<ol>
+	<li>The filter sets the current search position at the top of the document.</li>
+	<li>It searches for the first possible rule that has a match from a current 
+	position.</li>
+	<li>It takes the match and applies whatever action is associated with the 
+	rule.</li>
+	<li>It moves the current search position at the end of the match.</li>
+	<li>The steps 2, 3, and 4 are repeated until no more matches are found or 
+	the search position reaches the end of the document.</li>
+</ol>
+<h2><a name="actions"></a>Actions</h2>
+<p dir="ltr">Each rule is associated with one of several possible actions. 
+Depending on the action, you can associate different parts of the text that 
+matches the rule with a specific role. This is done with the capturing groups. 
+The source group, the target group, the identifier group and the note group.</p>
+<p dir="ltr">A capturing group is a part of the regular expression between 
+parentheses. The capturing group 0 is the whole match, then other capturing 
+groups are numbered by counting their opening parentheses from left to right. 
+For example, in the expression <code>(A)(B(C))</code> there are three groups:</p>
+<ol dir="ltr">
+	<li dir="ltr">
+	<p dir="ltr"><code>(A)</code></p></li>
+	<li dir="ltr">
+	<p dir="ltr"><code>(B(C))</code></p></li>
+	<li dir="ltr">
+	<p dir="ltr"><code>(C)</code></p></li>
+</ol>
+<p dir="ltr">The following table summarizes what each action does, and what the 
+different groups it may use:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table1">
+	<tr>
+		<th align="left" valign="top" colspan="2">&nbsp;</th>
+		<th align="left" valign="top">Source</th>
+		<th align="left" valign="top">Target</th>
+		<th align="left" valign="top">Identifier</th>
+		<th align="left" valign="top">Note</th>
+	</tr>
+	<tr>
+		<th align="left" valign="top">Extract the strings in the source group</th>
+		<td align="left" valign="top">Sends a <code>TEXT_UNIT</code> event for 
+		each string found in the source capturing group.</td>
+		<td align="left" valign="top">Must be defined. It is where the string or 
+		strings to extract are taken from.</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">If defined: It is the name for the first text 
+		unit. If there is more than one string to extract, a sequential number 
+		(starting at 2) is appended to it, and used as the name of the other 
+		text units.</td>
+		<td align="left" valign="top">If defined: It is the <i>note</i> property 
+		associated to each text unit corresponding to each extracted string.</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">Extract the content of the source group</th>
+		<td align="left" valign="top">Sends a single <code>TEXT_UNIT</code> 
+		event based on the 
+		different capturing groups.</td>
+		<td align="left" valign="top">Must be defined. It is the source text of 
+		the text unit.</td>
+		<td align="left" valign="top">If defined:&nbsp;It is the target text of 
+		the text unit.</td>
+		<td align="left" valign="top">If defined: It is the name of the text 
+		unit.</td>
+		<td align="left" valign="top">If defined: It is the <i>note</i> property 
+		associated to the text unit.</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">Treat the source group as comment</th>
+		<td align="left" valign="top">
+		<p dir="ltr">Process the source capturing group for localization 
+		directives (if requested) and leaves the content of the whole expression&#39;s 
+		match untouched.</td>
+		<td align="left" valign="top">Must be defined. It is processed for 
+		localization directives if that option is set.</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">Do not extract</th>
+		<td align="left" valign="top">Leaves the content of the whole expression&#39;s 
+		match untouched.</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top"><a name="startSection"></a>Start a section</th>
+		<td align="left" valign="top">Sends a <code>START_GROUP</code> event. If 
+		the option <cite>Auto-close previous section when a new one starts</cite> 
+		is set, you must not define a corresponding end section. If that option is 
+		not set, you must define a rule to close this section.</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">If defined: It is the name of the section 
+		being opened. A section corresponds to a <code>&lt;group&gt;</code> in XLIFF.</td>
+		<td align="left" valign="top">If defined: It is the note property 
+		associated to the section being opened.</td>
+	</tr>
+	<tr>
+		<th align="left" valign="top">End a section</th>
+		<td align="left" valign="top">Sends an <code>END_GROUP</code> event.</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used</td>
+		<td align="left" valign="top">Not used.</td>
+	</tr>
+</table>
+
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Rules Tab</h3>
+<p><cite>Add</cite> -- Click this button to add a new rule to the list. This 
+opens the <cite><a href="editrule.html">Edit Rule</a></cite> dialog box with the new rule.</p>
+<p><cite>Rename</cite> -- Click this button to rename the rule currently 
+selected. Note that two rules can have the same name, but this is obviously not 
+recommended.</p>
+<p><cite>Remove</cite> -- Click this button to delete the rule currently 
+selected from the list. No confirmation is asked.</p>
+<p><cite>Edit</cite> -- Click this button to edit the rule currently selected. 
+This opens the <cite><a href="editrule.html">Edit Rule</a></cite> dialog box.</p>
+<p><cite>Move Up</cite> -- Click this button to move the rule currently selected 
+up in the list. Rules are evaluated in the order of the list.</p>
+<p><cite>Move Down</cite> -- Click this button to move the rule currently 
+selected down in the list. Rules are evaluated in the order of the list.</p>
+<h4>Rule properties</h4>
+<p><cite>Preserve white spaces</cite> -- Set this option to preserve all white 
+spaces of the extracted text. If this option is not set the extracted content is 
+unwrapped: That is any sequence of consecutive white spaces is replaced by a 
+single space character, and any white space character at the start or the end of 
+the content is trimmed out. White spaces here are: spaces, tabs, carriage 
+returns, and line-feeds.</p>
+<p><cite>Has inline codes</cite> -- Set this option to enable the conversion of 
+some part of the extracted text into inline codes.</p>
+<p><cite>Edit Inline Codes Patterns</cite> -- Click this button to open the 
+<cite>Inline Codes Patterns</cite> dialog box where you can define rules for converting parts 
+of text into inline codes.</p>
+<p><cite>Auto-close previous section when a new one starts</cite> -- Set this 
+option to automatically close any opened section when a new one is starting. 
+Section are defined with the <a href="#startSection"><cite>Start a section</cite> 
+action</a>. This 
+option allows you to define only start of sections. If this option is not set, 
+each start of section must correspond to an end of section.</p>
+<h4>Regular expressions options</h4>
+<p>This set of options are used for all rules defined in the list. If you need 
+to overwrite an option for a given rule, use the <code>(?idmsux-idmsux)</code> 
+construct in the pattern for that rule.</p>
+<p><cite>Dot also matches line-feed</cite> -- Set this option to enable the dot 
+operator to match line-feeds.</p>
+<p><cite>Multi-line</cite> -- Set this option so the expressions <code>^</code> 
+and <code>$</code> match just after or just before, respectively, a line 
+terminator or the end of the input sequence. If this option is not set these 
+expressions only match at the beginning and the end of the entire input 
+sequence.</p>
+<p><cite>Ignore case differences</cite> -- Set this option to ignore differences 
+between letter cases. If this option is set &quot;abc&quot; is seen as identical as &quot;Abc&quot;. 
+If this option is not set, both strings are seen as different.</p>
+<h3>Options Tab</h3>
+<h4>Localization directives</h4>
+<p><cite>Use localization directives when they are present</cite> -- Set this 
+option to enable the filter to recognize localization directives. If this option 
+is not set, any localization directive in the input file will be ignored.</p>
+<p><cite>Extract items outside the scope of localization directives</cite> -- 
+Set this option to extract any translatable item that is not within the scope of 
+a localization directive. Selecting to extract or not outside localization 
+directives allows you to mark up fewer parts of the source document. This option 
+is enabled only when the <cite>Use localization directives when they are present</cite> 
+option is set.</p>
+<h4><a name="OptionsStrings"></a>Strings</h4>
+<p><cite>Extract strings outside the rules</cite> -- Set this option to extract 
+all strings that are outside the scope of all the defined rules. NOT IMPLEMENTED 
+YET.</p>
+<p><cite>Beginning of string</cite> -- Enter the character specifying the start 
+of a string. Entering several characters defines several ways to start a string.</p>
+<p dir="ltr"><cite>End of string</cite> -- Enter the character specifying the 
+end of a string. If you have defined several beginning characters, you must 
+defined an equal number of end characters, and the position of each end 
+character must correspond to the position of its corresponding beginning 
+character.</p>
+<h4>Content type</h4>
+<p><cite>MIME type of the document</cite> -- Enter the MIME type value to use 
+when extracting content with this parameters. The value is used to identify the 
+type of document. It may also change the way the text is written back into the 
+original format. Most of the time <code>text/plain</code> should be fine.</p>
+<p>&nbsp;</p>
+</body>
+</html>

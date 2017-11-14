@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.xsltransform.XSLTransformStep">#v1
+xsltPath=copySourceToTarget.xslt
+paramList=
+useCustomTransformer.b=false
+factoryClass=
+xpathClass=
+passOnOutput.b=true</step>
+<step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.rainbowkit.creation.ExtractionStep">#v1
+writerClass=net.sf.okapi.steps.rainbowkit.xliff.XLIFFPackageWriter
+writerOptions.placeholderMode.b=false
+writerOptions.includeNoTranslate.b=true
+writerOptions.setApprovedAsNoTranslate.b=false
+writerOptions.copySource.b=true
+writerOptions.includeAltTrans.b=true
+writerOptions.includeCodeAttrs.b=true
+writerOptions.includeIts.b=true
+packageName=pack1
+packageDirectory=${inputRootDir}
+sendOutput.b=true
+supportFiles=
+message=
+outputManifest.b=true
+createZip.b=false</step>
+</rainbowPipeline>

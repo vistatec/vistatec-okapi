@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xlf:xliff xmlns:xlf="urn:oasis:names:tc:xliff:document:1.2" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" xmlns:okp="okapi-framework:xliff-extensions" its:version="2.0" version="1.2">
+<xlf:file datatype="x-undefined" okp:inputEncoding="UTF-8" original="word/document.xml" source-language="de" target-language="it">
+<xlf:header><xlf:tool tool-company="24|technology GmbH" tool-id="24t_xliff" tool-name="24|xliff" tool-version="2.0.23.M30"><t4xlf:parameters xmlns:t4xlf="t4xlf:xliff-parameter-extensions"><t4xlf:parameter key="unescapeXmlCharactersInContent" value="false"/>
+<t4xlf:parameter key="ExtractOnlyPinkHighlightedText" value="false"/>
+<t4xlf:parameter key="bPreferenceTranslateWordHeadersFooters" value="true"/><t4xlf:parameter key="ExtractOnlyYellowHighlightedText" value="false"/>
+</t4xlf:parameters></xlf:tool></xlf:header>
+<xlf:body>
+<xlf:trans-unit id="1" xml:space="preserve">
+  <xlf:source xml:lang="de"><xlf:g ctype="bold" equiv-text="" id="1"><xlf:g ctype="bold" equiv-text="" id="2"><xlf:g ctype="bold" equiv-text="" id="3">Wie schützt man sich gegen Erdbeben?</xlf:g></xlf:g></xlf:g></xlf:source>
+  <xlf:seg-source><xlf:g ctype="bold" equiv-text="" id="1"><xlf:g ctype="bold" equiv-text="" id="2"><xlf:g ctype="bold" equiv-text="" id="3"><xlf:mrk mid="0" mtype="seg">Wie schützt man sich gegen Erdbeben?</xlf:mrk></xlf:g></xlf:g></xlf:g></xlf:seg-source>
+  <xlf:target xml:lang="it"><xlf:g ctype="bold" equiv-text="" id="1"><xlf:g ctype="bold" equiv-text="" id="2"><xlf:g ctype="bold" equiv-text="" id="3"><xlf:mrk mid="0" mtype="seg">Wie schützt man sich gegen Erdbeben?</xlf:mrk></xlf:g></xlf:g></xlf:g></xlf:target>
+</xlf:trans-unit>
+</xlf:body>
+</xlf:file>
+</xlf:xliff>

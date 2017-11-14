@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE record SYSTEM "dcr4.5.dtd">
+<record name="test" type="content"><item name="Title"><value>Test</value></item><item name="Body"><value>&lt;table cellspacing="0" bordercolordark="#cc0000" cellpadding="5" width="100%" border="0"&gt;
+&lt;tbody&gt;
+&lt;tr valign="top"&gt;
+&lt;td colspan="3"&gt;
+&lt;h1&gt;Test Content&lt;/h1&gt;
+
+&lt;hr width="100%" color="#cccccc" noshade size="1"&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr valign="top"&gt;
+&lt;td colspan="3"&gt;
+&lt;table cellspacing="0" cellpadding="2" width="100%" border="0"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;h2&gt;&lt;a href="/en_US/images/huge225.gif" target="_blank"&gt;&lt;img height="155" src="/en_US/images/small225.gif" width="170" align="left" border="0"&gt;&lt;/a&gt;Link Text&lt;/h2&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</value></item></record>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Steps - Term Extraction</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr class="head">
+      <td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Steps</h1>
+      <h2 class="head2">Term Extraction Step</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="smalltoc"> - <a href="#overview">Overview</a><br>
+- <a href="#parameters">Parameters</a><br>
+		- <a href="#credits">Credits</a></td>
+      <td class="hmenu">
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+            <td><a href="index.html">Steps</a></td>
+            <td><a href="http://okapiframework.org/devguide/index.html">Developer's
+Guide</a></td>
+            <td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Term_Extraction_Step">http://okapiframework.org/wiki/index.php?title=Term_Extraction_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step generate an output file that contains a list of possible terms 
+found in the source content of the text units it processes.</p>
+<p>Takes: Filter events<span style="background-color: rgb(255, 255, 0);"></span><br>
+Sends: Filter events</p>
+<p>The filter events are send to the next step unchanged.</p>
+<p>No term extraction is done on the entries set as non-translatable.</p>
+<p>The step processes all input documents before creating the list of the 
+candidate terms.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Output path</cite> -- Enter the full path of the tab-delimited file to 
+generate. The file produced is always in UTF-8. It contains one candidate term 
+per line: The number of occurrences in the first column and the term itself in 
+the second column. You can use the variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Open the result file after completion</cite> -- Set this option to 
+automatically open the result file after the process is complete.</p>
+<p><cite>Minimum number of words per term</cite> -- Enter the minimum number of 
+words a sequence of words must have to be retained as a term.</p>
+<p><cite>Maximum number of words per term</cite> -- Enter the maximum number of 
+words a sequence of words must have to be retained as a term. You want to keep 
+this value to a resonable maximum (6 or 7, or less).</p>
+<p><cite>Minimum number of occurrences per term</cite> -- Enter the minimum 
+number of times a given sequence of words must appear the overall text (all 
+input files) to be retained as a term.</p>
+<p><cite>Preserve case differences</cite> -- Set this option to preserve all 
+case differences when computing the sequences of words that may become terms. If 
+this option is set the two words &quot;Term&quot; and &quot;term&quot; are seen as different words, 
+if the option is not set they are seen as the same word.</p>
+<p><cite>Remove entries that seem to be sub-strings of longer entries</cite> -- 
+Set this option to perform an extra process that removes any candidate term that 
+seems to be the sub-sequence of another longer sequence of words.</p>
+<p>Given the following list of possible terms and their occurrence counts:</p>
+<ul>
+	<li>gnu free = 6</li>
+	<li>gnu free document = 6</li>
+	<li>gnu free document license = 5</li>
+</ul>
+<p>The entries retained (and their updated occurrence count) will be:</p>
+<ul>
+	<li>gnu free document = 1</li>
+	<li>gnu free document license = 5</li>
+</ul>
+<p>The entry &quot;gnu free document&quot; is retained because it occurs one more time 
+than &quot;gnu free document license&quot;. This means in one case it stands on 
+its own and not as a 
+sub-sequence of the longer sequences. The entry &quot;gnu free&quot; is removed because it 
+occurs 6 times, which corresponds to sum of the times it can be found as a 
+sub-sequence of another sequence which itself is not a sub-sequence (5 times in &quot;gnu free document license&quot; and 
+once in &quot;gnu free document&quot;).</p>
+<p>Keep in mind that, in some cases, setting this auto-cleaning option may lead to losing valid 
+entries, when some valid entries happend only as sub-sequence of longer less valid 
+entries.</p>
+<p><cite>Sort the results by the number of occurrences</cite> -- Set this option 
+to sort the results by the number of times each term occurs in the input files. 
+If this option is not set the results are listed alphabetically.</p>
+<p><cite>Path of the file with stop words (leave empty for default)</cite> -- 
+Enter the path of the text file containing the list of stop words to use. Leave 
+the path empty to use the default (a list for English). Stop words are words 
+that stop a sequence of words even that sequence has not reach yet the maximum 
+number of words allowed.</p>
+<p><cite>Path of the file with not-start words (leave empty for default)</cite> -- 
+Enter the path of the text file containing the list of not-start words to use. 
+Leave the path empty to use the default (a list for English). Not-start words 
+are words that do not appear at the beginning of a term (but they can appear 
+within a term or at its end).</p>
+<p><cite>Path of the file with not-end words (leave empty for default)</cite> -- 
+Enter the path of the text file containing the list of not-end words to use. 
+Leave the path empty to use the default (a list for English). Not-end words are 
+words that do not appear at the end of a term (but they can appear within a term 
+or at its beginning).</p>
+<h2><a name="credits"></a>Credits</h2>
+<p>Special thanks to Jean-Christophe Hélary, Frank Kuhnke, Jaroslaw Michalak, 
+Alessandra Muzzi, and other people from the Okapi Users Group for helping with 
+improving this utility.</p>
+<p>&nbsp;</p>
+</body>
+</html>

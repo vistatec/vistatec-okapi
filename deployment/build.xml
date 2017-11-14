@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+<project name="All components all distributions" default="all"> 
+
+	<target name="all">
+		<tstamp>
+			<format property="start.timestamp" pattern="dd-MMM-yy HH:mm:ss" />
+		</tstamp>
+		<echo message="Build started: ${start.timestamp}" />
+		
+		<ant dir="maven" />
+		<ant dir="website" />
+		
+		<tstamp>
+			<format property="start.timestamp" pattern="dd-MMM-yy HH:mm:ss" />
+		</tstamp>
+		<tstamp>
+			<format property="end.timestamp" pattern="dd-MMM-yy HH:mm:ss" />
+		</tstamp>
+		<echo message="Build started: ${start.timestamp}" />		
+		<echo message="    Build end: ${end.timestamp}" />		
+	</target>
+
+</project>

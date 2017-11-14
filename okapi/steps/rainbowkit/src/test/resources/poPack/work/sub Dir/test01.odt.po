@@ -1,0 +1,27 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "okpCtx:sd=1:tu=1"
+msgid "This is the <g1>first</g1> paragraph. And it has <g2>two</g2> sentences."
+msgstr "FR This is the <g1>first</g1> paragraph. And it has <g2>two</g2> sentences."
+
+msgctxt "okpCtx:sd=1:tu=2"
+msgid "Third paragraph."
+msgstr "FR Third paragraph."
+
+msgctxt "okpCtx:sd=3:tu=1"
+msgid ""
+"First line of comments.\n"
+"Second line of comments."
+msgstr ""
+"FR First line of comments.\n"
+"Second line of comments."
+
+msgctxt "okpCtx:sd=3:tu=2"
+msgid "Title of the document"
+msgstr "FR Title of the document"
+

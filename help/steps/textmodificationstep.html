@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Text Modification</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Text Modification Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Text_Modification_Step">http://okapiframework.org/wiki/index.php?title=Text_Modification_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step modifies the content of the text units.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+<p>If the text unit is set as non-translatable it is not modified.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Type of change to perform</cite> -- Select a kind of change to apply. 
+Several are available:</p>
+<ul>
+	<li>Keep the original text</li>
+	<li>Replace letters by Xs and digits by Ns.</li>
+	<li>Remove text but keep inline codes.</li>
+	<li>Replace selected ASCII letters by extended characters.</li>
+</ul>
+<p><cite>Add the following prefix</cite> -- Set this option to add a prefix at 
+the start of each text unit. Enter the text of the prefix.</p>
+<p><cite>Add the following suffix</cite> -- Set this option to add a suffix at 
+the end of each text unit. Enter the text of the suffix.</p>
+<p><cite>Append the name of the item</cite> -- Set this option to add the name 
+of each text unit at the end of its value. If the text unit has no name 
+associated, the extraction ID is added instead.</p>
+<p><cite>Append the extraction ID of the item</cite> -- Set this option to add 
+the extraction ID of each text unit at the end of its value. Extraction IDs are 
+filter-specific.</p>
+<p><cite>Marks segments with &#39;[&#39; and &#39;]&#39; delimiters</cite> -- Set this option to 
+add delimiters to the segments in each text unit. The delimiters are 
+just around the text (after the prefix if one is added, and before the item 
+name, extraction ID, and suffix if they are added). If the text unit is not 
+segmented, the delimiters are added at the front and back of the full content of 
+the text unit.</p>
+<p><cite>Modify also the items without text</cite> -- Set this option to apply 
+the changes also to text units that have no text (i.e. are empty, or contain 
+only white spaces or codes).</p>
+<p><cite>Modify also the items with an existing translation</cite> -- Set this 
+option to apply the changes also to text units that already have a translation 
+(e.g. for multilingual files).</p>
+</body>
+</html>

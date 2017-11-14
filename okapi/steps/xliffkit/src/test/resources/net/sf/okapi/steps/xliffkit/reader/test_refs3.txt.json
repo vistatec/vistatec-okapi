@@ -1,0 +1,84 @@
+{
+  "header" : {
+    "version" : "1.0",
+    "description" : "",
+    "itemClass" : "net.sf.okapi.common.Event",
+    "mimeType" : "application/json",
+    "frames" : [ [ 65, 67 ] ]
+  },
+  "body" : {
+  "event1" : {
+    "resource" : {
+      "className" : "net.sf.okapi.common.resource.StartDocument",
+      "content" : {
+        "encoding" : null,
+        "locale" : "en-us",
+        "filterParameters" : {
+          "className" : null,
+          "content" : null,
+          "reference" : 0,
+          "refId" : 62
+        },
+        "filterWriter" : {
+          "className" : "net.sf.okapi.common.filterwriter.GenericFilterWriter",
+          "content" : {
+            "refId" : 64
+          },
+          "reference" : 0,
+          "refId" : 63
+        },
+        "multilingual" : false,
+        "lineBreak" : null,
+        "hasUTF8BOM" : false,
+        "name" : "test_refs3.txt",
+        "annotations" : [ ],
+        "properties" : [ ],
+        "id" : "sd1",
+        "type" : null,
+        "mimeType" : null,
+        "skeleton" : {
+          "className" : null,
+          "content" : null,
+          "reference" : 0,
+          "refId" : 61
+        },
+        "translatable" : true,
+        "preserveWS" : false,
+        "sourceProperties" : [ ],
+        "refId" : 60
+      },
+      "reference" : 0,
+      "refId" : 59
+    },
+    "type" : "START_DOCUMENT",
+    "refId" : 58
+  },
+  "event2" : {
+    "parent" : {
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "reference" : 67,
+      "refId" : 66
+    },
+    "id" : "e1",
+    "refId" : 65
+  },
+  "event3" : {
+    "parent" : {
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "reference" : 65,
+      "refId" : 68
+    },
+    "id" : "e2",
+    "refId" : 67
+  },
+  "event4" : {
+    "resource" : {
+      "className" : null,
+      "content" : null,
+      "reference" : 0,
+      "refId" : 70
+    },
+    "type" : "END_DOCUMENT",
+    "refId" : 69
+  }}
+}

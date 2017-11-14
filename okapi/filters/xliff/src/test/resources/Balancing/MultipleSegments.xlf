@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" xmlns:okp="okapi-framework:xliff-extensions" its:version="2.0" version="1.2">
+<file datatype="x-undefined" okp:inputEncoding="UTF-8" original="word/document.xml" source-language="de" target-language="it">
+<header><tool tool-company="24|technology GmbH" tool-id="24t_xliff" tool-name="24|xliff" tool-version="2.0.23.M30"><t4xlf:parameters xmlns:t4xlf="t4xlf:xliff-parameter-extensions"><t4xlf:parameter key="unescapeXmlCharactersInContent" value="false"/>
+<t4xlf:parameter key="ExtractOnlyPinkHighlightedText" value="false"/>
+<t4xlf:parameter key="bPreferenceTranslateWordHeadersFooters" value="true"/><t4xlf:parameter key="ExtractOnlyYellowHighlightedText" value="false"/>
+</t4xlf:parameters></tool></header>
+<body>
+<trans-unit id="1" xml:space="preserve">
+<source xml:lang="de"><g ctype="bold" equiv-text="" id="1"><g ctype="bold" equiv-text="" id="2">Wie schützt man sich gegen Erdbeben?</g></g></source>
+<seg-source><g ctype="bold" equiv-text="" id="1"><mrk mid="0" mtype="seg">Wie schützt man</mrk> <mrk mid="1" mtype="seg">sich gegen Erdbeben?</mrk></g></seg-source>
+<target xml:lang="it"><g ctype="bold" equiv-text="" id="1"><mrk mid="0" mtype="seg">Wie schützt man</mrk> <mrk mid="1" mtype="seg">sich gegen Erdbeben?</mrk></g></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

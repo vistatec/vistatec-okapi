@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<resources>
+   <string name="simple_welcome_message">Welcome!</string>
+   <string name="styled_welcome_message">We are <b><i>so</i></b> glad to see you.</string>
+</resources>

@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?><?aid style="50" type="snippet" readerVersion="6.0" featureSet="257" product="10.0(70)" ?><?aid SnippetType="InCopyInterchange"?><Document DOMVersion="10.0" Self="d"><Color Self="Color/Black" ColorValue="0 0 0 100" Space="CMYK" Model="Process" ColorOverride="Specialblack" Name="Black" AlternateColorValue="" AlternateSpace="NoAlternateColor" ColorEditable="false" SwatchCreatorID="7937" Visible="true" ColorRemovable="false"/><Ink Self="Ink/$ID/Process Cyan" ConvertToProcess="false" Angle="71.5651" Name="$ID/Process Cyan" Frequency="190" TrapOrder="1" PrintInk="true" NeutralDensity="0.61" InkType="Normal"/><Ink Self="Ink/$ID/Process Magenta" ConvertToProcess="false" Angle="18.4349" Name="$ID/Process Magenta" Frequency="190" TrapOrder="2" PrintInk="true" NeutralDensity="0.76" InkType="Normal"/><Ink Self="Ink/$ID/Process Yellow" ConvertToProcess="false" Angle="0" Name="$ID/Process Yellow" Frequency="200" TrapOrder="3" PrintInk="true" NeutralDensity="0.16" InkType="Normal"/><Ink Self="Ink/$ID/Process Black" ConvertToProcess="false" Angle="45" Name="$ID/Process Black" Frequency="212" TrapOrder="4" PrintInk="true" NeutralDensity="1.7" InkType="Normal"/><Swatch Self="Swatch/None" ColorRemovable="false" ColorEditable="false" Name="None" Visible="true" SwatchCreatorID="7937"/><StrokeStyle Self="StrokeStyle/$ID/Solid" Name="$ID/Solid"/><FontFamily Self="di3f" Name="Minion Pro">
+		<Font Self="di3fFontnMinion Pro Bold Cond" PostScriptName="MinionPro-BoldCn" Name="Minion Pro Bold Cond" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Cond" FullName="Minion Pro Bold Cond" PlatformName="$ID/" FontStyleNameNative="Bold Cond" FullNameNative="Minion Pro Bold Cond" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Bold Cond Italic" PostScriptName="MinionPro-BoldCnIt" Name="Minion Pro Bold Cond Italic" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Cond Italic" FullName="Minion Pro Bold Cond Italic" PlatformName="$ID/" FontStyleNameNative="Bold Cond Italic" FullNameNative="Minion Pro Bold Cond Italic" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Regular" PostScriptName="MinionPro-Regular" Name="Minion Pro Regular" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Regular" FullName="Minion Pro" PlatformName="$ID/" FontStyleNameNative="Regular" FullNameNative="Minion Pro" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Italic" PostScriptName="MinionPro-It" Name="Minion Pro Italic" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Italic" FullName="Minion Pro Italic" PlatformName="$ID/" FontStyleNameNative="Italic" FullNameNative="Minion Pro Italic" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Medium" PostScriptName="MinionPro-Medium" Name="Minion Pro Medium" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Medium" FullName="Minion Pro Medium" PlatformName="$ID/" FontStyleNameNative="Medium" FullNameNative="Minion Pro Medium" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Medium Italic" PostScriptName="MinionPro-MediumIt" Name="Minion Pro Medium Italic" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Medium Italic" FullName="Minion Pro Medium Italic" PlatformName="$ID/" FontStyleNameNative="Medium Italic" FullNameNative="Minion Pro Medium Italic" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Semibold" PostScriptName="MinionPro-Semibold" Name="Minion Pro Semibold" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Semibold" FullName="Minion Pro Semibold" PlatformName="$ID/" FontStyleNameNative="Semibold" FullNameNative="Minion Pro Semibold" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Semibold Italic" PostScriptName="MinionPro-SemiboldIt" Name="Minion Pro Semibold Italic" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Semibold Italic" FullName="Minion Pro Semibold Italic" PlatformName="$ID/" FontStyleNameNative="Semibold Italic" FullNameNative="Minion Pro Semibold Italic" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Bold" PostScriptName="MinionPro-Bold" Name="Minion Pro Bold" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold" FullName="Minion Pro Bold" PlatformName="$ID/" FontStyleNameNative="Bold" FullNameNative="Minion Pro Bold" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="di3fFontnMinion Pro Bold Italic" PostScriptName="MinionPro-BoldIt" Name="Minion Pro Bold Italic" FontFamily="Minion Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Italic" FullName="Minion Pro Bold Italic" PlatformName="$ID/" FontStyleNameNative="Bold Italic" FullNameNative="Minion Pro Bold Italic" Version="Version 2.112;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+	</FontFamily><FontFamily Self="di96" Name="Myriad Pro">
+		<Font Self="di96FontnMyriad Pro Condensed" PostScriptName="MyriadPro-Cond" Name="Myriad Pro Condensed" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Condensed" FullName="Myriad Pro Condensed" PlatformName="$ID/" FontStyleNameNative="Condensed" FullNameNative="Myriad Pro Condensed" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Condensed Italic" PostScriptName="MyriadPro-CondIt" Name="Myriad Pro Condensed Italic" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Condensed Italic" FullName="Myriad Pro Condensed Italic" PlatformName="$ID/" FontStyleNameNative="Condensed Italic" FullNameNative="Myriad Pro Condensed Italic" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Bold Condensed" PostScriptName="MyriadPro-BoldCond" Name="Myriad Pro Bold Condensed" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Condensed" FullName="Myriad Pro Bold Condensed" PlatformName="$ID/" FontStyleNameNative="Bold Condensed" FullNameNative="Myriad Pro Bold Condensed" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Bold Condensed Italic" PostScriptName="MyriadPro-BoldCondIt" Name="Myriad Pro Bold Condensed Italic" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Condensed Italic" FullName="Myriad Pro Bold Condensed Italic" PlatformName="$ID/" FontStyleNameNative="Bold Condensed Italic" FullNameNative="Myriad Pro Bold Condensed Italic" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Regular" PostScriptName="MyriadPro-Regular" Name="Myriad Pro Regular" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Regular" FullName="Myriad Pro" PlatformName="$ID/" FontStyleNameNative="Regular" FullNameNative="Myriad Pro" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Italic" PostScriptName="MyriadPro-It" Name="Myriad Pro Italic" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Italic" FullName="Myriad Pro Italic" PlatformName="$ID/" FontStyleNameNative="Italic" FullNameNative="Myriad Pro Italic" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Semibold" PostScriptName="MyriadPro-Semibold" Name="Myriad Pro Semibold" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Semibold" FullName="Myriad Pro Semibold" PlatformName="$ID/" FontStyleNameNative="Semibold" FullNameNative="Myriad Pro Semibold" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Semibold Italic" PostScriptName="MyriadPro-SemiboldIt" Name="Myriad Pro Semibold Italic" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Semibold Italic" FullName="Myriad Pro Semibold Italic" PlatformName="$ID/" FontStyleNameNative="Semibold Italic" FullNameNative="Myriad Pro Semibold Italic" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Bold" PostScriptName="MyriadPro-Bold" Name="Myriad Pro Bold" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold" FullName="Myriad Pro Bold" PlatformName="$ID/" FontStyleNameNative="Bold" FullNameNative="Myriad Pro Bold" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+		<Font Self="di96FontnMyriad Pro Bold Italic" PostScriptName="MyriadPro-BoldIt" Name="Myriad Pro Bold Italic" FontFamily="Myriad Pro" Status="Installed" WritingScript="0" FontType="OpenTypeCFF" FontStyleName="Bold Italic" FullName="Myriad Pro Bold Italic" PlatformName="$ID/" FontStyleNameNative="Bold Italic" FullNameNative="Myriad Pro Bold Italic" Version="Version 2.106;PS 2.000;hotconv 1.0.70;makeotf.lib2.5.58329" TypekitID="$ID/"/>
+	</FontFamily><FontFamily Self="dia3" Name="Kozuka Mincho Pr6N">
+		<Font Self="dia3FontnKozuka Mincho Pr6N EL" PostScriptName="KozMinPr6N-ExtraLight" Name="Kozuka Mincho Pr6N EL" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="EL" FullName="Kozuka Mincho Pr6N EL" PlatformName="$ID/" FontStyleNameNative="EL" FullNameNative="小塚明朝 Pr6N EL" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="dia3FontnKozuka Mincho Pr6N L" PostScriptName="KozMinPr6N-Light" Name="Kozuka Mincho Pr6N L" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="L" FullName="Kozuka Mincho Pr6N L" PlatformName="$ID/" FontStyleNameNative="L" FullNameNative="小塚明朝 Pr6N L" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="dia3FontnKozuka Mincho Pr6N R" PostScriptName="KozMinPr6N-Regular" Name="Kozuka Mincho Pr6N R" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="R" FullName="Kozuka Mincho Pr6N R" PlatformName="$ID/" FontStyleNameNative="R" FullNameNative="小塚明朝 Pr6N R" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="dia3FontnKozuka Mincho Pr6N M" PostScriptName="KozMinPr6N-Medium" Name="Kozuka Mincho Pr6N M" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="M" FullName="Kozuka Mincho Pr6N M" PlatformName="$ID/" FontStyleNameNative="M" FullNameNative="小塚明朝 Pr6N M" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="dia3FontnKozuka Mincho Pr6N B" PostScriptName="KozMinPr6N-Bold" Name="Kozuka Mincho Pr6N B" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="B" FullName="Kozuka Mincho Pr6N B" PlatformName="$ID/" FontStyleNameNative="B" FullNameNative="小塚明朝 Pr6N B" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+		<Font Self="dia3FontnKozuka Mincho Pr6N H" PostScriptName="KozMinPr6N-Heavy" Name="Kozuka Mincho Pr6N H" FontFamily="Kozuka Mincho Pr6N" Status="Installed" WritingScript="1" FontType="OpenTypeCID" FontStyleName="H" FullName="Kozuka Mincho Pr6N H" PlatformName="$ID/" FontStyleNameNative="H" FullNameNative="小塚明朝 Pr6N H" Version="Version 6.017;PS 6.004;hotconv 1.0.70;makeotf.lib2.5.5900" TypekitID="$ID/"/>
+	</FontFamily><FontFamily Self="di262" Name="Times New Roman">
+		<Font Self="di262FontnTimes New Roman Regular" PostScriptName="TimesNewRomanPSMT" Name="Times New Roman Regular" FontFamily="Times New Roman" Status="Installed" WritingScript="0" FontType="OpenTypeTT" FontStyleName="Regular" FullName="Times New Roman" PlatformName="$ID/" FontStyleNameNative="$ID/Regular" FullNameNative="Times New Roman" Version="Version 5.01.3x" TypekitID="$ID/"/>
+		<Font Self="di262FontnTimes New Roman Italic" PostScriptName="TimesNewRomanPS-ItalicMT" Name="Times New Roman Italic" FontFamily="Times New Roman" Status="Installed" WritingScript="0" FontType="OpenTypeTT" FontStyleName="Italic" FullName="Times New Roman Italic" PlatformName="$ID/" FontStyleNameNative="$ID/Italic" FullNameNative="Times New Roman Italic" Version="Version 5.00.3x" TypekitID="$ID/"/>
+		<Font Self="di262FontnTimes New Roman Bold" PostScriptName="TimesNewRomanPS-BoldMT" Name="Times New Roman Bold" FontFamily="Times New Roman" Status="Installed" WritingScript="0" FontType="OpenTypeTT" FontStyleName="Bold" FullName="Times New Roman Bold" PlatformName="$ID/" FontStyleNameNative="$ID/Bold" FullNameNative="Times New Roman Bold" Version="Version 5.01.3x" TypekitID="$ID/"/>
+		<Font Self="di262FontnTimes New Roman Bold Italic" PostScriptName="TimesNewRomanPS-BoldItalicMT" Name="Times New Roman Bold Italic" FontFamily="Times New Roman" Status="Installed" WritingScript="0" FontType="OpenTypeTT" FontStyleName="Bold Italic" FullName="Times New Roman Bold Italic" PlatformName="$ID/" FontStyleNameNative="$ID/Bold Italic" FullNameNative="Times New Roman Bold Italic" Version="Version 5.00.3x" TypekitID="$ID/"/>
+	</FontFamily><FontFamily Self="di2e9" Name="Palatino">
+		<Font Self="di2e9FontnPalatino Bold" PostScriptName="Palatino-Bold" Name="Palatino Bold" FontFamily="Palatino" Status="Installed" WritingScript="0" FontType="TrueType" FontStyleName="Bold" FullName="Palatino Bold" PlatformName="$ID/" FontStyleNameNative="Bold" FullNameNative="Palatino Bold" Version="9.0d1e1" TypekitID="$ID/"/>
+		<Font Self="di2e9FontnPalatino Regular" PostScriptName="Palatino-Roman" Name="Palatino Regular" FontFamily="Palatino" Status="Installed" WritingScript="0" FontType="TrueType" FontStyleName="Regular" FullName="Palatino" PlatformName="$ID/" FontStyleNameNative="Regular" FullNameNative="Palatino" Version="9.0d1e1" TypekitID="$ID/"/>
+		<Font Self="di2e9FontnPalatino Bold Italic" PostScriptName="Palatino-BoldItalic" Name="Palatino Bold Italic" FontFamily="Palatino" Status="Installed" WritingScript="0" FontType="TrueType" FontStyleName="Bold Italic" FullName="Palatino Bold Italic" PlatformName="$ID/" FontStyleNameNative="Bold Italic" FullNameNative="Palatino Bold Italic" Version="9.0d1e1" TypekitID="$ID/"/>
+		<Font Self="di2e9FontnPalatino Italic" PostScriptName="Palatino-Italic" Name="Palatino Italic" FontFamily="Palatino" Status="Installed" WritingScript="0" FontType="TrueType" FontStyleName="Italic" FullName="Palatino Italic" PlatformName="$ID/" FontStyleNameNative="Italic" FullNameNative="Palatino Italic" Version="9.0d1e1" TypekitID="$ID/"/>
+	</FontFamily><CompositeFont Self="CompositeFont/$ID/[No composite font]" Name="$ID/[No composite font]">
+		<CompositeFontEntry Self="ua2" RelativeSize="100" FontStyle="$ID/R" Name="$ID/Kanji" HorizontalScale="100" ScaleOption="true" Locked="true" VerticalScale="100" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pr6N</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="ua4" RelativeSize="100" FontStyle="$ID/R" Name="$ID/Kana" HorizontalScale="100" Locked="true" CustomCharacters="ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖゝゞァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺーヽヾ" VerticalScale="100" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pr6N</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="ua5" RelativeSize="100" FontStyle="$ID/R" Name="$ID/Punctuation" HorizontalScale="100" Locked="true" CustomCharacters="—―‖‘’“”‥…′″∥、。〈〉《》「」『』【】〔〕〜・！（），．／：；？［］｛｝～" VerticalScale="100" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pr6N</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="ua6" RelativeSize="100" FontStyle="$ID/R" Name="$ID/Symbols" HorizontalScale="100" Locked="true" CustomCharacters="¢£§¨¬°±´¶×÷ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё‐†‡‰※℃Å←↑→↓⇒⇔∀∂∃∇∈∋−√∝∞∠∧∨∩∪∫∬∴∵∽≒≠≡≦≧≪≫⊂⊃⊆⊇⊥⌒■□▲△▼▽◆◇○◎●◯★☆♀♂♪♭♯〃〆〇〒〓゛゜＃＄％＆＊＋－０１２３４５６７８９＜＝＞＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ＼＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｜￠￡￢￣￥" VerticalScale="100" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pr6N</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="ua7" RelativeSize="100" FontStyle="$ID/Regular" Name="$ID/Alphabetic" HorizontalScale="100" Locked="true" CustomCharacters=" !&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¤¥¦©ª«­®¯²³µ·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿıŒœŠšŸŽžƒˆˇ˘˙˚˛˜˝–‚„•‹›⁄€™∆∏∑≈≤≥◊ﬀﬁﬂﬃﬄﬅﬆ" VerticalScale="100" ScaleOption="false" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Minion Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="ua8" RelativeSize="100" FontStyle="$ID/Regular" Name="$ID/Numbers" HorizontalScale="100" Locked="true" CustomCharacters="0123456789" VerticalScale="100" ScaleOption="false" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Minion Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+	</CompositeFont><MojikumiTable Self="MojikumiTable/$ID/kMojikumiDefaultName1" Name="$ID/kMojikumiDefaultName1"/><RootCharacterStyleGroup Self="u78">
+		<CharacterStyle Self="CharacterStyle/$ID/[No character style]" Name="$ID/[No character style]" Imported="false"/>
+	</RootCharacterStyleGroup><NumberingList Self="NumberingList/$ID/[Default]" ContinueNumbersAcrossDocuments="false" ContinueNumbersAcrossStories="false" Name="$ID/[Default]"/><RootParagraphStyleGroup Self="u77">
+		<ParagraphStyle Self="ParagraphStyle/Fließtext Serif" NextStyle="ParagraphStyle/Fließtext Serif" Imported="false" Name="Fließtext Serif" EmptyNestedStyles="true" KeyboardShortcut="0 0" EmptyGrepStyles="true" EmptyLineStyles="true" DropCapCharacters="1" Justification="LeftJustified" AppliedLanguage="$ID/English: USA" DropCapLines="2" DropcapDetail="0" BulletsTextAfter="^t" NumberingExpression="^#.^t" TreatIdeographicSpaceAsSpace="false" DiacriticPosition="OpentypePosition">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<AppliedFont type="string">Palatino</AppliedFont>
+				<Mojikumi type="enumeration">LineEndAllOneHalfEmEnum</Mojikumi>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/$ID/[No paragraph style]" EmptyNestedStyles="true" Imported="false" Name="$ID/[No paragraph style]" EmptyLineStyles="true" FontStyle="Regular" FillColor="Color/Black" EmptyGrepStyles="true" PointSize="12" Ligatures="true" KerningMethod="$ID/Metrics" HorizontalScale="100" PageNumberType="AutoPageNumber" Composer="HL Composer" Tracking="0" StrokeWeight="1" DropCapCharacters="0" Capitalization="Normal" BaselineShift="0" DropCapLines="0" StrokeColor="Swatch/None" LeftIndent="0" VerticalScale="100" HyphenateLadderLimit="3" RightIndent="0" AppliedLanguage="$ID/de_DE_2006" AutoLeading="120" FirstLineIndent="0" Hyphenation="true" HyphenateCapitalizedWords="true" HyphenateBeforeLast="2" HyphenateAfterFirst="2" HyphenateWordsLongerThan="5" SpaceBefore="0" HyphenationZone="36" NoBreak="false" SpaceAfter="0" DesiredWordSpacing="100" OTFFigureStyle="Default" Underline="false" MaximumWordSpacing="133" MaximumLetterSpacing="0" DesiredLetterSpacing="0" MinimumWordSpacing="80" MinimumLetterSpacing="0" MinimumGlyphScaling="100" MaximumGlyphScaling="100" DesiredGlyphScaling="100" StartParagraph="Anywhere" KeepFirstLines="2" KeepWithNext="0" KeepAllLinesTogether="false" KeepLastLines="2" CharacterAlignment="AlignEmCenter" StrikeThru="false" Position="Normal" KeepLinesTogether="false" OverprintStroke="false" FillTint="-1" StrokeTint="-1" OverprintFill="false" GradientStrokeLength="-1" GradientFillAngle="0" GradientStrokeAngle="0" GradientFillLength="-1" Skew="0" GradientFillStart="0 0" GradientStrokeStart="0 0" RuleAboveLineWeight="1" RuleAboveLeftIndent="0" RuleAboveOffset="0" RuleAboveTint="-1" RuleAboveRightIndent="0" RuleBelowTint="-1" RuleBelowLineWeight="1" RuleAboveWidth="ColumnWidth" RuleBelowOffset="0" RuleBelowWidth="ColumnWidth" RuleBelowRightIndent="0" RuleBelowLeftIndent="0" RuleAboveOverprint="false" RuleBelow="false" RuleAbove="false" RuleBelowOverprint="false" LastLineIndent="0" SingleWordJustification="FullyJustified" ParagraphBreakType="Anywhere" HyphenateLastWord="true" OTFOrdinal="false" OTFTitling="false" OTFDiscretionaryLigature="false" OTFFraction="false" RuleAboveGapTint="-1" RuleBelowGapOverprint="false" RuleBelowGapTint="-1" RuleAboveGapOverprint="false" Justification="LeftAlign" OTFMark="true" PositionalForm="None" DropcapDetail="1" HyphenWeight="5" KeepRuleAboveInFrame="false" HyphenateAcrossColumns="true" OTFLocale="true" IgnoreEdgeAlignment="false" OTFHistorical="false" OTFStylisticSets="0" OTFSlashedZero="false" OTFContextualAlternate="true" UnderlineOffset="-9999" UnderlineGapTint="-1" UnderlineGapOverprint="false" UnderlineOverprint="false" StrikeThroughGapOverprint="false" UnderlineWeight="-9999" UnderlineTint="-1" StrikeThroughGapTint="-1" StrikeThroughTint="-1" StrikeThroughOverprint="false" StrikeThroughOffset="-9999" StrikeThroughWeight="-9999" EndJoin="MiterEndJoin" StrokeAlignment="OutsideAlignment" MiterLimit="4" SpanColumnType="SingleColumn" KeepWithPrevious="false" SplitColumnOutsideGutter="0" SplitColumnInsideGutter="6" SpanColumnMinSpaceBefore="0" Tsume="0" OTFSwash="false" SpanColumnMinSpaceAfter="0" LeadingAki="-1" KinsokuHangType="None" KinsokuType="KinsokuPushInFirst" TrailingAki="-1" BunriKinshi="true" RubyAlignment="RubyJIS" RubyFontSize="-1" RubyOpenTypePro="true" RubyType="PerCharacterRuby" RubyYScale="100" RubyXScale="100" RubyParentSpacing="RubyParent121Aki" RubyXOffset="0" RubyAutoAlign="true" RubyPosition="AboveRight" RubyYOffset="0" RubyParentOverhangAmount="RubyOverhangOneRuby" RubyParentScalingPercent="66" RubyAutoScaling="false" RubyOverhang="false" RubyTint="-1" RubyOverprintStroke="Auto" RubyStrokeTint="-1" RubyOverprintFill="Auto" RubyWeight="-1" KentenXScale="100" KentenFontSize="-1" KentenKind="None" KentenYScale="100" KentenPosition="AboveRight" KentenAlignment="AlignKentenCenter" KentenPlacement="0" KentenCustomCharacter="" KentenOverprintFill="Auto" KentenTint="-1" KentenCharacterSet="CharacterInput" KentenStrokeTint="-1" Tatechuyoko="false" KentenWeight="-1" KentenOverprintStroke="Auto" TatechuyokoXOffset="0" AutoTcyIncludeRoman="false" AutoTcy="0" TatechuyokoYOffset="0" Jidori="0" GridAlignment="None" GridAlignFirstLineOnly="false" GridGyoudori="0" CharacterRotation="0" ShataiMagnification="0" Rensuuji="true" RotateSingleByteCharacters="false" ShataiDegreeAngle="4500" Warichu="false" ShataiAdjustRotation="false" ShataiAdjustTsume="true" WarichuLines="2" WarichuAlignment="Auto" WarichuLineSpacing="0" WarichuSize="50" WarichuCharsBeforeBreak="2" OTFProportionalMetrics="false" OTFHVKana="false" WarichuCharsAfterBreak="2" OTFRomanItalics="false" ParagraphGyoudori="false" ScaleAffectsLineHeight="false" LeadingModel="LeadingModelAkiBelow" CjkGridTracking="false" RubyAutoTcyIncludeRoman="false" RubyAutoTcyDigits="0" GlyphForm="None" RubyAutoTcyAutoScale="true" BulletsAndNumberingListType="NoList" AllowArbitraryHyphenation="false" TreatIdeographicSpaceAsSpace="true" NumberingStartAt="1" NumberingApplyRestartPolicy="true" NumberingContinue="true" NumberingLevel="1" BulletsAlignment="LeftAlign" BulletsTextAfter="^t" NumberingExpression="^#.^t" NumberingAlignment="LeftAlign" DigitsType="DefaultDigits" CharacterDirection="DefaultDirection" DiacriticPosition="OpentypePositionFromBaseline" Kashidas="DefaultKashidas" ParagraphDirection="LeftToRightDirection" XOffsetDiacritic="0" ParagraphKashidaWidth="2" ParagraphJustification="DefaultJustification" YOffsetDiacritic="0" OTFJustificationAlternate="false" OTFStylisticAlternate="false" OTFOverlapSwash="false" OTFStretchedAlternate="false" KeyboardDirection="DefaultDirection">
+			<Properties>
+				<Leading type="enumeration">Auto</Leading>
+				<TabList type="list">
+				</TabList>
+				<AppliedFont type="string">Minion Pro</AppliedFont>
+				<RuleAboveColor type="string">Text Color</RuleAboveColor>
+				<RuleBelowColor type="string">Text Color</RuleBelowColor>
+				<RuleAboveType type="object">StrokeStyle/$ID/Solid</RuleAboveType>
+				<RuleBelowType type="object">StrokeStyle/$ID/Solid</RuleBelowType>
+				<BalanceRaggedLines type="enumeration">NoBalancing</BalanceRaggedLines>
+				<RuleAboveGapColor type="object">Swatch/None</RuleAboveGapColor>
+				<RuleBelowGapColor type="object">Swatch/None</RuleBelowGapColor>
+				<UnderlineColor type="string">Text Color</UnderlineColor>
+				<UnderlineGapColor type="object">Swatch/None</UnderlineGapColor>
+				<UnderlineType type="object">StrokeStyle/$ID/Solid</UnderlineType>
+				<StrikeThroughColor type="string">Text Color</StrikeThroughColor>
+				<StrikeThroughGapColor type="object">Swatch/None</StrikeThroughGapColor>
+				<StrikeThroughType type="object">StrokeStyle/$ID/Solid</StrikeThroughType>
+				<SpanSplitColumnCount type="enumeration">All</SpanSplitColumnCount>
+				<Mojikumi type="enumeration">Nothing</Mojikumi>
+				<KinsokuSet type="enumeration">Nothing</KinsokuSet>
+				<RubyFont type="string">$ID/</RubyFont>
+				<RubyFontStyle type="enumeration">Nothing</RubyFontStyle>
+				<RubyFill type="string">Text Color</RubyFill>
+				<RubyStroke type="string">Text Color</RubyStroke>
+				<KentenFont type="string">$ID/</KentenFont>
+				<KentenFontStyle type="enumeration">Nothing</KentenFontStyle>
+				<KentenFillColor type="string">Text Color</KentenFillColor>
+				<KentenStrokeColor type="string">Text Color</KentenStrokeColor>
+				<BulletChar BulletCharacterType="UnicodeOnly" BulletCharacterValue="8226"/>
+				<NumberingFormat type="string">1, 2, 3, 4...</NumberingFormat>
+				<BulletsFont type="string">$ID/</BulletsFont>
+				<BulletsFontStyle type="enumeration">Nothing</BulletsFontStyle>
+				<AppliedNumberingList type="object">NumberingList/$ID/[Default]</AppliedNumberingList>
+				<NumberingRestartPolicies RestartPolicy="AnyPreviousLevel" UpperLevel="0" LowerLevel="0"/>
+				<BulletsCharacterStyle type="object">CharacterStyle/$ID/[No character style]</BulletsCharacterStyle>
+				<NumberingCharacterStyle type="object">CharacterStyle/$ID/[No character style]</NumberingCharacterStyle>
+			</Properties>
+		</ParagraphStyle>
+	</RootParagraphStyleGroup><RootObjectStyleGroup Self="u92">
+		<ObjectStyle Self="ObjectStyle/$ID/[None]" CornerRadius="12" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[None]" FillColor="Swatch/None" MiterLimit="4" StrokeWeight="0" FillTint="-1" EndCap="ButtEndCap" LeftLineEnd="None" StrokeType="StrokeStyle/$ID/Solid" EndJoin="MiterEndJoin" RightLineEnd="None" GapColor="Swatch/None" StrokeTint="-1" StrokeColor="Swatch/None" GapTint="-1" GradientFillAngle="0" Nonprinting="false" StrokeAlignment="CenterAlignment" GradientStrokeAngle="0" TopRightCornerOption="None" TopLeftCornerOption="None" AppliedNamedGrid="n" BottomLeftCornerOption="None" TopRightCornerRadius="12" TopLeftCornerRadius="12" BottomRightCornerOption="None" BottomLeftCornerRadius="12" CornerOption="None" BottomRightCornerRadius="12">
+			<ObjectExportOption EpubType="$ID/" CustomHeight="$ID/" CustomHeightType="DefaultHeight" UseExistingImage="false" CustomWidthType="DefaultWidth" ActualTextSourceType="SourceXMLStructure" AltTextSourceType="SourceXMLStructure" CustomWidth="$ID/" CustomAltText="$ID/" CustomImageConversion="false" ApplyTagType="TagFromStructure" CustomActualText="$ID/" ImageConversionType="JPEG" GIFOptionsInterlaced="true" GIFOptionsPalette="AdaptivePalette" ImageExportResolution="Ppi300" JPEGOptionsQuality="High" ImageSpaceBefore="0" ImageAlignment="AlignLeft" JPEGOptionsFormat="BaselineEncoding" ImageSpaceAfter="0" CustomImageAlignment="false" ImagePageBreak="PageBreakBefore" UseImagePageBreak="false" SpaceUnit="CssPixel" UseOriginalImage="false" CustomLayoutType="AlignmentAndSpacing" CustomLayout="false">
+				<Properties>
+					<AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/"/>
+					<ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/"/>
+				</Properties>
+			</ObjectExportOption>
+			<TextFramePreference TextColumnCount="1" UseFixedColumnWidth="false" TextColumnFixedWidth="144" TextColumnGutter="12" FirstBaselineOffset="AscentOffset" VerticalThreshold="0" VerticalJustification="TopAlign" MinimumFirstBaselineOffset="0" IgnoreWrap="false" AutoSizingType="Off" TextColumnMaxWidth="0" UseFlexibleColumnWidth="false" AutoSizingReferencePoint="CenterPoint" UseMinimumWidthForAutoSizing="false" MinimumHeightForAutoSizing="0" UseMinimumHeightForAutoSizing="false" MinimumWidthForAutoSizing="0" VerticalBalanceColumns="false" UseNoLineBreaksForAutoSizing="false">
+				<Properties>
+					<InsetSpacing type="list">
+						<ListItem type="unit">0</ListItem>
+						<ListItem type="unit">0</ListItem>
+						<ListItem type="unit">0</ListItem>
+						<ListItem type="unit">0</ListItem>
+					</InsetSpacing>
+				</Properties>
+			</TextFramePreference>
+			<BaselineFrameGridOption UseCustomBaselineFrameGrid="false" BaselineFrameGridIncrement="12" BaselineFrameGridRelativeOption="TopOfInset" StartingOffsetForBaselineFrameGrid="0">
+				<Properties>
+					<BaselineFrameGridColor type="enumeration">LightBlue</BaselineFrameGridColor>
+				</Properties>
+			</BaselineFrameGridOption>
+			<AnchoredObjectSetting AnchoredPosition="InlinePosition" PinPosition="true" LockPosition="false" SpineRelative="false" AnchorPoint="BottomRightAnchor" VerticalAlignment="BottomAlign" HorizontalReferencePoint="TextFrame" HorizontalAlignment="LeftAlign" VerticalReferencePoint="LineBaseline" AnchorSpaceAbove="0" AnchorYoffset="0" AnchorXoffset="0"/>
+			<TextWrapPreference Inverse="false" TextWrapMode="None" TextWrapSide="BothSides" ApplyToMasterPageOnly="false">
+				<Properties>
+					<TextWrapOffset Top="0" Right="0" Bottom="0" Left="0"/>
+				</Properties>
+				<ContourOption ContourType="SameAsClipping" ContourPathName="$ID/" IncludeInsideEdges="false"/>
+			</TextWrapPreference>
+			<StoryPreference OpticalMarginAlignment="false" StoryOrientation="Horizontal" FrameType="TextFrameType" OpticalMarginSize="12" StoryDirection="LeftToRightDirection"/>
+			<FrameFittingOption AutoFit="false" RightCrop="0" TopCrop="0" LeftCrop="0" BottomCrop="0" FittingAlignment="CenterAnchor" FittingOnEmptyFrame="None"/>
+		</ObjectStyle>
+	</RootObjectStyleGroup><TinDocumentDataObject>
+		<Properties>
+			<GaijiRefMaps><![CDATA[/////wAAAAAAAAAA]]></GaijiRefMaps>
+		</Properties>
+	</TinDocumentDataObject><TransparencyDefaultContainerObject>
+		<TransparencySetting>
+			<BlendingSetting BlendMode="Normal" IsolateBlending="false" KnockoutGroup="false" Opacity="100"/>
+			<DropShadowSetting Mode="None" XOffset="7" Opacity="75" BlendMode="Multiply" YOffset="7" Noise="0" EffectColor="n" Size="5" Spread="0" HonorOtherEffects="false" KnockedOut="true" UseGlobalLight="false"/>
+			<FeatherSetting Mode="None" Noise="0" CornerType="Diffusion" Width="9" ChokeAmount="0"/>
+			<InnerShadowSetting Applied="false" Opacity="75" BlendMode="Multiply" EffectColor="n" Angle="120" ChokeAmount="0" UseGlobalLight="false" Distance="7" Size="7" Noise="0"/>
+			<OuterGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer"/>
+			<InnerGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer" Source="EdgeSourced"/>
+			<BevelAndEmbossSetting Applied="false" Depth="100" Technique="SmoothContour" Style="InnerBevel" Direction="Up" Angle="120" Soften="0" Size="7" Altitude="30" HighlightBlendMode="Screen" HighlightColor="n" UseGlobalLight="false" HighlightOpacity="75" ShadowOpacity="75" ShadowBlendMode="Multiply" ShadowColor="n"/>
+			<SatinSetting Applied="false" Opacity="50" BlendMode="Multiply" EffectColor="n" Angle="120" InvertEffect="false" Size="7" Distance="7"/>
+			<DirectionalFeatherSetting Applied="false" TopWidth="0" RightWidth="0" LeftWidth="0" BottomWidth="0" FollowShapeMode="LeadingEdge" Angle="0" ChokeAmount="0" Noise="0"/>
+			<GradientFeatherSetting Applied="false" Length="0" Angle="0" Type="Linear" GradientStart="0 0" HiliteLength="0" HiliteAngle="0"/>
+		</TransparencySetting>
+		<StrokeTransparencySetting>
+			<BlendingSetting BlendMode="Normal" IsolateBlending="false" KnockoutGroup="false" Opacity="100"/>
+			<DropShadowSetting Mode="None" XOffset="7" Opacity="75" BlendMode="Multiply" YOffset="7" Noise="0" EffectColor="n" Size="5" Spread="0" HonorOtherEffects="false" KnockedOut="true" UseGlobalLight="false"/>
+			<FeatherSetting Mode="None" Noise="0" CornerType="Diffusion" Width="9" ChokeAmount="0"/>
+			<InnerShadowSetting Applied="false" Opacity="75" BlendMode="Multiply" EffectColor="n" Angle="120" ChokeAmount="0" UseGlobalLight="false" Distance="7" Size="7" Noise="0"/>
+			<OuterGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer"/>
+			<InnerGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer" Source="EdgeSourced"/>
+			<BevelAndEmbossSetting Applied="false" Depth="100" Technique="SmoothContour" Style="InnerBevel" Direction="Up" Angle="120" Soften="0" Size="7" Altitude="30" HighlightBlendMode="Screen" HighlightColor="n" UseGlobalLight="false" HighlightOpacity="75" ShadowOpacity="75" ShadowBlendMode="Multiply" ShadowColor="n"/>
+			<SatinSetting Applied="false" Opacity="50" BlendMode="Multiply" EffectColor="n" Angle="120" InvertEffect="false" Size="7" Distance="7"/>
+			<DirectionalFeatherSetting Applied="false" TopWidth="0" RightWidth="0" LeftWidth="0" BottomWidth="0" FollowShapeMode="LeadingEdge" Angle="0" ChokeAmount="0" Noise="0"/>
+			<GradientFeatherSetting Applied="false" Length="0" Angle="0" Type="Linear" GradientStart="0 0" HiliteLength="0" HiliteAngle="0"/>
+		</StrokeTransparencySetting>
+		<FillTransparencySetting>
+			<BlendingSetting BlendMode="Normal" IsolateBlending="false" KnockoutGroup="false" Opacity="100"/>
+			<DropShadowSetting Mode="None" XOffset="7" Opacity="75" BlendMode="Multiply" YOffset="7" Noise="0" EffectColor="n" Size="5" Spread="0" HonorOtherEffects="false" KnockedOut="true" UseGlobalLight="false"/>
+			<FeatherSetting Mode="None" Noise="0" CornerType="Diffusion" Width="9" ChokeAmount="0"/>
+			<InnerShadowSetting Applied="false" Opacity="75" BlendMode="Multiply" EffectColor="n" Angle="120" ChokeAmount="0" UseGlobalLight="false" Distance="7" Size="7" Noise="0"/>
+			<OuterGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer"/>
+			<InnerGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer" Source="EdgeSourced"/>
+			<BevelAndEmbossSetting Applied="false" Depth="100" Technique="SmoothContour" Style="InnerBevel" Direction="Up" Angle="120" Soften="0" Size="7" Altitude="30" HighlightBlendMode="Screen" HighlightColor="n" UseGlobalLight="false" HighlightOpacity="75" ShadowOpacity="75" ShadowBlendMode="Multiply" ShadowColor="n"/>
+			<SatinSetting Applied="false" Opacity="50" BlendMode="Multiply" EffectColor="n" Angle="120" InvertEffect="false" Size="7" Distance="7"/>
+			<DirectionalFeatherSetting Applied="false" TopWidth="0" RightWidth="0" LeftWidth="0" BottomWidth="0" FollowShapeMode="LeadingEdge" Angle="0" ChokeAmount="0" Noise="0"/>
+			<GradientFeatherSetting Applied="false" Length="0" Angle="0" Type="Linear" GradientStart="0 0" HiliteLength="0" HiliteAngle="0"/>
+		</FillTransparencySetting>
+		<ContentTransparencySetting>
+			<BlendingSetting BlendMode="Normal" IsolateBlending="false" KnockoutGroup="false" Opacity="100"/>
+			<DropShadowSetting Mode="None" XOffset="7" Opacity="75" BlendMode="Multiply" YOffset="7" Noise="0" EffectColor="n" Size="5" Spread="0" HonorOtherEffects="false" KnockedOut="true" UseGlobalLight="false"/>
+			<FeatherSetting Mode="None" Noise="0" CornerType="Diffusion" Width="9" ChokeAmount="0"/>
+			<InnerShadowSetting Applied="false" Opacity="75" BlendMode="Multiply" EffectColor="n" Angle="120" ChokeAmount="0" UseGlobalLight="false" Distance="7" Size="7" Noise="0"/>
+			<OuterGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer"/>
+			<InnerGlowSetting Applied="false" Noise="0" Opacity="75" BlendMode="Screen" EffectColor="n" Size="7" Spread="0" Technique="Softer" Source="EdgeSourced"/>
+			<BevelAndEmbossSetting Applied="false" Depth="100" Technique="SmoothContour" Style="InnerBevel" Direction="Up" Angle="120" Soften="0" Size="7" Altitude="30" HighlightBlendMode="Screen" HighlightColor="n" UseGlobalLight="false" HighlightOpacity="75" ShadowOpacity="75" ShadowBlendMode="Multiply" ShadowColor="n"/>
+			<SatinSetting Applied="false" Opacity="50" BlendMode="Multiply" EffectColor="n" Angle="120" InvertEffect="false" Size="7" Distance="7"/>
+			<DirectionalFeatherSetting Applied="false" TopWidth="0" RightWidth="0" LeftWidth="0" BottomWidth="0" FollowShapeMode="LeadingEdge" Angle="0" ChokeAmount="0" Noise="0"/>
+			<GradientFeatherSetting Applied="false" Length="0" Angle="0" Type="Linear" GradientStart="0 0" HiliteLength="0" HiliteAngle="0"/>
+		</ContentTransparencySetting>
+	</TransparencyDefaultContainerObject><CrossReferenceFormat Self="u97" AppliedCharacterStyle="n" Name="Vollständiger Absatz und Seitenzahl">
+		<BuildingBlock Self="u97BuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u97BuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="FullParagraphBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u97BuildingBlock2" CustomText="“ auf Seite " AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u97BuildingBlock3" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="PageNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u98" AppliedCharacterStyle="n" Name="Vollständiger Absatz">
+		<BuildingBlock Self="u98BuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u98BuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="FullParagraphBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u98BuildingBlock2" CustomText="“" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u99" AppliedCharacterStyle="n" Name="Absatztext und Seitenzahl">
+		<BuildingBlock Self="u99BuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u99BuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="ParagraphTextBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u99BuildingBlock2" CustomText="“ auf Seite " AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u99BuildingBlock3" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="PageNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9a" AppliedCharacterStyle="n" Name="Absatztext">
+		<BuildingBlock Self="u9aBuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9aBuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="ParagraphTextBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9aBuildingBlock2" CustomText="“" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9b" AppliedCharacterStyle="n" Name="Absatznr. und Seitenzahl">
+		<BuildingBlock Self="u9bBuildingBlock0" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="ParagraphNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9bBuildingBlock1" CustomText=" auf Seite " AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9bBuildingBlock2" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="PageNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9c" AppliedCharacterStyle="n" Name="Absatznr.">
+		<BuildingBlock Self="u9cBuildingBlock0" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="ParagraphNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9d" AppliedCharacterStyle="n" Name="Name des Textankers und Seitenzahl">
+		<BuildingBlock Self="u9dBuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9dBuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="BookmarkNameBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9dBuildingBlock2" CustomText="“ auf Seite " AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9dBuildingBlock3" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="PageNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9e" AppliedCharacterStyle="n" Name="Name des Textankers">
+		<BuildingBlock Self="u9eBuildingBlock0" CustomText="„" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9eBuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="BookmarkNameBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9eBuildingBlock2" CustomText="“" AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><CrossReferenceFormat Self="u9f" AppliedCharacterStyle="n" Name="Seitenzahl">
+		<BuildingBlock Self="u9fBuildingBlock0" CustomText="Seite " AppliedCharacterStyle="n" BlockType="CustomStringBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u9fBuildingBlock1" CustomText="$ID/" AppliedCharacterStyle="n" BlockType="PageNumberBuildingBlock" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat><DocumentUser Self="dDocumentUser_e3e1e1e1d2" UserName="Tester1 Tester1 Tester1"><Properties><UserColor type="enumeration">Gold</UserColor></Properties></DocumentUser><Story StoryTitle="$ID/" AppliedNamedGrid="n" Self="u399" AppliedTOCStyle="n" TrackChanges="true"><ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Fließtext Serif"><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>Hoid is om auf’n Gipfe, a liabs Deandl. Zünftig hi um Godds wujn, Schdarmbeaga See. Imma und schoo, Kirwa griaß God beinand Hemad. Blosmusi Haberertanz a geh oans sog i, fensdaln auszutzeln nia jedza Freibia. A fescha Bua Musi auszutzeln nia need Heimatland wos, des basd scho Stubn middn. Hob schüds nei griaß God beinand Enzian hallelujah sog i, luja nimma Biakriagal, Fingahaggln naa mim aba. Dei pfundig zwoa do legst di nieda, Fünferl vui huift vui. Kuaschwanz Freibia fensdaln, i. Gscheid wia Lewakaas Griasnoggalsubbm Almrausch oans! Wurschtsolod sowos hawadere midananda imma a bissal wos gehd ollaweil, wia obandln! Dei gscheckate Milli, in da? Wos </Content></CharacterStyleRange><Change ChangeType="InsertedText" Date="2015-11-13T15:22:19" AppliedDocumentUser="dDocumentUser_e3e1e1e1d2" UserName="Tester1 Tester1 Tester1"><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>TRCH TEST</Content></CharacterStyleRange></Change><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>Ewig und </Content></CharacterStyleRange><Change ChangeType="DeletedText" Date="2015-11-13T15:22:19" AppliedDocumentUser="dDocumentUser_e3e1e1e1d2" UserName="Tester1 Tester1 Tester1"><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>drei</Content></CharacterStyleRange></Change><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content> Dog Ewig und drei Dog da Kini Marterl hinter’m Berg san a no Leit a liabs Deandl, kimmt boarischer!</Content></CharacterStyleRange><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Br/></CharacterStyleRange></ParagraphStyleRange><ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Fließtext Serif"><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>Haferl dringma aweng Spotzerl, a. De Sonn an a Gams kimmt sauba. Mogsd a Bussal is ma Wuascht heid singd nois is des liab, es i mechad dee Schwoanshaxn! Resi hallelujah sog i, luja spernzaln nimmds schnacksln. Eana Schneid Foidweg liberalitas Bavariae pfundig Enzian: Gscheckate Goaßmaß Biakriagal nix </Content></CharacterStyleRange><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Rectangle StoryTitle="$ID/" ParentInterfaceChangeCount="" Self="anche2e2e1e2e1d1" ContentType="GraphicType" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" GradientFillLength="0" GradientFillAngle="0" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientStrokeAngle="0" Locked="false" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" LocalDisplaySetting="Default" GradientFillHiliteLength="0" Visible="true" Name="$ID/" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[None]" CoWareDeletelock="false" CoWareGeometrylock="false" ItemTransform="1 0 0 1 400 80" CoWareFrame="false" CoWareAssetstring="$ID/" CenshareGroupSlugId="0" CoWareContentlock="false" CoWareLabel="$ID/" CenshareParentTextFrameBox="$ID/b939" CenshareFitFrameToTextContent="false" CenshareGroupSlugString="" CenshareParentTextFrame="$ID/u3ab">
+					<Properties>
+						<PathGeometry>
+							<GeometryPathType PathOpen="false">
+								<PathPointArray>
+									<PathPointType Anchor="-400 -125" LeftDirection="-400 -125" RightDirection="-400 -125"/>
+									<PathPointType Anchor="-400 -80" LeftDirection="-400 -80" RightDirection="-400 -80"/>
+									<PathPointType Anchor="-256 -80" LeftDirection="-256 -80" RightDirection="-256 -80"/>
+									<PathPointType Anchor="-256 -125" LeftDirection="-256 -125" RightDirection="-256 -125"/>
+								</PathPointArray>
+							</GeometryPathType>
+						</PathGeometry>
+					</Properties>
+					<TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
+						<Properties>
+							<TextWrapOffset Top="0" Left="0" Bottom="0" Right="0"/>
+						</Properties>
+						<ContourOption ContourType="SameAsClipping" IncludeInsideEdges="false" ContourPathName="$ID/"/>
+					</TextWrapPreference>
+					<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false"/>
+					<FrameFittingOption FittingOnEmptyFrame="Proportionally"/>
+					<ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
+						<Properties>
+							<AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/"/>
+							<ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/"/>
+						</Properties>
+					</ObjectExportOption>
+					<Image Self="u3c2" Space="$ID/#Links_RGB" ActualPpi="72 72" EffectivePpi="400 400" ImageRenderingIntent="UseColorSettings" OverriddenPageItemProps="" LocalDisplaySetting="Default" ImageTypeName="$ID/Portable Network Graphics (PNG)" AppliedObjectStyle="ObjectStyle/$ID/[None]" ItemTransform="0.18 0 0 0.18 -400 -125" CoWareFrame="false" CoWareDeletelock="false" CoWareGeometrylock="false" CoWareContentlock="false" CoWareLabel="$ID/" CoWareAssetstring="$ID/" CenshareGroupSlugId="0" CenshareGroupSlugString="" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" Visible="true" Name="$ID/" CenshareParentTextFrame="$ID/u3ab" CenshareParentTextFrameBox="$ID/b939" CenshareFitFrameToTextContent="false">
+						<Properties>
+							<Profile type="string">$ID/None</Profile>
+							<GraphicProxy><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAyAAAAD6CAYAAABZPSO8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzkjIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFu
+Y2VJRD0ieG1wLmlpZDoxRkEwMTZGOTk3MUMxMUUyQUYzMThGRDlBOThBQ0FBOCIgeG1wTU06RG9j
+dW1lbnRJRD0ieG1wLmRpZDoxRkEwMTZGQTk3MUMxMUUyQUYzMThGRDlBOThBQ0FBOCI+IDx4bXBN
+TTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFGQTAxNkY3OTcxQzExRTJB
+RjMxOEZEOUE5OEFDQUE4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFGQTAxNkY4OTcxQzEx
+RTJBRjMxOEZEOUE5OEFDQUE4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4
+bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FjA51wAAkTdJREFUeNrsXQm4VlP3343IFDJPySwy
+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
+AElFTkSuQmCC]]></GraphicProxy>
+							<GraphicBounds Left="0" Top="0" Right="800" Bottom="250"/>
+						</Properties>
+						<TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
+							<Properties>
+								<TextWrapOffset Top="0" Left="0" Bottom="0" Right="0"/>
+							</Properties>
+							<ContourOption ContourType="SameAsClipping" IncludeInsideEdges="false" ContourPathName="$ID/"/>
+						</TextWrapPreference>
+						<MetadataPacketPreference>
+							<Properties>
+								<Contents><![CDATA[<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c011 79.156289, 2014/03/31-23:39:12        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#">
+         <xmp:CreatorTool>Adobe Photoshop CS6 (Macintosh)</xmp:CreatorTool>
+         <xmpMM:InstanceID>xmp.iid:1FA016F9971C11E2AF318FD9A98ACAA8</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:1FA016FA971C11E2AF318FD9A98ACAA8</xmpMM:DocumentID>
+         <xmpMM:DerivedFrom rdf:parseType="Resource">
+            <stRef:instanceID>xmp.iid:1FA016F7971C11E2AF318FD9A98ACAA8</stRef:instanceID>
+            <stRef:documentID>xmp.did:1FA016F8971C11E2AF318FD9A98ACAA8</stRef:documentID>
+         </xmpMM:DerivedFrom>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="r"?>]]></Contents>
+							</Properties>
+						</MetadataPacketPreference>
+						<Link Self="u3be" AssetURL="$ID/" AssetID="$ID/" LinkResourceURI="file:/Volumes/me_VFS/service/assets/asset/id/70800/storage/master/file/CokeLogo1.png" LinkResourceFormat="$ID/Portable Network Graphics (PNG)" StoredState="Normal" LinkClassID="35906" LinkClientID="257" LinkResourceModified="false" LinkObjectModified="false" ShowInUI="true" CanEmbed="true" CanUnembed="true" CanPackage="true" ImportPolicy="NoAutoImport" ExportPolicy="NoAutoExport" LinkImportStamp="file 130834198140000000 38085" LinkImportModificationTime="2015-08-07T13:16:54" LinkImportTime="2015-08-07T13:16:58" LinkResourceSize="0~94c5"/>
+						<ClippingPathSettings ClippingType="None" InvertPath="false" IncludeInsideEdges="false" RestrictToFrame="false" UseHighResolutionImage="true" Threshold="25" Tolerance="2" InsetFrame="0" AppliedPathName="$ID/" Index="-1"/>
+						<ImageIOPreference ApplyPhotoshopClippingPath="true" AllowAutoEmbedding="true" AlphaChannelName="$ID/"/>
+					</Image>
+				</Rectangle></CharacterStyleRange><CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"><Content>Gwiass woass ma ned Brezn, Leonhardifahrt da ham mi Habedehre. Dringma aweng mei nia need is Brodzeid wia da Buachbinda Wanninger mehra. I waar soweid Bussal soi heid gfoids ma sagrisch guad. Blärrd i moan oiwei vasteh kummd i moan oiwei mi Vergeltsgott do legst di nieda abfieseln Schuabladdla! Gamsbart measi des is hoid aso, do legst di nieda Foidweg wos! Auffisteign gelbe Rüam Wurscht Broadwurschtbudn dahoam auf’d Schellnsau, dahoam nix Gwiass woass ma ned. Mehra Edlweiss singan om auf’n Gipfe singd, ned woar.</Content></CharacterStyleRange></ParagraphStyleRange></Story></Document>

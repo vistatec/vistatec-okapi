@@ -1,0 +1,4 @@
+#v1
+paramStr1=TestOK
+paramBool1.b=false
+paramInt1.i=789

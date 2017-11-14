@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<doc>
+ <msg id="m1">Text in <b>bold</b>.</msg>
+ <msg id="m1">Text in <i>italic</i>.</msg>
+ <msg id="m1"><u>Underline</u> text.</msg>
+</doc>

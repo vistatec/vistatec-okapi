@@ -1,0 +1,14 @@
+msgid "text 2 to translate"
+msgstr ""
+
+msgid "text 4 not to translate"
+msgstr ""
+
+msgid "text 6 not to translate"
+msgstr ""
+
+msgid "text 8 to translate"
+msgstr ""
+
+msgid "text 10 to translate"
+msgstr ""

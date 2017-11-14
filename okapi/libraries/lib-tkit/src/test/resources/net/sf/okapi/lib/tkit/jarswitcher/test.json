@@ -1,0 +1,16 @@
+{
+  "className" : "net.sf.okapi.lib.tkit.versions.Versions",
+  "content" : [ {
+    "label" : "v1",
+    "path" : "v1/",
+    "date" : "2012-11-24"
+  }, {
+    "label" : "v2",
+    "path" : "v2/",
+    "date" : "2013-2-17"
+  }, {
+    "label" : "v3",
+    "path" : "v3/",
+    "date" : "2013-4-16"
+  } ]
+}

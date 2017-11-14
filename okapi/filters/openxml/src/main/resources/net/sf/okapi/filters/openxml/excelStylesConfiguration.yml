@@ -1,0 +1,63 @@
+# Rule types that drive HTML parser behavior
+# INLINE inline element
+# GROUP group element
+# EXCLUDE exclude this element and all children
+# INCLUDE exceptions to the exclude rules
+# TEXTUNIT make this element a textunit with skeleton before/after
+# PRESERVE_WHITESPACE turn on preserve whitespace.
+# SCRIPT Embedded scripting languatge - pass to another extractor
+# SERVER Embedded server language tags such as JSP, PHP, Mason etc.
+# ATTRIBUTE the rule lists an attribute, not an element
+# ATTRIBUTES_ONLY only attribute is translatable or localizable 
+
+#********************************************************************************************* 
+# Operators for attribute value compare
+#
+# Rules are of the form: 
+# TO_EXTRACT_ATTRIBUTE:[IF_HAS_ATTRIBUTE, OPERATOR, VALUE]
+# 'content':['http-equiv', EQUALS, 'keywords']
+#
+# This rule would read:
+# extract the value of 'content' if the value of 'http-equiv' equals 'keywords'
+#
+# Multiple attribute values may be included in a list:
+# 'content':['http-equiv', EQUALS, ['content-language', 'content-type']
+#
+# This rule would be read: 
+# extract the value of 'content' if the value of 'http-equiv' equals 'content-language' or 'content-type' 
+#*******************************************************************************************/
+
+# EQUALS
+# NOT_EQUALS 
+# MATCH regex match. Must match the entire attribute value
+
+elements:
+  filetype:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    elementType: MSEXCELSTYLES
+  
+  # used in sheetn files
+  dimension:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    translatableAttributes: [ref]
+  
+  # used in styles file
+  cellxfs:
+    ruleTypes: [INLINE]
+  # elementType: cellxfs
+  
+  color:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    translatableAttributes: [rgb]
+  
+  fonts:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    translatableAttributes: [count]
+  
+  font:
+    ruleTypes: [INLINE]
+  # elementType: font
+  
+  xf:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    translatableAttributes: [fontId]                              

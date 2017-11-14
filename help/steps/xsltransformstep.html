@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - XSL Transform</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">XSL Transform Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=XSL_Transformation_Step">http://okapiframework.org/wiki/index.php?title=XSL_Transformation_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step applies an XSLT template on the input documents.</p>
+<p>Takes: Raw document<br>
+Sends: Raw document</p>
+<p>The input documents must be well-formed XML documents. The step takes the 
+XSLT template you have specified and apply it to the input document and creates 
+an output that is passed as the raw document for the next step.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Path of the XSLT template to apply</cite> -- Enter the full path of the 
+XSLT template you want to apply on the input documents.</p>
+<p><cite>Parameters</cite> -- Enter the list of any required parameters for this 
+template. the format must be <code>name=value</code> with one parameter per 
+line. For example:</p>
+<pre>Lang=en
+tmFile=myTM.tmx
+inputFile=${inputPath2}</pre>
+<p>You can use the following variables in the parameters values:</p>
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<th>Variable</th>
+		<th>Description</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td><code>${inputPath}</code></td>
+		<td>The full path of the first input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputURI}</code></td>
+		<td>The URI of the first input document</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${outputPath}</code></td>
+		<td>The full path of the first output document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputPath1}</code></td>
+		<td>The full path of the first input document (same as <code>
+		${inputPath}</code>).</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputURI1}</code></td>
+		<td>The URI of the first input document (same as <code>${inputURI}</code>).</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${outputPath1}</code></td>
+		<td>The full path of the first output document. (same as <code>
+		${outputPath}</code>).</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${srcLang}</code></td>
+		<td>Code of the language part of the source locale identifier.</td>
+		<td>For &quot;<code>de-ch</code>&quot; this returns &quot;<code>de</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${trgLang}</code></td>
+		<td>Code of the language part of the target locale identifier.</td>
+		<td>For &quot;<code>ja-jp</code>&quot; this returns &quot;<code>ja</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${inputPath2}</code></td>
+		<td>The full path of the second input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputURI2}</code></td>
+		<td>The URI of the second input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputPath3}</code></td>
+		<td>The full path of the third input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputURI3}</code></td>
+		<td>The URI of the third input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<p><cite>Default Parameters</cite> -- Click this button to copy into the 
+parameters list all the default parameters declared in the template.</p>
+<p><cite>Open Template</cite> -- Click this button to open the XSLT template 
+file currently specified.</p>
+<p><cite>Use the transformer created by this factory class</cite> -- Set this 
+option to use an XSLT transformer implementation different than the one your 
+current Java settings gives. Enter the name of the factory class in the text 
+field. The class specified must be in your Java class-path. For example: <code>
+net.sf.saxon.TransformerFactoryImpl</code>.</p>
+<p>The default transformer class used depends on the implementation and version 
+of your Java Virtual Machine. See the
+<a href="http://www.j2ee.me/j2se/1.5.0/docs/api/javax/xml/transform/TransformerFactory.html#newInstance()">
+documentation of <code>TransformerFactory.newInstance()</code></a> for more 
+details on how the lookup for the class is done.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

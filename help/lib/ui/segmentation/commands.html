@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ratel - Commands</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Ratel</h1>
+		<h2 class="head2">Commands</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Ratel">http://okapiframework.org/wiki/index.php?title=Ratel</a></p>
+
+<ul>
+	<li><a href="#FileMenu">File</a><ul>
+		<li><a href="#New">New</a></li>
+		<li><a href="#NewWithDefaults">New With Simple Default Rules</a></li>
+		<li><a href="#Open">Open</a></li>
+		<li><a href="#loadFromClipboard">Load From Clipboard</a></li>
+		<li><a href="#Save">Save</a></li>
+		<li><a href="#SaveAs">Save As</a></li>
+		<li><a href="#copyToClipboard">Copy To Clipboard</a></li>
+		<li><a href="#Exit">Exit</a></li>
+	</ul>
+	</li>
+	<li><a href="#toolsMenu">Tools</a><ul>
+		<li><a href="#TestOnFile">Test Segmentation on a File</a></li>
+	</ul>
+	</li>
+	<li><a href="#helpMenu">Help</a><ul>
+		<li><a href="#HelpTopics">Help Topics</a></li>
+		<li><a href="#HowToUse">How To Use Ratel</a></li>
+		<li><a href="#CheckUpdates">Check For Updates</a></li>
+		<li><a href="#SendFeedback">Send Feedback</a></li>
+		<li><a href="#bugReport">Submit Bug Report</a></li>
+		<li><a href="#featureRequest">Submit Feature Request</a></li>
+		<li><a href="#UsersGroup">Users Group</a></li>
+		<li><a href="#SRXSpec">SRX&nbsp;2.0 Specification</a></li>
+		<li><a href="#About">About Ratel</a></li>
+	</ul>
+	</li>
+</ul>
+<h2><a name="FileMenu"></a>File</h2>
+<h3><a name="New"></a>New</h3>
+<p>Creates a new empty SRX document in the editor. If you have a modified 
+un-saved document already opened, the tool will ask you if you want to save your 
+changes before.</p>
+<p>Shortcut: <kbd>Ctrl+N</kbd></p>
+<h3><a name="NewWithDefaults"></a>New With Simple Default Rules</h3>
+<p>Creates a new SRX document in the editor with simple default rules. Use this 
+command as a quick way to start a new document, or to test a few rules. If you 
+have a modified un-saved document already opened, the tool will ask you if you 
+want to save your changes before.</p>
+<h3><a name="Open"></a>Open</h3>
+<p>Opens an existing SRX document in the editor. If you have a modified un-saved 
+document already opened, the tool will ask you if you want to save your changes 
+before. You can also open an SRX document by dragging and dropping the file 
+anywhere in the editor's main window.</p>
+<p>Shortcut: <kbd>Ctrl+O</kbd></p>
+<h3><a name="loadFromClipboard"></a>Load From Clipboard</h3>
+<p>Loads an SRX document from the Clipboard. If you have a modified un-saved 
+document already opened, the tool will ask you if you want to save your changes 
+before.</p>
+<p>The Clipboard must contain a plain text copy of a valid SRX document.</p>
+<h3><a name="Save"></a>Save</h3>
+<p>Saves the current document. If the document has no name, the tool will prompt 
+you to choose one. The tool will prompt you to confirm the save if the document 
+was loaded as an SRX version 1.0 file. All documents are saved to SRX version 
+2.0,</p>
+<p>Shortcut: <kbd>Ctrl+S</kbd></p>
+<h3><a name="SaveAs"></a>Save As</h3>
+<p>Saves the current document under a new name.</p>
+<h3><a name="copyToClipboard"></a>Copy To Clipboard</h3>
+<p>Copies the current document to the Clipboard. Note that the SRX document 
+copied to the Clipboard does not include Okapi extensions elements.</p>
+<h3><a name="Exit"></a>Exit</h3>
+<p>Exits the editor. If you have a modified un-saved document already opened, 
+the tool will ask you if you want to save your changes before.</p>
+<p>Shortcut: <kbd>Alt+F4</kbd></p>
+<h2><a name="toolsMenu"></a>Tools</h2>
+<h3><a name="TestOnFile"></a>Test Segmentation on a File</h3>
+<p>Takes an input file and segment it with the current SRX document and 
+settings, and generate an output file with the segments marked up. This opens 
+the <cite><a href="testRules.html">Test Segmentation on a File</a></cite> dialog 
+box where you can find more details on the 
+requirements for the input document.</p>
+<h2><a name="helpMenu"></a>Help</h2>
+<h3><a name="HelpTopics"></a>Help Topics</h3>
+<p>Opens the main help page for this application.</p>
+<p>Shortcut: <kbd>F1</kbd></p>
+<h3><a name="HowToUse"></a>How To Use Ratel</h3>
+<p>Opens the help page to get you started with this application.</p>
+<h3><a name="CheckUpdates"></a>Check For Updates</h3>
+<p>Checks if there is an updated version of Ratel that is available. If Ratel is 
+invoked from a parent application, this command checks for updates of the parent 
+application.</p>
+<p>This command connects to Internet and send only the name of the product and 
+its version number.</p>
+<h3><a name="SendFeedback"></a>Send Feedback</h3>
+<p>Sends an email with feedback to the development team.</p>
+<h3><a name="bugReport"></a>Submit Bug Report</h3>
+<p>Opens the page where you can submit a bug report.</p>
+<h3><a name="featureRequest"></a>Submit Feature Request</h3>
+<p>Opens the page where you can submit a feature request.</p>
+<h3><a name="UsersGroup"></a>Users Group</h3>
+<p>Opens the <b>Okapi Tools</b> users group (<a target="_blank" href="http://tech.groups.yahoo.com/group/okapitools/">http://tech.groups.yahoo.com/group/okapitools/</a>) 
+where you can discuss Okapi-related topics with other users.</p>
+<h3><a name="SRXSpec"></a>SRX&nbsp;2.0 Specification</h3>
+<p dir="ltr">Opens the SRX&nbsp;2.0 Specification online page.</p>
+<h3><a name="About"></a>About Ratel</h3>
+<p>Opens the <cite>About Ratel</cite> dialog box where you can find version 
+and system information.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

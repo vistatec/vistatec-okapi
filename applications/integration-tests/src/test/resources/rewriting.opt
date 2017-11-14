@@ -1,0 +1,14 @@
+#v1
+type.i=1
+addPrefix.b=false
+prefix={START_
+addSuffix.b=false
+suffix=_END}
+applyToExistingTarget.b=false
+addName.b=false
+addID.b=false
+segment.b=false
+markSegments.b=true
+sourceSrxPath=
+targetSrxPath=
+transResClass=net.sf.okapi.connectors.simpletm.SimpleTMConnector

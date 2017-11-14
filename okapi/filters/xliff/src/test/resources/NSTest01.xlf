@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<x:xliff version="1.2" xmlns:x="urn:oasis:names:tc:xliff:document:1.2">
+<x:file datatype="x-test" original="test1"
+ source-language="en" target-language="fr">
+<x:body>
+   <x:trans-unit id="0" translate="no">
+      <x:source xml:lang="en">Do not translate this.</x:source>
+   </x:trans-unit>
+   <x:trans-unit id="1">
+      <x:source xml:lang="en">Text number 1</x:source>
+   </x:trans-unit>
+</x:body>
+</x:file>
+</x:xliff>

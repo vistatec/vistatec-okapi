@@ -1,0 +1,93 @@
+#v1
+description=Lexers of the tokenization step (in the order of invocation) 
+StructureParametersItemCount.i=18
+
+StructureParametersItem0.enabled.b=true
+StructureParametersItem0.description=Internal RuleBasedBreakIterator rules of RbbiLexer.
+StructureParametersItem0.lexerClass=net.sf.okapi.steps.tokenization.engine.RbbiLexer
+StructureParametersItem0.rulesLocation=rbbi_main.tprm
+
+StructureParametersItem1.enabled.b=true
+StructureParametersItem1.description=RBBI rules of RbbiLexer (by Sujit Pal at http://sujitpal.blogspot.com/2008/05/tokenizing-text-with-icu4js.html, http://jtmt.svn.sourceforge.net/viewvc/jtmt/src/main/resources/word_break_rules.txt?revision=1&view=markup).
+StructureParametersItem1.lexerClass=net.sf.okapi.steps.tokenization.engine.RbbiLexer
+StructureParametersItem1.rulesLocation=rbbi_sujit.tprm
+
+StructureParametersItem2.enabled.b=true
+StructureParametersItem2.description=Extracts abbreviations from WORD tokens.
+StructureParametersItem2.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenScanner
+StructureParametersItem2.rulesLocation=scanner_abbreviation_en.tprm
+
+StructureParametersItem3.enabled.b=true
+StructureParametersItem3.description=Extracts 2 words separated by apostrophe from WORD tokens (apostrophe followed by a vowel, rule WB5a in Unicode TR 29).
+StructureParametersItem3.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenScanner
+StructureParametersItem3.rulesLocation=scanner_aprostrophe_vowel_fr_it.tprm
+
+StructureParametersItem4.enabled.b=true
+StructureParametersItem4.description=DATE token extractor.
+StructureParametersItem4.lexerClass=net.sf.okapi.steps.tokenization.engine.TextScanner
+StructureParametersItem4.rulesLocation=scanner_date.tprm
+
+StructureParametersItem5.enabled.b=true
+StructureParametersItem5.description=TIME token extractor.
+StructureParametersItem5.lexerClass=net.sf.okapi.steps.tokenization.engine.TextScanner
+StructureParametersItem5.rulesLocation=scanner_time.tprm
+
+StructureParametersItem6.enabled.b=true
+StructureParametersItem6.description=CURRENCY token extractor.
+StructureParametersItem6.lexerClass=net.sf.okapi.steps.tokenization.engine.TextScanner
+StructureParametersItem6.rulesLocation=scanner_currency.tprm
+
+StructureParametersItem7.enabled.b=true
+StructureParametersItem7.description=COMPANY token extractor.
+StructureParametersItem7.lexerClass=net.sf.okapi.steps.tokenization.engine.JavaCcLexer
+StructureParametersItem7.rulesLocation=javacc_main.tprm
+
+StructureParametersItem8.enabled.b=true
+StructureParametersItem8.description=STOPWORD recognizer.
+StructureParametersItem8.lexerClass=net.sf.okapi.steps.tokenization.engine.LookUpLexer
+StructureParametersItem8.rulesLocation=stopwords_main.tprm
+
+StructureParametersItem9.enabled.b=true
+StructureParametersItem9.description=WHITESPACE and PUNCTUATION resolver.
+StructureParametersItem9.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenMatcher
+StructureParametersItem9.rulesLocation=matcher_main.tprm
+
+StructureParametersItem10.enabled.b=true
+StructureParametersItem10.description=ABBREVIATION resolver.
+StructureParametersItem10.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenMatcher
+StructureParametersItem10.rulesLocation=matcher_abbreviation_en.tprm
+
+StructureParametersItem11.enabled.b=true
+StructureParametersItem11.description=MARKUP resolver. Extracts tokens from markup.
+StructureParametersItem11.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenScanner
+StructureParametersItem11.rulesLocation=scanner_markup.tprm
+
+StructureParametersItem12.enabled.b=true
+StructureParametersItem12.description=RAWTEXT resolver.
+StructureParametersItem12.lexerClass=net.sf.okapi.steps.tokenization.engine.TokenMatcher
+StructureParametersItem12.rulesLocation=matcher_rawtext.tprm
+
+StructureParametersItem13.enabled.b=true
+StructureParametersItem13.description=Arranges tokens by their position in the text.
+StructureParametersItem13.lexerClass=net.sf.okapi.steps.tokenization.engine.Sorter
+StructureParametersItem13.rulesLocation=
+
+StructureParametersItem14.enabled.b=true
+StructureParametersItem14.description=UNKNOWN-type tokens remover.
+StructureParametersItem14.lexerClass=net.sf.okapi.steps.tokenization.engine.Remover
+StructureParametersItem14.rulesLocation=remover_unknown.tprm
+
+StructureParametersItem15.enabled.b=true
+StructureParametersItem15.description=Removes duplicate tokens. Handles token ranges inclusion. Sets scores.
+StructureParametersItem15.lexerClass=net.sf.okapi.steps.tokenization.engine.Reconciler
+StructureParametersItem15.rulesLocation=
+
+StructureParametersItem16.enabled.b=true
+StructureParametersItem16.description=RAWTEXT and PROTECTED tokens remover.
+StructureParametersItem16.lexerClass=net.sf.okapi.steps.tokenization.engine.Remover
+StructureParametersItem16.rulesLocation=remover_rawtext.tprm
+
+StructureParametersItem17.enabled.b=true
+StructureParametersItem17.description=Removes the tokens marked as deleted from the token list.
+StructureParametersItem17.lexerClass=net.sf.okapi.steps.tokenization.engine.GarbageCollector
+StructureParametersItem17.rulesLocation=

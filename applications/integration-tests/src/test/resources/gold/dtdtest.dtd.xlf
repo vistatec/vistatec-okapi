@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="dtdtest.dtd" source-language="en" target-language="fr" datatype="x-application/xml+dtd" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="1" resname="test1">
+<source xml:lang="en">Text of &amp;test1;</source>
+<target xml:lang="fr">Text of &amp;test1;</target>
+</trans-unit>
+<trans-unit id="2" resname="test2">
+<source xml:lang="en">Text of test 1 = <x id="1"/></source>
+<target xml:lang="fr">Text of test 1 = <x id="1"/></target>
+</trans-unit>
+<trans-unit id="3" resname="test3">
+<source xml:lang="en">Text with <x id="1"/>HTML<x id="2"/> <x id="3"/>codes<x id="4"/>.</source>
+<target xml:lang="fr">Text with <x id="1"/>HTML<x id="2"/> <x id="3"/>codes<x id="4"/>.</target>
+</trans-unit>
+<trans-unit id="4" resname="findWindow.title">
+<source xml:lang="en">Find Files</source>
+<target xml:lang="fr">Find Files</target>
+<note>Comments</note>
+</trans-unit>
+<trans-unit id="5" resname="fileMenu.label">
+<source xml:lang="en">File</source>
+<target xml:lang="fr">File</target>
+</trans-unit>
+<trans-unit id="6" resname="editMenu.label">
+<source xml:lang="en">Edit</source>
+<target xml:lang="fr">Edit</target>
+</trans-unit>
+<trans-unit id="7" resname="fileMenu.accesskey">
+<source xml:lang="en">f</source>
+<target xml:lang="fr">f</target>
+</trans-unit>
+<trans-unit id="8" resname="editMenu.accesskey">
+<source xml:lang="en">e</source>
+<target xml:lang="fr">e</target>
+</trans-unit>
+<trans-unit id="9" resname="openCmd.label">
+<source xml:lang="en">Open Search...</source>
+<target xml:lang="fr">Open Search...</target>
+</trans-unit>
+<trans-unit id="10" resname="saveCmd.label">
+<source xml:lang="en">Save Search...</source>
+<target xml:lang="fr">Save Search...</target>
+</trans-unit>
+<trans-unit id="11" resname="closeCmd.label">
+<source xml:lang="en">Close</source>
+<target xml:lang="fr">Close</target>
+</trans-unit>
+<trans-unit id="12" resname="openCmd.accesskey">
+<source xml:lang="en">o</source>
+<target xml:lang="fr">o</target>
+</trans-unit>
+<trans-unit id="13" resname="saveCmd.accesskey">
+<source xml:lang="en">s</source>
+<target xml:lang="fr">s</target>
+</trans-unit>
+<trans-unit id="14" resname="closeCmd.accesskey">
+<source xml:lang="en">c</source>
+<target xml:lang="fr">c</target>
+</trans-unit>
+<trans-unit id="15" resname="cutCmd.label">
+<source xml:lang="en">Cut</source>
+<target xml:lang="fr">Cut</target>
+</trans-unit>
+<trans-unit id="16" resname="copyCmd.label">
+<source xml:lang="en">Copy</source>
+<target xml:lang="fr">Copy</target>
+</trans-unit>
+<trans-unit id="17" resname="pasteCmd.label">
+<source xml:lang="en">Paste</source>
+<target xml:lang="fr">Paste</target>
+</trans-unit>
+<trans-unit id="18" resname="cutCmd.accesskey">
+<source xml:lang="en">t</source>
+<target xml:lang="fr">t</target>
+</trans-unit>
+<trans-unit id="19" resname="copyCmd.accesskey">
+<source xml:lang="en">c</source>
+<target xml:lang="fr">c</target>
+</trans-unit>
+<trans-unit id="20" resname="pasteCmd.accesskey">
+<source xml:lang="en">p</source>
+<target xml:lang="fr">p</target>
+</trans-unit>
+<trans-unit id="21" resname="cutCmd.commandkey">
+<source xml:lang="en">X</source>
+<target xml:lang="fr">X</target>
+</trans-unit>
+<trans-unit id="22" resname="copyCmd.commandkey">
+<source xml:lang="en">C</source>
+<target xml:lang="fr">C</target>
+</trans-unit>
+<trans-unit id="23" resname="pasteCmd.commandkey">
+<source xml:lang="en">V</source>
+<target xml:lang="fr">V</target>
+</trans-unit>
+<trans-unit id="24" resname="openCmdToolbar.label">
+<source xml:lang="en">Open</source>
+<target xml:lang="fr">Open</target>
+</trans-unit>
+<trans-unit id="25" resname="saveCmdToolbar.label">
+<source xml:lang="en">Save</source>
+<target xml:lang="fr">Save</target>
+</trans-unit>
+<trans-unit id="26" resname="searchTab">
+<source xml:lang="en">Search</source>
+<target xml:lang="fr">Search</target>
+</trans-unit>
+<trans-unit id="27" resname="optionsTab">
+<source xml:lang="en">Options</source>
+<target xml:lang="fr">Options</target>
+</trans-unit>
+<trans-unit id="28" resname="findDescription">
+<source xml:lang="en">Enter your search criteria below and select the Find button to begin the search.</source>
+<target xml:lang="fr">Enter your search criteria below and select the Find button to begin the search.</target>
+</trans-unit>
+<trans-unit id="29" resname="findCriteria">
+<source xml:lang="en">Search Criteria</source>
+<target xml:lang="fr">Search Criteria</target>
+</trans-unit>
+<trans-unit id="30" resname="type.name">
+<source xml:lang="en">Name</source>
+<target xml:lang="fr">Name</target>
+</trans-unit>
+<trans-unit id="31" resname="type.size">
+<source xml:lang="en">Size</source>
+<target xml:lang="fr">Size</target>
+</trans-unit>
+<trans-unit id="32" resname="type.date">
+<source xml:lang="en">Date Modified</source>
+<target xml:lang="fr">Date Modified</target>
+</trans-unit>
+<trans-unit id="33" resname="mode.is">
+<source xml:lang="en">Is</source>
+<target xml:lang="fr">Is</target>
+</trans-unit>
+<trans-unit id="34" resname="mode.isnot">
+<source xml:lang="en">Is Not</source>
+<target xml:lang="fr">Is Not</target>
+</trans-unit>
+<trans-unit id="35" resname="casesensitive">
+<source xml:lang="en">Case Sensitive Search</source>
+<target xml:lang="fr">Case Sensitive Search</target>
+</trans-unit>
+<trans-unit id="36" resname="matchfilename">
+<source xml:lang="en">Match Entire Filename</source>
+<target xml:lang="fr">Match Entire Filename</target>
+</trans-unit>
+<trans-unit id="37" resname="results.filename">
+<source xml:lang="en">Filename</source>
+<target xml:lang="fr">Filename</target>
+</trans-unit>
+<trans-unit id="38" resname="results.location">
+<source xml:lang="en">Location</source>
+<target xml:lang="fr">Location</target>
+</trans-unit>
+<trans-unit id="39" resname="results.size">
+<source xml:lang="en">Size</source>
+<target xml:lang="fr">Size</target>
+</trans-unit>
+<trans-unit id="40" resname="bytes.before">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+<trans-unit id="41" resname="bytes.after">
+<source xml:lang="en">bytes</source>
+<target xml:lang="fr">bytes</target>
+</trans-unit>
+<trans-unit id="42" resname="button.find">
+<source xml:lang="en">Find</source>
+<target xml:lang="fr">Find</target>
+</trans-unit>
+<trans-unit id="43" resname="button.cancel">
+<source xml:lang="en">Cancel</source>
+<target xml:lang="fr">Cancel</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<file>
+ <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
+  xmlns:itsx="http://www.w3.org/2008/12/its-extensions">
+  <its:translateRule translate="no" selector="//file"/>
+  <its:translateRule translate="yes" selector="//source"
+   itsx:targetPointer="../target"/>
+ </its:rules>
+ <entry xml:id="one">
+  <source>Text one of the source</source>
+  <target>Text one of the target</target>
+ </entry>
+ <entry xml:id="two">
+  <source>Text two of the source</source>
+  <target></target>
+ </entry>
+</file>

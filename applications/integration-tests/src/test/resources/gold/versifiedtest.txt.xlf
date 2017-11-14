@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="Title" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="Title:0" resname="000001:Title:0" xml:space="preserve">
+<source xml:lang="en">Okapi Handbook</source>
+<target xml:lang="fr">Okapi Handbook</target>
+</trans-unit>
+<trans-unit id="Title:1" resname="000001:Title:1" xml:space="preserve">
+<source xml:lang="en">Book 1 - test é=eacute</source>
+<target xml:lang="fr">Book 1 - test é=eacute</target>
+</trans-unit>
+<trans-unit id="Title:2" resname="000001:Title:2" xml:space="preserve">
+<source xml:lang="en">Test Okapi</source>
+<target xml:lang="fr">Test Okapi</target>
+</trans-unit>
+<trans-unit id="Title:3" resname="000001:Title:3" xml:space="preserve">
+<source xml:lang="en">2006</source>
+<target xml:lang="fr">2006</target>
+</trans-unit>
+</body>
+</file>
+<file original="Copyright" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="Copyright:1" resname="000001:Copyright:1" xml:space="preserve">
+<source xml:lang="en">Published by
+Okapi Framework contributors</source>
+<target xml:lang="fr">Published by
+Okapi Framework contributors</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

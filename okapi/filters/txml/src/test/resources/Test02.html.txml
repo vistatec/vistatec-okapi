@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<txml locale="EN" version="1.0" segtype="sentence" createdby="WF2.4.1" datatype="regexp" targetlocale="FR" file_extension="html" editedby="WF2.4.1">
+<skeleton>&lt;html&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="en-us"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1252"&gt;
+&lt;title&gt;</skeleton>
+<translatable blockId="1" datatype="html"><segment segmentId="1" gtmt="false"><source>Text in bold and italics</source></segment></translatable>
+<skeleton>&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="2" datatype="html"><segment segmentId="1" gtmt="true"><source>Text in <ut x="1" type="unknown">&lt;b&gt;</ut>bold<ut x="2" type="unknown">&lt;/b&gt;</ut> and <ut x="3" type="unknown">&lt;i&gt;</ut>italics<ut x="4" type="unknown">&lt;/i&gt;</ut>.</source><target score="0">Texte en <ut type="unknown" x="1">&lt;b&gt;</ut> gras <ut type="unknown" x="2">&lt;/b&gt;</ut> et <ut type="unknown" x="3">&lt;i&gt;</ut> italiques <ut type="unknown" x="4">&lt;/i&gt;</ut> .</target></segment></translatable>
+<skeleton>&lt;/p&gt;
+&lt;p&gt;</skeleton>
+<translatable blockId="3" datatype="html"><segment segmentId="1" gtmt="false"><source>First sentence.</source><ws> </ws></segment><segment segmentId="2" gtmt="false"><source>Second sentence.</source></segment></translatable>
+<skeleton>&lt;/p&gt;
+&lt;pre&gt;</skeleton>
+<translatable blockId="4" datatype="html"><segment segmentId="1" gtmt="false"><source>Pre-formatted</source></segment></translatable>
+<skeleton>
+</skeleton>
+<translatable blockId="5" datatype="html"><segment segmentId="1" gtmt="true"><source>text on two lines</source><target score="0">texte sur deux lignes</target></segment></translatable>
+<skeleton>&lt;/pre&gt;
+&lt;p&gt;</skeleton>
+<translatable blockId="6" datatype="html"><segment segmentId="1" gtmt="false"><source><ut x="1" type="unknown">&amp;amp;</ut>=amp, <ut x="2" type="unknown">&amp;lt;=lt, &amp;gt;</ut>=gt, <ut x="3" type="unknown">&amp;quot;</ut>=quot, '=apos, etc.</source></segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="7" datatype="html"><segment segmentId="1" modified="true" gtmt="false"><source>image:</source><ws> <ut x="1" type="unknown">&lt;img src="test.png" alt="<sub subId="1"/>"&gt;</ut></ws><target>image :</target></segment><segment segmentId="2" modified="true" gtmt="false"><source>.</source><target>.</target></segment></translatable>
+  <translatable blockId="8" subId="1"><segment segmentId="1" gtmt="false"><source>Text of the alt attribute</source></segment></translatable><skeleton>&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</skeleton>
+</txml>

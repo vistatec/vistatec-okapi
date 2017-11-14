@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+          <macro name="feature-page">
+            <parameter name="Page">
+              <link>
+                <page content-title="Getting Started"/>
+              </link>
+            </parameter>
+            <parameter name="Title">Getting Started</parameter>            
+            <rich-text-body>
+              <p>A high-level overview of the solution and using the Sidekick to set up the
+                solution.</p>
+            </rich-text-body>
+          </macro>
+</doc>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<okapiEncodings version="1">
+ <encoding iana="us-ascii" cp="646">
+  <name>ASCII (US, ISO-646)</name>
+ </encoding>
+ <encoding iana="IBM864" cp="864">
+  <name>Arabic (864)</name>
+ </encoding>
+ <encoding iana="ASMO-708" cp="708">
+  <name>Arabic (ASMO 708)</name>
+ </encoding>
+ <encoding iana="DOS-720" cp="720">
+  <name>Arabic (DOS)</name>
+ </encoding>
+ <encoding iana="iso-8859-6" cp="28596">
+  <name>Arabic (ISO)</name>
+ </encoding>
+ <encoding iana="MacArabic" cp="10004">
+  <name>Arabic (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1256" cp="1256">
+  <name>Arabic (Windows)</name>
+ </encoding>
+ <encoding iana="ibm775" cp="775">
+  <name>Baltic (DOS)</name>
+ </encoding>
+ <encoding iana="iso-8859-4" cp="28594">
+  <name>Baltic (ISO)</name>
+ </encoding>
+ <encoding iana="windows-1257" cp="1257">
+  <name>Baltic (Windows)</name>
+ </encoding>
+ <encoding iana="ibm852" cp="852">
+  <name>Central European (DOS)</name>
+ </encoding>
+ <encoding iana="iso-8859-2" cp="28592">
+  <name>Central European (ISO)</name>
+ </encoding>
+ <encoding iana="MacCentralEurope" cp="10029">
+  <name>Central European (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1250" cp="1250">
+  <name>Central European (Windows)</name>
+ </encoding>
+ <encoding iana="euc-cn" cp="51936">
+  <name>Chinese Simplified (EUC)</name>
+ </encoding>
+ <encoding iana="gb18030" cp="54936">
+  <name>Chinese Simplified (GB18030)</name>
+ </encoding>
+ <encoding iana="gb2312" cp="936">
+  <name>Chinese Simplified (GB2312)</name>
+ </encoding>
+ <encoding iana="x-cp20936" cp="20936">
+  <name>Chinese Simplified (GB2312-80)</name>
+ </encoding>
+ <encoding iana="hz-gb2312" cp="52936">
+  <name>Chinese Simplified (HZ)</name>
+ </encoding>
+ <encoding iana="x-cp50227" cp="50227">
+  <name>Chinese Simplified (ISO-2022)</name>
+ </encoding>
+ <encoding iana="big5" cp="950">
+  <name>Chinese Traditional (Big5)</name>
+ </encoding>
+ <encoding iana="x-Chinese-CNS" cp="2000">
+  <name>Chinese Traditional (CNS)</name>
+ </encoding>
+ <encoding iana="MacCroatian" cp="10082">
+  <name>Croatian (Macintosh)</name>
+ </encoding>
+ <encoding iana="cp866" cp="866">
+  <name>Cyrillic (DOS)</name>
+ </encoding>
+ <encoding iana="cp855" cp="855">
+  <name>Cyrillic (DOS, OEM-Cyrillic)</name>
+ </encoding>
+ <encoding iana="iso-8859-5" cp="28595">
+  <name>Cyrillic (ISO)</name>
+ </encoding>
+ <encoding iana="koi8-r" cp="20866">
+  <name>Cyrillic (KOI8-R)</name>
+ </encoding>
+ <encoding iana="koi8-u" cp="21866">
+  <name>Cyrillic (KOI8-U)</name>
+ </encoding>
+ <encoding iana="MacCyrillic" cp="10007">
+  <name>Cyrillic (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1251" cp="1251">
+  <name>Cyrillic (Windows)</name>
+ </encoding>
+ <encoding iana="iso-8859-13" cp="28603">
+  <name>Estonian (ISO, Batic Rim, Latin-7)</name>
+ </encoding>
+ <encoding iana="x-cp21027" cp="21027">
+  <name>Ext Alpha Lowercase</name>
+ </encoding>
+ <encoding iana="IBM863" cp="863">
+  <name>French Canadian (DOS)</name>
+ </encoding>
+ <encoding iana="ibm737" cp="737">
+  <name>Greek (DOS, Old)</name>
+ </encoding>
+ <encoding iana="ibm869" cp="869">
+  <name>Greek (DOS, Modern)</name>
+ </encoding>
+ <encoding iana="iso-8859-7" cp="28597">
+  <name>Greek (ISO)</name>
+ </encoding>
+ <encoding iana="MacGreek" cp="10006">
+  <name>Greek (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1253" cp="1253">
+  <name>Greek (Windows)</name>
+ </encoding>
+ <encoding iana="DOS-862" cp="862">
+  <name>Hebrew (DOS)</name>
+ </encoding>
+ <encoding iana="iso-8859-8" cp="28598">
+  <name>Hebrew (ISO-Visual)</name>
+ </encoding>
+ <encoding iana="iso-8859-8-i" cp="38598">
+  <name>Hebrew (ISO-Logical)</name>
+ </encoding>
+ <encoding iana="MacHebrew" cp="10005">
+  <name>Hebrew (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1255" cp="1255">
+  <name>Hebrew (Windows)</name>
+ </encoding>
+ <encoding iana="ibm861" cp="861">
+  <name>Icelandic (DOS)</name>
+ </encoding>
+ <encoding iana="MacIceland" cp="10079">
+  <name>Icelandic (Macintosh)</name>
+ </encoding>
+ <encoding iana="euc-jp" cp="51932">
+  <name>Japanese (EUC)</name>
+ </encoding>
+ <encoding iana="EUC-JP" cp="20932">
+  <name>Japanese (JIS 0208-1990 + 0212-1990)</name>
+ </encoding>
+ <encoding iana="iso-2022-jp" cp="50220">
+  <name>Japanese (JIS)</name>
+ </encoding>
+ <encoding iana="csISO2022JP" cp="50221">
+  <name>Japanese (JIS-Allow 1 byte Kana)</name>
+ </encoding>
+ <encoding iana="iso-2022-jp" cp="50222">
+  <name>Japanese (JIS-Allow 1 byte Kana - SO/SI)</name>
+ </encoding>
+ <encoding iana="shift_jis" cp="932">
+  <name>Japanese (Shift-JIS)</name>
+ </encoding>
+ <encoding iana="ks_c_5601-1987" cp="949">
+  <name>Korean</name>
+ </encoding>
+ <encoding iana="euc-kr" cp="51949">
+  <name>Korean (EUC)</name>
+ </encoding>
+ <encoding iana="iso-2022-kr" cp="50225">
+  <name>Korean (ISO)</name>
+ </encoding>
+ <encoding iana="Johab" cp="1362">
+  <name>Korean (Johab)</name>
+ </encoding>
+ <encoding iana="x-cp20949" cp="20949">
+  <name>Korean (Wansung)</name>
+ </encoding>
+ <encoding iana="iso-8859-3" cp="28593">
+  <name>Latin-3 (ISO)</name>
+ </encoding>
+ <encoding iana="iso-8859-15" cp="28605">
+  <name>Latin-9 (ISO)</name>
+ </encoding>
+ <encoding iana="IBM865" cp="865">
+  <name>Nordic (DOS)</name>
+ </encoding>
+ <encoding iana="MacThai" cp="10021">
+  <name>Thai (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-874" cp="874">
+  <name>Thai (Windows)</name>
+ </encoding>
+ <encoding iana="ibm857" cp="857">
+  <name>Turkish (DOS)</name>
+ </encoding>
+ <encoding iana="iso-8859-9" cp="28599">
+  <name>Turkish (ISO)</name>
+ </encoding>
+ <encoding iana="MacTurkish" cp="10081">
+  <name>Turkish (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1254" cp="1254">
+  <name>Turkish (Windows)</name>
+ </encoding>
+ <encoding iana="UTF-8" cp="65001">
+  <name>Unicode (UTF-8)</name>
+ </encoding>
+ <encoding iana="UTF-16" cp="1201">
+  <name>Unicode (UTF-16)</name>
+ </encoding>
+ <encoding iana="UTF-16LE" cp="1200">
+  <name>Unicode (UTF-16 Little-Endian)</name>
+ </encoding>
+ <encoding iana="UTF-16BE" cp="1201">
+  <name>Unicode (UTF-16 Big-Endian)</name>
+ </encoding>
+ <encoding iana="windows-1258" cp="1258">
+  <name>Vietnamese (Windows)</name>
+ </encoding>
+ <encoding iana="ibm850" cp="850">
+  <name>Western European (DOS)</name>
+ </encoding>
+ <encoding iana="ibm437" cp="437">
+  <name>Western European (DOS, OEM-US)</name>
+ </encoding>
+ <encoding iana="iso-8859-1" cp="28591">
+  <name>Western European (ISO)</name>
+ </encoding>
+ <encoding iana="MacRoman" cp="10000">
+  <name>Western European (Macintosh)</name>
+ </encoding>
+ <encoding iana="windows-1252" cp="1252">
+  <name>Western European (Windows)</name>
+ </encoding>
+</okapiEncodings>

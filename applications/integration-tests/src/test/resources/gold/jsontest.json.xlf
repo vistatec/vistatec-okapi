@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="jsontest.json" source-language="en" target-language="fr" datatype="x-application/json" okp:inputEncoding="windows-1252">
+<body>
+<group id="sg1">
+<group id="sg2">
+<trans-unit id="tu1" resname="title" xml:space="preserve">
+<source xml:lang="en">example glossary with agrave=à</source>
+<target xml:lang="fr">example glossary with agrave=à</target>
+</trans-unit>
+<group id="sg3">
+<trans-unit id="tu2" resname="title" xml:space="preserve">
+<source xml:lang="en">S</source>
+<target xml:lang="fr">S</target>
+</trans-unit>
+<group id="sg4">
+<group id="sg5">
+<trans-unit id="tu3" resname="ID" xml:space="preserve">
+<source xml:lang="en">SGML</source>
+<target xml:lang="fr">SGML</target>
+</trans-unit>
+<trans-unit id="tu4" resname="SortAs" xml:space="preserve">
+<source xml:lang="en">SGML</source>
+<target xml:lang="fr">SGML</target>
+</trans-unit>
+<trans-unit id="tu5" resname="GlossTerm" xml:space="preserve">
+<source xml:lang="en">Standard Generalized Markup Language</source>
+<target xml:lang="fr">Standard Generalized Markup Language</target>
+</trans-unit>
+<trans-unit id="tu6" resname="Acronym" xml:space="preserve">
+<source xml:lang="en">SGML</source>
+<target xml:lang="fr">SGML</target>
+</trans-unit>
+<trans-unit id="tu7" resname="Abbrev" xml:space="preserve">
+<source xml:lang="en">ISO 8879:1986</source>
+<target xml:lang="fr">ISO 8879:1986</target>
+</trans-unit>
+<group id="sg6">
+<trans-unit id="tu8" resname="para" xml:space="preserve">
+<source xml:lang="en">A meta-markup language, used to create markup languages such as DocBook.</source>
+<target xml:lang="fr">A meta-markup language, used to create markup languages such as DocBook.</target>
+</trans-unit>
+<group id="sg7">
+</group>
+</group>
+<trans-unit id="tu9" resname="GlossSee" xml:space="preserve">
+<source xml:lang="en">markup</source>
+<target xml:lang="fr">markup</target>
+</trans-unit>
+</group>
+</group>
+</group>
+</group>
+</group>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="potest.po" source-language="en" target-language="fr" datatype="x-application/x-gettext" okp:inputEncoding="utf-8">
+<body>
+<trans-unit id="1" resname="P3E36B801" approved="yes" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/></target>
+</trans-unit>
+<trans-unit id="2" resname="N93745AA6" approved="yes" xml:space="preserve">
+<source xml:lang="en">Text with an approved translation <x id="1"/></source>
+<target xml:lang="fr">Texte avec une traducion approuvée <x id="1"/></target>
+</trans-unit>
+<trans-unit id="3" resname="P2FB90C53" xml:space="preserve">
+<source xml:lang="en">Text with non-approved translation <x id="1"/></source>
+<target xml:lang="fr">Text avec une traduction non-approuvée <x id="1"/></target>
+</trans-unit>
+<trans-unit id="4" resname="NCDA4D8A8" approved="yes" xml:space="preserve">
+<source xml:lang="en">First sentence. Second sentence with <x id="1"/>.</source>
+<target xml:lang="fr">Deuxième phrase d'abord avec <x id="1"/>. Puis la première.</target>
+</trans-unit>
+<trans-unit id="5" resname="ND00CDCC1" xml:space="preserve">
+<source xml:lang="en">Text 2 with non-approved translation <x id="1"/></source>
+<target xml:lang="fr">Text 2 avec une traduction non-approuvée <x id="1"/></target>
+</trans-unit>
+<trans-unit id="6" resname="P24749192" xml:space="preserve">
+<source xml:lang="en">Text without translation</source>
+<target xml:lang="fr">Text without translation</target>
+</trans-unit>
+<trans-unit id="7" resname="N8F2BAB8B" approved="yes" xml:space="preserve">
+<source xml:lang="en">Special chars: \"=quot, &amp;=amp, &lt;=lt, >=gt, '=apos, Ą=U+0104</source>
+<target xml:lang="fr">Characters spéciaux : \"=quot, &amp;=amp, &lt;=lt, >=gt, '=apos, Ą=U+0104</target>
+</trans-unit>
+<group id="o3" restype="x-gettext-plurals">
+<trans-unit id="8" resname="N90CD1911-0" approved="yes" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> file</source>
+<target xml:lang="fr"><x id="1"/> fichier</target>
+</trans-unit>
+<trans-unit id="9" resname="N90CD1911-1" approved="yes" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> files</source>
+<target xml:lang="fr"><x id="1"/> fichiers</target>
+</trans-unit>
+</group>
+<group id="o5" restype="x-gettext-plurals">
+<trans-unit id="10" resname="N8C072106-0" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> file left to delete</source>
+<target xml:lang="fr">Encore <x id="1"/> fichier à détruire</target>
+</trans-unit>
+<trans-unit id="11" resname="N8C072106-1" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> files left to delete</source>
+<target xml:lang="fr">Encore <x id="1"/> fichiers à détruire</target>
+</trans-unit>
+</group>
+<group id="o7" restype="x-gettext-plurals">
+<trans-unit id="12" resname="P68A1DB2F-0" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> directory left</source>
+<target xml:lang="fr"><x id="1"/> directory left</target>
+</trans-unit>
+<trans-unit id="13" resname="P68A1DB2F-1" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> directories left</source>
+<target xml:lang="fr"><x id="1"/> directories left</target>
+</trans-unit>
+</group>
+<trans-unit id="14" resname="P5437ECD7" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

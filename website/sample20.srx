@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<srx xmlns="http://www.lisa.org/srx20" xmlns:okpsrx="http://okapi.sf.net/srx-extensions" version="2.0">
+<header segmentsubflows="yes" cascade="yes">
+<formathandle type="start" include="no"></formathandle>
+<formathandle type="end" include="yes"></formathandle>
+<formathandle type="isolated" include="no"></formathandle>
+<okpsrx:options oneSegmentIncludesAll="no" trimLeadingWhitespaces="no" trimTrailingWhitespaces="no"></okpsrx:options>
+<okpsrx:sample language="en" useMappedRules="yes">Mr. Holmes is from the &lt;I>U.K.&lt;/I> &lt;B>Is Dr. Watson from there too?&lt;/B> Yes: both are.&lt;BR/></okpsrx:sample>
+<okpsrx:rangeRule></okpsrx:rangeRule>
+</header>
+<body>
+<languagerules>
+<languagerule languagerulename="default">
+<rule break="no">
+<beforebreak>([A-Z]\.){2,}</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+</languagerule>
+<languagerule languagerulename="english">
+<rule break="no">
+<beforebreak>[Mm][Rr]\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>[Dd][Rr]\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+</languagerule>
+</languagerules>
+<maprules>
+<languagemap languagepattern="en.*" languagerulename="english"></languagemap>
+<languagemap languagepattern=".*" languagerulename="default"></languagemap>
+</maprules>
+</body>
+</srx>

@@ -1,0 +1,27 @@
+#v1
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+oneLevelGroups.b=false
+regexOptions.i=8
+mimeType=text/plain
+ruleCount.i=1
+rule0.ruleName=Default line extraction
+rule0.ruleType.i=1
+rule0.expr=(^(?=.+))(.*?)$
+rule0.groupSource.i=2
+rule0.groupTarget.i=-1
+rule0.groupName.i=-1
+rule0.groupNote.i=-1
+rule0.preserveWS.b=true
+rule0.useCodeFinder.b=true
+rule0.sample=Line 1\nLine 2\n\nLine 3\nLine 4
+rule0.codeFinderRules.count.i=3
+rule0.codeFinderRules.rule0=#!\[.*?\]
+rule0.codeFinderRules.rule1=#!\{.*?\}
+rule0.codeFinderRules.rule2=\\[nrt]
+rule0.codeFinderRules.sample=test #![var] and #!{var} and \n and \t etc.
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false

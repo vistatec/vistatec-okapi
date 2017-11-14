@@ -1,0 +1,19 @@
+dp6: referent
+             Source properties:
+                    href http://osdir.com/ml/
+      Skeleton: <a href="[#$$self$@%href]">
+
+tu3: referent
+      Skeleton: alt="[#$$self$]"
+      Source (en-us): logo
+         0: logo
+
+dp7: referent
+             Source properties:
+                    src msg00058_files/MLnewosdirlogo.gif
+      Skeleton: <img src="[#$$self$@%src]" [#$tu3] border="0">
+
+tu2:
+      Skeleton: <td valign="middle">[#$$self$]
+      Source (en-us): [#$dp6][#$dp7]</a>�������
+         0: [#$dp6][#$dp7]</a>�������

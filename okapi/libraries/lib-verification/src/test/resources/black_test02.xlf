@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-strict.xsd">
+    <file original="\Test01.xml" source-language="en" target-language="fr" datatype="xml" okp:settings="okf_xml@P%P3DDAFFAE" okp:encoding="utf-8">
+        <header>
+            <tool tool-id="P25CBF2C2" tool-name="Okapi.Utilities.Set01" tool-version="1.0.21.0" />
+        </header>
+        <body>
+            <trans-unit id="1">
+                <source xml:lang="en">I like source with my beans.</source>
+                <target xml:lang="fr">Texte de l'attribute avec BlackTerm4.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source xml:lang="en">Source <bpt id="1">&lt;span></bpt>sentence<ept id="1">&lt;/span></ept> with words.</source>
+                <target xml:lang="fr">Target <bpt id="1">&lt;span></bpt>BlackTerm1<ept id="1">&lt;/span></ept> also with BlackTerm1.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source xml:lang="en">Source text <bpt id="1">&lt;span></bpt>sentence<ept id="1">&lt;/span></ept> with words.</source>
+                <target xml:lang="fr">BlackTerm1 text <bpt id="1">&lt;span></bpt>BlackTerm1<ept id="1">&lt;/span></ept> also with BlackTerm1.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source xml:lang="en">Source text <bpt id="1">&lt;b></bpt>text<ept id="1">&lt;/b></ept> text <bpt id="2">&lt;span></bpt><bpt id="3">&lt;b></bpt>text<ept id="3">&lt;/b></ept> text<ept id="2">&lt;/span></ept>.</source>
+                <target xml:lang="fr">Target text <bpt id="1">&lt;b></bpt>BlackTerm1<ept id="1">&lt;/b></ept> text <bpt id="2">&lt;span></bpt><bpt id="3">&lt;b></bpt>BlackTerm1<ept id="3">&lt;/b></ept> text<ept id="2">&lt;/span></ept>.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

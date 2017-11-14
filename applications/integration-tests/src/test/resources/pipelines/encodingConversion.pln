@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=true
+unescapeCER.b=false
+unescapeJava.b=false
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U1=%04X}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true</step>
+<step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=false
+unescapeCER.b=true
+unescapeJava.b=false
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U2=%04x}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true</step>
+<step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=false
+unescapeCER.b=false
+unescapeJava.b=true
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U3=%04X}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true</step>
+</rainbowPipeline>

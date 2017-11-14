@@ -1,0 +1,136 @@
+{
+  "header" : {
+    "version" : "1.0",
+    "description" : "",
+    "itemClass" : "net.sf.okapi.common.Event",
+    "mimeType" : "application/json",
+    "frames" : [ [ 65, 67, 73 ], [ 69, 71, 75, 77 ] ]
+  },
+  "body" : {
+  "event1" : {
+    "resource" : {
+      "reference" : 0,
+      "className" : "net.sf.okapi.common.resource.StartDocument",
+      "content" : {
+        "filterParameters" : {
+          "reference" : 0,
+          "className" : null,
+          "content" : null,
+          "refId" : 62
+        },
+        "filterWriter" : {
+          "reference" : 0,
+          "className" : "net.sf.okapi.common.filterwriter.GenericFilterWriter",
+          "content" : {
+            "refId" : 64
+          },
+          "refId" : 63
+        },
+        "multilingual" : false,
+        "lineBreak" : null,
+        "hasUTF8BOM" : false,
+        "encoding" : null,
+        "locale" : "en-us",
+        "skeleton" : {
+          "reference" : 0,
+          "className" : null,
+          "content" : null,
+          "refId" : 61
+        },
+        "translatable" : true,
+        "preserveWS" : false,
+        "sourceProperties" : [ ],
+        "name" : "test_refs4.txt",
+        "annotations" : [ ],
+        "properties" : [ ],
+        "id" : "sd1",
+        "type" : null,
+        "mimeType" : null,
+        "refId" : 60
+      },
+      "refId" : 59
+    },
+    "type" : "START_DOCUMENT",
+    "refId" : 58
+  },
+  "event2" : {
+    "parent" : {
+      "reference" : 67,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "refId" : 66
+    },
+    "id" : "e1",
+    "type" : null,
+    "refId" : 65
+  },
+  "event3" : {
+    "parent" : {
+      "reference" : 71,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "refId" : 70
+    },
+    "id" : "e2",
+    "type" : null,
+    "refId" : 69
+  },
+  "event4" : {
+    "parent" : {
+      "reference" : 73,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "refId" : 68
+    },
+    "id" : "e3",
+    "type" : null,
+    "refId" : 67
+  },
+  "event5" : {
+    "parent" : {
+      "reference" : 0,
+      "className" : null,
+      "refId" : 74
+    },
+    "id" : "e4",
+    "type" : null,
+    "refId" : 73
+  },
+  "event6" : {
+    "parent" : {
+      "reference" : 69,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "refId" : 76
+    },
+    "id" : "e5",
+    "type" : null,
+    "refId" : 75
+  },
+  "event7" : {
+    "parent" : {
+      "reference" : 0,
+      "className" : null,
+      "refId" : 72
+    },
+    "id" : "e6",
+    "type" : null,
+    "refId" : 71
+  },
+  "event8" : {
+    "parent" : {
+      "reference" : 71,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "refId" : 78
+    },
+    "id" : "e7",
+    "type" : null,
+    "refId" : 77
+  },
+  "event9" : {
+    "resource" : {
+      "reference" : 0,
+      "className" : null,
+      "content" : null,
+      "refId" : 80
+    },
+    "type" : "END_DOCUMENT",
+    "refId" : 79
+  }}
+}

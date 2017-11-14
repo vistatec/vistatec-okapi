@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page guid="pg-15" template="grey-2col" generated="1240507252">
+  <metadata key="uid" guid="pg-15#uid"><![CDATA[15]]></metadata>
+  <metadata key="keywords" guid="pg-15#keywords"></metadata>
+  <metadata key="description" guid="pg-15#description"></metadata>
+  <metadata key="title" guid="pg-15#title"><![CDATA[blablabla]]></metadata>
+  <metadata key="nav_title" guid="pg-15#nav_title"><![CDATA[blablabla]]></metadata>
+  <section guid="t-pg-15-header-image" template_id="header-image">
+    <text guid="c-2075" hidden="0"><![CDATA[<h1 id="h-new-features">blablabla - blablabla</h1>]]></text>
+  </section>
+  <section guid="t-pg-15-corner-image" template_id="corner-image">
+    <text guid="c-1942" hidden="0"><![CDATA[<img src="/images/global/corners/blablabla/blablabla.jpg" alt="blablabla" />]]></text>
+  </section>
+  <section guid="t-pg-15-main-content-area" template_id="main-content-area">
+    <text guid="c-41" hidden="0"><![CDATA[@@@]]></text>
+    <object class="BackToTop" guid="c-15611" hidden="0"/>
+  </section>
+  <object-inputs>
+    <instance guid="c-15611" xml="page_15" hidden="0">
+  <param name="text" guid="p-15611-text-0" type="string" translate="yes"><![CDATA[Back To Top]]></param>
+</instance>
+  </object-inputs>
+</page>

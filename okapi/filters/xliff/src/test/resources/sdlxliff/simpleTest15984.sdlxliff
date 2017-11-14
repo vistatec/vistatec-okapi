@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\simpleTest.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">7ef47198-fa45-4e38-9244-189c6f0305e2</value><value key="SDL:CreationDate">03/21/2011 16:54:20</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\simpleTest.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\simpleTest.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6541</value><value key="SDLWS:DocId">7389</value><value key="SDLWS:TaskId">8355</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:20Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><fmt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><fmt-def id="1"><value key="FontName">Courier New</value></fmt-def></fmt-defs><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="sdl:paragraph" color="'0'" /><cxt-def id="3" type="x-tm-tag" descr="&lt;img href='img.png' alt='text'/&gt;" purpose="Match"><props><value key="SDL:AddedByFramework">SDL:CreatedByFramework</value></props></cxt-def><cxt-def id="4" type="sdl:transunit-ref" descr="379a8d5c-f2d0-42d5-8344-e909d179eca1" color="'0'" purpose="Location"><props><value key="SDL:AddedByFramework">True</value></props></cxt-def><cxt-def id="5" type="sdl:table" color="'0'" /><cxt-def id="6" type="x-tm-table-cell" purpose="Match" /><cxt-def id="7" type="sdl:table-row" color="'0'" /><cxt-def id="8" type="sdl:unordered-list" descr="" color="'0'" /><cxt-def id="9" type="x-tm-listitem" purpose="Match" /></cxt-defs><node-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><node-def id="1"><cxt id="5" /></node-def><node-def id="2" force-name="false"><cxt id="6" /></node-def></node-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="33"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="1" /></tag><tag id="10"><ph name="img" word-end="false" equiv-text="text">&lt;img href='img.png' alt='<sub xid="bfd52b12-c0dd-4094-8301-f53292f24fed">text</sub>'/&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttRightTagEdge">ec_Split</value></props></tag><tag id="13"><ph name="a">&lt;a href='link.htm'/&gt;</ph><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="15"><ph name="Comment">&lt;!--
+This is a block comment
+--&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="0"><st name="!DOCTYPE">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="1"><st name="html">&lt;html&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="meta">&lt;meta http-equiv="keywords" content="one,two,three" /&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="3"><st name="meta">&lt;meta http-equiv="content-language" content="en" /&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="4"><st name="meta">&lt;meta name="author" content="me and myself" /&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="5"><st name="meta">&lt;meta name="keywords" content="keyword1, keywords2" /&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="6"><st name="head">&lt;head&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="7"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="11"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="12"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="14"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="16"><st name="table">&lt;table id=100&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="17"><st name="tr">&lt;tr&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="18"><st name="td">&lt;td&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="19"><st name="td">&lt;/td&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="20"><st name="tr">&lt;/tr&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="21"><st name="table">&lt;/table&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="22"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="23"><st name="ul">&lt;ul&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="24"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="25"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="26"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="27"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="28"><st name="ul">&lt;/ul&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="29"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="30"><st name="script">&lt;script&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="31"><st name="Lots...">
+	Lots of    white
+	
+	space
+</st><props><value key="ttTagType">ec_End</value><value key="ttLeftTagEdge">ec_Round</value></props></tag><tag id="32"><st name="script">&lt;/script&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="34"><st name="html">&lt;/html&gt;</st><props><value key="ttTagType">ec_End</value></props></tag></tag-defs></header><body>
+<trans-unit id="c082f6ce-966a-43bd-8f77-1cf06b345a12" translate="no"><source><x id="0" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="2e566742-95e0-4e28-a104-2c0649289bc8" translate="no"><source>
+<x id="1" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="e68cd355-2fb0-448f-ae72-aa679fb4b817" translate="no"><source>
+
+<x id="2" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="a4dd750d-06b7-4c03-b92d-dfb3771ea2ef" translate="no"><source>
+<x id="3" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="bc5b0cf0-a424-48e1-ba96-f012a41d40eb" translate="no"><source>
+<x id="4" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="99447bfe-b033-4f67-9f83-2f589bd27c26" translate="no"><source>
+<x id="5" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="2c576a1e-7579-48dc-a472-f184f7ac14da" translate="no"><source>
+
+<x id="6" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ea2f9114-fc1c-449c-b2e8-9d41d405c13e" translate="no"><source>
+
+<x id="7" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="379a8d5c-f2d0-42d5-8344-e909d179eca1"><source>Before <x id="10" xid="bfd52b12-c0dd-4094-8301-f53292f24fed" /> after.</source><seg-source><mrk mtype="seg" mid="1">Before <x id="10" xid="bfd52b12-c0dd-4094-8301-f53292f24fed" /> after.</mrk></seg-source><target><mrk mtype="seg" mid="1"><x id="10" xid="bfd52b12-c0dd-4094-8301-f53292f24fed" /></mrk></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /></sdl:seg-defs></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="bfd52b12-c0dd-4094-8301-f53292f24fed"><source>text</source><seg-source><mrk mtype="seg" mid="2">text</mrk></seg-source><target><mrk mtype="seg" mid="2" /></target><sdl:seg-defs><sdl:seg id="2" origin="not-translated" /></sdl:seg-defs></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ed7287da-3edd-46fd-a35b-206c6a587b0a" translate="no"><source><x id="11" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ea3cffc3-fe79-4b32-8aef-693f343dd688" translate="no"><source>
+
+<x id="12" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="f729ba5a-de81-4182-a1ec-99b159bf9faa"><source>Before <x id="13" /> after.</source><seg-source><mrk mtype="seg" mid="3">Before <x id="13" /> after.</mrk></seg-source><target><mrk mtype="seg" mid="3"><x id="13" /></mrk></target><sdl:seg-defs><sdl:seg id="3" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="1bdc05fa-097f-491f-97e9-45cd182e0865" translate="no"><source><x id="14" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ac2fdc0f-5dfc-4e95-b00a-e4b4d11b9c37" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="426d2f6c-8a03-45d4-a515-f6cb95b37cc1"><source><x id="15" /></source><seg-source><x id="15" /></seg-source><target><x id="15" /></target></trans-unit>
+<trans-unit id="2cb3b325-c433-437d-ab3f-aac5527efc71" translate="no"><source>
+
+<x id="16" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:cxt id="1" /><sdl:node id="1" /></sdl:cxts>
+<trans-unit id="4999aaba-7ba2-451b-87c7-82a857266ec1" translate="no"><source> <x id="17" /><x id="18" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:cxt id="7" /><sdl:cxt id="5" /><sdl:cxt id="1" /><sdl:node id="2" /></sdl:cxts>
+<trans-unit id="c204ea27-507d-4336-803f-e3213f53ce58"><source>text in table</source><seg-source><mrk mtype="seg" mid="4">text in table</mrk></seg-source><target><mrk mtype="seg" mid="4" /></target><sdl:seg-defs><sdl:seg id="4" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="1974b35e-ae20-4e41-979f-6efd45b81675" translate="no"><source><x id="19" /><x id="20" /><x id="21" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /><sdl:node id="2" /></sdl:cxts>
+<trans-unit id="ff0efd06-c77f-4470-b7cc-040548ddb964" translate="no"><source>
+
+<x id="22" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="22c25cf7-25f7-4fc5-8058-cc87350c5d55"><source>Text before list:</source><seg-source><mrk mtype="seg" mid="5">Text before list:</mrk></seg-source><target><mrk mtype="seg" mid="5" /></target><sdl:seg-defs><sdl:seg id="5" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="c8ac515e-7b2f-45d5-944e-f0a8161d914c" translate="no"><source>
+	<x id="23" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="da15b889-5002-4a5f-8258-4668164871a2" translate="no"><source>
+		<x id="24" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="9" /><sdl:cxt id="8" /><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="2a2a3c33-291c-4d77-b0db-ae0d441a2541"><source>Text of item 1</source><seg-source><mrk mtype="seg" mid="6">Text of item 1</mrk></seg-source><target><mrk mtype="seg" mid="6" /></target><sdl:seg-defs><sdl:seg id="6" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="55749217-6ae9-4288-a438-ec14e02f8827" translate="no"><source><x id="25" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="d2429645-bb62-47dc-932f-e013b793393d" translate="no"><source>
+		<x id="26" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="9" /><sdl:cxt id="8" /><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="b8549f0b-a874-4f34-9937-692a31ed9531"><source>Text of item 2</source><seg-source><mrk mtype="seg" mid="7">Text of item 2</mrk></seg-source><target><mrk mtype="seg" mid="7" /></target><sdl:seg-defs><sdl:seg id="7" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="6e18aeb3-02dc-4f71-a397-c5dd05e8c807" translate="no"><source><x id="27" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="bbba18aa-81c6-48c3-8ac0-3ea051f6074c" translate="no"><source>
+	<x id="28" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="0c8ea19d-cbfc-416c-bbd4-bc4d5c6970ff" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="e6245c04-ac82-4f1b-a384-641a6d6e6a46"><source>and text after the list.</source><seg-source><mrk mtype="seg" mid="8">and text after the list.</mrk></seg-source><target><mrk mtype="seg" mid="8" /></target><sdl:seg-defs><sdl:seg id="8" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="bd2bf32f-cc23-43d0-b07a-9b62cd94c05d" translate="no"><source><x id="29" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="c24399dc-b209-4425-9c24-261d946d5cc1" translate="no"><source>
+
+<x id="30" /><x id="31" /><x id="32" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="db8e5f72-dcb3-4922-9182-265c2e2b94d8" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="f82d6e29-1e38-42fe-8732-462223f6021f"><source><g id="33">
+	Lots of    white
+	
+	space
+</g></source><seg-source><g id="33">
+	<mrk mtype="seg" mid="9">Lots of    white
+	
+	space</mrk>
+</g></seg-source><target><g id="33">
+	<mrk mtype="seg" mid="9" />
+</g></target><sdl:seg-defs><sdl:seg id="9" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ccf4cf18-1c82-4193-8dce-74ca76b96e2f" translate="no"><source>
+
+
+<x id="34" /></source></trans-unit></group></body></file></xliff>

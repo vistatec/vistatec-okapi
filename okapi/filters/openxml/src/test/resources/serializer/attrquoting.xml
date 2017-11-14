@@ -1,0 +1,7 @@
+<test>
+    <x attr="&lt;>" />
+    <x attr="&lt;&gt;" />
+    <x attr="&amp;" />
+    <x attr="'hi'" />
+    <x attr="&quot;hi&quot;" />
+</test>

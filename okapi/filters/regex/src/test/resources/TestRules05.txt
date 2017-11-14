@@ -1,0 +1,6 @@
+[Group1] # Note about Group1
+g1.key1=Text of g1.key1
+g1.key2=Text of g1.key2
+[Group2]
+g2.key1=Text of g2.key1
+

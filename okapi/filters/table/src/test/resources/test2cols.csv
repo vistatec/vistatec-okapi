@@ -1,0 +1,33 @@
+814,text
+815,"works ""text"" and ""text"" text
+"
+815,"works ""text"", and ""text"" text"
+815,"does not work ""text"", and ""text"" text
+"
+816,text
+817,"works ""text"" and ""text"""
+817,"works ""text"" and ""text""
+"
+817,"works ""text"", and ""text"""
+817,"works ""text"", and ""text""
+"
+818,"""text"" and text"
+818,"text, ""text"" text"
+818,"text ""text"", text"
+818,"text ""text"", text
+", text
+819,"text ""text, text"", text"
+819,"text ""text, text"", text
+", text
+820,""text, text"" text, text
+821,"""text, text""", text, text
+822, text ""text, text"" text, text
+823, "text ""text ""text,text"", text"" text", text
+999,"X <x>xxxxN</x> xxxxN <X>xxxxN</X>, text4."
+999,"A <b>text1</b> text2 <B>text3</B>, text4."
+999,"A <b>text1</b> text2 <B>text3</B>, text4 "
+819,"text ""text, text."", text"
+819,"text ""text, text "", text"
+111,Text
+222," text1 ""text2"" text3, text4, text5."
+333,"Text"

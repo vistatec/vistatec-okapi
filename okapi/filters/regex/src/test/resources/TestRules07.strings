@@ -1,0 +1,14 @@
+/* Comment 1 */
+"Item_Without_semicolon" = "Text1";
+
+/* Comment 2 */
+"Item_With_semicolon" = "Text2;Text3";
+
+/* Comment 3 */
+"Item_With_colon" = "Text4:Text5";
+
+/* Comment 4 */
+"Item_With_trailing_comment" = "Text6"; // Comment 5
+
+/* Comment 6 */
+"Item_With_fake_statement_end" = "Text7\";";

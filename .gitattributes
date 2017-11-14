@@ -1,0 +1,7 @@
+okapi/core/src/test/resources/ParamTest01.txt                         binary
+okapi/core/src/test/resources/test.html                               binary
+okapi/filters/yaml/src/test/resources/yaml/issues/issue56-1.yaml      binary
+okapi/filters/yaml/src/test/resources/yaml/plain_wrapped.yml          binary
+okapi/filters/yaml/src/test/resources/yaml/ruby/ruby1.yaml            binary
+okapi/filters/yaml/src/test/resources/yaml/spec_test/example2_18.yaml binary
+okapi/filters/xmlstream/src/test/resources/cdataWithGroup.xml         binary

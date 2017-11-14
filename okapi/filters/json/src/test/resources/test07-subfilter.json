@@ -1,0 +1,5 @@
+{
+	"key1": "<p>Test <i>text</i>.</p><p>More test text.</p>",
+	"key2": "<ul>\n<li>Item 1<\/li>\t<li> &amp; Item 2 </li>\r<li> & Item 3 </ul>",
+	"key1" : "<p>Hello,   \"<i>crazy</i>\" \b world & friends!\n <\/p> \n!"
+}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text xmlns:its="http://www.w3.org/2005/11/its">
+ <its:rules version="1.0">
+   <its:translateRule selector="//term" translate="no"/>
+   <its:translateRule selector="//@title" translate="yes"/>
+   <its:termRule selector="//term" term="yes" termInfoPointer="id(@def)"/>
+   <its:termRule selector="//img/@keyword" term="yes"/>
+ </its:rules>
+ <p title="Text">We may define <term def="TDPV">discoursal point of view</term>
+as <gloss xml:id="TDPV">the relationship, expressed through discourse
+structure, between the implied author or some other addresser,
+and the fiction.</gloss></p>
+<p><term>Obliterate</term>, other text <its:span term="yes" def="definition" termInfoPointer="@def">other term</its:span>, and <img keyword='term-text'/>.</p>
+<p its:locNote="Localization note">Text to translate.</p>
+<p title="Tite text">Note for title.</p>
+</text>

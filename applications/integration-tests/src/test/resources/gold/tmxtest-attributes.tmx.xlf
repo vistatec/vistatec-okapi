@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="tmxtest-attributes.tmx" source-language="en-US" target-language="fr-FR" datatype="x-application/x-tmx+xml" okp:inputEncoding="utf-8">
+<body>
+<trans-unit id="1">
+<source xml:lang="en-US">Test char: &amp;=amp, &lt;=lt, '=apos, "=quot</source>
+<seg-source><mrk mid="0" mtype="seg">Test char: &amp;=amp, &lt;=lt, '=apos, "=quot</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Test charactères: &amp;=amp, &lt;=lt, '=apos, "=quot</mrk></target>
+</trans-unit>
+<trans-unit id="2">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (file1, group1)</mrk></target>
+</trans-unit>
+<trans-unit id="3">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (file1, no group)</mrk></target>
+</trans-unit>
+<trans-unit id="4">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (no file, group1)</mrk></target>
+</trans-unit>
+<trans-unit id="5">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (file1, group2)</mrk></target>
+</trans-unit>
+<trans-unit id="6">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (file2, group2)</mrk></target>
+</trans-unit>
+<trans-unit id="7">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (file2, group1)</mrk></target>
+</trans-unit>
+<trans-unit id="8">
+<source xml:lang="en-US">One entry in the TM.</source>
+<seg-source><mrk mid="0" mtype="seg">One entry in the TM.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Une entrée dans la MT (no file, no group)</mrk></target>
+</trans-unit>
+<trans-unit id="9">
+<source xml:lang="en-US">Close the <g id="0">application</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Close the <g id="0">application</g>.</mrk></seg-source>
+<target xml:lang="fr-FR"><mrk mid="0" mtype="seg">Fermer <g id="0">l'application</g>.</mrk></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

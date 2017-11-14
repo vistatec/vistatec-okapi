@@ -1,0 +1,476 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Overview</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a class="current" href="index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Filters">http://okapiframework.org/wiki/index.php?title=Filters</a></p>
+
+<p>Several filters are available with the Okapi Framework.</p>
+<p>The following table lists all the pre-defined configuration for each of the 
+filters distributed with Okapi:</p>
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<th valign="top">Pre-defined Configurations</th>
+		<th valign="top">Filters</th>
+		<th valign="top">Configurable</th>
+		<th valign="top">Useability</th>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>DTD</b><br>
+				Default DTD with text, e.g. XUL DTDs.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="dtd/ui/index.html">DTD 
+		Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>HTML</b><br>
+				Default HTML, XHTML and other HTML-like files (allows lax 
+				syntax).</td>
+			</tr>
+			<tr>
+				<td><b>HTML (Well-formed)</b><br>
+				XHTML files and HTML with strict syntax. Use this configuration 
+				to get more structural information.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="html/ui/index.html">HTML Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>IDML</b><br>
+				Adobe InDesign XML files. Early aplha version.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="idml/ui/index.html">IDML Filter</a></cite></td>
+		<td align="left" valign="top">No</td>
+		<td align="left" valign="top">alpha</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>JSON</b><br>
+				Default JSON files.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="json/ui/index.html">JSON Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>OpenOffice.org Documents</b><br>
+				OpenOffice.org different files formats: ODT, ODS, ODP, ODG, OTT, 
+				OTS, OTP, OTG files.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="openoffice/ui/index.html">OpenOffice.org Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Microsoft Office Documents</b><br>
+				Microsoft Office documents: DOCX, XLSX, PPTX files.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="openxml/ui/index.html">OpenXML Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Pensieve TM</b><br>
+				For Pensieve translation memories.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="pensieve/ui/index.html">Pensieve 
+		TM Filter</a></cite></td>
+		<td align="left" valign="top">No</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>PHP Content Default</b><br>
+				For default PHP content files.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="php/ui/index.html">PHP Content Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		useable with care</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Plain Text</b><br>
+				Default plain text files.</td>
+			</tr>
+			<tr>
+				<td><b>Plain Text (Trim Trail)</b><br>
+				Text files; trailing spaces and tabs removed from extracted 
+				lines.</td>
+			</tr>
+			<tr>
+				<td><b>Plain Text (Trim All)</b><br>
+				Text files; leading and trailing spaces and tabs removed from 
+				extracted lines.</td>
+			</tr>
+			<tr>
+				<td><b>Plain Text (Paragraphs)</b><br>
+				Text files extracted by paragraphs (separated by 1 or more empty 
+				lines).</td>
+			</tr>
+			<tr>
+				<td><b>Spliced Lines (Backslash)</b><br>
+				Spliced lines filter with the backslash character (\) used as 
+				the splicer.</td>
+			</tr>
+			<tr>
+				<td><b>Spliced Lines (Underscore)</b><br>
+				Spliced lines filter with the underscore character (_) used as 
+				the splicer.</td>
+			</tr>
+			<tr>
+				<td><b>Spliced Lines (Custom)</b><br>
+				Spliced lines filter with a user-defined splicer.</td>
+			</tr>
+			<tr>
+				<td><b>Plain Text (Regex, Line=Paragraph)</b><br>
+				Plain text files using regex-based linebreak search. Extracts by 
+				lines.</td>
+			</tr>
+			<tr>
+				<td><b>Plain Text (Regex, Block=Paragraph)</b><br>
+				Plain text files using regex-based linebreak search. Extracts by 
+				paragraphs.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="plaintext/ui/index.html">PlainText Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>PO (Standard)</b><br>
+				Classic bilingual PO files.</td>
+			</tr>
+			<tr>
+				<td><b>PO (Monolingual)</b><br>
+				Monolingual PO files (msgid is a real ID, not the source text</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="po/ui/index.html">PO Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Java Properties</b><br>
+				Default Java properties files.</td>
+			</tr>
+			<tr>
+				<td><b>Java Properties (Output not escaped)</b><br>
+				Java properties files with an output where extended characters 
+				are not escaped to <code>\uHHHH</code></td>
+			</tr>
+			<tr>
+				<td><b>Skype Language Files</b><br>
+				Skype language properties files (including support for HTML 
+				codes)</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="properties/ui/index.html">Properties Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Regex Default</b><br>
+				For basic text file.</td>
+			</tr>
+			<tr>
+				<td><b>SRT Sub-Titles</b><br>
+				For Sub-Titles SRT (Sub-Rip Text) files.</td>
+			</tr>
+			<tr>
+				<td><b>Text (Line=Paragraph)</b><br>
+				For plain text file where each line is a paragraph.</td>
+			</tr>
+			<tr>
+				<td><b>Text (Block=Paragraph)</b><br>
+				For plain text files where paragraphs are delimited by empty 
+				lines</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="regex/ui/index.html">Regex Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Ruby on Rails YAML</b><br>
+				For YAML files used with Ruby on Rails.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="railsyaml/ui/index.html">Ruby on Rails YAML Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Table Files</b><br>
+				Table-like files such as tab-delimited, CSV, fixed-width 
+				columns, etc.</td>
+			</tr>
+			<tr>
+				<td><b>Table (Comma-Separated Values)</b><br>
+				For comma-separated values, optional header with field names.</td>
+			</tr>
+			<tr>
+				<td><b>Table (Fixed-Width Columns)</b><br>
+				Fixed-width columns table padded with white-spaces.</td>
+			</tr>
+			<tr>
+				<td><b>Table (Tab-Separated Values)</b><br>
+				Columns, separated by one or more tabs.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="table/ui/index.html">Table Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>TMX</b><br>
+				For Translation Memory eXchange (TMX) documents.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="tmx/ui/index.html">TMX Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>TTX</b><br>
+				Trados TTX documents.</td>
+			</tr>
+			<tr>
+				<td><b>TTX (without forced Tuv in output)</b><br>
+				For Trados TTX documents without forcing Tuv in output.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="ttx/ui/index.html">TTX Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>TS</b><br>
+				For Qt TS files.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="ts/ui/index.html">TS Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Trados-Tagged RTF</b><br>
+				For Trados-tagged RTF files - Read only (no output supported)</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="rtf/ui/index.html">Trados-Tagged RTF Filter</a></cite></td>
+		<td align="left" valign="top">No</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Versified Text</b><br>
+				Versified Text documents.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="versifiedtxt/ui/index.html">Versified 
+		Text Filter</a></cite></td>
+		<td align="left" valign="top">No</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Vignette Export/Import Content Default</b><br>
+				For Vignette files created by or made for the Export/Import 
+				Content function..</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="vignette/ui/index.html">Vignette Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>XLIFF</b><br>
+				For XML Localisation Interchange File Format (XLIFF) documents.</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="xliff/ui/index.html">XLIFF Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>Generic XML</b><br>
+				Default XML support.</td>
+			</tr>
+			<tr>
+				<td><b>RESX</b><br>
+				For
+				Microsoft RESX documents (without binary data)</td>
+			</tr>
+			<tr>
+				<td><b>Mozilla RDF</b><br>
+				For
+				Mozilla RDF documents.</td>
+			</tr>
+			<tr>
+				<td><b>Java Properties XML</b><br>
+				For
+				Java properties file in XML format</td>
+			</tr>
+			<tr>
+				<td><b>Android Strings</b><br>
+				For Android strings XML documents</td>
+			</tr>
+			<tr>
+				<td><b>WiX Localization</b><br>
+				For WiX (Windows Installer XML) localization files</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="xml/ui/index.html">XML Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+		<table border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td><b>XML Stream</b><br>
+				Generic XML (handle large XML documents)</td>
+			</tr>
+			<tr>
+				<td><b>DITA</b><br>
+				DITA documents</td>
+			</tr>
+			<tr>
+				<td><b>Java Properties XML + HTML</b><br>
+				Java Properties XML with Embedded HTML</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" valign="top"><cite><a href="xmlstream/ui/index.html">XML Stream Filter</a></cite></td>
+		<td align="left" valign="top">Yes</td>
+		<td align="left" valign="top">beta<br>
+		but useable in production</td>
+	</tr>
+</table>
+<p>See the <a href="http://okapiframework.org/devguide/index.html">online 
+Developer&#39;s Guide</a> for more information on how to use the filters in your own 
+scripts and applications, and how to develop new filters.</p>
+<p>&nbsp;</p>
+</body>
+</html>

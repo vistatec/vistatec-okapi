@@ -1,0 +1,13 @@
+#v1
+RuleCount.i=1
+
+Rule0.name=Dates1
+Rule0.description=Matches times separated by either : or . will match a 24 hour time, or a 12 hour time with AM or PM specified. Allows 0-59 minutes, and 0-59 seconds. Seconds are not required. (Author: Steve Valaitis, http://regexlib.com) 
+Rule0.inTokens=
+Rule0.outTokens=TIME,WORD
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=((([0]?[1-9]|1[0-2])(:|\.)[0-5][0-9]((:|\.)[0-5][0-9])?( )?(AM|am|aM|Am|PM|pm|pM|Pm))|(([0]?[0-9]|1[0-9]|2[0-3])(:|\.)[0-5][0-9]((:|\.)[0-5][0-9])?))
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=0
+Rule0.languages=

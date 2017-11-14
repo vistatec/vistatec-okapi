@@ -1,0 +1,24 @@
+#v1
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+oneLevelGroups.b=false
+regexOptions.i=40
+mimeType=text/plain
+ruleCount.i=1
+rule0.ruleName=Rule
+rule0.ruleType.i=0
+rule0.expr=^rls_string(\s+?)(.+?)\s(.*?)(\n|\z)
+rule0.groupSource.i=3
+rule0.groupTarget.i=-1
+rule0.groupName.i=2
+rule0.groupNote.i=-1
+rule0.preserveWS.b=true
+rule0.useCodeFinder.b=false
+rule0.sample=rls_string STRING_app_short_caption_string        "Blaster"$0a$$0a$//d:Menu$0a$rls_string STRING_blaster_menuoption_request            "Request URL"$0a$rls_string STRING_blaster_menuoption_header             "HTTP Header"
+rule0.codeFinderRules.count.i=0
+rule0.codeFinderRules.sample=
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false

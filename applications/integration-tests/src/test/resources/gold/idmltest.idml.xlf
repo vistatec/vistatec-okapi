@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="Stories/Story_uc2.xml" source-language="en" target-language="fr" datatype="xml" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="P4D055C47-tu1" xml:space="preserve">
+<source xml:lang="en">This is a first sentence.</source>
+<target xml:lang="fr">This is a first sentence.</target>
+</trans-unit>
+<trans-unit id="P4D055C47-tu2" xml:space="preserve">
+<source xml:lang="en">And a second line in that same paragraph.<x id="1"/>and a third one after Ctrl+Enter</source>
+<target xml:lang="fr">And a second line in that same paragraph.<x id="1"/>and a third one after Ctrl+Enter</target>
+</trans-unit>
+<trans-unit id="P4D055C47-tu4" xml:space="preserve">
+<source xml:lang="en">\=bs, &amp;=amp, &lt;=lt, “=quot, ^=caret</source>
+<target xml:lang="fr">\=bs, &amp;=amp, &lt;=lt, “=quot, ^=caret</target>
+</trans-unit>
+<trans-unit id="P4D055C47-tu6" xml:space="preserve">
+<source xml:lang="en">Text in <g id="1">a different font</g>.</source>
+<target xml:lang="fr">Text in <g id="1">a different font</g>.</target>
+</trans-unit>
+</body>
+</file>
+<file original="Stories/Story_uf4.xml" source-language="en" target-language="fr" datatype="xml" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="P52401526-tu1" xml:space="preserve">
+<source xml:lang="en">Text before the table.</source>
+<target xml:lang="fr">Text before the table.</target>
+</trans-unit>
+<trans-unit id="P52401526-tu2" xml:space="preserve">
+<source xml:lang="en"><x id="1"/></source>
+<target xml:lang="fr"><x id="1"/></target>
+</trans-unit>
+<trans-unit id="P52401526-tu3" xml:space="preserve">
+<source xml:lang="en">Text after the table.</source>
+<target xml:lang="fr">Text after the table.</target>
+</trans-unit>
+<trans-unit id="P52401526-tu5" xml:space="preserve">
+<source xml:lang="en">Before the note <x id="1"/> and after it.</source>
+<target xml:lang="fr">Before the note <x id="1"/> and after it.</target>
+</trans-unit>
+<trans-unit id="P52401526-tu7" xml:space="preserve">
+<source xml:lang="en">Variables: <x id="1"/>=filename. 	=tab, <x id="2"/>=curPageNum, “=dlq and ”=drq.</source>
+<target xml:lang="fr">Variables: <x id="1"/>=filename. 	=tab, <x id="2"/>=curPageNum, “=dlq and ”=drq.</target>
+</trans-unit>
+<trans-unit id="P52401526-tu9" xml:space="preserve">
+<source xml:lang="en"> text</source>
+<target xml:lang="fr"> text</target>
+</trans-unit>
+<group id="NCF494F15-rg1">
+<group id="NEF6AA7FB-Cell1">
+<trans-unit id="P23F0A8AE-tu1" xml:space="preserve">
+<source xml:lang="en">Cell 1</source>
+<target xml:lang="fr">Cell 1</target>
+</trans-unit>
+</group>
+<group id="NEF6AA7FB-Cell2">
+<trans-unit id="P23F0A8AF-tu1" xml:space="preserve">
+<source xml:lang="en">Cell 2</source>
+<target xml:lang="fr">Cell 2</target>
+</trans-unit>
+</group>
+<group id="NEF6AA7FB-Cell3">
+</group>
+<group id="NEF6AA7FB-Cell4">
+</group>
+<group id="NEF6AA7FB-Cell5">
+</group>
+<group id="NEF6AA7FB-Cell6">
+</group>
+<group id="NEF6AA7FB-Cell7">
+</group>
+<group id="NEF6AA7FB-Cell8">
+</group>
+<group id="NEF6AA7FB-Cell9">
+</group>
+<group id="NEF6AA7FB-Cell10">
+</group>
+<group id="NEF6AA7FB-Cell11">
+</group>
+<group id="NEF6AA7FB-Cell12">
+</group>
+<group id="NEF6AA7FB-Cell13">
+</group>
+<group id="NEF6AA7FB-Cell14">
+</group>
+<group id="NEF6AA7FB-Cell15">
+</group>
+<group id="NEF6AA7FB-Cell16">
+<trans-unit id="P5A246D48-tu1" xml:space="preserve">
+<source xml:lang="en">Last cell.</source>
+<target xml:lang="fr">Last cell.</target>
+</trans-unit>
+<trans-unit id="P5A246D48-tu2" xml:space="preserve">
+<source xml:lang="en">Second line of last cell.</source>
+<target xml:lang="fr">Second line of last cell.</target>
+</trans-unit>
+</group>
+</group>
+</body>
+</file>
+</xliff>

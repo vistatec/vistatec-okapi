@@ -1,0 +1,359 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - XML Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">XML Filter (BETA)</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#itsSupport">ITS Support</a><br>
+			- <a href="#itsExtensions">ITS Extensions</a><br>
+			- <a href="#filterOptions">Filter Options</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=XML_Filter">http://okapiframework.org/wiki/index.php?title=XML_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This filter allows you to process XML documents.</p>
+
+<p>The following is an example of a simple XML document. The translatable text 
+is underlined. Because each format based on XML is different, you need 
+information on what are the translatable parts, what are the inline elements, 
+etc. The XML Filter <a href="#itsSupport">implements the ITS W3C Recommendation</a> 
+to address this issue.</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;myDoc&gt;
+ &lt;prolog&gt;
+  &lt;author&gt;Zebulon Fairfield&lt;/author&gt;
+  &lt;version&gt;version 12, revision 2 - 2006-08-14&lt;/version&gt;
+  &lt;keywords&gt;&lt;kw&gt;<u>horse</u>&lt;/kw&gt;&lt;kw&gt;<u>appaloosa</u>&lt;/kw&gt;&lt;/keywords&gt;
+  &lt;storageKey&gt;articles-6D272BA9-3B89CAD8&lt;/storageKey&gt;
+ &lt;/prolog&gt;
+ &lt;body&gt;
+  &lt;title&gt;<u>Appaloosa</u>&lt;/title&gt;
+  &lt;p&gt;<u>The Appaloosas are rugged horses originally breed by 
+the </u>&lt;kw&gt;<u>Nez-Perce</u>&lt;/kw&gt;<u> tribe in the US Northwest.</u>&lt;/p&gt;
+  &lt;p&gt;<u>They are often characterized by their spotted coats.</u>&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/myDoc&gt;</pre>
+<p>This filter is implemented in the class <code>
+net.sf.okapi.filters.xml.XMLFilter</code> of the Okapi library.</p>
+<h2><a name="itsSupport"></a>ITS Support</h2>
+<p>The <b>Internationalization Tag set (ITS )</b> is a W3C recommendation that 
+defines a set of elements and attributes you can use to specify different 
+internationalization- and localization-related aspects of your XML document, for 
+instance: define what attribute values are translatable, what element content 
+should be protected, what element should be treated as a nested sub-flow of 
+text, and much more.</p>
+<p>The ITS specification is available at <a href="http://www.w3.org/TR/its/">
+http://www.w3.org/TR/its/</a>.</p>
+<p>By default the filter process the XML documents based on the ITS defaults. 
+That is: the content of all elements is translatable, and none of the values of 
+the attribute are. To modify this behavior you need to associate the document 
+with ITS rules. This can be done different ways:</p>
+<ul>
+	<li>By including global and local rules inside the document.</li>
+	<li>By including inside the document a link to external global rules.</li>
+	<li>By associating the document with a parameters file when running the 
+	filter. The parameter file being a set of external ITS global rules.</li>
+</ul>
+
+<p>When processing a document, the filter...</p>
+<ol>
+	<li>Assumes that all element content is translatable, and none of the 
+	attribute values are translatable.</li>
+	<li>Applies the global rules found in the (optional) parameters file 
+	associated with the input document.</li>
+	<li>Applies the global rules found in the document.</li>
+	<li>And finally, applies the local rules within the document. </li>
+</ol>
+<p>For example, assuming that <code>ITSForDoc.xml</code> is the ITS file 
+associated with the input file <code>Document.xml</code>, the translatable text 
+is listed below.</p>
+<p>ITSForDoc.xml:</p>
+<pre>&lt;its:rules xmlns:its=&quot;http://www.w3.org/2005/11/its&quot; version=&quot;1.0&quot;&gt;
+ &lt;its:translateRule selector=&quot;//head&quot; translate=&quot;no&quot;/&gt;
+ &lt;its:withinTextRule selector=&quot;//b|//code|//img&quot; withinText=&quot;yes&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<p>Document.xml:</p>
+<pre>&lt;doc&gt;
+ &lt;head&gt;
+  &lt;update&gt;2009-03-21&lt;/update&gt;
+  &lt;author&gt;Mirabelle McIntosh&lt;/author&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Paragraph with &lt;img ref=&quot;eg.png&quot;/&gt; and &lt;b&gt;bolded text&lt;/b&gt;.&lt;/p&gt;
+  &lt;p&gt;Paragraph with &lt;code&gt;data codes&lt;/code&gt; and text.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/doc&gt;</pre>
+<p>The resulting text units are (in XLIFF 1.2 notation):</p>
+<pre>1: &quot;Paragraph with &lt;x id=&#39;1&#39;&gt; and &lt;g id=&#39;2&#39;&gt;bolded text&lt;/g&gt;.&quot;
+2: &quot;Paragraph with &lt;g id=&#39;1&#39;&gt;&lt;x id=&#39;2&#39;/&gt;&lt;/g&gt; and text.&quot;</pre>
+<h2><a name="itsExtensions"></a>ITS Extensions</h2>
+<p>The filter supports extensions to the ITS specification. These extension use 
+the namespace URI <code><a href="http://www.w3.org/2008/12/its-extensions">http://www.w3.org/2008/12/its-extensions</a></code>.</p>
+<ul>
+	<li><a href="#idValue">idValue and xml:id</a></li>
+	<li><a href="#whiteSpaces">whiteSpaces</a></li>
+</ul>
+<h3><a name="idValue"></a>idValue and xml:id</h3>
+<p>When the attribute <code>xml:id</code> is found on a translatable element, it 
+is used as the name of the text unit generated for that element.</p>
+<p>For example, in the example below, the resource name associated with the text 
+unit for the <code>&lt;p&gt;</code> element is &quot;<code>id1</code>&quot;.</p>
+<pre>&lt;p xml:id=&quot;id1&quot;&gt;Text&lt;/p&gt;</pre>
+<p>The attribute <code>idValue</code> used in the ITS <code>translateRule</code> 
+element allows you to define an XPath expression that correspeonds to the identifier value for the 
+given selection. The value of <code>idValue</code> must be an expression that 
+can return a string. A node location is a valid expression: it will return the 
+value of the first node at the given location.</p>
+<p>For example, in the example below, the resource name associated with the text 
+unit for the <code>&lt;p&gt;</code> element is &quot;<code>id1</code>&quot;.</p>
+<pre>&lt;doc&gt;
+ &lt;its:rules version=&quot;1.0&quot; xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+  xmlns:itsx=&quot;http://www.w3.org/2008/12/its-extensions&quot;&gt;
+  &lt;its:translateRule selector=&quot;//p&quot; translate=&quot;yes&quot; itsx:idValue=&quot;@name&quot;/&gt;
+ &lt;/its:rules&gt;
+ &lt;p name=&quot;id1&quot;&gt;text 1&lt;/p&gt;
+&lt;/doc&gt;</pre>
+<p>Note that <code>xml:id</code> has precedence over <code>idValue</code> 
+declaration. For example, in the example below, the resource name associated 
+with the text unit for the <code>&lt;p&gt;</code> element is &quot;<code>xid1</code>&quot;, not 
+&quot;<code>id1</code>&quot;.</p>
+<pre>&lt;doc&gt;
+ &lt;its:rules version=&quot;1.0&quot; xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+  xmlns:itsx=&quot;http://www.w3.org/2008/12/its-extensions&quot;&gt;
+  &lt;its:translateRule selector=&quot;//p&quot; translate=&quot;yes&quot; itsx:idValue=&quot;@name&quot;/&gt;
+ &lt;/its:rules&gt;
+ &lt;p xml:id=&quot;xid1&quot; name=&quot;id1&quot;&gt;text 1&lt;/p&gt;
+&lt;/doc&gt;</pre>
+<p>You can build complex ID based on different attributes, element or event 
+hard-coded text. Any of the String functions offered by XPath can be used.</p>
+<p>For example, in the file below, the two elements <code>&lt;text&gt;</code> and
+<code>&lt;desc&gt;</code> are translatable, but they have only one corresponding ID, 
+the <code>name</code> attribute in their parent element. To make sure you have a 
+unique identifier for both the content of <code>&lt;text&gt;</code> and the content of
+<code>&lt;desc&gt;</code>, you can use the rules set in the example. The XPath 
+expression &quot;<code>concat(../@name, &#39;_t&#39;)</code>&quot; will give the ID &quot;<code>id1_t</code>&quot; 
+and the expression &quot;<code>concat(../@name, &#39;_d&#39;)</code>&quot; will give the ID &quot;<code>id1_d</code>&quot;.</p>
+<pre>&lt;doc&gt;
+ &lt;its:rules version=&quot;1.0&quot; xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+  xmlns:itsx=&quot;http://www.w3.org/2008/12/its-extensions&quot;&gt;
+  &lt;its:translateRule selector=&quot;//text&quot; translate=&quot;yes&quot; itsx:idValue=&quot;concat(../@name, &#39;_t&#39;)&quot;/&gt;
+  &lt;its:translateRule selector=&quot;//desc&quot; translate=&quot;yes&quot; itsx:idValue=&quot;concat(../@name, &#39;_d&#39;)&quot;/&gt;
+ &lt;/its:rules&gt;
+ &lt;msg name=&quot;id1&quot;&gt;
+  &lt;text&gt;Value of text&lt;/text&gt;
+  &lt;desc&gt;Value of desc&lt;/desc&gt;
+ &lt;/msg&gt;
+&lt;/doc&gt;</pre>
+<h3><a name="whiteSpaces"></a>whiteSpaces</h3>
+<p>The extension attribute <code>whiteSpaces</code> allows you to apply globally 
+the equivalent of a local <code>xml:space</code> attribute.</p>
+<p>For example, if you have a format where all element &lt;pre&gt; must have their 
+spaces, tabs and line breaks preserved, you can specify the whiteSpaces=&quot;preserve&quot; 
+attribute to a <code>&lt;its:translateRule&gt;</code> element for the <code>&lt;pre&gt;</code> 
+elements. In the example below, the spaces in the <code>&lt;pre&gt;</code> element 
+will be preserved on extraction.</p>
+<pre>&lt;doc&gt;
+ &lt;its:rules version=&quot;1.0&quot; xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+  xmlns:itsx=&quot;http://www.w3.org/2008/12/its-extensions&quot;&gt;
+  &lt;its:translateRule selector=&quot;//pre&quot; translate=&quot;yes&quot; itsx:whiteSpaces=&quot;preserve&quot;/&gt;
+ &lt;/its:rules&gt;
+ &lt;pre&gt;Some txt with    many spaces.  &lt;/pre&gt;
+&lt;/doc&gt;</pre>
+<p>Note that the <code>xml:space</code> has precedence over <code>whiteSpaces</code>. 
+For example, in the following example, the white spaces in the content of <code>
+&lt;pre&gt;</code> may not be preserved.</p>
+<pre>&lt;doc&gt;
+ &lt;its:rules version=&quot;1.0&quot; xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+  xmlns:itsx=&quot;http://www.w3.org/2008/12/its-extensions&quot;&gt;
+  &lt;its:translateRule selector=&quot;//pre&quot; translate=&quot;yes&quot; itsx:whiteSpaces=&quot;preserve&quot;/&gt;
+ &lt;/its:rules&gt;
+ &lt;pre xml:space=&quot;default&quot;&gt;Some txt with    many spaces.  &lt;/pre&gt;
+&lt;/doc&gt;</pre>
+<h2><a name="filterOptions"></a>Filter Options</h2>
+<p>The filter supports also options in addition to ITS and ITS extension. These 
+options use 
+the namespace URI <code>okapi-framework:xmlfilter-options</code>.</p>
+<p><b>Important:</b> The filter <b>options must be placed in the parameters file</b> (<code>.fprm</code>) 
+used with the filter, not in embedded or linked ITS rules. Options placed in 
+embedded or linked ITS rules will have no effect.</p>
+<ul>
+	<li><a href="#lineBreakAsCode">lineBreakAsCode</a></li>
+	<li><a href="#codeFinder">codeFinder</a></li>
+	<li><a href="#omitXMLDeclaration">omitXMLDeclaration</a></li>
+	<li><a href="#escapeQuotes">escapeQuotes</a></li>
+	<li><a href="#escapeGT">escapeGT</a></li>
+	<li><a href="#escapeNbsp">escapeNbsp</a></li>
+</ul>
+<h3><a name="lineBreakAsCode"></a>lineBreakAsCode</h3>
+<p>In some cases the content of element includes line-breaks that need to be 
+included as part of the content but without using an actual line-break in the 
+extracted text. For example in some XML documents generated by Excel, the 
+formatting of the cells is marked up with <code>&amp;#10;</code> entity references. 
+They need to be passed as inline codes.</p>
+<p>By default this option is set to <b>false</b>.</p>
+<p>To specify this the filter use the extension <code>lineBreakAsCode</code> 
+extension attribute. This affect <b>all the extracted content</b>.</p>
+<p>For example: The following code is an ITS document with the option to treat 
+line-breaks as code. It can be used along with the example of XML document 
+listed below.</p>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:options lineBreakAsCode=&quot;yes&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<pre>&lt;doc&gt;
+ &lt;data&gt;line 1&amp;#10;line 2.&lt;/data&gt;
+&lt;/doc&gt;</pre>
+<h3><a name="codeFinder"></a>codeFinder</h3>
+<p>You can define a set of regular expressions to capture span of extracted text 
+that should be treated as inline codes. For example, some element content may 
+have variables, or HTML tags that need to be protected from modification and 
+treated as codes. Use the <code>codeFinder</code> element for this.</p>
+<p>In the following parameters file, the codeFinder element defines two rules:</p>
+<ul>
+	<li>The first one (<code>rule0</code>) is &quot;<code>&lt;(/?)\w[^&gt;]*?&gt;</code>&quot; and 
+	matches any XML-type tags (e.g. &quot;<code>&lt;b&gt;</code>&quot;, &quot;<code>&lt;/b&gt;</code>&quot;, &quot;<code>&lt;br/&gt;</code>&quot;)</li>
+	<li>The second one (<code>rule1</code>) is &quot;<code>(#\w+?\#)|(%\d+?%)</code>&quot; 
+	and matches any word enclosed in # (e.g. &quot;<code>#VAR#</code>&quot;) or number 
+	enclosed in % (e.g. &quot;<code>%1%</code>&quot;).</li>
+</ul>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:codeFinder useCodeFinder=&quot;yes&quot;&gt;#v1
+count.i=2
+rule0=&amp;lt;(/?)\w[^&amp;lt;]*?&amp;gt;
+rule1=<code>(#\w+?\#)|(%\d+?%)</code>
+ &lt;/okp:codeFinder&gt;
+&lt;/its:rules&gt;</pre>
+<p>Some important details:</p>
+<ul>
+	<li>Set <code>useCodeFinder</code> to &quot;<code>yes</code>&quot; to have the rules 
+	used, if the attribute is missing its value is assumed to be &quot;<code>no</code>&quot;.</li>
+	<li>Make sure the first line of the <code>&lt;codeFinder&gt;</code> element 
+	content is <code>#v1</code>.</li>
+	<li>Each entry in the content must be on a separate line.</li>
+	<li><code>count.i=N</code> must be before any rules and <code>N</code> must 
+	be the number of rules.</li>
+	<li><code>ruleN</code> must be incremented starting at 0.</li>
+	<li>The patter for a rule must be escaped for XML, for example: &quot;<code>&lt;(/?)\w[^&gt;]*?&gt;</code>&quot; 
+	must be entered &quot;<code>&amp;lt;(/?)\w[^&amp;lt;]*?&amp;gt;</code>&quot; in the parameters 
+	file.</li>
+	<li>Do not put spaces before <code>count.i</code> or <code>ruleN</code>, and 
+	not after your expressions.</li>
+</ul>
+<h3><a name="omitXMLDeclaration"></a>omitXMLDeclaration</h3>
+<p>By default an XML declaration is always set at the top of the output document 
+(regardless wether the original document has one or not). It is an important 
+part of the XML document and it is especially needed when the encoding of the 
+output document is not UTF-8, UTF-16 or UTF-32, as its name must be specified in 
+the XML declaration. However, there are a few special cases when the declaration 
+is better left off. To hanlde those rare cases, you can use the omitXMLDeclation 
+to not output the XML declaration.</p>
+<p>For example:</p>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:options omitXMLDeclaration=&quot;yes&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<p>Remember that XML documents without an XML declaration may be read 
+incorrectly if the encoding of the document is not UTF-8, UTF-16 or UTF-32.</p>
+<h3><a name="escapeQuotes"></a>escapeQuotes</h3>
+<p>By default, when processing the document, the filter uses double-quotes to 
+enclose all attributes (transltable or not) and use the following rules for 
+escaping/not-escaping the litteral quotes:</p>
+<ul>
+	<li>Inside the attribute values:<ul>
+		<li>Single-quotes (=apostrophes) are never escaped</li>
+		<li>Double-quotes are always escaped</li>
+	</ul>
+	</li>
+	<li>In element content:<ul>
+		<li>Single-quotes (=apostrophes) are not escaped</li>
+		<li>Double-quotes are escaped escaped by default</li>
+	</ul>
+	</li>
+</ul>
+<p>You cannot change the escaping rules for attributes.</p>
+<p>For element content: If the document is processed without triggering any rule 
+that allow the translation of an attribute, then (and only then) the filter 
+takes into account the <code>escapeQuotes</code> option to escape or not 
+double-quotes in the translatable content.</p>
+<p>For example, the following parameters file allows to not escape double-quotes 
+in element content (for the documents where there is no rule for translatable 
+attributes are triggered).</p>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:options escapeQuotes=&quot;no&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<h3><a name="escapeGT"></a>escapeGT</h3>
+<p>By default the character &#39;&gt;&#39; is escaped. You can indicate to the filter to 
+not escape it using the <code>escapeGT</code> option.</p>
+<p>For example, the following parameters file indicates to not escape 
+greater-than characters.</p>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:options escapeGT=&quot;no&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<h3><a name="escapeNbsp"></a>escapeNbsp</h3>
+<p>By default the non-breaking space character is escaped (in the form <code>&amp;#x00a0;</code>). You can indicate 
+to the filter to not escape it using the <code>escapeNbsp</code> option.</p>
+<p>For example, the following parameters file indicates to not escape the 
+non-breaking space characters.</p>
+<pre>&lt;its:rules version=&quot;1.0&quot;
+ xmlns:its=&quot;http://www.w3.org/2005/11/its&quot;
+ xmlns:okp=&quot;okapi-framework:xmlfilter-options&quot;&gt;
+ &lt;okp:options escapeNbsp=&quot;no&quot;/&gt;
+&lt;/its:rules&gt;</pre>
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>If the document has an encoding declaration it is used.</li>
+	<li>Otherwise, UTF-8 is used as the default encoding (regardless the actual 
+	default encoding that was specified when opening the document).</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<p>If the original document had an XML encoding declaration it is updated, if it 
+did not, one is automatically added.</p>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+
+<h2><a name="parameters"></a>Parameters</h2>
+<p>The parameters for the XML filter are stored in an <a href="#itsSupport">ITS document</a>.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

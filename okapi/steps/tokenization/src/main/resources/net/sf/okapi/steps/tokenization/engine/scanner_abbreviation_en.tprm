@@ -1,0 +1,26 @@
+#v1
+RuleCount.i=2
+
+Rule0.name=Abbreviations1
+Rule0.description=Abbreviations like 3.3pct, extraction of the numeric part. 
+Rule0.inTokens=WORD
+Rule0.outTokens=NUMBER,WORD
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=(\d+(\.\d+)?)([a-z]+)
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=1
+Rule0.languages=en
+
+Rule1.name=Abbreviations2
+Rule1.description=Abbreviations like 3.3pct, extraction of the abbreviation part. 
+Rule1.inTokens=WORD
+Rule1.outTokens=ABBREVIATION,WORD
+Rule1.userTokens=
+Rule1.lexemId.i=0
+Rule1.pattern=(\d+(\.\d+)?)([a-z]+)
+Rule1.regexOptions.i=0
+Rule1.regexGroup.i=3
+Rule1.languages=en
+
+

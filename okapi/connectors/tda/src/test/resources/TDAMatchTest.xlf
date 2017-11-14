@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2">
+<file original="test" source-language="en-us" target-language="fr-fr" datatype="xml">
+<body>
+
+<trans-unit id="1">
+<source xml:lang="en-us">Data type</source>
+</trans-unit>
+<trans-unit id="2">
+<source xml:lang="en-us">Shows the data type of the selected column.</source>
+</trans-unit>
+<trans-unit id="3">
+<source xml:lang="en-us">group property</source>
+</trans-unit>
+
+</body>
+</file>
+</xliff>

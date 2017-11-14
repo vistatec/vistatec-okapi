@@ -1,0 +1,2 @@
+parametersClass=net.sf.okapi.filters.plaintext.paragraphs.Parameters
+extractParagraphs.b=false

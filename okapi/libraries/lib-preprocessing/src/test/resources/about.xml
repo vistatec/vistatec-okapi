@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="x1">About</entry>
+<entry key="x2">Testing</entry>
+<entry key="x3"><![CDATA[<b>Test</b> with some <u>HTML</u> <i>tags</i>.]]>
+</entry>
+<entry key="x4"><![CDATA[
+<div class="section"><h3><a name="Required_Parameters"></a>Required Parameters</h3>
+<table class="bodyTable"><tr class="a"><th>Name</th>
+<th>Type</th>
+<th>Since</th>
+<th>Description</th>
+</tr>
+<tr class="b"><td><strong><a href="#buildOutputDirectory">buildOutputDirectory</a></strong></td>
+<td><code>File</code></td>
+<td><code>-</code></td>
+
+<td>The default output directory<br />
+<strong>Default value is</strong>: <code>${project.build.outputDirectory}</code>.</td>
+</tr>
+<tr class="a"><td><strong><a href="#useProjectReferences">useProjectReferences</a></strong></td>
+<td><code>boolean</code></td>
+<td><code>-</code></td>
+<td>When set to false, the plugin will not create sub-projects and
+instead reference those sub-projects using the installed package in
+the local repository<br />
+<strong>Default value is</strong>: <code>true</code>.</td>
+</tr>
+</table>
+relationhip&#8217;s.]]>
+</entry>
+</properties>

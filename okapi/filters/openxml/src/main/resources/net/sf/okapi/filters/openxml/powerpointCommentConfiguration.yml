@@ -1,0 +1,8 @@
+elements:
+  filetype:
+    ruleTypes: [ATTRIBUTES_ONLY]
+    elementType: MSPOWERPOINTCOMMENT
+  
+  'p:text':
+    ruleTypes: [TEXTUNIT]
+  

@@ -1,0 +1,24 @@
+#v1
+RuleCount.i=2
+
+Rule0.name=Abbreviations1
+Rule0.description=Abbreviations like U.S.
+Rule0.inTokens=WORD
+Rule0.outTokens=ABBREVIATION,WORD
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=[A-Z](\.[A-Z])+\.?
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=0
+Rule0.languages=en
+
+Rule1.name=Abbreviations2
+Rule1.description=Abbreviations like MD, USA
+Rule1.inTokens=WORD
+Rule1.outTokens=ABBREVIATION,WORD
+Rule1.userTokens=
+Rule1.lexemId.i=0
+Rule1.pattern=[A-Z]+
+Rule1.regexOptions.i=0
+Rule1.regexGroup.i=0
+Rule1.languages=en

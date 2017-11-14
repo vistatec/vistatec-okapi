@@ -1,0 +1,1900 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Okapi Changes Log</title>
+    <style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style> </head>
+  <body>
+    <h1>Okapi Framework Changes Log - @date@</h1>
+    <p> Note this document is common to both the <b>okapi-lib</b> distribution
+      and the <b>okapi-apps</b> distribution. The information pertaining to
+      applications other than Tikal are relevant only for the <b>okapi-apps</b>
+      distribution. </p>
+    <ul>
+      <li>Download page for latest STABLE RELEASE: <a href="https://bintray.com/okapi/Distribution">https://bintray.com/okapi/Distribution</a></li>
+      <li>Download page for latest DEVELOPMENT SNAPSHOTS: <a href="https://okapi.ci.cloudbees.com/job/okapi-snapshot">https://okapi.ci.cloudbees.com/job/okapi-snapshot</a></li>
+      <li>Main Web site: <a href="http://okapiframework.org/wiki">http://okapiframework.org/wiki</a></li>
+      <li>Project site: <a href="https://bitbucket.org/okapiframework/okapi">https://bitbucket.org/okapiframework/okapi</a></li>
+    </ul>
+    <h2>Changes from M34 to M35-SNAPSHOT</h2>
+    <ul>
+      <li>Filters:</li>
+      <ul>
+        <li>Markdown Filter:</li>
+        <ul>
+          <li>Fixed issue #610, adding two new options for processing. The
+            "Translate Code Blocks" option (<tt>translateCodeBlocks</tt>),
+            enabled by default, controls whether or not fenced code blocks
+            should be extracted. The "Translate YAML Metadata Header" (<tt>translateHeaderMetadata</tt>),
+            disabled by default, controls whether values from YAML-style "front
+            matter" headers should be extracted.</li>
+          <li>Fixed issue #651, adding a new option for processing. The 
+            "Translate Image Alt Text" option (<tt>translateImageAltText</tt>),
+            enabled by default, controls whether or not alt text from image
+            references is extracted by default.</li>
+          <li>Improved default inline code finder regex used to process embedded
+            HTML and XML tags.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Fixed the issue of the priority value being output in the
+            annotates attribute for the <code>&lt;note&gt;</code> element.</li>
+        </ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Added two new Excel options, "Translate Diagram Data" and
+            "Translate Drawings". Both are disabled by default. "Translate
+            Diagram Data" will extract text from SmartArt and other embedded
+            diagrams, while "Translate Drawings" will extract text from embedded
+            drawings such as text fields.</li>
+          <li>Added the "Use Included Slide Numbers Only" PowerPoint option.
+            When checked, the configuration can specify specific slide numbers
+            for extraction. Other slides will be ignored by the filter.</li>
+          <li>Fixed a bug in which <tt>ctype</tt> values for formatting codes
+            extracted from PPTX documents showed up as <tt>x-empty</tt> rather
+            than as useful style information.</li>
+          <li>Fixed a bug in which <tt>ctype</tt> values for formatting codes
+            extracted from XLSX documents showed up as <tt>x-empty</tt> rather
+            than as useful style information.</li>
+          <li>Fixed a bug when PPTX documents relate to external resources, e.g.
+            hyperlinks that refer to videos.</li>
+        </ul>
+        <li>YAML Filter:</li>
+        <ul>
+          <li>Fix issue #643: Multi-line scalar string values will now be extracted
+          as a single text unit, rather than one text unit per line.
+          <b>Warning: YAML files extracted with previous versions of Okapi may
+            no longer merge successfully due to this change.</b>
+          </li>
+        </ul>
+        <li>IDML Filter:</li>
+        <ul>
+          <li>Fixed issue #636, adding a new option "Skip discretionary hyphens" which is disabled
+            by default.</li>
+        </ul>
+        <li>Archive Filter:</li>
+        <ul>
+          <li>Fixed issue #641, preventing some errors to be reported incorrectly.</li>
+        </ul>
+        <li>SDL Trados Package Filter:</li>
+        <ul>
+          <li>There is a new filter for SDL packages: .sdlppx and .sdlrpx files.</li>
+        </ul>
+      </ul>
+      <li>Steps:</li>
+      <ul>
+        <li>Translation Comparison:</li>
+        <ul>
+          <li>Improved the HTML report output (added link to go directly to the
+            summary, right-aligned the values in the summary table).</li>
+        </ul>
+        <li>Quality Check:</li>
+        <ul>
+          <li>The black list file can now take an optional third column with a comment.</li>
+        </ul>
+      </ul>
+      <li>Connectors:</li>
+      <ul>
+        <li>Google MT:</li>
+        <ul>
+          <li>Issue #635: Added the "Use Phrase-Based MT" option. This option 
+          will force Google to use its phrase-based MT system, rather than
+          neural MT, which it normally uses preferentially. </li>
+        </ul>
+      </ul>
+      <ul>
+        <li>MyMemory:</li>
+        <ul>
+          <li>Updated the API URL to use https instead of http.</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>ModernMT:</li>
+        <ul>
+          <li>Fixed issue #650 where the connector was cast incorrectly to ITMQuery.</li>
+          <li>Fixed the issue of the optional context parameter not getting set.</li>
+        </ul>
+      </ul>
+      <li>Rainbow:</li>
+      <ul>
+        <li>Fixed issue #7 in for Longhorn: BCONF files can support pipeline files with a lot more multi-bytes characters (e.g. Chinese).</li>
+        <ul>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li>Fixed a bug that caused the <tt>JSONEncoder</tt> to not correctly
+          JSON-escape nested content processed by a subfilter.</li>
+        <ul>
+        </ul>
+      </ul>
+    </ul>
+    <h2>Changes from M33 to M34</h2>
+    <ul>
+      <li>Filters:</li>
+      <ul>
+        <li>IDML Filter:</li>
+        <ul>
+          <li>Complete rewrite of the filter, fixing many problems and changing
+            several behaviors. <b>Warning: files extracted with previous
+              versions of Okapi will no longer merge successfully due to changes
+              in text units and skeleton processing.</b> Resolves issues #544,
+            #497, #302, #378, #293, #259, #245, #471, and #317. Additionally
+            deprecates the filter configuration options "Maximum Spread Size",
+            "Generate an error when a spread is larger than the specified
+            value", and "Create new text units on hard returns".</li>
+        </ul>
+        <li>ITS Filter:</li>
+        <ul>
+          <li>The separator for the <code>annotatorsRef</code> values is now '<code>\s</code>'
+            (white-space) rather than '<code> </code>' (ASCII space). Resolves
+            issue #612.</li>
+        </ul>
+        <li>JSON Filter:</li>
+        <ul>
+          <li>Fixed issue #410: add an option to toggle whether or not '/' is
+            escaped in output.</li>
+        </ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Fixed issue #503: chart content will now be exposed for
+            translation in Excel and Powerpoint files.</li>
+          <li>Fixed issue #614: fixed a case where text with different styles
+            could be incorrectly merged into a single run.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Fixed issue #110: CDATA sections that appear in markup will be
+            preserved.</li>
+        </ul>
+      </ul>
+      <li>Steps:</li>
+      <ul>
+        <li>Terminology Leveraging:</li>
+        <ul>
+          <li>Added a step to annotate the source and target content with
+            terminology information leveraged from a term base.</li>
+        </ul>
+        <li>XML Validation:</li>
+        <ul>
+          <li>Made using the DTDs found in the input documents an option (set by
+            default).</li>
+        </ul>
+      </ul>
+      <li>Connectors:</li>
+      <ul>
+        <li>ModernMT API Connector:</li>
+        <ul>
+          <li>Added a connector for the <a target="_blank" href="http://www.modernmt.eu/">ModernMT
+              Project</a>.</li>
+        </ul>
+        <li>Google MT:</li>
+        <ul>
+          <li>Improve retry behavior, particularly when exceeding the API rate
+            limits.</li>
+        </ul>
+      </ul>
+      <li>Tikal:</li>
+      <ul>
+        <li>You can now use the <code>-mmt</code> option to use the <a href="http://okapiframework.org/wiki/index.php?title=ModernMT_API_Connector">ModernMT
+            API Connector</a>.</li>
+        <li>Bugs in the usage of the <code>-lingo24</code> options have been
+          fixed.</li>
+      </ul>
+      <li>Libraries:</li>
+      <ul>
+        <li>Core:</li>
+        <ul>
+          <li>Fixed how CDATA is preserved when in the skeleton. Resolves issue
+            #624.</li>
+        </ul>
+        <li>Quality Check:</li>
+        <ul>
+          <li>Added an option to show only relative paths in Quality Check
+            report. Resolves issue #616.</li>
+          <li>Improved how some issues with localizable items were reported.</li>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li>The XLIFF 2 library has been upgraded to the version 1.1.6.</li>
+        <ul>
+        </ul>
+      </ul>
+    </ul>
+    <h2>Changes from M32 to M33</h2>
+    <ul>
+      <li>CheckMate:</li>
+      <ul>
+        <li>Updated LanguageTool integration to support the new JSON API (Issue
+          #582).<br>
+          <b>Note:</b> As a result of this change, CheckMate will no longer work
+          with LanguageTool version 3.3 or earlier. For more information, see
+          the <a href="https://languagetool.org/http-api/migration.php">LanguageTool
+            API Migration page</a>. </li>
+      </ul>
+      <li>Tikal:</li>
+      <ul>
+        <li>You can now process several files at once with the <code>-xm</code>
+          and <code>-lm</code> commands. Note that in that case you cannot use
+          the <code>-to</code> and <code>-from</code> options. This resolves
+          issue #598.</li>
+      </ul>
+      <li>Filters:</li>
+      <ul>
+        <li>Markdown Filter:</li>
+        <ul>
+          <li>There is a new filter for Markdown (<code>.md</code>) files.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Fixed missing prefix on output for some prefixed XLIFF inline
+            elements.</li>
+          <li>Improved support for <code>equiv-text</code> attribute.</li>
+          <li>Issue #466: Add a new <code>skipNoMrkSegSource</code> option that
+            will cause <code>trans-units</code> containing <code>seg-source</code>
+            but no internal <code>mrk</code> data to be treated as skeleton.
+            This behavior (which is consistent with SDL Studio) is enabled in
+            the <code>okf_xliff-sdl</code> configuration, but disabled by
+            default in <code>okf_xliff</code>. </li>
+          <li>Issue #551: XLIFF files containing entities that are invalid in
+            XML 1.0 (for example, &amp;#x1f;) will no longer break the filter.
+            (These entities, and their corresponding characters, will be
+            stripped before parsing.)</li>
+          <li>Issue #602: the <code>maxwidth</code>, <code>maxheight</code>,
+            and <code>size-unit</code> attributes are now parsed and exposed as
+            resource properties. Updates to these properties will be reflected
+            in the merged XLIFF file.</li>
+        </ul>
+        <li>XML Filter:</li>
+        <ul>
+          <li>The handling of files with UTF-16LE and UTF-16BE declaration has
+            been improved. Output to these encodings is treated as an output to
+            UTF-16 with a BOM.</li>
+          <li>Add the <code>inlineCdata</code> option, which will cause CDATA
+            markup to appear as inline codes rather than being stripped.</li>
+        </ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Support for <code>.dotx</code>, <code>.dotm</code>, <code>.ppsx</code>,
+            <code>.ppsm</code>, <code>.potx</code>, <code>.potm</code>, <code>.xltx</code>,
+            <code>.xltm</code> files has been added.</li>
+          <li>Fix a bug where certain XLSX files would cause an infinite loop in
+            parsing.</li>
+          <li>Fix a bug where certain XLSX files would fail to extract.</li>
+          <li>Fix a bug where paragraph spacing properties were incorrectly
+            stripped when using "aggressive" cleanup mode.</li>
+        </ul>
+        <li>PO Filter:</li>
+        <ul>
+          <li>Issue #584: Add "Include <tt>msgctxt</tt> in note" option to
+            include context data in trans-unit notes.</li>
+        </ul>
+        <li>JSON Filter:</li>
+        <ul>
+          <li>A new option to not have the leading slash in the full key path
+            has been added. This resolves issue #603.</li>
+        </ul>
+      </ul>
+      <li>lib-verification:</li>
+      <ul>
+        <li>Updated the LanguageTool integration to support the new JSON API, as
+          described above.</li>
+        <li>Updated the BlacklistChecker to do case sensitive validation if the
+          blaclist terms are identical except for the case.</li>
+      </ul>
+      <li>Connectors:</li>
+      <ul>
+        <li>SimpleTM:</li>
+        <ul>
+          <li>Fixed the <code>setPenalizeSourceWithDifferentCodes()</code>
+            method so it sets the value correctly.</li>
+        </ul>
+        <li>Google MT:</li>
+        <ul>
+          <li>Update the connector to support NMT models, when available.</li>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li>The code is now under Apache License version 2.0.</li>
+        <li>The <code>XLIFFWriter</code> class now supports serializing the <code>maxwidth</code>,
+          <code>maxheight</code>, and <code>size-unit</code> attributes on <code>&lt;group&gt;</code>
+          and <code>&lt;trans-unit&gt;</code> elements, by attaching the
+          corresponding <code>net.sf.okapi.common.resource.Property</code> key
+          to the appropriate resource. </li>
+        <li>The displayText field of <code>Code</code> objects is now stored in
+          a field on the object, rather than in an annotation.</li>
+        <li>The <code>equals</code> and <code>compareTo</code> methods on the
+          <code>TextFragment</code> class will no longer indicate equality when
+          compared to non-<code>TextFragment</code> instances.</li>
+        <li>Improved error message in <code>GenericSkeletonWriter</code>. This
+          resolves issue #593.</li>
+      </ul>
+    </ul>
+    <h2>Changes from M31 to M32</h2>
+    <ul>
+      <li>Tikal:</li>
+      <ul>
+        <li>The <code>-nocopy</code> option is now respected when extracting
+          using the <code>-seg</code> option. This resolves issue #571.</li>
+      </ul>
+      <li>Filters:</li>
+      <ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Support for Microsoft Visio 2013+ (<code>.vsdx</code>/<code>.vsdm</code>)
+            files has been added.</li>
+          <li>Added an option to ignore placeholder text in PowerPoint master
+            and layout slides.</li>
+          <li>Fixed Issue #576: XLSX files missing certain optional style data
+            could crash the filter.</li>
+        </ul>
+        <li>ITS/XML Filter:</li>
+        <ul>
+          <li>Improved support for the ITS Target Pointer data category.
+            Caveats: target element/attribute must exist (empty), and must be
+            after the source; inline codes are not supported yet. Addresses
+            issue #574.</li>
+        </ul>
+        <li>HTML Filter:</li>
+        <ul>
+          <li>Updated the pre-defined filter configuration to allow <code>title</code>
+            and <code>dir</code> on all elements as per latest HTML
+            specification.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Existing <code>ctype</code> values for most inline codes are now
+            parsed and stored as the type field on <tt>Code</tt> objects.</li>
+        </ul>
+      </ul>
+      <li>Connectors:</li>
+      <ul>
+        <li>Microsoft Translation Hub:</li>
+        <ul>
+          <li><b>IMPORTANT: authentication changes.</b> The connector has been
+            updated to support Azure-based Microsoft Translator subscriptions,
+            and the old (DataMarket) method of authentication has been removed.
+            The <tt>clientId</tt> and <tt>clientSecret</tt> parameters have
+            been removed and replaced with a single parameter called <tt>azureKey</tt>.
+            If you have an existing Microsoft Translator subscription, you must
+            migrate it to Azure by April 30, 2017. For information on how to do
+            this, see <a href="https://translatorbusiness.uservoice.com/knowledgebase/articles/1078534-microsoft-translator-on-azure">this
+              Microsoft support article</a>. </li>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li><b>IMPORTANT:</b> The <code>LocaleId</code> class now uses ICU's <code>ULocale</code>.
+          A few methods have been deprecated and others may have a slight
+          different behavior. But this gives us good BCP-47 support going
+          forward.</li>
+        <li>Updated Windows EXEs with version 3.9 of Launch4j to solve the issue
+          of not being able to start with Java 8 with updates &gt;= u100. This
+          resolves issue #575.</li>
+        <li>Added a maven profile named <code>reports</code>. It produces
+          various reports that might come in handy (<code>clirr</code>, <code>findbugs</code>,
+          <code>jdepend-maven-plugin</code>, <code>versions</code>). To run it:<br>
+          <code>mvn install -P reports</code></li>
+        <li>Improved the build to include the creation of a DMG file and for
+          signature for Mac distribution.</li>
+        <li>Added a new class, <code>net.sf.okapi.common.filters.FilterIterable</code>,
+          implementing <code>Iterable&lt;Event&gt;</code>.<br>
+          You can now do:<br>
+          <code> &nbsp; for (Event event : new FilterIterable(filter)) {<br>
+            &nbsp; &nbsp; &nbsp; ... process event ...<br>
+            &nbsp; }<br>
+          </code> On Java 8 you can also do:<br>
+          <code> &nbsp; new FilterIterable(filter).forEach( ... lambda or method
+            reference processing event ... );<br>
+          </code></li>
+      </ul>
+    </ul>
+    <h2>Changes from M30 to M31</h2>
+    <ul>
+      <li>Filters:</li>
+      <ul>
+        <li>General:</li>
+        <ul>
+          <li>Fixed issue #519: When using the subfilter feature in several
+            filters (including JSON, YAML, ITS, and XML Stream), it is no longer
+            possible to produce multiple text units with the same ID.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Fixed case of memoQ XLIFF files using <code>&lt;source&gt;</code>
+            and <code>&lt;target&gt;</code> elements in its own extensions.
+            This resolves issue #547. </li>
+        </ul>
+        <li>JSON Filter:</li>
+        <ul>
+          <li>The "Use Full Key Path" option will no longer include the prefix
+            "null/" in all generated resource names. Instead, key paths will
+            begin with "/", as in "/foo/bar".</li>
+        </ul>
+        <li>Properties Filter:</li>
+        <ul>
+          <li>Added an option to use the key value as the text-unit ID value.
+            This addresses issue #520.</li>
+        </ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Fixed a case in which some hidden spreadsheet cells could still be
+            exposed for translation.</li>
+          <li>Fixed cases where revision metadata unrelated to translatable text
+            could prevent filtering if the "Automatically Accept Revisions"
+            option was not checked.</li>
+          <li>If the "Treat Tab as Character" option is enabled, the <tt>'\t'</tt>
+            character will now be replaced with a &lt;tab&gt; element on output.
+          </li>
+          <li>Added the <tt>tsComplexFieldDefinitionsToExtract</tt> parameter,
+            which allows users to specify which field codes should be
+            translated. By default, only HYPERLINK codes are translated,
+            matching the existing behavior. </li>
+        </ul>
+        <li>XML Filter:</li>
+        <ul>
+          <li>In the RESX pre-defined configuration: fixed the code-finder
+            expression for mustache codes, and added support for basic HTML.
+            This resolves issue #559.</li>
+        </ul>
+        <li>PdfFilter:</li>
+        <ul>
+          <li>New PDF filter. Extraction only.</li>
+        </ul>
+        <li>YAML Filter:</li>
+        <ul>
+          <li>Fix Issue: #555: YAML filter skips single quote at beginning of
+            string</li>
+          <li>Fix Issue: #556: YAML filter should escape sequences before
+            passing to subfilters.</li>
+        </ul>
+      </ul>
+      <li>CheckMate:</li>
+      <ul>
+        <li>Now sessions with very large configurations can be saved. This fix
+          will produces session files (<code>.qcs</code>) that are not backward
+          compatible with previous version of CheckMate if the size of the
+          configuration is larger than about 21K. The fix produces backward
+          compatible files under that size. This resolves issue #548. </li>
+      </ul>
+      <li>Rainbow:</li>
+      <ul>
+        <li>Fixed issue #559: Batch configurations will now map <tt>.mqxliff</tt>
+          files to the XLIFF Filter by default. </li>
+        <li>Changed the default encodings of the UI to UTF-8 when running on a
+          Macintosh or on Unix/Linux.</li>
+      </ul>
+      <li>Connectors:</li>
+      <ul>
+        <li>Microsoft Translation Hub:</li>
+        <ul>
+          <li>The connector will now correctly handle batch queries when
+            provided with content in excess of 10 segments or 10,000 characters.
+            Callers should no longer need to do additional batching of their
+            own.</li>
+          <li>The <tt>query(String)</tt> method will now send content for
+            translation as a raw string, without doing additional tag
+            processing. This brings the implementation in line with the javadoc,
+            and is intended to be used in cases when a caller wishes to send raw
+            HTML to Translation Hub. The <tt>query(TextFragment)</tt> method
+            will continue to replace inline codes with dummy HTML tags before
+            calling the API. A new <tt>batchQueryText(List&lt;String&gt;)</tt>
+            method has been added to perform batch queries of text without
+            additional processing, to complement the existing <tt>batchQuery(List&lt;TextFragment&gt;)</tt>
+            method. </li>
+          <li>Improve error handling, including handling of invalid segments,
+            latency spikes, and the X-MS-Trans-Info diagnostic header.</li>
+          <li>Content using the <tt>zh-hk</tt> locale will now be sent as
+            Traditional Chinese rather than Simplified Chinese. </li>
+          <li>Ensured the language codes starting with <code>sr-Cyrl</code>
+            (Serbian in Cyrillic) are mapped properly to the Microsoft internal
+            code. </li>
+          <li>Ensured the language codes <code>in</code> are mapped to <code>id</code>
+            as expected by Microsoft internal code. </li>
+        </ul>
+        <li>OpenTran:</li>
+        <ul>
+          <li>Removed connector for the (defunct) OpenTran service.</li>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li>Add ability to add ICU4J segmentation rules via SRX configuration
+          option "<code>icu4jBreakRules</code>". Add <code>okapi_default_icu4j.srx</code>
+          file with enhanced rules.</li>
+        <li>Now using the Okapi XLIFF 2 library version 1.1.4.</li>
+      </ul>
+    </ul>
+    <h2>Changes from M29 to M30</h2>
+    <ul>
+      <li>Filters:</li>
+      <ul>
+        <li>HTMLEncoder:</li>
+        <ul>
+          <li>Quote Mode Options Added: Added the ability to configure quote
+            escaping rules to filter configs: UNESCAPED, ALL,
+            NUMERIC_SINGLE_QUOTES, DOUBLE_QUOTES_ONLY.</li>
+        </ul>
+        <li>MIF Filter:</li>
+        <ul>
+          <li>Support FrameMaker 2015 files.</li>
+        </ul>
+        <li>TS Filter:</li>
+        <ul>
+          <li>The text units are now extracted with the flag to preserve
+            whitespace set.</li>
+        </ul>
+        <li>XLIFF Filter:</li>
+        <ul>
+          <li>Fixed issue #521: <code>&lt;phase&gt;</code> elements will no
+            longer be reordered when processing a file with the filter. </li>
+          <li>Fixed issue #207: Added the "Preserve whitespace on 'default'"
+            option, which forces the filter to preserve whitespace when the <code>xml:space="default"</code>
+            attribute is present, as if the <code>"preserve"</code> value was
+            present instead. </li>
+          <li>Fixed issue #539: Implemented support for <code>translate</code>
+            in <code>&lt;group&gt;</code> and <code>&lt;bin-unit&gt;</code>. </li>
+        </ul>
+        <li>XLIFF-2 Filter:</li>
+        <ul>
+          <li>Added an initial and experimental implementation of a filter for
+            XLIFF v2.0 files.</li>
+        </ul>
+        <li>HTML Filter:</li>
+        <ul>
+          <li>When merging in a right-to-left target language, the <code>dir="rtl"</code>
+            attribute will be added to the <code>&lt;html&gt;</code> element. </li>
+        </ul>
+        <li>HTML5 Filter:</li>
+        <ul>
+          <li>When merging in a right-to-left target language, the <code>dir="rtl"</code>
+            attribute will be added to the <code>&lt;html&gt;</code> element. </li>
+        </ul>
+        <li>ITS Filter:</li>
+        <ul>
+          <li>Fixed the issue when inline empty elements with two tags like <code>&lt;span&gt;&lt;/span&gt;</code>Text
+            was output incorrectly. (See contribution from the <a href="https://github.com/freme-project/e-Internationalization/issues/30">FREME
+              project</a>). </li>
+          <li>Improved the pre-defined rules for the Android Strings filter
+            configuration.</li>
+        </ul>
+        <li>OpenXML Filter:</li>
+        <ul>
+          <li>Support for <code>.dotx</code>, <code>.dotm</code>, <code>.ppsx</code>,
+            <code>.ppsm</code>, <code>.potx</code>, <code>.potm</code>, <code>.ppsx</code>,
+            <code>.xltm</code> files has been added.</li>
+          <li>Fix issue #297: richly styled text in Excel spreadsheet cells will
+            now produce text units containing inline codes that represent
+            formatting.</li>
+          <li>Improve handling of Smart Tags.</li>
+          <li>The filter will no longer expose redundant copies of text stored
+            in "Alternate Content" blocks for translation. The filter will
+            expose the primary version of the text for translation and strip the
+            fallback content from the target document. Fallback content can be
+            regenerated, if necessary, by opening the document in Office.</li>
+          <li>Fix issue #524: a bug that caused duplicate TextUnit IDs to be
+            generated in some cases involving nested content.</li>
+          <li>Fix a bug that hid hyperlink URLs from translation.</li>
+          <li>Fix issue #526: Word documents containing charts that contained
+            entities could be corrupted on merge.</li>
+          <li>Exposed several new options in the Rainbow UI, including the
+            ability to treat tabs and line breaks as characters, the handling of
+            soft hyphens, and whether to automatically accept document
+            revisions.</li>
+          <li>Fix issue #532: Worksheet names in Excel documents can now be
+            exposed for translation using the new "Translate Sheet Names"
+            option.</li>
+          <li>Fix issue #533: Add an option to expose hyperlinks stored in .rels
+            files for translation.</li>
+        </ul>
+        <li>OpenOffice Filter:</li>
+        <ul>
+          <li>Formula results are no longer extracted for translation in ODS
+            files.</li>
+          <li>Automatically-generated numbers are no longer extracted for
+            translation.</li>
+          <li>Document metadata is now only extracted if the <tt>extractMetadata</tt>
+            configuration parameter is enabled. This parameter is enabled by
+            default. </li>
+        </ul>
+        <li>Subfilters:</li>
+        <ul>
+          <li>Fix issue #530 - JSON content could be corrupted when processed
+            with a subfilter.</li>
+          <li>Fixed issues related to subfilters that call additional
+            subfilters.</li>
+        </ul>
+      </ul>
+      <li>Steps:</li>
+      <ul>
+        <li>Id-Based Aligner Step:</li>
+        <ul>
+          <li>Add an option to allow alignment based on TextUnit ID, rather than
+            resource name. This is useful for aligning formats where no resource
+            name exists, but the TextUnit ordering is known to be stable between
+            files.</li>
+        </ul>
+        <li>Localizables Checker Step:</li>
+        <ul>
+          <li>Checks dates, times and numbers and flags text units where the
+            target instance is either missing or not localized properly.</li>
+        </ul>
+        <li>Language Tool Step:</li>
+        <ul>
+          <li>Enhance to provide morphologically valid bilingual term and black
+            term checking if LanguageTool supports a stemmer for the locale.
+            Otherwise resort to full word comparisons.</li>
+        </ul>
+      </ul>
+      <li>General:</li>
+      <ul>
+        <li>Fix Issue #523: XLIFFWriter will now preserve properties set on
+          empty targets.</li>
+        <li>Changed XLIFF 2 library to version 1.1.1.</li>
+        <li>Upgrade ICU4J to version 57.1.</li>
+        <li>Split Quality Check step into independent steps: character, general,
+          length, patterns, inline codes etc.</li>
+      </ul>
+    </ul>
+    <h2>Changes from M28 to M29</h2>
+    <ul>
+      <ul>
+        <li>Tikal:</li>
+        <ul>
+          <li>The scoping report option now outputs character counts in addition
+            to word counts by default.</li>
+        </ul>
+        <li>Filters:</li>
+        <ul>
+          <li>IDML Filter:</li>
+          <ul>
+            <li>Fixed a concurrency issue that could cause crashes when multiple
+              instances of the filter were used simultaneously.</li>
+          </ul>
+          <li>OpenXML Filter:</li>
+          <ul>
+            <li>The way formatting information is converted to codes has
+              changed. The filter will now attempt to streamline code generation
+              by considering whether the formatting applied to a text run can be
+              considered a "nested" format within the existing formatting. For
+              example, a bold, italic run would be considered "nested" within a
+              bold run. This allows for a more natural code mapping that should
+              be more intuitive for translators, and is also more closely
+              aligned with other tools.</li>
+            <li>Style inheritance is now considered when calculating the
+              formatting in effect for a run of text.</li>
+            <li>Right-to-left (RTL) support has been added for paragraphs, table
+              content in DOCX files and some DrawingML constructs.</li>
+            <li>Fixed issue #486. Simple and complex fields are now represented
+              as a single code for the entire field.</li>
+            <li>Fixed issue #487. Runs that differ only in script specified for
+              non-overlapping codepoint ranges can now be merged. This reduces
+              the number of inline codes produced in some cases.</li>
+            <li>Fixed issue #502. Cells that are in rows and columns that are
+              hidden will no longer be exposed for translation by default. This
+              brings the behavior of the Excel filter into alignment with the
+              behavior of the other OpenXML filters. A new option, "Translate
+              Hidden Rows and Columns", has been added to the configuration for
+              the Excel portion of the OpenXML filter.</li>
+            <li>The "Clean Tags Aggressively" option will now strip
+              &lt;w:bCs&gt; and &lt;w:szCs&gt; tags from Word documents.</li>
+            <li>Fixed a crash that could occur when parsing files with enormous
+              attribute values.</li>
+            <li>The non-breaking hyphen is now converted to a character, rather
+              than treated as a tag.</li>
+          </ul>
+          <li>ITS Filter:</li>
+          <ul>
+            <li>Added type for text units coming from attributes (value:
+              x-&lt;attribute-name&gt;).</li>
+          </ul>
+          <li>Table Filter:</li>
+          <ul>
+            <li>Fixed issue #511: now empty targets with delimiters are merged
+              properly.</li>
+          </ul>
+          <li>TXML Filter:</li>
+          <ul>
+            <li>Fixed issue #501, where segment elements commented out were
+              deleted from the output file.</li>
+          </ul>
+          <li>XLIFF Filter:</li>
+          <ul>
+            <li>Fixed issue #500, where <code>alt-trans</code> proposals with a
+              <code>match-quality</code> score in decimal form ("100.00") were
+              treated as having a score of 0. </li>
+            <li>Added support to change sdlxliff original attribute values based
+              on okf_xliff-sdl filter configuration. conf and locked attributes
+              are also supported.</li>
+          </ul>
+        </ul>
+        <li>Libraries:</li>
+        <ul>
+          <li>XLIFFWriter:</li>
+          <ul>
+            <li>Added support for <code>state-qualifier</code> output in main <code>&lt;target&gt;</code>.
+            </li>
+          </ul>
+          <li>Pensieve:</li>
+          <ul>
+            <li><b>IMPORTANT: <code>Code.codesToString()</code> changes. </b>
+              The pensieve TM format has changed and is not backwards
+              compatible. You will need to export your TM's and re-import them
+              with M29.</li>
+          </ul>
+        </ul>
+        <li>Steps:</li>
+        <ul>
+          <li>Added character count steps:</li>
+          <ul>
+            <li>The Character Count step calculates character counts per the
+              GMX-V 2.0 standard and stores them in a Metrics annotation (like
+              the Word Count step). There are also steps for counting all GMX
+              non-translatable categories (ProtectedCharacterCount, etc.) and
+              Okapi categories (Condordance, FuzzyMatch, MT, etc.).</li>
+          </ul>
+          <li>GMX "-Only" word count steps:</li>
+          <ul>
+            <li>The AlphanumericOnly, NumericOnly, and MeasurementOnly word
+              count steps now follow the GMX standard in that they only give
+              non-zero counts for TUs that consist solely of tokens of the
+              relevant type. (Previously they merely counted relevant tokens.)</li>
+          </ul>
+          <li>Translation Comparison step:</li>
+          <ul>
+            <li>Added an option to use the target of the alt-trans element for a
+              given origin value when processing an XLIFF file as second file.
+              This allows to compare an MT candidate placed as alt-trans entry
+              with the actual translation in the main target element.</li>
+          </ul>
+          <li>Scoping Report step:</li>
+          <ul>
+            <li>The Scoping Report step now can report character counts when the
+              relevant annotations are present. Use both the Word Count and
+              Character Count steps to get full detail. The default template has
+              been updated to include character counts for the included
+              categories.</li>
+          </ul>
+          <li>Post-segmentation Inline Codes Removal Step</li>
+          <ul>
+            <li>Added step that attempts to simplify (trim and merge) as many
+              inline codes as possible by looking at each linguistically
+              distinct segment in a TextUnit.</li>
+          </ul>
+        </ul>
+        <li>Connectors:</li>
+        <ul>
+          <li>KantanMT Support</li>
+          <ul>
+            <li>Added a new connector to support <a href="https://www.kantanmt.com/">KantanMT</a>.
+            </li>
+          </ul>
+          <li>Microsoft Translation Hub</li>
+          <ul>
+            <li>Fixed an issue when working with trained engines with certain
+              target languages..</li>
+          </ul>
+        </ul>
+      </ul>
+      <h2>Changes from M27 to M28</h2>
+      <ul>
+        <ul>
+          <li>Tikal:</li>
+          <ul>
+            <li>Fixed issue #444: Now the -imp command can use the -approved
+              option to import only approved entries.</li>
+          </ul>
+          <li>Rainbow:</li>
+          <ul>
+            <li>Fixed issue #464: Exported batch configurations should now
+              include default filter mappings for all known extensions.</li>
+            <li>Files with the .sdlxliff extension will now use <tt>okf_xliff-sdl</tt>
+              filter configuration by default. </li>
+            <li>Fixed help page for command-line -?</li>
+          </ul>
+          <li>Library:</li>
+          <ul>
+            <li>Fixed issue #442 where the blacklist for the term checker was
+              not working for Japanese.</li>
+            <li>Fixed issue #439: Quality issues based on patterns containing
+              newline characters did not display correctly in CheckMate.</li>
+            <li>Fixed issue in the verification library where the check for
+              leading and trailing whitespace did not take into account empty
+              string, causing an index out of range error.</li>
+            <li>Fixed issue #456: SRX issue with empty "beforebreak" in rule.</li>
+            <li>Changed SWT libraries to version 4.4</li>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>OpenXML Filter:</li>
+            <ul>
+              <li>Fixed issue #165: Strings in Excel files are now extracted in
+                a more logical order (sheet-by-sheet, one row at a time, ordered
+                by columns). Additionally, strings that appear multiple times in
+                are now exposed for translation once for each occurrence, and
+                may be translated independently. <b>Warning</b>: these changes
+                may create problems merging translated content from Excel files
+                that were processed with previous versions of Okapi. </li>
+              <li>Fixed issue #338: the "Exclude color" configuration option is
+                now correctly applied to Excel files. This option works for cell
+                background colors only. The colors available in the Rainbow
+                filter configuration UI are aligned against the Excel 2011
+                "standard colors"; additional RGB values may be excluded by
+                editing your filter configuration file directly.</li>
+              <li>Fixed issue #390: the "Exclude column" configuration option is
+                now correctly applied to Excel files.</li>
+              <li>Fixed issue #440: markers for spelling and grammar errors are
+                now stripped when exposing text for translation.</li>
+              <li>Fixed issue #441: added new options to expose line breaks and
+                tabs for translation as literal characters.</li>
+              <li>Fixed issue #443: added the "Exclude Graphical Metadata"
+                option to prevent metadata associated from graphics and
+                textboxes from being exposed for translation.</li>
+              <li>Fixed issue #447: the "Translate Document Properties" option
+                will now work for PowerPoint files.</li>
+              <li>Fixed issue #448: the "Translate Comments" option will now
+                work for PowerPoint files.</li>
+              <li>Fixed issue #449: the "Translate Slide Masters" option will
+                now also expose master layout content that is used by slides in
+                the document.</li>
+              <li>Fixed issue #451: the "Translate Document Properties" option
+                will now work for Excel files.</li>
+              <li>Fixed issue #452: Word files containing nested graphicData
+                sections are no longer corrupted during processing.</li>
+              <li>Fixed issue #453: Word files that do not contain a <tt>word/styles.xml</tt>
+                part can now be processed. </li>
+              <li>Fixed issue #454: entities occurring in alternateContent
+                sections of Word documents are now handled correctly.</li>
+              <li>Fixed issue #457: empty lines in Word files are sometimes
+                stripped.</li>
+              <li>Fixed issue #458: target text is lost in complicated run
+                structures</li>
+              <li>Fixed issue #467: tabs in Word files are sometimes stripped.</li>
+              <li>Fixed issue #473: deletion change tracking can cause target
+                corruption.</li>
+              <li>Fixed issue #474: files containing formulas could become
+                corrupted.</li>
+              <li>Fixed issue #476: insertion change tracking can cause target
+                corruption.</li>
+              <li>Fixed issue #482: <tt>&lt;w:lang&gt;</tt> tags are now
+                stripped during extraction. </li>
+              <li>Fixed issue #484: Added a "Clean Tags Aggressively" option to
+                the filter. When this option is enabled, the filter will strip
+                certain types of formatting markup (whitespace and vertical
+                alignment adjustment) that is spuriously inserted when
+                converting other formats (such as PDF) to OpenXML. This produces
+                smoother segmentation in some cases.</li>
+              <li>Fixed issue #485: Strip machine-generated "_GoBack" bookmarks
+                from Word files.</li>
+            </ul>
+            <li>ICML Filter:</li>
+            <ul>
+              <li>Added the ICML Filter for WCML files.</li>
+            </ul>
+            <li>HTML Filter:</li>
+            <ul>
+              <li>Added support for ASPX comments and fixed tag-like attribute
+                values extra output.</li>
+            </ul>
+            <li>PO Filter:</li>
+            <ul>
+              <li>A <tt>Plural-Forms:</tt> header that declares <tt>nplurals=1</tt>
+                is now handled correclty. </li>
+            </ul>
+            <li>Table Filter:</li>
+            <ul>
+              <li>Blank lines inside qualified CSV cells are now preserved.</li>
+              <li>CSV text qualifiers can now be optionally added on output when
+                required to maintain well-formedness.</li>
+            </ul>
+          </ul>
+          <li>Step:</li>
+          <ul>
+            <li>Rainbow Translation Kit Creation:</li>
+            <ul>
+              <li>Improved support for XLIFF 2 packages</li>
+            </ul>
+            <li>Rainbow Translation Kit Merging:</li>
+            <ul>
+              <li>Improved support for XLIFF 2 packages</li>
+            </ul>
+            <li>Text Rewriting step:</li>
+            <ul>
+              <li>Fixed the case where the target had only inline codes and the
+                source text and inline codes. Now the base text is taken from
+                the source.</li>
+              <li>Now expansion is done before the last inline code.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <h2>Changes from M26 to M27</h2>
+      <ul>
+        <ul>
+          <li>General</li>
+          <ul>
+            <li>Fix resource and memory leaks</li>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>XLIFF Filter:</li>
+            <ul>
+              <li>Added warning when inline code (other than <code>mrk</code>)
+                has no <code>id</code> attribute. </li>
+              <li>Fixed location of <code>&lt;phase-group&gt;</code> when
+                re-writing. </li>
+              <li>Fixed case where XML declaration was not followed by a
+                line-break on output.</li>
+              <li>Added fallback check for TMX values for the <code>&lt;it&gt;</code>
+                <code>pos</code> attribute (error/warning still generated as
+                using TMX values in XLIFF is not valid). </li>
+              <li>Added better support for SDLXLIFF</li>
+              <li>Optional parameters for writing out tool element in xliff
+                header</li>
+              <li>Fixed issue #430 where the ITS namespace declaration and
+                version was not added when needed.</li>
+            </ul>
+            <li>HTML Filter:</li>
+            <ul>
+              <li>Added the <code>placeholder</code> attribute to list of
+                translatable attributes in default HTML configuration (for
+                HTML5) </li>
+              <li>Fix lower casing of start tags during pre-processing cleanup</li>
+              <li>Upgrade to Jericho 3.4-dev</li>
+            </ul>
+          </ul>
+          <li>Steps:</li>
+          <ul>
+            <li>Rainbow Translation Kit Creation Step:</li>
+            <ul>
+              <li>Updated XLIFF2 library to 1.0 release.</li>
+              <li>Implemented v2 support for the Transifex packages.</li>
+            </ul>
+            <li>Rainbow Translation Kit Post-Processing Step:</li>
+            <ul>
+              <li>Implemented v2 support for the Transifex packages.</li>
+            </ul>
+          </ul>
+          <li>Connectors:</li>
+          <ul>
+            <li>MyMemory Connector:</li>
+            <ul>
+              <li>Fixed the issue of the return match value being sometimes a
+                Double and sometimes a Long.</li>
+              <li>Make Connectors more error tolerant. Continue processing if
+                there is an exception on a single text Unit</li>
+            </ul>
+          </ul>
+          <li>Library:</li>
+          <ul>
+            <li>XLIFF Writer:</li>
+            <ul>
+              <li>Added support to output the <code>coord</code> attribute (<em>COORDINATES</em>
+                property on the text container). </li>
+            </ul>
+            <li>Transifex library:</li>
+            <ul>
+              <li>Fixed issue #427 where the API v2 was not supported.</li>
+            </ul>
+            <li>Segmentation library:</li>
+            <ul>
+              <li>Fixed issue #426 where the part of the text matched by the
+                previous rule was not scanned for match in the next rule.</li>
+              <li>Fixed issue #489: Added the okp:treatIsolatedCodesAsWhitespace
+                option to allow the segmenter to treat each isolated code as a
+                single whitespace character when applying segmentation rules.</li>
+            </ul>
+            <li>Verification library:</li>
+            <ul>
+              <li>Fixed issue #418: the description of the rule is now displayed
+                for target-driven error.</li>
+              <li>Improved reading of LQI entries: the ITS type is preserved
+                when reading the okp:lqiType value.</li>
+              <li>Fixed issue #442: Allow flagging blacklist terms in
+                substrings.</li>
+              <li>Fixed issue #400: Allow flagging blacklist terms in source.</li>
+            </ul>
+            <li>Parameters editor for Verification library:</li>
+            <ul>
+              <li>Fixed issue #417: The description of each pattern is now
+                preserved when re-ordering the patterns.</li>
+              <li>Fixed issue #442: Add option to allow flagging blacklist terms
+                in substrings.</li>
+              <li>Fixed issue #400: Add option to allow flagging blacklist terms
+                in source.</li>
+            </ul>
+          </ul>
+        </ul>
+        <h2>Changes from M25 to M26</h2>
+        <ul>
+          <li>Rainbow:</li>
+          <ul>
+            <li>Added <code>.mqxliff</code> extension in the list of extensions
+              associated with the XLIFF Filter. </li>
+          </ul>
+          <li>Tikal:</li>
+          <ul>
+            <li>Fixed issue preventing custom filter configurations to work as
+              sub-filters.</li>
+            <li>Added the ability to output scoping reports.</li>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>TMX Filter:</li>
+          </ul>
+          <ul>
+            <ul>
+              <li>Fixed Issue 409: Inconsistent handling of <code>&lt;bx
+                  pos="begin"/&gt;</code> in extraction to Moses inline format.
+              </li>
+            </ul>
+            <li>XLIFF Filter:</li>
+            <ul>
+              <li>Added support for <code>&lt;sub&gt;</code> elements (plain
+                text, with nested codes, or with nested codes with nested
+                sub-flows). </li>
+            </ul>
+            <li>XMLStream Filter:</li>
+            <ul>
+              <li>Added the .ditamap extension to the list of extensions for the
+                DITA pre-defined configuration.</li>
+            </ul>
+          </ul>
+          <li>Steps:</li>
+          <ul>
+            <li>LanguageTool Step:</li>
+            <ul>
+              <li>Resolved issue #416 (added suggestion to annotation).</li>
+            </ul>
+          </ul>
+          <li>Filters Plugin for OmegaT:</li>
+          <ul>
+            <li>This component is now build and released separately and has its
+              own project at: <a href="https://code.google.com/p/okapi-omegat/">https://code.google.com/p/okapi-omegat</a>
+            </li>
+          </ul>
+          <li>Libraries:</li>
+          <ul>
+            <li>Fixed the issue where sub-filter start and end events where not
+              handled properly for outputting RTF layered files.</li>
+            <li>Verification library:</li>
+            <ul>
+              <li>Improved mapping of LanguageTools ITS type to issue
+                annotation.</li>
+            </ul>
+            <li>Updated the XLIFF2 library to use 0.22-snapshot.</li>
+            <li>Discontinued the MacOS 32-bit distribution (no Java 7 support)</li>
+            <li>TMXWriter: fixed bug where some property entries were written
+              before the <code>&lt;seg&gt;</code> element, </li>
+            <li>Improved stream-only pipeline capabilities.</li>
+          </ul>
+        </ul>
+        <h2>Changes from M24 to M25</h2>
+        <ul>
+          <li>Tikal:</li>
+          <ul>
+            <li>Fixed default parameter for the default TM resource. Now you can
+              just run <code>tikal -q "text to search"</code>. </li>
+            <li>Added <code>-x2</code> and <code>-m2</code> options for
+              extraction/merge with new skeleton file. </li>
+            <li>Changed -x and -m to extract/merge with the new skeleton file.</li>
+            <li>Added <code>-x1</code> and <code>-m1</code> options for
+              extraction/merge with original document (similar to previous
+              versions. For fully backward-compatible merge you must use M24). </li>
+            <li>Updated Tikal merge function with original file to use the new
+              common text-unit merger.</li>
+            <li>Added options for JAR version switch</li>
+          </ul>
+          <li>Filters Plugin for OmegaT:</li>
+          <ul>
+            <li>Added basic support for XLIFF 2 documents (under construction).</li>
+            <li>Now target text passed as translation only if it is different
+              from the source.</li>
+            <li>Added support for alternate translations (e.g. from XLIFF 1.2
+              documents)</li>
+          </ul>
+          <li>Steps:</li>
+          <ul>
+            <li>Added the TTXSplitter Step. It allows to split a given TTX
+              document into several ones with the same source word count.</li>
+            <li>Added the TTXJoiner Step. It allows to join back TTX documents
+              created with the TTXSplitter Step.</li>
+            <li>Consolidated merge steps into: SkeletonXliffMergerStep,
+              LegacyXliffMergerStep, OriginalDocumentXliffMergerStep and
+              CombinedXliffMergerStep classes.</li>
+            <li>Rainbow Translation Kit Creation Step:</li>
+            <ul>
+              <li>Reinstated output for XLIFF v2 using the latest library.</li>
+              <li>Added support for extraction using the new skeleton file.</li>
+            </ul>
+            <li>Rainbow Translation Kit Merging Step:</li>
+            <ul>
+              <li>Added basic support for merging XLIFF v2 packages.</li>
+              <li>Added support for merging using the new skeleton file.</li>
+            </ul>
+            <li>Search and Replace Step:</li>
+            <ul>
+              <li>Fixed issue #392 where the reading of the replacement table
+                was trimming all lines. Now replacing or searching for space and
+                replacing by nothing works.</li>
+            </ul>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>XLIFF Filter:</li>
+          </ul>
+          <ul>
+            <ul>
+              <li>Changed the reading of <code>&lt;alt-trans&gt;</code>
+                elements to allow entries with empty <code>&lt;target&gt;</code>
+                (e.g. some XTM's XLIFF have <code>&lt;alt-trans&gt;</code> with
+                empty targets). </li>
+              <li>Added the option "Allow modification of existing
+                &lt;alt-trans&gt; elements"</li>
+            </ul>
+            <li>YAML Filter:</li>
+            <ul>
+              <li>Improved support.</li>
+            </ul>
+            <li>OpenXML Filter:</li>
+            <ul>
+              <li>Fixed issue #402 (Cannot stop the filter before the document
+                is done)</li>
+              <li>Fixed issue #350 (merge problem when docx has a
+                OpenXml.Drawing object)</li>
+            </ul>
+            <li>PO Filter:</li>
+            <ul>
+              <li>Fixed issue with <code>#,</code> (fuzzy flag) in front of <code>#~</code>
+                (obsolete) entries. </li>
+            </ul>
+            <li>JSON Filter:</li>
+            <ul>
+              <li>Refactored the filter.</li>
+              <li>Fixed issue #359 (Need to improve extraction selection)</li>
+              <li>Fixed issue #373 (Encoder and xml:space='preserve')</li>
+              <li>Fixed issue #397 (Filter not extracting all strings as
+                expected)</li>
+            </ul>
+          </ul>
+          <li>Connectors:</li>
+          <ul>
+            <li>Translate Toolkit TM Connector:</li>
+            <ul>
+              <li>Updated the parameters API to use <code>set/getUrl()</code>
+                instead of <code>set/getHost()</code> and <code>set/getPort()</code>.
+              </li>
+              <li>Updated the default host and port (now obsolete) to <code>localhost</code>
+                and <code>8080</code> to allow local setups to continue to
+                work. </li>
+              <li>Updated the default URL to <code>https://amagama-live.translatehouse.org/api/v1/</code>
+                (the previous URL is obsolete) </li>
+            </ul>
+          </ul>
+          <li>Libraries:</li>
+          <ul>
+            <li>Major refactoring of the serialization.</li>
+            <li>Major refactoring of the RawDocument object</li>
+            <li>Updated SWT libraries to 4.3</li>
+            <li>Added lib-tkit library for extraction/merge with skeleton in
+              JSON.</li>
+            <li>Added sort capability to the Filter Configuration common edit
+              dialog.</li>
+            <ul>
+            </ul>
+          </ul>
+        </ul>
+        <h2>Changes from M23 to M24</h2>
+        <ul>
+          <li>Tikal:</li>
+          <ul>
+            <li>Changed default resource for <code>-q</code> command from
+              OpenTran to Translate Toolkit </li>
+          </ul>
+          <li>Rainbow:</li>
+          <ul>
+            <li>Made usability improvements to the Testing Console for rapid
+              iteration when creating custom filter configurations.</li>
+          </ul>
+          <li>Steps:</li>
+          <ul>
+            <li>Added the <a href="http://okapiframework.org/wiki/wiki/index.php?title=Copy_Or_Move_Step">Copy
+                Or Move Step</a>: Copies or moves files to a specified location
+              with the option to overwrite or backup existing files or skip
+              copying files if there is an existing file. </li>
+            <li><a href="http://okapiframework.org/wiki/wiki/index.php?title=Rainbow_Translation_Kit_Creation_Step">Rainbow
+                Translation Kit Creation Step</a>:</li>
+            <ul>
+              <li>Removed the experimental output to XLIFF 2.0 (too outdated to
+                be useful) See the <a href="https://code.google.com/p/okapi-xliff-toolkit/">Okapi
+                  XLIFF Toolkit</a> project for more up-to-date support for
+                XLIFF 2.0. </li>
+              <li>Added option to specify the post-processing hook for OmegaT
+                tkits.</li>
+            </ul>
+            <li><a href="http://okapiframework.org/wiki/wiki/index.php?title=Format_Conversion_Step">Format
+                Conversion Step</a>:</li>
+            <ul>
+              <li>Added the Word Table output format.</li>
+            </ul>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>IDML Filter:</li>
+            <ul>
+              <li>Changed the default spread size threshold to 2000 Kb and
+                updated the warning/error to show the spread size.</li>
+            </ul>
+            <li>XML Filter:</li>
+            <ul>
+              <li>Android Strings pre-defined settings: Exposed content of
+                &lt;item&gt; elements for translation (used in &lt;plurals&gt;,
+                &lt;string-array&gt; elements).</li>
+            </ul>
+            <li>HTML Filter:</li>
+            <ul>
+              <li>Added option to treat CDATA as an inline element.</li>
+              <li>Content of excluded inline elements is exposed for, e.g.,
+                inclusion in XLIFF equiv-text attributes.</li>
+              <li>Fixed issue #336: The filter will no longer produce
+                translatable segments consisting only of tags.</li>
+            </ul>
+            <li>XML Stream Filter:</li>
+            <ul>
+              <li>Fixed issue #336: The filter will no longer produce
+                translatable segments consisting only of tags.</li>
+            </ul>
+            <li>OpenXML Filter:</li>
+            <ul>
+              <li>Fixed issue #351: Improve filter performance.</li>
+            </ul>
+            <li>JSON Filter:</li>
+            <ul>
+              <li>Fixed issue #377: Support for subfiltering in JSON.</li>
+              <li>Fixed issue #373: JSONFilter should use the JSONEncoder.</li>
+              <li>Note: Changes in escaping/unescaping behavior in this filter
+                break compatibility with files extracted by previous versions.</li>
+            </ul>
+          </ul>
+          <li>Filters Plugin for OmegaT:</li>
+          <ul>
+            <li>Added capability to specify a custom filter parameters file for
+              each Okapi filter in the plugin. This closes issue #376.</li>
+          </ul>
+          <li>Connectors:</li>
+          <ul>
+            <li>Added the <a href="http://okapiframework.org/wiki/wiki/index.php?title=Bilingual_File_Connector">Bilingual
+                File Connector</a>: Directly query a bilingual file format such
+              as TMX, PO, etc., without importing to a TM first. </li>
+          </ul>
+          <li>Library:</li>
+          <ul>
+            <li><strong>Important: </strong><strong>Changed minimum requirement
+                from Java 1.6 to Java 1.7.</strong></li>
+            <li>Fixed ITS content writer to output <code>locQualityIssueProfileRef</code>
+              and not <code>locQualityIssueProfile</code>. </li>
+            <li>Improved report output of quality checker.</li>
+            <li>Updated and cleaned up the build files.</li>
+            <li>Added <code>HUMAN_RECOMMENDED</code> type to the <a href="http://okapiframework.org/wiki/wiki/index.php?title=Match_Types">MatchType
+                list</a>. </li>
+            <li>Modified the base implementation for <code>IParameters</code>,
+              this may result in compilation errors in your code if you access
+              directly some variables: you should now use the corresponding
+              getter and setter methods. </li>
+            <li>Added support for tuv-level attributes that were missing in
+              TMXWriter.</li>
+          </ul>
+        </ul>
+        <h2>Changes from M22 to M23</h2>
+        <ul>
+          <li>Rainbow:</li>
+          <ul>
+            <li>Added the Inconsistency Check Step to the pre-defined Quality
+              Check pipeline.</li>
+          </ul>
+          <li>CheckMate:</li>
+          <ul>
+            <li>Fixed issue #358: The Check Document button now works in all
+              cases.</li>
+          </ul>
+          <li>Filters Plugin for OmegaT</li>
+          <ul>
+            <li>Added .mxliff as one of the default extensions for XLIFF.</li>
+            <li>Fixed issue #364: .sdlxliff files with UTF-8 BOM open now.</li>
+          </ul>
+          <li>Steps:</li>
+          <ul>
+            <li>Added the Inconsistency Check Step: a way to flag entries with
+              the same source that have different targets or the entries with
+              the same target that have different source.</li>
+            <li>Rainbow Translation Kit Creation Step:</li>
+            <ul>
+              <li>Added a <code>libVersion</code> attribute in the manifest
+                indicating the version of the library used to create the
+                manifest. </li>
+              <li>Add option to use encapsulation notation (<code>&lt;bpt&gt;/&lt;ept&gt;/&lt;ph&gt;/&lt;it&gt;</code>)
+                for inline codes in OmegaT tkits. </li>
+            </ul>
+            <li>LanguageTool Step:</li>
+            <ul>
+              <li>Updated the library to version 2.2.</li>
+            </ul>
+            <li>Encoding Conversion Step:</li>
+            <ul>
+              <li>Fixed issue #318: ASCII characters in NCR form are now
+                un-escaped except for ", ', &amp;, &lt; and &gt;.</li>
+            </ul>
+            <li>Search and Replace Step:</li>
+            <ul>
+              <li>Fixed issue #183: Added simple log of the replacements.</li>
+              <li>Fixed issue #362: Step for Terminology fixes on translation
+                candidates.</li>
+            </ul>
+            <li>Quality Check Step:</li>
+            <ul>
+              <li>Resolved issue #357: Added function to detect blacklisted
+                terms.</li>
+              <li>Improved ITS LQI support.</li>
+            </ul>
+          </ul>
+          <li>Filters:</li>
+          <ul>
+            <li>IDML Filter:</li>
+            <ul>
+              <li>Implemented issue #356: By default spread above the threshold
+                cause an error. The option allows to skip without error.</li>
+            </ul>
+            <li>XML Filter:</li>
+            <ul>
+              <li>Continued implementation of ITS 2.0.</li>
+              <li>Fixed issue #361: MIME type can be different in sub-classes of
+                XMLFilter.</li>
+            </ul>
+            <li>HTML5-ITS Filter:</li>
+            <ul>
+              <li>Continued implementation of ITS 2.0.</li>
+            </ul>
+            <li>JSON Filter:</li>
+            <ul>
+              <li>Resolved issue #360: The use of the key for the resname value
+                is now optional.</li>
+            </ul>
+            <li>XLIFF Filter:</li>
+            <ul>
+              <li>Continued implementation of ITS 2.0.</li>
+              <li>Fixed issue #364: Woodstox XML parser is now always used.</li>
+              <li>Alt-trans with empty target are now skipped.</li>
+              <li>Added support for the <code>&lt;tool&gt;</code> and <code>&lt;phase&gt;</code>
+                elements as well as the <code>state-qualifier</code> attribute.
+              </li>
+            </ul>
+            <li>OpenXML Filter:</li>
+            <ul>
+              <li>Fixed issue #291: Sub-documents are now processed in correct
+                order.</li>
+              <li>Fixed issue #319: 'squishable' tests has been changed.</li>
+            </ul>
+            <li>Simplification Filter:</li>
+            <ul>
+              <li>Fixed issue #355: parameters of sub-filter are properly read
+                in the cases where the primary filter uses a sub-filter.</li>
+            </ul>
+            <li>XINI Filter:</li>
+            <ul>
+              <li>Fixed a case where placeholders were being renumbered
+                incorrectly when reading a XINI file.</li>
+            </ul>
+          </ul>
+          <li>Library:</li>
+          <ul>
+            <li>Verification Library:</li>
+            <ul>
+              <li>Fixed issue with non-initialized start/end variable when
+                checking patterns from the target.</li>
+              <li>Added support for sub-document in Quality Checker library.</li>
+            </ul>
+            <li>Continued implementation of ITS 2.0 in XLIFFWriter,
+              XLIFFContent, etc.</li>
+            <li>Fixed issue #352: XMLWriter now throw OkapiIOException if an
+              error occurs.</li>
+            <li>Updated XLIFF Writer to match ITS/XLIFF official mapping (<a href="http://www.w3.org/International/its/wiki/XLIFF_1.2_Mapping">http://www.w3.org/International/its/wiki/XLIFF_1.2_Mapping)</a>.
+            </li>
+            <li>Added the experimental lib-concurrent package to improve
+              multi-threaded pipelines. See <a href="http://okapiframework.org/wiki/wiki/index.php?title=ThreadedWorkQueue_Step">ThrededWorkQueue
+                Step page</a> for details. </li>
+          </ul>
+        </ul>
+        <h2>Changes from M21 to M22</h2>
+        <ul>
+          <li>Tikal:
+            <ul>
+              <li>Made it possible to run tikal.sh from another directory on Mac
+                OS X.</li>
+              <li>Updated the way the application root folder was computed to
+                allow call from Network share.</li>
+            </ul>
+          </li>
+          <li>Rainbow:</li>
+          <ul>
+            <li>Fixed <code>-log</code> option to allow it anywhere in the
+              command-line. </li>
+          </ul>
+          <li>Filters:
+            <ul>
+              <li>Table Filter:
+                <ul>
+                  <li>Fixed issue #300 (enhancement): Added a new Table Filter
+                    for 2-column (source + target), tab separated files.</li>
+                </ul>
+              </li>
+              <li>OpenXML Filter:
+                <ul>
+                  <li>Fixed issue #166: Text from mc:Fallback and mc:Choice
+                    Requites="wps", WordArt, TextArt, and Watermarks is handled
+                    properly now.</li>
+                  <li>Fixed issue #169: Segmentation around inline codes seems
+                    to work properly.</li>
+                  <li>Fixed issue #286: PPTX smart-tags are now imported.</li>
+                  <li>Fixed issue #323: Files are not corrupted anymore when
+                    using text areas.</li>
+                  <li>Fixed issue #324: Nested &lt;w:p&gt; merge properly now.</li>
+                  <li>Fixed issue #325: The slides of PPTX documents are now
+                    extracted in order.</li>
+                  <li>Fixed issue #329: Text from PPTX diagrams are now
+                    extracted.</li>
+                  <li>Fixed issue #351: Creation of XLIFF work on documents with
+                    SmartArt graphics.</li>
+                </ul>
+              </li>
+              <li>XML Stream Filter (Abstract Markup Filter):
+                <ul>
+                  <li>Fixed issue #332: When using the global_cdata_subfilter
+                    option, the filter will no longer generate extra segments
+                    consisting only of placeholders.</li>
+                  <li>Fixed issue #339: The filter was not grouping the tags
+                    back properly when merging back.</li>
+                  <li>Added handling of variable placeholders for the
+                    pre-defined settings for RESX files.</li>
+                </ul>
+              </li>
+              <li>ITS Filters (XML Filter and HTML5+ITS Filter):
+                <ul>
+                  <li>Continued implementation of ITS 2.0 (See <a href="http://okapiframework.org/wiki/wiki/index.php?title=ITS_Components">http://okapiframework.org/wiki/wiki/index.php?title=ITS_Components</a>
+                    for details) </li>
+                </ul>
+              </li>
+              <li>TMX Filter:</li>
+              <ul>
+                <li>Fixed the issue where &lt;it&gt; codes where mapped to
+                  placeholder rather than opening/closing internal codes.</li>
+              </ul>
+              <li>XLIFF Filter:
+                <ul>
+                  <li>Continued implementation of ITS 2.0: Improved support for
+                    LQI, added support for Provenance.</li>
+                </ul>
+              </li>
+              <li>Simplification Filter:
+                <ul>
+                  <li>Added new filter for resource simplification (removal of
+                    references and/or reducing the number of inline codes). See
+                    wiki for details: <a href="http://okapiframework.org/wiki/wiki/index.php?title=Simplification_Filter">http://okapiframework.org/wiki/wiki/index.php?title=Simplification_Filter</a>.
+                  </li>
+                </ul>
+              </li>
+              <li>General:
+                <ul>
+                  <li>Filters that update language properties (like xml:lang)
+                    during merging will now be region-insensitive when doing so.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Steps:
+            <ul>
+              <li>Term Extraction Step:
+                <ul>
+                  <li>Added support for Text Analysis annotations.</li>
+                  <li>Made the three extraction methods options, and attached
+                    the relevant options to the statistical method.</li>
+                </ul>
+              </li>
+              <li>Full-Width Conversion Step:
+                <ul>
+                  <li>Added log message if at least one character was modified
+                    (per input file). This resolves issue #327.</li>
+                </ul>
+              </li>
+              <li>Enrycher Step:
+                <ul>
+                  <li>Improved hanlding of nested annotations.</li>
+                </ul>
+              </li>
+              <li>Batch TM Leveraging Step:
+                <ul>
+                  <li>Fixed issue #331: Entries with no text are now not sent
+                    for translation.</li>
+                </ul>
+              </li>
+              <li>Format Conversion Step:</li>
+              <ul>
+                <li>Fixed the issue where the "Output generic inline codes" was
+                  not recognized for the Tab-delimited table output.</li>
+              </ul>
+              <li>MS Batch Translation Step:
+                <ul>
+                  <li>MT candidate with a very low score (e.g. from error) are
+                    not output in the TMX.</li>
+                </ul>
+              </li>
+              <li>Space Checker Step:</li>
+              <ul>
+                <li>Improved reporting of errors and changes.</li>
+                <li>Fixed issue #346: Iterating through text fragments ran out
+                  of bounds. Indexing error was fixed.</li>
+                <li>Fixed issue #348: inline code index marker broken as a
+                  result of spacing changes. Index marker error was fixed.</li>
+              </ul>
+              <li>Translation Comparison Step:
+                <ul>
+                  <li>improved output statistics for the report. There is now
+                    more details and an edit effort score.<br>
+                    See wiki for details: <a href="http://okapiframework.org/wiki/wiki/index.php?title=Translation_Comparison_Step">http://okapiframework.org/wiki/wiki/index.php?title=Translation_Comparison_Step</a>.
+                  </li>
+                </ul>
+              </li>
+              <li>Consolidated Paragraph Alignment and Sentence Alignment steps</li>
+            </ul>
+          </li>
+          <li>Connectors:
+            <ul>
+              <li>Microsoft MT Connector:
+                <ul>
+                  <li>Improved error handling (e.g. problem with inline codes in
+                    result).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Filters Plugin for OmegaT:
+            <ul>
+              <li>Added *.xliff and *.sdlxliff as default extensions.</li>
+              <li>Changed default for isFileSupported() to return true (this
+                allows user-defined extensions).</li>
+            </ul>
+          </li>
+          <li>Libraries:
+            <ul>
+              <li>Updated XLIFF Writer to match ITS/XLIFF official mapping (<a href="http://www.w3.org/International/its/wiki/XLIFF_1.2_Mapping">http://www.w3.org/International/its/wiki/XLIFF_1.2_Mapping)</a>
+              </li>
+              <li>Fixed QueryUtil HTML-coded conversion methods to allow proper
+                round-trip of &lt;it&gt; codes.</li>
+              <li>Added a new library okapi-lib-preprocessing, contains
+                Preprocessing Filter (available only programmatically), and
+                Simplification Filter (see wiki for details: <a href="http://okapiframework.org/wiki/wiki/index.php?title=Simplification_Filter">http://okapiframework.org/wiki/wiki/index.php?title=Simplification_Filter</a>).
+                </li>
+              <li>Fixed issue #347:
+                FilterConfigurationMapper.editConfiguration() now uses
+                Class.getName() like addConfiguration().</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Changes from M20 to M21</h2>
+        <ul>
+          <li>All applications:
+            <ul>
+              <li>Applications now launch correctly on Mac OS X when they are
+                located in a path containing a space.</li>
+            </ul>
+          </li>
+          <li>Rainbow:
+            <ul>
+              <li>Added the <code>-log</code> option to specify result log
+                file. By default the log file is {user.home}\rainbowBatchLog.txt
+              </li>
+            </ul>
+          </li>
+          <li>Tikal:
+            <ul>
+              <li>Added the <code>-safe</code> option to prompt user when
+                overriding a directory when extracting. </li>
+            </ul>
+          </li>
+          <li>Filters:
+            <ul>
+              <li>ITS Filters (XML Filter and HTML5+ITS Filter):
+                <ul>
+                  <li>Continued implementation of ITS 2.0 (See <a href="http://okapiframework.org/wiki/wiki/index.php?title=ITS_Components">http://okapiframework.org/wiki/wiki/index.php?title=ITS_Components</a>
+                    for details) </li>
+                  <li>Added support for HTML5 translate="" (same as
+                    translate="yes").</li>
+                </ul>
+              </li>
+              <li>XLIFF Filter:
+                <ul>
+                  <li>Continued implementation of ITS 2.0.</li>
+                  <li>Added support for <code>okp:engine</code> attribute in <code>&lt;alttrans&gt;</code>.
+                  </li>
+                </ul>
+              </li>
+              <li>Wiki Filter:
+                <ul>
+                  <li>Fixed issue #315: WikiFilter didn't work with
+                    preserve_whitespace: true.</li>
+                </ul>
+              </li>
+              <li>Regex Filter:
+                <ul>
+                  <li>Improved the macStrings default settings to include
+                    slash+star comments with next extracted string.</li>
+                </ul>
+              </li>
+              <li>IDML Filter:
+                <ul>
+                  <li>Fixed issue #316: Added default to not extract hidden
+                    layers and added the option "Extract hidden layers".</li>
+                  <li>Enabled the option "Create new paragraphs on hard
+                    returns".<br>
+                    <b>Important: This option is still BETA and may prevent you
+                      to merge back the extracted file. Make sure to test the
+                      round-trip before using this option for real projects.</b>
+                  </li>
+                </ul>
+              </li>
+              <li>TMX Filter:
+                <ul>
+                  <li>Fixed a bug where attribute values on &lt;tuv&gt; elements
+                    were being written back to the skeleton without proper
+                    escaping.</li>
+                  <li>Improved filter performance.</li>
+                </ul>
+              </li>
+              <li>Properties Filter:
+                <ul>
+                  <li>Fixed issue #313 where the extended characters were not
+                    escaped when using the sub-filter.</li>
+                </ul>
+              </li>
+              <li>TS Filter:
+                <ul>
+                  <li>Changed the instantiation of the XML parser to use
+                    Woodstox.</li>
+                </ul>
+              </li>
+              <li>XML Stream Filter (Abstract Markup Filter):
+                <ul>
+                  <li>Fixed issue #303: When using the global_pcdata_subfilter
+                    option, the filter will no longer generate extra segments
+                    consisting only of placeholders.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Steps:
+            <ul>
+              <li>Microsoft Batch Translation Step:
+                <ul>
+                  <li>Added support for the <code>${domain}</code> variable for
+                    the category. </li>
+                  <li>Added support for <code>${rootDir}</code> and other
+                    variables for the path of the Engine mapping file. </li>
+                </ul>
+              </li>
+              <li>Quality Check Step:
+                <ul>
+                  <li>Added option to save or not the session. This option is
+                    not accessible when editing the parameters from CheckMate,
+                    but only when editing a step's parameters.</li>
+                </ul>
+              </li>
+              <li>Rainbow Translation Kit Creation Step:
+                <ul>
+                  <li>Added to XLIFF outputs the option of outputting <code>ctype</code>
+                    and <code>equiv-text</code> attributes in inline codes. </li>
+                  <li>Added to OmegaT output the output of <code>ctype</code>
+                    and <code> equiv-text</code> attributes in inline codes. </li>
+                  <li>Added the option to merge a new OmegaT translation kit
+                    with an existing one, rather than overwriting it.</li>
+                </ul>
+              </li>
+              <li>Enrycher Step:
+                <ul>
+                  <li>Added support for segmented text units and implemented
+                    handling of inline codes.</li>
+                  <li>Added parameter for number of events to process on each
+                    call to the service.</li>
+                </ul>
+              </li>
+              <li>Translation Comparison Step:
+                <ul>
+                  <li>Added option to log the average scores per documents in a
+                    tab-delimited file.</li>
+                  <li>Added the output of a new tab-delimited file with all
+                    scores, along with the HTML report.</li>
+                  <li>Extended the repartition table to use 11 brackets instead
+                    of 3, and include the two scores.</li>
+                </ul>
+              </li>
+              <li>Segmentation and Desegmentation Steps:
+                <ul>
+                  <li>Added the option to renumber code IDs after segmentation
+                    so that they are 1-indexed as much as possible. A
+                    corresponding option on the desegmentation step reverses the
+                    process. This option will not work correctly with formats
+                    that use non-consecutive or non-numeric code IDs, such as
+                    XLIFF.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectors:
+            <ul>
+              <li>Microsoft Translator Connector:
+                <ul>
+                  <li>Added information about the engine in the query results.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Libraries:
+            <ul>
+              <li>Continued implementation of ITS 2.0 in XLIFF Writer.</li>
+              <li>Changed options settings for the XLIFFWriter class to use an
+                object rather than multiple setters.</li>
+            </ul>
+          </li>
+          <li>Filters Plugin for OmegaT:
+            <ul>
+              <li>Fixed issue #322: Updated the TS filter to use the Woodstox
+                parser, and added the dependencies.</li>
+              <li>Added the XLIFF Filter to the plug-in.</li>
+              <li>Added basic support for some ITS data categories in the
+                Comments pane (Text Analysis, Terminology).</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Changes from M19 to M20</h2>
+        <ul>
+          <li>Rainbow:
+            <ul>
+              <li>Improved the logging output and UI responsivness during
+                lengthy processes.</li>
+              <li>Updated the user's preference dialog to allow the selection of
+                the log levels as defined by SLF4J (Normal, Debug, Trace)</li>
+              <li>Rainbow's input root directory now supports expansion of
+                system environment variables.</li>
+            </ul>
+          </li>
+          <li>Tikal:
+            <ul>
+              <li>Fixed -lfc command output.</li>
+              <li>Use the -continue option to specify that batch operations
+                should continue processing even if one or more files in the
+                batch fail to process.</li>
+              <li>Summary information will be included at the end of batch
+                commands.</li>
+              <li>Timing information is included for each file processed, and
+                total elapsed time is included in the batch summary.</li>
+              <li>Added the -pd option to specify a directory to search for
+                custom filter configurations.</li>
+              <li>Fixed a crash when merging (-m) a file with no extension.</li>
+            </ul>
+          </li>
+          <li>Filters:
+            <ul>
+              <li>ITS Filters (XML Filter and HTML5+ITS Filter):
+                <ul>
+                  <li>Continued the implementation of ITS 2.0</li>
+                  <li>Fixed issue where the HTML-type special characters were
+                    not escaped when converted to inline codes by the code
+                    finder.</li>
+                  <li>Fixed issue #311 where preserve space property was not
+                    applied to attributes.</li>
+                </ul>
+              </li>
+              <li>TXML Filter:
+                <ul>
+                  <li>Fixed issue #266: Translations in the <code>&lt;revisions&gt;</code>
+                    elements are now ignored. </li>
+                </ul>
+              </li>
+              <li>XLIFF Filter:
+                <ul>
+                  <li>Improved support for <code>&lt;mrk&gt;</code> elements. </li>
+                  <li>Added support for several ITS features.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectors:
+            <ul>
+              <li>Microsoft Translator Connector:
+                <ul>
+                  <li>Fixed the internal conversion of the language code.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Libraries:
+            <ul>
+              <li>Fixed issue #282 for the Abstract Markup Filter.</li>
+              <li>Fixed issues in reporting libraries.</li>
+              <li>Added support for including ITS annotations in the XLIFF 1.2
+                writer.</li>
+            </ul>
+          </li>
+          <li>Steps:
+            <ul>
+              <li>Rainbow Translation Kit Creation:
+                <ul>
+                  <li>Added the "Include post-processing hook" option for OmegaT
+                    packages. this allows OmegaT to merge back the documents
+                    automatically.</li>
+                </ul>
+              </li>
+              <li>Remove Target:
+                <ul>
+                  <li>Fixed issue #270 where the step could not be run without
+                    some of the optional parameters set.</li>
+                </ul>
+              </li>
+              <li>Microsoft Batch Translation:
+                <ul>
+                  <li>Added an option to send the generated TMX document as a
+                    raw document for the input of the next step.</li>
+                  <li>Added a option to point to a .properties file containing a
+                    mapping of keys to categories for more convenient lookup.
+                    See wiki.</li>
+                </ul>
+              </li>
+              <li>Quality Check Step:
+                <ul>
+                  <li>Fixed issue #304 where the default check on parentheses
+                    didn't include full-width characters.</li>
+                </ul>
+              </li>
+              <li>Inline Code Removal Step:
+                <ul>
+                  <li>Added option to replace line break related codes with
+                    spaces. By default codes are simply removed.</li>
+                </ul>
+              </li>
+              <li>Added the Space Check Step. It allows to fix automatically
+                spaces around inline codes of the target based on the source.</li>
+              <li>Added the Cleanup Step. It allows to normalize quotation
+                marks, punctuations, remove suspect entries, etc. this can be
+                used for example when preparing an aligned document for MT
+                training.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+      </ul>
+    </ul>
+  </body>
+</html>

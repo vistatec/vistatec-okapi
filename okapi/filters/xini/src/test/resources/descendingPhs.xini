@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Xini SchemaVersion="1.0">
+	<TargetLanguages>
+		<Language>fr</Language>
+	</TargetLanguages>
+	<Main>
+		<Page PageID="1">
+			<PageName>test1.xml</PageName>
+			<Elements>
+				<Element ElementID="10">
+					<ElementContent>
+						<Fields>
+							<Field EmptySegmentsFlags="0" ExternalID="tu1_tu1" FieldID="0">
+								<Seg SegID="0"><ph type="ph" ID="2"><ph type="ph" ID="1">Test!</ph></ph></Seg>
+							</Field>
+						</Fields>
+					</ElementContent>
+				</Element>
+			</Elements>
+		</Page>
+	</Main>
+</Xini>

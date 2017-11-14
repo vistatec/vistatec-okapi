@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+
+
+	<title>Bad Tags | HTML Dog</title>	
+	<script src="BadTags_HTMLDog_files/codehighlighter.js" type="text/javascript"></script>
+	<style type="text/css">@import url(/r/fox.css);
+	</style>
+	<link href="BadTags_HTMLDog_files/fennec.css" rel="stylesheet" media="print">
+	
+</head><body class="Bad Tags">
+
+
+<p id="logo"><a href="http://htmldog.com/" title="HTML Dog home page"><img src="BadTags_HTMLDog_files/logo.gif" alt="HTML Dog" width="140" height="91"></a><span>The Best Practice Guide</span> To XHTML and CSS</p>
+
+<div id="content">
+
+<p id="yai"><a href="http://htmldog.com/">Home</a><span> → </span><a href="http://htmldog.com/guides/">Tutorials</a><span> → </span><a href="http://htmldog.com/guides/htmlintermediate/">HTML Intermediate Tutorial</a><span> → </span></p>
+<div id="intro">
+
+<h1>Bad Tags</h1>
+
+
+
+<p>This page looks at some of the <abbr title="HyperText Markup Language">HTML</abbr>
+tags of fairytale worlds and prehistoric times. Bad, nasty, downright
+ugly little things that belong to outdated HTML standards, random
+proprietary nonsense that only half-work in one sub-version of one
+browser or tags that have simply been superseded by newer tags.</p>
+</div>
+
+		
+		
+<div id="ads"><div>
+
+<p class="ad" id="firstad">HTML Dog, The Book <a href="http://htmldog.com/book/"><img src="BadTags_HTMLDog_files/book_sm.jpg" alt="HTML Dog book cover" width="80" height="100"></a></p>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2105257479089713";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="BadTags_HTMLDog_files/show_ads.js">
+</script><script src="BadTags_HTMLDog_files/expansion_embed.js"></script><script src="BadTags_HTMLDog_files/test_domain.js"></script><script>window.google_render_ad();</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 600px; position: relative; visibility: visible; width: 120px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 600px; position: relative; visibility: visible; width: 120px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="BadTags_HTMLDog_files/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" scrolling="no" width="120" frameborder="0" height="600"></iframe></ins></ins>
+
+<p class="ad">HTML Dog is hosted by <a href="http://www.titanhosts.net/">Titan Internet</a></p>
+
+
+</div></div>
+
+
+<div id="antiintro"><div id="ai2">
+
+
+<p><a href="http://www.webstandards.org/buzz/archive/2003_10.html#a000218">Some have suggested</a> that although the approach of HTML Dog to teach standards-based HTML and <acronym title="Cascading Style Sheets">CSS</acronym>
+without making a song and dance about the standards is perhaps a good
+one, but by doing so, users (beginners in particular) may come across
+different approaches and bad practices elsewhere without knowing that
+there is anything wrong with them. So here's HTML Dog's answer: <strong>A guide to what not to use</strong>.</p>
+
+<p>HTML has attempted to move away from the <strong>presentational</strong> and towards the <strong>meaningful</strong>,
+leading to a philosophy of separating content and meaning (HTML) from
+presentation (CSS). This general approach tends to lead to much leaner
+web pages, because a single set of presentational instructions (in an
+external CSS file) can be applied to many pages. This also makes the
+site much more manageable because global changes can be made from a
+single source.</p>
+<p>Some of the 'bad tags' are simply presentational tags (such as <a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>small</code></a>)
+that could be replaced with something meaningful or simply with CSS.
+Others may not only be presentational, but unnecessarily bulky (such as
+the <code>font</code> tag) or hideously detrimental to usability (such as <code>blink</code>).</p>
+
+<h2>Tags</h2>
+<p>These are some of the most common tags you might come across that have better alternatives:</p>
+<ul>
+<li><strong><a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>b</code></a></strong> could be used to make an element bold. Using <a href="http://htmldog.com/reference/htmltags/strong/" class="acode"><code>strong</code></a> (meaning strong emphasis) instead adds meaning, or to just add boldness, <code>font-weight: bold</code> in CSS does the job.</li>
+<li><strong><a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>i</code></a></strong> could be used to italicise an element. Using <a href="http://htmldog.com/reference/htmltags/em/" class="acode"><code>em</code></a> (meaning emphasis) instead also adds meaning or <code>font-style: italic</code> can be used to just add the presentation.</li>
+<li><strong><a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>big</code></a></strong> could be used to make big text. Using headings instead (<a href="http://htmldog.com/reference/htmltags/h1h2h3h4h5h6/" class="acode"><code>h1</code></a>, <a href="http://htmldog.com/reference/htmltags/h1h2h3h4h5h6/" class="acode"><code>h2</code></a> etc, when text genuinely is a heading) adds meaning, or simply using the <a href="http://htmldog.com/reference/cssproperties/font-size/" class="acode"><code>font-size</code></a> property in CSS gives more control.</li>
+<li><strong><a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>small</code></a></strong> could be used to make small text. CSS (<a href="http://htmldog.com/reference/cssproperties/font-size/" class="acode"><code>font-size</code></a>) once more gives more control.</li>
+<li><strong><a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>hr</code></a></strong> could be used to show a horizontal rule. It is unusual to use <a href="http://htmldog.com/reference/htmltags/presentational/" class="acode"><code>hr</code></a> in a CSS designed page anyway; properties such as <a href="http://htmldog.com/reference/cssproperties/border/" class="acode"><code>border-top</code></a> and <a href="http://htmldog.com/reference/cssproperties/border/" class="acode"><code>border-bottom</code></a> or even just plain old images do the job much better.</li>
+</ul>
+
+<p>Those tags mentioned above are all compliant with the latest HTML
+standards but they don't apply any meaning to content, which all good
+tags should. They could be more useful but they aren't particularly
+harmful, and might easily be mistaken for innocent
+butter-wouldn't-melt-in-their-mouth nuggets of pure goodness when
+standing next to the following filthy tags.</p>
+<ul>
+<li><strong><code>u</code></strong> could be used to underline
+elements. It remains that underlined text is still associated by many
+with links. This is why this tag died a long time ago - you really
+don't want to be underlining non-linking text.</li>
+<li><strong><code>center</code></strong> could be used to centre one element within another. The CSS property <a href="http://htmldog.com/reference/cssproperties/text-align/" class="acode"><code>text-align</code></a> allows values of not only <code>center</code>, but <a href="http://htmldog.com/reference/cssproperties/left/" class="acode"><code>left</code></a>, <a href="http://htmldog.com/reference/cssproperties/right/" class="acode"><code>right</code></a> and <code>justify</code> as well.</li>
+<li><strong><code>menu</code></strong> could be used to create a menu list. It does pretty much what <a href="http://htmldog.com/reference/htmltags/ul/" class="acode"><code>ul</code></a> does, but as an 'unordered list' is more general, <a href="http://htmldog.com/reference/htmltags/ul/" class="acode"><code>ul</code></a> stands tall over menu's corpse.</li>
+<li><strong><code>layer</code></strong> is similar to a <a href="http://htmldog.com/reference/htmltags/div/" class="acode"><code>div</code></a> element positioned with CSS. These only work in old versions of Netscape. So not very useful then.</li>
+<li><strong><code>blink</code></strong> or <strong><code>marquee</code></strong>.
+Just say "NO!" kids. They are supposed to do exactly as they say, but
+have very limited support and were surely only ever intended to be
+very, very <a href="http://www.goer.org/Journal/2003/Oct/index.html#26">sick jokes</a>.</li>
+<li><strong><code>font</code></strong>, which could be used to define
+the font name, size and colour of an element has gained a deserved
+reputation of being the notoriously mischievous evil goblin lord of
+Tagworld. Old sites (even some new ones) have <a href="http://htmldog.com/reference/cssproperties/font/" class="acode"><code>font</code></a>
+tags splattered all over their pages like a plague of termites. Much of
+their proliferation has come about from web authoring software, placing
+<a href="http://htmldog.com/reference/cssproperties/font/" class="acode"><code>font</code></a> tags around every element that the web author applied colour or size to. Whereas a <a href="http://htmldog.com/reference/cssproperties/font/" class="acode"><code>font</code></a> tag needs to be applied to every occurrence of an element (say, every time you use a <a href="http://htmldog.com/reference/htmltags/p/" class="acode"><code>p</code></a>
+element), with CSS you can apply properties to every occurrence of an
+element with just one single little line of code for your whole web
+site. Using this method, not only is the <strong>page weight substantially lighter</strong> than an equivalent font-tag infested page, but changes can be made more easily because all you need to do is change <strong>one line</strong> of CSS rather than every instance of a <a href="http://htmldog.com/reference/cssproperties/font/" class="acode"><code>font</code></a> tag. This also increases the likelihood of maintaining a consistent design across your site. <a href="http://htmldog.com/reference/cssproperties/font/" class="acode"><code>font</code></a> tags and the inappropriate use of tables are the two most common causes of unnecessarily bloated pages.</li>
+</ul>
+
+<h2>Attributes</h2>
+<p>So you might think you're using the good tags, but there are a few
+pesky parasitical attributes lurking about that might turn them sour.</p>
+<ul>
+<li><strong><code>name</code></strong> could be used to assign a name to an element, which is perfectly acceptable in form elements such as <a href="http://htmldog.com/reference/htmltags/input/" class="acode"><code>input</code></a>, but elsewhere <code>name</code>'s job had been replaced by the <code>id</code> attribute.</li>
+<li><strong><code>text</code></strong> and <strong><code>bgcolor</code></strong> could be used to specify the base text colour and background colour of a page within the opening <a href="http://htmldog.com/reference/htmltags/body/" class="acode"><code>body</code></a> tag. The CSS <a href="http://htmldog.com/reference/cssproperties/color/" class="acode"><code>color</code></a> and <a href="http://htmldog.com/reference/cssproperties/background-color/" class="acode"><code>background-color</code></a> properties can do this just as well when applied to the <code> body</code> selector.</li>
+<li><strong><code>background</code></strong> could be used within the <a href="http://htmldog.com/reference/htmltags/body/" class="acode"><code>body</code></a> tag to specify a background image for a page. CSS manages background images much better with properties such as <a href="http://htmldog.com/reference/cssproperties/background-image/" class="acode"><code>background-image</code></a>.</li>
+<li><strong><code> link</code></strong>, <strong><code>alink</code></strong>, <strong><code>vlink</code></strong> could be used within the <a href="http://htmldog.com/reference/htmltags/body/" class="acode"><code>body</code></a> tag to specify the colour of links (non-visited, active and visited). CSS baby - <code>:link</code>, <code>:active</code> and <code>:visited</code> all do the job.</li>
+<li><strong><code>align</code></strong> could be used to align the content of an element (such as <code>&lt;div align="center"&gt;Stuff&lt;/div&gt;</code>), but, like the <code>center</code> tag, the CSS <a href="http://htmldog.com/reference/cssproperties/text-align/" class="acode"><code>text-align</code></a> property is the new boss.</li>
+<li><strong><code>target</code></strong> could be used to open a link in various states, most commonly in a new window (such as <code>&lt;a href="wherever.html" target="_blank"&gt;Help me&lt;/a&gt;</code>).
+Sounds nice, but you're not doing your site any favours. Users don't
+expect things (such as new windows) to appear as if by magic and the
+most commonly used navigational tool is the browsers 'back' button,
+which won't work if you open a link in a new window. It's invalid and
+it's inaccessible.</li>
+</ul>
+
+<div class="note">
+<p>Presentational attributes for tags such as <code> width</code> and <code> height</code> for images and <code>cellpadding</code> and <code>cellspacing</code>
+for tables remain due to the frequency that different values need to be
+applied different elements. They aren't the perfect solution, but if
+you have a page with a large number of images or tables, you may have
+no other sensible choice than to use them.</p>
+<p>The most baffling presentational attributes belong to the <a href="http://htmldog.com/reference/htmltags/textarea/" class="acode"><code>textarea</code></a> tag where not only are the <code>cols</code> and <code>rows</code> attributes valid, they are required in the latest HTML standard.</p>
+</div>
+
+<h2>Good tags, bad use</h2>
+<p>To get in to your house you might be able to get down on your knees and squeeze through that little doggy door <strong>but wait!</strong>
+There's a big ol' human door emblazoned with a device called a door
+handle! Wow! Look - the door's, like, just the right size for a human
+to fit through.</p>
+<p>The collection of HTML tags (the good ones) was designed for a
+specific reason and believe it or not (believe it), when you use them
+for the right reasons, you'll get better results.</p>
+<p>Web pages are much more accessible to users with disabilities when
+the HTML is semantic, as screen readers will often emphasize a list
+when it encounters a <a href="http://htmldog.com/reference/htmltags/ul/" class="acode"><code>ul</code></a> tag or a heading when it encounters an <a href="http://htmldog.com/reference/htmltags/h1h2h3h4h5h6/" class="acode"><code>h1</code></a> or <a href="http://htmldog.com/reference/htmltags/h1h2h3h4h5h6/" class="acode"><code>h2</code></a> tag for example.</p>
+<p>The most misused HTML of all is tables. Tables are commonly used for
+layout, but they should only be used to display tabular data, as they
+were always only intended to. The <a href="http://htmldog.com/guides/cssadvanced/layout/">non-table layout method</a>
+isn't some kind of Zen Buddhist quest for true geek enlightenment,
+there is a real practical benefit of not only dramatically reduced page
+weight, but also being easier to maintain or redesign.</p>
+
+<div class="note">
+<p>Sometimes designers will use some of those tags and attributes mentioned here (particularly tables for layout) to achieve a <strong>transitional</strong>
+design - one that will support older browsers (in particular Netscape
+4) as well as modern ones. Tables will indeed allow better
+presentational control over the CSS inept Netscape 4, but its users are
+miniscule in number and decreasing while those to whom table-layout
+would be a great disadvantage - mobile device users - grow in number.
+The advantages of table-free design mentioned above far outweigh the
+disadvantages and should result in pages that, although minimally
+styled to a minority, retain full functionality in <strong>all</strong> browsers.</p>
+</div>
+
+<h2>Frames</h2>
+<p>Goldilocks thought it would be a really good idea to help herself to
+a bowl of porridge but then three large carnivorous mammals showed up
+and threw her out of a window. Frames are bowls of porridge that belong
+to bears. They might look nice, but it would be quite perilous to go
+anywhere near them.</p>
+<p>Most web sites do not use frames and in general web users are used to a single document as a page.</p>
+<p>But if, for some reason, you want to prevent users adding a specific
+page to their bookmarks or if you want to prevent them recommending a
+specific page via email or instant messaging or if you want to add a
+whole other level of complexity to users with disabilities using screen
+readers who will need to navigate between frames on top of navigating
+through a page or if you want to confuse the hell out of search
+engines, go ahead, use frames.</p>
+<p>In general, frames do nothing but <strong>add complexity</strong> and <strong>subtract usability</strong>.</p>
+
+<div class="note">
+<p>If you follow these rules of thumb, you shouldn't go far wrong:</p>
+<p><strong>1)</strong> If the tag or attribute name even so much as whispers anything suggesting <strong>presentation</strong>, don't use it. That's CSS's job. And CSS does the job better.</p>
+<p><strong>2)</strong> Use the tag to do what its <strong>name implies</strong>. Tables are for tabular data. Headings are for headings. Etcetera etcetera.</p>
+<p><strong>3)</strong> When you've got specific content, use the <strong>appropriate</strong> tags. Lists for lists, headings for headings yada yada yada.</p>
+</div>
+
+
+
+
+</div></div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<div id="related"><div id="r2">
+	<h2>Related Pages</h2>
+	<ul>
+		<li>Next Page: <a href="http://htmldog.com/guides/cssintermediate/">CSS Intermediate Tutorial</a></li>
+		<li>Previous Page: <a href="http://htmldog.com/guides/htmlintermediate/javascript/">Javascript</a></li>
+		<li><a href="http://htmldog.com/guides/htmladvanced/recap/">Standards Recap</a> - Getting out of bad habits and converting to standards-compliant XHTML.</li>
+	</ul>
+
+
+
+
+	<h3>Reference</h3>
+	<ul>
+		<li><a href="http://htmldog.com/reference/htmltags/presentational/">Presentational tags</a> - the valid, but still bad, tags</li>
+	</ul>
+
+
+
+
+	
+
+
+</div></div>
+
+<div id="footer">
+<p>© Patrick Griffiths, 2003-2007.</p>
+<p><a href="http://htmldog.com/terms/">Terms of use</a></p>
+</div>
+
+</div><!--close content-->
+
+
+
+
+
+
+
+
+
+
+
+<div id="nav">
+<ul>
+<li class="jelly"><a href="http://htmldog.com/guides/">Tutorials</a>	<ul>
+
+
+
+		<li><a href="http://htmldog.com/guides/htmlbeginner/">HTML Beginner</a></li><li><a href="http://htmldog.com/guides/cssbeginner/">CSS Beginner</a></li><li><a href="http://htmldog.com/guides/htmlintermediate/">HTML Intermediate</a>
+			<ul>
+				<li><a href="http://htmldog.com/guides/htmlintermediate/spandiv/">Span and Div</a></li><li><a href="http://htmldog.com/guides/htmlintermediate/metatags/">Meta Tags</a></li><li><a href="http://htmldog.com/guides/htmlintermediate/tables/">Tables</a></li><li><a href="http://htmldog.com/guides/htmlintermediate/definitionlists/">Definition Lists</a></li><li><a href="http://htmldog.com/guides/htmlintermediate/javascript/">Javascript</a></li><li><em>Bad Tags</em></li></ul>
+
+</li><li><a href="http://htmldog.com/guides/cssintermediate/">CSS Intermediate</a></li><li><a href="http://htmldog.com/guides/htmladvanced/">HTML Advanced</a></li><li><a href="http://htmldog.com/guides/cssadvanced/">CSS Advanced</a></li></ul>
+</li>
+
+<li class="jelly"><a href="http://htmldog.com/reference/">References</a>	<ul>
+		<li><a href="http://htmldog.com/reference/htmltags/">HTML Tags</a></li><li><a href="http://htmldog.com/reference/cssproperties/">CSS Properties</a></li></ul>
+</li><li class="jelly"><a href="http://htmldog.com/articles/">Articles</a></li><li class="jelly"><a href="http://htmldog.com/examples/">Examples</a></li><li class="jelly"><a href="http://htmldog.com/book/">The Book</a></li><li><a href="http://htmldog.com/">Home</a></li><li><a href="http://htmldog.com/about/">About HTML Dog</a></li><li><a href="http://htmldog.com/linkto/">Link To HTML Dog</a></li><li><a href="http://htmldog.com/contact/">Contact HTML Dog</a></li><li><a href="http://htmldog.com/links/">External Links</a></li><li><a href="http://htmldog.com/sitemap/">Site Map</a></li></ul>
+
+
+
+
+
+</div>
+
+
+
+<form action="/search/" id="search">
+<div><input name="sp-a" value="sp1002e60e" type="hidden"><label for="morombe">Search: </label><input name="sp-q" id="morombe"><input value="Search" type="submit"></div>
+</form>
+
+
+
+
+</body></html>

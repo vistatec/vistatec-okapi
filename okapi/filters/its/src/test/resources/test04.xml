@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<myDoc>
+ <head>
+  <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+   <its:withinTextRule withinText="yes" selector="//i|//img"/>
+   <its:withinTextRule withinText="nested" selector="//fnote"/>
+   <its:translateRule selector="//@attr1|//@attr2|//@attr3" translate="yes"/>
+  </its:rules>
+  <!--LB are Mac-->
+ </head>
+ <body>
+  <par>A <i>boysenberry</i> is a cross between a <i>western dewberry</i>,
+   a <i>loganberry</i><fnote>The loganberry is a hybrid produced from 
+   crossing a <i>blackberry</i> and a <i>raspberry</i>.</fnote>, a
+   <i>raspberry</i>, and a <i>Pacific blackberry</i>.</par>
+  <par>The bottom line: all those berries are pretty good!</par>
+  <par>Before <img attr1="text1" attr2="text2" attr3="text3"/> middle <img attr1="text1" attr2="text2" attr3="text3"/> after.</par>
+ </body>
+</myDoc>

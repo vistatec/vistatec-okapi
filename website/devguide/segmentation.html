@@ -1,0 +1,240 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Okapi Framework Developer's Guide - Segmentation</title>
+<link rel="stylesheet" type="text/css" href="../okapi.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr class="head">
+                <td class="head" colspan="2"><h1 class="head">Okapi Framework - Developer's Guide</h1>
+                <h2 class="head2">Segmentation</h2></td>
+        </tr>
+        <tr>
+                <td class="smalltoc"><p>
+                        - <a href="#overview">Overview</a><br>
+                        - <a href="#performingSegmentation">Performing Segmentation</a><br>
+                        - <a href="#segmentedContent">Working with Segmented Content</a></p></td>
+                <td class="hmenu">
+                        <div class="hmenu"><table align="right"><tr>
+                                <td><a href="glossary.html">Glossary</a></td>
+                                <td><a href="index.html">Guide Content</a></td>
+                                <td><a href="http://okapiframework.org">Okapi Framework</a></td>
+                        </tr></table></div>
+                </td>
+        </tr>
+</table>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>Segmentation, in the context of the Okapi Framework, is the action of breaking
+down a given content into parts. For example, taking the content of an extracted
+HTML <code>&lt;p&gt;</code> element, and breaking it down into sentences.</p>
+<p>Segmentation is of great importance in localization tasks. It allows you to
+define the granularity of the parts of text that are being translated, matched
+against translation memories, processed by machine translation, etc. Having
+different segmentation methods is often one of the cause of loosing re-usable
+data when going from one tool to another.</p>
+<p>In the framework, the basic unit of extraction is the
+<a href="glossary.html#textUnit">text unit</a>, which corresponds to different
+things depending on original file format. But, roughly, it is an un-segmented
+chunk of text that may be composed of several sentences. Many of the tasks
+performed on the text units require to manipulate the unit at a finer level: the
+segment. This page discusses segmentation in that context.</p>
+<h2><a name="performingSegmentation"></a>Performing Segmentation</h2>
+<p>The framework provides one interface to apply segmentation to a text content,
+the <code><a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html">
+ISegmenter</a></code> interface.</p>
+<p dir="ltr">How each implementation of
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html"><code>
+ISegmenter</code></a> works may be different. In this example we will use one
+default implementation of <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html">ISegmenter</a></code>
+that is provided with the framework: <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/SRXSegmenter.html">
+SRXSegmenter</a></code>. As its name indicates it is based on the
+<a href="../standards.html#srx">SRX standard</a>.</p>
+<p dir="ltr">To instantiate this segmenter you must first create an <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/SRXDocument.html">SRXDocument</a></code>
+object and load or set the SRX rules to use.</p>
+<pre dir="ltr">SRXDocument doc = new SRXDocument();
+doc.load(myRules.srx);</pre>
+<p>Then you can obtain a segmenter for a given language.</p>
+<pre>ISegmenter segmenter = doc.compileLanguageRules(LocaleId.fromString(&quot;en&quot;), null);</pre>
+<p>The second parameter of <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/SRXDocument.html#compileLanguageRules(java.lang.String, net.sf.okapi.lib.segmentation.ISegmenter)">
+compileLanguageRules()</a></code> is an optional segmenter object, in case you
+already have one and want to avoid the cost of re-creating one. You can just
+pass <code>null</code> to create a brand new one.</p>
+<p>Once you have a segmenter with its rules set, you can use it to create
+segments on a given content. You can calculate the segments for a given plain
+text string or for a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html">
+TextContainer</a></code>.</p>
+<p class="question"><b>Question</b>: I've looked at the SRX specification and it
+seems quite complicated to write rules. Is there an easy way to create and edit
+SRX documents?</p>
+<p class="answer"><b>Answer</b>: Sure. You can use Okapi's own SRX editor: <b>Ratel</b> (named
+after the tough honey-badger that roams the plains of Africa). You can
+<a href="../downloads.html">download it from here</a>. Just start Ratel and drag
+and drop your SRX document on it. The rules are applied on-the-fly to any sample
+text you enter.</p>
+<h3>With Plain Text</h3>
+<p>Here is an example of getting the segmentation for a plain text string:</p>
+<pre>int count = segmenter.computeSegments(&quot;Part 1. Part 2.&quot;);
+System.out.println(&quot;count=&quot;+String.valueOf(count));
+for ( Range range : segmenter.getRanges() ) {
+   System.out.println(String.format(&quot;start=%d, end=%d&quot;,
+      range.start, range.end));
+}</pre>
+<p>The <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html#computeSegments(java.lang.String)">
+ISegmenter.computeSegments()</a></code> method returns the number of segments it
+founds. It also creates internally a list of the ranges of these segments. You
+can get that list with the <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html#getRanges()">
+ISegmenter.getRanges()</a></code> method. Each entry of the list is a <code>
+<a href="../javadoc/net/sf/okapi/common/Range.html">Range</a></code> object that
+contains a <code>start</code> and an <code>end</code> values corresponding to
+the boundaries of the segment in the given text. The text of the segment goes
+from the character at the <code>start</code> position to the character just
+before the <code>end</code> position (Just like the <code>String.subString()</code>
+argument in Java).</p>
+<p>For example the code above will display this:</p>
+<pre>count=2
+start=0, end=7
+start=7, end=15</pre>
+<p>The first segment starts at 0 and ends at 7, so it corresponds to &quot;<code>Part
+1.</code>&quot; And the second segment starts at 7 and ends at 15, so it corresponds
+to &quot;<code>&nbsp;Part 2.</code>&quot;. </p>
+<pre>Part 1. Part 2.
+0000000000111111
+0123456789012345</pre>
+<p>While the segmenter is designed to work with coded text as we will see below,
+you can also use it on any kind of normal text as long as you have rules that
+correspond to your text format.</p>
+<h3>With a TextContainer and TextFragment</h3>
+<p>The method <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html#computeSegments(net.sf.okapi.common.resource.TextContainer)">
+ISegmenter.computeSegments()</a></code> can also take a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html">
+TextContainer</a></code> as parameter and works like for plain text, but in
+addition it takes into account the possible inline code in the content.</p>
+<p>For example, given a breaking rule with the text before the break set as a
+period and the text after the break set as a space, in which segment should go
+the inline codes <code>&lt;/span&gt;</code> and <code>&lt;alone/&gt;</code>?</p>
+<pre>&lt;span&gt;Part 1.<span style="background-color: #FFFF00">&lt;/span&gt;</span> Part 2.<span style="background-color: #FFFF00">&lt;alone/&gt;</span> Part 3.</pre>
+<p>The SRX standard has options for these cases. The default options are as
+follow:</p>
+<ul>
+        <li>Opening codes are put in the right (next) segment.</li>
+        <li>Closing codes are put in the left (current) segment.</li>
+        <li>Placeholder codes are put in the right (next) segment.</li>
+</ul>
+<p>To try out the segmenter with inline codes we have first to build a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextFragment.html">
+TextFragment</a></code> object with the proper content:</p>
+<pre>TextFragment tf = new TextFragment();
+tf.append(TagType.OPENING, &quot;span&quot;, &quot;&lt;span&gt;&quot;);
+tf.append(&quot;Part 1.&quot;);
+tf.append(TagType.CLOSING, &quot;span&quot;, &quot;&lt;/span&gt;&quot;);
+tf.append(&quot; Part 2.&quot;);
+tf.append(TagType.PLACEHOLDER, &quot;alone&quot;, &quot;&lt;alone/&gt;&quot;);
+tf.append(&quot; Part 3.&quot;);</pre>
+<p>Based on the TextFragment, you can then create an instance of TextContainer: </p>
+<pre>TextContainer tc = new TextContainer(tf);</pre>
+The calculation of the segmentation itself is the same as before.</p>
+<pre>segmenter.computeSegments(tc);</pre>
+<p>To make things easier, the <code>
+<a href="../javadoc/net/sf/okapi/common/resource/ISegments.html">
+ISegments</a></code> interface, which the TextContainer class implements, offers a method to apply the ranges provided by
+the segmenter to the text content in one call: <code>
+<a href="../javadoc/net/sf/okapi/common/resource/ISegments.html#create(java.util.List)">
+ISegments.create()</a></code> that takes a list of ranges as
+parameters.</p>
+<pre>tc.getSegments().create(segmenter.getRanges());</pre>
+<p>And you can retrieve each segments of the now segmented container with the
+<code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html#getSegments()">
+TextContainer.getSegments()</a></code>. The <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Segment.html">Segment</a></code>
+class provides a simple structure to hold together the <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextFragment.html">TextFragment</a></code>
+object corresponding to the segment, and the identifier of the segment.</p>
+<pre>for ( Segment seg : tc.getSegments() ) {
+   System.out.println(&quot;segment=[&quot; + seg.toString() + &quot;]&quot;);
+}</pre>
+<p>The code above results in the following output:</p>
+<pre>segment=[&lt;span&gt;Part 1.&lt;/span&gt;]
+segment=[ Part 2.]
+segment=[&lt;alone/&gt; Part 3.]</pre>
+<p>Note that the SRX specification is unclear on what is the proper behavior of
+the segmenter for the cases where there are several consecutive inline codes
+just after the break point, the specification mentions only the cases with a
+single code. In such cases the SRX implementation in Okapi behaves like if the
+several inline codes are a single code as long as they are of the same type.</p>
+<h2><a name="segmentedContent"></a>Working with Segmented Content</h2>
+<p>A <a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html">
+<code>TextContainer</code></a> is represented by a set of <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextPart.html">TextPart</a></code>
+objects. Each part that represent a segment is a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Segment.html">Segment</a></code>
+object, the other represent the content between segments.</p>
+<pre>TextContainer: &quot;Segment 1. ... Segment 2.&quot;
+TextPart(0)/Segment(0): &quot;Segment 1.&quot;
+TextPart(1)           : &quot; ... &quot;
+TextPart(2)/Segment(1): &quot;Segment 2.&quot;</pre>
+<p>Note that even content on which no segmentation rules has been applied are
+represented as a part that is a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Segment.html">Segment</a></code>
+object. This allows you to treat segmented and un-segmented content the same
+way.</p>
+<ul>
+        <li>To know if a content has been segmented use the <code>
+        <a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html#hasBeenSegmented()">
+        hasBeenSegmented()</a></code> method.</li>
+        <li>To know if a content is made of a single segment, regardless if it has
+        been segmented or not, use the <code>
+        <a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html#contentIsOneSegment()">
+        contentIsOneSegment()</a></code> method.</li>
+</ul>
+<p>The segments of a content can be accessed different ways, an easy one id to
+use the <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html#getSegments()">
+getSegments()</a></code> methdod and then access each segments from there. For example, if you need to go through the
+segments (and only the segments) of a
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html"><code>
+TextContainer</code></a>, you would do something like this:</p>
+<pre>for ( Segment seg : tc.getSegments() ) {
+   System.out.println(&quot;segment-&gt;[&quot; + seg.toString() + &quot;]&quot;);
+}</pre>
+<p>The method <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html#getSegments()">
+getSegments()</a></code> creates an instance of the&nbsp; <code>
+<a href="../javadoc/net/sf/okapi/common/resource/ISegments.html">ISegments</a></code>
+interface that allows you to access the segments. Beware that <b>each call
+re-create the object</b>, you want to <u>avoid calling this method inside loops
+or in any place where it is called several times</u>.</p>
+<p>If you need to go through all the parts (segments are not) of a
+<a href="../javadoc/net/sf/okapi/common/resource/TextContainer.html"><code>
+TextContainer</code></a>, you would do something like this:</p>
+<pre>for ( TextPart part : tc ) {
+   if ( part.isSegment() ) {
+      System.out.println(&quot;segment-&gt;[&quot; + part.toString() + &quot;]&quot;);
+   }
+   else {
+      System.out.println(&quot;non-segment-&gt;{&quot; + part.toString() + &quot;}&quot;);
+   }
+}</pre>
+<p>Segments can be accessed through their index or their identifier. When
+working with both source and target segments it is recommended to use the
+identifier because a source segment and its corresponding target may not have
+the same index as they may be ordered differently in the translation.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

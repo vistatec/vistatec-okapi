@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ratel - SRX Standard</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Ratel</h1>
+		<h2 class="head2">SRX Standard</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=SRX">http://okapiframework.org/wiki/index.php?title=SRX</a></p>
+
+<ul>
+	<li><a href="#Overview">Overview</a></li>
+	<li><a href="#SRXVersions">SRX Versions Issue</a></li>
+	<li><a href="#SRXAndJava">SRX and Java</a></li>
+</ul>
+<h2><a name="Overview"></a>Overview</h2>
+<p>The SRX (Segmentation Rules eXchange) format is a standard to save 
+segmentation rules in a file so they can be used between different tools.</p>
+<p>SRX rules use regular expressions to define the text parts before and after 
+inter-character location, and specify if the location should be a break or not. 
+Rules are grouped into named sets that are activated based the code of the 
+language of the text to process.</p>
+<p>Example of SRX simple rules:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;srx xmlns=&quot;http://www.lisa.org/srx20&quot; version=&quot;2.0&quot;&gt;
+ &lt;header segmentsubflows=&quot;yes&quot; cascade=&quot;no&quot;&gt;
+  &lt;formathandle type=&quot;start&quot; include=&quot;no&quot;&gt;&lt;/formathandle&gt;
+  &lt;formathandle type=&quot;end&quot; include=&quot;yes&quot;&gt;&lt;/formathandle&gt;
+  &lt;formathandle type=&quot;isolated&quot; include=&quot;no&quot;&gt;&lt;/formathandle&gt;
+ &lt;/header&gt;
+ &lt;body&gt;
+  &lt;languagerules&gt;
+   &lt;languagerule languagerulename=&quot;default&quot;&gt;
+    &lt;rule break=&quot;no&quot;&gt;
+     &lt;beforebreak&gt;([A-Z]\.){2,}&lt;/beforebreak&gt;
+     &lt;afterbreak&gt;\s&lt;/afterbreak&gt;
+    &lt;/rule&gt;
+    &lt;rule break=&quot;yes&quot;&gt;
+     &lt;beforebreak&gt;\.&lt;/beforebreak&gt;
+     &lt;afterbreak&gt;\s&lt;/afterbreak&gt;
+    &lt;/rule&gt;
+   &lt;/languagerule&gt;
+  &lt;/languagerules&gt;
+  &lt;maprules&gt;
+   &lt;languagemap languagepattern=&quot;.*&quot; languagerulename=&quot;default&quot;&gt;&lt;/languagemap&gt;
+  &lt;/maprules&gt;
+ &lt;/body&gt;
+&lt;/srx&gt;</pre>
+<p>In this example, there are two rules.</p>
+<ul>
+	<li>The second one specifies that when an inter-character location is 
+	preceded by a period and followed by a white space, the rule is to break at 
+	that position.</li>
+	<li>The first rule specifies that when an inter-character location is 
+	preceded by the patter <code>([A-Z]\.){2,}</code> and followed by a white 
+	paces, the rule is to not break at that position. Because the first rule is 
+	placed before the second rule it takes precedence.</li>
+</ul>
+<p>So, based on those rules, the following text:</p>
+<pre>I'm in the U.K. for now. But I plan to move to Papua New Guinea.</pre>
+<p>will break down into two segments:</p>
+<pre>[I'm in the U.K. for now.]
+[ But I plan to move to Papua New Guinea.]</pre>
+<p>If the first rule was not there, it would break down into three segments:</p>
+<pre>[I'm in the U.K.]
+[ for now.]
+[ But I plan to move to Papua New Guinea.]</pre>
+<h2><a name="SRXVersions"></a>SRX Versions Issue</h2>
+<p>There are two versions of SRX: 1.0 and 2.0.</p>
+<p>SRX version 1.0 has been implemented by several tools that interpreted how to 
+process the SRX rules in different ways. As a result the same SRX&nbsp;1.0 document 
+used on different tools may give you different segmentation.</p>
+<p>To resolve this issue, an updated version 2.0 specification has been 
+published and provides better implementation guidelines. So, in theory, the same 
+version 2.0 document should give you the same segmentation in all tools.</p>
+<p>You can find the specifications of SRX on the LISA web site:</p>
+<ul>
+	<li>SRX&nbsp;1.0:
+	<a target="_blank" href="http://www.lisa.org/fileadmin/standards/srx10.html">http://www.lisa.org/fileadmin/standards/srx10.html</a>.</li>
+	<li>SRX&nbsp;2.0: 
+	<a target="_blank" href="http://www.lisa.org/fileadmin/standards/srx20.html">http://www.lisa.org/fileadmin/standards/srx20.html</a>.</li>
+</ul>
+<h3>Implementation Differences Between SRX&nbsp;1.0 and SRX&nbsp;2.0</h3>
+<p>There are two main types of implementations of SRX 1.0: the intended one, and 
+one that use a cascading matching of the language maps.</p>
+<p>Tools like SDLX implement the intended SRX&nbsp;1.0 behavior (non-cascading). 
+Others, like Heartsome and Swordfish implement SRX&nbsp;1.0 with a 
+cascading behavior.</p>
+<p>In an SRX document, the segmentation rules are grouped into several <code>
+&lt;languagerule&gt;</code> elements. This way you can define different sets of rules 
+that you apply for different languages. The select of which group of rules 
+is to use for a given language is driven by a table defined in the <code>
+&lt;maprules&gt;</code> element. Each entry in <code>&lt;maprules&gt;</code> is a <code>
+&lt;languagemap&gt;</code>. This entry has two information: a regular expression 
+pattern that corresponds to what language code should use the entry, and a 
+pointer to the group of rules for this entry.</p>
+<pre>&lt;languagerules&gt;
+ &lt;languagerule languagerulename='default'&gt;
+ &lt;/languagerule&gt;
+ &lt;languagerule languagerulename='japanese'&gt;
+ &lt;/languagerule&gt;
+&lt;languagerules&gt;
+
+&lt;maprules&gt;
+ &lt;languagemap languagepattern='ja.*' languagerulename='japanese'/&gt;
+ &lt;languagemap languagepattern='.*' languagerulename='default'/&gt;
+&lt;/maprules&gt;</pre>
+<p>The difference between the SRX&nbsp;1.0 implementations is how they lookup the 
+<code>&lt;maprules&gt;</code> 
+for a given language code.</p>
+<ol>
+	<li>Some will use <b>only the first</b> <code>&lt;languagemap&gt;</code> that has a
+	<code>languagepattern</code> matching the language code.</li>
+	<li>Other will use <b>all</b> <code>&lt;languagemap&gt;</code> that have a 
+	<code>languagepattern</code> 
+	matching the language code.</li>
+</ol>
+<p>The first interpretation is the correct one: In SRX&nbsp;1.0 you use the only first 
+<code>&lt;languagemap&gt;</code> 
+that matches the given language code.</p>
+<p>It is true that there is nothing in the SRX 1.0 specification that says 
+explicitly it should work that way. But there is also nothing explicitly (or 
+implicitly) that says all matching <code>&lt;languagemap&gt;</code> should be used.</p>
+<p>The clue to the intended behavior is in the example of the SRX&nbsp;1.0 
+specification:</p>
+<pre>&lt;languagerules&gt;
+ &lt;languagerule languagerulename=&quot;Default&quot;&gt;
+<span style="background-color: #00FFFF">  &lt;rule break=&quot;no&quot;&gt;
+   &lt;beforebreak&gt;^\s*[0-9]+\.&lt;/beforebreak&gt;
+   &lt;afterbreak&gt;\s&lt;/afterbreak&gt;
+  &lt;/rule&gt;</span>
+<span style="background-color: #00FF00">  &lt;rule break=&quot;no&quot;&gt;
+   &lt;beforebreak&gt;[Ee][Tt][Cc]\.&lt;/beforebreak&gt;
+   &lt;afterbreak&gt;\s[a-z]&lt;/afterbreak&gt;
+  &lt;/rule&gt;</span>
+  ...
+ &lt;/languagerule&gt;
+ &lt;languagerule languagerulename=&quot;Japanese&quot;&gt;
+<span style="background-color: #00FFFF">  &lt;rule break=&quot;no&quot;&gt;
+   &lt;beforebreak&gt;^\s*[0-9]+\.&lt;/beforebreak&gt;
+   &lt;afterbreak&gt;\s&lt;/afterbreak&gt;
+  &lt;/rule&gt;</span>
+<span style="background-color: #00FF00">  &lt;rule break=&quot;no&quot;&gt;
+   &lt;beforebreak&gt;[Ee][Tt][Cc]\.&lt;/beforebreak&gt;
+   &lt;afterbreak&gt;&lt;/afterbreak&gt;
+  &lt;/rule&gt;</span>
+  &lt;rule break=&quot;yes&quot;&gt;
+   &lt;beforebreak&gt;[\xff61\x3002\xff0e\xff1f\xff01]+&lt;/beforebreak&gt;
+   &lt;afterbreak&gt;&lt;/afterbreak&gt;
+  &lt;/rule&gt;
+  ...
+ &lt;/languagerule&gt;
+&lt;/languagerules&gt;
+
+&lt;maprules&gt;
+ &lt;maprule maprulename=&quot;Default&quot;&gt;
+  &lt;languagemap languagepattern=&quot;JA.*&quot; languagerulename=&quot;Japanese&quot;/&gt;
+  &lt;languagemap languagepattern=&quot;.*&quot; languagerulename=&quot;Default&quot;/&gt;
+ &lt;/maprule&gt;
+&lt;/maprules&gt;</pre>
+<p dir="ltr">In this example, there is the same rules defined in both the 
+Default and the Japanese groups. If SRX&nbsp;1.0 intended to use all the <code>
+&lt;languagemap&gt;</code> elements that match the given language code, there would be 
+no point to have duplicated rules in Japanese. The Japanese group would have 
+only the extra Japanese-specific rules.</p>
+<h3>How to Convert From SRX 1.0 to SRX 2.0?</h3>
+<p>When loading or importing SRX&nbsp;1.0 documents into an SRX&nbsp;2.0 editor, 
+you must be careful about setting properly the <code>cascade</code> option 
+(introduced in v2.0) depending on the provenance of the document.</p>
+<ul>
+	<li>SRX&nbsp;1.0 rules coming from Trados, SDLX, and some other tools that are designed without cascading 
+	(normal SRX&nbsp;1.0 behavior). So you 
+should make sure that option <b>is not set</b> after you open the file.</li>
+	<li>SRX&nbsp;1.0 rules coming from Heartsome, Swordfish, and some other tools that are designed with cascading. 
+So you should make sure that option <b>is set</b> after you have open the file.</li>
+</ul>
+<p>Note that Ratel 
+does not set the <code>cascade</code> automatically because it is not the expected behavior of 
+SRX&nbsp;1.0.</p>
+<h2><a name="SRXAndJava"></a>SRX and Java</h2>
+<p>The SRX standard uses ICU regular expressions, however it is very difficult 
+to implement the same set of expression using Java.</p>
+<p>See more details in the <a href="srxAndJava.html">SRX and Java section</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

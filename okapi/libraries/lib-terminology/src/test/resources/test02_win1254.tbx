@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding="windows-1254" ?>
+<martif type="TBX" xml:lang="en">
+<martifHeader>
+ <fileDesc>
+  <sourceDesc>
+   <p>Manual test</p>
+  </sourceDesc>
+ </fileDesc>
+ <encodingDesc>
+  <p type="XCSURI">http://www.lisa.org/fileadmin/standards/tbx/TBXXCSV02.XCS</p>
+ </encodingDesc>
+</martifHeader>
+<text>
+ <body>
+  <termEntry id="id1">
+   <langSet xml:lang="en">
+    <tig>
+     <term id="t1">term with: éá and İı</term>
+    </tig>
+   </langSet>
+   <langSet xml:lang="tr">
+    <tig>
+     <term id="t2">tr term with: éá and İı</term>
+    </tig>
+   </langSet>
+  </termEntry>
+ </body>
+</text>
+</martif>

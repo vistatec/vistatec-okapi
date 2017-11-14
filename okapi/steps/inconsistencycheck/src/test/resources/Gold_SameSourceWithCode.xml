@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inconsistencyCheck perFile="false">
+<targetDifferences>
+<source>Source &lt;1>text&lt;/1></source>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Target &lt;1>text&lt;/1></issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Target text&lt;1/></issue>
+<issue seg="0" tu="tu4" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Rawr</issue>
+</targetDifferences>
+</inconsistencyCheck>

@@ -1,0 +1,8 @@
+{
+ 'foo' : 'bar',
+ foo: 'bar',
+ foo: "bar",
+ "foo" : 'bar',
+ "valName2": "'The quoted Value'",
+ "NodeUsage" : "{\"nodeUsage\":{\"min\":\"0.00%\",\"median\":\"0.01%\",\"max\":\"0.01%\",\"stdDev\":\"0.00%\"}}"
+ }

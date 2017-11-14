@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Test char: &=amp, <=lt, '=apos, \"=quot"
+msgstr "Test charactères: &=amp, <=lt, '=apos, \"=quot"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (file1, group1)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (file1, no group)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (no file, group1)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (file1, group2)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (file2, group2)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (file2, group1)"
+
+msgid "One entry in the TM."
+msgstr "Une entrée dans la MT (no file, no group)"
+
+msgid "Close the <b>application</b>."
+msgstr "Fermer <b>l'application</b>."
+

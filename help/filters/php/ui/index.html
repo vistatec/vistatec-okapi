@@ -1,0 +1,155 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - PHP Content Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">PHP Content Filter (BETA)</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=PHP_Content_Filter">http://okapiframework.org/wiki/index.php?title=PHP_Content_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The PHP Content Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+PHP content. The filter is implemented in the class <code>
+net.sf.okapi.filters.php.PHPContentFilter</code> of the Okapi library.</p>
+<p>The implementation is based on the PHP syntax found in the PHP language 
+Reference documentation (<a href="http://www.php.net/manual/en/langref.php">http://www.php.net/manual/en/langref.php</a>).</p>
+<p>The following is an example of a simple PHP content. The extractable text 
+is marked in <b>bold</b>.</p>
+<pre>&lt;?php
+$str = &lt;&lt;&lt;EOD<b>
+Example of string
+spanning multiple lines
+using heredoc syntax.</b>
+EOD;
+
+/* More complex example, with variables. */
+class foo
+{
+    var $foo;
+    var $bar;
+
+    function foo()
+    {
+        $this-&gt;foo = &#39;<b>Foo</b>&#39;;
+        $this-&gt;bar = array(&#39;<b>Bar1</b>&#39;, &#39;<b>Bar2</b>&#39;, &#39;<b>Bar3</b>&#39;);
+    }
+}
+
+$foo = new foo();
+$name = &#39;<b>MyName</b>&#39;;
+
+echo &lt;&lt;&lt;EOT
+<b>My name is &quot;$name&quot;. I am printing some $foo-&gt;foo.
+Now, I am printing some {$foo-&gt;bar[1]}.
+This should print a capital &#39;A&#39;: \x41</b>
+EOT;
+?&gt;</pre>
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input file using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Else, if a header entry with a <code>charset</code> declaration 
+	exists in the first 1000 characters of the file:<ul>
+	<li>If the value of the charset is &quot;<code>charset</code>&quot; (case 
+	insensitive):<ul>
+	<li>Then the file is likely to be a template with no encoding declared, so 
+	the current encoding (auto-detected or default) is used.</li>
+	<li>Else, the declared encoding is used. Note that if the encoding has been detected from a Byte-Order-Mark 
+		and the encoding declared in the header entry does not match, a warning is 
+		generated and the encoding of the Byte-Order-Mark is used.</li>
+</ul>
+	</li>
+</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	setting the filter options.</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the file has a header entry with a <code>charset</code> declaration, the 
+declaration is automatically updated in the output to reflect the encoding 
+selected for the output.</p>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Localization directives</h3>
+<p>Localization directives are special comments you can use to override the 
+default behavior of the filter regarding the parts to extract. The syntax and 
+behavior of the directives are the same across all Okapi filters.Note that the directives override key conditions.</p>
+<p><cite>Use localization directives when they are present</cite> -- Set this 
+option to enable the filter to recognize localization directives. If this option 
+is not set, any localization directive in the input file will be ignored (and 
+all extractable string will be extracted).</p>
+<p><cite>Extract items outside the scope of localization directives</cite> -- Set this option to extract any translatable item that is not within the scope of a localization directive. Selecting to extract or not outside localization directives allows you to mark up fewer parts of the source document. This option is enabled only when the <cite>Use localization directives when they are present</cite> option is set.</p>
+<h3>Inline Codes</h3>
+<p><cite>Has inline codes as defined below:</cite> -- Set this option to use the specified regular expression to be use against the text of the extracted items. Any match will be converted to an inline code. By default the expression is:</p>
+<pre>(\A[^&lt;]*?&gt;)|(&lt;[\w!?/].*?(&gt;|\Z))
+|(\\a|\\b|\\f|\\n|\\r|\\t|\\v)
+|(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})
+|([\[{][\w_$]+?[}\]])</pre>
+<p><cite>Add</cite> -- Click this button to add a new rule.</p>
+<p><cite>Remove</cite> -- Click this button to remove the current rule.</p>
+<p><cite>Move Up</cite> -- Click this button to move the current rule upward.</p>
+<p><cite>Move down</cite> -- Click this button to move the current rule 
+downward.</p>
+<p>[Top-right text box] -- Enter the regular expression for the 
+current rule. Use the <cite>Modify</cite> button to enter the edit mode. The 
+expression must be a valid
+<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html">
+regular expression</a>. You can check the syntax 
+(and the effect of the rule) as it automatically tests it against the test data in the text box below and shows the result in the bottom-right text box.</p>
+<p><cite>Modify</cite> -- Click this button to edit the expression of the 
+current rule. This button is labeled <cite>Accept</cite> when you are in 
+edit mode.</p>
+<p><cite>Accept</cite> -- Click this button to save any changes you have 
+made to the expression and leave the edit mode. This button is labeled <cite>
+Modify</cite> when you are not in edit mode.</p>
+<p><cite>Discard</cite> -- Click this button to leave the edit mode and 
+revert the current rule to the expression it had before you started the edit 
+mode.</p>
+<p><cite>Patterns</cite> -- Click this button to get more help on the patterns 
+you can use.</p>
+<p><cite>Test using all rules</cite> -- Set this option to test all the rules at the same 
+time. The syntax of the current rule is automatically checked. See the effect it has on the sample text. The result of the test are displayed in the bottom right result box. The parts of the text that are 
+matches of the expressions are displayed in &lt;&gt; brackets. If the <cite>Test using all rules</cite> option is set, the test takes all rules of the set in account, if it is not set only the current rule is 
+tested.</p>
+<p>[Middle-right text box] -- Optional test data to test the regular expression for the 
+current rule or all rules depending on the <cite>Test using all rules</cite> option.</p>
+<p>[Bottom-right text box] -- Shows the result of the regular expression applied to the test data.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

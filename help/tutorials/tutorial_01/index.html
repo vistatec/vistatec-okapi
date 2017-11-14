@@ -1,0 +1,401 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Tutorial - Using ID-Based Alignment</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Tutorials</h1>
+		<h2 class="head2">Using ID-Based Alignment</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Tutorials</a></td>
+				<td>
+				<a href="http://okapiframework.org/wiki/index.php?title=Main_Page">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p>This tutorial illustrates how to use the <b>
+<a href="http://okapiframework.org/wiki/index.php?title=Rainbow_-_ID-Based_Alignment">ID-Based Alignment</a></b> utility included 
+in Rainbow.</p>
+<p>This utility allows you to create a bilingual output from two monolingual input files. The synchronization 
+between source and target text units is done based on the identifier of each text unit of the input files. 
+Each entry in the input files must have an identifier.</p>
+<p>In 
+addition, you can specify segmentation rules to apply to the content of each 
+text units. The utility then tries to align the segments within each text 
+unit. If it fails, it prompts the user to fix the alignment or make the 
+decision to skip this pair (source and target) of text units.</p>
+<ul>
+	<li><a href="#prerequists">Pre-Requisits</a></li>
+	<li><a href="#setupinputdoc">Setting up the Input Documents</a><ul>
+		<li><a href="#filterparams">Filters Parameters</a></li>
+		<li><a href="#inputdocs">Input Documents</a></li>
+		<li><a href="#langandencodings">Languages and Encodings</a></li>
+		<li><a href="#saveprj">Saving the Project</a></li>
+	</ul>
+	</li>
+	<li><a href="#invokeutility">Invoking the ID-Based Alignment Utility</a><ul>
+		<li><a href="#utilityoptions">Setting up the Utility Options</a></li>
+	</ul>
+	</li>
+	<li><a href="#usingaligneditor">Using the Alignment Verification Editor</a><ul>
+	<li><a href="#verifinlinediff">Differences in Inline Codes</a></li>
+	<li><a href="#verifnumberdiff">Differences in Numbers</a></li>
+	<li><a href="#verifautocorrectextratrg">Auto-Correction for Extra Target 
+	Segments</a></li>
+	<li><a href="#verifextratrg">Extra Target Segments</a></li>
+	<li><a href="#verifmissingtrg">Missing Target Segments</a></li>
+</ul>
+	</li>
+	<li><a href="#checkres">Checking the Results</a></li>
+</ul>
+<h2><a name="prerequists"></a>Pre-Requisits</h2>
+<p>To complete this tutorial you must have Rainbow v6 installed and working. Note 
+that for Rainbow to run properly you must also have Java&nbsp;1.6 or later installed 
+on you system.</p>
+<p dir="ltr">You should also have a copy of the sample files for this tutorial on your machine, for example in
+<code>C:\Tmp\tutorials\turorial_01\files</code>.</p>
+<h2><a name="setupinputdoc"></a>Setting up the Input Documents</h2>
+<p>Start Rainbow.</p>
+<p>To make sure you are starting this tutorial in a fresh environment, you 
+should first create a new project: Select the command <cite>New</cite> in 
+the <cite>File</cite> menu, or press <kbd>Ctrl+N</kbd>.</p>
+<h3><a name="filterparams"></a>Filters Parameters</h3>
+<p>The filter parameters directory is the location where the filter parameters 
+files for this project are located. The filter parameters files (.fprm) are 
+configuration files you assign to the documents you process to indicate which 
+filter to use.</p>
+<p>Because you will use a specific parameters file in this example, you should 
+set this directory: Select the <cite>Other settings</cite> tab in the main 
+window. Set the option <cite>Use custom parameters folder</cite>, and enter the 
+directory where the tutorial files are, for example: <code>
+C:\Tmp\tutorials\tutorial_01\files</code>.</p>
+<p><img border="0" src="screen001.png" width="632" height="430"></p>
+<h3><a name="inputdocs"></a>Input Documents</h3>
+<p>Select the <cite>Input List 1</cite> tab. This is the list where we will 
+enumerate all the source documents to align.</p>
+<p>Select the command <cite>Edit Root</cite> in the <cite>Input</cite> menu, or 
+press <kbd>F2</kbd>. This opens the <cite>Root for Input List 1</cite> dialog 
+box.</p>
+<p>Enter the top-most directory where your input source documents are located. You can 
+also select the directory using the browse button. Once you have entered the new 
+input root directory, click <cite>OK</cite> to it and return to the main window.</p>
+<p dir="ltr">Select the command <cite>Add Documents</cite> from the <cite>Input</cite> 
+menu, or press <kbd>Ctrl+Insert</kbd>. This opens the <cite>Add Documents</cite> 
+dialog box where you select the source documents you want to align. You can also 
+simply drag and drop the documents on the list. All documents must be in or 
+below the input root directory you have chosen for the source.</p>
+<p dir="ltr">In this example we have one file: <code>file1_en.info</code>.</p>
+<p><img border="0" src="screen002.png" width="632" height="430"></p>
+<p>Now you need to associate each file to its filter. The filters are used to 
+parse the documents and separate the translatable text from the code parts of 
+the files. In this example, the files are in the StringInfo format. They can be 
+processed using the Regular Expression Filter (okf_regex), and there is a 
+parameters file defined for them: <code>okf_regex@StringInfo.prm</code>.</p>
+<p>Select all the input documents in the <cite>Input List 1</cite> tab, and then 
+select the command <cite>Edit Document Properties</cite> in the <cite>Input</cite> 
+menu, or press <kbd>Alt+Enter</kbd>, or <kbd>Space</kbd>. This opens the <cite>
+Input Document Properties</cite> dialog box.</p>
+<p>In the top list, select &quot;<code>Regex Filter</code>&quot; (the Regular 
+Expression filter).</p>
+<p>Then in the parameters list, select &quot;<code>okf_regex@StringInfo</code>&quot; (the 
+parameters file for StringInfo files) If you do not see this choice, it is 
+likely because you have not set the filters parameters directory properly.</p>
+<p><img border="0" src="inputDocProp.png" width="500" height="450"></p>
+<p>Click <cite>OK</cite> when you have selected the proper parameters.</p>
+<p>Now you need to provide the input document for the target language, and 
+associated them with their filter settings.</p>
+<p>Select the <cite>Input List 2</cite> tab. This is the list where we will 
+enumerate all the target (translated) documents to align.</p>
+<p>Select the command <cite>Edit Root</cite> in the <cite>Input</cite> menu, or 
+press <kbd>F2</kbd>. This opens the <cite>Root for Input List 2</cite> dialog 
+box.</p>
+<p>Enter the top-most directory where your input target documents are located. You can 
+also select the directory using the browse button. Once you have entered the new 
+input root directory, click <cite>OK</cite> to it and return to the main window.</p>
+<p dir="ltr">Select the command <cite>Add Documents</cite> from the <cite>Input</cite> 
+menu, or press <kbd>Ctrl+Insert</kbd>. This opens the <cite>Add Documents</cite> 
+dialog box where you select the target documents you want to align. You can also 
+simply drag and drop the documents on the list. All documents must be in or 
+below the input root directory you have chosen for the target.</p>
+<p dir="ltr">In this example we have one file: <code>file1_de.info</code>.</p>
+<p>Once the files are listed, you need to associate them with their 
+corresponding filter settings, just like for the source input:</p>
+<p>Select all the input documents in the <cite>Input List 2</cite> tab, and then 
+select the command <cite>Edit Document Properties</cite> in the <cite>Input</cite> 
+menu, or press <kbd>Alt+Enter</kbd>, or <kbd>Space</kbd>. This opens the <cite>
+Input Document Properties</cite> dialog box.</p>
+<p>In the <cite>Filter</cite> list, select &quot;<code>okf_regex</code>&quot; (the Regular 
+Expression filter).</p>
+<p>Then in the parameters list, select &quot;<code>okf_regex@StringInfo</code>&quot; 
+(the parameters file for stringInfo files).</p>
+<p>Click <cite>OK</cite>. You should now see something like this screen:</p>
+<p><img border="0" src="screen004.png" width="632" height="430"></p>
+<h3><a name="langandencodings"></a>Languages and Encodings</h3>
+<p>The next step is to make sure languages and default encodings are set 
+properly. Select the <cite>Languages and Encodings</cite> tab.</p>
+<blockquote>
+	<p><b>Note:</b> Locale and Languages. Nowadays there is not many difference 
+	between a language code and a locale code, as the new language tags of the 
+	BCP-47 includes sub-tags that represent various regional or special 
+	variants, as well as script difference. For example, <code>ES-005</code> 
+	stands for Latin-America Spanish, <code>zh-Hant-tw</code> for Traditional 
+	Chinese used in Taiwan, etc. For more information about BCP-47 see
+	<a href="http://www.w3.org/International/articles/bcp47/">
+	http://www.w3.org/International/articles/bcp47</a>. The terms <b>locale</b> 
+	and <b>language</b> are used interchangeably in Rainbow's interface.</p>
+</blockquote>
+<p>You need to specify the language of the source and target documents, as well 
+as the default encoding to use to read the documents in case they are not in a 
+format where the encoding can be auto-detected.</p>
+<p>In this example, the source language is English and the target language is 
+German. And use UTF-8 for the source and target default encoding.</p>
+<p><img border="0" src="screen005.png" width="632" height="461"></p>
+<h3><a name="saveprj"></a>Saving the Project</h3>
+<p>Now that you have you have set the main parameters for this process, it may be a good idea to save 
+this project, so you can easily retrieve it later on. To do this: Select 
+the <cite>Save</cite> command from the <cite>File</cite> menu, select a file 
+name (e.g. &quot;<code>tutorial_01.rnb</code>&quot;) and click <cite>Save</cite>.</p>
+<h2><a name="invokeutility"></a>Invoking the ID-Based Alignment Utility</h2>
+<p>All the previous steps were performed to define general settings that are used with all 
+Rainbow utilities. Now comes the part that is specific to the <b>ID-Based Alignment</b> 
+utility.</p>
+<h3><a name="utilityoptions"></a>Setting up the Utility Options</h3>
+<p dir="ltr">Select the command <cite>ID-Based Alignment</cite> in the <cite>
+Utilities</cite> menu. This will bring up the dialog box where you set the 
+options specific to the utility and launch it.</p>
+<p dir="ltr">Set the option <cite>Segment the extracted text using the following 
+SRX rules</cite>. And enter the full path of the SRX document to use. In this 
+example the document is in the same directory as the input files and is called
+<code>StringInfo.srx</code>. In this example, <code>StringInfo.srx</code> is 
+used for both source and target.</p>
+<p dir="ltr">You can leave the other settings in the <cite>Options</cite> tab as they are.</p>
+<p dir="ltr"><img border="0" src="alignConfOptions.png"></p>
+<p dir="ltr">Select the <cite>Output</cite> tab.</p>
+<p dir="ltr">Set the option <cite>Create a TMX document with the following path</cite>. 
+And enter a path for the output file, for example <code>
+C:\Tmp\tutorials\tutorial_01\files\Output.tmx</code>.</p>
+<p dir="ltr">Set the option <cite>Generate Trados workarounds</cite>. This 
+option is needed if you plan to open the TMX document in Trados Translator's 
+Workbench. Several versions of this program have a bug in their TMX import 
+mechanism that deletes some characters such as '<code>{</code>' and '<code>\</code>' 
+from valid TMX entries, if they are not coded in a non-TMX-compliant syntax. 
+Using this option will aloow you to import the TMX documents without data lost.</p>
+<p dir="ltr">Set the option <cite>Exclude segments where the source text matches 
+this regular expression</cite> and enter the following expression in the provided field:<br>
+<br>
+<code>(([\uE101\uE102\uE103].)+)(([\d\p{Lu}]\.)|\u00B7|-)([\uE101\uE102\uE103].)</code></p>
+<p dir="ltr">This option allows you to exclude from the TMX output any segment that matches 
+the 
+given expression. We use it here to exclude segments that are made of inline 
+codes and bullet or numbers. They are not really translatable items and since 
+there are many of them in our example files we want to exclude them.</p>
+<p>Make sure the option <cite>Create a SimpleTM database</cite> is not set. We 
+will not use this option in this tutorial.</p>
+<p>Set the option <cite>Use the following attributes</cite> and enter the 
+following text:<br>
+<br>
+<code>Txt::FileName=${filename}<br>
+Txt::GroupName=${resname}<br>
+Att::Test=TestValue</code></p>
+
+<p>The two first attributes will provide respectively the name of the input file 
+and the ID of the text unit from where the segments are coming. The third 
+attribute is just one used to illustrate that you can label each entry of the 
+output TMX file with any flag or indicator you want.</p>
+<p><img border="0" src="alignConfOutput.png"></p>
+<p>When all the options are set properly, click <cite>OK</cite> to start the 
+alignment.</p>
+<h2><a name="usingaligneditor"></a>Using the Alignment Verification Editor</h2>
+<p>Once started, the utility will process each pair of input files, trying to 
+align their content automatically. As soon as a potential alignment problem is 
+detected, you are prompted to correct it.</p>
+<p>The <cite>Alignment Verification</cite> dialog box looks like this:</p>
+<p><img border="0" src="aligner.png" width="822" height="707"></p>
+<ol>
+	<li>Name of the current source document being processed.</li>
+	<li>Progress indicator: Source text unit you are currently seeing and how many 
+text units there are in this target document. For example: &quot;<code>Source #3 / 
+Targets:&nbsp;7</code>&quot; means that you are aligning the third text unit of the 
+source, and that there are 7 text units in the target.</li>
+	<li>The identifier (name) of the text unit being aligned.</li>
+	<li>The list of the source segments for the current text unit is shown 
+on the left.</li>
+	<li>The list of the target segments for the current text unit is shown 
+on the right.</li>
+	<li>Options and actions area (See section below for details).</li>
+	<li>Warnings and error indicator. Warnings are shown in orange, error 
+in red.</li>
+	<li>List of the problems detected. Selecting one of the issues listed 
+here will automatically select the target segment where the issue is located.</li>
+	<li>Content of the source segment currently selected.</li>
+	<li>Content of the target segment currently selected.</li>
+	<li>Content of the source text unit. Segments are delimited with &#39;<code>[</code>&#39; 
+	and &#39;<code>]</code>&#39; characters.</li>
+	<li>Content of the target text unit. Segments are delimited with &#39;<code>[</code>&#39; 
+	and &#39;<code>]</code>&#39; characters.</li>
+</ol>
+<p>You can leave the <cite>Alignment Verification</cite> dialog three different 
+ways:</p>
+<ol>
+	<li>By clicking the <cite>Accept</cite> button: It means you have corrected 
+	the alignment or verify that the potential issues listed were not real problems, you are 
+	happy with the current alignment and want to save it. You may also 
+	have marked all the segments in this text unit to be reviewed later in the TMX 
+	file. Note: You cannot go back to a text unit that was accepted.</li>
+	<li>By clicking the <cite>Skip</cite> button: It means you do not want to 
+	save the current alignment, for whatever reason and want to move on. None of 
+	the segments for the text unit will be saved. Note: You cannot go back to a 
+	text unit that was skipped.</li>
+	<li>By clicking <cite>Cancel</cite> or the <cite>Close</cite> buttons: It 
+	means you want to stop the alignment. All accepted alignment before this 
+	last one will still be saved, but the process will stop here.</li>
+</ol>
+<h3><a name="verifinlinediff"></a>Differences in Inline Codes</h3>
+<p dir="ltr">The previous screen shows one of the most common reasons for the utility 
+to prompt the user for feedback: A mismatch in the number or the nature of inline codes has 
+been detected. The alignment algorithm uses anchors points such as inline codes, 
+number, and other special patterns to try to verify if the segments are aligned 
+or not.</p>
+<p dir="ltr">In this case there is one extra &quot;\n&quot; in the source segment. (&quot;<code>\n</code>&quot;, 
+&quot;<code>\t</code>&quot;, &quot;<code>#![PG...]</code>&quot; are set to be inline codes in this 
+format.). You can see more clearly what part of the segments are inline codes by 
+turning on the option <cite>Display in-line codes with generic markers</cite>.</p>
+<p>In this occurence, this difference is not an issue the German text is simply 
+formatted differently from the English one. You can accept this alignment as it. 
+Click <cite>Accept</cite> to move to the next issue.</p>
+<h3><a name="verifnumberdiff"></a>Differences in Numbers</h3>
+<p>The next issue is a warning caused by the presence of the number 2 in the 
+target that is not found in the source.</p>
+<p><img border="0" src="extraNumber.png" width="822" height="707"></p>
+<p>Upon closer examination it appears that the German sentence simply uses the 
+digit instead of the text for the same thing. The alignment is fine. Click <cite>
+Accept</cite> to move to the next issue.</p>
+<h3><a name="verifautocorrectextratrg"></a>Auto-Correction for Extra Target 
+Segments</h3>
+<p>The next text unit has a warning indicating that an auto-correction has taken 
+place for the first segment: the first target segment that is now displayed has 
+been constructed by joining several consecutive segments. The utility was able 
+to do this because The next segment is exactly the same in the source and the 
+target, providing an easy reference point to synchronize the German.</p>
+<p><img border="0" src="autoCorrect.png" width="822" height="707"></p>
+<p>If you look closely at the first German segment you can see that it is made 
+out of two full sentences, while the English is only one sentence. This alignment is 
+correct, click <cite>Accept</cite> to move to the next issue.</p>
+<h3><a name="verifextratrg"></a>Extra Target Segments</h3>
+<p>The next issue is an error. The number of source (2) and target segments (3) 
+is different. In this instance, the aligner was not able to perfom any 
+auto-correction because there are no anchor segments available and it cannot 
+guess safely which target segment should be merged with the next one to 
+correspond to the English.</p>
+<p><img border="0" src="extraTarget.png" width="822" height="707"></p>
+<p>The problem is easy to fix here because there are only three target segments. 
+The presence of the &quot;<code>\n</code>&quot; and words with similarity like &quot;<code>Configuration 
+file</code>&quot; and &quot;<code>Konfigurationsdatei</code>&quot; allows even a non-German 
+speaker to guess the two first target segments corresponds to the first English 
+one.</p>
+<p>To correct the problem: select the first target segment, and click <cite>Join 
+Next</cite>. The warning is replaced by a notice that no issue has been 
+automatically detected after your change. This does not guarantee that there is 
+no error in the alignment, only that, to the best of the utility's knowledge no 
+detectable signs of potential misalignment exist now. Note that we could have 
+joined the second and third target segment and get the same green flag, while 
+the alignment would have been incorrect.</p>
+<p>Click <cite>Accept</cite> to move to the next issue.</p>
+<h3><a name="verifmissingtrg"></a>Missing Target Segments</h3>
+<p>The next issue shows that we have two source segments for a single target 
+one. this is due to the German translation of two English sentences being 
+grouped into one. This type of issue is one of the more difficult to resolve 
+because it is often required to know the target language to be able to split the 
+target segment at the proper position. This type of problem could be avoided at 
+translation time by translating each source segment with one corresponding target 
+segment.</p>
+<p><img border="0" src="missingTarget1.png" width="822" height="707"></p>
+<p>To split the target segment click the <cite>Split</cite> button. This puts the 
+dialog box in edit split mode. The next step is to select where the split 
+location should be by moving the cursor to the relevant position. You can also 
+select part of the text, in which case the segment will be split into two new 
+segments with the selected text not being included in either.</p>
+<p><img border="0" src="missingTarget2.png" width="822" height="707"></p>
+<p>The comma in the German sentence gives a clue where the target should be 
+split. In addition the abbreviation &quot;<code>ggf.</code>&quot; stands for &quot;<code>gegebenfalls</code>&quot; 
+meaning something like &quot;<code>if applicable</code>&quot;, &quot;<code>if required</code>&quot; 
+which close to the overall meaning of &quot;<code>Consider</code>&quot;. based on this, we 
+can make an educated guess that the split should probably be between the comma 
+and &quot;<code>ggf.</code>&quot;.</p>
+<p>Now if you look at the English, you will see that the space between the two 
+sentences is outside of the segments. We can do the same for the target, by 
+selecting the space between the comma and &quot;<code>ggf.</code>&quot;. Click <cite>
+Accept Split</cite> to make the split.</p>
+<p><b>Note:</b> Why can we not join the two source segments instead of splitting 
+the target? The only language the utility will let you modify is the target, the 
+reason for this is because the segmentation will drive the next translation 
+process, and therefore when you prepare a new English document that 
+contains this text unit, it will again be segmented into two English sentences based 
+on the current rules. There is no point trying to create a TM that does not 
+corresponds to the segmentation rules of the source language.</p>
+<p>Our last correction has several potential issues:</p>
+<ul>
+	<li>If you don't know German, you cannot be absolutely sure to have split 
+	the sentence properly (some words may need to be re-ordered for example)</li>
+	<li>Now we have two matching segments but the target ones are not quite the 
+	same as the source: we have two real sentences versus two chucks of a single 
+	sentence. Used in the same context, they are likely to be fine. But for 
+	example leveraging &quot;Pumps have been paused for 3 minutes.&quot; in a context 
+	where the second segments is a different sentence will result in leveraging 
+	a German segment that ends with a comma rather than a period.</li>
+</ul>
+<p>Because of this, if the initial alignment is not done by a linguist, you may 
+want to have the resulting TMX document reviewed by a linguist. To avoid 
+reviewing every single segment, you can set a special flag for the text units 
+that need attention.</p>
+<p>Set the <cite>To review later</cite> check box to have a property named <code>
+Att::AlignStatus</code> set to &quot;<code>TO-REVIEW</code>&quot; for all the segments of this 
+text unit..</p>
+<p><img border="0" src="missingTarget3.png" width="822" height="707"></p>
+<p>Click <cite>Accept</cite> to move on to the next issue.</p>
+<p>This is the last entry with an issue in this tutorial, so the utility 
+terminates and generates the TMX output document.</p>
+<h2><a name="checkres"></a>Checking the Results</h2>
+<p>If an error occurs during the process Rainbow displays the <cite>Log</cite> windows. You 
+can also press <kbd>F9</kbd> or select <cite>Log</cite> in the <cite>View</cite> 
+menu to open the log window manually. In the log you will see the total number of text 
+units processed (7 in our example), how many were aligned (7 as well), and among 
+that number how many were modified manually (2: one join, one split). Note that 
+you were prompted for 5 text units, so two of the aligned text units were 
+automatically generated.</p>
+<p>You can open the TMX document generated: <code>
+C:\Tmp\tutorials\tutorial_01\files\Output.tmx</code>.</p>
+<p>Each segment is in a <code>&lt;tu&gt;</code> element. for example the last segment 
+you aligned looks like this:</p>
+<pre>&lt;tu tuid=&quot;PauseStartSalineWarningExplanation_s02&quot;&gt;
+&lt;prop type=&quot;Txt::FileName&quot;&gt;file1_en.info&lt;/prop&gt;
+&lt;prop type=&quot;Txt::GroupName&quot;&gt;PauseStartSalineWarningExplanation&lt;/prop&gt;
+&lt;prop type=&quot;Att::Test&quot;&gt;TestValue&lt;/prop&gt;
+&lt;prop type=&quot;Att::AlignStatus&quot;&gt;TO-REVIEW&lt;/prop&gt;
+&lt;tuv xml:lang=&quot;en-us&quot;&gt;&lt;seg&gt;Consider starting a saline drip.&lt;/seg&gt;&lt;/tuv&gt;
+&lt;tuv xml:lang=&quot;de-de&quot;&gt;&lt;seg&gt;ggf. NaCl-Infusion starten&lt;/seg&gt;&lt;/tuv&gt;
+&lt;/tu&gt;</pre>
+<p>The <code>tuid</code> attribute is a value made from the identifier of the 
+original text unit and a suffix &quot;<code>_sNN</code>&quot;, where <code>NN</code> is 
+the segment number in this text unit. Note that not all segments that you saw 
+during the verification are listed in the TMX output: Segments like &quot;<code>\nC.\t</code>&quot; 
+in the text unit <code>APCCalibrateTimeoutAction1</code> have been excluded from 
+the output because they match the pattern we have defined in the options.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

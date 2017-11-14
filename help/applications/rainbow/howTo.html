@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rainbow - How To Use Rainbow</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Rainbow</h1>
+		<h2 class="head2">How To Use Rainbow</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<ul>
+	<li><a href="#commonUsage">Common Usage</a></li>
+	<li><a href="#commandLine">Command Line</a></li>
+	<li><a href="#projectsAcrossPlatforms">Using Projects Across Platforms</a></li>
+</ul>
+<h2><a name="commonUsage"></a>Common Usage</h2>
+<p>The main function of Rainbow is to launch utilities. The usual steps to run a 
+Rainbow utility are the following: </p>
+<ol>
+	<li>Add the input documents to process to the input file lists.</li>
+	<li>Make sure each input document is associated with its relevant filter 
+	configuration.</li>
+	<li>Make sure the common parameters needed by the utility are set properly 
+	(e.g. languages, encoding, output filenames, etc.)</li>
+	<li>In the <cite>Utilities</cite> menu, select the utility to execute.</li>
+	<li>In the utility&#39;s options dialog box (if there is any), set the options 
+	specific to the given utility.</li>
+	<li>Execute the utility.</li>
+	<li>Review any warning or error message in the <cite>Log</cite> window.</li>
+</ol>
+<p>You can save all your input files settings and options in a Rainbow project 
+file (<code>.rnb</code> extension) with the <cite>Save</cite> or <cite>Save As</cite> command 
+in the <cite>File</cite> menu. Use the <cite>Open</cite> command to load an 
+existing project.</p>
+<p>Rainbow offers a set of pre-defined utilities, but you can also
+<a href="pipelines.html">build and run your own pipelines</a>. To do this, use 
+the <cite>Edit / Execute Pipeline</cite> command in the <cite>Utilities</cite> 
+menu.</p>
+<h2><a name="commandLine"></a>Command Line</h2>
+<p>You can also use Rainbow from the command line. See the
+<a href="commandLine.html">Command Line</a> section for more details.</p>
+<h2><a name="projectsAcrossPlatforms"></a>Using Projects Across Platforms</h2>
+<p>You can use projects between platforms. For example save a project in 
+Windows, copy the project file and its dependencies to Linux and use it there. 
+There are, however, a certain number of restrictions for such projects.</p>
+<p>While when saving the project file Rainbow converts all file separators in 
+relative paths as &#39;/&#39; and convert them back to whatever the normal separator is 
+for the given platform is when loading the project file back. But it falls to 
+the use to take the following steps:</p>
+<ul>
+	<li>All input root references should be set to use the automated root (where 
+	the project is located).</li>
+	<li>The filter parameters folder should be set to use the automated path as 
+	well.</li>
+	<li>Utilities paths and folder data should use the <code>${ProjDir}</code> 
+	variable if possible, and use the &#39;/&#39; file separator.</li>
+</ul>
+<p>Most projects following those guidelines should be portable from one platform 
+to the other.</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+1
+00:00:20,000 --> 00:00:24,400 X1:100 X2:600 Y1:050 Y2:100
+In connection with a dramatic increase
+in crime in <b>certain</b> neighbourhoods,
+
+2
+00:00:24,600 --> 00:00:27,800
+The government is implementing a new policy...
+
+3
+00:00:27,900 --> 00:00:28,800
+That will probaly fail, like many others.

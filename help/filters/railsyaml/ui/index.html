@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - Ruby on Rails YAML Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Ruby on Rails YAML Filter (BETA)</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=YAML_Filter">http://okapiframework.org/wiki/index.php?title=YAML_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The Ruby on Rails YAML Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+the <a href="http://www.yaml.org/">YAML files</a> used with 
+<a href="http://rubyonrails.org/">Ruby on Rails</a>. The filter is implemented in the class <code>
+net.sf.okapi.filters.railsyaml.RailsYamlFilter</code> of the Okapi library.</p>
+<p>A YAML file looks like the example below. The parts highlited in green are 
+extracted.</p>
+<pre>fr:
+  activerecord:
+    errors:
+      template:
+        header: 
+          one: &quot;<span style="background-color: #00FF00">Impossible d&#39;enregistrer {{model}}: 1 erreur</span>&quot;
+          other: &quot;<span style="background-color: #00FF00">Impossible d&#39;enregistrer {{model}}: {{count}} erreurs.</span>&quot;
+        body: &quot;<span style="background-color: #00FF00">Veuillez vérifier les champs suivants&nbsp;:</span>&quot;
+      messages:
+        inclusion: &quot;<span style="background-color: #00FF00">n&#39;est pas inclus(e) dans la liste</span>&quot;
+        exclusion: &quot;<span style="background-color: #00FF00">n&#39;est pas disponible</span>&quot;
+        invalid: &quot;<span style="background-color: #00FF00">n&#39;est pas valide</span>&quot;
+        confirmation: &quot;<span style="background-color: #00FF00">ne concorde pas avec la confirmation</span>&quot;</pre>
+<p>Note that this filter does not support yet all YAML constructs. Only 
+double-quoted entries are extracted.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	opening the document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Identifier</h3>
+<p>Each extracted entry is assigned as name the sequence of all its parents 
+identifiers. For example, in the example above, the name of the text unit with 
+the content &quot;<code>n&#39;est pas disponible</code>&quot; is <code>
+fr.activerecord.errors.messages.exclusion</code>.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p>The filter includes options to set given parts of the extracted text as 
+inline codes, using regular expression.</p>
+<p>Example of the options with three regular expressions:</p>
+<pre>#v1
+useCodeFinder.b=true
+codeFinderRules.count.i=3
+codeFinderRules.rule0=%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgGpnYyBbHhSMmAZ]
+codeFinderRules.rule1=(\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v
+codeFinderRules.rule2=\{\{\w.*?\}\}</pre>
+<p>&nbsp;</p>
+
+</body>
+</html>

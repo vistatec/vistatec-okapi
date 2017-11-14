@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
+ xmlns:nc="http://home.netscape.com/NC-rdf#">
+ <its:translateRule selector="/" translate="no"/>
+ <its:translateRule selector="//*/@nc:name" translate="yes"/>
+</its:rules>

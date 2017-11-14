@@ -1,0 +1,6 @@
+assumeWellformed: true
+preserve_whitespace: false
+global_pcdata_subfilter: okf_html
+elements:
+  .*:
+      ruleTypes: [TEXTUNIT]

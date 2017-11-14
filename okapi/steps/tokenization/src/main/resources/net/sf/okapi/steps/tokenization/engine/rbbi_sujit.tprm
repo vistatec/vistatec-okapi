@@ -1,0 +1,74 @@
+#v1
+RuleCount.i=8
+
+Rule0.name=Abbreviation
+Rule0.description=Abbreviation: Uppercase alpha chars separated by period and optionally followed by a period
+Rule0.inTokens=
+Rule0.outTokens=ABBREVIATION,WORD
+Rule0.userTokens=
+Rule0.lexemId.i=500
+Rule0.pattern=[A-Z](\.[A-Z])+(\.)*
+Rule0.languages=
+
+Rule1.name=HyphenatedWord
+Rule1.description=Hyphenated Word : sequence of letter or digit, (punctuated by - or _, with following letter or digit sequence)+
+Rule1.inTokens=
+Rule1.outTokens=WORD
+Rule1.userTokens=
+Rule1.lexemId.i=501
+Rule1.pattern=[A-Za-z0-9]+([\-_][A-Za-z0-9]+)+
+Rule1.languages=
+
+Rule2.name=EmailAddress
+Rule2.description=Email address: sequence of letters, digits and punctuation followed by @ and followed by another sequence
+Rule2.inTokens=
+Rule2.outTokens=E-MAIL
+Rule2.userTokens=
+Rule2.lexemId.i=502
+Rule2.pattern=[A-Za-z0-9_\-\.]+\@[A-Za-z][A-Za-z0-9_]+\.[a-z]+
+Rule2.languages=
+
+Rule3.name=InternetAddress
+Rule3.description=Internet Addresses: http://www.foo.com(/bar)
+Rule3.inTokens=
+Rule3.outTokens=INTERNET
+Rule3.userTokens=
+Rule3.lexemId.i=503
+Rule3.pattern=[a-z]+\:\/\/[a-z0-9]+(\.[a-z0-9]+)+(\/[a-z0-9][a-z0-9\.]+)
+Rule3.languages=
+
+Rule4.name=XmlMarkup
+Rule4.description=XML markup: A run begins with < and ends with the first matching >
+Rule4.inTokens=
+Rule4.outTokens=MARKUP
+Rule4.userTokens=
+Rule4.lexemId.i=504
+Rule4.pattern=\<[^\>]+\>
+Rule4.languages=
+
+Rule5.name=Emoticon
+Rule5.description=Emoticon: A run that starts with :;B8{[ and contains only one or more of the following -=/{})(
+Rule5.inTokens=
+Rule5.outTokens=EMOTICON
+Rule5.userTokens=
+Rule5.lexemId.i=505
+Rule5.pattern=[B8\:\;\{\[][-=\/\{\}\)\(]+
+Rule5.languages=
+
+Rule6.name=InternetIpAddress
+Rule6.description=Internet IP Address - a block of 4 numbers of max 3 numbers each separated by period
+Rule6.inTokens=
+Rule6.outTokens=INTERNET
+Rule6.userTokens=
+Rule6.lexemId.i=506
+Rule6.pattern=[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+
+Rule6.languages=
+
+Rule7.name=InternetSiteAddress
+Rule7.description=Internet Site Address - such as www.ibm.com
+Rule7.inTokens=
+Rule7.outTokens=INTERNET
+Rule7.userTokens=
+Rule7.lexemId.i=507
+Rule7.pattern=[a-z][a-z0-9]*(\.[a-z0-9])+
+Rule7.languages=

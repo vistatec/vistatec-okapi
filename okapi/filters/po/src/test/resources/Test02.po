@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE-NAME VERSION\n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=windows-1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-User-Defined-Var: VALUE\n"
+
+# Line 1 of translation comments
+# Line 2 of translation comments
+#. Line 1 of extracted comments
+#. Line 2 of extracted comments
+#: myfile.c:12
+#, flag
+msgid "Original String 1"
+msgstr "Translated String 1"
+
+domain TheDomain1
+
+msgid "Could not find folder %s"
+msgstr "Could not find folder %s"
+
+msgid "à=aacute, <=lt, &=amp \"=quot, final quote=\""
+msgstr ""
+
+# Test directives
+# ---------------
+
+#_skip
+msgid "text 1 not to translate"
+msgstr ""
+
+msgid "text 2 to translate"
+msgstr ""
+
+#_btext
+msgid "text 3 to translate"
+msgstr ""
+
+#_skip
+msgid "text 4 not to translate"
+msgstr ""
+
+msgid "text 5 to translate"
+msgstr ""
+
+#_bskip
+msgid "text 6 not to translate"
+msgstr ""
+
+msgid "text 7 not to translate"
+msgstr ""
+
+#_text
+msgid "text 8 to translate"
+msgstr ""
+
+#_eskip
+
+msgid "text 9 to translate"
+msgstr ""
+
+#_etext
+
+msgid "text 10 to translate"
+msgstr ""
+
+#_skip
+msgid "text 11 not to translate"
+msgstr ""

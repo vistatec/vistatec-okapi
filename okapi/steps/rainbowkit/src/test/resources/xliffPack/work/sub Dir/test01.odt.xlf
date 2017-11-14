@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions">
+<file original="/C:/OkapiJava/trunk/okapi/steps/rainbowkit/src/test/resources/sub Dir/test01.odt/content.xml" source-language="en-us" target-language="fr-fr" datatype="x-undefined">
+<body>
+<trans-unit id="1" restype="x-text:p">
+<source xml:lang="en-us">This is the <g id="1">first</g> paragraph. And it has <g id="2">two</g> sentences.</source>
+<target xml:lang="fr-fr">This is the <g id="1">first</g> paragraph. And it has <g id="2">two</g> sentences.</target>
+</trans-unit>
+<trans-unit id="2" restype="x-text:p">
+<source xml:lang="en-us">Third paragraph.</source>
+<target xml:lang="fr-fr">Third paragraph.</target>
+</trans-unit>
+</body>
+</file>
+<file original="/C:/OkapiJava/trunk/okapi/steps/rainbowkit/src/test/resources/sub Dir/test01.odt/styles.xml" source-language="en-us" target-language="fr-fr" datatype="x-undefined">
+<body>
+</body>
+</file>
+<file original="/C:/OkapiJava/trunk/okapi/steps/rainbowkit/src/test/resources/sub Dir/test01.odt/meta.xml" source-language="en-us" target-language="fr-fr" datatype="x-undefined">
+<body>
+<trans-unit id="1" restype="x-dc:description">
+<source xml:lang="en-us">First line of comments.
+Second line of comments.</source>
+<target xml:lang="fr-fr">First line of comments.
+Second line of comments.</target>
+</trans-unit>
+<trans-unit id="2" restype="x-dc:title">
+<source xml:lang="en-us">Title of the document</source>
+<target xml:lang="fr-fr">Title of the document</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

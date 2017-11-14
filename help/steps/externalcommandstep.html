@@ -1,0 +1,90 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - External Command</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">External Command Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=External_Command_Step">http://okapiframework.org/wiki/index.php?title=External_Command_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step runs a given external command on a raw document.</p>
+<p>Takes: Raw document<br>
+Sends: Raw document</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Command line</cite> -- Enter the command-line to use. The command line 
+must use the input and output provided through the variables <code>${inputPath}</code> 
+and&nbsp; <code>${outputPath}</code>. You can use 
+the following variables in the command line:</p>
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<th>Variable</th>
+		<th>Description</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td><code>${inputPath}</code></td>
+		<td>The full path of the input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${outputPath}</code></td>
+		<td>The full path of the output document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${srcLangName}</code></td>
+		<td>English name of the language part of the source locale identifier</td>
+		<td>For &quot;<code>de-ch</code>&quot; this returns &quot;<code>German</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${trgLangName}</code></td>
+		<td>English name of the language part of the target locale identifier.</td>
+		<td>For &quot;<code>ja-jp</code>&quot; this returns &quot;<code>Japanese</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${srcLang}</code></td>
+		<td>Code of the language part of the source locale identifier.</td>
+		<td>For &quot;<code>de-ch</code>&quot; this returns &quot;<code>de</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${trgLang}</code></td>
+		<td>Code of the language part of the target locale identifier.</td>
+		<td>For &quot;<code>ja-jp</code>&quot; this returns &quot;<code>ja</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${rootDir}</code></td>
+		<td>The root directory for this project/batch</td>
+		<td>In Rainbow: the parameters folder.</td>
+	</tr>
+</table>
+<p>Example: The following Windows command sorts the input files and create 
+the corresponding output files.</p>
+<pre>cmd /C &quot;sort ${inputPath} /O ${outputPath}&quot;</pre>
+<p><cite>Timeout</cite> -- Enter the number of seconds after which the command 
+must be timeout. Enter -1 for no timeout.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

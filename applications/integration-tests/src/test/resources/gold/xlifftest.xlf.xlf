@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="test" source-language="en" target-language="fr" datatype="xml" okp:inputEncoding="utf-8">
+<body>
+<trans-unit id="1" translate="no">
+<source xml:lang="en">Text not to translate</source>
+<target xml:lang="fr">Text not to translate</target>
+</trans-unit>
+<trans-unit id="2" approved="yes">
+<source xml:lang="en">Paragraph.</source>
+<target xml:lang="fr">Paragraphe (approved translation)</target>
+</trans-unit>
+<trans-unit id="3">
+<source xml:lang="en">Text to translate. &amp;=amp, &lt;=lt, '=apos, "=quot</source>
+<target xml:lang="fr">Text to translate. &amp;=amp, &lt;=lt, '=apos, "=quot</target>
+</trans-unit>
+<trans-unit id="4">
+<source xml:lang="en">Other text to translate.</source>
+<target xml:lang="fr">Other text to translate.</target>
+</trans-unit>
+<trans-unit id="5">
+<source xml:lang="en">Text to translate with PI</source>
+<target xml:lang="fr">Text to translate with PI</target>
+</trans-unit>
+<trans-unit id="6" resname="ID1">
+<source xml:lang="en">Text to translate for ID1</source>
+<target xml:lang="fr">Text to translate for ID1</target>
+</trans-unit>
+<trans-unit id="7">
+<source xml:lang="en">Text with <g id="1">code</g> and <g id="2">bold</g>.</source>
+<target xml:lang="fr">Text with <g id="1">code</g> and <g id="2">bold</g>.</target>
+</trans-unit>
+<trans-unit id="8">
+<source xml:lang="en">Text of the footnote</source>
+<target xml:lang="fr">Text of the footnote</target>
+</trans-unit>
+<trans-unit id="9" resname="OtherID">
+<source xml:lang="en">Text with a footnote<x id="1"/> and more text</source>
+<target xml:lang="fr">Text with a footnote<x id="1"/> and more text</target>
+</trans-unit>
+<trans-unit id="10">
+<source xml:lang="en">Text with <g id="2"><x id="1"/></g> and more text.</source>
+<target xml:lang="fr">Text with <g id="2"><x id="1"/></g> and more text.</target>
+</trans-unit>
+<trans-unit id="11">
+<source xml:lang="en">Sentence 1. Sentence 2</source>
+<seg-source><mrk mid="seg1" mtype="seg">Sentence 1.</mrk> <mrk mid="seg2" mtype="seg">Sentence 2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="seg1" mtype="seg">Sentence 1.</mrk> <mrk mid="seg2" mtype="seg">Sentence 2</mrk></target>
+</trans-unit>
+<trans-unit id="12">
+<source xml:lang="en">Text number four</source>
+<target xml:lang="fr">Text number four</target>
+<alt-trans origin="SourceDoc"><source xml:lang="en">The text number four.</source>
+<target xml:lang="fr">Le texte numéro quatre.</target>
+</alt-trans>
+</trans-unit>
+<trans-unit id="13">
+<source xml:lang="en"><x id="1"/></source>
+<target xml:lang="fr"><x id="1"/></target>
+</trans-unit>
+<trans-unit id="14">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

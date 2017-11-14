@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Raw Document to Filter Events</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Raw Document to Filter Events Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Raw_Document_to_Filter_Events_Step">http://okapiframework.org/wiki/index.php?title=Raw_Document_to_Filter_Events_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step extracts the content of a raw document into a set of filter events.</p>
+<p>Takes: Raw document<br>
+Sends: Filter events</p>
+<p>This step is used to take a raw document with an associated filter 
+configuration and send the filter events down the pipeline. It basically extract 
+the content and structure information of the input so steps that take filter 
+events as input can be used. This step is generally the first one of the 
+pipeline, but it can be placed after any step that sends a raw document.</p>
+<p>To merge back filter events into a raw document use the <b>
+<a href="filtereventstorawdocumentstep.html">Filter Events to Raw Document</a></b> 
+step.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p>This step has no user parameters. All the parameters are provided by the 
+calling application.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

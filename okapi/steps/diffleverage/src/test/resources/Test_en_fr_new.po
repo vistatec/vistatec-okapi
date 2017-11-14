@@ -1,0 +1,20 @@
+﻿msgid ""
+msgstr "Project-Id-Version: MyApplication 1.0\n"
+"Report-Msgid-Bugs-To: myapp@example.com\n"
+"POT-Creation-Date: 2005-09-25 19:22+1000\n"
+"PO-Revision-Date: 2005-09-26 06:17+1000\n"
+"Last-Translator: Tester 1 <tester1@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Message for ID name100"
+msgstr "Message pour l'identificateur name100"
+
+msgid "Message for ID name200 (diff)"
+msgstr "Message pour l'identificateur name200"
+
+msgid "Message for ID name300"
+msgstr "Message pour l'identificateur name400"
+
+

@@ -1,0 +1,1 @@
+﻿Simple test source file test02.txt.

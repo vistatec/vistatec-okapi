@@ -1,0 +1,386 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ratel - SRX and Java</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Ratel</h1>
+		<h2 class="head2">SRX and Java</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=SRX_and_Java">http://okapiframework.org/wiki/index.php?title=SRX_and_Java</a></p>
+
+<p>The SRX 2.0 standard is based on 
+<a target="_top" href="http://www.lisa.org/fileadmin/standards/srx20.html#Intro_RegExp">the ICU regular expression</a> notation.</p>
+<p>Ratel uses Java&#39;s regular expressions to implement SRX. One of the reasons 
+for this is because ICU4J (ICU for Java) does not provide support of ICU regular 
+expressions.</p>
+<p>As of 
+version 1.6 Java does not have support for some of the Unicode-enabled features 
+as described in ICU. For example in Java &quot;<code>\w</code>&quot; means &quot;<code>[a-zA-Z_0-9]</code>&quot; 
+not &quot;<code>[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</code>&quot; like in ICU. Some ICU 
+features can be replaced by an equivalent expression in Java, but some other 
+features simply cannot be implemented in Java.</p>
+<p>The following table shows the ICU and Java differences. The
+<span style="background-color: #FFFF00">yellow entries</span> denote a case 
+where the ICU expression needs to be mapped to a Java equivalent (sometimes a 
+complex one), and the <font color="#FFFFFF">
+<span style="background-color: #FF0000">red entries</span></font> indictate the 
+cases where the ICU expression cannot be mapped in Java.</p>
+		<table cellspacing="0" cellpadding="3" border="1">
+				<tr>
+					<th align="left" valign="top">
+					ICU Meta Character</th>
+					<th align="left" valign="top">
+					Java Equivalent</th>
+					<th align="left" valign="top">
+					ICU Description</th>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-41"><code>\a</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-42">Match a BELL, <code>\u0007</code></td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-43"><code>\A</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-44">Match at the beginning of the input. Differs 
+					from <code>^</code> in that <code>\A</code> will not match after a new line within the 
+					input.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-45"><code>\b</code>, outside of a set</td>
+					<td align="left" valign="top">
+					<code>\b</code> exists but does not have exactly the same behavior.</td>
+					<td align="left" valign="top">
+					<p id="ID-46">Match if the current position is a word 
+					boundary. Boundaries occur at the transitions betweem word 
+					(<code>\w</code>) and non-word (<code>\W</code>) characters, with combining marks 
+					ignored.
+					And the option UREGEX_UWORD is assumed to be NOT set 
+					(default).</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FF0000">
+					<p id="ID-47"><font color="#FFFFFF"><code>\b</code>, within a 
+					set</font></td>
+					<td align="left" valign="top">
+					<code>\b</code> is invalid when within a set.<br>
+					Use <code>\u0008</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-48">Match a BACKSPACE, \u0008.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-49"><code>\B</code></td>
+					<td align="left" valign="top">
+					<code>\B</code> exists but does not have exactly the same behavior.</td>
+					<td align="left" valign="top">
+					<p id="ID-50">Match if the current position is not a word 
+					boundary.
+					And the option UREGEX_UWORD is assumed to be NOT set 
+					(default).</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-51"><code>\cX</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-52">Match a control-X character.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-53"><code>\d</code></td>
+					<td align="left" valign="top">
+					<code>\d</code> exists but is ASCII based.<br>
+					Use <code>[\p{Nd}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-54">Match any character with the Unicode General 
+					Category of Nd (Number, Decimal Digit.)</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-55"><code>\D</code></td>
+					<td align="left" valign="top">
+					<code>\D</code> exists but is ASCII based.<br>
+					Use <code>[^\p{Nd}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-56">Match any character that is not a decimal 
+					digit.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-57"><code>\e</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-58">Match an ESCAPE, <code>\u001B</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-59"><code>\E</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-60">Terminates a <code>\Q</code> ... <code>\E</code> quoted sequence.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-61"><code>\f</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-62">Match a FORM FEED, <code>\u000C</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-63"><code>\G</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-64">Match if the current position is at the end of 
+					the previous match.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-65"><code>\n</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-66">Match a LINE FEED, <code>\u000A</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FF0000">
+					<p id="ID-67"><font color="#FFFFFF"><code>\N{UNICODE CHARACTER NAME}</code></font></td>
+					<td align="left" valign="top">
+					Does not exists</td>
+					<td align="left" valign="top">
+					<p id="ID-68">Match the named character.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-69"><code>\p{UNICODE PROPERTY NAME}</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-70">Match any character with the specified Unicode 
+					Property.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-71"><code>\P{UNICODE PROPERTY NAME}</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-72">Match any character not having the specified 
+					Unicode Property.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-73"><code>\Q</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-74">Quotes all following characters until <code>\E</code>.&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-75"><code>\r</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-76">Match a CARRIAGE RETURN, <code>\u000D</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-77"><code>\s</code></td>
+					<td align="left" valign="top">
+					<code>\s</code> exists but is ASCII based (it matches <code>[ \t\n\x0B\f\r]</code>)<br>
+					Use <code>[\t\n\f\r\p{Z}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-78">Match a white space character. White space is 
+					defined as <code>[\t\n\f\r\p{Z}]</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-79"><code>\S</code></td>
+					<td align="left" valign="top">
+					<code>\S</code> exists but is ASCII based<br>
+					Use <code>[^\t\n\f\r\p{Z}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-80">Match a non-white space character.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-81"><code>\t</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-82">Match a HORIZONTAL TABULATION, <code>\u0009</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-83"><code>\uhhhh</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-84">Match the character with the hex value <code>
+					hhhh</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FF0000">
+					<p id="ID-85"><font color="#FFFFFF"><code>\Uhhhhhhhh</code></font></td>
+					<td align="left" valign="top">
+					Does not exist</td>
+					<td align="left" valign="top">
+					<p id="ID-86">Match the character with the hex value 
+					<code>hhhhhhhh</code>. Exactly eight hex digits must be provided, even 
+					though the largest Unicode code point is <code>\U0010ffff</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-87"><code>\w</code></td>
+					<td align="left" valign="top">
+					<code>\w</code> exists but is ASCII based.<br>
+					Use <code>[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-88">Match a word character. Word characters are 
+					<code>[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FFFF00">
+					<p id="ID-89"><code>\W</code></td>
+					<td align="left" valign="top">
+					<code>\W</code> exists but is ASCII based<br>
+					Use <code>[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-90">Match a non-word character.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FF0000">
+					<p id="ID-91"><font color="#FFFFFF"><code>\x{hhhh}</code></font></td>
+					<td align="left" valign="top">
+					Does not exists<br>
+					Use <code>\uhhhh</code> instead.</td>
+					<td align="left" valign="top">
+					<p id="ID-92">Match the character with hex value <code>hhhh</code></td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-93"><code>\xhh</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-94">Match the character with two digit hex value 
+					<code>hh</code></td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" bgcolor="#FF0000">
+					<p id="ID-95"><font color="#FFFFFF"><code>\X</code></font></td>
+					<td align="left" valign="top">
+					Does not exists</td>
+					<td align="left" valign="top">
+					<p id="ID-96">Match a <a href="http://www.unicode.org/unicode/reports/tr29/">Grapheme Cluster</a>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-97"><code>\Z</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-98">Match if the current position is at the end of 
+					input, but before the final line terminator, if one exists.&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-99"><code>\z</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-100">Match if the current position is at the end 
+					of input.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-101"><code>\0nnn</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-102">Match the character with octal value <code>
+					nnn</code>.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-103"><code>\n</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-104">Back Reference. Match whatever the nth 
+					capturing group matched. n must be &gt;1 and &lt; total number of 
+					capture groups in the pattern.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-105"><code>[pattern]</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-106">Match any one character from the set. See
+					<a href="http://icu.sourceforge.net/userguide/unicodeSet.html">UnicodeSet</a> 
+					for a full description of what may appear in 
+					the pattern.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-107"><code>.</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-108">Match any character.</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-109"><code>^</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-110">Match at the beginning of a line. </td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-111"><code>$</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-112">Match at the end of a line. </td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">
+					<p id="ID-113"><code>\</code></td>
+					<td align="left" valign="top">
+					same</td>
+					<td align="left" valign="top">
+					<p id="ID-114">Quotes the following character. Characters 
+					that must be quoted to be treated as literals are <code>* ? + [ ( 
+					) { } ^ $ | \ . /</code></td>
+				</tr>
+			</table>
+<p>&nbsp;</p>
+</body>
+</html>

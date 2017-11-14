@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions">
+<file original="/C:/OkapiJava/trunk/okapi/steps/rainbowkit/src/test/resources/test01.properties" source-language="en-us" target-language="fr-fr" datatype="x-text/x-properties">
+<body>
+<trans-unit id="1" resname="ID100" xml:space="preserve">
+<source xml:lang="en-us">Text for ID100 with <x id="1"/> and 
+, and Æ=AE.</source>
+<target xml:lang="fr-fr">Text for ID100 with <x id="1"/> and 
+, and Æ=AE.</target>
+</trans-unit>
+<trans-unit id="2" resname="ID200" xml:space="preserve">
+<source xml:lang="en-us">text for ID200</source>
+<target xml:lang="fr-fr">text for ID200</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

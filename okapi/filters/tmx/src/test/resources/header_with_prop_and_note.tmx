@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="html" segtype="sentence" adminlang="en-us" srclang="en-us" o-tmf="abc" creationtool="XYZTool" >
+ 	<prop type="x">prop</prop>
+ 	<note>note</note>
+ </header>
+ <body>
+   <tu>   
+
+   <tuv xml:lang="en-us">
+    <seg><it x="1" pos="begin" type="italic">&lt;I></it><bpt x="2" i="1" type="bold">&lt;B></bpt>Click <ph x="3" type="image" assoc="b">&lt;IMG SRC="here.png" ALT="<sub>Start Here!</sub>"></ph> to <hi type="verb" x="4">start</hi>.<ept i="1">&lt;/B></ept></seg>
+   </tuv>
+   
+   <tuv xml:lang="fr">
+    <seg><bpt x="2" i="1" type="bold">&lt;B></bpt><it x="1" pos="begin" type="italic">&lt;I></it>Cliquez <ph x="3" type="image" assoc="b">&lt;IMG SRC="here.png" ALT="<sub>Commencez ici !</sub>"></ph> pour <hi type="verb" x="4">commencer</hi>.<ept i="1">&lt;/B></ept></seg>
+   </tuv>
+   
+  </tu>
+ </body>
+</tmx>
+ 

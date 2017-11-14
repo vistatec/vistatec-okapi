@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+
+
+  <title>Mini HOWTO: Getting Perfect Fonts on Mandrake 10.1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="GENERATOR" content="Quanta Plus">
+  
+  
+  <style><!--
+	body,td,div,.p,a,h1,h2,h3,h4 {font-family:verdana,helvetica,arial,sans-serif}
+  //-->
+  </style>  
+  
+</head><body>
+
+<h1>Mini HOWTO: Getting Perfect Fonts on Mandrake 10.1</h1>
+
+<p>
+<b>by Noel Llopis</b><br>
+llopis (at) convexhull (dot) com
+</p>
+
+<p>
+Version 1.07<br>
+Last modified: 4 January 2005<br>
+Original creation: 14 November 2004
+</p>
+
+<h2>Introduction</h2>
+<p>Mandrake is my favorite Linux distribution for general desktop
+usage: It's extremely easy to install
+(it detects all your hardware right out of the box), it's very friendly
+for beginners, it has a great selection of software, and it looks very
+nice. The default window manager is KDE, which is like an improved
+version of Windows.</p>
+
+<p>The last two points are key to attracting new users from Windows-land: It looks great out of the box, and
+it's not a totally alien environment. There's only one problem: the fonts are just plain ugly.</p>
+
+<p>Considering you're constantly reading text, having ugly fonts is a
+huge problem. They're not just ugly, they're borderline unreadable at
+times. This document explains how to fix this problem and have the
+perfect fonts you're used to from Windows.</p>
+
+<p>The procedure described here should work in just about any Linux distribution with KDE with none, or just minor adjustments.</p>
+
+<!-- TODO: Screenshots -->
+
+<h2>Step 1: Turn off font antialiasing</h2>
+<p>
+Maybe it's just me, but I can't stand antialiasing in my fonts. I
+usually keep my fonts small (7-10 pt) and my resolution high
+(1600x1200), so antialiasing just makes them blurry and dirty-looking.
+If you have larger fonts or lower resolutions (or an LCD), you might
+want to leave antialiasing on. For LCD monitors, you might get
+particularly good results with sub-pixel hinting on. Try it both ways
+and decide for yourself. </p>
+<p>
+Go to the file /etc/fonts/local.conf, and add the following:
+</p><pre>    &lt;match target="font"&gt;
+        &lt;test compare="more" name="size" qual="any" &gt;
+            &lt;double&gt;0&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;test compare="less" name="size" qual="any" &gt;
+            &lt;double&gt;72&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;edit mode="assign" name="antialias" &gt;
+            &lt;bool&gt;false&lt;/bool&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;
+</pre>
+
+<p>
+Unfortunately that doesn't turn off all antialiasing, so go to the KDE
+Control Center (listed under "Configure your desktop"), select
+LookNFeel, Fonts, and turn off "Use anti-aliasing for fonts"). You can
+turn on and off sub-pixel hinting from there as well.
+</p>
+<p>
+Done. No more antialiasing.
+</p>
+
+<h2>Step 2: Turn on FreeType native hinting</h2>
+<p>Because the default font rendering in KDE is not that great, turning
+off antialiasing might actually make some fonts go from being fuzzy, to
+being really ugly and irregular. Let's fix that.</p>
+
+<p>The font rendering in KDE is done through FreeType, and it already
+comes installed in your Mandrake installation. FreeType is really a
+great system, and it's capable of rendering True-Type fonts just as
+well as Windows or Macs. Unfortunately <a href="http://freetype.sourceforge.net/patents.html">it's held back by several patents by Apple</a>,
+which force it to use a less-than-optimal rendering algorithm which
+causes the ugly fonts you're seeing. Fortunately, we can get around
+that quite easily. Thank open source for that :-)</p>
+
+<p>Go to <a href="http://freetype.sourceforge.net/">the FreeType project page</a> and download the source code for the latest version. It currently is version 2.1.9.
+</p>
+<p>
+Gunzip/untar it to /usr/local/src. Now go to the file include/freetype/config/ftoption.h and look for the line
+</p><pre>/* #define TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+</pre>
+Go ahead and uncomment it:
+<pre>#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER
+</pre>
+
+
+<p>
+Now compile FreeType by typing the following:
+</p><pre># ./configure --prefix=/usr
+# make
+# make install
+</pre>
+You will have to be logged in as root to run the last command.
+
+To make sure it worked, run the following command. It should report 9.7.3:
+<pre># freetype-config --version
+</pre>
+
+
+<!--TODO: Need to restart? -->
+<p>
+At this point, the ugly, jaggedy fonts that we saw earlier should be
+looking a lot better. For a lot of people this could be good enough.
+But I was still annoyed by the slight irregularities in the default
+fonts used by KDE.
+</p>
+
+<h2>Step 3: Get good fonts</h2>
+<p>The best font rendering in the world is no good without good fonts.
+As much as I'm a Linux fan, I have to take my hat off to Microsoft for
+their really good fonts. I don't mean the silly Windings font, I mean
+the ones you don't think about but are used everywhere by the operating
+system: Tahoma, Verdana, Courier New, etc.
+</p>
+<p>Here you have several options, but it boils down to using the actual
+True Type fonts straight from Windows. Use whichever method you're most
+comfortable with. I have personally always used the first method, but
+the other two are simpler.</p>
+ 
+<h4>First option: Copy fonts from Windows partition</h4>
+<p>
+If you already have a Windows installation handy, just look in
+\Windows\Fonts and copy all .TTF files to /usr/share/fonts/ttf/msfonts
+</p><pre># mkdir -p /usr/local/share/fonts/ttf/msfonts
+# cp /mnt/c/windows/fonts/*ttf /usr/local/share/fonts/ttf/msfonts
+</pre>
+
+<p>
+Change to that directory and run the following commands:
+</p><pre># ttmkfdir -o fonts.scale
+# mkfontdir
+</pre>
+
+<p>
+Almost there. One more change. Edit the /etc/X11/fs/config file to point to the fonts you just added.
+</p><pre>catalogue = /usr/share/fonts/ttf/msfonts,
+        /usr/X11R6/lib/X11/fonts/misc:unscaled,
+        /usr/X11R6/lib/X11/fonts/drakfont/Type1,
+        /usr/X11R6/lib/X11/fonts/drakfont/ttf,
+	...
+</pre>
+
+<p>
+Finally, still as root, run the following commands to make sure the new fonts are used.
+</p><pre># xset fp rehash
+# /etc/rc.d/init.d/xfs restart
+</pre>
+
+<p>At this point, you should be able to use some of those great Windows
+fonts. I just set the default KDE fonts to use Tahoma 7pt, and Courier
+New 7pt for the Fixed Width font. The Konqueror file browser or KMail
+should look really good now (you might have to set the file browser
+font in the KDE Control Center under Components | File Manager |
+Standard font too).
+</p>
+
+<h4>Second option: Import the fonts</h4>
+<p>Run the Mandrakelinux Control Center ("Configure Your Computer") and
+select System | Fonts. From this applet you have the opportunity to
+import fonts. If you have an existing Windows installation on a
+different partition in your computer, you just need to point it there
+and it'll take care of copying them over. Earlier versions of Mandrake
+even used to have a specific button to import Windows fonts.
+</p>
+
+
+<h4>Third option: Install Microsoft fonts RPM</h4>
+<p>
+If you don't have Windows installed, you can just <a href="http://avi.alkalay.net/software/msfonts/">download them from the Web</a>.
+To be perfectly legal, you need to own a Windows license, but
+considering how difficult it is to buy a new computer nowadays without
+Windows bundled, that shouldn't be too hard.
+</p>
+<p>They come bundled in an rpm, and installing it will take care of
+doing all the manual work from you. So install it and use them right
+away.
+</p>
+
+
+
+<h2>Step 4: Set your screen dpi</h2>
+<p>The fonts are already looking good, but probably the size in some
+applications is either too big or too small. Even though you're
+specifying size 9 or 10, the fonts end up being a different size. How
+come?</p>
+
+<p>That's because FreeType doesn't use exact pixel sizes for fonts, but
+rather, final rendered size of the font. In order to do that
+calculation correctly, your system needs to be aware not just of the
+resolution of your monitor, but of its actual physical dimensions (or,
+what is the same, the dpi--dots per inch of your display).</p>
+
+<p>Type the following command:
+</p><pre># xdpyinfo
+</pre>
+
+And look towards the top for these lines:
+<pre>screen #0:
+  dimensions:    1600x1200 pixels (457x342 millimeters)
+  resolution:    89x89 dots per inch
+</pre>
+Most likely, you haven't set your display dimensions, so it's set to a
+default of 75 dpi no matter what resolution you have. That's going to
+cause some completely incorrect font sizes.
+<p>Measure your display with a ruler (in mm), and enter the
+measurements in /etc/X11/XF86Config under the Monitor section with
+DisplaySize. The example below corresponds to the dimensions of the
+screen of my 19" CRT monitor.
+</p><pre>Section "Monitor"
+    Identifier "monitor1"
+    ...
+    DisplaySize 360 270
+</pre>Restart XWindows (CTRL-Backspace will do fine), and check out the
+size of the fonts. You should adjust them so they look correctly now.
+Alternatively, you can always fudge the DisplaySize number to whatever
+you want to tweak the fonts (although I recommend leaving the
+DisplaySize value to represent the correct size of your monitor so
+other applications like The Gimp can use that information correctly).
+<h2>Step 5: Misc adjustments</h2>
+
+<p>Almost there! Now things should be looking really good. But as you
+run more programs, you'll probably that some of them still have a few
+ugly fonts. Why aren't they respecting the font settings we so
+carefully set?
+</p>
+
+<h4>Gnome applications</h4>
+<p>It turns out those are probably Gnome applications, which get their
+font information through different sources than KDE. Don't worry, all
+the work we did with FreeType, turning off antialiasing, and getting
+the right fonts is still valid. It's just that those applications are
+using native fonts instead of the ones we selected.</p>
+
+<p>To change that, edit the .gtkrc file in your home directory to include the following lines:
+</p><pre>style "user-font"
+{
+  fontset="-microsoft-tahoma-medium-r-normal-*-7-*-*-*-p-*-viscii1.1-1"
+}
+widget_class "*" style "user-font"
+</pre>
+
+Some other applications use GTK 2.0, so we need to make some changes to the .gtkrc-2.0 file as well:
+<pre>style "default"
+{
+  font_name = "Tahoma 7"
+}
+class "*" style "default"
+</pre>
+
+Voila! Gnome applications look gorgeous as well now.
+
+
+
+<h4>Mozilla Firefox</h4>
+
+<p><a href="http://www.mozilla.org/products/firefox/">Mozilla Firefox</a>
+is a great browser. I can't recommend it highly enough. It's
+standards-compliant, secure, extensible, and multiplatform.
+Unfortunately, that last point means it doesn't always behave like a
+native applications. And as you can imagine, its fonts don't quite
+behave the way they should under KDE.
+</p>
+<p>First of all, you need to tell it to use better fonts than the
+default ones. Go to Edit | Preferences | General and click on Fonts and
+Colors. I have my Serif one set to Times New Roman, the San-serif one
+to Microsoft Sans Serif, and the monospace one to Courier New. That
+takes care of the default fonts for rendering web pages.
+</p>
+<p>The menu and toolbar fonts are still looking either too large or
+just an ugly kind of font. To change those, you need to edit the
+configuration files by hand. Look for your userChrome.css file (usually
+under ~/.mozilla/firefox/yourprofile/chrome) and add the following
+entry:
+</p><pre>* {
+   font-size: 7pt !important;
+   font-family: Tahoma !important;
+}          
+</pre>    
+     
+That should bring Firefox's menu and toolbar fonts in line with the rest of your system.
+           
+<p>In my case, after making all those changes, the fonts for the input
+fields (buttons, text entry, or drop-down menus) in some web pages like
+Google or Amazon were way too big and still using one of the ugly
+fonts. To change that, go to userContent.css (that's different from the
+userChrome.css file we just modified), and add the following entry:
+</p><pre>input, textarea, select, button,
+input[type="button"], input[type="reset"], input[type="submit"] {
+   font-size: 8pt !important;
+   font-family: Verdana !important;
+}
+</pre>
+
+
+
+<h4>Avoiding ugly fonts</h4>  
+<p>Some web pages and applications will attempt to use some fairly ugly fonts by default. For example, <a href="http://www.mandrakeclub.com/">Mandrake Club</a> uses the Helvetica font by default, or <a href="http://www.codeweavers.com/">CodeWeavers</a>
+uses Bitstream Vera. I'd much rather see Arial instead of Helvetica,
+Verdana instead of Bitstream Vera, or Georgia instead of Palatino.
+</p>
+<p>Instead of uninstalling those fonts (which some applications might
+require, or you might want to use at some point), you can force the
+system to substitute in your favorite fonts.
+</p>
+<p>
+Edit the /etc/fonts/local.conf file and add these lines:
+</p><pre>    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Bitstream Vera Sans&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Verdana&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Helvetica&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Arial&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Palatino&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Georgia&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+        &lt;test qual="any" name="family"&gt;
+            &lt;string&gt;Times&lt;/string&gt;
+        &lt;/test&gt;
+        &lt;edit name="family" mode="assign"&gt;
+            &lt;string&gt;Times New Roman&lt;/string&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;
+
+</pre>
+
+
+
+<h4>Root</h4>  
+<p> One last minor tweak: When you run something as root (like
+packaging applications, system settings, or other configuration
+utilities), it will use the root's settings. You might want to copy the
+file ~/.kde/share/config/kdeglobals to
+/root/.kde/share/config/kdeglobals. That will make it use the same
+fonts as the ones in your account.
+</p>           
+
+               
+               
+<h2>All done</h2>
+<p> We're finally all done! What a difference, uh? Once you get used to
+these fonts, it's really hard to go back to the default ones. I really
+wish that Mandrake would fix this. I'm convinced that they would
+attract many new users that get put off by the initial ugliness of the
+fonts.
+</p>           
+<p>Email me if you have any corrections, suggestions, or additions.
+I'll be happy to update this document and give you credit for it. I'll
+try to post screenshots of how the fonts look at each step of the way
+so people can see it for themselves what a big difference it makes.</p>
+   
+
+<h2>Related links</h2>
+<ul>
+<li><a href="http://avi.alkalay.net/linux/docs/font-howto/Font.html">Optimal Use of Fonts on Linux</a>. Another, very similar document detailing how to improve the fonts in Linux.</li>
+<li><a href="http://www.tldp.org/HOWTO/FDU/">XFree86 Font De-uglification HOWTO</a>. A very similar howto dealing with any XWindows distribution (not just Mandrake).</li>
+<li><a href="http://www.tldp.org/HOWTO/Font-HOWTO/">Font HOWTO</a>, with a very good section on making fonts available to X.</li>
+<li><a href="http://jmason.org/howto/subpixel.html">Sub-Pixel Font Positioning on UNIX mini-HOWTO</a></li>
+<li><a href="http://www.efuse.com/Design/web_fonts_basics.html">Web Type 101, a Primer</a>. Guidelines on how to use fonts correctly on a web page.</li>
+</ul>
+            
+
+<h2>Acknowledgements</h2>
+<ul><li>I first learned the information on the FreeType modifications from 
+<a href="http://groups.google.com/groups?q=John+Prose+fonts+group:*linux*&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;selm=85255129.0308240535.5470576b%40posting.google.com&amp;rnum=1">
+a Usenet post by John A. Pose</a>.</li>
+<li>Syd Hancock helped with some of the content and links.</li>
+<li>David Jao for pointing out the importance of subpixel hinting in LCD monitors and providing a link.</li>
+<li>Michal Klimczak for catching a bunch of little mistakes.</li>
+<li>Olivier Jadot for submitting the link to "Optimal Use of Fonts on Linux".</li>
+</ul> </body></html>

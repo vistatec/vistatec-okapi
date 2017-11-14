@@ -1,0 +1,258 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - PO Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">PO Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=PO_Filter">http://okapiframework.org/wiki/index.php?title=PO_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The PO Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+Gettext PO (Portable Object) resource files (as well as POT (PO templates)). The filter is implemented in the class <code>
+net.sf.okapi.filters.po.POFilter</code> of the Okapi library.</p>
+<p>The implementation is based on the PO specifications found in the
+<a target="_blank" href="http://www.gnu.org/software/gettext/manual/html_node/gettext_9.html">GNU gettext manual</a>. 
+There is also a useful
+<a target="_blank" href="http://docs.oasis-open.org/xliff/v1.2/xliff-profile-po/xliff-profile-po-1.2-cd02.html">representation guide for PO-to-XLIFF conversion</a> 
+available on the XLIFF TC pages.</p>
+<p>The following is an example of a very simple PO file. The translatable text 
+is marked in <b>bold</b>. Note also the header information in the first entry 
+(the one with an empty <code>msgid</code> line), where encoding and plural 
+information may be found.</p>
+<pre># PO file for myApp
+
+msgid &quot;&quot;
+msgstr &quot;&quot;
+&quot;Project-Id-Version: myApp 1.0.0\n&quot;
+&quot;Report-Msgid-Bugs-To: \n&quot;
+&quot;POT-Creation-Date: 2005-10-02 05:16+0200\n&quot;
+&quot;PO-Revision-Date: 2005-03-21 11:28/-0600\n&quot;
+&quot;Last-Translator: unknown &lt;email@address&gt;\n&quot;
+&quot;Language-Team: unknown &lt;email@address&gt;\n&quot;
+&quot;MIME-Version: 1.0\n&quot;
+&quot;Content-Type: text/plain; <font color="#FF0000"><b>charset=UTF-8</b></font>\n&quot;
+&quot;Content-Transfer-Encoding: 8bit\n&quot;
+&quot;Plural-Forms: <font color="#FF0000"><b>nplurals=2</b></font>; plural=(n != 1);\n&quot;
+
+msgid &quot;<b>diverging after version %d of %s</b>&quot;
+msgstr &quot;&quot;
+
+msgid &quot;<b>You have selected %d file for deletion</b>&quot;
+msgid_plural &quot;<b>You have selected %d files for deletion</b>&quot;
+msgstr[0] &quot;&quot;
+msgstr[1] &quot;&quot;</pre>
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input file using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Else, if a header entry with a <code>charset</code> declaration 
+	exists in the first 1000 characters of the file:<ul>
+	<li>If the value of the charset is &quot;<code>charset</code>&quot; (case 
+	insensitive):<ul>
+	<li>Then the file is likely to be a template with no encoding declared, so 
+	the current encoding (auto-detected or default) is used.</li>
+	<li>Else, the declared encoding is used. Note that if the encoding has been detected from a Byte-Order-Mark 
+		and the encoding declared in the header entry does not match, a warning is 
+		generated and the encoding of the Byte-Order-Mark is used.</li>
+</ul>
+	</li>
+</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	setting the filter options.</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the file has a header entry with a <code>charset</code> declaration, the 
+declaration is automatically updated in the output to reflect the encoding 
+selected for the output.</p>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Output Language</h3>
+<p>Important: No language information is updated in the PO header entry. Any language-related information 
+needs to be updated manually in the header entry of the generated PO file. Note 
+that PO files are generally bilingual files with their language-related 
+information already set.</p>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Plural Forms</h3>
+<p>The filter supports
+<a target="_blank" href="http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html">plural forms entries</a> with the assumption that they are in a sequential 
+order. That is, <code>msgstr[0]</code> comes first, then <code>msgstr[1]</code>, 
+etc. All the <code>msgstr</code> strings of a given plural entry are processed 
+as part of a single group that has its type value set to &quot;<code>x-gettext-plurals</code>&quot;.</p>
+<p>If a resource name is generated, its value for plural form entries has an 
+additional index indicator. For example, if you have the following plural form 
+entries:</p>
+<pre>msgid &quot;untranslated-singular&quot;
+msgid_plural &quot;untranslated-plural&quot;
+msgstr<b>[0]</b> &quot;<b>translated-singular</b>&quot;
+msgstr<b>[1]</b> &quot;<b>translated-plural-form1</b>&quot;
+msgstr<b>[2]</b> &quot;<b>translated-plural-form2</b>&quot;</pre>
+<p>The extracted resources will allow you to construct an XLIFF output 
+looking like this:</p>
+<pre>&lt;group restype=&quot;<b>x-gettext-plurals</b>&quot;&gt;
+ &lt;trans-unit id=&quot;1&quot; resname=&quot;P3ADE34F0-<b>0</b>&quot; xml:space=&quot;preserve&quot; translate=&quot;no&quot;&gt;
+  &lt;source xml:lang=&quot;en-US&quot;&gt;untranslated-plural&lt;/source&gt;
+  &lt;target xml:lang=&quot;fr-FR&quot;&gt;<b>translated-singular</b>&lt;/target&gt;
+ &lt;/trans-unit&gt;
+ &lt;trans-unit id=&quot;2&quot; resname=&quot;P3ADE34F0-<b>1</b>&quot; xml:space=&quot;preserve&quot; translate=&quot;no&quot;&gt;
+  &lt;source xml:lang=&quot;en-US&quot;&gt;untranslated-plural&lt;/source&gt;
+  &lt;target xml:lang=&quot;fr-FR&quot;&gt;<b>translated-plural-form1</b>&lt;/target&gt;
+ &lt;/trans-unit&gt;
+ &lt;trans-unit id=&quot;3&quot; resname=&quot;P3ADE34F0-<b>2</b>&quot; xml:space=&quot;preserve&quot; translate=&quot;no&quot;&gt;
+  &lt;source xml:lang=&quot;en-US&quot;&gt;untranslated-singular&lt;/source&gt;
+  &lt;target xml:lang=&quot;fr-FR&quot;&gt;<b>translated-plural-form2</b>&lt;/target&gt;
+ &lt;/trans-unit&gt;
+&lt;/group&gt;</pre>
+<h3>Domains</h3>
+<p>The domains are supported as groups, with the type of the group set to &quot;<code>x-gettext-domain</code>&quot; 
+and the resource name set to the group identifier. For example, if you have the following entry:</p>
+<pre><b>domain TheDomain1</b>
+msgid &quot;Text 1 in domain 'TheDomain1'&quot;
+msgstr &quot;Texte 1 dans le domain 'TheDomain1'&quot;</pre>
+<p>The extracted resources will allow you to construct an XLIFF output 
+looking like this:</p>
+<pre>&lt;group resname=&quot;<b>TheDomain1</b>&quot; restype=&quot;<b>x-gettext-domain</b>&quot;&gt;
+ &lt;trans-unit id=&quot;1&quot; resname=&quot;N9D1999AB&quot; xml:space=&quot;preserve&quot;&gt;
+  &lt;source xml:lang=&quot;en-US&quot;&gt;Text 1 in domain 'TheDomain1'&lt;/source&gt;
+  &lt;target xml:lang=&quot;fr-FR&quot;&gt;Texte 1 dans le domain 'TheDomain1'&lt;/target&gt;
+ &lt;/trans-unit&gt;
+&lt;/group&gt;</pre>
+<h3>References</h3>
+<p>PO files may have reference comments generated from the source code. they are 
+denoted by a leading &quot;<code>#:</code>&quot; marker.</p>
+<p>The filter provides read-only access to them through the <i>references</i> 
+resource-level property.</p>
+<h3>Extracted Comments</h3>
+<p>PO files may have comments generated from the source code. They correspond to 
+localization notes from the developers. They are denoted by a leading &quot;<code>#.</code>&quot; 
+marker</p>
+<p dir="ltr">The filter provides read-only access to them through the <i>note</i> 
+resource-level property </p>
+<h3>Translators Comments</h3>
+<p>PO files may have translators comments, denoted by a leading &quot;<code># </code>
+&quot; marker.</p>
+<p>The filter provides read-only access to them through the <i>transnote</i> 
+resource-level property.</p>
+<h3>Context Comments</h3>
+<p>PO files may have context comments, denoted by a leading &quot;<code>#|</code>&quot; 
+markers.</p>
+<p>The filter does do anything with them currently.</p>
+<h3>Context Lines</h3>
+<p>PO files may have context entry lines, denoted by a leading &quot;<code>msgctx</code>&quot; 
+marker.</p>
+<p>The filter does do anything with them currently. Such entries are apparently 
+rarely used.</p>
+<h3>Fuzzy Flag</h3>
+<p>PO files may may a &quot;fuzzy flag&quot; indicated as &quot;<code>#, fuzzy</code>&quot;. This 
+indicates that the text in the <code>msgstr</code> entry is only a proposed 
+translation, and may or may not be correct for the source.</p>
+<p>When on bilingual mode, the filter provides access to this flag through the <i>approved</i> 
+target property:</p>
+<ul>
+	<li>If the flag is set the <i>approved</i> property is set to &quot;<code>no</code>&quot;. 
+If the flag does not exists, the <i>approved</i> property is not defined.</li>
+	<li>If the <i>approved</i> property was defined by the filter, and is deleted, or 
+set to a different value than &quot;<code>no</code>&quot;, the flag is removed from the 
+output document.</li>
+</ul>
+<h3>No-Wrap Flag</h3>
+<p>TODO</p>
+<h3>X-Format Flag</h3>
+<p>TODO</p>
+<h3>No-X-Format Flag</h3>
+<p>TODO</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Options Tab</h3>
+<h4>Processing mode</h4>
+<p><cite>Bilingual mode</cite> -- Select this option to process the input 
+document as a bilingual file. In this mode the <code>msgid</code> entry is the 
+source text, and the <code>msgstr</code> is the translation. Most PO files are 
+bilingual documents.</p>
+<p><cite>Generate identifiers from the source text</cite> -- Set this option to 
+generate identifiers from the source text of the <code>msgid</code> entry. The 
+values are constructed from the has code of the source text, and possibly with a 
+domain prefix. Note that the value may not be unique if the source text is not 
+unique within the same domain. The value generated is accessible from <code>
+getName()</code> method of the extracted resource. This option is enabled only 
+in bilingual mode.</p>
+<p><cite>Monolingual mode</cite> -- Select this option to process the input 
+document as a monolingual file. In this mode the <code>msgid</code> entry is a 
+real identifier (rather than the source text), and the corresponding text is in 
+the <code>msgstr</code> entry.</p>
+
+<p>In monolingual mode the <code>msgid</code> value is used as the identifier 
+for the entry. To access it, use the <code>getName()</code> method of the 
+extracted resource.</p>
+<h3>Inline Codes Tab</h3>
+<p><cite>Has inline codes as defined below:</cite> -- Set this option to use the specified regular expression to be use against the text of the extracted items. Any match will be converted to an inline code. By default the expression is:</p>
+<pre>((%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgGpn])
+|((\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v)
+|(\{\d.*?\}))</pre>
+<p><cite>Add</cite> -- Click this button to add a new rule.</p>
+<p><cite>Remove</cite> -- Click this button to remove the current rule.</p>
+<p><cite>Move Up</cite> -- Click this button to move the current rule upward.</p>
+<p><cite>Move down</cite> -- Click this button to move the current rule 
+downward.</p>
+<p>[Top-right text box] -- Enter the regular expression for the 
+current rule. Use the <cite>Modify</cite> button to enter the edit mode. The 
+expression must be a valid
+<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html">
+regular expression</a>. You can check the syntax 
+(and the effect of the rule) as it automatically tests it against the test data in the text box below and shows the result in the bottom-right text box.</p>
+<p><cite>Modify</cite> -- Click this button to edit the expression of the 
+current rule. This button is labeled <cite>Accept</cite> when you are in 
+edit mode.</p>
+<p><cite>Accept</cite> -- Click this button to save any changes you have 
+made to the expression and leave the edit mode. This button is labeled <cite>
+Modify</cite> when you are not in edit mode.</p>
+<p><cite>Discard</cite> -- Click this button to leave the edit mode and 
+revert the current rule to the expression it had before you started the edit 
+mode.</p>
+<p><cite>Patterns</cite> -- Click this button to display a list of "guidline" regular 
+expression patterns then select a pattern to insert it the edit box. The inserted text replaces whatever text is 
+currently selected.</p>
+<p><cite>Test using all rules</cite> -- Set this option to test all the rules at the same 
+time. The syntax of the current rule is automatically checked. See the effect it has on the sample text. The result of the test are displayed in the bottom right result box. The parts of the text that are 
+matches of the expressions are displayed in &lt;&gt; brackets. If the <cite>Test using all rules</cite> option is set, the test takes all rules of the set in account, if it is not set only the current rule is 
+tested.</p>
+<p>[Middle-right text box] -- Optional test data to test the regular expression for the 
+current rule or all rules depending on the <cite>Test using all rules</cite> option.</p>
+<p>[Bottom-right text box] -- Shows the result of the regular expression applied to the test data.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+    <file original="test01.html" source-language="en-US" target-language="fr-FR" datatype="html">
+        <body>
+            <trans-unit id="tu1" restype="x-paragraph">
+                <source xml:lang="en-US">Source <bpt id="1">&lt;b></bpt>text<ept id="1">&lt;/b></ept></source>
+                <target xml:lang="fr-FR">Target <bpt id="1">&lt;b></bpt>text<ept id="1">&lt;/b></ept></target>
+            </trans-unit>
+            <trans-unit id="tu2" restype="x-paragraph"> <!-- Not same code but same text -->
+                <source xml:lang="en-US">Source text<ph id="1">&lt;/br/></ph></source>
+                <target xml:lang="fr-FR">Target text<ph id="1">&lt;/br/></ph></target>
+            </trans-unit>
+            <trans-unit id="tu3" restype="x-paragraph">
+                <source xml:lang="en-US">Source text 2</source>
+                <target xml:lang="fr-FR">Target text 2</target>
+            </trans-unit>
+            <trans-unit id="tu4" restype="x-paragraph">
+                <source xml:lang="en-US">Fairy dust</source>
+                <target xml:lang="fr-FR">Target <bpt id="1">&lt;b></bpt>text<ept id="1">&lt;/b></ept></target>
+            </trans-unit>
+            <trans-unit id="tu5" restype="x-paragraph">
+                <source xml:lang="en-US">Butterflys</source>
+                <target xml:lang="fr-FR">Target text 2</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

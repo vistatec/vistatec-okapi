@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="/J:/Projects/okapi-step-xliffkit/target/test-classes/net/sf/okapi/steps/xliffkit/writer/TestDocument01.odt/content.xml" source-language="en" target-language="fr" datatype="x-undefined" xmlns:x="http://net.sf.okapi/ns/xliff-extensions" x:inputEncoding="UTF-8" x:configId="">
+<body>
+<trans-unit id="1" restype="x-text:h">
+<source xml:lang="en">Heading 1</source>
+<seg-source><mrk mid="0" mtype="seg">Heading 1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Rubrique 1</mrk></target>
+</trans-unit>
+<trans-unit id="2" restype="x-text:p">
+<source xml:lang="en">Text in English. <g id="1">Texte en rheato-romances.</g></source>
+<seg-source><mrk mid="0" mtype="seg">Text in English. <g id="1">Texte en rheato-romances.</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte en anglais. <g id="1">Texte en rheato-romans.</g></mrk></target>
+</trans-unit>
+<trans-unit id="3" restype="x-text:h">
+<source xml:lang="en">Heading 2</source>
+<seg-source><mrk mid="0" mtype="seg">Heading 2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Rubrique 2</mrk></target>
+</trans-unit>
+<trans-unit id="4" restype="x-text:p">
+<source xml:lang="en">Paragraph with <g id="1">bold</g>, <g id="2">italics</g>, <g id="3">and </g><g id="4">both</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with <g id="1">bold</g>, <g id="2">italics</g>, <g id="3">and </g><g id="4">both</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe en <g id="1">gras,</g> en <g id="2">italique,</g> <g id="3">et</g> <g id="4">les deux.</g></mrk></target>
+</trans-unit>
+<trans-unit id="5" restype="x-text:p">
+<source xml:lang="en">Extended chars: ©=copyright, ?=egrave, ?=Omega.</source>
+<seg-source><mrk mid="0" mtype="seg">Extended chars: ©=copyright, ?=egrave, ?=Omega.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Extended chars: © copyright =, E = egrave, ? = Omega.</mrk></target>
+</trans-unit>
+<trans-unit id="6" restype="x-text:p">
+<source xml:lang="en">Spaces: [   ]=3, [			]=3tabs,<x id="1"/>Line after.</source>
+<seg-source><mrk mid="0" mtype="seg">Spaces: [   ]=3, [			]=3tabs,<x id="1"/>Line after.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Espaces: [] = 3, [] = 3tabs, <x id="1"/> Ligne apr?s.</mrk></target>
+</trans-unit>
+<trans-unit id="8" restype="x-text:p">
+<source xml:lang="en">Text of the <g id="1">automatic</g> footnote.</source>
+<seg-source><mrk mid="0" mtype="seg">Text of the <g id="1">automatic</g> footnote.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte de la note <g id="1">automatique.</g></mrk></target>
+</trans-unit>
+<trans-unit id="9" restype="x-text:p">
+<source xml:lang="en">Second paragraph of the footnote.</source>
+<seg-source><mrk mid="0" mtype="seg">Second paragraph of the footnote.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Deuxi?me paragraphe de la note.</mrk></target>
+</trans-unit>
+<trans-unit id="7" restype="x-text:note">
+<source xml:lang="en"><x id="1"/><g id="2"><x id="3"/><x id="4"/></g></source>
+<target xml:lang="fr"><x id="1"/><g id="2"><x id="3"/><x id="4"/></g></target>
+</trans-unit>
+<trans-unit id="11" restype="x-text:p">
+<source xml:lang="en">Text of the footnote <g id="1">N</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Text of the footnote <g id="1">N</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte de la note <g id="1">N.</g></mrk></target>
+</trans-unit>
+<trans-unit id="10" restype="x-text:note">
+<source xml:lang="en"><x id="1"/><g id="2"><x id="3"/></g></source>
+<target xml:lang="fr"><x id="1"/><g id="2"><x id="3"/></g></target>
+</trans-unit>
+<trans-unit id="12" restype="x-text:p">
+<source xml:lang="en">Paragraph with footnote here<x id="1"/> and here<x id="2"/>.</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with footnote here<x id="1"/> and here<x id="2"/>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe avec la note ici <x id="1"/> et ici <x id="2"/> .</mrk></target>
+</trans-unit>
+<trans-unit id="13" restype="x-text:p">
+<source xml:lang="en">&lt;=lt, >=gt, "=quot, &amp;=amp, '=apos, {=opencb, }=closecb, \=bslash.</source>
+<seg-source><mrk mid="0" mtype="seg">&lt;=lt, >=gt, "=quot, &amp;=amp, '=apos, {=opencb, }=closecb, \=bslash.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">&lt;= LT,> = gt, "= quot, &amp; = ampli, 'apos =, = (opencb,) = closecb, \ = bslash.</mrk></target>
+</trans-unit>
+<trans-unit id="14" restype="x-text:p">
+<source xml:lang="en">Cell r1-c1</source>
+<seg-source><mrk mid="0" mtype="seg">Cell r1-c1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Cell R1-C1</mrk></target>
+</trans-unit>
+<trans-unit id="15" restype="x-text:p">
+<source xml:lang="en">Cell r1-c2</source>
+<seg-source><mrk mid="0" mtype="seg">Cell r1-c2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Cell R1-C2</mrk></target>
+</trans-unit>
+<trans-unit id="16" restype="x-text:p">
+<source xml:lang="en">Cell r2-c1</source>
+<seg-source><mrk mid="0" mtype="seg">Cell r2-c1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Cell R2-C1</mrk></target>
+</trans-unit>
+<trans-unit id="17" restype="x-text:p">
+<source xml:lang="en">Cell r2-c2</source>
+<seg-source><mrk mid="0" mtype="seg">Cell r2-c2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Cell R2-C2</mrk></target>
+</trans-unit>
+<trans-unit id="18" restype="x-text:p">
+<source xml:lang="en">Table <g id="1">1</g>: Caption text</source>
+<seg-source><mrk mid="0" mtype="seg">Table <g id="1">1</g>: Caption text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Tableau <g id="1">1:</g> Texte de l?gende</mrk></target>
+</trans-unit>
+<trans-unit id="19" restype="x-text:p">
+<source xml:lang="en">Fields: date=<g id="1">10/04/08</g>, time=<g id="2">12:33:18 PM</g>, pgnum=<g id="3">1</g>, pgcount=<x id="4"/>, subject=<x id="5"/>, title=<x id="6"/>, author=<x id="7"/>.</source>
+<seg-source><mrk mid="0" mtype="seg">Fields: date=<g id="1">10/04/08</g>, time=<g id="2">12:33:18 PM</g>, pgnum=<g id="3">1</g>, pgcount=<x id="4"/>, subject=<x id="5"/>, title=<x id="6"/>, author=<x id="7"/>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Champs: date = <g id="1">10/04/08,</g> time = <g id="2">12:33:18,</g> pgnum = <g id="3">1,</g> pgcount = <x id="4"/> , Subject = <x id="5"/> , Title = <x id="6"/> , Author = <x id="7"/> .</mrk></target>
+</trans-unit>
+<trans-unit id="20" restype="x-text:p">
+<source xml:lang="en">Paragraph with nbsp= , nbhyphen=?, optional-hyphen=­.</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with nbsp= , nbhyphen=?, optional-hyphen=­.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe avec nbsp =, nbhyphen =-, =. optionnel trait d'union</mrk></target>
+</trans-unit>
+<trans-unit id="22" restype="x-text:p">
+<source xml:lang="en">Text of the note</source>
+<seg-source><mrk mid="0" mtype="seg">Text of the note</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte de la note</mrk></target>
+</trans-unit>
+<trans-unit id="23" restype="x-text:p">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+<trans-unit id="21" restype="x-office:annotation">
+<source xml:lang="en"><x id="1"/><x id="2"/><x id="3"/></source>
+<target xml:lang="fr"><x id="1"/><x id="2"/><x id="3"/></target>
+</trans-unit>
+<trans-unit id="24" restype="x-text:p">
+<source xml:lang="en">Pargaraph with a note [<x id="1"/>].</source>
+<seg-source><mrk mid="0" mtype="seg">Pargaraph with a note [<x id="1"/>].</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Pargaraph avec une note [ <x id="1"/> ].</mrk></target>
+</trans-unit>
+<trans-unit id="26" restype="x-text:p">
+<source xml:lang="en"><g id="1">And here goes a second note. A long comment with formatting like </g><g id="2">bold</g><g id="3">, and </g><g id="4">more</g><g id="5">.</g></source>
+<seg-source><mrk mid="0" mtype="seg"><g id="1">And here goes a second note. A long comment with formatting like </g><g id="2">bold</g><g id="3">, and </g><g id="4">more</g><g id="5">.</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><g id="1">Et voici une deuxi?me note. Un commentaire de long avec la mise en forme comme</g> <g id="2">en <g id="3">gras,</g></g> <g id="3">et</g> <g id="4">plus <g id="5">encore.</g></g></mrk></target>
+</trans-unit>
+<trans-unit id="27" restype="x-text:p">
+<source xml:lang="en"><g id="1">Like several paragraphs.</g></source>
+<seg-source><mrk mid="0" mtype="seg"><g id="1">Like several paragraphs.</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><g id="1">Comme plusieurs paragraphes.</g></mrk></target>
+</trans-unit>
+<trans-unit id="25" restype="x-office:annotation">
+<source xml:lang="en"><x id="1"/><x id="2"/><x id="3"/><x id="4"/></source>
+<target xml:lang="fr"><x id="1"/><x id="2"/><x id="3"/><x id="4"/></target>
+</trans-unit>
+<trans-unit id="28" restype="x-text:p">
+<source xml:lang="en">List item 1<x id="1"/></source>
+<seg-source><mrk mid="0" mtype="seg">List item 1<x id="1"/></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Objet de liste 1 <x id="1"/></mrk></target>
+</trans-unit>
+<trans-unit id="29" restype="x-text:p">
+<source xml:lang="en">List item 2</source>
+<seg-source><mrk mid="0" mtype="seg">List item 2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Objet de liste 2</mrk></target>
+</trans-unit>
+<trans-unit id="30" restype="x-text:p">
+<source xml:lang="en">sub-item 1</source>
+<seg-source><mrk mid="0" mtype="seg">sub-item 1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">sous-point 1</mrk></target>
+</trans-unit>
+<trans-unit id="31" restype="x-text:p">
+<source xml:lang="en">sub-item 2</source>
+<seg-source><mrk mid="0" mtype="seg">sub-item 2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">sous-point 2</mrk></target>
+</trans-unit>
+<trans-unit id="32" restype="x-text:p">
+<source xml:lang="en">One more paragraph.</source>
+<seg-source><mrk mid="0" mtype="seg">One more paragraph.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Un paragraphe de plus.</mrk></target>
+</trans-unit>
+<trans-unit id="34" restype="x-text:p">
+<source xml:lang="en"><g id="1">Text of the note on the range.</g></source>
+<seg-source><mrk mid="0" mtype="seg"><g id="1">Text of the note on the range.</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><g id="1">Texte de la note sur la plage.</g></mrk></target>
+</trans-unit>
+<trans-unit id="33" restype="x-office:annotation">
+<source xml:lang="en"><x id="1"/><x id="2"/><x id="3"/></source>
+<target xml:lang="fr"><x id="1"/><x id="2"/><x id="3"/></target>
+</trans-unit>
+<trans-unit id="35" restype="x-text:p">
+<source xml:lang="en">Pargarpah with a <x id="1"/>note on a range.</source>
+<seg-source><mrk mid="0" mtype="seg">Pargarpah with a <x id="1"/>note on a range.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Pargarpah avec une <x id="1"/> note sur une plage.</mrk></target>
+</trans-unit>
+<trans-unit id="36" restype="x-text:p">
+<source xml:lang="en">Paragraph with <g id="1">text of the link</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with <g id="1">text of the link</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe avec du <g id="1">texte du lien.</g></mrk></target>
+</trans-unit>
+<trans-unit id="37" restype="x-text:p">
+<source xml:lang="en">Text with font change: <g id="1">Example</g>, <g id="2">example</g>, <g id="3">example</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Text with font change: <g id="1">Example</g>, <g id="2">example</g>, <g id="3">example</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte avec changement de police: <g id="1">par <g id="2">exemple,</g></g> <g id="2">exemple,</g> <g id="3">exemple.</g></mrk></target>
+</trans-unit>
+<trans-unit id="38" restype="x-text:p">
+<source xml:lang="en">Paragraph with an index <g id="1"></g>marker<g id="2"></g>.</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with an index <g id="1"></g>marker<g id="2"></g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe avec un indice <g id="1"></g> marqueur <g id="2"></g> .</mrk></target>
+</trans-unit>
+<trans-unit id="39" restype="x-text:p">
+<source xml:lang="en">Image: </source>
+<seg-source><mrk mid="0" mtype="seg">Image: </mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Image:</mrk></target>
+</trans-unit>
+<trans-unit id="40" restype="x-text:p">
+<source xml:lang="en"><g id="1"><g id="2"></g></g>Illustration <g id="3">1</g>: Caption of the image</source>
+<seg-source><mrk mid="0" mtype="seg"><g id="1"><g id="2"></g></g>Illustration <g id="3">1</g>: Caption of the image</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><g id="1"><g id="2"></g></g> Illustration <g id="3">1:</g> L?gende de l'image</mrk></target>
+</trans-unit>
+<trans-unit id="41" restype="x-text:p">
+<source xml:lang="en"><g id="1"><g id="2"><x id="3"/></g></g><g id="4"></g></source>
+<target xml:lang="fr"><g id="1"><g id="2"><x id="3"/></g></g><g id="4"></g></target>
+</trans-unit>
+<trans-unit id="42" restype="x-text:p">
+<source xml:lang="en">Paragraph with reference: [<x id="1"/>] and [<x id="2"/>], [<x id="3"/>], [<x id="4"/>], [<x id="5"/>], [<x id="6"/>], [<g id="7">Value of var1</g>]</source>
+<seg-source><mrk mid="0" mtype="seg">Paragraph with reference: [<x id="1"/>] and [<x id="2"/>], [<x id="3"/>], [<x id="4"/>], [<x id="5"/>], [<x id="6"/>], [<g id="7">Value of var1</g>]</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Paragraphe par r?f?rence: [ <x id="1"/> ] Et [ <x id="2"/> ], [ <x id="3"/> ], [ <x id="4"/> ], [ <x id="5"/> ], [ <x id="6"/> ], <g id="7">[Valeur du var1]</g></mrk></target>
+</trans-unit>
+<trans-unit id="43" restype="x-text:p">
+<source xml:lang="en">Below is the index and the table of content:</source>
+<seg-source><mrk mid="0" mtype="seg">Below is the index and the table of content:</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Ci-dessous, l'index et la table des mati?res:</mrk></target>
+</trans-unit>
+<trans-unit id="44" restype="x-text:index-title-template">
+<source xml:lang="en">Title of the Table of Contents</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the Table of Contents</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Titre de la Table des mati?res</mrk></target>
+</trans-unit>
+<trans-unit id="45" restype="x-text:p">
+<source xml:lang="en">Title of the Table of Contents</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the Table of Contents</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Titre de la Table des mati?res</mrk></target>
+</trans-unit>
+<trans-unit id="46" restype="x-text:p">
+<source xml:lang="en">Heading 1	1</source>
+<seg-source><mrk mid="0" mtype="seg">Heading 1	1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Intitul? de la ligne 1 1</mrk></target>
+</trans-unit>
+<trans-unit id="47" restype="x-text:p">
+<source xml:lang="en">Heading 2	1</source>
+<seg-source><mrk mid="0" mtype="seg">Heading 2	1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Intitul? de la ligne 2 1</mrk></target>
+</trans-unit>
+<trans-unit id="48" restype="x-text:index-title-template">
+<source xml:lang="en">Title of the Alphabetical Index</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the Alphabetical Index</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Titre de l'index alphab?tique</mrk></target>
+</trans-unit>
+<trans-unit id="49" restype="x-text:p">
+<source xml:lang="en">Title of the Alphabetical Index</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the Alphabetical Index</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Titre de l'index alphab?tique</mrk></target>
+</trans-unit>
+<trans-unit id="50" restype="x-text:p">
+<source xml:lang="en">Key1 text	</source>
+<seg-source><mrk mid="0" mtype="seg">Key1 text	</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Key1 texte</mrk></target>
+</trans-unit>
+<trans-unit id="51" restype="x-text:p">
+<source xml:lang="en">Key2 text	</source>
+<seg-source><mrk mid="0" mtype="seg">Key2 text	</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Key2 texte</mrk></target>
+</trans-unit>
+<trans-unit id="52" restype="x-text:p">
+<source xml:lang="en">marker	1</source>
+<seg-source><mrk mid="0" mtype="seg">marker	1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">marqueur 1</mrk></target>
+</trans-unit>
+</body>
+</file>
+<file original="/J:/Projects/okapi-step-xliffkit/target/test-classes/net/sf/okapi/steps/xliffkit/writer/TestDocument01.odt/styles.xml" source-language="en" target-language="fr" datatype="x-undefined" xmlns:x="http://net.sf.okapi/ns/xliff-extensions" x:inputEncoding="UTF-8" x:configId="">
+<body>
+<trans-unit id="1" restype="x-text:p">
+<source xml:lang="en">Text of the header</source>
+<seg-source><mrk mid="0" mtype="seg">Text of the header</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte de l'en-t?te</mrk></target>
+</trans-unit>
+<trans-unit id="2" restype="x-text:p">
+<source xml:lang="en">Text of the footer</source>
+<seg-source><mrk mid="0" mtype="seg">Text of the footer</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte du pied de page</mrk></target>
+</trans-unit>
+</body>
+</file>
+<file original="/J:/Projects/okapi-step-xliffkit/target/test-classes/net/sf/okapi/steps/xliffkit/writer/TestDocument01.odt/meta.xml" source-language="en" target-language="fr" datatype="x-undefined" xmlns:x="http://net.sf.okapi/ns/xliff-extensions" x:inputEncoding="UTF-8" x:configId="">
+<body>
+<trans-unit id="1" restype="x-dc:title">
+<source xml:lang="en">Title of the Document</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the Document</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Titre du Document</mrk></target>
+</trans-unit>
+<trans-unit id="2" restype="x-dc:description">
+<source xml:lang="en">Comments</source>
+<seg-source><mrk mid="0" mtype="seg">Comments</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Commentaires</mrk></target>
+</trans-unit>
+<trans-unit id="3" restype="x-dc:subject">
+<source xml:lang="en">Subject text</source>
+<seg-source><mrk mid="0" mtype="seg">Subject text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Objet texte</mrk></target>
+</trans-unit>
+<trans-unit id="4" restype="x-meta:keyword">
+<source xml:lang="en">Keyword text</source>
+<seg-source><mrk mid="0" mtype="seg">Keyword text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Texte du mot cl?</mrk></target>
+</trans-unit>
+<trans-unit id="5" restype="x-meta:user-defined">
+<source xml:lang="en">Info 1 text</source>
+<seg-source><mrk mid="0" mtype="seg">Info 1 text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Info 1 texte</mrk></target>
+</trans-unit>
+<trans-unit id="6" restype="x-meta:user-defined">
+<source xml:lang="en">Info 2 text</source>
+<seg-source><mrk mid="0" mtype="seg">Info 2 text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Info 2 texte</mrk></target>
+</trans-unit>
+<trans-unit id="7" restype="x-meta:user-defined">
+<source xml:lang="en">Info 3 text</source>
+<seg-source><mrk mid="0" mtype="seg">Info 3 text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Info 3 du texte</mrk></target>
+</trans-unit>
+<trans-unit id="8" restype="x-meta:user-defined">
+<source xml:lang="en">Info 4 text</source>
+<seg-source><mrk mid="0" mtype="seg">Info 4 text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Info 4 texte</mrk></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

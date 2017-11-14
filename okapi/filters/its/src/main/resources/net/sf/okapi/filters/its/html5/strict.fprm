@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Strict minimal rules for HTML5 -->
+<!-- All configurations to use with the HTML5+ITS filter MUST map 'h' to the HTML namespace. -->
+
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="2.0"
+ xmlns:h="http://www.w3.org/1999/xhtml"
+ xmlns:itsx="http://www.w3.org/2008/12/its-extensions"
+ itsx:strict="yes">
+ 
+ <!-- Bidirectional information. Note: No direct support for 'auto' value -->
+ <its:dirRule selector="//h:*[@dir='ltr']" dir="ltr"/>
+ <its:dirRule selector="//h:*[@dir='rtl']" dir="rtl"/>
+ <its:dirRule selector="//h:bdo[@dir='ltr']" dir="lro"/>
+ <its:dirRule selector="//h:bdo[@dir='rtl']" dir="rlo"/>
+ 
+ <!-- Id Value
+ <its:idValueRule selector="//h:*[@id]" idValue="@id"/>
+ -->
+ 
+ <!-- HTML's translate attribute is hard coded in the filter -->
+ 
+ <!-- Note: Preserve space is not handled by ITS -->
+ 
+</its:rules>

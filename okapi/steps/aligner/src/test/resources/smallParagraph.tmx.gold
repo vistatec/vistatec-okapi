@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="net.sf.okapi.steps.sentencealigner.SentenceAlignerStep" creationtoolversion="unknown" segtype="sentence" o-tmf="unknown" adminlang="en" srclang="en-US" datatype="application/x-tmx+xml"></header><body>
+<tu tuid="/OTBible/Genesis/50/17_0">
+<tuv xml:lang="en-US"><seg>17 So shall ye say unto Joseph, Forgive, I pray thee now, the trespass of thy brethren, and their sin; for they did unto thee evil: and now, we pray thee, forgive the trespass of the servants of the God of thy father.</seg></tuv>
+<tuv xml:lang="pt-BR"><seg>17 Assim direis a José: Perdoa, rogo-te, a transgressão de teus irmãos, e o seu peccado, porque te fizeram mal: agora pois rogamos-te que perdoes a transgressão dos servos do Deus de teu pae.</seg></tuv>
+</tu>
+<tu tuid="/OTBible/Genesis/50/17_1">
+<tuv xml:lang="en-US"><seg>And Joseph wept when they spake unto him.</seg></tuv>
+<tuv xml:lang="pt-BR"><seg>E José chorou quando elles lhe fallavam.</seg></tuv>
+</tu>
+<tu tuid="/OTBible/Genesis/50/21_0">
+<tuv xml:lang="en-US"><seg>21 Now therefore fear ye not: I will nourish you, and your little ones.</seg></tuv>
+<tuv xml:lang="pt-BR"><seg>21 Agora pois não temaes: eu vos sustentarei a vós e a vossos meninos.</seg></tuv>
+</tu>
+<tu tuid="/OTBible/Genesis/50/21_1">
+<tuv xml:lang="en-US"><seg>And he comforted them, and spake kindly unto them.</seg></tuv>
+<tuv xml:lang="pt-BR"><seg>Assim os consolou, e fallou segundo o coração dʼelles.</seg></tuv>
+</tu>
+</body>
+</tmx>

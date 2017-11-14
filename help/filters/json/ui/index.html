@@ -1,0 +1,140 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - JSON Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">JSON Filter (BETA)</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=JSON_Filter">http://okapiframework.org/wiki/index.php?title=JSON_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The JSON Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+JSON (Javascript Object Notation). The filter is implemented in the class <code>
+net.sf.okapi.filters.json.JSONFilter</code> of the Okapi library.</p>
+<p>The implementation is based on the <a href="http://www.json.org/">JSON 
+specifications</a>.</p>
+<p>The following is an example of a very simple JSON file. The translatable text 
+is marked in <b>bold</b>.</p>
+<pre>{&quot;menu&quot;: {
+  &quot;value&quot;: &quot;<b>File</b>&quot;,
+   &quot;popup&quot;: {
+      &quot;menuitem&quot;: [
+         {&quot;value&quot;: &quot;<b>New</b>&quot;},
+         {&quot;value&quot;: &quot;<b>Open</b>&quot;},
+         {&quot;value&quot;: &quot;<b>Close</b>&quot;}
+      ]
+   }
+}}</pre>
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>JSON files are normally in one of the Unicode encoding, but the filter 
+supports any encoding. It decides which encoding to use for the input file using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Else, if a header entry with a <code>charset</code> declaration 
+	exists in the first 1000 characters of the file:<ul>
+	<li>If the value of the charset is &quot;<code>charset</code>&quot; (case 
+	insensitive):<ul>
+	<li>Then the file is likely to be a template with no encoding declared, so 
+	the current encoding (auto-detected or default) is used.</li>
+	<li>Else, the declared encoding is used. Note that if the encoding has been detected from a Byte-Order-Mark 
+		and the encoding declared in the header entry does not match, a warning is 
+		generated and the encoding of the Byte-Order-Mark is used.</li>
+</ul>
+	</li>
+</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	setting the filter options.</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Options Tab</h3>
+<h4>Stand-alone strings</h4>
+<p><cite>Extract strings without associated key</cite> -- Set this option to 
+extract string that are not associated directly to a key value.</p>
+<h4>Strings with keys</h4>
+<p><cite>Extract all key/strings pairs</cite> -- Set this option to extract all 
+strings that have a key associated. If a regular expression for exceptions is 
+defined, the strings that have a key matching the expression are not extracted.</p>
+<p><cite>Do not extract key/string pairs</cite> -- Set the option to not extract 
+any string that has an associated key. If a regular expression for exceptions is 
+defined, the strings that have a key matching the expression are extracted.</p>
+<p><cite>Excepted when the key matches the following regular expression</cite> 
+-- Enter a regular expression that correspond to the keys that should have a 
+behavior inverse to the default behavior you have selected for the key/strings 
+pairs.</p>
+<h3>Inline Codes Tab</h3>
+<p><cite>Has inline codes as defined below:</cite> -- Set this option to use the specified regular expression to be use against the text of the extracted items. Any match will be converted to an inline code. By default the expression is:</p>
+<pre>((%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgGpn])
+|((\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v)
+|(\{\d.*?\}))</pre>
+<p><cite>Add</cite> -- Click this button to add a new rule.</p>
+<p><cite>Remove</cite> -- Click this button to remove the current rule.</p>
+<p><cite>Move Up</cite> -- Click this button to move the current rule upward.</p>
+<p><cite>Move down</cite> -- Click this button to move the current rule 
+downward.</p>
+<p>[Top-right text box] -- Enter the regular expression for the 
+current rule. Use the <cite>Modify</cite> button to enter the edit mode. The 
+expression must be a valid
+<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html">
+regular expression</a>. You can check the syntax 
+(and the effect of the rule) as it automatically tests it against the test data in the text box below and shows the result in the bottom-right text box.</p>
+<p><cite>Modify</cite> -- Click this button to edit the expression of the 
+current rule. This button is labeled <cite>Accept</cite> when you are in 
+edit mode.</p>
+<p><cite>Accept</cite> -- Click this button to save any changes you have 
+made to the expression and leave the edit mode. This button is labeled <cite>
+Modify</cite> when you are not in edit mode.</p>
+<p><cite>Discard</cite> -- Click this button to leave the edit mode and 
+revert the current rule to the expression it had before you started the edit 
+mode.</p>
+<p><cite>Patterns</cite> -- Click this button to display a list of "guidline" regular 
+expression patterns then select a pattern to insert it the edit box. The inserted text replaces whatever text is 
+currently selected.</p>
+<p><cite>Test using all rules</cite> -- Set this option to test all the rules at the same 
+time. The syntax of the current rule is automatically checked. See the effect it has on the sample text. The result of the test are displayed in the bottom right result box. The parts of the text that are 
+matches of the expressions are displayed in &lt;&gt; brackets. If the <cite>Test using all rules</cite> option is set, the test takes all rules of the set in account, if it is not set only the current rule is 
+tested.</p>
+<p>[Middle-right text box] -- Optional test data to test the regular expression for the 
+current rule or all rules depending on the <cite>Test using all rules</cite> option.</p>
+<p>[Bottom-right text box] -- Shows the result of the regular expression applied to the test data.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

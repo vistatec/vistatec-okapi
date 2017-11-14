@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<doc>
+ <p id="p1">Text with &amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos.</p>
+ <p id="p2">Text with á=aacute, ó=oactue, ü=uuml, <!-- comments with áóü --></p>
+</doc>

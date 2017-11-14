@@ -1,0 +1,9 @@
+#v1
+description=Test lexers of the tokenization step (used in tests only) 
+StructureParametersItemCount.i=1
+
+StructureParametersItem0.enabled.b=true
+StructureParametersItem0.description=Internal RuleBasedBreakIterator rules of RbbiLexer.
+StructureParametersItem0.lexerClass=net.sf.okapi.steps.tokenization.engine.RbbiLexer
+StructureParametersItem0.rulesLocation=test_rbbi_main.tprm
+

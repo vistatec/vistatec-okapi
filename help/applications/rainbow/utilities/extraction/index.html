@@ -1,0 +1,280 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Translation Package Creation</title>
+<link rel="stylesheet" type="text/css" href="../../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Utilities</h1>
+		<h2 class="head2">Translation Package Creation</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Utilities</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<p>This utility allows you to create a translation package for a given set of 
+input documents.</p>
+<h2>Input Parameters</h2>
+<ul>
+	<li>The list of the source documents to translate (Input list 1).</li>
+	<li>The source language.</li>
+	<li>The target language.</li>
+	<li>The default input encoding.</li>
+	<li>The output encoding.</li>
+</ul>
+<h2>Configuration</h2>
+<h3>Package Format Tab</h3>
+<p><cite>Type of package to create</cite> -- Select the type of package you want 
+to create. Note that not all types of input document can be prepared using some 
+type of package. For example, the type <cite>Original + RTF Layer</cite> cannot 
+be applied to original files that or in some kind of binary formats.</p>
+<p>There are several types of package available:</p>
+<ul>
+	<li><cite><a href="#genericXLIFF">Generic XLIFF</a></cite>: Simple package where all files to translate 
+	are extracted to XLIFF. You can translate this package with any XLIFF 
+	editor.</li>
+	<li><cite><a href="#omegat">OmegaT</a></cite>: OmegaT project with all its files and 
+	directory structure in place. You can translate this package with 
+	<a target="_blank" href="http://www.omegat.org/">OmegaT</a>.</li>
+	<li><cite><a href="#originalPlusRTF">Original + RTF Layer</a></cite>: Package where all the files 
+	to translate are converted into an RTF file with Trados-compatible styles. 
+	You can translate this package with Trados Translator&#39;s Workbench or any 
+	compatible tool.</li>
+</ul>
+<h3>Package Location Tab</h3>
+<p><cite>Root of the output directory</cite> -- Enter the root of the directory 
+where to generate the package. You can use the variable <code>${ProjDir}</code> 
+to specify the directory of your project.</p>
+<p><cite>Package name</cite> -- Enter the name of the package to generate.</p>
+<p>The combination of both entries makes up the full path of the output 
+directory.</p>
+<h3>Options Tab</h3>
+<p><cite>Compress the package into a ZIP file</cite> -- Select this option to 
+create a ZIP file that includes the whole package.</p>
+<h4>Segmentation</h4>
+<p><cite>Pre-segment the extracted text with the following SRX rules</cite> -- 
+Set this option to segment the content of each extracted text unit.</p>
+<p><cite>SRX file for the source</cite> -- Enter the path or URL of the SRX 
+document where to take the SRX rules for the source language. You can use the 
+variable <code>${ProjDir}</code> 
+to specify the directory of your project.</p>
+<p><cite>SRX file for the target</cite> -- Enter the path or URL of the SRX 
+document where to take the SRX rules for the target language. Note that when the 
+same document for both languages (most of the cases), the document is read only 
+once, saving processing time. You can use the variable <code>${ProjDir}</code> 
+to specify the directory of your project.</p>
+<h3>Pre-Translation Tab</h3>
+<p><cite>Pre-translate the extracted text using the following TM</cite> -- Set 
+this option to use a translation resource to leverage matches 
+into the prepared document (if the package to generate allows to do so). Select the translation resource to use.</p>
+<p><cite>Settings</cite> -- Click this button to enter the settings for the 
+selected translation resource. Not all translation resource connectors require 
+settings. the current settings are displayed under the translation resource 
+selection.</p>
+<p>Be aware that some translation resources can be slow to access (especially 
+those accessed through Internet), and using them may cause the process to be <b>
+extremely long</b> to complete.</p>
+<p><cite>Penalize matches with a FileName attribute different from the document 
+being processed</cite> -- Set this option to 
+filter the TM matches based on the values of <code>FileName</code> attribute. When this option is set, only the matches that 
+have, not only the source text but also the values for <code>FileName</code> that match are leveraged. When this option is not set, 
+the leveraging is not filtered by the <code>FileName</code> attribute.</p>
+<p><cite>Penalize matches with a GroupName attribute different from the group 
+being processed</cite> -- Set this option to 
+filter the TM matches based on the values of <code>GroupName</code> attribute. When this option is set, only the matches that 
+have, not only the source text but also the values for <code>GroupName</code> that match are leveraged. When this option is not set, 
+the leveraging is not filtered by the <code>GroupName</code> attribute.</p>
+<p><cite>Leverage only matches greater or equal to</cite> -- Set the threshold 
+under which matches should not be leveraged. the value must be between 0 
+(leverage anything) and 100 (leverage only exact matches). Note that if there are 
+several matches (regardless of their scores) only the first one is generated in 
+the <a href="#tmxOutput">TMX output</a> and, if the selected package allows it, 
+in the translation file.</p>
+<h3>About SimpleTM</h3>
+<p><b>SimpleTM is a provisional simple TM engine</b> that can match only exact matches, 
+and use attributes. It also allows multiple translations of the same source 
+text. When the attributes are not used, you may get several exact matches, if at 
+least of of them has a different translation, the segment is matched at 99% 
+only. Segments that have the exact same text but inline codes that have 
+different content or are in different order are matched at 99%. Optionally an 
+additional 1% penality can be taken out of the score if the inline codes of the 
+source and/or of the target have different content or are in a different order as the ones of the 
+source text queried. The only types of matches SimpleTM can generate are: 100%, 99%, 
+98%, and 0%.</p>
+<p>Using the attributes with a SimpleTM memory filters out any candidate that 
+does not have matching values for the given attributes:</p>
+<p>For example, given an segment to leverage that is:<br>
+Text = &quot;Segment text.&quot;<br>
+FileName = myFile.ext<br>
+GroupName = myGroup</p>
+<table border="1" id="table1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>Candidates in the TM</td>
+		<td>FileName Off<br>
+		GroupName Off</td>
+		<td>FileName On<br>
+		GroupName Off</td>
+		<td>FileName Off<br>
+		GroupName On</td>
+		<td>FileName On<br>
+		GroupName On</td>
+	</tr>
+	<tr>
+		<td>Text = &quot;Segment text&quot;<br>
+		FileName = myFile.ext<br>
+		groupName = myGroup</td>
+		<td>Match 100%</td>
+		<td>Match 100%</td>
+		<td>Match 100%</td>
+		<td>Match 100%</td>
+	</tr>
+	<tr>
+		<td>Text = &quot;Segment text&quot;<br>
+		FileName = someFile.ext<br>
+		groupName = myGroup</td>
+		<td>Match 100%</td>
+		<td>No Match</td>
+		<td>Match 100%</td>
+		<td>No Match</td>
+	</tr>
+	<tr>
+		<td>Text = &quot;Segment text&quot;<br>
+		FileName = myFile.ext<br>
+		groupName = someGroup</td>
+		<td>Match 100%</td>
+		<td>Match 100%</td>
+		<td>No Match</td>
+		<td>No Match</td>
+	</tr>
+	<tr>
+		<td>Text = &quot;Segment text&quot;<br>
+		FileName = someFile.ext<br>
+		groupName = someGroup</td>
+		<td>Match 100%</td>
+		<td>No Match</td>
+		<td>No Match</td>
+		<td>No Match</td>
+	</tr>
+</table>
+<p>In the future, the SimpleTM engine will be replaced by more a powerful TM engine: 
+the Pensieve TM.</p>
+<h3>About the Pensieve TM</h3>
+<p>The Pensieve TM engine is Okapi&#39;s own TM engine. It is still under 
+development, but can be used already for production work.</p>
+<h2><a name="processing"></a>Processing Details</h2>
+<p>The output of this utility varies depending on which type of package is 
+selected.</p>
+<h3><a name="genericXLIFF"></a>Generic XLIFF Package</h3>
+<p>This package is an output where all translatable documents are extracted into 
+XLIFF. You can translate this package with any XLIFF editor. Example of 
+open-source tools that are XLIFF-capable are (among others):
+<a href="http://www.omegat.org/">OmegaT</a>,
+<a href="http://translate.sourceforge.net/wiki/virtaal/index">Virtaal</a>,
+<a href="http://qt.nokia.com/products/developer-tools">Qt Linguist</a>, and
+<a href="http://userbase.kde.org/Lokalize">Lokalize</a>. </p>
+<p>All the files to translated are in the <code>work</code> sub-directory.</p>
+<p>The <code>original</code> sub-directory contains all the original documents 
+and the parameters with which they have been extracted. You want to keep this 
+sub-directory: It is used to merge back the extracted files into their original 
+formats.</p>
+<p>At the root of the package you will find:</p>
+<ul>
+	<li>The <code>manifest.xml</code> file. Do not modify, rename, or change 
+	otherwise this file. It will be used to merge back the extracted files into 
+	their original formats.</li>
+	<li>Any <a href="#tmxOutput">TMX output</a> file that was generated.</li>
+</ul>
+<p>To merge back the translation of this package use the <cite>
+<a href="../merging/index.html">Translation Package Post-Processing</a></cite> 
+utility.</p>
+<h3><a name="omegat"></a>OmegaT Package</h3>
+<p>this package is an output where all translatable documents are extracted into 
+XLIFF-compatible files and an OmegaT project is created, with all its files and 
+directory structure in place. You can translate this package with
+<a target="_blank" href="http://www.omegat.org/">OmegaT</a>.</p>
+<p>Note that the XLIFF documents generated in this package are intended to be 
+used only with OmegaT.</p>
+<p>All the files to translated are in the <code>source</code> sub-directory.</p>
+<p>The <code>original</code> sub-directory contains all the original documents 
+and the parameters with which they have been extracted. You want to keep this 
+sub-directory: It is used to merge back the extracted files into their original 
+formats.</p>
+<p>At the root of the package you will find:</p>
+<ul>
+	<li>The <code>manifest.xml</code> file. Do not modify, rename, or change 
+	otherwise this file. It may be used to post-process the converted files into 
+	their original formats.</li>
+	<li>The <code>omegat.project</code> file. this is the file that contains all 
+	the settings for the OmegaT project.</li>
+</ul>
+<p>The <code>tm</code> sub-directory contains the <code><a href="#tmxOutput">
+unapproved.tmx</a></code>, <code><a href="#tmxOutput">alternate.tmx</a></code> 
+and <code><a href="#tmxOutput">leverage.tmx</a></code> 
+files if they were generated.</p>
+<p dir="ltr">The <code>omegat</code> sub-directory contains the <code>
+project_save.tmx</code> file if it was generated. This TMX document contains all 
+entries set as approved, and well as all 100% matches of the leverage, if one 
+was done.</p>
+<p>To merge back the translation of this package:</p>
+<ul>
+	<li>Use the <cite>Create Translated Documents</cite> command from the <cite>
+	Project</cite> menu of OmegaT. This will generate translated XLIFF documents 
+	in the <code>target</code> sub-directory.</li>
+	<li>Then use the <cite><a href="../merging/index.html">Translation Package 
+	Post-Processing</a></cite> utility.</li>
+</ul>
+<h3><a name="originalPlusRTF"></a>Original + RTF Layer Package</h3>
+<p>This package is an output where all the translatable documents are converted 
+into RTF files with Trados-compatible styles. 
+	You can translate this package with Trados Translator&#39;s Workbench or any 
+	compatible tool.</p>
+<p>All the files to translated are in the <code>work</code> sub-directory.</p>
+<p>The <code>original</code> sub-directory contains all the original documents 
+and the parameters with which they have been extracted. You want to keep this 
+sub-directory: It is used to merge back the extracted files into their original 
+formats.</p>
+<p>At the root of the package you will find:</p>
+<ul>
+	<li>The <code>manifest.xml</code> file. Do not modify, rename, or change 
+	otherwise this file. It may be used to post-process the converted files into 
+	their original formats.</li>
+	<li>Any <a href="#tmxOutput">TMX output</a> file that was generated.</li>
+</ul>
+<p>To merge back the translation of this package use the <cite>
+<a href="../merging/index.html">Translation Package Post-Processing</a></cite> 
+utility.</p>
+<h3><a name="tmxOutput"></a>TMX Output</h3>
+<p>In all packages you may have one or more TMX documents generated. they 
+correspond to possible existing translations obtained from the input documents 
+themselves (some input formats such as PO or XLIFF may have been pre-translated 
+already).</p>
+<p>The <code>approved.tmx</code> document contains all the translations that 
+were found in the original document and had an <i>approved</i> target property set to &quot;<code>yes</code>&quot;.</p>
+<p>The <code>unapproved.tmx</code> document contains all the translations that 
+were found in the original document and had no <i>approved</i> target property or an <i>approved</i> 
+target property set to something else than &quot;<code>yes</code>&quot;.</p>
+<p>The <code>alternate.tmx</code> document contains all the alternative 
+translation that were found along with the text units in the original document. For example the 
+translation found in the <code>&lt;alt-trans&gt;</code> elements of XLIFF files.</p>
+<p>The <code>leverage.tmx</code> document contains the matches that were 
+found if the pre-translation option was set.</p>
+<p>Note that if one of these TMX output does not contain any entry it is not 
+generated. Note also that the composition of each TMX document may be different 
+depending on the package you have selected. See the details on each package 
+description above.</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?> 
+<project name="okapi-lib" default="all" basedir="."> 
+
+	<!-- Guess the platform if this build file is not called with the platform already set -->
+	<condition property="platform" value="win32-x86">
+		<os family="windows"/>
+	</condition>
+	<condition property="platform" value="cocoa-macosx">
+		<os family="mac"/>
+	</condition>
+	<condition property="platform" value="gtk2-linux-x86">
+		<os name="Linux" arch="x86"/>
+	</condition>
+	<condition property="platform" value="gtk2-linux-x86_64">
+		<os name="Linux" arch="x86_64"/>
+	</condition>
+
+	<!-- Set flags for what dstribution is being built -->
+	<condition property="building-windows">
+		<equals arg1="${platform}" arg2="win32-x86"/>
+	</condition>
+	<condition property="building-mac">
+		<equals arg1="${platform}" arg2="cacoa-macosx"/>
+	</condition>
+	<condition property="building-linux">
+		<or>
+			<equals arg1="${platform}" arg2="gtk2-linux-x86"/>
+			<equals arg1="${platform}" arg2="gtk2-linux-x86_64"/>
+		</or>
+	</condition>
+
+	<!-- Get the version information to use from file -->
+	<property file="../shared/release.properties" />
+
+	<property file="libVersions.properties" />
+
+	<property name="okapilibStamp" value="${okapilibVersion}${releaseInfo}" />
+
+ 	<property name="tmp" value="tmp"/>
+	<property name="dist_plugins" value="dist_plugins"/>
+	<property name="mavenStore" value="${user.home}/.m2/repository"/>
+
+	<tstamp>
+	 <format property="TODAY" pattern="MMM-dd-yyyy"/>
+	</tstamp>
+
+	<!-- Initialization -->
+	<target name="init">
+
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${dist_plugins}"/>
+		</delete>
+		<mkdir dir="${dist_plugins}"/>
+
+		<copy todir="${dist_plugins}" file="data/okapi-plugins/pluginsDeployment.xml" overwrite="true"/>
+		<replace file="${dist_plugins}/pluginsDeployment.xml" token="@version@" value="${okapilibStamp}"/>
+
+	</target>
+	
+	<!-- Make the zip files -->
+	<target name="makeZips"> 
+
+		<!-- ============== okapi-steps-tradosutils -->
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${tmp}"/>
+		</delete>
+		<mkdir dir="${tmp}"/>
+
+		<property name="plg001" value="okapiTradosUtilities-${okapilibStamp}"/>
+		<property name="jacobJar" value="jacob-${net.sf.jacob-project.jacob.version}.jar"/>
+
+		<jar destfile="${tmp}/${plg001}.jar">
+			<manifest>
+				<attribute name="Class-Path" value="${jacobJar}" />
+			</manifest>
+			<fileset dir="../../okapi/steps/tradosutils/target/classes" includes="net/**" />
+		</jar>
+
+		<copy todir="${tmp}" file="${mavenStore}/net/sf/jacob-project/jacob/${net.sf.jacob-project.jacob.version}/${jacobJar}"/>
+		<copy todir="${tmp}" file="data/okapi-plugins/jacob-${net.sf.jacob-project.jacob.version}-x86.dll" overwrite="true"/>
+		<copy todir="${tmp}" file="data/okapi-plugins/jacob-${net.sf.jacob-project.jacob.version}-x64.dll" overwrite="true"/>
+		<zip destfile="${dist_plugins}/${plg001}.zip" basedir="${tmp}"/>
+
+	</target>
+	
+	<target name="all" depends="init, makeZips"/>
+
+</project>

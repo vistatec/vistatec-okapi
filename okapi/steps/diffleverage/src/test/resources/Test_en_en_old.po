@@ -1,0 +1,32 @@
+msgid "text 1 not to translate"
+msgstr "text 1 not to translate"
+
+msgid "text 2 to translate"
+msgstr "text 2 to translate"
+
+msgid "text 3 to translate"
+msgstr "text 3 to translate"
+
+msgid "text 4 not to translate"
+msgstr "text 4 to translate"
+
+msgid "text 5 to translate"
+msgstr "text 5 to translate"
+
+msgid "text 6 not to translate"
+msgstr "text 6 to translate"
+
+msgid "text 7 not to translate"
+msgstr "text 7 not to translate"
+
+msgid "text 8 to translate"
+msgstr "text 8 to translate"
+
+msgid "text 9 to translate"
+msgstr "text 9 to translate"
+
+msgid "text 10 to translate"
+msgstr "text 10 to translate"
+
+msgid "text 11 not to translate"
+msgstr "text 11 not to translate"

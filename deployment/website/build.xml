@@ -1,0 +1,56 @@
+<?xml version="1.0"?> 
+<project name="javadoc" default="all" basedir="."> 
+
+	<property file="../shared/release.properties" />
+	<property name="dist" value="dist"/>
+ 
+	<tstamp>
+	 <format property="TODAY" pattern="MMM-dd-yyyy"/>
+	</tstamp>
+
+	<target name="all"> 
+	
+		<delete dir="${dist}" failonerror="false"/>
+		<mkdir dir="${dist}"/>
+		
+		<copy todir="${dist}">
+			<fileset dir="../../website">
+				<exclude name="**/_*"/>
+				<exclude name="**/.*"/>
+			</fileset>
+		</copy>
+		<replace file="${dist}/downloads.html" token="@okapilibVersion@" value="${okapilibVersion}"/>
+		<replace file="${dist}/downloads.html" token="@okapiappsVersion@" value="${okapiappsVersion}"/>
+		<replace file="${dist}/downloads.html" token="@rainbowVersion@" value="${rainbowVersion}"/>
+		<replace file="${dist}/downloads.html" token="@ratelVersion@" value="${ratelVersion}"/>
+		<replace file="${dist}/downloads.html" token="@checkmateVersion@" value="${checkmateVersion}"/>
+		<replace file="${dist}/downloads.html" token="@tikalVersion@" value="${tikalVersion}"/>
+		
+		<property name="okapilibStamp" value="${okapilibVersion}${releaseInfo}" />
+		
+		<!-- Update and copy change log and readme -->
+		<copy todir="${dist}" file="../shared/changes.html"/>
+		<replace file="${dist}/changes.html" token="@date@" value="${TODAY}"/>
+		<copy todir="${dist}" file="../maven/data/okapi-apps/readme.html"/>
+		<replace file="${dist}/readme.html" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/readme.html" token="@date@" value="${TODAY}"/>
+		
+		<copy todir="${dist}/help">
+			<fileset dir="../../help">
+				<exclude name="**/_*"/>
+				<exclude name="**/.*"/>
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${dist}/javadoc"/>
+		<!-- javadoc files -->
+		<javadoc destdir="${dist}/javadoc" Encoding="UTF-8">
+			<packageset dir="../../okapi/core/src/main/java" defaultexcludes="yes"/>
+			<packageset dir="../../okapi/libraries/lib-segmentation/src/main/java" defaultexcludes="yes"/>			
+			<packageset dir="../../okapi/libraries/lib-translation/src/main/java" defaultexcludes="yes"/>			
+			<packageset dir="../../okapi/filters/its/src/main/java" defaultexcludes="yes"/>			
+		</javadoc>
+
+	</target>
+
+</project>

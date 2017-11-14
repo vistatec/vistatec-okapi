@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text xmlns:its="http://www.w3.org/2005/11/its">
+ <its:rules version="1.0">
+  <its:withinTextRule selector="//b|//img" withinText="yes"/>
+ </its:rules>
+
+ <p id="p1">Text of paragraph 1 with &amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos.</p>
+ <p id="p2">Text of paragraph 2.<!-- comments --></p>
+ <p id="p3">Text of paragraph 3.<?somepi piarg1=val1 piarg2 = val2?></p>
+ <p attr="&amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos." its:translate="no">No trans with &amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos, &#xa0;=nbsp.</p>
+ <p><![CDATA[ Text &=amp, <=lt, >=gt, ]=cbracket, [=obracket ]]></p>
+ <p its:translate="no"><![CDATA[ Text &=amp, <=lt, >=gt, ]=cbracket, [=obracket ]]></p>
+ <p>Before <img attr1="&amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos, &#xa0;=nbsp."/> after.</p>
+
+ <p>Text for p <b its:translate="no">no trans within text</b> text for p again</p>
+ <p>Text for p <b>within text text for b</b> text for p again</p>
+ <p>Text for p <q its:translate="no">no trans embedded</q> text for p again</p>
+ <p>Text for p <q>embedded text for q</q> text for p again</p>
+
+</text>
+<?pi pival?><!--last comment-->

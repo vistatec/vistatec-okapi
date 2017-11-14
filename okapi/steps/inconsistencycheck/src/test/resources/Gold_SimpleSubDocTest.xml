@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inconsistencyCheck perFile="false">
+<targetDifferences>
+<source>Source text</source>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Target text</issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Target text</issue>
+<issue seg="0" tu="tu4" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Rawr</issue>
+<issue seg="0" tu="tu3" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Target text 2</issue>
+</targetDifferences>
+<targetDifferences>
+<source>Source text 1</source>
+<issue seg="0" tu="tu1" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Target text 1</issue>
+<issue seg="0" tu="tu2" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Target text</issue>
+<issue seg="0" tu="tu4" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Rawr</issue>
+<issue seg="0" tu="tu5" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Target text 1</issue>
+</targetDifferences>
+<sourceDifferences>
+<target>Rawr</target>
+<issue seg="0" tu="tu4" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Source text</issue>
+<issue seg="0" tu="tu4" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Source text 1</issue>
+</sourceDifferences>
+<sourceDifferences>
+<target>Target text</target>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Source text</issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Source text</issue>
+<issue seg="0" tu="tu2" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Source text 1</issue>
+</sourceDifferences>
+<sourceDifferences>
+<target>Target text 2</target>
+<issue seg="0" tu="tu3" subDoc="1" doc="ROOT/SimpleSubDocTest.html.xlf">Source text 2</issue>
+<issue seg="0" tu="tu3" subDoc="2" doc="ROOT/SimpleSubDocTest.html.xlf">Source text</issue>
+</sourceDifferences>
+</inconsistencyCheck>

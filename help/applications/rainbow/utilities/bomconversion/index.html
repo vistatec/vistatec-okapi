@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Byte-Order-Mark Conversion</title>
+<link rel="stylesheet" type="text/css" href="../../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Utilities</h1>
+		<h2 class="head2">Byte-Order-Mark Conversion</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Utilities</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<p>This utility allows you to add or remove the Byte-Order-Mark (BOM) to or from 
+UTF-8 and UTF-16 files.</p>
+<p>The Byte-Order-Mark is a special Unicode mark that is used 
+to indicate if a file is in little-endian (U+FEFF) or big-endian (U+FFFE) mode. For more 
+information on the BOM see
+<a target="_blank" href="http://www.unicode.org/faq/utf_bom.html">http://www.unicode.org/faq/utf_bom.html</a>.</p>
+<p>This utility does not use filters.</p>
+<h2>Input Parameters</h2>
+<ul>
+	<li>The list of the input documents to modify (Input list 1).</li>
+	<li>The default input encoding (when Adding BOM).</li>
+	<li>The names and locations of the output documents.</li>
+</ul>
+<h2>Configuration</h2>
+<h3>Options Tab</h3>
+<h4>Actions on the Byte-Order-Mark</h4>
+<p><cite>Remove the Byte-Order-Mark if it is present</cite> -- Select this 
+option to remove the BOM from the input files if one is detected. By default 
+only the BOM of UTF-8 files are removed.</p>
+<p><cite>Remove also UTF-16 BOMs</cite> -- Select this option to also 
+remove the BOM from UTF-16 files if one is detected. This is not 
+something that is recommended: UTF-16 files must have a BOM.</p>
+<p><cite>Add the Byte-Order-Mark if it is not already present</cite> -- Select 
+this option to add a BOM in the input files if one is not detected. Note that 
+the input files must already be in UTF-8 or UTF-16.</p>
+<p>When using this feature, you also must specify the encoding of each file, so 
+the utility can add the proper type of BOM.</p>
+<p>&nbsp;</p>
+</body>
+</html>

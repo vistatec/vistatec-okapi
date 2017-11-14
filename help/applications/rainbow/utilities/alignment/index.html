@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ID-Based Alignment</title>
+<link rel="stylesheet" type="text/css" href="../../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Utilities</h1>
+		<h2 class="head2">ID-Based Alignment</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Utilities</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<h2 class="util2">Overview</h2>
+<p>This utility allows you to align the source and target content of documents 
+based on the identifiers of the text units. In addition, each text unit can be 
+segmented and this utility provides a basic default alignment of the segments, 
+along with <a href="aligner.html">an <cite>Alignment Verification</cite> editor</a> to fix any issue within those segments.</p>
+<p><b>Warning:</b>
+This utility is designed to be used only with documents formats that provide 
+identifiers (e.g. Properties files). Text units without identifier will not be 
+aligned (but they can be output in a separate TMX file).</p>
+<p><b>Note:</b>
+The result of the alignment is generated in a single TMX document even when the 
+input is made of several input documents. You can use an attribute with the 
+special variable <code>${filename}</code> to specify from 
+which document the entry came from. For example: <code>origin=${filename}</code></p>
+<h2>Input Parameters</h2>
+<ul>
+	<li>The list of the source documents to align (Input list 1).</li>
+	<li>The list of the corresponding target documents (Input list 2). If the 
+	document is multilingual, the target entry corresponding to the target 
+	language you specify is used.</li>
+	<li>The source language.</li>
+	<li>The target language.</li>
+	<li>The default source encoding.</li>
+	<li>The default target encoding.</li>
+</ul>
+<h2>Configuration</h2>
+<h3>Options Tab</h3>
+<h4>Segmentation</h4>
+<p><cite>Segment the extracted text using the following SRX rules</cite> -- Set 
+this option to segment the content of each extracted text unit. If this option 
+is set, the alignment is done first at the level of the text units (using their 
+identifiers), then within each text unit, at the level of the segments. If this 
+option is not set the alignment is done at the level of the text unit only.</p>
+<p><cite>SRX file for the source</cite> -- Enter the path or URL of the SRX 
+document where to take the SRX rules for the source language. You can use the 
+variable <code>${ProjDir}</code> for the directory of the project.</p>
+<p><cite>SRX file for the target</cite> -- Enter the path or URL of the SRX 
+document where to take the SRX rules for the target language. Note that when the 
+same document for both languages (most of the cases), the document is read only 
+once, saving processing time. You can use the variable <code>${ProjDir}</code> 
+to specify the directory of the project.</p>
+<h4>Verification and Correction</h4>
+<p><cite>Verify in-line codes for text units with single segment</cite> 
+-- Set this option to check the in-line codes of the text units that have only a 
+single segment. If this option is set the utility checks for possible issues and 
+may prompt the user to validate the alignment. If this option is not set the 
+utility assumes aligned text units with a single segment do not need manual 
+validation.</p>
+<p><cite>Use auto-correction automatically</cite> -- Set this option to 
+automatically try to correct text units that have a different number of source 
+and target segments. The user is always prompted to confirm the modifications 
+made by auto-correction.</p>
+<h3>Output Tab</h3>
+<h4>TMX Output</h4>
+<p><cite>Create a TMX document with the aligned entries</cite> -- Set this 
+option to create a TMX document from the results of the alignment.</p>
+<p>Enter the full path of the TMX document where to put the results of the 
+alignment. If the document already exists it will be overwritten. You can use 
+the variable <code>${ProjDir}</code> 
+to specify the directory of the project.</p>
+<p><cite>Create a TMX document with the source entries not found</cite> -- Set this 
+option to create a TMX document with the source entries not found or skipped 
+during the alignment.</p>
+<p>Enter the full path of the TMX document where to put the entries not found or 
+skipped. If the document already exists it will be overwritten. You can use 
+the variable <code>${ProjDir}</code> 
+to specify the directory of the project.</p>
+<p><cite>Generate Trados workarounds</cite> -- Set this option to generate Trados-specific output in the TMX document. This non-standard notation is needed 
+to prevent loosing some characters such a the backslash or the curly braces when 
+importing the TMX document in some versions of Trados Workbench.</p>
+<p>TMX documents generated with this option are not standard TMX files and will 
+likely not be imported correctly in tools correctly supporting TMX.</p>
+<p><cite>Exclude segments where the source text matches this regular expression</cite> 
+-- Set this option to exclude some entries from the TMX output.</p>
+<p>Enter the regular expression pattern to use. Any entry where the source text 
+matches the given expression will be excluded from the output.</p>
+<h4>SimpleTM Output</h4>
+<p><cite>Create a SimpleTM database with the following path</cite> -- Set this 
+option to generate a SimpleTM database from the results of the alignment.</p>
+<p>Enter the full path of the SimpleTM database where to put the results of the 
+alignment. If the document already exists it will be overwritten. You can use 
+the variable <code>${ProjDir}</code> 
+to specify the directory of the project.</p>
+<h4>Attributes</h4>
+<p><cite>Use the following attributes</cite> -- Set this option to include 
+attributes along with each aligned entry saved in the output files.</p>
+<p>Enter the list of pairs name = value for the attributes. Use one line per 
+attribute.</p>
+<p>There are two special variables that can be used as attribute values:</p>
+<ul>
+	<li><code>${filename}</code> is the name of the document being aligned.</li>
+	<li><code>${resname}</code> is the identifier for the segment.</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

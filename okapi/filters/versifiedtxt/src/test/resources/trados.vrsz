@@ -1,0 +1,16 @@
+|bC00 Source Links (Spanish)+| 
+|cone.properties (Task 1)+| 
+|v1 (gh)+| 
+{0>{tab}a record. <}100{>{tab}A RECORD. <0}{0>a "Source."<}100{>A “SOURCE”.<0}
+
+|v2 (source)+| 
+{0>{nb}Add a Source<}100{>{nb}ADD A SOURCE<0}
+
+|v3 (newsource)+| 
+{0>{em}Add a New Source<}100{>{em}ADD A NEW SOURCE<0}
+
+|v4 (sourcelink)+| 
+{0>{en}Create a New Source<}100{>{en}CREATE A NEW SOURCE<0}
+
+|v5 (suredetach)+| 
+{0>{emsp}detach this source?{ensp}<}100{>{emsp}DETACH THIS SOURCE FROM THIS INDIVIDUAL?{ensp}<0}

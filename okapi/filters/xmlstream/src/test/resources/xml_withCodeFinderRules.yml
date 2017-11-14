@@ -1,0 +1,4 @@
+preserve_whitespace: false
+# test code finder
+useCodeFinder: true
+codeFinderRules: "#v1\ncount.i=2\nrule0=[eE]\nrule1=\\bVAR\\d\\b"

@@ -1,0 +1,32 @@
+Value11,"Value12",Value13,Value14,
+Value21,"Value22.1,Value22.2, Value22.3",Value23,Value24
+
+Value31,Value32,Value33,"Value34.1
+Value34.2
+Value34.3
+Value34.4,Value34.5",Value35
+
+Value41,Value42,Value43,"Value44.1
+Value44.2
+Value44.3
+Value44.4","Value45.1,Value45.2"
+
+Value51,Value52,Value53,"Value54.1
+Value54.2
+Value54.3
+Value54.4,""Value55.1,Value55.2
+Value55.3,Value55.4"
+
+Value61,Value62,Value63,"Value64.1
+Value64.2
+Value64.3
+Value64.4,""Value65.1,Value65.2
+Value65.3,Value65.4
+Value65.5,""Value66"""
+
+Value71,"Value72 ""aaa ""quoted part 1"", then ""quoted part 2"" value"""",Value73"",Value74
+Value81,""Value82 with unclosed quote
+Value91,Value92
+""ValueA1"",ValueA2""""
+ValueB1","Value""B2,Va""lueB3",Va""lueB4""
+ValueC1,""ValueC2,ValueC3"",""ValueC4"",ValueC5

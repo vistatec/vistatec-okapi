@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- XMSG: Hello world -->
+	<string name="hello_world">Hello world!</string>
+	<!-- XFLD: Informs the user how many days ago an event occurred -->
+	<plurals name="event_occurred">
+		<item quantity="zero">today</item>
+		<item quantity="one">yesterday</item>
+		<item quantity="other">%d days ago</item>
+	</plurals>
+	<!-- XMSG: Displays the progress during data conversion -->
+	<string name="progress">%d%% of data converted</string>
+    <!-- XMIT: Menu entry to access the USB storage device on devices that don't have a SD card -->
+    <string name="acess_storage" product="nosdcard">Access the USB storage</string>
+    <!-- XMIT: Menu entry to acess the SD card -->
+    <string name="access_storage" product="default">Access the SD card</string>
+	<!-- Not intended for translation -->
+	<string name="dont_translate" translatable="false">Don\'t translate me</string>
+	<!-- XMSG: A message that is not formatted, i.e. the % character has no special meaning -->
+	<string name="unformatted" formatted="false">In this message the \'%\' does not have a special meaning</string>
+    <!-- XMIT: Signals the message category -->
+	<string-array name="colors">
+        <item>red</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>violet</item>
+    </string-array>
+	<!-- XMSG: A styled string -->
+	<string name="styled">This text is <b>bold and <u>underlinded and <i>italic</i></u></b>.</string>
+	<!-- XMSG: A styled and formatted strings where stylings are escaped -->
+	<string name="styled_formatted">The folder contains &lt;b&gt;%d&lt;/b&gt; files</string>
+	<!-- XMSG: A multi-line message -->
+	<string name="multi_line">First line\nSecond line</string>
+	<!-- XMSG: Demonstrates that whitespace is collapsed -->
+	<string name="whitespace_collapsing">   Be	aware
+		that non-quoted      whitespace
+		will be collapsed    </string>
+	<string name="quoting">"Use quoting    to preserve your whitespace"</string>
+</resources>

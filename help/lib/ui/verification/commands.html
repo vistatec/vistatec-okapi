@@ -1,0 +1,157 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CheckMate - Commands</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">CheckMate</h1>
+		<h2 class="head2">Commands</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=CheckMate">http://okapiframework.org/wiki/index.php?title=CheckMate</a></p>
+
+<ul>
+	<li><a href="#FileMenu">File</a><ul>
+		<li><a href="#New">New Session</a></li>
+		<li><a href="#Open">Open Session</a></li>
+		<li><a href="#Save">Save Session</a></li>
+		<li><a href="#SaveAs">Save Session As</a></li>
+		<li><a href="#RecentSessionFiles">Recent Session Files</a></li>
+		<li><a href="#ClearRecentSessionFilesList">Clear Recent Session Files 
+		List</a></li>
+		<li><a href="#AddDocument">Add Document</a></li>
+		<li><a href="#SessionSettings">Session Settings</a></li>
+		<li><a href="#UserPreferences">User Preferences</a></li>
+		<li><a href="#Exit">Exit</a></li>
+	</ul>
+	</li>
+	<li><a href="#Issues">Issues</a><ul>
+		<li><a href="#ResetAllDisabledIssues">Reset All Disabled Issues</a></li>
+		<li><a href="#editConfig">Edit Configuration</a></li>
+		<li><a href="#loadConfig">Load Configuration</a></li>
+		<li><a href="#saveConfig">Save Configuration</a></li>
+		<li><a href="#CheckAll">Check All</a></li>
+		<li><a href="#CheckCurrentDocument">Check Current Document</a></li>
+		<li><a href="#GenerateReport">Generate Report</a></li>
+	</ul>
+	</li>
+	<li><a href="#helpMenu">Help</a><ul>
+		<li><a href="#HelpTopics">Help Topics</a></li>
+		<li><a href="#HowToUse">How To Use CheckMate</a></li>
+		<li><a href="#CheckUpdates">Check For Updates</a></li>
+		<li><a href="#SendFeedback">Send Feedback</a></li>
+		<li><a href="#bugReport">Submit Bug Report</a></li>
+		<li><a href="#featureRequest">Submit Feature Request</a></li>
+		<li><a href="#UsersGroup">Users Group</a></li>
+		<li><a href="#About">About CheckMate</a></li>
+	</ul>
+	</li>
+</ul>
+<h2><a name="FileMenu"></a>File</h2>
+<h3><a name="New"></a>New Session</h3>
+<p>Creates a new empty session. If you have a modified 
+un-saved session already opened, the tool will ask you if you want to save your 
+changes before.</p>
+<p>Shortcut: <kbd>Ctrl+N</kbd></p>
+<h3><a name="Open"></a>Open</h3>
+<p>Opens an existing session. If you have a modified un-saved 
+session already opened, the tool will ask you if you want to save your changes 
+before.</p>
+<p>Shortcut: <kbd>Ctrl+O</kbd></p>
+<h3><a name="Save"></a>Save Session</h3>
+<p>Saves the current session. If the session has no name, the tool will prompt 
+you to choose one.</p>
+<p>Shortcut: <kbd>Ctrl+S</kbd></p>
+<h3><a name="SaveAs"></a>Save Session As</h3>
+<p>Saves the current session under a new name.</p>
+<h3><a name="RecentSessionFiles"></a>Recent Session Files</h3>
+<p>Opens the session selected in the list of most recently used sessions. If the 
+current session has been modified but not saved, you will be asked if you want 
+to save the changes.</p>
+<h3><a name="ClearRecentSessionFilesList"></a>Clear Recent Session Files List</h3>
+<p>Removes all sessions from the list of most recently used sessions.</p>
+<h3><a name="AddDocument"></a>Add Document</h3>
+<p>Adds a document to the list of documents to check in this session. </p>
+<p>Shortcut: <kbd>Ctrl+Insert</kbd></p>
+<p>You can 
+also add a document by:</p>
+<ul>
+	<li>dropping the file onto the issue list of the main window.</li>
+	<li>opening the <cite><a href="sessionsettings.html">Session Settings</a></cite> 
+	dialog box and use the <cite>Add</cite> button there.</li>
+</ul>
+<p>Note: All documents in the session must be for the same language pair. All 
+documents must be bilingual/multilingual translated documents (for example: 
+XLIFF, PO, TMX, TS, PO, etc).</p>
+<h3><a name="SessionSettings"></a>Session Settings</h3>
+<p>Opens the <cite><a href="sessionsettings.html">Session Settings</a></cite> 
+dialog box, where you can set the documents to process and other options.</p>
+<h3><a name="UserPreferences"></a>User Preferences</h3>
+<p>Opens the <cite><a href="preferences.html">User Preferences</a></cite> dialog 
+box, where you can set user-specific options such as the fonts used to display 
+the source and target text.</p>
+<h3><a name="Exit"></a>Exit</h3>
+<p>Exits the editor. If you have a modified un-saved document already opened, 
+the tool will ask you if you want to save your changes before.</p>
+<p>Shortcut: <kbd>Alt+F4</kbd></p>
+<h2><a name="Issues"></a>Issues</h2>
+<h3><a name="ResetAllDisabledIssues"></a>Reset All Disabled Issues</h3>
+<p>Resets to enabled all issues currently set as disabled, on all documents.</p>
+<h3><a name="editConfig"></a>Edit Configuration</h3>
+<p>Opens the <cite><a href="parameterseditor.html">Quality Check Configuration</a></cite> 
+dialog box, where you specify the types of checks to perform.</p>
+<h3><a name="loadConfig"></a>Load Configuration</h3>
+<p>Loads an existing configuration file.</p>
+<h3><a name="saveConfig"></a>Save Configuration</h3>
+<p>Save the current configuration into a file.</p>
+<h3><a name="CheckAll"></a>Check All</h3>
+<p>Performs all the verifications currently selected for all the documents currently in 
+the session.</p>
+<p>Shortcut: <kbd>Shift+F5</kbd></p>
+<h3><a name="CheckCurrentDocument"></a>Check Current Document</h3>
+<p>Performs all the verifications currently selected for only the document of 
+the issue currently selected.</p>
+<p>Shortcut: <kbd>F5</kbd></p>
+<h3><a name="GenerateReport"></a>Generate Report</h3>
+<p>Generates a report of all issues (disabled issues are not included in the 
+report). The path of the report is specified in the <cite>
+<a href="parameterseditor.html">Quality Check Options</a></cite> dialog box.</p>
+<h2><a name="helpMenu"></a>Help</h2>
+<h3><a name="HelpTopics"></a>Help Topics</h3>
+<p>Opens the main help page for this application.</p>
+<p>Shortcut: <kbd>F1</kbd></p>
+<h3><a name="HowToUse"></a>How To Use CheckMate</h3>
+<p>Opens the help page to get you started with this application.</p>
+<h3><a name="CheckUpdates"></a>Check For Updates</h3>
+<p>Checks if there is an updated version of CheckMate that is available. If 
+CheckMate is 
+invoked from a parent application, this command checks for updates of the parent 
+application.</p>
+<p>This command connects to Internet and send only the name of the product and 
+its version number.</p>
+<h3><a name="SendFeedback"></a>Send Feedback</h3>
+<p>Sends an email with feedback to the development team.</p>
+<h3><a name="bugReport"></a>Submit Bug Report</h3>
+<p>Opens the page where you can submit a bug report.</p>
+<h3><a name="featureRequest"></a>Submit Feature Request</h3>
+<p>Opens the page where you can submit a feature request.</p>
+<h3><a name="UsersGroup"></a>Users Group</h3>
+<p>Opens the <b>Okapi Tools</b> users group (<a target="_blank" href="http://tech.groups.yahoo.com/group/okapitools/">http://tech.groups.yahoo.com/group/okapitools/</a>) 
+where you can discuss Okapi-related topics with other users.</p>
+<h3><a name="About"></a>About CheckMate</h3>
+<p>Opens the <cite>About CheckMate</cite> dialog box where you can find version 
+and system information.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

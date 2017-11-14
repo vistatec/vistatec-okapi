@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\home_big.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">a44bfdb2-3d8a-45b3-8ff9-684ed98bd733</value><value key="SDL:CreationDate">03/21/2011 16:54:27</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\home_big.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\home_big.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6557</value><value key="SDLWS:DocId">7405</value><value key="SDLWS:TaskId">8371</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:27Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="x-tm-heading" code="T" name="Title" descr="Title of the document" /></cxt-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="0"><st name="HTML">&lt;HTML&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="1"><st name="HEAD">&lt;HEAD&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="TITLE">&lt;TITLE&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="3"><st name="TITLE">&lt;/TITLE&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="4"><st name="META">&lt;META CONTENT="We are really BIG. We will take on any project no matter how gargantuan."&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag></tag-defs></header><body>
+<trans-unit id="bb6e1b71-cb10-4f20-b8fa-f2eb12486268" translate="no"><source><x id="0" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="5e963fee-7f22-4d12-b315-d9c35844ac2a" translate="no"><source>
+<x id="1" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="b47cfe95-ba15-489b-917b-747d2b4adf3c" translate="no"><source>
+   <x id="2" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="3191d6fb-fc9b-417d-905a-6ef728f70a88"><source>HTML By Bad Example: BIG Systems Corp. Home Page</source><seg-source><mrk mtype="seg" mid="1">HTML By Bad Example:</mrk> <mrk mtype="seg" mid="2">BIG Systems Corp. Home Page</mrk></seg-source><target><mrk mtype="seg" mid="1" /> <mrk mtype="seg" mid="2" /></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /><sdl:seg id="2" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ef487afd-fa48-413c-964e-d3d6f965a25c" translate="no"><source><x id="3" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ef1a4407-b54d-45ed-bb0a-904301d70170" translate="no"><source>
+   <x id="4" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="b1b12acd-6792-4ff3-af62-757c00672d20" translate="no"><source>
+   </source></trans-unit>
+<trans-unit id="7e99b0a6-d665-451d-994c-db8173917d49"><source>&lt;META KEYWORDS="developer","big","giant","home page", "learn", "bad example", "San Francisco","marriage counceling","city manager","corporation,"mission", "paradigm shift","worm hole","systems","developer","construction","motto"&gt; &lt;/HEAD&gt;
+
+&lt;BODY BGCOLOR="#CCFFCC" TEXT="#003333" LINK="#003399"&gt;&lt;B&gt;
+
+&lt;CENTER&gt; &lt;FONT SIZE=5&gt;Really &lt;/FONT&gt; &lt;FONT SIZE=7&gt;Big&lt;/FONT&gt; &lt;FONT SIZE=5&gt; Systems Corporation&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;"No system is too big for our developers."&lt;/FONT&gt; &lt;/CENTER&gt; &lt;P&gt;
+
+&lt;TABLE BORDER&gt;
+
+&lt;TR&gt; &lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our founder&lt;/FONT&gt;&lt;/B&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;Mr. BIG is a self-made man &lt;BR&gt;who weighs in at 437 pounds. &lt;BR&gt;blah scrdle blah asdfghjklyui. &lt;BR&gt;blah pgrugrat blah asdfghjklyui. &lt;BR&gt;He wears a 73 shirt. &lt;BR&gt;He is really big. &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our accomplishments&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt; blah troglm blah trabo blah blah. &lt;BR&gt;blah glubta blah burbtle blah blah &lt;BR&gt;borgot blah blah, plusgup blah turgatle. &lt;BR&gt;transpec blah pargat blah blah blah &lt;BR&gt;blah fob purtleo blah pribato blah &lt;BR&gt;trannle fanbut blah tranda blah brop &lt;BR&gt;blah blah blah burdg blah raptle. &lt;BR&gt;&lt;FONT SIZE=2&gt;Yes, our accomplishments are big. &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our services&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Planet Construction &lt;BR&gt;Worm Hole Maintenance &lt;BR&gt;Galaxy Management &lt;BR&gt;Solar System Maintenance &lt;BR&gt;Marriage Counseling &lt;BR&gt;Paradigm Shift Management &lt;BR&gt;Universe Construction &lt;BR&gt;and anything hopelessly big &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;current&lt;BR&gt;employment&lt;BR&gt;opportunities&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Demigod&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Galaxy Developer&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Worm Hole Specialist&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;City Manager&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Archangel&lt;/FONT&gt;
+
+&lt;/TR&gt; &lt;TR&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our mission&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;to build systems that are &lt;BR&gt;monuments to our founder Mr. BIG, &lt;BR&gt;systems that are incomprehensible. &lt;BR&gt;Do they work? &lt;BR&gt;Who cares just as long as &lt;BR&gt;they are really big. &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;more accomplishments&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt; qwerty uiop blah blah budle blah blah. &lt;BR&gt;blah asdfg hjkloi blah blah, &lt;BR&gt;rfafle puggleflu blah plmkj fdsa blah blah &lt;BR&gt;blah podpul blah tghkl fty blah. &lt;BR&gt;frondrat blah truc per blah asrtyu hdkid. &lt;BR&gt;blah sdfgh blah dfregs blah blah. &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our headquarters&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;Our headquarters is the well known &lt;BR&gt;BIG Pyramid in downtown San Francisco. &lt;BR&gt;blah asdfg hjkloi blah pertle. &lt;BR&gt;blah gristdl plmkj fdsa blah ferv, blah &lt;BR&gt;fragilif blah blah tghkl fty blah. &lt;BR&gt;It's shaped as a symbol of &lt;BR&gt;Mr. Big's virility, aggression, &lt;BR&gt;unpredictablility and his all around &lt;BR&gt;bigness. &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;CENTER&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our motto&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;We are Big!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;We are Big!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=3&gt;We are Big!!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=4&gt;We are Big!!!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=5&gt;Really Big!!!!!&lt;/FONT&gt; &lt;/CENTER&gt;
+
+&lt;/TR&gt; &lt;/TABLE&gt;
+
+&lt;P&gt; &lt;CENTER&gt; &lt;FONT SIZE=5&gt;Remember we are really &lt;FONT SIZE=7&gt;Big&lt;/FONT&gt; &lt;/CENTER&gt; 
+
+&lt;P&gt; &lt;HR&gt; &lt;/BODY&gt; &lt;/HTML&gt;
+</source><seg-source><mrk mtype="seg" mid="3">&lt;META KEYWORDS="developer","big","giant","home page", "learn", "bad example", "San Francisco","marriage counceling","city manager","corporation,"mission", "paradigm shift","worm hole","systems","developer","construction","motto"&gt; &lt;/HEAD&gt;
+
+&lt;BODY BGCOLOR="#CCFFCC" TEXT="#003333" LINK="#003399"&gt;&lt;B&gt;
+
+&lt;CENTER&gt; &lt;FONT SIZE=5&gt;Really &lt;/FONT&gt; &lt;FONT SIZE=7&gt;Big&lt;/FONT&gt; &lt;FONT SIZE=5&gt; Systems Corporation&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;"No system is too big for our developers."&lt;/FONT&gt; &lt;/CENTER&gt; &lt;P&gt;
+
+&lt;TABLE BORDER&gt;
+
+&lt;TR&gt; &lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our founder&lt;/FONT&gt;&lt;/B&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;Mr. BIG is a self-made man &lt;BR&gt;who weighs in at 437 pounds.</mrk> <mrk mtype="seg" mid="4">&lt;BR&gt;blah scrdle blah asdfghjklyui.</mrk> <mrk mtype="seg" mid="5">&lt;BR&gt;blah pgrugrat blah asdfghjklyui.</mrk> <mrk mtype="seg" mid="6">&lt;BR&gt;He wears a 73 shirt.</mrk> <mrk mtype="seg" mid="7">&lt;BR&gt;He is really big.</mrk> <mrk mtype="seg" mid="8">&lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our accomplishments&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt; blah troglm blah trabo blah blah.</mrk> <mrk mtype="seg" mid="9">&lt;BR&gt;blah glubta blah burbtle blah blah &lt;BR&gt;borgot blah blah, plusgup blah turgatle.</mrk> <mrk mtype="seg" mid="10">&lt;BR&gt;transpec blah pargat blah blah blah &lt;BR&gt;blah fob purtleo blah pribato blah &lt;BR&gt;trannle fanbut blah tranda blah brop &lt;BR&gt;blah blah blah burdg blah raptle.</mrk> <mrk mtype="seg" mid="11">&lt;BR&gt;&lt;FONT SIZE=2&gt;Yes, our accomplishments are big.</mrk> <mrk mtype="seg" mid="12">&lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our services&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Planet Construction &lt;BR&gt;Worm Hole Maintenance &lt;BR&gt;Galaxy Management &lt;BR&gt;Solar System Maintenance &lt;BR&gt;Marriage Counseling &lt;BR&gt;Paradigm Shift Management &lt;BR&gt;Universe Construction &lt;BR&gt;and anything hopelessly big &lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;current&lt;BR&gt;employment&lt;BR&gt;opportunities&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Demigod&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Galaxy Developer&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Worm Hole Specialist&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;City Manager&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;Archangel&lt;/FONT&gt;
+
+&lt;/TR&gt; &lt;TR&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our mission&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;to build systems that are &lt;BR&gt;monuments to our founder Mr. BIG, &lt;BR&gt;systems that are incomprehensible.</mrk> <mrk mtype="seg" mid="13">&lt;BR&gt;Do they work?</mrk> <mrk mtype="seg" mid="14">&lt;BR&gt;Who cares just as long as &lt;BR&gt;they are really big.</mrk> <mrk mtype="seg" mid="15">&lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;more accomplishments&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt; qwerty uiop blah blah budle blah blah.</mrk> <mrk mtype="seg" mid="16">&lt;BR&gt;blah asdfg hjkloi blah blah, &lt;BR&gt;rfafle puggleflu blah plmkj fdsa blah blah &lt;BR&gt;blah podpul blah tghkl fty blah.</mrk> <mrk mtype="seg" mid="17">&lt;BR&gt;frondrat blah truc per blah asrtyu hdkid.</mrk> <mrk mtype="seg" mid="18">&lt;BR&gt;blah sdfgh blah dfregs blah blah.</mrk> <mrk mtype="seg" mid="19">&lt;/FONT&gt;
+
+&lt;TD&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our headquarters&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;Our headquarters is the well known &lt;BR&gt;BIG Pyramid in downtown San Francisco.</mrk> <mrk mtype="seg" mid="20">&lt;BR&gt;blah asdfg hjkloi blah pertle.</mrk> <mrk mtype="seg" mid="21">&lt;BR&gt;blah gristdl plmkj fdsa blah ferv, blah &lt;BR&gt;fragilif blah blah tghkl fty blah.</mrk> <mrk mtype="seg" mid="22">&lt;BR&gt;It's shaped as a symbol of &lt;BR&gt;Mr. Big's virility, aggression, &lt;BR&gt;unpredictablility and his all around &lt;BR&gt;bigness.</mrk> <mrk mtype="seg" mid="23">&lt;/FONT&gt;
+
+&lt;TD&gt;&lt;CENTER&gt;&lt;B&gt;&lt;FONT SIZE=3&gt;our motto&lt;/B&gt;&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=1&gt;We are Big!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=2&gt;We are Big!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=3&gt;We are Big!!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=4&gt;We are Big!!!!&lt;/FONT&gt; &lt;BR&gt;&lt;FONT SIZE=5&gt;Really Big!!!!!&lt;/FONT&gt; &lt;/CENTER&gt;
+
+&lt;/TR&gt; &lt;/TABLE&gt;
+
+&lt;P&gt; &lt;CENTER&gt; &lt;FONT SIZE=5&gt;Remember we are really &lt;FONT SIZE=7&gt;Big&lt;/FONT&gt; &lt;/CENTER&gt; 
+
+&lt;P&gt; &lt;HR&gt; &lt;/BODY&gt; &lt;/HTML&gt;</mrk>
+</seg-source><target><mrk mtype="seg" mid="3" /> <mrk mtype="seg" mid="4" /> <mrk mtype="seg" mid="5" /> <mrk mtype="seg" mid="6" /> <mrk mtype="seg" mid="7" /> <mrk mtype="seg" mid="8" /> <mrk mtype="seg" mid="9" /> <mrk mtype="seg" mid="10" /> <mrk mtype="seg" mid="11" /> <mrk mtype="seg" mid="12" /> <mrk mtype="seg" mid="13" /> <mrk mtype="seg" mid="14" /> <mrk mtype="seg" mid="15" /> <mrk mtype="seg" mid="16" /> <mrk mtype="seg" mid="17" /> <mrk mtype="seg" mid="18" /> <mrk mtype="seg" mid="19" /> <mrk mtype="seg" mid="20" /> <mrk mtype="seg" mid="21" /> <mrk mtype="seg" mid="22" /> <mrk mtype="seg" mid="23" />
+</target><sdl:seg-defs><sdl:seg id="3" origin="not-translated" /><sdl:seg id="4" origin="not-translated" /><sdl:seg id="5" origin="not-translated" /><sdl:seg id="6" origin="not-translated" /><sdl:seg id="7" origin="not-translated" /><sdl:seg id="8" origin="not-translated" /><sdl:seg id="9" origin="not-translated" /><sdl:seg id="10" origin="not-translated" /><sdl:seg id="11" origin="not-translated" /><sdl:seg id="12" origin="not-translated" /><sdl:seg id="13" origin="not-translated" /><sdl:seg id="14" origin="not-translated" /><sdl:seg id="15" origin="not-translated" /><sdl:seg id="16" origin="not-translated" /><sdl:seg id="17" origin="not-translated" /><sdl:seg id="18" origin="not-translated" /><sdl:seg id="19" origin="not-translated" /><sdl:seg id="20" origin="not-translated" /><sdl:seg id="21" origin="not-translated" /><sdl:seg id="22" origin="not-translated" /><sdl:seg id="23" origin="not-translated" /></sdl:seg-defs></trans-unit></group></body></file></xliff>

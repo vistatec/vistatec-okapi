@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file datatype="x-test" original="test1"
+ source-language="en" target-language="fr">
+<body>
+   <trans-unit id="0" translate="no">
+      <source xml:lang="en">Do not translate this.</source>
+   </trans-unit>
+   <trans-unit id="1">
+      <source xml:lang="en">Text number 1</source>
+   </trans-unit>
+   <bin-unit id="img1" mime-type="image">
+	<bin-source>
+		<external-file href="image1.png"/>
+	</bin-source>
+	<trans-unit id="img1-1">
+		<source>Text of image 1</source>
+	</trans-unit>
+   </bin-unit>
+</body>
+</file>
+</xliff>

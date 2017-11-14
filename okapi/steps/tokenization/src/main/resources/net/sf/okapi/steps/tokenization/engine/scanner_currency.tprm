@@ -1,0 +1,14 @@
+#v1
+RuleCount.i=1
+
+Rule0.name=Dates1
+Rule0.description=Many currency expressions allow leading zeros, thus $01.40 passes thru them. This expression kills them, except for 0 in the one's column. Works with or without commas and/or dollar sign. Decimals not mandatory, unless no zero in ones column and decimal point is placed. Allows $0.00 and .0. (Author: Tom Persing, http://regexlib.com)  
+Rule0.inTokens=
+Rule0.outTokens=CURRENCY
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=\$([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=0
+Rule0.languages=
+

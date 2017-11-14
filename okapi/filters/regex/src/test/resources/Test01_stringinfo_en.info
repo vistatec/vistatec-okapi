@@ -1,0 +1,6 @@
+﻿STRING_FILE_TABLE_START
+IdNumber1Action	"Text to extract, var1=#!{varName1}.\n\nList:\n\n#![PG 0 1]·\tBullet item one.\n\n·\tBullet item two."	255 255 255	0x0000	50	182	710	560	18	Arial	1
+TextNoToTranslate	"Untranslatable text"	255 255 255	0x0011	0	0	40	20	18	Arial	0
+TextToTranslate2	"á=aacute, Translatable text 2"	255 255 255	0x0011	0	0	40	20	18	Arial	1
+TextToTranslate3	"Translatable text 3"	255 255 255	0x0011	0	0	40	20	18	Arial	1
+STRING_FILE_TABLE_END

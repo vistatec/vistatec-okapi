@@ -1,0 +1,169 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Batch Translation</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Batch Translation Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Batch_Translation_Step">http://okapiframework.org/wiki/index.php?title=Batch_Translation_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step creates a translation memory from the text units extracted from a raw document, 
+using an external tool to provide the translation.</p>
+<p>Takes: Raw document<br>
+Sends: Raw document</p>
+<p>Here is the sequence of the different actions this steps performs:</p>
+<ul>
+	<li>The step takes a raw document and extracts its content using its associated 
+filter.</li>
+	<li>The result of the extraction is put in a temporary HTML document where 
+each paragraph corresponds to a source segment (or a source text unit if the 
+	text units are not segmented). That temporary HTML document corresponds to 
+	the <code>${inputPath}</code> and <code>${inputURI}</code> variables.</li>
+	<li>The external tool is then 
+invoked using a user-defined command-line. This allows the external tool to take 
+the temporary HTML document, translate it, and creates a translated output for 
+it. The external tool must create the trnsated HTML and that output must 
+	correspond to the <code>${outputPath}</code> and <code>${outputURI}</code> 
+	variables.</li>
+	<li>Once the command-line is excuted, the step takes the translated output and 
+build a set of aligned entries with the source of each extracted segment and the 
+translation provided by the external tool.</li>
+	<li>The translated entries are placed in 
+either or both a Pensieve TM or a TMX document.</li>
+</ul>
+<p>Each input document can be processed using one or more temporary HTML files, 
+allowing tools with limitation to translate very large documents.</p>
+<p>The text unit extracted from the input document can be segmented using SRX 
+rules if needed.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Command line</cite> -- Enter the command-line to use. The command line 
+must take the temporary HTML document named <code>${inputPath}</code> and generate 
+an output document in the same format named <code>${outputPath}</code>. You can use 
+the following variables in the command line:</p>
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<th>Variable</th>
+		<th>Description</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td><code>${inputPath}</code></td>
+		<td>The full path of the input document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${inputURI}</code></td>
+		<td>The URI of the input document</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${outputPath}</code></td>
+		<td>The full path of the output document.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><code>${srcLangName}</code></td>
+		<td>English name of the language part of the source locale identifier</td>
+		<td>For &quot;<code>de-ch</code>&quot; this returns &quot;<code>German</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${trgLangName}</code></td>
+		<td>English name of the language part of the target locale identifier.</td>
+		<td>For &quot;<code>ja-jp</code>&quot; this returns &quot;<code>Japanese</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${srcLang}</code></td>
+		<td>Code of the language part of the source locale identifier.</td>
+		<td>For &quot;<code>de-ch</code>&quot; this returns &quot;<code>de</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${trgLang}</code></td>
+		<td>Code of the language part of the target locale identifier.</td>
+		<td>For &quot;<code>ja-jp</code>&quot; this returns &quot;<code>ja</code>&quot;</td>
+	</tr>
+	<tr>
+		<td><code>${rootDir}</code></td>
+		<td>The root directory for this project/batch</td>
+		<td>In Rainbow: the parameters folder.</td>
+	</tr>
+</table>
+<p>Example 1: The following command-line uses the open-source Apertium program 
+under Linux to translate the temporary HTML document.</p>
+<pre>apertium -f html ${srcLang}-${trgLang} ${inputPath} ${outputPath}</pre>
+<p>Example 2: The following command-line uses the commercial ProMT application 
+under Windows to translate the temporary HTML document.</p>
+<pre>&quot;C:\Program Files\PRMT9\FILETRANS\FileTranslator.exe&quot; ${inputPath} /as /ac /d:${srcLangName}-${trgLangName} /o:${outputPath}</pre>
+<p><cite>Block size</cite> -- Enter the maximum number of text units that should 
+be passed at the same time to the external tool. This allows you to process a 
+very large input document even with external tools that can only process small 
+documents.</p>
+<p><cite>Origin identifier</cite> -- Enter an optional string that identifies 
+the translation. The given string is output as a property of the translated 
+entry named <i>Origin</i>. For example in a TMX output it will be generated as
+<code>&lt;prop type=&quot;Txt::Origin&quot;&gt;myText&lt;/prop&gt;</code>, where myText is the given 
+string.</p>
+<p><cite>Mark the generated translation as machine translation results</cite> -- 
+Set this option to mark the TM entries generated as the result of machine 
+translation. For example, when this option is set, the <code>creationId</code> 
+attribute of the target in the generated is set to &quot;<code>MT!</code>&quot;.</p>
+<p><cite>Segment the text units, using the following SRX rules</cite> -- Set this option to segment the 
+extracted text unit before sending them to the temporary HTML document. If this 
+option is set each paragraph of the HTML document will be a sentence, if this 
+option is not set, each paragraph of the HTML document will be an un-segmented 
+paragraph. Note that only entries processed by the external tool are placed in 
+the TMX output. Entries that already exist in the TM being populated or in the 
+existing TM are not copied into the TMX output.</p>
+<p>Enter the full path to the segmentation rules file in SRX that should be used 
+to segment the text units. You can use the 
+variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Import into the following Pensieve TM</cite> -- Set this option to import the translated 
+entries into a given Pensieve TM. The entries added to the TM are indexed at the 
+end of each input document (and therefore other steps down the pipeline can only 
+access for a given document only the entries generated with the previous 
+documents).</p>
+<p>Enter the directory of the Pensive TM where to import the entries. If the TM 
+does not exist it will be created. If the TM exists already, the entries will be 
+added to the existing TM. You can use the variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Create the following TMX document</cite> -- Set this option to create a TMX 
+document with the translated entries. A single TMX file is created for all input 
+document. The file is not generated until end of the last document (and 
+therefore cannot be used by other steps down the pipeline).</p>
+<p>Enter the full path of the TMX document to generate. If the file exists 
+alreadys it will be overwritten. You can use the 
+variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Check for existing entries in an existing TM</cite> -- Set this option 
+to lookup in an existing Pensieve TM each entry that may be send for 
+translation. This allows to send only the entries for which you don&#39;t have an 
+existing translation. Existing entries are not re-processed and are not placed 
+in the optional TMX output.</p>
+
+<p><cite>Directory of the existing TM</cite> -- Enter the directory of the 
+Pensive TM to lookup for existing entries. This option is enabled only if the 
+option <cite>Check for existing entries in an existing TM</cite> is set. You can 
+use the variable <code>${rootDir}</code> in the path.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

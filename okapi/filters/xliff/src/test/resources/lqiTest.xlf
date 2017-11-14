@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+ xmlns="urn:oasis:names:tc:xliff:document:1.2"
+ xmlns:okp="okapi-framework:xliff-extensions"
+ xmlns:its="http://www.w3.org/2005/11/its"
+ xmlns:itsx="http://www.w3.org/2008/12/its-extensions"
+ its:version="2.0"
+>
+<file original="test" source-language="en" target-language="fr" datatype="xml">
+<body>
+<trans-unit id="1">
+ <source xml:lang="en-us"><mrk mtype="x-its" its:locQualityIssuesRef="#lqi1">error1</mrk>.</source>
+ <its:locQualityIssues xml:id="lqi1">
+  <its:locQualityIssue locQualityIssueComment="comment1"/>
+  <its:locQualityIssue locQualityIssueType="misspelling" locQualityIssueComment="comment2"/>
+ </its:locQualityIssues>
+</trans-unit>
+<trans-unit id="2">
+ <source xml:lang="en-us"><mrk mtype="x-its" its:locQualityIssuesRef="lqiTestIssues.xml#lqi2">error2</mrk>.</source>
+</trans-unit>
+<trans-unit id="3">
+ <source xml:lang="en-us"><mrk mtype="x-its" its:locQualityIssuesRef="lqiTestIssues2.xml#lqi2">error3</mrk>.</source>
+</trans-unit>
+<trans-unit id="4">
+ <source xml:lang="en-us"><mrk mtype="x-its" its:locQualityIssuesRef="lqiTestIssues2.xml#lqi1">error4</mrk>.</source>
+</trans-unit>
+</body>
+</file>
+</xliff>

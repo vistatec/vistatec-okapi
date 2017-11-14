@@ -1,0 +1,63 @@
+<xliff version='1.2'
+             xmlns='urn:oasis:names:tc:xliff:document:1.2'
+             xmlns:sup='http://www.ChaucerState.ac.pg/Frm/XLFSup-v1'>
+			 
+<file original='passus-1.doc' source-language='enm' datatype='plaintext'>
+<body>
+<group>
+
+<sup:SourceInfo>
+
+<sup:Book>Piers Plowman, Passus 1</sup:Book>
+
+<sup:Author>William Langland</sup:Author>
+
+</sup:SourceInfo>
+
+<sup:WorkInfo Task='transcription' Context='Middle-English:1360'/> 
+
+<trans-unit id='1'>
+
+<source xml:lang='enm'>What this mountaigne bymeneth</source>
+
+<target xml:lang='en'>What this mountain means</target>
+
+<sup:Reference Type='strophe'>1-a</sup:Reference> 
+
+</trans-unit>
+
+<trans-unit id='2'>
+
+<source xml:lang='enm'>and the merke dale</source>
+
+<target xml:lang='en'>and the dark dale</target>
+
+<sup:Reference Type='strophe'>1-b</sup:Reference>
+
+</trans-unit>
+
+<trans-unit id='3'>
+
+<source xml:lang='enm'>And the feld ful of folk</source>
+
+<target xml:lang='en'>And the field full of folk</target>
+
+<sup:Reference Type='strophe'>2-a</sup:Reference>
+
+</trans-unit>
+
+<trans-unit id='4'>
+
+<source xml:lang='enm'>I shal yow faire shewe.</source>
+
+<target xml:lang='en'>I fairly will show.</target>
+
+<sup:Reference Type='strophe'>2-b</sup:Reference>
+
+</trans-unit>
+
+</group>
+</body>
+</file>
+
+</xliff>

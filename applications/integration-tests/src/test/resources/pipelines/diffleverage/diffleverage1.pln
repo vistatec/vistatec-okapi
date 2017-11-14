@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.diffleverage.DiffLeverageStep">#v1
+fuzzyThreshold.i=100
+codesensitive.b=true
+diffOnly.b=false
+copyToTarget.b=true</step>
+<step class="net.sf.okapi.steps.common.FilterEventsToRawDocumentStep"></step>
+</rainbowPipeline>

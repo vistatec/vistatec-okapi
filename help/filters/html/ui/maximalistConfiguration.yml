@@ -1,0 +1,408 @@
+# Rule types that drive HTML parser behavior
+# INLINE inline element
+# GROUP group element
+# EXCLUDE exclude this element and all children
+# INCLUDE exceptions to the exclude rules
+# TEXTUNIT make this element a textunit with skeleton before/after
+# PRESERVE_WHITESPACE turn on preserve whitespace.
+# SCRIPT Embedded scripting languatge - pass to another extractor
+# SERVER Embedded server language tags such as JSP, PHP, Mason etc.
+# ATTRIBUTE_TRANS, ATTRIBUTE_WRITABLE, ATTRIBUTE_READONLY these rules list an attribute, not an element
+# ATTRIBUTES_ONLY only attribute is translatable or localizable 
+
+#********************************************************************************************* 
+# Operators for attribute value compare
+#
+# Rules are of the form: 
+# TO_EXTRACT_ATTRIBUTE:[IF_HAS_ATTRIBUTE, OPERATOR, VALUE]
+# 'content':['http-equiv', EQUALS, 'keywords']
+#
+# This rule would read:
+# extract the value of 'content' if the value of 'http-equiv' equals 'keywords'
+#
+# Multiple attribute values may be included in a list:
+# 'content':['http-equiv', EQUALS, ['content-language', 'content-type']]
+#
+# This rule would be read: 
+# extract the value of 'content' if the value of 'http-equiv' equals 'content-language' or 'content-type' 
+#*******************************************************************************************/
+
+# EQUALS
+# NOT_EQUALS 
+# MATCH regex match. Must match the entire attribute value
+
+collapse_whitespace: true
+
+# test read-only, writable attributes
+dummy: 
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [trans]  
+  writableLocalizableAttributes: [write]
+  readOnlyLocalizableAttributes: [readonly]
+
+# Group rules
+dl:
+  ruleTypes: [GROUP]
+
+div:
+  ruleTypes: [GROUP]
+    
+form:
+  ruleTypes: [GROUP]
+  
+menu:
+  ruleTypes: [GROUP]
+
+noembed:
+  ruleTypes: [GROUP]
+
+noframes:
+  ruleTypes: [GROUP]
+
+noscript:
+  ruleTypes: [GROUP]
+
+ol:
+  ruleTypes: [GROUP]
+
+optgroup:
+  ruleTypes: [GROUP]
+  
+select:
+  ruleTypes: [GROUP]
+
+table:
+  ruleTypes: [GROUP]
+  translatableAttributes: [summary]
+
+tbody:
+  ruleTypes: [GROUP]
+
+tfoot:
+  ruleTypes: [GROUP]
+
+thead:
+  ruleTypes: [GROUP]
+
+tr:
+  ruleTypes: [GROUP]
+
+ul:
+  ruleTypes: [GROUP]
+                         
+# complex TextUnit rules
+address:
+  ruleTypes: [TEXTUNIT]  
+
+dd:
+  ruleTypes: [TEXTUNIT]  
+
+dt:
+  ruleTypes: [TEXTUNIT]  
+
+fieldset:
+  ruleTypes: [TEXTUNIT]
+  
+h1:
+  ruleTypes: [TEXTUNIT]
+  
+h2:
+  ruleTypes: [TEXTUNIT]
+
+h3:
+  ruleTypes: [TEXTUNIT]
+
+h4:
+  ruleTypes: [TEXTUNIT]
+
+h5:
+  ruleTypes: [TEXTUNIT]
+
+h6:
+  ruleTypes: [TEXTUNIT]
+
+legend:
+  ruleTypes: [TEXTUNIT]
+
+li:
+  ruleTypes: [TEXTUNIT]
+  translatableAttributes: [value] 
+
+listing:
+  ruleTypes: [TEXTUNIT]
+
+marquee:
+  ruleTypes: [TEXTUNIT]
+
+p:
+  ruleTypes: [TEXTUNIT]
+  
+pre:
+  ruleTypes: [TEXTUNIT, PRESERVE_WHITESPACE]
+
+object:
+  ruleTypes: [TEXTUNIT]
+
+td:
+  ruleTypes: [TEXTUNIT]
+  translatableAttributes: [abbr]
+
+th:
+  ruleTypes: [TEXTUNIT]
+
+xml:
+  ruleTypes: [TEXTUNIT]
+      
+# attributes that occur on many elements
+title:
+  ruleTypes: [ATTRIBUTE_TRANS]
+  allElementsExcept: [base, basefront, head, html, meta, param, script, title]
+
+dir:
+  ruleTypes: [ATTRIBUTE_WRITABLE]
+  allElementsExcept: [base, basefront, head, html, meta, param, script]
+
+lang:
+  ruleTypes: [ATTRIBUTE_WRITABLE]
+  
+'xml:lang':
+  ruleTypes: [ATTRIBUTE_WRITABLE]
+
+# only attributes are localizable or translatable - no PCDATA
+# ATTRIBUTES_ONLY with translatableAttributes implies the tag will be a TEXTUNIT
+# with embedded skeketon 
+meta:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: {content: [[http-equiv, EQUALS, keywords], [name, EQUALS, keywords], [name, EQUALS, description]]}
+  writableLocalizableAttributes: {content: [[http-equiv, EQUALS, content-language],[http-equiv, EQUALS, content-type]] }
+  readOnlyLocalizableAttributes: {content: [name, EQUALS, [generator, author, progid, date]]}
+    
+area:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [accesskey, area]
+  
+isindex:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [prompt]
+  
+legend:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [accesskey]
+
+option:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [label, value]
+  
+optgroup:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [label]
+  
+th:
+  ruleTypes: [ATTRIBUTES_ONLY]
+  translatableAttributes: [abbr]
+
+# inline tags
+a:
+  ruleTypes: [INLINE]
+  elementType: link
+  translatableAttributes: [title, accesskey]
+  writableLocalizableAttributes: [href]
+
+abbr:
+  ruleTypes: [INLINE]
+
+acronym:
+  ruleTypes: [INLINE]
+
+acronym:
+  ruleTypes: [INLINE]
+
+applet:
+  ruleTypes: [INLINE]
+  translatableAttributes: [alt]
+
+acronym:
+  ruleTypes: [INLINE]
+
+b:
+  ruleTypes: [INLINE]
+  elementType: bold
+    
+bdo:
+  ruleTypes: [INLINE]
+
+big:
+  ruleTypes: [INLINE]
+
+blink:
+  ruleTypes: [INLINE]
+ 
+br:
+  ruleTypes: [INLINE]
+ 
+button:
+  ruleTypes: [INLINE]
+  translatableAttributes: [accesskey, value]
+ 
+cite:
+  ruleTypes: [INLINE]
+ 
+code:
+  ruleTypes: [INLINE]
+ 
+del:
+  ruleTypes: [INLINE]
+
+dfn:
+  ruleTypes: [INLINE]
+ 
+em:
+  ruleTypes: [INLINE]
+
+embed:
+  ruleTypes: [INLINE]
+ 
+font:
+  ruleTypes: [INLINE]
+
+i:
+  ruleTypes: [INLINE]
+  elementType: italic
+  
+iframe:
+  ruleTypes: [INLINE]
+ 
+img:
+  ruleTypes: [INLINE]
+  elementType: image
+  translatableAttributes: [title, alt]
+  writableLocalizableAttributes: [href, src]
+
+input:
+  ruleTypes: [INLINE]
+  translatableAttributes: 
+    alt: [type, NOT_EQUALS, [file, hidden, image, Password]] 
+    value: [type, NOT_EQUALS, [file, hidden, image, Password]] 
+    accesskey: [type, NOT_EQUALS, [file, hidden, image, Password]] 
+    title: [type, NOT_EQUALS, [file, hidden, image, Password]]
+ 
+ins:
+  ruleTypes: [INLINE]
+
+acronym:
+  ruleTypes: [INLINE]
+ 
+kbd:
+  ruleTypes: [INLINE]
+
+label:
+  ruleTypes: [INLINE]
+  translatableAttributes: [accesskey]
+ 
+map:
+  ruleTypes: [INLINE]
+
+nobr:
+  ruleTypes: [INLINE]
+ 
+object:
+  ruleTypes: [INLINE]
+  translatableAttributes: [standby]
+
+param:
+  ruleTypes: [INLINE]
+  translatableAttributes: [value]
+ 
+q:
+  ruleTypes: [INLINE]
+ 
+s:
+  ruleTypes: [INLINE]
+
+samp:
+  ruleTypes: [INLINE]
+
+small:
+  ruleTypes: [INLINE]
+
+select:
+  ruleTypes: [INLINE]
+ 
+span:
+  ruleTypes: [INLINE]
+
+spacer:
+  ruleTypes: [INLINE]
+ 
+strike:
+  ruleTypes: [INLINE]
+
+strong:
+  ruleTypes: [INLINE]
+
+sub:
+  ruleTypes: [INLINE]
+
+sup:
+  ruleTypes: [INLINE]
+
+symbol:
+  ruleTypes: [INLINE]
+ 
+textarea:
+  ruleTypes: [INLINE]
+  translatableAttributes: [accesskey]
+ 
+tt:
+  ruleTypes: [INLINE]
+ 
+u:
+  ruleTypes: [INLINE]
+  elementType: underlined
+  
+var:
+  ruleTypes: [INLINE]
+ 
+wbr:
+  ruleTypes: [INLINE]
+ 
+# Ruby inline tags
+ruby:
+  ruleTypes: [INLINE]
+
+rb:
+  ruleTypes: [INLINE]
+ 
+rt:
+  ruleTypes: [INLINE]
+
+rc:
+  ruleTypes: [INLINE]
+
+rp:
+  ruleTypes: [INLINE]
+
+rbc:
+  ruleTypes: [INLINE]
+
+rtc:
+  ruleTypes: [INLINE]
+
+# Robo help inline tags
+symbol:
+  ruleTypes: [INLINE]
+
+face:
+  ruleTypes: [INLINE]
+
+# Excluded elements
+style:
+  ruleTypes: [EXCLUDE]
+
+stylesheet:
+  ruleTypes: [EXCLUDE]
+
+# javascript etc.
+script:
+  ruleTypes: [EXCLUDE]
+

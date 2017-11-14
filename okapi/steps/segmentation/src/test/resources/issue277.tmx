@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+<header
+  creationtool="AlignFactory"
+  creationtoolversion="2.2 Build 7"
+  datatype="PlainText"
+  segtype="sentence"
+  adminlang="EN-US"
+  srclang="EN"
+  o-tmf="LogiTermBT"
+>
+</header>
+<body>
+<tu>
+  <tuv xml:lang="EN" creationid="ALIGN!">
+    <seg>This sentence should be split. In two pieces.</seg>
+  </tuv>
+  <tuv xml:lang="DE" creationid="ALIGN!">
+    <seg>Dieser Satz sollte aufgeteilt werden. In zwei Teile.</seg>
+  </tuv>
+</tu>
+<tu>
+  <tuv xml:lang="EN" creationid="ALIGN!">
+    <seg>This sentence should not be split. </seg>
+  </tuv>
+  <tuv xml:lang="DE" creationid="ALIGN!">
+    <seg>Dieser Satz sollte nicht geteilt werden. Zu viele Segmente hier.</seg>
+  </tuv>
+</tu>
+</body>
+</tmx>

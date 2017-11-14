@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions">
+<file original="helpguidelines.html" source-language="en" target-language="ja" datatype="html">
+<body>
+<trans-unit id="tu1" restype="x-title">
+<source xml:lang="en">Okapi Framework <g id='1'>Developer's Guide</g> - Help Guidelines</source>
+</trans-unit>
+<trans-unit id="tu2" restype="x-td">
+<source xml:lang="en"></source>
+<target xml:lang="ja"></target>
+</trans-unit>
+<trans-unit id="tu3" restype="x-h1">
+<source xml:lang="en">Okapi Framework - Developer's Guide</source>
+</trans-unit>
+<trans-unit id="tu4" restype="x-h2">
+<source xml:lang="en">Help Authoring Guidelines</source>
+<target xml:lang="ja">Help Authoring Guidelines</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

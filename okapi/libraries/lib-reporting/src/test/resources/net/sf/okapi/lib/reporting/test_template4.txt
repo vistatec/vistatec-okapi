@@ -1,0 +1,3 @@
+     line 1
+  line 2
+   [import [IMPORT]; // [IMPORT_DESCR]]

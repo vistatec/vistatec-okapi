@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="word/styles.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="word/document.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="NFDBB2FA9-tu2" xml:space="preserve">
+<source xml:lang="en">Text of Heading 1</source>
+<target xml:lang="fr">Text of Heading 1</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu3" xml:space="preserve">
+<source xml:lang="en">Text of Heading 2</source>
+<target xml:lang="fr">Text of Heading 2</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu4" xml:space="preserve">
+<source xml:lang="en">Text of heading 3</source>
+<target xml:lang="fr">Text of heading 3</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu5" xml:space="preserve">
+<source xml:lang="en">This is a test in DOCX format. This is the second sentence in this paragraph. This one is the third.</source>
+<target xml:lang="fr">This is a test in DOCX format. This is the second sentence in this paragraph. This one is the third.</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu6" xml:space="preserve">
+<source xml:lang="en">Some paragraph with smart tags because of typpo..</source>
+<target xml:lang="fr">Some paragraph with smart tags because of typpo..</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu7" xml:space="preserve">
+<source xml:lang="en">This paragraph has some <g id="1">bold</g>, <g id="2">itaclics</g>, and <g id="3">underlined</g> text. And here are a lot more different types of formatting: <g id="4">Font <g id="5">type</g></g><g id="6">, and size</g>, and <g id="7">ｏｔｈｅｒ　ｄｅｃｏｒａｔｉｏｎｓ</g>.</source>
+<target xml:lang="fr">This paragraph has some <g id="1">bold</g>, <g id="2">itaclics</g>, and <g id="3">underlined</g> text. And here are a lot more different types of formatting: <g id="4">Font <g id="5">type</g></g><g id="6">, and size</g>, and <g id="7">ｏｔｈｅｒ　ｄｅｃｏｒａｔｉｏｎｓ</g>.</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu8" xml:space="preserve">
+<source xml:lang="en">There is a footnote here<x id="1"/>. And some <x id="2"/>comments<x id="3"/><x id="4"/>.</source>
+<target xml:lang="fr">There is a footnote here<x id="1"/>. And some <x id="2"/>comments<x id="3"/><x id="4"/>.</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu10" xml:space="preserve">
+<source xml:lang="en">Second heading 1</source>
+<target xml:lang="fr">Second heading 1</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu11" xml:space="preserve">
+<source xml:lang="en">Second page after a forced page-break.</source>
+<target xml:lang="fr">Second page after a forced page-break.</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu12" xml:space="preserve">
+<source xml:lang="en">Text with an index marker<x id="1"/>.</source>
+<target xml:lang="fr">Text with an index marker<x id="1"/>.</target>
+</trans-unit>
+</body>
+</file>
+<file original="word/footnotes.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="P67A78077-tu3" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> This is the text of the <g id="2">footnote</g></source>
+<target xml:lang="fr"><x id="1"/> This is the text of the <g id="2">footnote</g></target>
+</trans-unit>
+<trans-unit id="P67A78077-tu4" xml:space="preserve">
+<source xml:lang="en">And this the second paragraph in the <g id="1">footnote</g>.</source>
+<target xml:lang="fr">And this the second paragraph in the <g id="1">footnote</g>.</target>
+</trans-unit>
+</body>
+</file>
+<file original="word/endnotes.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="word/comments.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="N86022802-tu1" xml:space="preserve">
+<source xml:lang="en"><x id="1"/>This is a <g id="2">comment</g> for the paragraph with the footnote.</source>
+<target xml:lang="fr"><x id="1"/>This is a <g id="2">comment</g> for the paragraph with the footnote.</target>
+</trans-unit>
+</body>
+</file>
+<file original="word/settings.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="docProps/core.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="tu1" xml:space="preserve">
+<source xml:lang="en">Title of the document</source>
+<target xml:lang="fr">Title of the document</target>
+</trans-unit>
+<trans-unit id="tu2" xml:space="preserve">
+<source xml:lang="en">Subject text</source>
+<target xml:lang="fr">Subject text</target>
+</trans-unit>
+<trans-unit id="tu3" xml:space="preserve">
+<source xml:lang="en">Name of the author</source>
+<target xml:lang="fr">Name of the author</target>
+</trans-unit>
+<trans-unit id="tu4" xml:space="preserve">
+<source xml:lang="en">Keywords</source>
+<target xml:lang="fr">Keywords</target>
+</trans-unit>
+<trans-unit id="tu5" xml:space="preserve">
+<source xml:lang="en">And this is a comment.</source>
+<target xml:lang="fr">And this is a comment.</target>
+</trans-unit>
+<trans-unit id="tu6" xml:space="preserve">
+<source xml:lang="en">Categories</source>
+<target xml:lang="fr">Categories</target>
+</trans-unit>
+<trans-unit id="tu7" xml:space="preserve">
+<source xml:lang="en">Status</source>
+<target xml:lang="fr">Status</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

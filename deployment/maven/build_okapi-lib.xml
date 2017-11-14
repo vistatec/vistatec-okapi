@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<project name="okapi-lib" default="all" basedir=".">
+
+	<!-- Guess the platform if this build file is not called with the platform already set -->
+	<condition property="platform" value="win32-x86">
+		<os family="windows"/>
+	</condition>
+	<condition property="platform" value="cocoa-macosx">
+		<os family="mac"/>
+	</condition>
+	<condition property="platform" value="gtk2-linux-x86">
+		<os name="Linux" arch="x86"/>
+	</condition>
+	<condition property="platform" value="gtk2-linux-x86_64">
+		<os name="Linux" arch="x86_64"/>
+	</condition>
+
+	<!-- Set flags for what dstribution is being built -->
+	<condition property="building-windows">
+		<equals arg1="${platform}" arg2="win32-x86"/>
+	</condition>
+	<condition property="building-mac">
+		<equals arg1="${platform}" arg2="cacoa-macosx"/>
+	</condition>
+	<condition property="building-linux">
+		<or>
+			<equals arg1="${platform}" arg2="gtk2-linux-x86"/>
+			<equals arg1="${platform}" arg2="gtk2-linux-x86_64"/>
+		</or>
+	</condition>
+
+	<!-- Get the version information to use from file -->
+	<property file="../shared/release.properties" />
+
+	<property file="libVersions.properties" />
+
+	<property name="okapilibName" value="okapi-lib"/>
+	<property name="okapilibStamp" value="${okapilibVersion}${releaseInfo}" />
+	<property name="okapilibJar" value="${okapilibName}-${okapilibStamp}.jar" />
+	<property name="okapilibSrcJar" value="${okapilibName}-${okapilibStamp}-sources.jar" />
+
+	<property name="okapilibuiName" value="okapi-lib-ui"/>
+	<property name="okapilibuiStamp" value="${okapilibuiVersion}${releaseInfo}" />
+	<property name="okapilibuiJar" value="${okapilibuiName}-${okapilibuiStamp}.jar" />
+
+	<property name="tikalStamp" value="${tikalVersion}${releaseInfo}" />
+
+	<property name="tmp" value="tmp"/>
+	<property name="dist" value="dist_common"/>
+	<property name="done" value="done"/>
+	<property name="distLib" value="${dist}/lib"/>
+	<property name="distLicenses" value="${distLib}/licenses"/>
+	<property name="distLogger" value="${distLib}/logger"/>
+	<property name="logBindJar" value="logbind.jar"/>
+	<property name="distName" value="${okapilibName}_all-platforms_${okapilibStamp}" />
+	<property name="mavenStore" value="${user.home}/.m2/repository"/>
+
+	<tstamp>
+		<format property="TODAY" pattern="MMM-dd-yyyy"/>
+	</tstamp>
+
+	<target name="init">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${dist}"/>
+		</delete>
+		<mkdir dir="${distLib}"/>
+		<mkdir dir="${distLicenses}"/>
+		<mkdir dir="${distLogger}"/>
+		<mkdir dir="${done}"/>
+	</target>
+
+	<!-- Prepare tmp dir for creating the jar -->
+	<macrodef name="cleanTempFolder">
+		<attribute name="mkjTmpPath"/>
+		<sequential>
+			<delete includeEmptyDirs="true" failonerror="false">
+				<fileset dir="@{mkjTmpPath}"/>
+			</delete>
+			<mkdir dir="@{mkjTmpPath}"/>
+			<copy todir="@{mkjTmpPath}/META-INF">
+				<fileset dir="data/okapi-lib" includes="**/*.txt"/>
+			</copy>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="getFilesAndJar">
+		<attribute name="mkjTmpPath"/>
+		<attribute name="mkjSrcDir"/>
+		<attribute name="mkjTargetJar"/>
+		<attribute name="mkjIncludes"/>
+		<sequential>
+
+			<!-- Copy files -->
+			<copy todir="@{mkjTmpPath}">
+				<!-- core -->
+				<fileset dir="../../okapi/core/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+
+				<!-- filters -->
+				<fileset dir="../../okapi/filters/abstractmarkup/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/dtd/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/html/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/idml/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/json/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/mif/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/mosestext/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/openoffice/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/openxml/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/pensieve/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/plaintext/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/po/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/php/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/properties/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/regex/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/yaml/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/rtf/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/table/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/tmx/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/ttx/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/ts/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/versifiedtxt/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/doxygen/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/wiki/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/vignette/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/xliff/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/xmlstream/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/rainbowkit/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/transifex/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/archive/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/xini/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/txml/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/transtable/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/its/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/icml/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/xliff2/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/pdf/@{mkjSrcDir}"
+				         includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/markdown/@{mkjSrcDir}"
+				         includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/filters/sdlpackage/@{mkjSrcDir}"
+				         includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+
+				<!-- lib -->
+				<fileset dir="../../okapi/libraries/lib-segmentation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-translation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-extra/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-search/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-verification/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-terminology/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-reporting/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-transifex/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-gtt/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-preprocessing/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-tkit/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-beans/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/libraries/lib-persistence/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+
+				<!-- tm -->
+				<fileset dir="../../okapi/tm/simpletm/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/tm/pensieve/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+
+				<!-- connectors -->
+				<!-- removed <fileset dir="../../okapi/connectors/opentran/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/> -->
+				<fileset dir="../../okapi/connectors/simpletm/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/pensieve/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/translatetoolkit/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/globalsight/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/mymemory/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/google/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/apertium/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/microsoft/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/tda/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/bifile/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/lingo24/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/kantan/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/connectors/mmt/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+
+				<!-- steps -->
+				<fileset dir="../../okapi/steps/bomconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/charlisting/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/codeshandling/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/common/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/diffleverage/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/encodingconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/external-command/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/fullwidthconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/formatconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/generatesimpletm/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/idbasedaligner/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/imagemodification/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/linebreakconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/moses/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/qualitycheck/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/rtfconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/searchandreplace/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/aligner/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/segmentation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/leveraging/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/terminologyleveraging/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/textmodification/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/tokenization/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/termextraction/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/translationcomparison/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/uriconversion/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/wordcount/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/xsltransform/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/xmlvalidation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/xliffsplitter/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/scopingreport/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/rainbowkit/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/gttbatchtranslation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/msbatchtranslation/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/repetitionanalysis/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/enrycher/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/cleanup/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/inconsistencycheck/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/copyormove/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/ttxsplitter/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+				<fileset dir="../../okapi/steps/whitespacecorrection/@{mkjSrcDir}"
+						 includes="@{mkjIncludes}" excludes="**/META-INF/**"/>
+			</copy>
+
+			<!-- Create the jar file -->
+			<jar jarfile="@{mkjTargetJar}" basedir="@{mkjTmpPath}"
+				 manifest="@{mkjTmpPath}/MANIFEST.MF"
+				 excludes="MANIFEST.MF" />
+		</sequential>
+	</macrodef>
+
+	<macrodef name="copyDepend">
+		<attribute name="cdMvnPath"/>
+		<attribute name="cdInclude"/>
+		<sequential>
+			<local name="depxyz"/>
+			<property name="depxyz" value="${mavenStore}/@{cdMvnPath}"/>
+			<fileset id="list.contents" dir="${depxyz}" includes="**/@{cdInclude}"/>
+			<local name="jarxyz"/>
+			<property name="jarxyz" refid="list.contents"/>
+			<echo file="tmpJars" append="yes"> ${jarxyz}</echo>
+			<copy todir="${distLib}" file="${depxyz}/${jarxyz}"/>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="copyDependAndLicense">
+		<attribute name="cdMvnPath"/>
+		<attribute name="cdInclude"/>
+		<attribute name="cdLicense"/>
+		<sequential>
+			<copyDepend cdMvnPath="@{cdMvnPath}" cdInclude="@{cdInclude}"/>
+			<copy todir="${distLicenses}">
+				<fileset dir="../shared/licenses" includes="**/@{cdLicense}"/>
+			</copy>
+		</sequential>
+	</macrodef>
+
+	<!-- Make the okapi-lib jar -->
+	<target name="okapiLib">
+
+		<delete file="tmpJars" quiet="true"/>
+
+		<!-- Copy lib dependencies -->
+		<echo file="tmpJars">okapilibCP=</echo>
+
+		<copyDependAndLicense
+				cdMvnPath="com/wutka/dtdparser/${com.wutka.dtdparser.version}"
+				cdInclude="dtdparser-${com.wutka.dtdparser.version}.jar"
+				cdLicense="dtdparser-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="net/htmlparser/jericho/jericho-html/${net.htmlparser.jericho.jericho-html.version}"
+				cdInclude="jericho-html-${net.htmlparser.jericho.jericho-html.version}.jar"
+				cdLicense="jericho-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="org/yaml/snakeyaml/${org.yaml.snakeyaml.version}"
+				cdInclude="snakeyaml-${org.yaml.snakeyaml.version}.jar"
+				cdLicense="snakeyaml-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="com/h2database/h2/${com.h2database.h2.version}"
+				cdInclude="h2-${com.h2database.h2.version}.jar"
+				cdLicense="h2-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="com/googlecode/json-simple/json-simple/${com.googlecode.json-simple.json-simple.version}"
+				cdInclude="json-simple-${com.googlecode.json-simple.json-simple.version}.jar"
+				cdLicense="json-simple-*"/>
+
+		<copyDepend
+				cdMvnPath="commons-discovery/commons-discovery/${commons-discovery.commons-discovery.version}"
+				cdInclude="commons-discovery-${commons-discovery.commons-discovery.version}.jar"/>
+
+		<copyDependAndLicense
+				cdMvnPath="commons-logging/commons-logging/${commons-logging.commons-logging.version}"
+				cdInclude="commons-logging-${commons-logging.commons-logging.version}.jar"
+				cdLicense="commons-*"/>
+
+		<copyDepend
+				cdMvnPath="org/apache/axis/axis/${org.apache.axis.version}"
+				cdInclude="axis-${org.apache.axis.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="org/apache/axis/axis-jaxrpc/${org.apache.axis.version}"
+				cdInclude="axis-jaxrpc-${org.apache.axis.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="org/apache/axis/axis-saaj/${org.apache.axis.version}"
+				cdInclude="axis-saaj-${org.apache.axis.version}.jar"/>
+
+		<copyDependAndLicense
+				cdMvnPath="axis/axis-wsdl4j/${axis.axis-wsdl4j.version}"
+				cdInclude="axis-wsdl4j-${axis.axis-wsdl4j.version}.jar"
+				cdLicense="axis-*"/>
+
+		<copyDepend
+				cdMvnPath="org/apache/lucene/lucene-core/${org.apache.lucene.version}"
+				cdInclude="lucene-core-${org.apache.lucene.version}.jar"/>
+
+		<copyDependAndLicense
+				cdMvnPath="com/ibm/icu/icu4j/${com.ibm.icu.icu4j.version}"
+				cdInclude="icu4j-${com.ibm.icu.icu4j.version}.jar"
+				cdLicense="icu4j-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="net/sf/trove4j/trove4j/${net.sf.trove4j.trove4j.version}"
+				cdInclude="trove4j-${net.sf.trove4j.trove4j.version}.jar"
+				cdLicense="trove*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="org/apache/commons/commons-exec/${org.apache.commons.commons-exec.version}"
+				cdInclude="commons-exec-${org.apache.commons.commons-exec.version}.jar"
+				cdLicense="commons-*"/>
+
+		<copyDependAndLicense
+				cdMvnPath="org/codehaus/woodstox/woodstox-core-lgpl/${org.codehaus.woodstox.woodstox-core-lgpl.version}"
+				cdInclude="woodstox-core-lgpl-${org.codehaus.woodstox.woodstox-core-lgpl.version}.jar"
+				cdLicense="woodstox-*"/>
+
+		<copyDependAndLicense
+			cdMvnPath="com/vladsch/flexmark/flexmark/${com.vladsch.flexmark.version}"
+			cdInclude="flexmark-${com.vladsch.flexmark.version}.jar"
+			cdLicense="flexmark-*"/>
+
+		<copyDependAndLicense
+			cdMvnPath="com/vladsch/flexmark/flexmark-util/${com.vladsch.flexmark.version}"
+			cdInclude="flexmark-util-${com.vladsch.flexmark.version}.jar"
+			cdLicense="flexmark-*"/>
+
+		<copyDependAndLicense
+			cdMvnPath="com/vladsch/flexmark/flexmark-formatter/${com.vladsch.flexmark.version}"
+			cdInclude="flexmark-formatter-${com.vladsch.flexmark.version}.jar"
+			cdLicense="flexmark-*"/>
+
+		<copyDependAndLicense
+			cdMvnPath="com/vladsch/flexmark/flexmark-ext-tables/${com.vladsch.flexmark.version}"
+			cdInclude="flexmark-ext-tables-${com.vladsch.flexmark.version}.jar"
+			cdLicense="flexmark-*"/>
+
+		<copyDependAndLicense
+			cdMvnPath="com/vladsch/flexmark/flexmark-ext-yaml-front-matter/${com.vladsch.flexmark.version}"
+			cdInclude="flexmark-ext-yaml-front-matter-${com.vladsch.flexmark.version}.jar"
+			cdLicense="flexmark-*"/>
+
+		<copyDepend
+				cdMvnPath="org/codehaus/woodstox/stax2-api/${org.codehaus.woodstox.stax2-api.version}"
+				cdInclude="stax2-api-${org.codehaus.woodstox.stax2-api.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="net/sf/okapi/lib/okapi-lib-xliff2/${net.sf.okapi.lib.okapi-lib-xliff2.version}"
+				cdInclude="okapi-lib-xliff2-${net.sf.okapi.lib.okapi-lib-xliff2.version}.jar"/>
+
+
+		<copyDepend
+				cdMvnPath="org/apache/httpcomponents/httpclient/${org.apache.httpcomponents.version}"
+				cdInclude="httpclient-${org.apache.httpcomponents.version}.jar"/>
+		<!-- TODO<copy todir="${distLicenses}">
+			cdLicense="commons-*"/>
+		</copy>-->
+
+		<copyDepend
+				cdMvnPath="org/apache/httpcomponents/httpcore/${org.apache.httpcomponents.version}"
+				cdInclude="httpcore-${org.apache.httpcomponents.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="org/apache/httpcomponents/httpmime/${org.apache.httpcomponents.version}"
+				cdInclude="httpmime-${org.apache.httpcomponents.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="nu/validator/htmlparser/htmlparser/${nu.validator.htmlparser.htmlparser.version}"
+				cdInclude="htmlparser-${nu.validator.htmlparser.htmlparser.version}.jar"/>
+
+		<copyDependAndLicense
+				cdMvnPath="com/fasterxml/jackson/core/jackson-core/${com.fasterxml.jackson.version}"
+				cdInclude="jackson-core-${com.fasterxml.jackson.version}.jar"
+				cdLicense="jackson-*"/>
+
+		<copyDepend
+				cdMvnPath="com/fasterxml/jackson/core/jackson-databind/${com.fasterxml.jackson.version}"
+				cdInclude="jackson-databind-${com.fasterxml.jackson.version}.jar"/>
+
+		<copyDepend
+				cdMvnPath="com/fasterxml/jackson/core/jackson-annotations/${com.fasterxml.jackson.version}"
+				cdInclude="jackson-annotations-${com.fasterxml.jackson.version}.jar"/>
+		
+		<copyDepend
+		        cdMvnPath="org/apache/pdfbox/pdfbox/${org.apache.pdfbox.version}"
+		        cdInclude="pdfbox-${org.apache.pdfbox.version}.jar"/>
+		
+	      <copyDepend
+	            cdMvnPath="org/apache/pdfbox/fontbox/${org.apache.pdfbox.version}"
+	            cdInclude="fontbox-${org.apache.pdfbox.version}.jar"/>
+
+		<!--
+		<copyDepend
+			cdMvnPath="com/fasterxml/jackson/module/jackson-module-mrbean/${com.fasterxml.jackson.module.jackson-module-mrbean.version}"
+			cdInclude="jackson-module-mrbean-${com.fasterxml.jackson.module.jackson-module-mrbean.version}.jar"/>
+		-->
+
+		<copyDependAndLicense
+				cdMvnPath="com/twelvemonkeys/common/common-io/${com.twelvemonkeys.common.version}"
+				cdInclude="common-io-${com.twelvemonkeys.common.version}.jar"
+				cdLicense="twelvemonkeys-*"/>
+
+		<copyDepend
+				cdMvnPath="com/twelvemonkeys/common/common-lang/${com.twelvemonkeys.common.version}"
+				cdInclude="common-lang-${com.twelvemonkeys.common.version}.jar"/>
+
+		<!-- This is the logging part -->
+		<copyDepend
+				cdMvnPath="org/slf4j/slf4j-api/${org.slf4j.version}"
+				cdInclude="slf4j-api-${org.slf4j.version}.jar"/>
+
+		<echo file="tmpJars" append="yes"> logger/${logBindJar}</echo>
+
+		<!-- Create the manifest file -->
+		<cleanTempFolder mkjTmpPath="${tmp}"/>
+		<property file="tmpJars"/>
+		<manifest file="${tmp}/MANIFEST.MF">
+			<attribute name="Implementation-Title" value="${okapilibName}"/>
+			<attribute name="Implementation-Version" value="${okapilibStamp}"/>
+			<attribute name="Class-Path" value=". ${okapilibCP}"/>
+		</manifest>
+		<getFilesAndJar
+				mkjTmpPath="${tmp}"
+				mkjSrcDir="target/classes"
+				mkjTargetJar="${distLib}/${okapilibJar}"
+				mkjIncludes="**"/>
+
+		<!-- Create the sources jar -->
+		<cleanTempFolder mkjTmpPath="${tmp}"/>
+		<manifest file="${tmp}/MANIFEST.MF">
+			<attribute name="Implementation-Title" value="${okapilibName}"/>
+			<attribute name="Implementation-Version" value="${okapilibStamp}"/>
+		</manifest>
+		<getFilesAndJar
+			mkjTmpPath="${tmp}"
+			mkjSrcDir="src/main/java"
+			mkjTargetJar="${distLib}/${okapilibSrcJar}"
+			mkjIncludes="**/*.java"/>
+
+		<!-- Create directory for dropins -->
+		<mkdir dir="${dist}/dropins"/>
+
+		<!-- Copy examples -->
+		<copy todir="${dist}/examples">
+			<fileset dir="../../okapi/examples/java">
+				<exclude name="**/.*"/>
+				<exclude name="**/.*/**"/>
+				<exclude name="**/target/classes/**"/>
+				<exclude name="**/target/maven-archiver/**"/>
+			</fileset>
+		</copy>
+		<!-- Delete normal pom file -->
+		<delete file="${dist}/examples/pom.xml" quiet="true"/>
+		<!-- And replace it with the one for deployment -->
+		<rename src="${dist}/examples/pomForDeployment.xml" dest="${dist}/examples/pom.xml"/>
+
+		<replace file="${dist}/examples/pom.xml" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/examples/build_examples.bat" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/examples/build_examples.sh" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/examples/run_examples.bat" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/examples/run_examples.sh" token="@version@" value="${okapilibStamp}"/>
+
+		<!-- Copy config -->
+		<copy todir="${dist}/config">
+			<fileset dir="../shared/config">
+			</fileset>
+		</copy>
+
+		<!-- Copy help
+		<copy todir="${dist}/help">
+			<fileset dir="../../help">
+				<exclude name="**/applications/**"/>
+				<exclude name="**/common/**"/>
+				<exclude name="**/filters/**"/>
+				<exclude name="**/lib/**"/>
+				<exclude name="**/steps/**"/>
+				<exclude name="**/tutorials/**"/>
+			</fileset>
+		</copy>-->
+
+		<!-- locaweb -->
+		<copy todir="${dist}/localweb/devguide">
+			<fileset dir="../../website/devguide">
+				<exclude name="**/_*"/>
+				<exclude name="**/.*"/>
+			</fileset>
+		</copy>
+		<copy todir="${dist}/localweb" file="../../website/okapi.css"/>
+		<!-- javadoc files -->
+		<property name="depXmlrpc" value="${mavenStore}/org/apache/xmlrpc/xmlrpc-client/${org.apache.xmlrpc.xmlrpc-client.version}"/>
+		<javadoc destdir="${dist}/localweb/javadoc" Encoding="UTF-8" packagenames="net.sf.okapi.*">
+			<classpath>
+				<pathelement path="${distLib}/icu4j-${com.ibm.icu.icu4j.version}.jar"/>
+				<pathelement path="${distLib}/slf4j-api-${org.slf4j.version}.jar"/>
+			</classpath>
+			<packageset dir="../../okapi/core/src/main/java" defaultexcludes="yes"/>
+			<packageset dir="../../okapi/libraries/lib-segmentation/src/main/java" defaultexcludes="yes"/>
+			<packageset dir="../../okapi/libraries/lib-translation/src/main/java" defaultexcludes="yes"/>
+		</javadoc>
+
+	</target>
+
+	<!-- Make Tikal -->
+	<target name="tikal">
+		<!-- Prepare tmp dir for creating the jar -->
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${tmp}"/>
+		</delete>
+		<mkdir dir="${tmp}"/>
+
+		<!-- Copy classes -->
+		<copy todir="${tmp}">
+			<fileset dir="../../okapi/tikal/target/classes"/>
+		</copy>
+
+		<!-- Create the manifest file -->
+		<manifest file="${tmp}/MANIFEST.MF">
+			<attribute name="Implementation-Title" value="tikal"/>
+			<attribute name="Implementation-Version" value="${tikalStamp}"/>
+			<attribute name="Main-Class" value="net.sf.okapi.applications.tikal.Main"/>
+			<!-- Note the reference to the UI library to allow access to parameters editors
+			when the tool is used in the UI-enabled distribution -->
+			<attribute name="Class-Path" value="${okapilibJar} ${okapilibuiJar}"/>
+		</manifest>
+
+		<!-- Create the jar file -->
+		<jar jarfile="${distLib}/tikal.jar" basedir="${tmp}"
+			 manifest="${tmp}/MANIFEST.MF"
+			 excludes="MANIFEST.MF" />
+
+		<!-- Copy batch/shell -->
+		<copy todir="${dist}">
+			<fileset dir="data/okapi-lib" includes="**/tikal*"/>
+			<fileset dir="data/okapi-lib" includes="**/startTikal*"/>
+			<fileset dir="data/okapi-lib" includes="**/itstest*"/>
+		</copy>
+
+		<!-- Update ITSTest jar path -->
+		<replace file="${dist}/itstest.bat" token="@version@" value="${okapilibStamp}"/>
+
+		<!-- Update and copy change log and readme -->
+		<copy todir="${dist}" file="../shared/changes.html"/>
+		<replace file="${dist}/changes.html" token="@date@" value="${TODAY}"/>
+		<copy todir="${dist}" file="data/okapi-lib/readme.html"/>
+		<replace file="${dist}/readme.html" token="@version@" value="${okapilibStamp}"/>
+		<replace file="${dist}/readme.html" token="@date@" value="${TODAY}"/>
+
+		<!-- Clean up -->
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="${tmp}"/>
+		</delete>
+		<delete file="tmpJars" quiet="true"/>
+
+	</target>
+
+	<target name="logbind-jdk">
+		<!-- Copies the logger files needed to bind slf4j with jdk -->
+		<!-- None of these jars should be in tmpJars (to go in classpath) -->
+
+		<!-- our binder (build-jdk14-<okapi_ver>.jar) as ${logBindJar} -->
+		<copy file="${mavenStore}/net/sf/okapi/logbind/build-jdk14/${okapilibStamp}/build-jdk14-${okapilibStamp}.jar"
+			  tofile="${distLogger}/${logBindJar}" />
+
+		<!-- slf4j-jdk14-<ver>.jar -->
+		<property name="depSlf4jBind" value="${mavenStore}/org/slf4j/slf4j-jdk14/${org.slf4j.version}"/>
+		<fileset id="list.contents" dir="${depSlf4jBind}" includes="**/slf4j-jdk14-${org.slf4j.version}.jar"/>
+		<property name="jarSlf4jBind" refid="list.contents"/>
+		<copy todir="${distLogger}" file="${depSlf4jBind}/${jarSlf4jBind}"/>
+	</target>
+
+	<target name="zip">
+		<zip destfile="${done}/${distName}.zip">
+			<zipfileset filemode="755" dir="${dist}">
+				<include name="**/*.sh"/>
+			</zipfileset>
+			<zipfileset dir="${dist}">
+				<exclude name="**/*.sh"/>
+			</zipfileset>
+		</zip>
+	</target>
+
+	<target name="all" depends="init, okapiLib, logbind-jdk, tikal, zip"/>
+
+</project>

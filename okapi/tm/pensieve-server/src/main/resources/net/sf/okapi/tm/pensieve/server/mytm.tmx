@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header
+    creationtool="OmegaT"
+    creationtoolversion="2.0.4"
+    segtype="sentence"
+    o-tmf="OmegaT TMX"
+    adminlang="EN-US"
+    srclang="EN-US"
+    datatype="plaintext"
+  >
+  </header>
+  <body>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Elephants cannot fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les éléphants ne peuvent pas voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Elephants cannot fly, event when they are named Jumbo.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les éléphants ne peuvent pas voler, même quand ils sont nommés Jumbo.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Small elephants can't fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les petits éléphants ne peuvent pas voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Except when they are named Jumbo.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Sauf quand ils sont nommés Jumbo.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Big elephants cannot fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les gros éléphants ne peuvent pas voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Even when they are named Jumbo.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Même quand ils sont nommés Jumbo.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Elephants <bpt i='0' x='0'>&lt;g0&gt;</bpt>cannot<ept i='0'>&lt;/g0&gt;</ept> fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les éléphants <bpt i='0' x='0'>&lt;g0&gt;</bpt>ne peuvent pas<ept i='0'>&lt;/g0&gt;</ept> voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Elephants <bpt i='0' x='0'>&lt;b&gt;</bpt>cannot<ept i='0'>&lt;/b&gt;</ept> fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les éléphants <bpt i='0' x='0'>&lt;b&gt;</bpt>ne peuvent pas<ept i='0'>&lt;/b&gt;</ept> voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Elephants <ph x='1'>&lt;br/&gt;</ph>cannot fly.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les éléphants <ph x='1'>&lt;br/&gt;</ph>ne peuvent pas voler.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But elephants with big ears can sometimes.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Mais les éléphants avec des grandes oreilles peuvent parfois.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Same as the folder where the project is saved<ept i='0'>&lt;/g0&gt;</ept> -- Select this option to have the parameters files saved in the same folder as the project file.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Même que le dossier dans lequel le projet est enregistré<ept i='0'>&lt;/g0&gt;</ept> -- Sélectionnez cette option pour que les paramètres des fichiers soient enregistrés dans le même dossier que le dossier du projet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>User-defined location<ept i='0'>&lt;/g0&gt;</ept> -- Select this option to have the parameters files saved in a folder you choose.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Emplacenent définis par l'utilisateur<ept i='0'>&lt;/g0&gt;</ept> -- Sélectionnez cette option pour que les paramètres des fichiers soient enregistrés dans un dossier que vous choisissez.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Enter the full location of the folder in the edit field below the option.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Entrez l'emplacement du dossier dans le champ d'édition sous l'option.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Add the following prefix<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to add a prefix at the start of each text unit.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Ajouter le préfixe suivant<ept i='0'>&lt;/g0&gt;</ept> -- Activez cette option pour ajouter un préfixe au début de chaque unité de texte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Enter the text of the prefix.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Entrez le texte du préfixe.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Add the following suffix<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to add a suffix at the end of each text unit.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Ajouter le suffixe suivant<ept i='0'>&lt;/g0&gt;</ept> -- Activez cette option pour ajouter un suffixe à la fin de chaque unité de texte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Enter the text of the suffix.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Entrez le texte du suffixe.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Append the name of the item<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to add the name of each text unit at the end of its value.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Ajoutez le nom de l'élément<ept i='0'>&lt;/g0&gt;</ept> -- Activez cette option pour ajouter le nom de chaque unité de texte à la fin de sa valeur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If the text unit has no name associated, the extraction ID is added instead.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Si l'unité de texte n'a pas de nom associé, l'identifiant d'extraction est ajouté à la place.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Append the extraction ID of the item<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to add the extraction ID of each text unit at the end of its value.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Ajoutez l'identifiant d'extraction de l'élément<ept i='0'>&lt;/g0&gt;</ept> -- Activez cette option pour ajouter l'identifiant d'extraction de chaque unité de texte à la fin de sa valeur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Extraction IDs are filter-specific.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les identifiants d'extraction sont spécifiques à chaque filtre.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Modify also the items with an existing translation<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to apply the changes also to text units that already have a translation (e.g. for multilingual files).</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Modifiez aussi les élément avec une traduction existante <ept i='0'>&lt;/g0&gt;</ept> - Activez cette option pour appliquer les modifications également aux unités de texte qui ont déjà une traduction (par exemple pour les fichiers multilingues).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Marks segments with '[' and ']' delimiters<ept i='0'>&lt;/g0&gt;</ept> -- Set this option to add delimiters to the segments in each text unit.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg><bpt i='0' x='0'>&lt;g0&gt;</bpt>Marquez les segments avec '[' et ']'<ept i='0'>&lt;/g0&gt;</ept> -- Activez cette option pour ajouter des délimiteurs aux les segments dans chaque unité de texte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The delimiters are just around the text (after the prefix if one is added, and before the item name, extraction ID, and suffix if they are added).</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Les délimiteurs sont juste autour du texte (après le préfixe, si il y en a un, et avant que le nom de l'élément, l'identifiant d'extraction, et le suffixe si ils y en a).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If the Apply the following segmentation rules option is set you may have more than one segment per text unit, otherwise each text unit is a single segment.</seg>
+      </tuv>
+      <tuv xml:lang="FR-FR">
+        <seg>Si l'option &quot;Appliquer les règles de segmentation suivantes&quot; est définie, vous pouvez avoir plus d'un segment par unité de texte, sinon, chaque unité de texte est un seul segment.</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

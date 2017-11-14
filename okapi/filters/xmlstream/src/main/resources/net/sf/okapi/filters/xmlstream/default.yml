@@ -1,0 +1,18 @@
+assumeWellformed: true
+preserve_whitespace: false
+
+attributes:
+  # attributes that can appear anywhere
+  'xml:lang':
+    ruleTypes: [ATTRIBUTE_WRITABLE]
+  
+  # This rule will not apply unless TEXT_UNIT element rules are defined which may have an id
+  'xml:id':
+    ruleTypes: [ATTRIBUTE_ID]
+  'id':
+    ruleTypes: [ATTRIBUTE_ID]
+  
+  'xml:space':
+    ruleTypes: [ATTRIBUTE_PRESERVE_WHITESPACE]
+    preserve: ['xml:space', EQUALS, preserve]
+    default: ['xml:space', EQUALS, default]

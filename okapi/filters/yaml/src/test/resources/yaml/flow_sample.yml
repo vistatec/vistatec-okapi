@@ -1,0 +1,9 @@
+k1: [milk, pumpkin pie, eggs, juice]
+k2: {name: John Smith, age: 33}
+
+k3: [{name: John Smith, age: 33}, pumpkin pie, eggs, juice]
+k4: {name: John Smith, age: 33}
+
+k5: [milk, pumpkin pie, eggs, juice]
+k6: {name: [milk, pumpkin pie, eggs, juice], age: 33}
+

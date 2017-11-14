@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:iws="http://www.idiominc.com/ws/asset" version="1.2">
+	<iws:tm-attribute-metadata>
+		<iws:attribute-descr name="_tm_created_by" ui_name="Created By" type="text" flags="2" display_order="-6"/>
+		<iws:attribute-descr name="_tm_created_date" ui_name="Created On" type="date" flags="2" display_order="-5"/>
+		<iws:attribute-descr name="_tm_modified_by" ui_name="Modified By" type="text" flags="2" display_order="-4"/>
+		<iws:attribute-descr name="_tm_modified_date" ui_name="Modified On" type="date" flags="2" display_order="-3"/>
+		<iws:attribute-descr name="_tm_sid" ui_name="SID" type="text" flags="2" display_order="-2"/>
+		<iws:attribute-descr name="_tm_import_job" ui_name="Import Job Id" type="integer" flags="2" display_order="-1"/>
+		<iws:attribute-descr name="_tm_entry_comment" ui_name="Comment" type="large-text-area" flags="8" display_order="1"/>
+	</iws:tm-attribute-metadata>
+	<iws:project-ais-property-metadata/>
+	<iws:scoping-configuration name="TRADOS-compatible configuration">
+		<iws:scoping-range start="0" end="50"/>
+		<iws:scoping-range start="50" end="75"/>
+		<iws:scoping-range start="75" end="85"/>
+		<iws:scoping-range start="85" end="95"/>
+		<iws:scoping-range start="95" end="100"/>
+	</iws:scoping-configuration>
+	<iws:dwb-project-info project_name="Adhoc Project_20110113_050019" ws_url="http://chqpvuw2199.ldschurch.org/ws" session_id="454535290" session_fingerprint="dEjgsSpiGJLb2ruxMgt0d4NvS8w=" instance_id="-670650930" live_tm="false"/>
+	<iws:extension-level version="000001"/>
+	<file source-language="en" content="gen" datatype="x-text/html" original="/Worldserver Projects Test/Test Office 2003/Source/d_Lux_MediaArts2.htm" target-language="es" tool="Idiom WorldServer 9.2.0" build-num="51" xml:space="default">
+		<header>
+			<phase-group>
+				<phase phase-name="Adhoc Export" process-name="WorldServer Asset Export" date="2011-01-13T12:00:19Z" company-name="lds" contact-name="Sergei Vasilyev" contact-email="vasilievsi@ldschurch.org"/>
+			</phase-group>
+			<count-group name="Total Word Count">
+				<count count-type="total">1252</count>
+			</count-group>
+			<glossary>
+				<external-file href="terminology_data.tbx"/>
+			</glossary>
+			<iws:split-merge disable="true"/>
+			<iws:merge-across-markup disable="true"/>
+			<iws:create-background-job disable="false"/>
+			<iws:create-foreground-job disable="false"/>
+			<iws:asset-data>
+				<iws:seg_asset_id>61308</iws:seg_asset_id>
+				<iws:task_id>-1</iws:task_id>
+				<iws:display_task_id/>
+				<iws:ais_src_path>/Worldserver Projects Test/Test Office 2003/Source/d_Lux_MediaArts2.htm</iws:ais_src_path>
+				<iws:src_fingerprint>dBJRzfmo2b2PZcZkU69qoPVv0mg=</iws:src_fingerprint>
+				<iws:ais_tgt_path>/Worldserver Projects Test/Test Office 2003/Target Languages/002_Spanish/Translations/d_Lux_MediaArts2.htm</iws:ais_tgt_path>
+				<iws:tgt_fingerprint/>
+				<iws:steplock>None</iws:steplock>
+				<iws:steptype>None</iws:steptype>
+				<iws:source_lang_id>9</iws:source_lang_id>
+				<iws:target_lang_id>10</iws:target_lang_id>
+				<iws:show_markup>true</iws:show_markup>
+				<iws:tm_id>1017</iws:tm_id>
+				<iws:tm_name>Test+</iws:tm_name>
+				<iws:tm_group>
+					<iws:tm name="Test" penalty="0.0"/>
+					<iws:tm name="FCH Indexing" penalty="0.0"/>
+				</iws:tm_group>
+				<iws:asset-encoding source="UTF8" target="UTF8"/>
+				<iws:asset-properties/>
+			</iws:asset-data>
+			<iws:TM-Weights>
+				<iws:tm_score_number_weight weight="0.2"/>
+				<iws:tm_score_outer_placeholder_weight weight="0.1"/>
+				<iws:tm_score_inner_placeholder_weight weight="0.25"/>
+			</iws:TM-Weights>
+			<iws:TM-Penalties>
+				<iws:tm_score_capitalization_penalty penalty="0.01"/>
+				<iws:tm_score_punctuation_penalty penalty="0.0050"/>
+				<iws:tm_score_placeholder_sequence_penalty penalty="0.01"/>
+				<iws:tm_score_maximum_target_length_penalty penalty="0.01"/>
+				<iws:tm_score_number_difference_penalty penalty="0.2"/>
+				<iws:tm_score_asset_mismatch_penalty penalty="0.0"/>
+				<iws:tm_score_metadata_mismatch_penalty penalty="0.0"/>
+				<iws:tm_score_multiple_exact_match_penalty penalty="0.0"/>
+				<iws:tm_score_whitespace_difference_penalty penalty="0.0"/>
+				<iws:tm_score_unreviewed_match_penalty penalty="0.0"/>
+				<iws:tm_score_reverse_leverage_penalty penalty="0.0"/>
+			</iws:TM-Penalties>
+			<iws:update-translation-memory-setting update="true" default="false"/>
+			<iws:exclude_segment_filter type="None"/>
+			<iws:treat-whitespace-as-significant significant="false"/>
+			<iws:comment-on-locked-segments disable="false"/>
+		</header>
+		<body>
+			<trans-unit id="0000000008" datatype="x-text/html" restype="string">
+				<source>Home</source>
+				<target>Inicio</target>
+				<alt-trans match-quality="100" origin="Test">
+					<source>Home</source>
+					<target>Inicio</target>
+					<iws:tm_entry_id tm_entry_id_value="105875"/>
+					<iws:is-reverse-leveraged reverse="false"/>
+					<iws:is-repaired-match repaired="false"/>
+					<iws:status translation_status="finished"/>
+					<iws:asset-origin origin="/Filesystem Projects/000_English/04305_IMOS/04305_C00_Program Files/general.properties"/>
+					<iws:attribute name="_tm_created_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_created_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_modified_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_modified_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_import_job">1001</iws:attribute>
+				</alt-trans>
+				<alt-trans match-quality="100%" origin="Test">
+					<source>Home</source>
+					<target>Inicio</target>
+					<iws:tm_entry_id tm_entry_id_value="105875"/>
+					<iws:is-reverse-leveraged reverse="false"/>
+					<iws:is-repaired-match repaired="false"/>
+					<iws:status translation_status="finished"/>
+					<iws:asset-origin origin="/Filesystem Projects/000_English/04305_IMOS/04305_C00_Program Files/general.properties"/>
+					<iws:attribute name="_tm_created_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_created_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_modified_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_modified_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_import_job">1001</iws:attribute>
+				</alt-trans>
+				<alt-trans match-quality="100.00" origin="Test">
+					<source>Home</source>
+					<target>Inicio</target>
+					<iws:tm_entry_id tm_entry_id_value="105875"/>
+					<iws:is-reverse-leveraged reverse="false"/>
+					<iws:is-repaired-match repaired="false"/>
+					<iws:status translation_status="finished"/>
+					<iws:asset-origin origin="/Filesystem Projects/000_English/04305_IMOS/04305_C00_Program Files/general.properties"/>
+					<iws:attribute name="_tm_created_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_created_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_modified_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_modified_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_import_job">1001</iws:attribute>
+				</alt-trans>
+				<alt-trans match-quality="100.00%" origin="Test">
+					<source>Home</source>
+					<target>Inicio</target>
+					<iws:tm_entry_id tm_entry_id_value="105875"/>
+					<iws:is-reverse-leveraged reverse="false"/>
+					<iws:is-repaired-match repaired="false"/>
+					<iws:status translation_status="finished"/>
+					<iws:asset-origin origin="/Filesystem Projects/000_English/04305_IMOS/04305_C00_Program Files/general.properties"/>
+					<iws:attribute name="_tm_created_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_created_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_modified_by">Gema Ortiz</iws:attribute>
+					<iws:attribute name="_tm_modified_date">1187711462000</iws:attribute>
+					<iws:attribute name="_tm_import_job">1001</iws:attribute>
+				</alt-trans>
+				<iws:segment-metadata tm_score="100.00" ws_word_count="1" max_segment_length="0">
+					<iws:status tm_origin="from_ws_tm"/>
+				</iws:segment-metadata>
+				<iws:markup-seg sequence="0000000007">&lt;/li&gt;&#xD;
+					&#xD;
+					&#xD;
+					&lt;/ul&gt;&#xD;
+					&lt;/div&gt;&#xD;
+					&lt;div id="message"&gt;&lt;/div&gt;&#xD;
+					&#xD;
+					&lt;!-- Begin Main Content --&gt;&#xD;
+					&#xD;
+					&#xD;
+					&lt;div id="main-content" class="s-c-s"&gt;&#xD;
+					&lt;div id="colmask" class="ckl-color1"&gt;&#xD;
+					&lt;div id="colmid" class="cdr-color1"&gt;&#xD;
+					&lt;div id="colright" class="ctr-color1"&gt;&#xD;
+					&#xD;
+					&lt;!-- Begin col1 --&gt;&#xD;
+					&#xD;
+					&lt;div id="col1wrap"&gt;&#xD;
+					&lt;div id="col1pad"&gt;&#xD;
+					&lt;div id="col1"&gt;&#xD;
+					&lt;div class="breadcrumbs-pad"&gt;&#xD;
+					&lt;div class="breadcrumbs"&gt;</iws:markup-seg>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

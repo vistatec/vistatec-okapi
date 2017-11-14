@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message-templates>
+
+    <![CDATA[
+
+    <strong> this is a bolded text between html strong tags </strong>
+
+    Here we want to pull out the freemarker into tags, but pass through 
+    the text and the brace value: <#if contactInfo??> or 
+    ${contactInfo}</#if>.
+
+Here we ensure that we get the single else and handle the double quotes:
+<#if smb.maxAlarmLevel == "notice">Important<#else>Urgent</#if> 
+information regarding ${sbsName}
+
+Another test with lots of regexee text: 
+<#if commentAuthorURL?has_content> 
+<a href="${commentAuthorURL}">${commentAuthorName}</a>
+<#else>${commentAuthorName}</#if> 
+<a href="${commentURL}">View all comments on this event</a>
+
+Ensure we pull don't break early on parentheses: 
+${totalTaskCount} upcoming <#if (overdueTasks.size() > 0)>
+(${overdueTasks.size()} overdue)</#if>
+
+]]>
+
+</message-templates>

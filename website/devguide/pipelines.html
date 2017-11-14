@@ -1,0 +1,317 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Okapi Framework Developer's Guide - Pipelines</title>
+<link rel="stylesheet" type="text/css" href="../okapi.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Developer's Guide</h1>
+		<h2 class="head2">Pipelines</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br/>
+			- <a href="#simplePipeline">Simple Pipeline</a><br/>
+			- <a href="#creatingSteps">Creating Steps</a>
+		</p></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="glossary.html">Glossary</a></td>
+				<td><a href="index.html">Guide Content</a></td>
+				<td><a href="http://okapiframework.org">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<h2><a name="overview"></a>Overview</h2>
+<p><b>IMPORTANT: This page may not reflect the latest changes in the pipeline 
+mechanism from the previous release. <br>
+The pipeline mechanism is under development and its API may change from release 
+to release.</b></p>
+<p>Pipelines are a powerful mechanism to apply a sequence of actions to an input 
+document (or a set of them). They allow you to construct processes customized to specific projects 
+very easily, re-using the same components. For example, many tasks can be broken down into these main parts:</p>
+<p>Extract the text &gt;&gt; Apply some changes to the text &gt;&gt; Merge back the 
+modified text into 
+its original format.</p>
+<p>With the framework this type of sequence is implemented using the following 
+interfaces:</p>
+<p><code><a href="../javadoc/net/sf/okapi/common/filters/IFilter.html">IFilter</a></code> 
+&gt;&gt; <code><a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineStep.html">
+IPipelineStep</a></code> &gt;&gt; <code>
+<a href="../javadoc/net/sf/okapi/common/filterwriter/IFilterWriter.html">
+IFilterWriter</a></code></p>
+<p>The pipeline is the glue that puts these parts together and allows you to include as many as you 
+need.</p>
+<h2><a name="simplePipeline"></a>Simple Pipeline</h2>
+<p>A pipeline is represented by a <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IPipeline.html">IPipeline</a></code> 
+interface. The framework offers several implementations for it. The simplest is 
+the <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/Pipeline.html">Pipeline</a></code> 
+class.</p>
+<p>The easiest way to set up and execute a pipeline is to use a pipeline driver. 
+It is represented by the <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineDriver.html">IPipelineDriver</a></code> interface and provides all 
+you need to process one or more input documents through a pipeline.</p>
+<p>The first step is to create the driver:</p>
+<pre>// Create a pipeline driver
+IPipelineDriver driver = new PipelineDriver();</pre>
+<p>The next step is to add the different steps you want in the pipeline. In this 
+example we are going to simply extract the translatable text from the original 
+format and re-write it back. These two operations are very common and they have 
+corresponding steps already coded for you: the
+<a href="../javadoc/net/sf/okapi/steps/common/RawDocumentToFilterEventsStep.html">
+<code>
+RawDocumentToFilterEventsStep</code></a> class and the <code>
+<a href="../javadoc/net/sf/okapi/steps/common/FilterEventsWriterStep.html">
+FilterEventsWriterStep</a></code> class.</p>
+<pre>// Add the filter step
+driver.addStep(new RawDocumentToFilterEventsStep());
+// Add the filter writer step
+driver.addStep(new FilterEventsWriterStep());</pre>
+<p>Because our pipeline uses a filter we need to provide a way to know which 
+filter to use with which input document. This is done in two settings:</p>
+<ul>
+	<li>With the input document, we will provide a filter configuration ID.</li>
+	<li>An object that implements the <code>
+	<a href="../javadoc/net/sf/okapi/common/filters/IFilterConfigurationMapper.html">
+	IFilterConfigurationMapper</a></code> interface needs to be set in the 
+	pipeline context, so any step that needs to create a filter for an input 
+	document can use this mapper to lookup the filter configuration ID of the 
+	document and retrieve the filter and the filter's parameters to use.</li>
+</ul>
+<p>Each calling application can provide its own implementation of <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilterConfigurationMapper.html">
+IFilterConfigurationMapper</a></code> or, like in this example, use directly the 
+one provided with the library: the <code>
+<a href="../javadoc/net/sf/okapi/common/filters/FilterConfigurationMapper.html">
+FilterConfigurationMapper</a></code> class.</p>
+<pre>// Create the filter configuration mapper
+IFilterConfigurationMapper fcMapper = new FilterConfigurationMapper();</pre>
+<p>In a real application, you would use some kind of discovery mechanism to get 
+the different filters available to you and add their default configurations to 
+the mapper. But, if needed, you can also easily hard-code this:</p>
+<pre>// Fill the mapper with the default configurations of a few filters
+fcMapper.addConfigurations(&quot;net.sf.okapi.filters.html.HtmlFilter&quot;);
+fcMapper.addConfigurations(&quot;net.sf.okapi.filters.openoffice.OpenOfficeFilter&quot;);
+fcMapper.addConfigurations(&quot;net.sf.okapi.filters.properties.PropertiesFilter&quot;);
+fcMapper.addConfigurations(&quot;net.sf.okapi.filters.xml.XMLFilter&quot;);</pre>
+<p>The last task is the associate the mapper to the pipeline:</p>
+<pre>// Set the filter configuration mapper
+driver.setFilterConfigurationMapper(fcMapper);</pre>
+<p>Now the driver is all set up to process your documents. Executing the 
+pipeline for a given input document is done by first providing the document and 
+its parameters, and then by invoking the driver.</p>
+<p>Usually we have more than one document to process. A set of input documents 
+is called a batch, and both the driver and the pipeline are designed to work 
+with batches. A batch item corresponds to the input for a single execution of 
+the pipeline. It is usually made of a single input document. But some steps may 
+require several input documents per batch item. For example a step that would 
+perform an alignment between a source document and its translation may request 
+two input documents for each batch item.</p>
+<p>To allow the feeding of the batch item to the pipeline is done with the <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IBatchItemContext.html">
+IBatchItemContext</a></code> interface. It provides the method to access the 
+parameters for one or more input document per batch item. One important 
+advantage of using an interface for this is that your application can store its 
+input data any way it wants, and simply can expose the way the pipeline expects 
+by simply implementing that interface.</p>
+<p>The driver offers several variations of the <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineDriver.html">
+IPipelineDriver.addBatchItem()</a></code> method to facilitate the creation of 
+the batch. In our case, our pipeline needs one input document per batch item, 
+and its corresponding output parameters. We can use the following code to add 
+one batch item to the driver:</p>
+<pre>// Add one batch item to the batch
+driver.addBatchItem(
+   new BatchItemContext(
+      (new File(&quot;myFile.html&quot;)).toURI(), // URI of the input document
+      &quot;UTF-8&quot;, // Default encoding
+      &quot;okf_html&quot;, // Filter configuration of the document
+      (new File(&quot;myFile.out.html&quot;)).toURI(), // Output
+      &quot;UTF-8&quot;, // Encoding for the output
+      LocaleId.fromString(&quot;en&quot;), // Source locale
+      LocaleId.fromString(&quot;fr&quot;) // Target locale
+   )
+);</pre>
+<p>We are now ready to execute the pipeline for the given input document. This 
+is done in one call:</p>
+<pre>// Execute the pipeline for all batch items
+driver.processBatch();</pre>
+<p>When this process is done you should have a new document <code>
+myFile.out.html</code> that should be a copy of <code>myFile.html</code> with 
+possibly some small modifications, such as the language declarations changed 
+from <code>en</code> to <code>fr</code>.</p>
+<p>Note that you can also run the exact same pipeline on input documents that 
+are in different file formats, as long as you provide the proper filter 
+configuration ID with each one.</p>
+<h2><a name="creatingSteps"></a>Creating Steps</h2>
+<p dir="ltr">Now we want to modify the pipeline we created in the previous 
+section, so it does something more meaningful than rewrite the input documents. 
+We can do this by adding an extra step between the two we currently have. This 
+step will receive filter events from the first step, and send them down to the 
+next step that will write the output file. The only thing we have to do is write 
+the part that modify the extracted text we get through the <code>TEXT_UNIT</code> 
+events. Let's create a step that pseudo-translate the extracted text.</p>
+<p dir="ltr">This requires to create a new class that implements 
+the <code><a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineStep.html">IPipelineStep</a></code> interface. The framework makes things easy by 
+providing the class <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/BasePipelineStep.html">BasePipelineStep</a></code> that you can 
+use to derive you own steps.</p>
+<p dir="ltr">There are only a few methods we need to overwrite:</p>
+<p>The <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineStep.html#getName()">
+IPipelineStep.getName()</a></code> method should return the name of the step. 
+This name is localizable and is used by other applications when they need to 
+associate the step to a visual label. It should be short and descriptive. For 
+example: &quot;<code>Pseudo-Translation</code>&quot;.</p>
+<p>The <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IPipelineStep.html#getDescription()">IPipelineStep.getDescription()</a></code> 
+method should return a brief description of what the step does. This text is 
+localizable and is used by other applications when they need to associate the 
+step with a short description. It should be one or two short descriptive 
+sentences. For example: &quot;<code>Pseudo-translate text units content.</code>&quot;</p>
+<p>Then we need to override any of the event handler methods you need. In our 
+case we just need to override one: <code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/BasePipelineStep.html#handleTextUnit(net.sf.okapi.common.Event)">
+BasePipelineSetp.handleTextUnit()</code></a>.</p>
+<p dir="ltr">The code below shows our new step class. It intercepts the 
+<code>TEXT_UNIT</code> events and performs a simple pseudo-translation by replacing some ASCII characters by 
+the same ones with accents, so the text <code>&quot;A goose quill is more dangerous 
+than a lion's claw&quot;</code> becomes <code>&quot;A gõõsè qüìll ìs mõrè ðåñgèrõüs thåñ å 
+lìõñ's çlåw&quot;</code>.</p>
+<p>In order to create the target text in the text unit, the class needs to know what the 
+target language is. A pipeline step publishes the runtime parameters it needs 
+using the standard JavaBean pattern, along with a special Java annotation. In 
+our case, we declare a <code>setTargetLocale()</code> method. The pipeline 
+driver will introspect the steps and provide the proper parameters from the
+<code>
+<a href="../javadoc/net/sf/okapi/common/pipeline/IBatchItemContext.html">
+IBatchItemContext</a></code> interface.</p>
+<p>The other parts of the code deal with changing the text 
+unit content itself. See the section
+<a href="gettingstarted.html#TextUnits">Working with Text Units</a> for more 
+details on how to modify text units.</p>
+<pre>public class PseudoTranslateStep extends BasePipelineStep {
+
+   private static final String OLDCHARS = &quot;aeiouycdn&quot;;
+   private static final String NEWCHARS = &quot;\u00e5\u00e8\u00ec\u00f5\u00fc\u00ff\u00e7\u00f0\u00f1&quot;;
+
+   private LocaleId trgLoc;
+
+   @StepParameterMapping(parameterType = StepParameterType.TARGET_LOCALE)
+   public void setTargetLocale (LocaleId targetLocale) {
+      trgLoc = targetLocale;
+   }
+
+   public String getName () {
+      return &quot;Pseudo-Translation&quot;;
+   }
+
+   public String getDescription () {
+      return &quot;Pseudo-translates text units content.&quot;;
+   }
+
+   protected void handleTextUnit (Event event) {
+      TextUnit tu = (TextUnit)event.getResource();
+      if ( !tu.isTranslatable() ) return;
+
+      TextFragment tf = tu.createTarget(trgLoc, false, IResource.COPY_CONTENT);
+      StringBuilder text = new StringBuilder(tf.getCodedText());
+      int n;
+      for ( int i=0; i&lt;text.length(); i++ ) {
+         if ( TextFragment.isMarker(text.charAt(i)) ) {
+            i++; // Skip the pair
+         }
+         else {
+            if ( (n = OLDCHARS.indexOf(text.charAt(i))) &gt; -1 ) {
+               text.setCharAt(i, NEWCHARS.charAt(n));
+            }
+         }
+      }
+      tf.setCodedText(text.toString());
+   }
+}</pre>
+<p>Once we have created our new class, we simply need to add it between the input and output steps 
+of our previous code:</p>
+<pre>// Add the filter step
+driver.addStep(new RawDocumentToFilterEventsStep());
+// Add the pseudo-translation step
+driver.addStep(new PseudoTranslateStep());
+// Add the filter writer step
+driver.addStep(new FilterEventsWriterStep());</pre>
+<p>At first it may seems more complicated to create a new class for each new step instead 
+of working directly in a single class, But the benefits are important: 
+Each step defined as a separate class can be easily re-used in different processes.</p>
+<p>You should see each step as a component independent of everything else. It 
+should not be filter-specific and avoid using global parameters. It should, most 
+of the time, not expect to be before or after another specific step. It should also 
+be aware of inline codes, as well as the translate and the preserve-whitespaces 
+information attached to each text unit. The <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html">TextUnit</a></code> 
+class may provide plenty of information you can query: <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getType()">
+TextUnit.getType()</a></code>, <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getName()">
+TextUnit.getName()</a></code>, <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getMimeType()">
+TextUnit.getMimeType()</a></code>, <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getAnnotation(java.lang.Class)">
+TextUnit.getAnnotation()</a></code>, <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getProperty(java.lang.String)">
+TextUnit.getProperty()</a></code>, etc. Make use of them to drive the different 
+actions performed on the extracted text.</p>
+<h2><a name="pipelineEvents"></a>Pipeline Events</h2>
+<p>When a pipeline is executed the following sequence of events are are 
+dispatched:</p>
+<ul>
+	<li><code>START_BATCH</code> - The batch starts. This is the opportunity for 
+	the steps to initialize themselves as needed.</li>
+	<li>For each batch item:<ul>
+		<li><code>START_BATCH_ITEM</code> - A new batch item starts. This is the 
+		opportunity for the steps to perform any initialization that depend on 
+		each batch item.</li>
+		<li><code>RAW_DOCUMENT</code> is the normal way to start the pipeline. 
+		From here the events sent down the pipeline depends on each step.<ul>
+			<li>Some steps, like <code>
+			<a href="../javadoc/net/sf/okapi/steps/common/RawDocumentToFilterEventsStep.html">RawDocumentToFilterEventsStep</a></code>, 
+			may send <a href="filters.html#filterEvents">filter events</a> until 
+			the document is completely parsed.</li>
+			<li>Some steps may take a <code>RAW_DOCUMENT</code> event, modify 
+			the document, and send a new <code>RAW_DOCUMENT</code> event down 
+			the pipeline.</li>
+			<li>Some steps, like <code>
+			<a href="../javadoc/net/sf/okapi/steps/common/FilterEventsToRawDocumentStep.html">
+			FilterEventsToRawDocument</a></code>, may take
+			<a href="filters.html#filterEvents">filter events</a> and convert 
+			them into a single <code>RAW_DOCUMENT</code> to the next step.</li>
+			<li><code>CUSTOM</code>, <code>CANCEL</code> and <code>NO_OP</code> 
+			events may be received at any time. All steps must be capable of 
+			handling any event. If a step does not know what to do with a given 
+			event it should simply pass it on without any modification.</li>
+		</ul>
+		</li>
+		<li><code>END_BATCH_ITEM</code> - The current batch item is done. This 
+		is the time to perform any task that works at the batch-item level. For 
+		example, a word-counting step would now compute the total word count for 
+		all text units found in the input document of this batch item.</li>
+	</ul>
+	</li>
+	<li><code>END_BATCH</code> - The last batch item of this batch was done, we 
+	are ending the batch. This is the time for the steps to trigger any task 
+	that works at the batch level. For example, a word-counting step would now 
+	compute the total word count for all the input documents of this batch.</li>
+</ul>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+{
+  "header" : {
+    "version" : "1.0",
+    "description" : "",
+    "itemClass" : "net.sf.okapi.common.Event",
+    "mimeType" : "application/json",
+    "frames" : [ [ -1176, 1174 ] ]
+  },
+  "body" : {
+  "event1" : {
+    "resource" : {
+      "reference" : 0,
+      "className" : "net.sf.okapi.common.resource.StartDocument",
+      "content" : {
+        "multilingual" : false,
+        "lineBreak" : null,
+        "filterWriter" : {
+          "reference" : 0,
+          "className" : "net.sf.okapi.common.filterwriter.GenericFilterWriter",
+          "content" : {
+            "refId" : 1173
+          },
+          "refId" : 1172
+        },
+        "filterParameters" : {
+          "reference" : 0,
+          "className" : null,
+          "content" : null,
+          "refId" : 1171
+        },
+        "hasUTF8BOM" : false,
+        "encoding" : null,
+        "locale" : "en-us",
+        "skeleton" : {
+          "reference" : 0,
+          "className" : null,
+          "content" : null,
+          "refId" : 1170
+        },
+        "translatable" : true,
+        "preserveWS" : false,
+        "sourceProperties" : [ ],
+        "name" : "test_refs5.txt",
+        "annotations" : [ ],
+        "properties" : [ ],
+        "id" : "sd1",
+        "type" : null,
+        "mimeType" : null,
+        "refId" : 1169
+      },
+      "refId" : 1168
+    },
+    "type" : "START_DOCUMENT",
+    "refId" : 1167
+  },
+  "event2" : {
+    "parent" : {
+      "reference" : 0,
+      "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+      "content" : {
+        "parent" : {
+          "reference" : 1174,
+          "className" : "net.sf.okapi.steps.xliffkit.common.persistence.versioning.TestEvent",
+          "content" : null,
+          "refId" : 1177
+        },
+        "id" : "e2",
+        "refId" : 1176
+      },
+      "refId" : 1175
+    },
+    "id" : "e1",
+    "refId" : 1174
+  },
+  "event3" : {
+    "parent" : {
+      "reference" : 0,
+      "className" : null,
+      "content" : null,
+      "refId" : 1179
+    },
+    "id" : null,
+    "refId" : -1176
+  },
+  "event4" : {
+    "resource" : {
+      "reference" : 0,
+      "className" : null,
+      "content" : null,
+      "refId" : 1181
+    },
+    "type" : "END_DOCUMENT",
+    "refId" : 1180
+  }}
+}

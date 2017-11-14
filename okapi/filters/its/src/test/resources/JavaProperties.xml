@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Rhyme</comment>
+<entry key="seven-eight">lay them straight</entry>
+<entry key="five-six">pick up sticks</entry>
+<entry key="nine-ten">a big, fat hen</entry>
+<entry key="three-four">shut the door</entry>
+<entry key="one-two">buckle my shoe</entry>
+</properties>

@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: myApp 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-02 05:16+0200\n"
+"PO-Revision-Date: 2005-03-21 11:28/-0600\n"
+"Last-Translator: unknown <email@address>\n"
+"Language-Team: unknown <email@address>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=windows-1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "A simple sentence with nothing special. And more text after."
+msgstr "Une phrase simple sans rien de spécial. And more text after."
+
+msgid "Another sentence."
+msgstr "Une phrase pas pareil (po-not-fuzzy)"
+
+#, fuzzy
+msgid "Another sentence."
+msgstr "Une autre phrase."
+
+msgid "A simple <b>sentence</b> with nothing special."
+msgstr "A simple <b>sentence</b> with nothing special."
+

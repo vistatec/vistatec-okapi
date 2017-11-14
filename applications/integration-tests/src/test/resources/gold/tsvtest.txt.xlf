@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="tsvtest.txt" source-language="en" target-language="fr" datatype="x-text/plain" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="1" xml:space="preserve">
+<source xml:lang="en">Column1	Column2</source>
+<target xml:lang="fr">Column1	Column2</target>
+</trans-unit>
+<trans-unit id="2" xml:space="preserve">
+<source xml:lang="en">Source cell-1.1	Source cell-1.2</source>
+<target xml:lang="fr">Source cell-1.1	Source cell-1.2</target>
+</trans-unit>
+<trans-unit id="3" xml:space="preserve">
+<source xml:lang="en">Source cell-2.1	Source cell-2.2</source>
+<target xml:lang="fr">Source cell-2.1	Source cell-2.2</target>
+</trans-unit>
+<trans-unit id="4" xml:space="preserve">
+<source xml:lang="en">Source cell-3.1	Source cell-3.2</source>
+<target xml:lang="fr">Source cell-3.1	Source cell-3.2</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,7 @@
+exclude_by_default: true
+preserve_whitespace: false
+
+elements:
+  '.*':
+    ruleTypes: [INCLUDE]
+    conditions: [translate, EQUALS, 'y']

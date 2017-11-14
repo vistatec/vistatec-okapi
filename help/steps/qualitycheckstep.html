@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Steps - Quality Check</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr class="head">
+      <td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Steps</h1>
+      <h2 class="head2">Quality Check Step</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="smalltoc"> - <a href="#overview">Overview</a><br>
+- <a href="#parameters">Parameters</a></td>
+      <td class="hmenu">
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+            <td><a href="index.html">Steps</a></td>
+            <td><a href="http://okapiframework.org/devguide/index.html">Developer's
+Guide</a></td>
+            <td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Quality_Check_Step">http://okapiframework.org/wiki/index.php?title=Quality_Check_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step generate a report of issues found by comparing the source and 
+target of text units.</p>
+<p>Takes: Filter events or raw documents<br>
+Sends: Filter events or raw documents</p>
+<p>No check is done on the entries set as non-translatable.</p>
+<p><b>With the input as filter events</b>: The events are processed and are sent 
+to the next step. The quality check report is generated at the end of the batch 
+of input files. No interactive UI is provided.</p>
+<p><b>With the input as raw documents</b>: The documents are added to a new 
+quality check session and are sent to the next step. At the end of the batch the 
+session is open in CheckMate, the documents are processed and the user can 
+browse through the issues found, disabled some and generate the report if 
+necessary.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p>This step uses the same module as CheckMate and shares the same parameters.</p>
+<p><a href="../lib/ui/verification/parameterseditor.html">See the possible 
+options for available quality 
+check</a>.</p>
+</body>
+</html>

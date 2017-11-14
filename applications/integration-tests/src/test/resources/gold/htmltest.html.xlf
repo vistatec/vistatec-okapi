@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="htmltest.html" source-language="en" target-language="fr" datatype="html" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="tu1" restype="x-paragraph">
+<source xml:lang="en">This is a test. <x id="1"/> Next sentence. Third sentence.</source>
+<target xml:lang="fr">This is a test. <x id="1"/> Next sentence. Third sentence.</target>
+</trans-unit>
+<trans-unit id="tu2" restype="x-paragraph">
+<source xml:lang="en">Text in <g id="1">bold</g>.</source>
+<target xml:lang="fr">Text in <g id="1">bold</g>.</target>
+</trans-unit>
+<trans-unit id="tu3" restype="x-paragraph">
+<source xml:lang="en">&lt;=lt, &amp;=amp, >=gt, "=quot, '=apos. ©=copyright, €=euro</source>
+<target xml:lang="fr">&lt;=lt, &amp;=amp, >=gt, "=quot, '=apos. ©=copyright, €=euro</target>
+</trans-unit>
+<trans-unit id="tu4" restype="x-paragraph">
+<source xml:lang="en">Paragraph that is originally split into several lines of text in the source document and has things like this: [ ].</source>
+<target xml:lang="fr">Paragraph that is originally split into several lines of text in the source document and has things like this: [ ].</target>
+</trans-unit>
+<trans-unit id="tu5" restype="x-pre" xml:space="preserve">
+<source xml:lang="en">This is line 1
+and now line 2
+and line 3 with [   ]=3spaces</source>
+<target xml:lang="fr">This is line 1
+and now line 2
+and line 3 with [   ]=3spaces</target>
+</trans-unit>
+<trans-unit id="tu6" restype="x-paragraph">
+<source xml:lang="en">Cette phrase est en français.</source>
+<target xml:lang="fr">Cette phrase est en français.</target>
+</trans-unit>
+<trans-unit id="tu7" restype="x-paragraph">
+<source xml:lang="en">이 문장을 한국어로입니다</source>
+<target xml:lang="fr">이 문장을 한국어로입니다</target>
+</trans-unit>
+<trans-unit id="tu8" restype="x-paragraph">
+<source xml:lang="en">This sentence is in English and should be unwrapped.</source>
+<target xml:lang="fr">This sentence is in English and should be unwrapped.</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="potest-mono.po" source-language="en" target-language="fr" datatype="x-application/x-gettext" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="1" resname="messages::name100" xml:space="preserve">
+<source xml:lang="en">Message for ID name100</source>
+<target xml:lang="fr">Message for ID name100</target>
+</trans-unit>
+<trans-unit id="2" resname="messages::name200" xml:space="preserve">
+<source xml:lang="en">Message for ID name200</source>
+<target xml:lang="fr">Message for ID name200</target>
+</trans-unit>
+<trans-unit id="3" resname="messages::name300" xml:space="preserve">
+<source xml:lang="en">Message for ID name300</source>
+<target xml:lang="fr">Message for ID name300</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

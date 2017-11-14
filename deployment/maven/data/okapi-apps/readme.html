@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Okapi Applications ReadMe</title>
+    <style type="text/css">body { font-family: Arial, Helvetica, sans-serif; }</style>
+  </head>
+  <body>
+    <h1>Release Notes - okapi-apps @version@, @date@</h1>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#SetupWindows">Windows Platform</a></li>
+      <li><a href="#SetupLinux">Linux Platforms</a></li>
+      <li><a href="#SetupMac">Macintosh Platform</a></li>
+      <li><a href="#Support">Support</a></li>
+    </ul>
+    <hr>
+    <h2><a name="overview"></a>Overview</h2>
+    <p>The <b>okapi-apps</b> distribution contains:</p>
+    <ul>
+      <li>The <b>okapi-lib</b> distribution, a collection of Java classes
+        design to help in programming components and applications related to
+        translation and localization tasks.</li>
+      <li>Several applications built on top of the framework:
+        <ul>
+          <li><b> <a href="http://okapiframework.org/wiki/index.php?title=Tikal">Tikal</a></b>
+            is a command-line tool to execute some simple localization-related
+            tasks, like extraction and merge of <a href="http://okapiframework.org/wiki/index.php?title=XLIFF">XLIFF
+              documents</a>.</li>
+          <li><b> <a href="http://okapiframework.org/wiki/index.php?title=Rainbow">Rainbow</a></b>
+            is an application that provides a user interface to launch different
+            translation and localization-related utilities.</li>
+          <li><b> <a href="http://okapiframework.org/wiki/index.php?title=CheckMate">CheckMate</a></b>
+            is an application allowing you to perform quality checks on
+            bilingual translated documents such as XLIFF, TMX, PO, TTX, etc.</li>
+          <li><b> <a href="http://okapiframework.org/wiki/index.php?title=Ratel">Ratel</a></b>
+            is a simple editor for segmentation rules in <a href="http://okapiframework.org/wiki/index.php?title=SRX">SRX
+              format</a>.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>For a list of changes since the previous release, please see the <a href="changes.html">Changes
+        Log document</a>.</p>
+    <p><b>Note that parts of this project are still relatively new and still in
+        development. Some of the classes, interfaces and internal workings
+        presented here may change in the upcoming versions of the Okapi
+        Framework.</b></p>
+    <table id="table1" border="1" cellpadding="4" cellspacing="0">
+      <tbody>
+        <tr>
+          <td align="left" valign="top"><code>lib</code></td>
+          <td>All the files needed to run the Okapi libraries and applications.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>help</code></td>
+          <td>The help files.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>config</code></td>
+          <td>Various default configuration files (e.g. segmentation rules,
+            additional filter configurations, etc.)</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>examples</code></td>
+          <td>A few Java examples on how to use the library in your own
+            programs. See the <a href="examples/readme.html">examples' readme
+              file</a> for details.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>dropins</code></td>
+          <td>The directory where you can drop plug-ins.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The latest version of all documents and help is always available on-line,
+      at the <a href="http://okapiframework.org/wiki">Okapi Framework Web site</a>.</p>
+    <hr>
+    <h2><a name="SetupWindows"></a>Windows Platform</h2>
+    <h3>Requirements</h3>
+    <p>In order to run the Okapi applications on Windows you must have a running
+      installation of Java&nbsp;1.7 or later. Sun Java, or an OpenJDK VM is
+      recommended.</p>
+    <h3>Installation</h3>
+    <p>To install the Okapi applications on Windows (32- and 64-bit):</p>
+    <ol>
+      <li>Download the ZIP file of the Windows distribution.</li>
+      <li>Unzip the file on any location where you have rights, for example <code>C:\Program
+          Files\Okapi</code>.</li>
+    </ol>
+    <p>To run Rainbow: simply double-click on the <code>rainbow.exe</code> file
+      in the main folder.</p>
+    <p>You can also run the application with the following command line
+      (assuming it has been unzipped in the recommended folder):</p>
+    <pre>C:\&gt;javaw -jar C:\Program Files\Okapi\lib\rainbow.jar</pre>
+    <p>To run Tikal: double-click on the <code>startTikalPrompt.bat</code>
+      file. This will start a command prompt from where you can invoke Tikal
+      from any directory. If you want to run Tikal at any time, from anywhere,
+      you should add the directory where <code>tikal.bat</code> is located in
+      the PATH of your system.</p>
+    <h3>Uninstallation</h3>
+    <p>To uninstall:</p>
+    <ol>
+      <li>Rainbow runs independently of Windows, so to uninstall it you can
+        simply delete the folder where you have installed it. There is no
+        Registry information to remove.</li>
+      <li>If you want you can also remove the file where the user preferences
+        are saved. It is located in the Home folder of the user and called <code>.Rainbow</code>.</li>
+    </ol>
+    <hr>
+    <h2><a name="SetupLinux"></a>Linux Platforms</h2>
+    <h4>Requirements</h4>
+    <p>In order to run the Okapi applications on Linux you must have a running
+      installation of Java&nbsp;1.7 or later. Sun Java, or an OpenJDK VM is
+      recommended.</p>
+    <h3>Installation</h3>
+    <p>To install the Okapi applications on Linux (32- and 64-bit):</p>
+    <ol>
+      <li>Download the ZIP file of the Linux distribution you need (there is one
+        for 32-bit and one for 64-bit).</li>
+      <li>Extract the file on any location. Make sure to preserve the full paths
+        when extracting.</li>
+    </ol>
+    <p>To run, for example, Rainbow: simply double-click on the <code>rainbow.sh</code>
+      file in the main directory.</p>
+    <p>You can also run the application from the command line (assuming Rainbow
+      is installed in <code>\home\archie\okapi</code>):</p>
+    <pre>archie@archie:~&gt;java -jar okapi/lib/rainbow.jar</pre>
+    <h3>Uninstallation</h3>
+    <p>To uninstall:</p>
+    <ol>
+      <li>Delete the directory where the okapi application are installed.</li>
+      <li>If you want, you can also remove the files where the user preferences
+        are saved. They are located in the Home folder of the user and called <code>.Rainbow</code>
+        and <code>.Ratel</code>.</li>
+    </ol>
+    <hr>
+    <h2><a name="SetupMac"></a>Macintosh Platform</h2>
+    <h3>Requirements</h3>
+    <p>In order to run Okapi applications on Macintosh you must have Java 1.7
+      installed. </p>
+    <ul>
+    </ul>
+    <h3>Installation</h3>
+    <p>To install the Okapi applications on Macintosh (64-bit):</p>
+    <h4>Installing release builds</h4>
+    Release builds are distributed as signed DMG disk images.
+    <ol>
+      <li>Download and open the DMG file for the distrution.</li>
+      <li>Drag the "Okapi_[release]" directory into your <tt>Applications</tt> folder.
+    </ol>
+    <h4>Installing snapshot builds</h4>
+    Snapshot builds are distributed as unsigned ZIP archives.
+    <ol>
+      <li>Download the ZIP file of the Macintosh distribution you need (See
+        above).</li>
+      <li>Extract the ZIP file on any location. For example <code>
+          /Users/admin/Desktop/Okapi</code>.</li>
+    </ol>
+    <p><strong>Note:</strong> Because snapshot builds are unsigned, users on recent 
+    versions of OS X (particularly Sierra or later) may have problems when running 
+    the applications. For more information and help,
+    please contact the <a target="_blank" href="http://tech.groups.yahoo.com/group/okapitools/">Okapi
+        Tools users group</a>.</p>
+    <h4>Running the Applications</h4>
+    <p>To run, for example, Rainbow:</p>
+    <ol>
+      <li>The main directory of the distribution contains a <code>Rainbow</code>
+        application bundle (Rainbow.app): simply double-click on it.</li>
+      <li>If you run the application for the first time since you downloaded it,
+        you may be prompted to confirm you want to run it.</li>
+    </ol>
+    <p>You can modify the shell file <code>rainbow.sh</code> that is in the <code>
+        /Contents/MacOS</code> folder of the application bundle to fit your own
+      parameters. In all cases you <b>MUST</b> specify the <code>-XstartOnFirstThread</code>
+      option or the application may not work properly. You can make sure to run
+      the Java VM in a specific mode using the <code>-d32</code> and <code>-d64</code>
+      flags.</p>
+    <p>Tikal is a command-line tool and should be invoked from a Terminal
+      window.</p>
+    <h3>Uninstallation</h3>
+    <p>To uninstall:</p>
+    <ol>
+      <li>Delete the directory where the okapi application are installed.</li>
+      <li>If you want, you can also remove the files where the user preferences
+        are saved. They are located in the Home folder of the user and called <code>.Rainbow</code>
+        and <code>.Ratel</code>.</li>
+    </ol>
+    <hr>
+    <h2><a name="Support"></a>Support</h2>
+    <p>If you have questions, suggestions or bug to report, you can do this
+      different ways:</p>
+    <ul>
+      <li>Use the <cite>Send Feedback</cite> command in the <cite>Help</cite>
+        menu of Rainbow.</li>
+      <li>Read and post notes in the <a target="_blank" href="http://tech.groups.yahoo.com/group/okapitools/">Okapi
+          Tools users group</a> (you need to be registered member to post, but
+        not to read).</li>
+      <li>Read an post issue report on the <a href="http://code.google.com/p/okapi/issues/list">Google
+          Code project site</a>.</li>
+    </ul>
+    <p>&nbsp;</p>
+  </body>
+</html>

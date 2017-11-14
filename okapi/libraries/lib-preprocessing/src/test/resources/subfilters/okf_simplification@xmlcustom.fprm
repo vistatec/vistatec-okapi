@@ -1,0 +1,4 @@
+#v1
+filterConfigId=okf_xmlstream@microcustom2
+simplifyResources.b=true
+simplifyCodes.b=true

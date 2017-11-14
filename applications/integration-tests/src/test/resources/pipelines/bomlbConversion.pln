@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.linebreakconversion.LineBreakConversionStep">#v1
+lineBreak=$0d$</step>
+<step class="net.sf.okapi.steps.bomconversion.BOMConversionStep">#v1
+removeBOM.b=true
+alsoNonUTF8.b=true</step>
+</rainbowPipeline>

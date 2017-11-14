@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CheckMate - Main Window</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">CheckMate</h1>
+		<h2 class="head2">Main Window</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=CheckMate">http://okapiframework.org/wiki/index.php?title=CheckMate</a></p>
+
+<p>The main window is divided in two parts:</p>
+<ul>
+	<li>The upper part shows the source and traget text of the item where the 
+	issue currently selected is located.</li>
+	<li>The lower part shows the list of issues detected. Which issues are 
+	displayed depends on several options.</li>
+</ul>
+<h3>Table</h3>
+<p>The table displays the issues found with the documents in the session. Use
+<cite>Check All</cite> to re-process the documents if you fix or modify one.</p>
+<ul>
+	<li>Column 1 indicates if the issue is <b>enabled</b> (check mark set) or <b>
+	disabled</b> (check mark not set). An issue that is enabled is 
+	concidered valid (i.e. a real problem), while an issue that is disabled is, in the context where 
+	it occurs, not a problem (i.e. a non-issue), a false 
+	positive. Checkmate remembers the issues you have disabled, so it keeps them 
+	disabled each time you re-process the documents.</li>
+	<li>Column 2 indicates the potential severity of the warning: Reg: high, 
+	Orange: medium, Yellow: low. This information is a mix of how confident the 
+	tool is about the error and how dangerous this type of error is. For 
+	example: missing a pattern like &quot;%s&quot; is both easy to detect and certainly 
+	dangerous, so its severity can be rated &quot;high&quot;. On the other hand, a 
+	translation missing parentheses is easy to detect, but may or may not 
+	correspond to a translation problem, so its severity should be rated &quot;low&quot;.</li>
+	<li>Column 3 (<cite>Text Unit</cite>) displays the ID of the text unit where 
+	the issue occurs. If the text unit has a native name (e.g. an ID in a 
+	propertis file) it is also displayed between parentheses.</li>
+	<li>Column 4 (<cite>Seg</cite>) displays the ID of the segment where the 
+	issue occurs, or nothing if the warning is for the whole text unit.</li>
+	<li>Column 5 (<cite>Description</cite>) shows the warning message for the 
+	issue.</li>
+</ul>
+<p>Sort -- You can sort the issues in the table by clicking on the header of each 
+column. Note that the <cite>Text Unit</cite> and <cite>Seg</cite> columns are 
+sorted by a combination of the document ID, the text unit ID and the segment ID. 
+These IDs are alphanumeric, not numeric (e.g. the ID can be 
+&quot;tu1&quot; not always &quot;1&quot;). When the IDs happend to be using only numbers, the sort 
+may look strange as &quot;101&quot; comes after &quot;1001&quot; (where you may expect to see 101 to 
+come before 1001).</p>
+<h3>Context Menu</h3>
+<p>You can right-click on an issue listed in the table to obtain a context menu. 
+It offers the following commands:</p>
+<p><cite>Open Document</cite> -- Select this command to open the document where 
+the selected issue is located. This opens the file using whatever program is 
+associated by the system with the type of the input document.</p>
+<p><cite>Open Containing Folder</cite> -- Select this command to open the folder 
+containing the document where the selected issue is located.</p>
+<p><cite>Edit Configuration</cite> -- Select this command to edit the parameters for the 
+verification.</p>
+<p><cite>Check All</cite> -- Select this command to run the verification on all 
+documents in the session.</p>
+<p><cite>Check Current Document</cite> -- Select this command to run the 
+verification only on the current document.</p>
+<p><cite>Add Document</cite> -- Select this command to add an input document to 
+the session.</p>
+<p><cite>Copy Text Unit Extraction ID</cite> -- Select this command to copy to 
+the Clipboard the extraction ID of the text unit for the current issue. This can 
+be useful to locale quickly an entry in file translation formats like XLIFF.</p>
+<p>In addition, depending on the issue currently selected you may have 
+additional commands available:</p>
+<p><cite>Copy Text Unit Resource ID/Name</cite> -- If the text unit of the 
+current issue has a name associate (i.e. resname in XLIFF) select this command 
+to copy it to the Clipboard. This name is listed between parentheses in the
+<cite>Text Unit</cite> column.</p>
+<p><cite>Allow &quot;&lt;code&gt;&quot; as a Missing Code</cite> -- If the issue indicates one 
+or more codes missing in the target, the menu shows this command for each 
+missing code. Select this command to add the given code to the list of codes 
+that are allowed to be missing from the target segments. You can manage the 
+complete list in the <cite><a href="parameterseditor.html#InlineCodesTab">Quality Check 
+Configuration</a></cite> dialog.</p>
+<p><cite>Allow &quot;&lt;code&gt;&quot; as an Extra Code</cite> -- If the issue indicates one or 
+more extra codes in the target, the menu shows this command for each extra code. 
+Select this command to add the given code to the list of codes that are allowed 
+to be extra in the target segments. You can manage the complete list in the
+<cite><a href="parameterseditor.html#InlineCodesTab">Quality Check Configuration</a></cite> 
+dialog.</p>
+<h3>Enabling/Disabling Issues</h3>
+<p>Which issues are displayed in the table is driven by the two list-boxes below 
+the table on the right-hand side:</p>
+<ul>
+	<li>The first one selects the types of issue to display: Choose <cite>&lt;All 
+	types of issues&gt;</cite> to display issues of any types.</li>
+	<li>The second one selects where to display enabled and disabled issues. Usually you want to display only the issues that are enabled.</li>
+</ul>
+<p>To toggle the status of a given issue between enabled or disabled, simply 
+check or uncheck its corresponding check mark. You can click on the check box, 
+or select the issue and press the <kbd>Space</kbd> key. You can select multiple 
+issues at the same time by holding the <kbd>Shift</kbd> key pressed while moving 
+the cursor up or down.</p>
+<p>You can re-enabled all issues with the command <cite>Reset All Disabled 
+Issues</cite> from the <cite>Issues</cite> menu.</p>
+<h3>List of the Documents</h3>
+<p>The list of the documents for which there is one or more issues is displayed 
+above the table. The list is always set to the document of the issue currently 
+selected.</p>
+<p>You can select another document in the list to move to the first issue for 
+that document in the issues currently displayed.</p>
+<h3>Buttons</h3>
+<p><cite>Check All</cite> -- Click this button to run the verification on all 
+documents in the session.</p>
+<p><cite>Check Document</cite> - Click this button to run the verification only on 
+the current document.</p>
+<p><cite>Session</cite> -- Click this button to open the <cite>
+<a href="sessionsettings.html">Session Settings</a></cite> 
+dialog box, where you can add or removed the documents in the session, and edit 
+other parameters.</p>
+<p><cite>Configuration</cite> -- Click this button to open the <cite>
+<a href="parameterseditor.html">Quality Check Configuration</a></cite> 
+dialog box, where you can specify what kind of verifications to perform.</p>
+<h3>Status Bar</h3>
+
+<p>At the bottom of the main window, the status bar indicates:</p>
+<ul>
+	<li>the current issue selected</li>
+	<li>how many issues are listed in the table</li>
+	<li>how many issues there are in total (listed and hidden)</li>
+</ul>
+<p>For example: &quot;<code>5 / 17 / T=23</code>&quot; indicates that you are on the fifth 
+issue of the table, which lists 17 issues, and that there are 23 issues in 
+total.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

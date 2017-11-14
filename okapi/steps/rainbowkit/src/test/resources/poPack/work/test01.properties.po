@@ -1,0 +1,19 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "okpCtx:tu=1"
+msgid ""
+"Text for ID100 with <x1/> and \n"
+", and Æ=AE."
+msgstr ""
+"FR Text for ID100 with <x1/> and \n"
+", and Æ=AE."
+
+msgctxt "okpCtx:tu=2"
+msgid "text for ID200"
+msgstr "FR text for ID200"
+

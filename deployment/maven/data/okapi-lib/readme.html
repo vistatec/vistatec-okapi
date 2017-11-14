@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Okapi Libraries ReadMe</title>
+    <style type="text/css">body { font-family: Arial, Helvetica, sans-serif; }</style>
+  </head>
+  <body>
+    <h1>Release Notes - okapi-lib @version@, @date@</h1>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#setup">Requirements and Installation</a></li>
+      <li><a href="#JARDependencies">JAR Dependencies</a></li>
+      <li><a href="#Support">Support</a></li>
+    </ul>
+    <hr>
+    <h2><a name="overview"></a>Overview</h2>
+    <p>The <b>okapi-lib</b> distribution is a collection of Java classes design
+      to help in programming components and applications related to translation
+      and localization tasks. It offers a low-level resource model, as well as a
+      set of common API to extract text parts from their original format, modify
+      them, and merge them back. The library also provides facilities to
+      manipulate, annotate and in general, work with the extracted text.</p>
+    <p>The distribution comes also with <a href="http://okapiframework.org/wiki/index.php?title=Tikal">
+        <b>Tikal</b>, a command-line tool</a> to execute some simple
+      localization-related tasks, like extraction and merge of <a href="http://okapiframework.org/wiki/index.php?title=XLIFF">XLIFF
+        documents</a>. If you want to use others Okapi tools (e.g. Rainbow), <a
+        href="https://bintray.com/okapi/Distribution/Okapi_Applications">download
+        one of the platform-specific <b>okapi-apps</b> distributions</a>.</p>
+    <p>For a list of changes since the previous release, please see the <a href="changes.html">Changes
+        Log document</a>.</p>
+    <p><b>Note that parts of this project are still relatively new and still in
+        development. Some of the classes, interfaces and internal workings
+        presented here may change in the upcoming versions of the Okapi
+        Framework.</b></p>
+    <p>This distribution contains the following:</p>
+    <table id="table1" border="1" cellpadding="4" cellspacing="0">
+      <tbody>
+        <tr>
+          <td align="left" valign="top"><code>lib</code></td>
+          <td>All the files needed to run the non-UI Okapi libraries. This
+            directory includes the different dependencies some of the components
+            need. See the <a href="#JARDependencies">JAR Dependencies</a>
+            section for details. If you want to use any of the Okapi UI classes,
+            you need to download the okapi-apps distribution, which is
+            platform-specific (because the UI classes use SWT).</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>config</code></td>
+          <td>Various default configuration files (e.g. segmentation rules,
+            additional filter configurations, etc.)</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>examples</code></td>
+          <td>A few Java examples on how to use the library in your own
+            programs. See the <a href="examples/readme.html">examples' readme
+              file</a> for details.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>dropins</code></td>
+          <td>The directory where you can drop plug-ins.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>localweb/devguide</code></td>
+          <td>The local copy of the <a href="localweb/devguide/index.html">Developer's
+              Guide page for this release</a>.</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><code>localweb/javadoc</code></td>
+          <td>The local copy of the <a href="localweb/javadoc/index.html">JavaDoc
+              pages for this release</a>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The latest version of all documents and help is always available on-line,
+      at the <a href="http://okapiframework.org/wiki">Okapi Framework Web
+        site</a>.</p>
+    <hr>
+    <h2><a name="setup"></a>Requirements and Installation</h2>
+    <h3>Requirements</h3>
+    <ul>
+      <li>Windows: You must have a running installation of Java&nbsp;1.7 or
+        later (Sun Java, or an OpenJDK VM are recommended).</li>
+      <li>Linux: You must have a running installation of Java&nbsp;1.7 or later
+        (Sun Java, or an OpenJDK VM are recommended).</li>
+      <li>Macintosh: You must have a running installation of Java 1.7 or later.</li>
+    </ul>
+    <h3>Installation</h3>
+    <p>To install the Okapi libraries:</p>
+    <ol>
+      <li>Download the ZIP file of the distribution.</li>
+      <li>Extract the file on any location. Make sure to preserve the full paths
+        when extracting.</li>
+    </ol>
+    <h3>Uninstallation</h3>
+    <p>To uninstall the Okapi libraries</p>
+    <ol>
+      <li>To uninstall the distribution you can simply delete the folder where
+        you have installed it.</li>
+    </ol>
+    <hr>
+    <h2><a name="JARDependencies"></a>JAR Dependencies</h2>
+    <p>Several Okapi packages depend on third-party libraries. While the Okapi
+      packages are distributed in a single JAR file, it is easy to build
+      separate JAR files if needed.</p>
+    <p>For more information on what third-party libraries are used with which
+      package, see the <code>pom.xml</code> file of each package in the source
+      code: <a href="http://code.google.com/p/okapi/source/browse/#svn/trunk">
+        http://code.google.com/p/okapi/source/browse/#svn/trunk</a></p>
+    <p>Currently most dependencies are for the connectors and for some filters
+      and steps. The Okapi core package has no dependencies.</p>
+    <hr>
+    <h2><a name="Support"></a>Support</h2>
+    <p>The <code>examples</code> directory contains source code of examples in
+      Java that use the Okapi libraries.</p>
+    <p>If you have questions, suggestions or bug to report, you can do this
+      different ways:</p>
+    <ul>
+      <li>Read and post notes in the <a target="_blank" href="http://tech.groups.yahoo.com/group/okapitools/">Okapi
+          Tools users group</a> (you need to be registered member to post, but
+        not to read).</li>
+      <li>Read an post issue report on the <a href="http://code.google.com/p/okapi/issues/list">Google
+          Code project site</a>.</li>
+    </ul>
+    <p>&nbsp;</p>
+  </body>
+</html>

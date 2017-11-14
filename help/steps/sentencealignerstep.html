@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Steps - Sentence Alignment</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr class="head">
+      <td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Steps</h1>
+      <h2 class="head2">Sentence Alignment Step</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="smalltoc"> - <a href="#overview">Overview</a><br>
+- <a href="#parameters">Parameters</a></td>
+      <td class="hmenu">
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+            <td><a href="index.html">Steps</a></td>
+            <td><a href="http://okapiframework.org/devguide/index.html">Developer's
+Guide</a></td>
+            <td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Sentence_Alignment_Step">http://okapiframework.org/wiki/index.php?title=Sentence_Alignment_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step aligns the sentences of each text unit from two documents.</p>
+<p>Takes: Filter events<span style="background-color: rgb(255, 255, 0);"></span><br>
+Sends: Filter events</p>
+<p>Currently the events sends by this step are the same as the events it 
+received (and not the generated aligned text units). This will be implemented in 
+a future version.</p>
+<p>Text units from the source and target documents must be perfectly
+synchronized (aligned). For example, if the source document has more
+text units than the target document an error will be generated. The step
+segments both source and target text units as they are processed using
+an internal SRX file. In future versions the segmentation rules will be
+configurable.</p>
+<p>The aligner algorithm takes the sentences in the source and 
+target TextUnits and finds the best possible alignment based on the character 
+lengths of the sentences. Internal parameters take into account that some 
+languages translate into fewer (or more) characters. Possible match types 
+produced are: 1-1, 2-1, 1-2, 0-1, 1-0, 2-0, 2-3, 3-2 etc.</p>
+<p>Entries set as non-translatable are not processed.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Generate the following TMX document</cite> -- Set this option to 
+generate a TMX files with the aligned entries.</p>
+<ul>
+	<li>If this option is set: this step returns the event it recieved (possibly 
+	re-segmented).</li>
+	<li>If this option is not set: this step returns the bilingual text unit 
+	corresponding to the alignment (also segmented).</li>
+</ul>
+<p>Enter the directory of the TMX
+document to generate. If the file already exists it will be overwritten.</p>
+<p><cite>Segment the source content</cite> -- Set this option to segment the 
+source content before trying to align it. If this option is not set the content 
+is expected to be already segmented. If this option is set and the content is 
+already segmented, the existing segmentation will be reset to the new one.</p>
+<p><cite>Use custom source segmentation rules</cite> -- Set this option to use a 
+specified SRX file for segmenting the source. If this option is not set, and 
+segmentation is required, the default rules are used.</p>
+<p>Enter the full path of the SRX file to use for segmenting the source.</p>
+<p><cite>Segment the target content</cite> -- Set this option to segment the 
+target content before trying to align it. If this option is not set the content 
+is expected to be already segmented. If this option is set and the content is 
+already segmented, the existing segmentation will be reset to the new one.</p>
+<p><cite>Use custom target segmentation rules</cite> -- Set this option to use a 
+specified SRX file for segmenting the target. If this option is not set, and 
+segmentation is required, the default rules are used.</p>
+<p>Enter the full path of the SRX file to use for segmenting the target.</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="net.sf.okapi.steps.sentencealigner.SentenceAlignerStep" creationtoolversion="unknown" segtype="sentence" o-tmf="unknown" adminlang="en" srclang="en" datatype="text/plain"></header><body>
+<tu tuid="autoID1_0">
+<tuv xml:lang="en"><seg>Mr. Holmes is from the U.K.</seg>
+<prop type="line_number">1</prop>
+</tuv>
+<tuv xml:lang="en"><seg>Mr. Holmes is from the U.K.</seg>
+<prop type="line_number">1</prop>
+</tuv>
+</tu>
+<tu tuid="autoID1_1">
+<tuv xml:lang="en"><seg>not the U.S. Is Dr. Watson from there too?</seg>
+<prop type="line_number">1</prop>
+</tuv>
+<tuv xml:lang="en"><seg>not the U.S. Is Dr. Watson from there too?</seg>
+<prop type="line_number">1</prop>
+</tuv>
+</tu>
+</body>
+</tmx>

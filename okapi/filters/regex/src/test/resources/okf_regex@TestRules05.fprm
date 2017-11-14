@@ -1,0 +1,37 @@
+
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+oneLevelGroups.b=true
+regexOptions.i=8
+mimeType=text/plain
+ruleCount.i=2
+rule0.ruleName=StartGroup
+rule0.ruleType.i=4
+rule0.expr=^\[(.*?)]\s*(#\s*(.*?)$)?
+rule0.groupSource.i=-1
+rule0.groupTarget.i=-1
+rule0.groupName.i=1
+rule0.groupNote.i=3
+rule0.preserveWS.b=true
+rule0.useCodeFinder.b=false
+rule0.sample=[Group1] # Note about Group1$0a$g1.key1=Text of g1.key1$0a$g1.key2=Text of g1.key2$0a$[Group2]$0a$g2.key1=Text of g2.key1$0a$$0a$
+rule0.codeFinderRules.count.i=0
+rule0.codeFinderRules.sample=
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false
+rule1.ruleName=Text
+rule1.ruleType.i=1
+rule1.expr=^(.*?)=(.*?)$
+rule1.groupSource.i=2
+rule1.groupTarget.i=-1
+rule1.groupName.i=1
+rule1.groupNote.i=-1
+rule1.preserveWS.b=true
+rule1.useCodeFinder.b=false
+rule1.sample=[Group1] # Note about Group1$0a$g1.key1=Text of g1.key1$0a$g1.key2=Text of g1.key2$0a$[Group2]$0a$g2.key1=Text of g2.key1
+rule1.codeFinderRules.count.i=0
+rule1.codeFinderRules.sample=
+rule1.codeFinderRules.useAllRulesWhenTesting.b=false

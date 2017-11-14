@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pluginsDeployment>
+
+<plugin name="okapiTradosUtilities-@version@"
+  helpURL="http://okapiframework.org/wiki/index.php?title=Trados_Utilities_Plugin"
+  provider="Okapi Framework">
+  <description>Trados utilities.
+Those steps are for Windows 32/64-bit and require Trados 7.x or 2007.</description>
+ </plugin>
+
+<plugin name="okapiLanguageTool-0.33"
+  helpURL="http://okapiframework.org/wiki/index.php?title=LanguageToolStep"
+  provider="Okapi Framework">
+  <description>LanguageTool Step.
+A step to call the LanguageTool style, grammar and spelling checker.</description>
+ </plugin>
+
+</pluginsDeployment>

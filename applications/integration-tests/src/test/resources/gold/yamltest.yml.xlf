@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="yamltest.yml" source-language="en" target-language="fr" datatype="x-text/x-yaml" okp:inputEncoding="UTF-8">
+<body>
+<group id="sg1">
+<group id="sg2">
+<group id="sg3">
+<group id="sg4">
+<trans-unit id="tu1" resname="fr/date/formats/default" xml:space="preserve">
+<source xml:lang="en"><x id="1"/>/<x id="2"/>/<x id="3"/></source>
+<target xml:lang="fr"><x id="1"/>/<x id="2"/>/<x id="3"/></target>
+</trans-unit>
+<trans-unit id="tu2" resname="fr/date/formats/short" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/></target>
+</trans-unit>
+<trans-unit id="tu3" resname="fr/date/formats/long" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/></target>
+</trans-unit>
+<trans-unit id="tu4" resname="fr/date/formats/long_ordinal" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/></target>
+</trans-unit>
+<trans-unit id="tu5" resname="fr/date/formats/only_day" xml:space="preserve">
+<source xml:lang="en"><x id="1"/></source>
+<target xml:lang="fr"><x id="1"/></target>
+</trans-unit>
+</group>
+<group id="sg5">
+<trans-unit id="tu6" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">dimanche</source>
+<target xml:lang="fr">dimanche</target>
+</trans-unit>
+<trans-unit id="tu7" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">lundi</source>
+<target xml:lang="fr">lundi</target>
+</trans-unit>
+<trans-unit id="tu8" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">mardi</source>
+<target xml:lang="fr">mardi</target>
+</trans-unit>
+<trans-unit id="tu9" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">mercredi</source>
+<target xml:lang="fr">mercredi</target>
+</trans-unit>
+<trans-unit id="tu10" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">jeudi</source>
+<target xml:lang="fr">jeudi</target>
+</trans-unit>
+<trans-unit id="tu11" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">vendredi</source>
+<target xml:lang="fr">vendredi</target>
+</trans-unit>
+<trans-unit id="tu12" resname="fr/date/day_names" xml:space="preserve">
+<source xml:lang="en">samedi</source>
+<target xml:lang="fr">samedi</target>
+</trans-unit>
+</group>
+<group id="sg6">
+<trans-unit id="tu13" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">dim</source>
+<target xml:lang="fr">dim</target>
+</trans-unit>
+<trans-unit id="tu14" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">lun</source>
+<target xml:lang="fr">lun</target>
+</trans-unit>
+<trans-unit id="tu15" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">mar</source>
+<target xml:lang="fr">mar</target>
+</trans-unit>
+<trans-unit id="tu16" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">mer</source>
+<target xml:lang="fr">mer</target>
+</trans-unit>
+<trans-unit id="tu17" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">jeu</source>
+<target xml:lang="fr">jeu</target>
+</trans-unit>
+<trans-unit id="tu18" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">ven</source>
+<target xml:lang="fr">ven</target>
+</trans-unit>
+<trans-unit id="tu19" resname="fr/date/abbr_day_names" xml:space="preserve">
+<source xml:lang="en">sam</source>
+<target xml:lang="fr">sam</target>
+</trans-unit>
+</group>
+<group id="sg7">
+<trans-unit id="tu20" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">~</source>
+<target xml:lang="fr">~</target>
+</trans-unit>
+<trans-unit id="tu21" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">janvier</source>
+<target xml:lang="fr">janvier</target>
+</trans-unit>
+<trans-unit id="tu22" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">février</source>
+<target xml:lang="fr">février</target>
+</trans-unit>
+<trans-unit id="tu23" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">mars</source>
+<target xml:lang="fr">mars</target>
+</trans-unit>
+<trans-unit id="tu24" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">avril</source>
+<target xml:lang="fr">avril</target>
+</trans-unit>
+<trans-unit id="tu25" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">mai</source>
+<target xml:lang="fr">mai</target>
+</trans-unit>
+<trans-unit id="tu26" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">juin</source>
+<target xml:lang="fr">juin</target>
+</trans-unit>
+<trans-unit id="tu27" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">juillet</source>
+<target xml:lang="fr">juillet</target>
+</trans-unit>
+<trans-unit id="tu28" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">août</source>
+<target xml:lang="fr">août</target>
+</trans-unit>
+<trans-unit id="tu29" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">septembre</source>
+<target xml:lang="fr">septembre</target>
+</trans-unit>
+<trans-unit id="tu30" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">octobre</source>
+<target xml:lang="fr">octobre</target>
+</trans-unit>
+<trans-unit id="tu31" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">novembre</source>
+<target xml:lang="fr">novembre</target>
+</trans-unit>
+<trans-unit id="tu32" resname="fr/date/month_names" xml:space="preserve">
+<source xml:lang="en">décembre</source>
+<target xml:lang="fr">décembre</target>
+</trans-unit>
+</group>
+<group id="sg8">
+<trans-unit id="tu33" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">~</source>
+<target xml:lang="fr">~</target>
+</trans-unit>
+<trans-unit id="tu34" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">jan.</source>
+<target xml:lang="fr">jan.</target>
+</trans-unit>
+<trans-unit id="tu35" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">fév.</source>
+<target xml:lang="fr">fév.</target>
+</trans-unit>
+<trans-unit id="tu36" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">mar.</source>
+<target xml:lang="fr">mar.</target>
+</trans-unit>
+<trans-unit id="tu37" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">avr.</source>
+<target xml:lang="fr">avr.</target>
+</trans-unit>
+<trans-unit id="tu38" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">mai</source>
+<target xml:lang="fr">mai</target>
+</trans-unit>
+<trans-unit id="tu39" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">juin</source>
+<target xml:lang="fr">juin</target>
+</trans-unit>
+<trans-unit id="tu40" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">juil.</source>
+<target xml:lang="fr">juil.</target>
+</trans-unit>
+<trans-unit id="tu41" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">août</source>
+<target xml:lang="fr">août</target>
+</trans-unit>
+<trans-unit id="tu42" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">sept.</source>
+<target xml:lang="fr">sept.</target>
+</trans-unit>
+<trans-unit id="tu43" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">oct.</source>
+<target xml:lang="fr">oct.</target>
+</trans-unit>
+<trans-unit id="tu44" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">nov.</source>
+<target xml:lang="fr">nov.</target>
+</trans-unit>
+<trans-unit id="tu45" resname="fr/date/abbr_month_names" xml:space="preserve">
+<source xml:lang="en">déc.</source>
+<target xml:lang="fr">déc.</target>
+</trans-unit>
+</group>
+<group id="sg9">
+<trans-unit id="tu46" resname="fr/date/order" xml:space="preserve">
+<source xml:lang="en">:day</source>
+<target xml:lang="fr">:day</target>
+</trans-unit>
+<trans-unit id="tu47" resname="fr/date/order" xml:space="preserve">
+<source xml:lang="en">:month</source>
+<target xml:lang="fr">:month</target>
+</trans-unit>
+<trans-unit id="tu48" resname="fr/date/order" xml:space="preserve">
+<source xml:lang="en">:year </source>
+<target xml:lang="fr">:year </target>
+</trans-unit>
+</group>
+</group>
+<group id="sg10">
+<group id="sg11">
+<trans-unit id="tu49" resname="fr/time/formats/default" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/>:<x id="5"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/>:<x id="5"/></target>
+</trans-unit>
+<trans-unit id="tu50" resname="fr/time/formats/time" xml:space="preserve">
+<source xml:lang="en"><x id="1"/>:<x id="2"/></source>
+<target xml:lang="fr"><x id="1"/>:<x id="2"/></target>
+</trans-unit>
+<trans-unit id="tu51" resname="fr/time/formats/short" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/>:<x id="4"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/>:<x id="4"/></target>
+</trans-unit>
+<trans-unit id="tu52" resname="fr/time/formats/long" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/> <x id="5"/>:<x id="6"/>:<x id="7"/> <x id="8"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/> <x id="5"/>:<x id="6"/>:<x id="7"/> <x id="8"/></target>
+</trans-unit>
+<trans-unit id="tu53" resname="fr/time/formats/long_ordinal" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/> <x id="5"/>:<x id="6"/>:<x id="7"/> <x id="8"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/> <x id="3"/> <x id="4"/> <x id="5"/>:<x id="6"/>:<x id="7"/> <x id="8"/></target>
+</trans-unit>
+<trans-unit id="tu54" resname="fr/time/formats/only_second" xml:space="preserve">
+<source xml:lang="en"><x id="1"/></source>
+<target xml:lang="fr"><x id="1"/></target>
+</trans-unit>
+</group>
+<trans-unit id="tu55" resname="fr/time/am" xml:space="preserve">
+<source xml:lang="en">am</source>
+<target xml:lang="fr">am</target>
+</trans-unit>
+<trans-unit id="tu56" resname="fr/time/pm" xml:space="preserve">
+<source xml:lang="en">pm</source>
+<target xml:lang="fr">pm</target>
+</trans-unit>
+</group>
+<group id="sg12">
+<group id="sg13">
+<trans-unit id="tu57" resname="fr/datetime/distance_in_words/half_a_minute" xml:space="preserve">
+<source xml:lang="en">une demi-minute</source>
+<target xml:lang="fr">une demi-minute</target>
+</trans-unit>
+<group id="sg14">
+<trans-unit id="tu58" resname="fr/datetime/distance_in_words/less_than_x_seconds/zero" xml:space="preserve">
+<source xml:lang="en">moins d'une seconde</source>
+<target xml:lang="fr">moins d'une seconde</target>
+</trans-unit>
+<trans-unit id="tu59" resname="fr/datetime/distance_in_words/less_than_x_seconds/one" xml:space="preserve">
+<source xml:lang="en">moins de 1 seconde</source>
+<target xml:lang="fr">moins de 1 seconde</target>
+</trans-unit>
+<trans-unit id="tu60" resname="fr/datetime/distance_in_words/less_than_x_seconds/other" xml:space="preserve">
+<source xml:lang="en">moins de <x id="1"/> secondes</source>
+<target xml:lang="fr">moins de <x id="1"/> secondes</target>
+</trans-unit>
+</group>
+<group id="sg15">
+<trans-unit id="tu61" resname="fr/datetime/distance_in_words/x_seconds/one" xml:space="preserve">
+<source xml:lang="en">1 seconde</source>
+<target xml:lang="fr">1 seconde</target>
+</trans-unit>
+<trans-unit id="tu62" resname="fr/datetime/distance_in_words/x_seconds/other" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> secondes</source>
+<target xml:lang="fr"><x id="1"/> secondes</target>
+</trans-unit>
+</group>
+<group id="sg16">
+<trans-unit id="tu63" resname="fr/datetime/distance_in_words/less_than_x_minutes/zero" xml:space="preserve">
+<source xml:lang="en">moins d'une minute</source>
+<target xml:lang="fr">moins d'une minute</target>
+</trans-unit>
+<trans-unit id="tu64" resname="fr/datetime/distance_in_words/less_than_x_minutes/one" xml:space="preserve">
+<source xml:lang="en">moins de 1 minute</source>
+<target xml:lang="fr">moins de 1 minute</target>
+</trans-unit>
+<trans-unit id="tu65" resname="fr/datetime/distance_in_words/less_than_x_minutes/other" xml:space="preserve">
+<source xml:lang="en">moins de <x id="1"/> minutes</source>
+<target xml:lang="fr">moins de <x id="1"/> minutes</target>
+</trans-unit>
+</group>
+<group id="sg17">
+<trans-unit id="tu66" resname="fr/datetime/distance_in_words/x_minutes/one" xml:space="preserve">
+<source xml:lang="en">1 minute</source>
+<target xml:lang="fr">1 minute</target>
+</trans-unit>
+<trans-unit id="tu67" resname="fr/datetime/distance_in_words/x_minutes/other" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> minutes</source>
+<target xml:lang="fr"><x id="1"/> minutes</target>
+</trans-unit>
+</group>
+<group id="sg18">
+<trans-unit id="tu68" resname="fr/datetime/distance_in_words/about_x_hours/one" xml:space="preserve">
+<source xml:lang="en">environ une heure</source>
+<target xml:lang="fr">environ une heure</target>
+</trans-unit>
+<trans-unit id="tu69" resname="fr/datetime/distance_in_words/about_x_hours/other" xml:space="preserve">
+<source xml:lang="en">environ <x id="1"/> heures</source>
+<target xml:lang="fr">environ <x id="1"/> heures</target>
+</trans-unit>
+</group>
+<group id="sg19">
+<trans-unit id="tu70" resname="fr/datetime/distance_in_words/x_days/one" xml:space="preserve">
+<source xml:lang="en">1 jour</source>
+<target xml:lang="fr">1 jour</target>
+</trans-unit>
+<trans-unit id="tu71" resname="fr/datetime/distance_in_words/x_days/other" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> jours</source>
+<target xml:lang="fr"><x id="1"/> jours</target>
+</trans-unit>
+</group>
+<group id="sg20">
+<trans-unit id="tu72" resname="fr/datetime/distance_in_words/about_x_months/one" xml:space="preserve">
+<source xml:lang="en">environ un mois</source>
+<target xml:lang="fr">environ un mois</target>
+</trans-unit>
+<trans-unit id="tu73" resname="fr/datetime/distance_in_words/about_x_months/other" xml:space="preserve">
+<source xml:lang="en">environ <x id="1"/> mois</source>
+<target xml:lang="fr">environ <x id="1"/> mois</target>
+</trans-unit>
+</group>
+<group id="sg21">
+<trans-unit id="tu74" resname="fr/datetime/distance_in_words/x_months/one" xml:space="preserve">
+<source xml:lang="en">1 mois</source>
+<target xml:lang="fr">1 mois</target>
+</trans-unit>
+<trans-unit id="tu75" resname="fr/datetime/distance_in_words/x_months/other" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> mois</source>
+<target xml:lang="fr"><x id="1"/> mois</target>
+</trans-unit>
+</group>
+<group id="sg22">
+<trans-unit id="tu76" resname="fr/datetime/distance_in_words/about_x_years/one" xml:space="preserve">
+<source xml:lang="en">environ un an</source>
+<target xml:lang="fr">environ un an</target>
+</trans-unit>
+<trans-unit id="tu77" resname="fr/datetime/distance_in_words/about_x_years/other" xml:space="preserve">
+<source xml:lang="en">environ <x id="1"/> ans</source>
+<target xml:lang="fr">environ <x id="1"/> ans</target>
+</trans-unit>
+</group>
+<group id="sg23">
+<trans-unit id="tu78" resname="fr/datetime/distance_in_words/over_x_years/one" xml:space="preserve">
+<source xml:lang="en">plus d'un an</source>
+<target xml:lang="fr">plus d'un an</target>
+</trans-unit>
+<trans-unit id="tu79" resname="fr/datetime/distance_in_words/over_x_years/other" xml:space="preserve">
+<source xml:lang="en">plus de <x id="1"/> ans</source>
+<target xml:lang="fr">plus de <x id="1"/> ans</target>
+</trans-unit>
+</group>
+</group>
+<group id="sg24">
+<trans-unit id="tu80" resname="fr/datetime/prompts/year" xml:space="preserve">
+<source xml:lang="en">Année</source>
+<target xml:lang="fr">Année</target>
+</trans-unit>
+<trans-unit id="tu81" resname="fr/datetime/prompts/month" xml:space="preserve">
+<source xml:lang="en">Mois</source>
+<target xml:lang="fr">Mois</target>
+</trans-unit>
+<trans-unit id="tu82" resname="fr/datetime/prompts/day" xml:space="preserve">
+<source xml:lang="en">Jour</source>
+<target xml:lang="fr">Jour</target>
+</trans-unit>
+<trans-unit id="tu83" resname="fr/datetime/prompts/hour" xml:space="preserve">
+<source xml:lang="en">Heure</source>
+<target xml:lang="fr">Heure</target>
+</trans-unit>
+<trans-unit id="tu84" resname="fr/datetime/prompts/minute" xml:space="preserve">
+<source xml:lang="en">Minute</source>
+<target xml:lang="fr">Minute</target>
+</trans-unit>
+<trans-unit id="tu85" resname="fr/datetime/prompts/second" xml:space="preserve">
+<source xml:lang="en">Seconde</source>
+<target xml:lang="fr">Seconde</target>
+</trans-unit>
+</group>
+</group>
+<group id="sg25">
+<group id="sg26">
+<trans-unit id="tu86" resname="fr/number/format/precision" xml:space="preserve">
+<source xml:lang="en">3</source>
+<target xml:lang="fr">3</target>
+</trans-unit>
+<trans-unit id="tu87" resname="fr/number/format/separator" xml:space="preserve">
+<source xml:lang="en">,</source>
+<target xml:lang="fr">,</target>
+</trans-unit>
+<trans-unit id="tu88" resname="fr/number/format/delimiter" xml:space="preserve">
+<source xml:lang="en"> </source>
+<target xml:lang="fr"> </target>
+</trans-unit>
+</group>
+<group id="sg27">
+<group id="sg28">
+<trans-unit id="tu89" resname="fr/number/currency/format/unit" xml:space="preserve">
+<source xml:lang="en">€</source>
+<target xml:lang="fr">€</target>
+</trans-unit>
+<trans-unit id="tu90" resname="fr/number/currency/format/precision" xml:space="preserve">
+<source xml:lang="en">2</source>
+<target xml:lang="fr">2</target>
+</trans-unit>
+<trans-unit id="tu91" resname="fr/number/currency/format/format" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/></target>
+</trans-unit>
+</group>
+</group>
+<group id="sg29">
+<group id="sg30">
+<trans-unit id="tu92" resname="fr/number/human/format/delimiter" xml:space="preserve">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+<trans-unit id="tu93" resname="fr/number/human/format/precision" xml:space="preserve">
+<source xml:lang="en">2</source>
+<target xml:lang="fr">2</target>
+</trans-unit>
+</group>
+<group id="sg31">
+<trans-unit id="tu94" resname="fr/number/human/storage_units/format" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> <x id="2"/></source>
+<target xml:lang="fr"><x id="1"/> <x id="2"/></target>
+</trans-unit>
+<group id="sg32">
+<group id="sg33">
+<trans-unit id="tu95" resname="fr/number/human/storage_units/units/byte/one" xml:space="preserve">
+<source xml:lang="en">octet</source>
+<target xml:lang="fr">octet</target>
+</trans-unit>
+<trans-unit id="tu96" resname="fr/number/human/storage_units/units/byte/other" xml:space="preserve">
+<source xml:lang="en">octets</source>
+<target xml:lang="fr">octets</target>
+</trans-unit>
+</group>
+<trans-unit id="tu97" resname="fr/number/human/storage_units/units/kb" xml:space="preserve">
+<source xml:lang="en">ko</source>
+<target xml:lang="fr">ko</target>
+</trans-unit>
+<trans-unit id="tu98" resname="fr/number/human/storage_units/units/mb" xml:space="preserve">
+<source xml:lang="en">Mo</source>
+<target xml:lang="fr">Mo</target>
+</trans-unit>
+<trans-unit id="tu99" resname="fr/number/human/storage_units/units/gb" xml:space="preserve">
+<source xml:lang="en">Go</source>
+<target xml:lang="fr">Go</target>
+</trans-unit>
+<trans-unit id="tu100" resname="fr/number/human/storage_units/units/tb" xml:space="preserve">
+<source xml:lang="en">To</source>
+<target xml:lang="fr">To</target>
+</trans-unit>
+</group>
+</group>
+</group>
+</group>
+<group id="sg34">
+<group id="sg35">
+<trans-unit id="tu101" resname="fr/support/array/sentence_connector" xml:space="preserve">
+<source xml:lang="en">et</source>
+<target xml:lang="fr">et</target>
+</trans-unit>
+<trans-unit id="tu102" resname="fr/support/array/skip_last_comma" xml:space="preserve">
+<source xml:lang="en">true</source>
+<target xml:lang="fr">true</target>
+</trans-unit>
+<trans-unit id="tu103" resname="fr/support/array/words_connector" xml:space="preserve">
+<source xml:lang="en">, </source>
+<target xml:lang="fr">, </target>
+</trans-unit>
+<trans-unit id="tu104" resname="fr/support/array/two_words_connector" xml:space="preserve">
+<source xml:lang="en"> et </source>
+<target xml:lang="fr"> et </target>
+</trans-unit>
+<trans-unit id="tu105" resname="fr/support/array/last_word_connector" xml:space="preserve">
+<source xml:lang="en"> et </source>
+<target xml:lang="fr"> et </target>
+</trans-unit>
+</group>
+</group>
+<group id="sg36">
+<group id="sg37">
+<group id="sg38">
+<group id="sg39">
+<trans-unit id="tu106" resname="fr/activerecord/errors/template/header/one" xml:space="preserve">
+<source xml:lang="en">Impossible d'enregistrer <x id="1"/>: 1 erreur</source>
+<target xml:lang="fr">Impossible d'enregistrer <x id="1"/>: 1 erreur</target>
+</trans-unit>
+<trans-unit id="tu107" resname="fr/activerecord/errors/template/header/other" xml:space="preserve">
+<source xml:lang="en">Impossible d'enregistrer <x id="1"/>: <x id="2"/> erreurs.</source>
+<target xml:lang="fr">Impossible d'enregistrer <x id="1"/>: <x id="2"/> erreurs.</target>
+</trans-unit>
+</group>
+<trans-unit id="tu108" resname="fr/activerecord/errors/template/body" xml:space="preserve">
+<source xml:lang="en">Veuillez vérifier les champs suivants :</source>
+<target xml:lang="fr">Veuillez vérifier les champs suivants :</target>
+</trans-unit>
+</group>
+<group id="sg40">
+<trans-unit id="tu109" resname="fr/activerecord/errors/messages/inclusion" xml:space="preserve">
+<source xml:lang="en">n'est pas inclus(e) dans la liste</source>
+<target xml:lang="fr">n'est pas inclus(e) dans la liste</target>
+</trans-unit>
+<trans-unit id="tu110" resname="fr/activerecord/errors/messages/exclusion" xml:space="preserve">
+<source xml:lang="en">n'est pas disponible</source>
+<target xml:lang="fr">n'est pas disponible</target>
+</trans-unit>
+<trans-unit id="tu111" resname="fr/activerecord/errors/messages/invalid" xml:space="preserve">
+<source xml:lang="en">n'est pas valide</source>
+<target xml:lang="fr">n'est pas valide</target>
+</trans-unit>
+<trans-unit id="tu112" resname="fr/activerecord/errors/messages/confirmation" xml:space="preserve">
+<source xml:lang="en">ne concorde pas avec la confirmation</source>
+<target xml:lang="fr">ne concorde pas avec la confirmation</target>
+</trans-unit>
+<trans-unit id="tu113" resname="fr/activerecord/errors/messages/accepted" xml:space="preserve">
+<source xml:lang="en">doit être accepté(e)</source>
+<target xml:lang="fr">doit être accepté(e)</target>
+</trans-unit>
+<trans-unit id="tu114" resname="fr/activerecord/errors/messages/empty" xml:space="preserve">
+<source xml:lang="en">doit être rempli(e)</source>
+<target xml:lang="fr">doit être rempli(e)</target>
+</trans-unit>
+<trans-unit id="tu115" resname="fr/activerecord/errors/messages/blank" xml:space="preserve">
+<source xml:lang="en">doit être rempli(e)</source>
+<target xml:lang="fr">doit être rempli(e)</target>
+</trans-unit>
+<trans-unit id="tu116" resname="fr/activerecord/errors/messages/too_long" xml:space="preserve">
+<source xml:lang="en">est trop long (pas plus de <x id="1"/> caractères)</source>
+<target xml:lang="fr">est trop long (pas plus de <x id="1"/> caractères)</target>
+</trans-unit>
+<trans-unit id="tu117" resname="fr/activerecord/errors/messages/too_short" xml:space="preserve">
+<source xml:lang="en">est trop court (au moins <x id="1"/> caractères)</source>
+<target xml:lang="fr">est trop court (au moins <x id="1"/> caractères)</target>
+</trans-unit>
+<trans-unit id="tu118" resname="fr/activerecord/errors/messages/wrong_length" xml:space="preserve">
+<source xml:lang="en">ne fait pas la bonne longueur (doit comporter <x id="1"/> caractères)</source>
+<target xml:lang="fr">ne fait pas la bonne longueur (doit comporter <x id="1"/> caractères)</target>
+</trans-unit>
+<trans-unit id="tu119" resname="fr/activerecord/errors/messages/taken" xml:space="preserve">
+<source xml:lang="en">n'est pas disponible</source>
+<target xml:lang="fr">n'est pas disponible</target>
+</trans-unit>
+<trans-unit id="tu120" resname="fr/activerecord/errors/messages/not_a_number" xml:space="preserve">
+<source xml:lang="en">n'est pas un nombre</source>
+<target xml:lang="fr">n'est pas un nombre</target>
+</trans-unit>
+<trans-unit id="tu121" resname="fr/activerecord/errors/messages/greater_than" xml:space="preserve">
+<source xml:lang="en">doit être supérieur à <x id="1"/></source>
+<target xml:lang="fr">doit être supérieur à <x id="1"/></target>
+</trans-unit>
+<trans-unit id="tu122" resname="fr/activerecord/errors/messages/greater_than_or_equal_to" xml:space="preserve">
+<source xml:lang="en">doit être supérieur ou égal à <x id="1"/></source>
+<target xml:lang="fr">doit être supérieur ou égal à <x id="1"/></target>
+</trans-unit>
+<trans-unit id="tu123" resname="fr/activerecord/errors/messages/equal_to" xml:space="preserve">
+<source xml:lang="en">doit être égal à <x id="1"/></source>
+<target xml:lang="fr">doit être égal à <x id="1"/></target>
+</trans-unit>
+<trans-unit id="tu124" resname="fr/activerecord/errors/messages/less_than" xml:space="preserve">
+<source xml:lang="en">doit être inférieur à <x id="1"/></source>
+<target xml:lang="fr">doit être inférieur à <x id="1"/></target>
+</trans-unit>
+<trans-unit id="tu125" resname="fr/activerecord/errors/messages/less_than_or_equal_to" xml:space="preserve">
+<source xml:lang="en">doit être inférieur ou égal à <x id="1"/></source>
+<target xml:lang="fr">doit être inférieur ou égal à <x id="1"/></target>
+</trans-unit>
+<trans-unit id="tu126" resname="fr/activerecord/errors/messages/odd" xml:space="preserve">
+<source xml:lang="en">doit être impair</source>
+<target xml:lang="fr">doit être impair</target>
+</trans-unit>
+<trans-unit id="tu127" resname="fr/activerecord/errors/messages/even" xml:space="preserve">
+<source xml:lang="en">doit être pair</source>
+<target xml:lang="fr">doit être pair</target>
+</trans-unit>
+<trans-unit id="tu128" resname="fr/activerecord/errors/messages/record_invalid" xml:space="preserve">
+<source xml:lang="en">La validation a échoué : <x id="1"/></source>
+<target xml:lang="fr">La validation a échoué : <x id="1"/></target>
+</trans-unit>
+</group>
+</group>
+</group>
+</group>
+</group>
+</body>
+</file>
+</xliff>

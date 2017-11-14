@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text>
+ <p id="p1">Text of paragraph 1 with &amp;=amp, &quot;=quot, &lt;=lt, &gt;=gt, &apos;=apos.</p>
+ <p id="p2">Text of paragraph 2.<!-- comments --></p>
+ <p id="p3">Text of paragraph 3.<?somepi piarg1=val1 piarg2 = val2?></p>
+</text>
+<?pi pival?><!--last comment-->

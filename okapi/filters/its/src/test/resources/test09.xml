@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<myDoc>
+ <head>
+  <comments>This is the instructions for the ordering process.</comments>
+  <its:rules version="1.0" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsx="http://www.w3.org/2008/12/its-extensions">
+   <its:withinTextRule selector="//code|//b" withinText="yes"/>
+   <its:translateRule selector="//pre" translate="yes" itsx:whiteSpaces="preserve"/>
+   <its:translateRule selector="//code" translate="no" itsx:whiteSpaces="preserve"/>
+   <its:translateRule selector="//def/code" translate="yes" itsx:whiteSpaces="default"/>
+  </its:rules>
+ </head>
+ <par>before  		after</par>
+ <pre>before  		after</pre>
+ <par xml:space="preserve">before  		after</par>
+ <pre xml:space="default">before  		after</pre>
+ <par><![CDATA[before  		after]]></par>
+ <pre><![CDATA[before  		after]]></pre>
+ <par>text   <code>before  		after</code>  	text</par>
+ <pre>text   <code>before  		after</code>  	text</pre>
+ <def>text   <code>before  		after</code>  	text</def>
+ <par>text   <b>[  		]</b>  	text</par>
+ <pre>text   <b>[  		]</b>  	text</pre>
+</myDoc>

@@ -1,0 +1,18 @@
+﻿
+rls_string STRING_app_caption_string              "Blaster"
+rls_string STRING_app_short_caption_string        "Blaster"
+
+//d:Menu
+rls_string STRING_blaster_menuoption_request            "Request URL"
+rls_string STRING_blaster_menuoption_header             "HTTP Header"
+rls_string STRING_blaster_menuoption_source             "HTTP Source"
+rls_string STRING_blaster_menuoption_status             "Transaction Status"
+rls_string STRING_blaster_menuoption_exit               "Exit"
+
+//d:Dialogs
+rls_string gtn_blaster_url_dialog            "URL"
+rls_string gtn_blaster_psw_dialog_username   "User name"
+rls_string gtn_blaster_psw_dialog_password "Password"
+rls_string gtn_blaster_url_downloading "Downloading.\nPlease Wait..."
+rls_string test1 "\\=bslash,\"=quot"
+

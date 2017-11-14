@@ -1,0 +1,171 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - XLIFF Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">XLIFF Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#limitations">Limitations</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer's Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=XLIFF_Filter">http://okapiframework.org/wiki/index.php?title=XLIFF_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The XLIFF Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+XLIFF (XML Localisation Interchange File Format) documents. The filter is implemented in the class <code>
+net.sf.okapi.filters.xliff.XLIFFFilter</code> of the Okapi library.</p>
+<p>XLIFF is an OASIS Standard that defines a file format for 
+transporting translatable text and localization-related information across a 
+chain of translation and localization tools. The XLIFF specification are at
+<a href="http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html">
+http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html</a>.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>If the document has an encoding declaration it is used.</li>
+	<li>Otherwise, UTF-8 is used as the default encoding (regardless the actual 
+	default encoding that was specified when opening the document).</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>White Spaces</h3>
+<p>If a <code>&lt;trans-unit&gt;</code> element has a <code>xml:space=&quot;preserve&quot;</code> 
+attribute, the white spaces inside the content of its source and target is left 
+as it. If the <code>xml:space</code> is not present, or as a value different 
+from <code>&quot;preserve&quot;</code>, the content of the source and target is unwrapped.</p>
+<h3>Mapping</h3>
+<p>The entries of the document are mapped as follow:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table1">
+	<tr>
+		<th>XLIFF Document</th>
+		<th>Resource</th>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>approved</code> attribute in
+		<code>&lt;trans-unit&gt;</code>.</td>
+		<td align="left" valign="top">The <i>approved</i> property of the target 
+		in the text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>&lt;note&gt;</code> elements.</td>
+		<td align="left" valign="top">The <i>note</i> property of the source if 
+		the <code>annotates</code> attribute is &quot;<code>source</code>&quot;.<br>
+		The <i>note</i> property of the target if the <code>annotates</code> 
+		attribute is &quot;<code>target</code>&quot;.<br>
+		The <i>note</i> property of the text unit in all other cases.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>&lt;alt-trans&gt;</code> element 
+		that has.its <code>alttranstype</code> attribute set to <code>proposal</code>.</td>
+		<td align="left" valign="top">The <code>AltTranslationsAnnotation</code> 
+		annotation.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>&lt;source&gt;</code> element.</td>
+		<td align="left" valign="top">The source text of the text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>&lt;target&gt;</code> element.</td>
+		<td align="left" valign="top">The target text of the text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>resname</code> attribute. (may 
+		also be <code>id</code> if the option is set)</td>
+		<td align="left" valign="top">The name of the text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>restype</code> attribute</td>
+		<td align="left" valign="top">The type of the text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>coord</code> attribute.</td>
+		<td align="left" valign="top">The <i>coordinates</i> property of the 
+		text unit.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>target-language</code> attribute.</td>
+		<td align="left" valign="top">The <i>targetLanguage</i> property of the 
+		sub-document for the given <code>&lt;file&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The <code>&lt;seg-source&gt;</code> element.</td>
+		<td align="left" valign="top">Segmentation of the text unit.</td>
+	</tr>
+</table>
+
+<h2><a name="limitations"></a>Limitations</h2>
+<p>The content of the <code>&lt;sub&gt;</code> element is currently not supported as 
+text. Any element found inside a <code>&lt;bpt&gt;</code>, <code>&lt;ept&gt;</code>, <code>
+&lt;ph&gt;</code>, and <code>&lt;it&gt;</code> (including <code>&lt;sub&gt;</code>) is included in 
+the code of the parent inline element. A warning is generated when a <code>&lt;sub&gt;</code> 
+element is detected. Such elements are rarely (if ever used).</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p>The filter offers the following options:</p>
+<p><cite>Use the trans-unit id attribute for the text unit name if there is no 
+resname</cite> -- Select this option to use the value of the <code>id</code> 
+attribute of the <code>&lt;trans-unit&gt;</code> element as a fall-back value if <code>
+resname</code> is not present. This may be useful for XLIFF document that use
+<code>resname</code>-like values for id and do not bother providing <code>
+resname</code>.</p>
+<p><cite>Ignore the segmentation information in the input</cite> -- Set this 
+option to ignore any segmentation information contains in the input XLIFF. When 
+this option is set all segmented content are reduced to a new un-segmented 
+content when extracted. Note that any <code>&lt;alt-trans&gt;</code> data attached to 
+a given segment is also lost.</p>
+<p><cite>Escape the greater-than characters</cite> -- Set this option to have 
+all greater-than characters (&#39;<code>&gt;</code>&#39;) escaped as &quot;<code>&amp;gt;</code>&quot; in 
+the output.</p>
+<p><cite>Add the target-language attribute if not present</cite> -- Set this 
+option to add the <code>target-language</code> attribute in <code>&lt;file&gt;</code> 
+if it is not present.</p>
+<p><cite>Type of output segmentation</cite> -- Select one of the type of 
+segmentation representation to use for the output. there are the following 
+choices:</p>
+<ul>
+	<li><cite>Segment only if the input text unit is segmented</cite> -- Each 
+	text unit in output are represented with a <code>&lt;seg-source&gt;</code> element 
+	only if the original text unit was already represented like this in the 
+	input file.</li>
+	<li><cite>Always segment (even if the input text unit is not segmented)</cite> 
+	-- Each text unit in output are represented with a <code>&lt;seg-source&gt;</code> 
+	element, even if the original text unit was not segmented, and even if the 
+	whole content of the text unit is made of a single segment.</li>
+	<li><cite>Never segment (even if the input text unit is segmented)</cite> -- 
+	None of the text unit in output is segmented, even if they were in the input 
+	file. All <code>&lt;seg-source&gt;</code> elements are removed.</li>
+</ul>
+<p>&nbsp;</p>
+
+</body>
+</html>

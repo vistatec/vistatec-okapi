@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="test07-subfilter.json" source-language="en" target-language="fr" datatype="x-application/json">
+<header><skl><external-file href="resources/test07-subfilter.json/test07-subfilter.json.json"></external-file></skl></header>
+<body>
+<trans-unit id="1" resname="key1" xml:space="preserve">
+<source xml:lang="en">&lt;p>Test &lt;i>text&lt;/i>.&lt;/p>&lt;p>More test text.&lt;/p></source>
+<target xml:lang="fr">&lt;p>Test &lt;i>text&lt;/i>.&lt;/p>&lt;p>More test text.&lt;/p></target>
+</trans-unit>
+<trans-unit id="2" resname="key2" xml:space="preserve">
+<source xml:lang="en">&lt;ul>￰\n&lt;li>Item 1&lt;/li>￰\t&lt;li> &amp;amp; Item 2 &lt;/li>￰\r&lt;li> &amp; Item 3 &lt;/ul></source>
+<target xml:lang="fr">&lt;ul>￰\n&lt;li>Item 1&lt;/li>￰\t&lt;li> &amp;amp; Item 2 &lt;/li>￰\r&lt;li> &amp; Item 3 &lt;/ul></target>
+</trans-unit>
+<trans-unit id="3" resname="key1" xml:space="preserve">
+<source xml:lang="en">&lt;p>Hello, ￰\t "&lt;i>crazy&lt;/i>" ￰\b world &amp; friends!￰\n￰\n&lt;/p> ￰\n!</source>
+<target xml:lang="fr">&lt;p>Hello, ￰\t "&lt;i>crazy&lt;/i>" ￰\b world &amp; friends!￰\n￰\n&lt;/p> ￰\n!</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

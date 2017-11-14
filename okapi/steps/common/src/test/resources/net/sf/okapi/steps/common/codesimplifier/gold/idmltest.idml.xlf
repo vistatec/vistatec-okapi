@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions">
+<file original="idmltest.idml" source-language="en" target-language="fr" datatype="x-application/vnd.adobe.indesign-idml-package" okp:inputEncoding="UTF-8">
+<body>
+<group id="spr1" resname="MasterSpreads/MasterSpread_ub4.xml" restype="x-spread">
+</group>
+<group id="spr2" resname="Spreads/Spread_uad.xml" restype="x-spread">
+<group id="sto1" resname="uc2" restype="x-story">
+<trans-unit id="uc2-1">
+<source xml:lang="en">This is a first sentence.<x id="2"/>And a second line in that same paragraph.<x id="3"/>and a third one after Ctrl+Enter<x id="4"/>\=bs, &amp;=amp, &lt;=lt, “=quot, ^=caret<x id="5"/>Text in <x id="6"/>a different font<x id="7"/>.</source>
+<target xml:lang="fr">This is a first sentence.<x id="2"/>And a second line in that same paragraph.<x id="3"/>and a third one after Ctrl+Enter<x id="4"/>\=bs, &amp;=amp, &lt;=lt, “=quot, ^=caret<x id="5"/>Text in <x id="6"/>a different font<x id="7"/>.</target>
+</trans-unit>
+</group>
+<group id="sto2" resname="uf4" restype="x-story">
+<trans-unit id="uf4-2">
+<source xml:lang="en">Cell 1</source>
+<target xml:lang="fr">Cell 1</target>
+</trans-unit>
+<trans-unit id="uf4-3">
+<source xml:lang="en">Cell 2</source>
+<target xml:lang="fr">Cell 2</target>
+</trans-unit>
+<trans-unit id="uf4-4">
+<source xml:lang="en">Last cell.<x id="2"/>Second line of last cell.</source>
+<target xml:lang="fr">Last cell.<x id="2"/>Second line of last cell.</target>
+</trans-unit>
+<trans-unit id="uf4-1">
+<source xml:lang="en">Text before the table.<x id="2"/>Text after the table.<x id="3"/>Before the note <x id="4"/> and after it.<x id="5"/>Variables: <x id="6"/>=filename. 	=tab, <x id="7"/>=curPageNum, “=dlq and ”=drq.<x id="8"/> text</source>
+<target xml:lang="fr">Text before the table.<x id="2"/>Text after the table.<x id="3"/>Before the note <x id="4"/> and after it.<x id="5"/>Variables: <x id="6"/>=filename. 	=tab, <x id="7"/>=curPageNum, “=dlq and ”=drq.<x id="8"/> text</target>
+</trans-unit>
+</group>
+</group>
+</body>
+</file>
+</xliff>

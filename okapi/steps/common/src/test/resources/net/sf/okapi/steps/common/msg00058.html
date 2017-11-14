@@ -1,0 +1,682 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- MHonArc v2.6.16 -->
+<!--X-Subject: ugly file size reported for files bigger than 256Mb -->
+<!--X-Date: Fri, 14 Nov 2003 01:54:01 +0100 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+
+
+
+
+<title>ugly file size reported for files bigger than 256M: msg#00058</title>
+<link rel="stylesheet" type="text/css" href="msg00058_files/sstylesheet.css">
+<meta http-equiv="Refresh" content="600">
+<link rev="made" href="mailto:chris.moore@xxxxxxxx">
+<link rel="start" href="http://osdir.com/ml/emacs.pretest.bugs/">
+<link rel="contents" href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/threads.html#00058">
+<link rel="index" href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/index.html#00058">
+<link rel="prev" href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00056.html">
+<link rel="next" href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00065.html">
+</head><body>
+
+<table>
+  <tbody><tr>
+    <td valign="middle">
+<a href="http://osdir.com/ml/"><img src="msg00058_files/MLnewosdirlogo.gif" alt="logo" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+<td align="right">
+<script language="JavaScript" type="text/javascript">
+    if (!window.netshel_ord) { netshel_ord=Math.random()*10000000000000000;
+    }
+    if (!window.netshel_tile) { netshel_tile=1; }
+    document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/ns.osdir/homepage;sz=728x90;dcopt=ist;tile='+netshel_tile+';ord=' + netshel_ord + '?" type="text/javascript"></scr' + 'ipt>');
+    netshel_tile++;
+    </script><script language="JavaScript" src="msg00058_files/homepage.js" type="text/javascript"></script>
+<script type="text/javascript" src="msg00058_files/tags.js"></script><center><script type="text/javascript" src="msg00058_files/j_003.js"></script><!--- start of osdir_ros_(728x90)_247RealMediaAdTag -->
+<script language="JavaScript1.1">
+OAS_rn = new String (Math.random());
+
+
+OAS_rns = OAS_rn.substring (2, 11);
+document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://network.realmedia.com/RealMedia/ads/adstream_jx.ads/osdir/ros/728x90/tchmen/ss/a/1'+OAS_rns+'@Top1"></scr'+'ipt>');
+
+
+</script><script language="JavaScript1.1" src="msg00058_files/1557479054Top1.js"></script><a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//network.realmedia.com/RealMedia/ads/click_lx.ads/osdir/ros/728x90/tchmen/ss/a/1240203033/Top1/OasDefault/DEF2002020001_39_AEF/award_728x90.gif/34336261653564333438636632643430%3F" target="_blank"><img src="msg00058_files/award_728x90.gif" alt="click here" border="0" width="728" height="90"></a>
+<!--- end of osdir_ros_(728x90)_247RealMediaAdTag -->
+</center>
+
+
+</td></tr>
+</tbody></table>
+
+
+<center>
+<form action="http://osdir.com/ml/search.html" id="cse-search-box">
+  <div>
+    <input name="cx" value="partner-pub-2048202115983124:opmgflpkuzq" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="ISO-8859-1" type="hidden">
+    <input style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: rgb(255, 255, 255) url(http://www.google.com/coop/intl/en/images/google_custom_search_watermark.gif) no-repeat scroll left center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" name="q" size="31" type="text">
+    <input name="sa" value="Search" type="submit">
+  </div>
+</form>
+<script type="text/javascript" src="msg00058_files/brand.htm"></script>
+</center>
+<br>
+
+<div class="black-line"></div>
+
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<center>
+<div class="topLinks">
+<table class="mainNav" width="100%">
+<tbody><tr>
+<td align="left" width="33%"></td>
+<td align="right" width="33%"><span class="topThreadNav"><a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00056.html" style="background-color: rgb(255, 255, 0);">&lt;prev</a>&nbsp;
+&nbsp;<a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00065.html" style="background-color: rgb(255, 255, 0);">next&gt;</a></span></td>
+</tr>
+</tbody></table>
+</div>
+</center>
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+
+
+<table>
+  <tbody><tr>
+    <td valign="top">
+      
+    <script type="text/javascript"><!--
+google_ad_client = "pub-2048202115983124";
+/* 160x600, created 9/8/08 */
+google_ad_slot = "7898483230";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="msg00058_files/show_ads.js">
+</script><script> window.google_render_ad(); </script><iframe name="google_ads_frame" src="msg00058_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="160" frameborder="0" height="600"></iframe>
+<p><script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "160x600,120x600";
+//--></script>
+<script type="text/javascript" src="msg00058_files/tags.js"></script></p><center><script type="text/javascript" src="msg00058_files/j_002.js"></script><!--- start of osdir_ros_(160x600)_247RealMediaAdTag -->
+<script language="JavaScript1.1">
+
+OAS_rn = new String (Math.random());
+OAS_rns = OAS_rn.substring (2, 11);
+document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://network.realmedia.com/RealMedia/ads/adstream_jx.ads/osdir/ros/160x600/tchmen/ss/a/1'+OAS_rns+'@x10"></scr'+'ipt>');
+
+</script><script language="JavaScript1.1" src="msg00058_files/1443232345x10.js"></script><a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//network.realmedia.com/RealMedia/ads/click_lx.ads/osdir/ros/160x600/tchmen/ss/a/746795046/x10/OasDefault/DEF2002020001_23_Livestrong_CDN/LAF_160x600_ONECOLOR.gif_2.html/34336261653564333438636632643430%3F746795046" target="_blank">
+<img src="msg00058_files/LAF_160x600_ONECOLOR_2.gif" alt="Click Me!" border="0" width="160" height="600"></a><script type="text/javascript">
+<!--
+mm_client = "87268797280";
+mm_channel = "osdir/ros/160x600/tchmen/ss/a";
+//-->
+</script>
+<script type="text/javascript" src="msg00058_files/mmtnt_003.htm">
+</script><script type="text/javascript">var T1 = new Date();var T = Math.round(T1.getTime()/1000);var TZOS = Math.round(T1.getTimezoneOffset()*60);</script><script type="text/javascript" src="msg00058_files/mmtnt.htm"></script><script type="text/javascript" src="msg00058_files/mmmss.htm"></script><iframe marginheight="0" marginwidth="0" src="msg00058_files/243613729Bottom3.htm" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe marginheight="0" marginwidth="0" src="msg00058_files/a_003.htm" scrolling="no" width="0" frameborder="0" height="0"></iframe>
+<!--- end of osdir_ros_(160x600)_247RealMediaAdTag -->
+</center>
+
+
+<!-- <p/>
+<strong>Related Msgs:</strong> -->
+
+    </td>
+    
+
+  <td valign="top">
+
+  <table>
+  <tbody><tr>
+    <td valign="top">
+
+<script type="text/javascript"><!--
+        e9 = new Object();
+    e9.size = "336x280,300x250";
+//--></script>
+<script type="text/javascript" src="msg00058_files/tags.js"></script><center><script type="text/javascript" src="msg00058_files/j.js"></script><!-- START DART (iframe) -->
+<iframe src="msg00058_files/a_002.htm" hspace="0" vspace="0" bordercolor="#000000" marginheight="0" marginwidth="0" scrolling="no" width="300" frameborder="0" height="250">
+</iframe>
+<!-- END DART (iframe) -->
+</center>
+ 
+</td> 
+
+
+<td align="right">
+<script language="JavaScript" type="text/javascript">
+if (!window.netshel_ord) { netshel_ord=Math.random()*10000000000000000;
+}
+if (!window.netshel_tile) { netshel_tile=1; }
+document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/ns.osdir/general;sz=300x250,336x280;tile='+netshel_tile+';ord=' + netshel_ord + '?" type="text/javascript"></scr' + 'ipt>');
+netshel_tile++;
+</script><script language="JavaScript" src="msg00058_files/general_002.js" type="text/javascript"></script><iframe src="msg00058_files/4407034.htm" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" scrolling="no" width="300" frameborder="0" height="250">
+&lt;a
+href="http://ad.doubleclick.net/click%3Bh=v8/374b/3/0/%2a/i%3B207416510%3B0-0%3B0%3B16777112%3B4307-300/250%3B28220525/28238404/1%3B%3B%7Esscs%3D%3fhttp://clk.atdmt.com/M0N/go/113496437/direct;wi.300;hi.250/01/"
+target="_blank"&gt;&lt;img
+src="http://view.atdmt.com/M0N/view/113496437/direct;wi.300;hi.250/01/"/&gt;&lt;/a&gt;&lt;noscript&gt;&lt;a
+href="http://ad.doubleclick.net/click%3Bh=v8/374b/3/0/%2a/i%3B207416510%3B0-0%3B0%3B16777112%3B4307-300/250%3B28220525/28238404/1%3B%3B%7Esscs%3D%3fhttp://clk.atdmt.com/M0N/go/113496437/direct;wi.300;hi.250/01/"
+target="_blank"&gt;&lt;img border="0"
+src="http://view.atdmt.com/M0N/view/113496437/direct;wi.300;hi.250/01/"
+/&gt;&lt;/a&gt;&lt;/noscript&gt;</iframe>
+</td>
+
+<td valign="top" width="100%">
+<div align="right">
+</div>
+</td>
+
+</tr>
+</tbody></table>
+
+<div class="msgSubject">
+<h2>ugly file size reported for files bigger than 256Mb: msg#00058</h2>
+<div class="msgLinks">
+<table width="100%">
+<tbody><tr valign="baseline">
+<td></td></tr></tbody></table>
+</div>
+</div>
+<div class="msgHead">
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<table>
+<tbody><tr valign="baseline">
+<th align="right">
+<strong>Subject</strong>: </th>
+<td align="left">
+ugly <a id="KonaLink0" target="_top" class="kLink" style="text-decoration: underline ! important; position: static;" href="#"><font style="color: blue ! important; font-family: sans-serif,Helvetica,Verdana,Arial,sans-serif; font-weight: 400; font-size: 14px; position: static;" color="blue"><span class="kLink" style="color: blue ! important; font-family: sans-serif,Helvetica,Verdana,Arial,sans-serif; font-weight: 400; font-size: 14px; position: static;">file </span><span class="kLink" style="color: blue ! important; font-family: sans-serif,Helvetica,Verdana,Arial,sans-serif; font-weight: 400; font-size: 14px; position: static;">size</span></font></a> reported for files bigger than 256Mb</td>
+</tr>
+
+</tbody></table>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+</div>
+<div class="msgBody">
+<table cellspacing="1" width="100%"><tbody><tr><td>
+
+<!-- adsense double block spot -->
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>If you try to visit a file that is bigger than 256Mb (and
+large-file-warning-threshold's value is less than the size of the
+file) you see a warning message like:
+
+"File blah is large (286.102294921875MB), really open? (y or n)"
+
+If the file is less than 256Mb the size is reported as an integer
+number of megabytes.
+
+I suggest that the '%d' format should be used to make sure an
+integral value is always reported.  (And what's with the funny
+indentation of the 2nd argument to 'format'?)
+
+Chris.
+
+-------cut-here-------8&lt;--------cut-here--------8&lt;-------cut-here-------
+Index: files.el
+===================================================================
+RCS file: /cvsroot/emacs/emacs/lisp/files.el,v
+retrieving revision 1.671
+diff -c -r1.671 files.el
+*** files.el    5 Nov 2003 04:06:27 -0000       1.671
+--- files.el    14 Nov 2003 00:42:00 -0000
+***************
+*** 1240,1248 ****
+                   (not (or buf nowarn))
+                   (&gt; (nth 7 attributes) large-file-warning-threshold)
+                   (not (y-or-n-p
+!                        (format "File %s is large (%sMB), really open? "
+                                 (file-name-nondirectory filename)
+!                                  (/ (nth 7 attributes) 1048576)))))
+          (error "Aborted"))
+        (if buf
+            ;; We are using an existing buffer.
+--- 1240,1248 ----
+                   (not (or buf nowarn))
+                   (&gt; (nth 7 attributes) large-file-warning-threshold)
+                   (not (y-or-n-p
+!                        (format "File %s is large (%dMB), really open? "
+                                 (file-name-nondirectory filename)
+!                                (/ (nth 7 attributes) 1048576))))))
+          (error "Aborted"))
+        (if buf
+            ;; We are using an existing buffer.
+-------cut-here-------8&lt;--------cut-here--------8&lt;-------cut-here-------
+
+
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+</td></tr></tbody></table>
+
+
+<!-- End leftnav -->
+</div></td><td valign="top" width="100%">
+<table>
+ <tbody><tr>
+  <td>
+<div style="clear: both; position: absolute; right: 2px;">
+<table align="right"> 
+<tbody><tr><td>
+<a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/p/index.php%3Fpid%3D8811777394939270%26q%3Druby%26l%3D" rel="nofollow">Ruby Jobs</a><br>
+<a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/p/index.php%3Fpid%3D8811777394939270%26q%3Djava%26l%3D" rel="nofollow">Java Jobs</a><br>
+<a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/p/index.php%3Fpid%3D8811777394939270%26q%3D%26l%3Dcalifornia" rel="nofollow">Jobs in California</a><br>
+<a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/p/index.php%3Fpid%3D8811777394939270%26q%3D%26l%3D" rel="nofollow">more...</a>
+<form action="http://www.indeed.com/p/index.php?pid=8811777394939270" method="get" target="_blank" onsubmit='return window.confirm("You are submitting information to an external page.\nAre you sure?");'>
+<input name="pid" value="8811777394939270" type="hidden">
+<table style="font-family: arial;" cellspacing="0">
+<tbody><tr><td style="font-size: 16px; color: rgb(76, 94, 168);"><b>what</b></td></tr>
+<tr><td><input name="q" value="" size="15"></td></tr>
+<tr><td style="font-size: 10px;">job title, keywords</td></tr>
+<tr><td style="font-size: 16px; color: rgb(76, 94, 168);"><b>where</b></td></tr>
+<tr><td><input name="l" value="" size="15"></td></tr>
+<tr><td style="font-size: 10px;">city, state, <a id="KonaLink1" target="_top" class="kLink" style="text-decoration: underline ! important; position: static;" href="#"><font style="color: blue ! important; font-family: arial; font-weight: 400; font-size: 10px; position: static;" color="blue"><span class="kLink" style="color: blue ! important; font-family: arial; font-weight: 400; font-size: 10px; position: static;">zip</span></font></a></td></tr>
+<tr><td><input value="Find Jobs" type="submit"></td></tr>
+<tr><td style="font-size: 13px;">
+
+<span><a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/%3Findpubnum%3D8811777394939270" style="text-decoration: none; color: rgb(0, 0, 0);" target="_blank">jobs</a> by <a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//www.indeed.com/%3Findpubnum%3D8811777394939270" title="Job Search" target="_blank"><img src="msg00058_files/jobsearch.gif" style="border: 0pt none ; vertical-align: middle;" alt="job search"></a></span>
+
+</td></tr>
+</tbody></table></form>
+</td></tr>
+<tr>
+
+<td valign="top">
+
+<script language="JavaScript" type="text/javascript">
+if (!window.netshel_ord) { netshel_ord=Math.random()*10000000000000000;
+}
+if (!window.netshel_tile) { netshel_tile=1; }
+document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/ns.osdir/general;sz=120x600,160x600;tile='+netshel_tile+';ord=' + netshel_ord + '?" type="text/javascript"></scr' + 'ipt>');
+netshel_tile++;
+</script><script language="JavaScript" src="msg00058_files/general.js" type="text/javascript"></script><script language="JavaScript1.1">
+OAS_rn = new String (Math.random());
+OAS_rns = OAS_rn.substring (2, 11);
+document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://network.realmedia.com/RealMedia/ads/adstream_jx.ads/osdir/ros/160x600/tchmen/ss/a/1'+OAS_rns+'@x10"></scr'+'ipt>');
+</script><script language="JavaScript1.1" src="msg00058_files/1964078065x10.js"></script><a href="http://ut.ag/urlweb.aspx?email=steve@fooworks.com&amp;url=http%3A//network.realmedia.com/RealMedia/ads/click_lx.ads/osdir/ros/160x600/tchmen/ss/a/599381648/x10/OasDefault/DEF2002020001_23_Livestrong_CDN/LAF_160x600_ONECOLOR.gif_2.html/34336261653564333438636632643430%3F599381648" target="_blank">
+<img src="msg00058_files/LAF_160x600_ONECOLOR_2.gif" alt="Click Me!" border="0" width="160" height="600"></a><script type="text/javascript">
+<!--
+mm_client = "87268797280";
+mm_channel = "osdir/ros/160x600/tchmen/ss/a";
+//-->
+</script>
+<script type="text/javascript" src="msg00058_files/mmtnt_003.htm">
+</script><script type="text/javascript">var T1 = new Date();var T = Math.round(T1.getTime()/1000);var TZOS = Math.round(T1.getTimezoneOffset()*60);</script><script type="text/javascript" src="msg00058_files/mmtnt_002.htm"></script><script type="text/javascript" src="msg00058_files/mmmss.htm"></script><iframe marginheight="0" marginwidth="0" src="msg00058_files/925416829Bottom3.htm" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe marginheight="0" marginwidth="0" src="msg00058_files/a_003.htm" scrolling="no" width="0" frameborder="0" height="0"></iframe>
+</td>
+</tr>
+
+<!-- <tr>
+<td width="160px">
+<strong>How to Choose a Web Host:</strong>
+<br/><font size="-1">One of the most crucial decisions you will make for your website is selecting your web host. It's essential to choose the right host or all your hard work could be wasted or even worse, lost!
+How do you choose from the plethora of web hosts available today? Will they hold your files to ransom when you come to transfer away? Can you be in full control of your account at all times? 
+With so many hosting businesses out there how can you ensure you choose one of the more reputable ones? Here are a few pointers that should help steer you in the right direction:
+<a href="/ml/webhosts/" rel="nofollow">more...</a></p>
+<b><i>from wikiHow - The How to Manual That You Can Edit</i></b><br/>
+</font>
+
+</td></tr> -->
+</tbody></table>
+</div>
+
+</td></tr>
+
+</tbody></table>
+
+
+
+</td></tr></tbody></table>
+
+
+
+
+<div class="msgLinks">
+<table width="100%">
+<tbody><tr valign="baseline">
+<td></td></tr></tbody></table>
+</div>
+<div class="tSlice">
+<table cellpadding="4" cellspacing="1" width="100%">
+<tbody><tr valign="baseline">
+<td align="left"><span class="iaText"><strong>&lt;Prev&nbsp;in&nbsp;Thread</strong>]</span></td>
+<th align="center" width="100%"><strong>Current&nbsp;Thread</strong></th>
+<td align="right">[<a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00065.html" style="background-color: rgb(255, 255, 0);"><strong>Next&nbsp;in&nbsp;Thread&gt;</strong></a>
+</td></tr>
+<tr class="tSliceList"><td colspan="3">
+</td></tr>
+</tbody></table></div>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<div class="botLinks">
+<table width="100%">
+<tbody><tr valign="baseline">
+<th align="right">Previous&nbsp;by&nbsp;Date:&nbsp;</th>
+<td width="100%"><strong><a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00057.html">Re: file sizes shown incorrectly for large files under Windows</a></strong>, <em>Jason Rumney</em></td>
+</tr>
+<tr valign="baseline">
+<th align="right">Next&nbsp;by&nbsp;Date:&nbsp;</th>
+<td width="100%"><strong><a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00059.html">Re: file sizes shown incorrectly for large files under Windows</a></strong>, <em>Chris Moore</em></td>
+</tr>
+<tr valign="baseline">
+<th align="right">Previous&nbsp;by&nbsp;Thread:&nbsp;</th>
+<td width="100%"><strong><a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00056.html">[latin1-display] docstring fix</a></strong>, <em>Jesper Harder</em></td>
+</tr>
+<tr valign="baseline">
+<th align="right">Next&nbsp;by&nbsp;Thread:&nbsp;</th>
+<td width="100%"><strong><a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/msg00065.html">Re: ugly file size reported for files bigger than 256Mb</a></strong>, <em>Eli Zaretskii</em></td>
+</tr>
+<tr valign="baseline">
+<th align="right">Indexes:&nbsp;</th>
+<td>[<a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/index.html#00058"><strong>Date</strong></a>]
+[<a href="http://osdir.com/ml/emacs.pretest.bugs/2003-11/threads.html#00058"><strong>Thread</strong></a>]
+[<a href="http://osdir.com/ml/emacs.pretest.bugs/"><strong>Top</strong></a>]
+[<a href="http://osdir.com/ml"><strong>All&nbsp;Lists</strong></a>]</td>
+</tr>
+</tbody></table>
+<p>
+</p></div>
+<center>
+<!-- Google CSE Search Box Begins -->
+     <form id="searchbox_008059810939676512379:f5owd_2hq3u" action="http://osdir.com/ml/search.html">
+     <input name="cx" value="008059810939676512379:f5owd_2hq3u" type="hidden">
+     <input name="cof" value="FORID:10" type="hidden">
+     <input name="q" size="40" type="text">
+     <input name="sa" value="Search" type="submit">
+     <img src="msg00058_files/google_custom_search_smnar.gif" alt="Google Custom Search">
+     </form>
+     <!-- Google CSE Search Box Ends -->
+</center>
+
+
+<!-- Kontera ContentLink(TM);-->
+    <script type="text/javascript">
+    var dc_AdLinkColor = 'blue' ;
+    var dc_UnitID = 14 ;
+    var dc_PublisherID = 4576 ;
+    var dc_adprod = 'ADL' ;
+    </script>
+    <script type="text/javascript" src="msg00058_files/KonaLibInline.js">
+    </script><script language="JavaScript" src="msg00058_files/generatedAbTesting"></script><script language="JavaScript" src="msg00058_files/generatedPublisherConfig.js"></script><script language="JavaScript" src="msg00058_files/KonaLibBaseRM.js"></script><a id="AdLinkLayerClick" target="_top" href="#"></a><input id="KonaImpression" style="width: 0px; height: 0px; visibility: hidden; display: none;" type="image"><input id="KonaImpression1" style="width: 0px; height: 0px; visibility: hidden; display: none;" type="image"><iframe allowtransparency="true" src="" vspace="0" hspace="0" marginheight="0" marginwidth="0" style="width: 1px; height: 1px; background-color: transparent;" id="caterpilarID" name="caterpilarID" scrolling="no" frameborder="0"></iframe><span><script type="text/javascript" src="msg00058_files/KonaLib_TreeCoreRM.js"></script></span><span><script type="text/javascript" src="msg00058_files/MS_KonaBuilder.js"></script></span><span><script type="text/javascript" src="msg00058_files/newExpandKonaBuilder.js"></script></span><style id="konaStyle" type="text/css">
+ span.kLink { border-top: 0px none !important;border-left: 0px none !important;border-right: 0px none !important;border-bottom:  1px solid  ;padding : 0px 0px 1px 0px !important;color:blue;background: transparent none;width: auto !important;float: none !important;display:inline !important; } 
+ a.kLink { color:blue !important ; border-bottom-style: none;text-decoration: underline;cursor: pointer;font-family: verdana;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ a.kLink:link { color:blue !important ; border-bottom-style: none;text-decoration: underline;cursor: pointer;font-family: verdana;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ a.kLink:hover { color:blue;text-decoration: underline;cursor: pointer;font-family: verdana;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ a.kLink:visited { color:blue;text-decoration: underline;cursor: pointer; font-family: verdana;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px; } 
+ .sponsor { font-family: MS Sans Serif, Verdana; color: #AFAFAF;font-size: 9pt; cursor: default; } 
+ .konaLayers { __LongTerm__ } 
+ .konaLayers * { __LongTerm__ 0%;background-repeat:repeat;border-style: none none none none;border-width: medium medium medium __LongTerm__ 0px 0px 0px __LongTerm__ 0px 0px __LongTerm__ } 
+ .konaLayers .konaLayer { position: absolute; top:0px; left:0px; width: 313px; padding: 0px; visibility: hidden; text-align:left; overflow: hidden; } 
+ .konaLayers .konaLayer a { font-weight: normal;text-decoration:none;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ .konaLayers .konaLayer a:link { font-weight: normal;text-decoration:none;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ .konaLayers .konaLayer a:hover { font-weight: normal;text-decoration:none;border: 0px none transparent !important;background: transparent none !important;margin: 0px 0px 0px 0px; padding:0px 0px 0px 0px !important;text-transform: none !important;display:inline !important;font-variant:normal;top:0px; right:0px;bottom:0px;left:0px; } 
+ .konaLayers .konaLayer b { font-size:inherit; } 
+ a.CBL { cursor:default; } 
+ a.CBL:link { cursor:default; } 
+ a.CBL:hover { cursor:default; } 
+ a.CBL:visited { cursor:default; } 
+ .konaLayers .CBL .handleTd div { cursor:default; } 
+ .konaLayers .konaPlate { cursor : pointer; } 
+ .konaLayers .konaPlate .konaBox { background: url(http://kona.kontera.com/javascript/lib/imgs/top_box.gif) left top no-repeat;width: 313px; } 
+ .konaLayers .konaPlate .konaBottomBox { width: 313px; height:45px; font-size: 3px; background: url(http://kona.kontera.com/javascript/lib/imgs/box_bottom.png) left top no-repeat; } 
+ .konaLayers .konaPlate .konaBottomBox_Right { width: 313px; height:45px; font-size: 3px; background: url(http://kona.kontera.com/javascript/lib/imgs/box_bottom_right.png) left top no-repeat; } 
+ .konaLayers .konaPlate .konaBottomBox_drag { width: 313px; height:20px; font-size: 3px; background: url(http://kona.kontera.com/javascript/lib/imgs/box_bottom_drag.png) top no-repeat; } 
+ .konaLayers .handleTd { text-align:left; vertical-align: top; width: 180px; } 
+ .konaLayers .handleTd div { cursor: move; padding: 0px 0px 0px 33px; font-size: 3px; } 
+ .konaLayers .handleTd img {  } 
+ .konaLayers .frameBarCell_left { width:88px; vertical-align: top; padding: 0px 0px 0px 0px;text-align:left; } 
+ .konaLayers .frameBarCell_right { width: 32px; vertical-align: top; padding-top: 0px; font-size: 5px;text-align:left; } 
+ .konaLayers .frameBar { margin-left: 7px; margin-right: 6px; cursor:auto; width:300px; } 
+ .konaLayers .konaDescDiv {  cursor: pointer; padding-top: 2px; } 
+ .konaLayers .table02 { margin-left: 9px; font: normal 13px arial; width: 305px; } 
+ .konaLayers .table03 { margin-left: 8px; font: normal 13px arial; width: 280px; table-layout: fixed; } 
+ .konaLayers .table03_flv02 { margin: 0px 0px 0px 32px; width: 242px; font: normal 13px arial; table-layout: fixed; } 
+ .konaLayers .konaLayerTitle { text-align:center; padding-right: 10px; } 
+ .konaLayers .konaLayerRMTitle { text-align:left; padding-right: 10px; padding-left: 6px; } 
+ .konaLayers .konaLayerTitleText  { font: bold 11px tahoma; color:#FFA200;; !important; text-decoration: underline;display:block; } 
+ .konaLayers .konaLayerTitleText b { font-size : 11px; color: #FFA200; } 
+ .konaLayers .konaLayerDesc { padding: 6px 7px 0px 0px; font: normal 11px verdana !important; color: BLACK; text-align: left; } 
+ .konaLayers .konaLayerDesc b { font-size : 11px; color: BLACK; } 
+ .konaLayers .konaLayerLinks td { padding-top: 8px; } 
+ .konaLayers .konaLayerShopLinks td { padding-top: 1px; font-size: 9px; } 
+ .konaLayers .site { text-align:left;padding-left: 8px; overflow:hidden; } 
+ .konaLayers .site a { color: #666666 !important; font: normal 11px arial !important; text-decoration: underline !important; overflow:hidden; } 
+ .konaLayers .site a:hover { color: #FFA200 !important; } 
+ .konaLayers .buyNow { text-align: right; width:105px; } 
+ .konaLayers .konaLayer img { border: 0px;display:inline; padding:0px; } 
+ .konaLayers .imgBanner { padding: 6px 13px 0px 6px; vertical-align: top; width:51px; text-align: center;padding-bottom: 4px; } 
+ .konaLayers .imgShoppingBanner { padding: 5px 4px 0px 3px; vertical-align: top; width: 51px; text-align: center; } 
+ .konaLayers .imgBanner_down { padding: 5px 13px 0px 13px; vertical-align: top; width:51px; text-align: center; } 
+ .konaLayers .top_curve { width: 313px; height: 10px; padding:0px; margin:0px;background: url(http://kona.kontera.com/javascript/lib/imgs/top_curve.png) left top no-repeat; } 
+ .konaLayers .drop_top_curve { width: 313px; height: 35px;font-size: 3px;background: url(http://kona.kontera.com/javascript/lib/imgs/drop_top_curve.png) top no-repeat; } 
+ .konaLayers .drop_top_curve_right { width: 313px; height: 35px; font-size: 3px;background: url(http://kona.kontera.com/javascript/lib/imgs/drop_top_curve_right.png) top no-repeat; } 
+ .konaLayers .konaSearchRow td { padding-top: 2px; } 
+ .konaLayers .konaSearchTable { margin-left: 5px; font: normal 13px arial; } 
+ .KonaBody { display:inline; } 
+ .konaLayers .table02_flv { margin-left: 10px; margin-top: 3px; margin-bottom: -4px; } 
+ .konaLayers .table02_flv02 { margin-left: 34px; width: 234px; margin-top: 3px; } 
+ .konaLayers .table02_flv03 { margin-left: 6px;margin-top: 3px; } 
+ .konaLayers .konaLayer_flvTD01 { padding: 6px 6px 0px 6px; } 
+ .konaLayers .konaLayer_flvTD02 { padding: 5px 6px 0px 6px; } 
+ .konaLayers .konaLayer_flvEmbed01 {  } 
+ .konaLayers .konaLayer_flvEmbed02 { margin-bottom: -3px; } 
+ .konaLayers .konaLayerDesc_nearFLV { font: normal 11px verdana !important; color: BLACK; text-align: left;vertical-align: top; padding: 11px 10px 0px 0px; } 
+ .konaLayers .konaLayerDesc_underFLV { font: normal 11px verdana !important; color: BLACK; text-align: left;font: normal 11px/14px verdana !important; vertical-align: top; padding: 4px 0px 0px 6px; } 
+ .konaLayers .konaLayerLearnMore { text-align:left; vertical-align: bottom; padding: 0px 0px 1px 6px; } 
+ .konaLayers .konaLayerLearnMore02 { vertical-align: top; text-align:right;width: auto !important; padding: 4px 0px 0px 0px !important; } 
+ .konaLayers .konaLayerLinks_underFLV td { padding-top: 4px; padding-bottom: 4px; line-height: 14px; } 
+ .konaLayers .konaLayerLinks_underFLV02 td { padding-top: 4px; line-height: 14px; } 
+ .konaLayers .konaBox_bottom { background: url(http://kona.kontera.com/javascript/lib/imgs/box_separator.gif) left top no-repeat; width: 313px; height: 10px; font-size: 1px; } 
+ .konaLayers .konaBox02 { background: url(http://kona.kontera.com/javascript/lib/imgs/box.gif) left top no-repeat; width: 313px; padding-top: 7px; } 
+ .konaLayers .konaLayer .konatabs_Search { margin: 0px 0px 0px 16px; width: 280px; padding: 0px; text-align: left; background: url(http://kona.kontera.com/javascript/lib/imgs/tabs_bg.gif) bottom repeat-x; } 
+ .konaLayers .konaLayer .konatabs_Table td { padding-right: 4px; } 
+ .konaLayers .konaLayer .konatabs_Table div { height: 18px; padding: 0px ; text-align: center; background: url(http://kona.kontera.com/javascript/lib/imgs/tab_right.gif) bottom right no-repeat; } 
+ .konaLayers .konatabs_Table div span { display:block; height: 15px; padding: 3px 7px 0px 9px; text-align: center; background: url(http://kona.kontera.com/javascript/lib/imgs/tab_left.gif) bottom left no-repeat; color: #808080; font: normal 11px arial; cursor: pointer; } 
+ .konaLayers .konaLayer .konatabs_Table div.selected { background: url(http://kona.kontera.com/javascript/lib/imgs/tab_selected_right.gif) bottom right no-repeat; cursor: default; } 
+ .konaLayers .konatabs_Table div.selected span { background: url(http://kona.kontera.com/javascript/lib/imgs/tab_selected_left.gif) bottom left no-repeat; font: bold 11px arial; color: #96BF00; cursor: default; } 
+ .konaLayers .konaSearch_Form { margin: 6px 0px 0px 15px; } 
+ .konaLayers .konaSearch_Form input { font: normal 11px verdana; color: black; border: 1px solid #7F9DB9; margin-right: 3px;padding-left:2px; } 
+ .konaLayers .konaSearch_Form .konaSearchName { font: normal 11px verdana; color: #96BF00; padding-right: 6px; } 
+ .konaLayers .konaLayer div.konaSearch_Button { width: 63px; height: 18px; padding: 2px 0px 0px 6px; background: url(http://kona.kontera.com/javascript/lib/imgs/search_button.gif) left top no-repeat ; color: #808080; font: normal 11px arial; } 
+ .konaLayers .konaLayer .konaBox02 td.konaHover *  { color: #96BF00; } 
+ .konaLayers .konaFlashWrap { width: 320px; height: 288px;  } 
+ .konaLayers .konaFlashDrag { __LongTerm__ } 
+ .konaLayers .konaFlashContent { width: 320px; height: 288px; } 
+ .konaLayers #konaFlashBubble { width: 320px; height: 288px;  } 
+ .konaLayers .konaBigFlashWrap { position:absolute;width:470px;height:395px; } 
+ .konaLayers .konaBigFlashDrag { __LongTerm__  } 
+ .konaLayers .konaBigFlashContent { position:absolute;left:0;top:0;z-index:12;width:470px;height:395px;  } 
+ .searchTbContainer { width:295px; height:20px; border:0px solid red; padding:0 0 0 0; margin: 0 0 0 0; } 
+ .searchTransTb { width:10px; height:20px; border:0px solid blue; margin:0; padding: 0; vertical-align:middle; } 
+ .searchLogoTb { width:81px; height:20px ;vertical-align:middle;border:0px solid red; margin:0; padding: 0;  } 
+ .searchInputTb { width:140px;  height:20px; vertical-align:middle; margin:0; padding: 0;  } 
+ .searchButtonTb { width:63px;  height:20px; vertical-align:middle;border:0px solid red; margin:0; padding: 0;  } 
+ .searchInputFieldTbDiv { width:133px; height:16px; position:relative; background-color: #fff; border:1px solid #939aa0; padding-left: 2px; margin:0; vertical-align:middle;  } 
+ .searchInputFieldTb { font-size:12px; font-weight: normal; font-family:Tahoma, Arial, sans-serif; color:#000000;background-color: transparent; padding:0; margin:0 0 0px 0; } 
+ .konaSdcLayerContainer { width: 300px;background-color:#FFFFFF;margin-left:7px;margin-top:4px; } 
+ .konaSdcLayerTitle { width: 290px;color: #ffa200;font-size: 11px;font-weight: bold;font-family: Tahoma, Arial, sans-serif;text-decoration:underline;text-align: center;padding-bottom: 8px; } 
+ .konaSdcLayerBlock { width: 300px;height: 100px;clear:both; } 
+ .konaSdcLayerImg { padding-left: 10px;width: 100px;height: 100px;border: 0px solid green;float:left; } 
+ .konaSdcLayerTable { position:relative;padding-left: 10px;padding-right: 10px;width: 170px;height: 100px;float:right;clear:right; } 
+ .konaSdcLayerTableTb table  { position:relative;width: 170px; } 
+ .konaSdcLayerText { width: 280px;color: #000000;font-size: 11px;font-weight: normal;font-family: Tahoma, Arial, sans-serif;text-decoration: none;text-align: left;padding-top: 8px;padding-left: 10px; } 
+ .konaSdcLayerFooter { position:relative;width: 280px;color: #000000;text-align: left;padding-top: 8px;padding-left: 10px; } 
+ .konaSdcLayerFooterTB { position:relative;width: 280px; } 
+ .konaSdcItem .konaSdcItemTable { position:relative;height: 34px;width: 170px;background-color: #fff7ce;border-bottom: 1px solid #ffd990;color: #000000;font-size: 11px;font-weight: normal;font-family: Tahoma, Arial, sans-serif;text-decoration: none; } 
+ .konaSdcItemTableHover { position:relative; background:url(http://kona.kontera.com/javascript/lib/imgs/hilite_bg.gif) top right no-repeat;padding-left: 4px;height: 34px;width: 170px;border-bottom: 1px solid #ffd990;color: #000000;font-size: 11px;font-weight: normal;font-family: Tahoma, Arial, sans-serif;text-decoration: none; } 
+ .konaSdcItemTable td, konaSdcItemTableHover td { position:relative;padding-left: 4px; height:auto; } 
+ .konaSdcstorName { color:#0000FF;text-align: left; padding-left: 4px;font-size:11px;font-weight:normal;font-family:Arial,helvetica,sans-serif; } 
+ .konaSdcstorName:hover { text-decoration:underline; } 
+ .konaSdcPrice { color:#1e3b53;text-decoration:underline;font-weight: bold;text-align:left;font-size:12px;font-family:Arial,helvetica,sans-serif; } 
+ .konaSdcStoreTd1 { width: 105px; text-align: left; } 
+ .konaSdcStoreTd2 { width: 45px; text-align: left; } 
+ .konaSdcBuy { color:#1e3b53;text-decoration:underline;font-weight: normal;font-size: 10px;text-align: left; } 
+ .konaLayers .konaInfocomSearchTD .konaLineInputTD { position:relative; } 
+ .konaInfocomTableContainer { margin-left:21px; } 
+ .konaInfocomSearchTD { background: url(http://kona.kontera.com/javascript/lib/imgs/konaInfocom_search_area_trans.gif); width: 270px; height:46px; } 
+ .konaInfocomSearchTable { margin-top: 10px; margin-left:13px; width:244px; } 
+ .konaInfocomSearchField { width:163px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; background-color:#FFF; border:1px inset #ccc; padding: 1px 0px; } 
+ .konaInfocomInputContainer { position:relative; width: 163px; text-align: left; overflow: hidden; } 
+ .konaLayers .konaFlashWrap { position:relative; } 
+ .konaLayers .konaExpandFlashWrap { position:relative; } 
+ .konaLayers .konaFlashDrag { __LongTerm__ } 
+ .konaLayers .konaExpandFlashContent {  } 
+ .konaLayers .konaExpandFlashIframe { /*background:yellow;*/z-index:9999;position:absolute; } 
+ .konaLayers .konaWebnaryGradientTD .konaLineInputTD { position:relative; width: 200px } 
+ .konaWebnaryGradientTD { background:url(http://kona.kontera.com/javascript/lib/imgs/konaWebnaryGrad.gif) repeat-x; height:39px; width:300px; } 
+ .konaWebnaryTable { width: 300px; height:112px; margin-left:7px; margin-top:3px } 
+ .konaWebnaryHeadTD { width: 300px; height:51px; } 
+ .konaWebnarySubTD { width: 300px; height:22px; } 
+ .konaWebnarySearch { width:280px; height:23px; margin: 3px 0 0 10px; } 
+ .konaWebnaryInput { width: 200px; font: 12px Verdana, Arial, Helvetica, sans-serif; background-color:#FFF;color: black; border:1px inset #ccc; padding: 1px 0px; } 
+ .konaWebnarySubmit { margin-left:5px; } 
+ .konaWebnaryInputContainer { position:relative; width: 200px; text-align: left; overflow: hidden; } 
+ .konaLayers .konaFDGradientTD .konaLineInputTD { position:relative; width: 193px } 
+ .konaFDGradientTD { background:url(http://kona.kontera.com/javascript/lib/imgs/konaFDbottom.gif); height:39px; width:300px; } 
+ .konaFDTable { width: 300px; height:112px; } 
+ .konaFDHeadTD { width: 300px; height:55px; } 
+ .konaFDSubTD { width: 300px; height:20px; } 
+ .konaFDSearch { width:280px; height:23px; margin: 3px 0 0 10px; } 
+ .konaFDInput { width: 193px; font: 12px Verdana, Arial, Helvetica, sans-serif; background-color:#FFF;color: black;border:1px inset #ccc; padding: 1px 0px; } 
+ .konaFDSubmit { margin-left:5px; } 
+ .konaFDInputContainer { position:relative; width: 193px; text-align: left; overflow: hidden; } 
+ .konaYahooShoppingTable { width: 288px; height:125px; border: none; margin-left: 12px; margin-top: 5px; background-image:url(http://kona.kontera.com/javascript/lib/imgs/konaYahooSbgWhite.gif); } 
+ .konaYahooShoppingTable2 { width: 288px; border: none; margin-left: 12px; } 
+ .konaYahooShoppingHeader { height: 31px; font-family:Verdana, Arial, Helvetica, sans-serif; padding-bottom: 0px; vertical-align:middle; text-align:center; } 
+ .konaLayers .konaLayer a.konaYahooShoppingTitle { font-size:11px; font-weight:bold; color: #000000; text-decoration:underline; cursor:default; } 
+ .konaYahooShoppingContentTable { border: none; padding:0; } 
+ .konaYahooShoppingImageTd { padding-top:6px; padding-right:0px; padding-left:12px; padding-bottom:0px; vertical-align:top; } 
+ .konaLayers .konaLayer .konaYahooShoppingImg { border:solid 1px; border-color: #808080; } 
+ .konaYahooShoppingPrice { padding-bottom:5px; padding-right: 7px; } 
+ .konrYahooShoppingFont { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #000000; } 
+ .konaYahooShoppingText { width: 177px; padding-left: 5px } 
+ .konaYahooShoppingDescriptionTable { height: 80px; } 
+ .konaYahooShoppingDescriptionTd { vertical-align: top; } 
+ .konaYahooShoppingDescription { margin:0; padding: 3px 3px 7px 2px; text-align:left; vertical-align:top; line-height:1.5; } 
+ .konaYahooSecondTable { background-image:url(http://kona.kontera.com/javascript/lib/imgs/konaYahooSbgMiddle2.gif); width:100%; border: none; } 
+ .konaYahooSecondTableLinkTD { padding-left:15px; vertical-align:bottom; } 
+ .konaLayers .konaLayer a.konrYahooLink1 { color:#0170b3; font-size:10px; text-decoration: underline; font-family: verdana,sans-serif; } 
+ .konaYahooSecondTableButtonTD { float:right; vertical-align:bottom; } 
+ .konaYahooShoppingBuyNowImg { margin-right: 5px; float:right; border:none; } 
+ .konaYahooShoppingBottomTd { padding:0px; vertical-align:top; } 
+ .konaYahooShoppingBottomImg { padding:0; margin:0; } 
+ .konaYahooShoppingPoweredImg { margin:5px 0 0 0; padding:0; } 
+ .konaYahooSponsored_bckgr { background:url(http://kona.kontera.com/javascript/lib/imgs/konaYSponsored_fon_w_text.gif); height:113px; width:300px; margin-left:7px; margin-top:3px } 
+ .konaYahooSponsored_table { margin-top: 72px; margin-left: 17px; } 
+ .konaYahooSponsored_input { width: 182px; font: Verdana, Arial, Helvetica, sans-serif; margin-top: 0px; background-color:#FFF;color: black;border:1px inset #ccc; padding: 1px 0px; } 
+ .konaYahooSponsored_inputContainor { position:relative; width: 182px; text-align: left; overflow: hidden; } 
+ .konaYahooSponsored_td { padding:2px; } </style><span id="konasapn0"><script src="msg00058_files/KonaGet.txt" type="text/javascript"></script><script src="msg00058_files/KonaSend.txt" language="JavaScript"></script><script src="msg00058_files/KonaGet_002.txt" type="text/javascript"></script><script src="msg00058_files/ContentLink.htm" type="text/javascript"></script></span>
+    <!-- Kontera ContentLink(TM) -->
+
+<table align="right">
+<tbody><tr>
+<td>
+<script type="text/javascript"><!--
+   e9 = new Object();
+   e9.size = "336x280,300x250,300x600";
+   e9.addBlockingCategories="Adult,Alcohol,Gambling,Sweepstakes,Tobacco,Flashing,Warning,Audio,Pop-up,Floating,Unicast,Full-page";
+   e9.noAd = 1;
+//--></script>
+<script type="text/javascript" src="msg00058_files/tags.js"></script><center><script type="text/javascript" src="msg00058_files/j_004.js"></script><!-- START DART (iframe) -->
+<iframe src="msg00058_files/a_004.htm" hspace="0" vspace="0" bordercolor="#000000" marginheight="0" marginwidth="0" scrolling="no" width="300" frameborder="0" height="250">
+</iframe>
+<!-- END DART (iframe) -->
+</center>
+
+<script type="text/javascript"><!--
+   e9 = new Object();
+   e9.size = "336x280,300x250,300x600";
+   e9.addBlockingCategories="Adult,Alcohol,Gambling,Sweepstakes,Tobacco,Flashing,Warning,Audio,Pop-up,Floating,Unicast,Full-page";
+   e9.noAd = 1;
+//--></script>
+
+</td>
+</tr>
+</tbody></table>    
+<script type="text/javascript" src="msg00058_files/linker.js"></script>
+<script type="text/javascript">
+var uTagAfiliateEmail = "steve@fooworks.com";
+uTagRewriteUrls();
+</script>
+
+<hr>
+<table valign="bottom">
+<tbody><tr><td>
+<strong>Recently Viewed:</strong><br>
+<a href="http://osdir.com/ml/linux.drivers.bcm54xx.devel/2006-05/msg00055.html">linux.drivers.b...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/security.firewalls.pfsense.support/2005-06/msg00037.html">security.firewa...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/mathematics.lpsolve/2005-08/msg00072.html">mathematics.lps...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/web.zope.plone.archetypes.general/2005-12/msg00041.html">web.zope.plone....
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/x25/2005-12/msg00001.html">x25/2005-12/msg...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/culture.tv.south-park/2003-03/msg00007.html">culture.tv.sout...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/pld.user.polish/2005-05/msg00592.html">pld.user.polish...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/qplus.devel/2003-04/msg00001.html">qplus.devel/200...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/version-control.cvs.general/2002-04/msg00544.html">version-control...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/openbsd.bugs/2004-08/msg00028.html">openbsd.bugs/20...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/distributions.gumstix.general/2005-03/msg00191.html">distributions.g...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/gnu.chess.bugs/2005-01/msg00213.html">gnu.chess.bugs/...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/redhat.release.shrike/2003-04/msg00375.html">redhat.release....
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/emacs.bugs/2002-04/msg00423.html">emacs.bugs/2002...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/java.bio.general/2002-12/msg00006.html">java.bio.genera...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/ataraid/2005-01/msg00020.html">ataraid/2005-01...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/finance.moneydance.general/2005-05/msg00092.html">finance.moneyda...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/hardware.microcontrollers.gnupic/2005-07/msg00083.html">hardware.microc...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/netbsd.ports.xen/2004-12/msg00013.html">netbsd.ports.xe...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/bug-tracking.gnats.prs/2003-07/msg00002.html">bug-tracking.gn...
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/text.xml.saxon.help/2003-12/msg00014.html">text.xml.saxon....
+</a>&nbsp;&nbsp;  
+<a href="http://osdir.com/ml/kde.linux/2002-06/msg00146.html">kde.linux/2002-...
+</a>&nbsp;&nbsp;  
+</td></tr>
+<tr>
+<td>
+<center>
+<a href="http://osdir.com/ml/index.php">Home</a> | <a href="http://mlblog.osdir.com/">blog view</a> | <a href="http://patents.osdir.com/">USPTO Patent Archive</a> | <a href="http://osdir.com/Article9135.phtml">advertise</a> | OSDir is
+ an <a href="http://inevitablecorp.com/">inevitable</a> website. <img src="msg00058_files/supertinyappleboy.gif" alt="super tiny logo">
+</center>
+</td></tr>
+</tbody></table>
+
+
+<script src="msg00058_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-381510-10";
+urchinTracker();
+</script>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<div class="konaLayers" id="konaLayers"></div></body></html>

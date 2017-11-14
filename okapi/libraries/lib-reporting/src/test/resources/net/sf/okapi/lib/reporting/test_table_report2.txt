@@ -1,0 +1,11 @@
+Test report
+
+#Creation Date: [A1]
+#Project Name: [A2]
+#Target Locale: [A3]
+
+[[A7]]
+
+Total,[A4],[A5],[A6]
+
+The report was created on [A1]

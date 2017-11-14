@@ -1,0 +1,18 @@
+﻿|b000001
+|cTitle
+|v0
+Okapi Handbook
+
+|v1
+Book 1 - test é=eacute
+
+|v2
+Test Okapi
+
+|v3
+2006
+
+|cCopyright
+|v1
+Published by
+Okapi Framework contributors

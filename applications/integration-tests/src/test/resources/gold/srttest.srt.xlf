@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="srttest.srt" source-language="en" target-language="fr" datatype="x-text/plain" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="1" xml:space="preserve">
+<source xml:lang="en">In connection with a dramatic increase
+in crime in <x id="1"/>certain<x id="2"/> neighbourhoods,</source>
+<target xml:lang="fr">In connection with a dramatic increase
+in crime in <x id="1"/>certain<x id="2"/> neighbourhoods,</target>
+<note>00:00:20,000 --> 00:00:24,400 X1:100 X2:600 Y1:050 Y2:100</note>
+</trans-unit>
+<trans-unit id="2" xml:space="preserve">
+<source xml:lang="en">The government is implementing a new policy...</source>
+<target xml:lang="fr">The government is implementing a new policy...</target>
+<note>00:00:24,600 --> 00:00:27,800</note>
+</trans-unit>
+<trans-unit id="3" xml:space="preserve">
+<source xml:lang="en">That will probaly fail, like many others.</source>
+<target xml:lang="fr">That will probaly fail, like many others.</target>
+<note>00:00:27,900 --> 00:00:28,800</note>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,10 @@
+[ID1]	Code "Text 1" code "Text 2".
+[ID2]	"Text 3"
+[ID3]	"Text 4" code "Text 5"
+#_skip
+[ID4]	Code "Text 6 no extraction" code "Text 7 no extraction".
+[ID5]	Code "Text 8" code "Text 9","Text 10"
+[ID6]	Code "Text 11""Text 12""Text 13"
+[ID7]	"\"", "\\", "\"\"\\"
+#empty
+[ID8]	"", "text", "".

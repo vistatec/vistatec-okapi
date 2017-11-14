@@ -1,0 +1,1 @@
+﻿Simple test destination file test00.txt.

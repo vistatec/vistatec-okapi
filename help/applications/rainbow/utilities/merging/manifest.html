@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Translation Package Post-Processing</title>
+<link rel="stylesheet" type="text/css" href="../../../../help.css">
+</head>
+<body>
+<h1 class="dlgmain1">Utility – Translation Package Post-Processing</h1>
+<h2 class="dlgmain2">Translation Package Manifest</h2>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<p>This dialog box is open for each manifest document, before the 
+post-processing for the given manifest starts.</p>
+<h3>Documents Tab</h3>
+<p>This tab lists all the documents that are in the manifest. the table as the 
+following columns:</p>
+<ul>
+	<li><cite>Document to Post-Process</cite> - The relative path of the documents to 
+	post-process. These are the documents that will be used as input for the 
+	post-processing.</li>
+	<li><cite>Missing?</cite> - If the flag &quot;<code>missing</code>&quot; appears, it means the 
+	document to post-process has not been found in the expected location.</li>
+	<li><cite>Output</cite> - Relative path of the output document that will be 
+	generated.</li>
+</ul>
+<p>The root of the documents to post-process is displayed underneath the table.</p>
+<p>You can set the check marks on and off in the table. Only the document that 
+are checked will be processed.</p>
+<p>Click <cite>Execute</cite> to start the process, or <cite>Cancel</cite> to 
+stop.</p>
+<h3>Options Tab</h3>
+<p>This tab lists the options available for the post-processing extracted text. 
+They have no effect when post-processing RTF files.</p>
+<p><b>IMPORTANT: THESE OPTIONS ARE RESET TO THEIR DEFAULT VALUES EACH TIME YOU 
+RUN A POST-PROCESS.</b></p>
+<p><cite>Merge the translation only if it is approved</cite> -- Set this option 
+to merge the available translation only if the text unit has a property <i>
+approved</i> set to <code>yes</code>. If this option is set and the text unit 
+does not have the property set to <code>yes</code>, the source is merged and a 
+warning is displayed.</p>
+<p><cite>Set the &#39;approved&#39; flag on the merged translations</cite> -- Set this 
+option to automatically set the property approved to yes if it is going to be 
+merged. This for example to update the flags in file format such as PO, XLIFF or 
+TS where the property may need to be modified for further processing.</p>
+<h3>Information Tab</h3>
+<p>This tab displays various information found in the manifest.</p>
+<p><cite>Package type</cite> -- Shows the type of package for this manifest.</p>
+<p><cite>Package ID</cite> -- Shows unique identifier associate with this 
+package.</p>
+<p><cite>Source language</cite> -- Shows the code of the source language.</p>
+<p><cite>Target language</cite> -- Shows the code of the expected target 
+language.</p>
+<p><cite>Creation date</cite> -- Shows the date and time when this package was 
+generated.</p>
+<p>&nbsp;</p>
+</body>
+</html>

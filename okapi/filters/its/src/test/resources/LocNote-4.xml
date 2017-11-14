@@ -1,0 +1,16 @@
+﻿<dataFile xmlns:its="http://www.w3.org/2005/11/its">
+ <prolog>
+  <its:rules version="1.0">
+   <its:locNoteRule locNoteType="description"
+    selector="//data" locNoteRefPointer="../@noteFile"/>
+  </its:rules>
+ </prolog>
+ <body>
+  <string id="FileNotFound" noteFile="Comments.html#FileNotFound">
+   <data>Cannot find the file {0}.</data>
+  </string>
+  <string id="DivByZero" noteFile="Comments.html#DivByZero">
+   <data>Invalid parameter.</data>
+  </string>
+ </body>
+</dataFile>

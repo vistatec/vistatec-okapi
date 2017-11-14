@@ -1,0 +1,2257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-12-12 16:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: timezones.h:1
+msgid "Africa/Abidjan"
+msgstr ""
+
+#: timezones.h:2
+msgid "Africa/Accra"
+msgstr ""
+
+#: timezones.h:3
+msgid "Africa/Addis_Ababa"
+msgstr ""
+
+#: timezones.h:4
+msgid "Africa/Algiers"
+msgstr ""
+
+#: timezones.h:5
+msgid "Africa/Asmara"
+msgstr ""
+
+#: timezones.h:6
+msgid "Africa/Asmera"
+msgstr ""
+
+#: timezones.h:7
+msgid "Africa/Bamako"
+msgstr ""
+
+#: timezones.h:8
+msgid "Africa/Bangui"
+msgstr ""
+
+#: timezones.h:9
+msgid "Africa/Banjul"
+msgstr ""
+
+#: timezones.h:10
+msgid "Africa/Bissau"
+msgstr ""
+
+#: timezones.h:11
+msgid "Africa/Blantyre"
+msgstr ""
+
+#: timezones.h:12
+msgid "Africa/Brazzaville"
+msgstr ""
+
+#: timezones.h:13
+msgid "Africa/Bujumbura"
+msgstr ""
+
+#: timezones.h:14
+msgid "Africa/Cairo"
+msgstr ""
+
+#: timezones.h:15
+msgid "Africa/Casablanca"
+msgstr ""
+
+#: timezones.h:16
+msgid "Africa/Ceuta"
+msgstr ""
+
+#: timezones.h:17
+msgid "Africa/Conakry"
+msgstr ""
+
+#: timezones.h:18
+msgid "Africa/Dakar"
+msgstr ""
+
+#: timezones.h:19
+msgid "Africa/Dar_es_Salaam"
+msgstr ""
+
+#: timezones.h:20
+msgid "Africa/Djibouti"
+msgstr ""
+
+#: timezones.h:21
+msgid "Africa/Douala"
+msgstr ""
+
+#: timezones.h:22
+msgid "Africa/El_Aaiun"
+msgstr ""
+
+#: timezones.h:23
+msgid "Africa/Freetown"
+msgstr ""
+
+#: timezones.h:24
+msgid "Africa/Gaborone"
+msgstr ""
+
+#: timezones.h:25
+msgid "Africa/Harare"
+msgstr ""
+
+#: timezones.h:26
+msgid "Africa/Johannesburg"
+msgstr ""
+
+#: timezones.h:27
+msgid "Africa/Kampala"
+msgstr ""
+
+#: timezones.h:28
+msgid "Africa/Khartoum"
+msgstr ""
+
+#: timezones.h:29
+msgid "Africa/Kigali"
+msgstr ""
+
+#: timezones.h:30
+msgid "Africa/Kinshasa"
+msgstr ""
+
+#: timezones.h:31
+msgid "Africa/Lagos"
+msgstr ""
+
+#: timezones.h:32
+msgid "Africa/Libreville"
+msgstr ""
+
+#: timezones.h:33
+msgid "Africa/Lome"
+msgstr ""
+
+#: timezones.h:34
+msgid "Africa/Luanda"
+msgstr ""
+
+#: timezones.h:35
+msgid "Africa/Lubumbashi"
+msgstr ""
+
+#: timezones.h:36
+msgid "Africa/Lusaka"
+msgstr ""
+
+#: timezones.h:37
+msgid "Africa/Malabo"
+msgstr ""
+
+#: timezones.h:38
+msgid "Africa/Maputo"
+msgstr ""
+
+#: timezones.h:39
+msgid "Africa/Maseru"
+msgstr ""
+
+#: timezones.h:40
+msgid "Africa/Mbabane"
+msgstr ""
+
+#: timezones.h:41
+msgid "Africa/Mogadishu"
+msgstr ""
+
+#: timezones.h:42
+msgid "Africa/Monrovia"
+msgstr ""
+
+#: timezones.h:43
+msgid "Africa/Nairobi"
+msgstr ""
+
+#: timezones.h:44
+msgid "Africa/Ndjamena"
+msgstr ""
+
+#: timezones.h:45
+msgid "Africa/Niamey"
+msgstr ""
+
+#: timezones.h:46
+msgid "Africa/Nouakchott"
+msgstr ""
+
+#: timezones.h:47
+msgid "Africa/Ouagadougou"
+msgstr ""
+
+#: timezones.h:48
+msgid "Africa/Porto-Novo"
+msgstr ""
+
+#: timezones.h:49
+msgid "Africa/Sao_Tome"
+msgstr ""
+
+#: timezones.h:50
+msgid "Africa/Timbuktu"
+msgstr ""
+
+#: timezones.h:51
+msgid "Africa/Tripoli"
+msgstr ""
+
+#: timezones.h:52
+msgid "Africa/Tunis"
+msgstr ""
+
+#: timezones.h:53
+msgid "Africa/Windhoek"
+msgstr ""
+
+#: timezones.h:54
+msgid "America/Adak"
+msgstr ""
+
+#: timezones.h:55
+msgid "America/Anchorage"
+msgstr ""
+
+#: timezones.h:56
+msgid "America/Anguilla"
+msgstr ""
+
+#: timezones.h:57
+msgid "America/Antigua"
+msgstr ""
+
+#: timezones.h:58
+msgid "America/Araguaina"
+msgstr ""
+
+#: timezones.h:59
+msgid "America/Argentina/Buenos_Aires"
+msgstr ""
+
+#: timezones.h:60
+msgid "America/Argentina/Catamarca"
+msgstr ""
+
+#: timezones.h:61
+msgid "America/Argentina/ComodRivadavia"
+msgstr ""
+
+#: timezones.h:62
+msgid "America/Argentina/Cordoba"
+msgstr ""
+
+#: timezones.h:63
+msgid "America/Argentina/Jujuy"
+msgstr ""
+
+#: timezones.h:64
+msgid "America/Argentina/La_Rioja"
+msgstr ""
+
+#: timezones.h:65
+msgid "America/Argentina/Mendoza"
+msgstr ""
+
+#: timezones.h:66
+msgid "America/Argentina/Rio_Gallegos"
+msgstr ""
+
+#: timezones.h:67
+msgid "America/Argentina/San_Juan"
+msgstr ""
+
+#: timezones.h:68
+msgid "America/Argentina/Tucuman"
+msgstr ""
+
+#: timezones.h:69
+msgid "America/Argentina/Ushuaia"
+msgstr ""
+
+#: timezones.h:70
+msgid "America/Aruba"
+msgstr ""
+
+#: timezones.h:71
+msgid "America/Asuncion"
+msgstr ""
+
+#: timezones.h:72
+msgid "America/Atikokan"
+msgstr ""
+
+#: timezones.h:73
+msgid "America/Atka"
+msgstr ""
+
+#: timezones.h:74
+msgid "America/Bahia"
+msgstr ""
+
+#: timezones.h:75
+msgid "America/Barbados"
+msgstr ""
+
+#: timezones.h:76
+msgid "America/Belem"
+msgstr ""
+
+#: timezones.h:77
+msgid "America/Belize"
+msgstr ""
+
+#: timezones.h:78
+msgid "America/Blanc-Sablon"
+msgstr ""
+
+#: timezones.h:79
+msgid "America/Boa_Vista"
+msgstr ""
+
+#: timezones.h:80
+msgid "America/Bogota"
+msgstr ""
+
+#: timezones.h:81
+msgid "America/Boise"
+msgstr ""
+
+#: timezones.h:82
+msgid "America/Buenos_Aires"
+msgstr ""
+
+#: timezones.h:83
+msgid "America/Cambridge_Bay"
+msgstr ""
+
+#: timezones.h:84
+msgid "America/Campo_Grande"
+msgstr ""
+
+#: timezones.h:85
+msgid "America/Cancun"
+msgstr ""
+
+#: timezones.h:86
+msgid "America/Caracas"
+msgstr ""
+
+#: timezones.h:87
+msgid "America/Catamarca"
+msgstr ""
+
+#: timezones.h:88
+msgid "America/Cayenne"
+msgstr ""
+
+#: timezones.h:89
+msgid "America/Cayman"
+msgstr ""
+
+#: timezones.h:90
+msgid "America/Chicago"
+msgstr ""
+
+#: timezones.h:91
+msgid "America/Chihuahua"
+msgstr ""
+
+#: timezones.h:92
+msgid "America/Coral_Harbour"
+msgstr ""
+
+#: timezones.h:93
+msgid "America/Cordoba"
+msgstr ""
+
+#: timezones.h:94
+msgid "America/Costa_Rica"
+msgstr ""
+
+#: timezones.h:95
+msgid "America/Cuiaba"
+msgstr ""
+
+#: timezones.h:96
+msgid "America/Curacao"
+msgstr ""
+
+#: timezones.h:97
+msgid "America/Danmarkshavn"
+msgstr ""
+
+#: timezones.h:98
+msgid "America/Dawson"
+msgstr ""
+
+#: timezones.h:99
+msgid "America/Dawson_Creek"
+msgstr ""
+
+#: timezones.h:100
+msgid "America/Denver"
+msgstr ""
+
+#: timezones.h:101
+msgid "America/Detroit"
+msgstr ""
+
+#: timezones.h:102
+msgid "America/Dominica"
+msgstr ""
+
+#: timezones.h:103
+msgid "America/Edmonton"
+msgstr ""
+
+#: timezones.h:104
+msgid "America/Eirunepe"
+msgstr ""
+
+#: timezones.h:105
+msgid "America/El_Salvador"
+msgstr ""
+
+#: timezones.h:106
+msgid "America/Ensenada"
+msgstr ""
+
+#: timezones.h:107
+msgid "America/Fortaleza"
+msgstr ""
+
+#: timezones.h:108
+msgid "America/Fort_Wayne"
+msgstr ""
+
+#: timezones.h:109
+msgid "America/Glace_Bay"
+msgstr ""
+
+#: timezones.h:110
+msgid "America/Godthab"
+msgstr ""
+
+#: timezones.h:111
+msgid "America/Goose_Bay"
+msgstr ""
+
+#: timezones.h:112
+msgid "America/Grand_Turk"
+msgstr ""
+
+#: timezones.h:113
+msgid "America/Grenada"
+msgstr ""
+
+#: timezones.h:114
+msgid "America/Guadeloupe"
+msgstr ""
+
+#: timezones.h:115
+msgid "America/Guatemala"
+msgstr ""
+
+#: timezones.h:116
+msgid "America/Guayaquil"
+msgstr ""
+
+#: timezones.h:117
+msgid "America/Guyana"
+msgstr ""
+
+#: timezones.h:118
+msgid "America/Halifax"
+msgstr ""
+
+#: timezones.h:119
+msgid "America/Havana"
+msgstr ""
+
+#: timezones.h:120
+msgid "America/Hermosillo"
+msgstr ""
+
+#: timezones.h:121
+msgid "America/Indiana/Indianapolis"
+msgstr ""
+
+#: timezones.h:122
+msgid "America/Indiana/Knox"
+msgstr ""
+
+#: timezones.h:123
+msgid "America/Indiana/Marengo"
+msgstr ""
+
+#: timezones.h:124
+msgid "America/Indiana/Petersburg"
+msgstr ""
+
+#: timezones.h:125
+msgid "America/Indianapolis"
+msgstr ""
+
+#: timezones.h:126
+msgid "America/Indiana/Tell_City"
+msgstr ""
+
+#: timezones.h:127
+msgid "America/Indiana/Vevay"
+msgstr ""
+
+#: timezones.h:128
+msgid "America/Indiana/Vincennes"
+msgstr ""
+
+#: timezones.h:129
+msgid "America/Indiana/Winamac"
+msgstr ""
+
+#: timezones.h:130
+msgid "America/Inuvik"
+msgstr ""
+
+#: timezones.h:131
+msgid "America/Iqaluit"
+msgstr ""
+
+#: timezones.h:132
+msgid "America/Jamaica"
+msgstr ""
+
+#: timezones.h:133
+msgid "America/Jujuy"
+msgstr ""
+
+#: timezones.h:134
+msgid "America/Juneau"
+msgstr ""
+
+#: timezones.h:135
+msgid "America/Kentucky/Louisville"
+msgstr ""
+
+#: timezones.h:136
+msgid "America/Kentucky/Monticello"
+msgstr ""
+
+#: timezones.h:137
+msgid "America/Knox_IN"
+msgstr ""
+
+#: timezones.h:138
+msgid "America/La_Paz"
+msgstr ""
+
+#: timezones.h:139
+msgid "America/Lima"
+msgstr ""
+
+#: timezones.h:140
+msgid "America/Los_Angeles"
+msgstr ""
+
+#: timezones.h:141
+msgid "America/Louisville"
+msgstr ""
+
+#: timezones.h:142
+msgid "America/Maceio"
+msgstr ""
+
+#: timezones.h:143
+msgid "America/Managua"
+msgstr ""
+
+#: timezones.h:144
+msgid "America/Manaus"
+msgstr ""
+
+#: timezones.h:145
+msgid "America/Marigot"
+msgstr ""
+
+#: timezones.h:146
+msgid "America/Martinique"
+msgstr ""
+
+#: timezones.h:147
+msgid "America/Mazatlan"
+msgstr ""
+
+#: timezones.h:148
+msgid "America/Mendoza"
+msgstr ""
+
+#: timezones.h:149
+msgid "America/Menominee"
+msgstr ""
+
+#: timezones.h:150
+msgid "America/Merida"
+msgstr ""
+
+#: timezones.h:151
+msgid "America/Mexico_City"
+msgstr ""
+
+#: timezones.h:152
+msgid "America/Miquelon"
+msgstr ""
+
+#: timezones.h:153
+msgid "America/Moncton"
+msgstr ""
+
+#: timezones.h:154
+msgid "America/Monterrey"
+msgstr ""
+
+#: timezones.h:155
+msgid "America/Montevideo"
+msgstr ""
+
+#: timezones.h:156
+msgid "America/Montreal"
+msgstr ""
+
+#: timezones.h:157
+msgid "America/Montserrat"
+msgstr ""
+
+#: timezones.h:158
+msgid "America/Nassau"
+msgstr ""
+
+#: timezones.h:159
+msgid "America/New_York"
+msgstr ""
+
+#: timezones.h:160
+msgid "America/Nipigon"
+msgstr ""
+
+#: timezones.h:161
+msgid "America/Nome"
+msgstr ""
+
+#: timezones.h:162
+msgid "America/Noronha"
+msgstr ""
+
+#: timezones.h:163
+msgid "America/North_Dakota/Center"
+msgstr ""
+
+#: timezones.h:164
+msgid "America/North_Dakota/New_Salem"
+msgstr ""
+
+#: timezones.h:165
+msgid "America/Panama"
+msgstr ""
+
+#: timezones.h:166
+msgid "America/Pangnirtung"
+msgstr ""
+
+#: timezones.h:167
+msgid "America/Paramaribo"
+msgstr ""
+
+#: timezones.h:168
+msgid "America/Phoenix"
+msgstr ""
+
+#: timezones.h:169
+msgid "America/Port-au-Prince"
+msgstr ""
+
+#: timezones.h:170
+msgid "America/Porto_Acre"
+msgstr ""
+
+#: timezones.h:171
+msgid "America/Port_of_Spain"
+msgstr ""
+
+#: timezones.h:172
+msgid "America/Porto_Velho"
+msgstr ""
+
+#: timezones.h:173
+msgid "America/Puerto_Rico"
+msgstr ""
+
+#: timezones.h:174
+msgid "America/Rainy_River"
+msgstr ""
+
+#: timezones.h:175
+msgid "America/Rankin_Inlet"
+msgstr ""
+
+#: timezones.h:176
+msgid "America/Recife"
+msgstr ""
+
+#: timezones.h:177
+msgid "America/Regina"
+msgstr ""
+
+#: timezones.h:178
+msgid "America/Resolute"
+msgstr ""
+
+#: timezones.h:179
+msgid "America/Rio_Branco"
+msgstr ""
+
+#: timezones.h:180
+msgid "America/Rosario"
+msgstr ""
+
+#: timezones.h:181
+msgid "America/Santiago"
+msgstr ""
+
+#: timezones.h:182
+msgid "America/Santo_Domingo"
+msgstr ""
+
+#: timezones.h:183
+msgid "America/Sao_Paulo"
+msgstr ""
+
+#: timezones.h:184
+msgid "America/Scoresbysund"
+msgstr ""
+
+#: timezones.h:185
+msgid "America/Shiprock"
+msgstr ""
+
+#: timezones.h:186
+msgid "America/St_Barthelemy"
+msgstr ""
+
+#: timezones.h:187
+msgid "America/St_Johns"
+msgstr ""
+
+#: timezones.h:188
+msgid "America/St_Kitts"
+msgstr ""
+
+#: timezones.h:189
+msgid "America/St_Lucia"
+msgstr ""
+
+#: timezones.h:190
+msgid "America/St_Thomas"
+msgstr ""
+
+#: timezones.h:191
+msgid "America/St_Vincent"
+msgstr ""
+
+#: timezones.h:192
+msgid "America/Swift_Current"
+msgstr ""
+
+#: timezones.h:193
+msgid "America/Tegucigalpa"
+msgstr ""
+
+#: timezones.h:194
+msgid "America/Thule"
+msgstr ""
+
+#: timezones.h:195
+msgid "America/Thunder_Bay"
+msgstr ""
+
+#: timezones.h:196
+msgid "America/Tijuana"
+msgstr ""
+
+#: timezones.h:197
+msgid "America/Toronto"
+msgstr ""
+
+#: timezones.h:198
+msgid "America/Tortola"
+msgstr ""
+
+#: timezones.h:199
+msgid "America/Vancouver"
+msgstr ""
+
+#: timezones.h:200
+msgid "America/Virgin"
+msgstr ""
+
+#: timezones.h:201
+msgid "America/Whitehorse"
+msgstr ""
+
+#: timezones.h:202
+msgid "America/Winnipeg"
+msgstr ""
+
+#: timezones.h:203
+msgid "America/Yakutat"
+msgstr ""
+
+#: timezones.h:204
+msgid "America/Yellowknife"
+msgstr ""
+
+#: timezones.h:205
+msgid "Antarctica/Casey"
+msgstr ""
+
+#: timezones.h:206
+msgid "Antarctica/Davis"
+msgstr ""
+
+#: timezones.h:207
+msgid "Antarctica/DumontDUrville"
+msgstr ""
+
+#: timezones.h:208
+msgid "Antarctica/Mawson"
+msgstr ""
+
+#: timezones.h:209
+msgid "Antarctica/McMurdo"
+msgstr ""
+
+#: timezones.h:210
+msgid "Antarctica/Palmer"
+msgstr ""
+
+#: timezones.h:211
+msgid "Antarctica/Rothera"
+msgstr ""
+
+#: timezones.h:212
+msgid "Antarctica/South_Pole"
+msgstr ""
+
+#: timezones.h:213
+msgid "Antarctica/Syowa"
+msgstr ""
+
+#: timezones.h:214
+msgid "Antarctica/Vostok"
+msgstr ""
+
+#: timezones.h:215
+msgid "Arctic/Longyearbyen"
+msgstr ""
+
+#: timezones.h:216
+msgid "Asia/Aden"
+msgstr ""
+
+#: timezones.h:217
+msgid "Asia/Almaty"
+msgstr ""
+
+#: timezones.h:218
+msgid "Asia/Amman"
+msgstr ""
+
+#: timezones.h:219
+msgid "Asia/Anadyr"
+msgstr ""
+
+#: timezones.h:220
+msgid "Asia/Aqtau"
+msgstr ""
+
+#: timezones.h:221
+msgid "Asia/Aqtobe"
+msgstr ""
+
+#: timezones.h:222
+msgid "Asia/Ashgabat"
+msgstr ""
+
+#: timezones.h:223
+msgid "Asia/Ashkhabad"
+msgstr ""
+
+#: timezones.h:224
+msgid "Asia/Baghdad"
+msgstr ""
+
+#: timezones.h:225
+msgid "Asia/Bahrain"
+msgstr ""
+
+#: timezones.h:226
+msgid "Asia/Baku"
+msgstr ""
+
+#: timezones.h:227
+msgid "Asia/Bangkok"
+msgstr ""
+
+#: timezones.h:228
+msgid "Asia/Beirut"
+msgstr ""
+
+#: timezones.h:229
+msgid "Asia/Bishkek"
+msgstr ""
+
+#: timezones.h:230
+msgid "Asia/Brunei"
+msgstr ""
+
+#: timezones.h:231
+msgid "Asia/Calcutta"
+msgstr ""
+
+#: timezones.h:232
+msgid "Asia/Choibalsan"
+msgstr ""
+
+#: timezones.h:233
+msgid "Asia/Chongqing"
+msgstr ""
+
+#: timezones.h:234
+msgid "Asia/Chungking"
+msgstr ""
+
+#: timezones.h:235
+msgid "Asia/Colombo"
+msgstr ""
+
+#: timezones.h:236
+msgid "Asia/Dacca"
+msgstr ""
+
+#: timezones.h:237
+msgid "Asia/Damascus"
+msgstr ""
+
+#: timezones.h:238
+msgid "Asia/Dhaka"
+msgstr ""
+
+#: timezones.h:239
+msgid "Asia/Dili"
+msgstr ""
+
+#: timezones.h:240
+msgid "Asia/Dubai"
+msgstr ""
+
+#: timezones.h:241
+msgid "Asia/Dushanbe"
+msgstr ""
+
+#: timezones.h:242
+msgid "Asia/Gaza"
+msgstr ""
+
+#: timezones.h:243
+msgid "Asia/Harbin"
+msgstr ""
+
+#: timezones.h:244
+msgid "Asia/Hong_Kong"
+msgstr ""
+
+#: timezones.h:245
+msgid "Asia/Hovd"
+msgstr ""
+
+#: timezones.h:246
+msgid "Asia/Irkutsk"
+msgstr ""
+
+#: timezones.h:247
+msgid "Asia/Istanbul"
+msgstr ""
+
+#: timezones.h:248
+msgid "Asia/Jakarta"
+msgstr ""
+
+#: timezones.h:249
+msgid "Asia/Jayapura"
+msgstr ""
+
+#: timezones.h:250
+msgid "Asia/Jerusalem"
+msgstr ""
+
+#: timezones.h:251
+msgid "Asia/Kabul"
+msgstr ""
+
+#: timezones.h:252
+msgid "Asia/Kamchatka"
+msgstr ""
+
+#: timezones.h:253
+msgid "Asia/Karachi"
+msgstr ""
+
+#: timezones.h:254
+msgid "Asia/Kashgar"
+msgstr ""
+
+#: timezones.h:255
+msgid "Asia/Katmandu"
+msgstr ""
+
+#: timezones.h:256
+msgid "Asia/Krasnoyarsk"
+msgstr ""
+
+#: timezones.h:257
+msgid "Asia/Kuala_Lumpur"
+msgstr ""
+
+#: timezones.h:258
+msgid "Asia/Kuching"
+msgstr ""
+
+#: timezones.h:259
+msgid "Asia/Kuwait"
+msgstr ""
+
+#: timezones.h:260
+msgid "Asia/Macao"
+msgstr ""
+
+#: timezones.h:261
+msgid "Asia/Macau"
+msgstr ""
+
+#: timezones.h:262
+msgid "Asia/Magadan"
+msgstr ""
+
+#: timezones.h:263
+msgid "Asia/Makassar"
+msgstr ""
+
+#: timezones.h:264
+msgid "Asia/Manila"
+msgstr ""
+
+#: timezones.h:265
+msgid "Asia/Muscat"
+msgstr ""
+
+#: timezones.h:266
+msgid "Asia/Nicosia"
+msgstr ""
+
+#: timezones.h:267
+msgid "Asia/Novosibirsk"
+msgstr ""
+
+#: timezones.h:268
+msgid "Asia/Omsk"
+msgstr ""
+
+#: timezones.h:269
+msgid "Asia/Oral"
+msgstr ""
+
+#: timezones.h:270
+msgid "Asia/Phnom_Penh"
+msgstr ""
+
+#: timezones.h:271
+msgid "Asia/Pontianak"
+msgstr ""
+
+#: timezones.h:272
+msgid "Asia/Pyongyang"
+msgstr ""
+
+#: timezones.h:273
+msgid "Asia/Qatar"
+msgstr ""
+
+#: timezones.h:274
+msgid "Asia/Qyzylorda"
+msgstr ""
+
+#: timezones.h:275
+msgid "Asia/Rangoon"
+msgstr ""
+
+#: timezones.h:276
+msgid "Asia/Riyadh"
+msgstr ""
+
+#: timezones.h:277
+msgid "Asia/Riyadh87"
+msgstr ""
+
+#: timezones.h:278
+msgid "Asia/Riyadh88"
+msgstr ""
+
+#: timezones.h:279
+msgid "Asia/Riyadh89"
+msgstr ""
+
+#: timezones.h:280
+msgid "Asia/Saigon"
+msgstr ""
+
+#: timezones.h:281
+msgid "Asia/Sakhalin"
+msgstr ""
+
+#: timezones.h:282
+msgid "Asia/Samarkand"
+msgstr ""
+
+#: timezones.h:283
+msgid "Asia/Seoul"
+msgstr ""
+
+#: timezones.h:284
+msgid "Asia/Shanghai"
+msgstr ""
+
+#: timezones.h:285
+msgid "Asia/Singapore"
+msgstr ""
+
+#: timezones.h:286
+msgid "Asia/Taipei"
+msgstr ""
+
+#: timezones.h:287
+msgid "Asia/Tashkent"
+msgstr ""
+
+#: timezones.h:288
+msgid "Asia/Tbilisi"
+msgstr ""
+
+#: timezones.h:289
+msgid "Asia/Tehran"
+msgstr ""
+
+#: timezones.h:290
+msgid "Asia/Tel_Aviv"
+msgstr ""
+
+#: timezones.h:291
+msgid "Asia/Thimbu"
+msgstr ""
+
+#: timezones.h:292
+msgid "Asia/Thimphu"
+msgstr ""
+
+#: timezones.h:293
+msgid "Asia/Tokyo"
+msgstr ""
+
+#: timezones.h:294
+msgid "Asia/Ujung_Pandang"
+msgstr ""
+
+#: timezones.h:295
+msgid "Asia/Ulaanbaatar"
+msgstr ""
+
+#: timezones.h:296
+msgid "Asia/Ulan_Bator"
+msgstr ""
+
+#: timezones.h:297
+msgid "Asia/Urumqi"
+msgstr ""
+
+#: timezones.h:298
+msgid "Asia/Vientiane"
+msgstr ""
+
+#: timezones.h:299
+msgid "Asia/Vladivostok"
+msgstr ""
+
+#: timezones.h:300
+msgid "Asia/Yakutsk"
+msgstr ""
+
+#: timezones.h:301
+msgid "Asia/Yekaterinburg"
+msgstr ""
+
+#: timezones.h:302
+msgid "Asia/Yerevan"
+msgstr ""
+
+#: timezones.h:303
+msgid "Atlantic/Azores"
+msgstr ""
+
+#: timezones.h:304
+msgid "Atlantic/Bermuda"
+msgstr ""
+
+#: timezones.h:305
+msgid "Atlantic/Canary"
+msgstr ""
+
+#: timezones.h:306
+msgid "Atlantic/Cape_Verde"
+msgstr ""
+
+#: timezones.h:307
+msgid "Atlantic/Faeroe"
+msgstr ""
+
+#: timezones.h:308
+msgid "Atlantic/Faroe"
+msgstr ""
+
+#: timezones.h:309
+msgid "Atlantic/Jan_Mayen"
+msgstr ""
+
+#: timezones.h:310
+msgid "Atlantic/Madeira"
+msgstr ""
+
+#: timezones.h:311
+msgid "Atlantic/Reykjavik"
+msgstr ""
+
+#: timezones.h:312
+msgid "Atlantic/South_Georgia"
+msgstr ""
+
+#: timezones.h:313
+msgid "Atlantic/Stanley"
+msgstr ""
+
+#: timezones.h:314
+msgid "Atlantic/St_Helena"
+msgstr ""
+
+#: timezones.h:315
+msgid "Australia/ACT"
+msgstr ""
+
+#: timezones.h:316
+msgid "Australia/Adelaide"
+msgstr ""
+
+#: timezones.h:317
+msgid "Australia/Brisbane"
+msgstr ""
+
+#: timezones.h:318
+msgid "Australia/Broken_Hill"
+msgstr ""
+
+#: timezones.h:319
+msgid "Australia/Canberra"
+msgstr ""
+
+#: timezones.h:320
+msgid "Australia/Currie"
+msgstr ""
+
+#: timezones.h:321
+msgid "Australia/Darwin"
+msgstr ""
+
+#: timezones.h:322
+msgid "Australia/Eucla"
+msgstr ""
+
+#: timezones.h:323
+msgid "Australia/Hobart"
+msgstr ""
+
+#: timezones.h:324
+msgid "Australia/LHI"
+msgstr ""
+
+#: timezones.h:325
+msgid "Australia/Lindeman"
+msgstr ""
+
+#: timezones.h:326
+msgid "Australia/Lord_Howe"
+msgstr ""
+
+#: timezones.h:327
+msgid "Australia/Melbourne"
+msgstr ""
+
+#: timezones.h:328
+msgid "Australia/North"
+msgstr ""
+
+#: timezones.h:329
+msgid "Australia/NSW"
+msgstr ""
+
+#: timezones.h:330
+msgid "Australia/Perth"
+msgstr ""
+
+#: timezones.h:331
+msgid "Australia/Queensland"
+msgstr ""
+
+#: timezones.h:332
+msgid "Australia/South"
+msgstr ""
+
+#: timezones.h:333
+msgid "Australia/Sydney"
+msgstr ""
+
+#: timezones.h:334
+msgid "Australia/Tasmania"
+msgstr ""
+
+#: timezones.h:335
+msgid "Australia/Victoria"
+msgstr ""
+
+#: timezones.h:336
+msgid "Australia/West"
+msgstr ""
+
+#: timezones.h:337
+msgid "Australia/Yancowinna"
+msgstr ""
+
+#: timezones.h:338
+msgid "Brazil/Acre"
+msgstr ""
+
+#: timezones.h:339
+msgid "Brazil/DeNoronha"
+msgstr ""
+
+#: timezones.h:340
+msgid "Brazil/East"
+msgstr ""
+
+#: timezones.h:341
+msgid "Brazil/West"
+msgstr ""
+
+#: timezones.h:342
+msgid "Canada/Atlantic"
+msgstr ""
+
+#: timezones.h:343
+msgid "Canada/Central"
+msgstr ""
+
+#: timezones.h:344
+msgid "Canada/Eastern"
+msgstr ""
+
+#: timezones.h:345
+msgid "Canada/East-Saskatchewan"
+msgstr ""
+
+#: timezones.h:346
+msgid "Canada/Mountain"
+msgstr ""
+
+#: timezones.h:347
+msgid "Canada/Newfoundland"
+msgstr ""
+
+#: timezones.h:348
+msgid "Canada/Pacific"
+msgstr ""
+
+#: timezones.h:349
+msgid "Canada/Saskatchewan"
+msgstr ""
+
+#: timezones.h:350
+msgid "Canada/Yukon"
+msgstr ""
+
+#: timezones.h:351
+msgid "CET"
+msgstr ""
+
+#: timezones.h:352
+msgid "Chile/Continental"
+msgstr ""
+
+#: timezones.h:353
+msgid "Chile/EasterIsland"
+msgstr ""
+
+#: timezones.h:354
+msgid "CST6CDT"
+msgstr ""
+
+#: timezones.h:355
+msgid "Cuba"
+msgstr ""
+
+#: timezones.h:356
+msgid "EET"
+msgstr ""
+
+#: timezones.h:357
+msgid "Egypt"
+msgstr ""
+
+#: timezones.h:358
+msgid "Eire"
+msgstr ""
+
+#: timezones.h:359
+msgid "EST"
+msgstr ""
+
+#: timezones.h:360
+msgid "EST5EDT"
+msgstr ""
+
+#: timezones.h:361
+msgid "Etc/GMT"
+msgstr ""
+
+#: timezones.h:362
+msgid "Etc/GMT0"
+msgstr ""
+
+#: timezones.h:363
+msgid "Etc/GMT-0"
+msgstr ""
+
+#: timezones.h:364
+msgid "Etc/GMT+0"
+msgstr ""
+
+#: timezones.h:365
+msgid "Etc/GMT-1"
+msgstr ""
+
+#: timezones.h:366
+msgid "Etc/GMT+1"
+msgstr ""
+
+#: timezones.h:367
+msgid "Etc/GMT-10"
+msgstr ""
+
+#: timezones.h:368
+msgid "Etc/GMT+10"
+msgstr ""
+
+#: timezones.h:369
+msgid "Etc/GMT-11"
+msgstr ""
+
+#: timezones.h:370
+msgid "Etc/GMT+11"
+msgstr ""
+
+#: timezones.h:371
+msgid "Etc/GMT-12"
+msgstr ""
+
+#: timezones.h:372
+msgid "Etc/GMT+12"
+msgstr ""
+
+#: timezones.h:373
+msgid "Etc/GMT-13"
+msgstr ""
+
+#: timezones.h:374
+msgid "Etc/GMT-14"
+msgstr ""
+
+#: timezones.h:375
+msgid "Etc/GMT-2"
+msgstr ""
+
+#: timezones.h:376
+msgid "Etc/GMT+2"
+msgstr ""
+
+#: timezones.h:377
+msgid "Etc/GMT-3"
+msgstr ""
+
+#: timezones.h:378
+msgid "Etc/GMT+3"
+msgstr ""
+
+#: timezones.h:379
+msgid "Etc/GMT-4"
+msgstr ""
+
+#: timezones.h:380
+msgid "Etc/GMT+4"
+msgstr ""
+
+#: timezones.h:381
+msgid "Etc/GMT-5"
+msgstr ""
+
+#: timezones.h:382
+msgid "Etc/GMT+5"
+msgstr ""
+
+#: timezones.h:383
+msgid "Etc/GMT-6"
+msgstr ""
+
+#: timezones.h:384
+msgid "Etc/GMT+6"
+msgstr ""
+
+#: timezones.h:385
+msgid "Etc/GMT-7"
+msgstr ""
+
+#: timezones.h:386
+msgid "Etc/GMT+7"
+msgstr ""
+
+#: timezones.h:387
+msgid "Etc/GMT-8"
+msgstr ""
+
+#: timezones.h:388
+msgid "Etc/GMT+8"
+msgstr ""
+
+#: timezones.h:389
+msgid "Etc/GMT-9"
+msgstr ""
+
+#: timezones.h:390
+msgid "Etc/GMT+9"
+msgstr ""
+
+#: timezones.h:391
+msgid "Etc/Greenwich"
+msgstr ""
+
+#: timezones.h:392
+msgid "Etc/UCT"
+msgstr ""
+
+#: timezones.h:393
+msgid "Etc/Universal"
+msgstr ""
+
+#: timezones.h:394
+msgid "Etc/UTC"
+msgstr ""
+
+#: timezones.h:395
+msgid "Etc/Zulu"
+msgstr ""
+
+#: timezones.h:396
+msgid "Europe/Amsterdam"
+msgstr ""
+
+#: timezones.h:397
+msgid "Europe/Andorra"
+msgstr ""
+
+#: timezones.h:398
+msgid "Europe/Athens"
+msgstr ""
+
+#: timezones.h:399
+msgid "Europe/Belfast"
+msgstr ""
+
+#: timezones.h:400
+msgid "Europe/Belgrade"
+msgstr ""
+
+#: timezones.h:401
+msgid "Europe/Berlin"
+msgstr ""
+
+#: timezones.h:402
+msgid "Europe/Bratislava"
+msgstr ""
+
+#: timezones.h:403
+msgid "Europe/Brussels"
+msgstr ""
+
+#: timezones.h:404
+msgid "Europe/Bucharest"
+msgstr ""
+
+#: timezones.h:405
+msgid "Europe/Budapest"
+msgstr ""
+
+#: timezones.h:406
+msgid "Europe/Chisinau"
+msgstr ""
+
+#: timezones.h:407
+msgid "Europe/Copenhagen"
+msgstr ""
+
+#: timezones.h:408
+msgid "Europe/Dublin"
+msgstr ""
+
+#: timezones.h:409
+msgid "Europe/Gibraltar"
+msgstr ""
+
+#: timezones.h:410
+msgid "Europe/Guernsey"
+msgstr ""
+
+#: timezones.h:411
+msgid "Europe/Helsinki"
+msgstr ""
+
+#: timezones.h:412
+msgid "Europe/Isle_of_Man"
+msgstr ""
+
+#: timezones.h:413
+msgid "Europe/Istanbul"
+msgstr ""
+
+#: timezones.h:414
+msgid "Europe/Jersey"
+msgstr ""
+
+#: timezones.h:415
+msgid "Europe/Kaliningrad"
+msgstr ""
+
+#: timezones.h:416
+msgid "Europe/Kiev"
+msgstr ""
+
+#: timezones.h:417
+msgid "Europe/Lisbon"
+msgstr ""
+
+#: timezones.h:418
+msgid "Europe/Ljubljana"
+msgstr ""
+
+#: timezones.h:419
+msgid "Europe/London"
+msgstr ""
+
+#: timezones.h:420
+msgid "Europe/Luxembourg"
+msgstr ""
+
+#: timezones.h:421
+msgid "Europe/Madrid"
+msgstr ""
+
+#: timezones.h:422
+msgid "Europe/Malta"
+msgstr ""
+
+#: timezones.h:423
+msgid "Europe/Mariehamn"
+msgstr ""
+
+#: timezones.h:424
+msgid "Europe/Minsk"
+msgstr ""
+
+#: timezones.h:425
+msgid "Europe/Monaco"
+msgstr ""
+
+#: timezones.h:426
+msgid "Europe/Moscow"
+msgstr ""
+
+#: timezones.h:427
+msgid "Europe/Nicosia"
+msgstr ""
+
+#: timezones.h:428
+msgid "Europe/Oslo"
+msgstr ""
+
+#: timezones.h:429
+msgid "Europe/Paris"
+msgstr ""
+
+#: timezones.h:430
+msgid "Europe/Podgorica"
+msgstr ""
+
+#: timezones.h:431
+msgid "Europe/Prague"
+msgstr ""
+
+#: timezones.h:432
+msgid "Europe/Riga"
+msgstr ""
+
+#: timezones.h:433
+msgid "Europe/Rome"
+msgstr ""
+
+#: timezones.h:434
+msgid "Europe/Samara"
+msgstr ""
+
+#: timezones.h:435
+msgid "Europe/San_Marino"
+msgstr ""
+
+#: timezones.h:436
+msgid "Europe/Sarajevo"
+msgstr ""
+
+#: timezones.h:437
+msgid "Europe/Simferopol"
+msgstr ""
+
+#: timezones.h:438
+msgid "Europe/Skopje"
+msgstr ""
+
+#: timezones.h:439
+msgid "Europe/Sofia"
+msgstr ""
+
+#: timezones.h:440
+msgid "Europe/Stockholm"
+msgstr ""
+
+#: timezones.h:441
+msgid "Europe/Tallinn"
+msgstr ""
+
+#: timezones.h:442
+msgid "Europe/Tirane"
+msgstr ""
+
+#: timezones.h:443
+msgid "Europe/Tiraspol"
+msgstr ""
+
+#: timezones.h:444
+msgid "Europe/Uzhgorod"
+msgstr ""
+
+#: timezones.h:445
+msgid "Europe/Vaduz"
+msgstr ""
+
+#: timezones.h:446
+msgid "Europe/Vatican"
+msgstr ""
+
+#: timezones.h:447
+msgid "Europe/Vienna"
+msgstr ""
+
+#: timezones.h:448
+msgid "Europe/Vilnius"
+msgstr ""
+
+#: timezones.h:449
+msgid "Europe/Volgograd"
+msgstr ""
+
+#: timezones.h:450
+msgid "Europe/Warsaw"
+msgstr ""
+
+#: timezones.h:451
+msgid "Europe/Zagreb"
+msgstr ""
+
+#: timezones.h:452
+msgid "Europe/Zaporozhye"
+msgstr ""
+
+#: timezones.h:453
+msgid "Europe/Zurich"
+msgstr ""
+
+#: timezones.h:454
+msgid "Factory"
+msgstr ""
+
+#: timezones.h:455
+msgid "GB"
+msgstr ""
+
+#: timezones.h:456
+msgid "GB-Eire"
+msgstr ""
+
+#: timezones.h:457
+msgid "GMT"
+msgstr ""
+
+#: timezones.h:458
+msgid "GMT0"
+msgstr ""
+
+#: timezones.h:459
+msgid "GMT-0"
+msgstr ""
+
+#: timezones.h:460
+msgid "GMT+0"
+msgstr ""
+
+#: timezones.h:461
+msgid "Greenwich"
+msgstr ""
+
+#: timezones.h:462
+msgid "Hongkong"
+msgstr ""
+
+#: timezones.h:463
+msgid "HST"
+msgstr ""
+
+#: timezones.h:464
+msgid "Iceland"
+msgstr ""
+
+#: timezones.h:465
+msgid "Indian/Antananarivo"
+msgstr ""
+
+#: timezones.h:466
+msgid "Indian/Chagos"
+msgstr ""
+
+#: timezones.h:467
+msgid "Indian/Christmas"
+msgstr ""
+
+#: timezones.h:468
+msgid "Indian/Cocos"
+msgstr ""
+
+#: timezones.h:469
+msgid "Indian/Comoro"
+msgstr ""
+
+#: timezones.h:470
+msgid "Indian/Kerguelen"
+msgstr ""
+
+#: timezones.h:471
+msgid "Indian/Mahe"
+msgstr ""
+
+#: timezones.h:472
+msgid "Indian/Maldives"
+msgstr ""
+
+#: timezones.h:473
+msgid "Indian/Mauritius"
+msgstr ""
+
+#: timezones.h:474
+msgid "Indian/Mayotte"
+msgstr ""
+
+#: timezones.h:475
+msgid "Indian/Reunion"
+msgstr ""
+
+#: timezones.h:476
+msgid "Iran"
+msgstr ""
+
+#: timezones.h:477
+msgid "Israel"
+msgstr ""
+
+#: timezones.h:478
+msgid "Jamaica"
+msgstr ""
+
+#: timezones.h:479
+msgid "Japan"
+msgstr ""
+
+#: timezones.h:480
+msgid "Kwajalein"
+msgstr ""
+
+#: timezones.h:481
+msgid "Libya"
+msgstr ""
+
+#: timezones.h:482
+msgid "MET"
+msgstr ""
+
+#: timezones.h:483
+msgid "Mexico/BajaNorte"
+msgstr ""
+
+#: timezones.h:484
+msgid "Mexico/BajaSur"
+msgstr ""
+
+#: timezones.h:485
+msgid "Mexico/General"
+msgstr ""
+
+#: timezones.h:486
+msgid "Mideast/Riyadh87"
+msgstr ""
+
+#: timezones.h:487
+msgid "Mideast/Riyadh88"
+msgstr ""
+
+#: timezones.h:488
+msgid "Mideast/Riyadh89"
+msgstr ""
+
+#: timezones.h:489
+msgid "MST"
+msgstr ""
+
+#: timezones.h:490
+msgid "MST7MDT"
+msgstr ""
+
+#: timezones.h:491
+msgid "Navajo"
+msgstr ""
+
+#: timezones.h:492
+msgid "NZ"
+msgstr ""
+
+#: timezones.h:493
+msgid "NZ-CHAT"
+msgstr ""
+
+#: timezones.h:494
+msgid "Pacific/Apia"
+msgstr ""
+
+#: timezones.h:495
+msgid "Pacific/Auckland"
+msgstr ""
+
+#: timezones.h:496
+msgid "Pacific/Chatham"
+msgstr ""
+
+#: timezones.h:497
+msgid "Pacific/Easter"
+msgstr ""
+
+#: timezones.h:498
+msgid "Pacific/Efate"
+msgstr ""
+
+#: timezones.h:499
+msgid "Pacific/Enderbury"
+msgstr ""
+
+#: timezones.h:500
+msgid "Pacific/Fakaofo"
+msgstr ""
+
+#: timezones.h:501
+msgid "Pacific/Fiji"
+msgstr ""
+
+#: timezones.h:502
+msgid "Pacific/Funafuti"
+msgstr ""
+
+#: timezones.h:503
+msgid "Pacific/Galapagos"
+msgstr ""
+
+#: timezones.h:504
+msgid "Pacific/Gambier"
+msgstr ""
+
+#: timezones.h:505
+msgid "Pacific/Guadalcanal"
+msgstr ""
+
+#: timezones.h:506
+msgid "Pacific/Guam"
+msgstr ""
+
+#: timezones.h:507
+msgid "Pacific/Honolulu"
+msgstr ""
+
+#: timezones.h:508
+msgid "Pacific/Johnston"
+msgstr ""
+
+#: timezones.h:509
+msgid "Pacific/Kiritimati"
+msgstr ""
+
+#: timezones.h:510
+msgid "Pacific/Kosrae"
+msgstr ""
+
+#: timezones.h:511
+msgid "Pacific/Kwajalein"
+msgstr ""
+
+#: timezones.h:512
+msgid "Pacific/Majuro"
+msgstr ""
+
+#: timezones.h:513
+msgid "Pacific/Marquesas"
+msgstr ""
+
+#: timezones.h:514
+msgid "Pacific/Midway"
+msgstr ""
+
+#: timezones.h:515
+msgid "Pacific/Nauru"
+msgstr ""
+
+#: timezones.h:516
+msgid "Pacific/Niue"
+msgstr ""
+
+#: timezones.h:517
+msgid "Pacific/Norfolk"
+msgstr ""
+
+#: timezones.h:518
+msgid "Pacific/Noumea"
+msgstr ""
+
+#: timezones.h:519
+msgid "Pacific/Pago_Pago"
+msgstr ""
+
+#: timezones.h:520
+msgid "Pacific/Palau"
+msgstr ""
+
+#: timezones.h:521
+msgid "Pacific/Pitcairn"
+msgstr ""
+
+#: timezones.h:522
+msgid "Pacific/Ponape"
+msgstr ""
+
+#: timezones.h:523
+msgid "Pacific/Port_Moresby"
+msgstr ""
+
+#: timezones.h:524
+msgid "Pacific/Rarotonga"
+msgstr ""
+
+#: timezones.h:525
+msgid "Pacific/Saipan"
+msgstr ""
+
+#: timezones.h:526
+msgid "Pacific/Samoa"
+msgstr ""
+
+#: timezones.h:527
+msgid "Pacific/Tahiti"
+msgstr ""
+
+#: timezones.h:528
+msgid "Pacific/Tarawa"
+msgstr ""
+
+#: timezones.h:529
+msgid "Pacific/Tongatapu"
+msgstr ""
+
+#: timezones.h:530
+msgid "Pacific/Truk"
+msgstr ""
+
+#: timezones.h:531
+msgid "Pacific/Wake"
+msgstr ""
+
+#: timezones.h:532
+msgid "Pacific/Wallis"
+msgstr ""
+
+#: timezones.h:533
+msgid "Pacific/Yap"
+msgstr ""
+
+#: timezones.h:534
+msgid "Poland"
+msgstr ""
+
+#: timezones.h:535
+msgid "Portugal"
+msgstr ""
+
+#: timezones.h:536
+msgid "PRC"
+msgstr ""
+
+#: timezones.h:537
+msgid "PST8PDT"
+msgstr ""
+
+#: timezones.h:538
+msgid "ROC"
+msgstr ""
+
+#: timezones.h:539
+msgid "ROK"
+msgstr ""
+
+#: timezones.h:540
+msgid "Singapore"
+msgstr ""
+
+#: timezones.h:541
+msgid "Turkey"
+msgstr ""
+
+#: timezones.h:542
+msgid "UCT"
+msgstr ""
+
+#: timezones.h:543
+msgid "Universal"
+msgstr ""
+
+#: timezones.h:544
+msgid "US/Alaska"
+msgstr ""
+
+#: timezones.h:545
+msgid "US/Aleutian"
+msgstr ""
+
+#: timezones.h:546
+msgid "US/Arizona"
+msgstr ""
+
+#: timezones.h:547
+msgid "US/Central"
+msgstr ""
+
+#: timezones.h:548
+msgid "US/Eastern"
+msgstr ""
+
+#: timezones.h:549
+msgid "US/East-Indiana"
+msgstr ""
+
+#: timezones.h:550
+msgid "US/Hawaii"
+msgstr ""
+
+#: timezones.h:551
+msgid "US/Indiana-Starke"
+msgstr ""
+
+#: timezones.h:552
+msgid "US/Michigan"
+msgstr ""
+
+#: timezones.h:553
+msgid "US/Mountain"
+msgstr ""
+
+#: timezones.h:554
+msgid "US/Pacific"
+msgstr ""
+
+#: timezones.h:555
+msgid "US/Pacific-New"
+msgstr ""
+
+#: timezones.h:556
+msgid "US/Samoa"
+msgstr ""
+
+#: timezones.h:557
+msgid "UTC"
+msgstr ""
+
+#: timezones.h:558
+msgid "WET"
+msgstr ""
+
+#: timezones.h:559
+msgid "W-SU"
+msgstr ""
+
+#: timezones.h:560
+msgid "Zulu"
+msgstr ""

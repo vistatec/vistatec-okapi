@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0"
+ xmlns:itsx="http://www.w3.org/2008/12/its-extensions">
+<!-- See ITS specification at: http://www.w3.org/TR/its/ -->
+ <its:translateRule selector="/properties" translate="no"/>
+ <its:translateRule selector="//entry" itsx:idValue="@key" translate="yes"/>
+</its:rules>

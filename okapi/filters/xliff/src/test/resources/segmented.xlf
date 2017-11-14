@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+    <file original="Graphic Example.psd" source-language="en" target-language="de" tool="okapi" datatype="html">
+        <header>           
+            <note>Segmented Xliff</note>                
+        </header>
+        <body>
+            <trans-unit id="1">
+                <source xml:lang="en-US">The quick brown <bpt id="1" ctype="bold">&lt;b></bpt>fox<ept id="1">&lt;/b></ept> jumped over the lazy dog.</source>
+		<seg-source><mrk mid="0" mtype="seg">The quick brown <bpt id="1" ctype="bold">&lt;b></bpt>fox<ept id="1">&lt;/b></ept> jumped over the lazy dog.</mrk></seg-source>
+                <target xml:lang="de-DE"><mrk mid="0" mtype="seg">Der schnelle braune <bpt id="1" ctype="bold">&lt;b></bpt>fuchs<ept id="1">&lt;/b></ept> sprang über den faulen hund.</mrk></target>
+		<note>Make sure to use the glossary I sent you yesterday. Thanks.</note>
+		<note>Again. Make sure to use the glossary I sent you yesterday. Thanks.</note>
+            </trans-unit>
+            <trans-unit id="3">
+                <source xml:lang="en-US">Segment one. Segment two.</source>
+                <seg-source><mrk mid="0" mtype="seg">Segment one.</mrk> <mrk mid="1" mtype="seg">Segment two.</mrk></seg-source>
+                <target xml:lang="de-DE"><mrk mid="0" mtype="seg">Segment ein.</mrk> <mrk mid="1" mtype="seg">Segment zwei.</mrk></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

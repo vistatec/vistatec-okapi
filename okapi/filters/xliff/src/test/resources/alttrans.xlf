@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file date="2014-10-29T18:51:20Z" original="foo.xml" source-language="en-US" target-language="fr" datatype="xml">
+    <header></header>
+    <body>
+      <trans-unit id="6b20d34e-cb18-43a5-836e-93367380a7f7">
+        <source>source1</source>
+        <alt-trans alttranstype="previous-version" origin="X">
+          <target xml:lang="fr" state="translated" state-qualifier="exact-match" phase-name="2">target2</target>
+        </alt-trans>
+        <alt-trans alttranstype="accepted" origin="X">
+          <target xml:lang="fr" state="translated" state-qualifier="exact-match" phase-name="3">target3</target>
+        </alt-trans>
+        <alt-trans alttranstype="previous-version" origin="X">
+          <target xml:lang="fr" state="translated" state-qualifier="exact-match" phase-name="1">target1</target>
+        </alt-trans>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

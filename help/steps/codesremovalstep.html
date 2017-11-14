@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Inline Codes Removal</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Inline Codes Removal Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Inline_Codes_Removal_Step">http://okapiframework.org/wiki/index.php?title=Inline_Codes_Removal_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step removes inline codes or content of inline codes in text units.</p>
+<p>Takes: Filter Events<br>
+Sends: Filter Events</p>
+<p>Many text units contains inline codes, span of data that should be left 
+untouched inside a translatable text, for example the tag <code>&lt;b&gt;</code> in a 
+HTML paragraph. This steps allows you to make different types of removal of 
+those codes.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>What to remove</cite> -- Select the type of data to remove. A code is 
+made of two parts: its markers (always there) and its content (optional). For 
+example, an inline code in XLIFF can be like this: <code>
+<span style="background-color: #00FFFF">&lt;bpt id=&quot;1&quot;&gt;</span><span style="background-color: #C0C0C0">&amp;tl;b&amp;gt;</span><span style="background-color: #00FFFF">&lt;/bpt&gt;</span></code>. 
+The parts in blue are the marker part, the part in grey is the content part.</p>
+<ul>
+	<li>Remove code marker, but keep code content:<br>
+	This removes the code marker but preserve its content. In other words, the 
+	content of the code becomes part of the text.</li>
+	<li>Remove code content, but keep code marker:<br>
+	This remove the code content but preserve its marker. In other words, the 
+	inline code still exists but it has been generalized and the data of the 
+	original format cannot be retrieved from it anymore.</li>
+	<li>Remove code marker and code content:<br>
+	This removes the whole inline code, there is no trace of it left.</li>
+</ul>
+<p><cite>Strip codes in the source text</cite> -- Set this option to apply the 
+removal action selected to the source text.</p>
+<p><cite>Strip codes in the target text</cite> -- Set this option to apply the 
+removal action selected to the target text.</p>
+<p><cite>Apply to non-transltable text unit</cite> -- Set this option to apply 
+the removal action even to text unit marked as non-translatable. If this option 
+is not set, all non-translatable text units are left untouched.</p>
+<p>&nbsp;</p>
+</body>
+</html>

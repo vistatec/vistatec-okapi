@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="myFile_en_old.html" source-language="en-us" target-language="fr-fr" datatype="html">
+<body>
+<trans-unit id="tu1" restype="x-title">
+<source xml:lang="en-us">Title of the Document</source>
+<target xml:lang="fr-fr">Title of the Document</target>
+</trans-unit>
+<trans-unit id="tu2" restype="x-h1">
+<source xml:lang="en-us">Test Document</source>
+<target xml:lang="fr-fr">FR Test Document</target>
+</trans-unit>
+<trans-unit id="tu3" restype="x-paragraph">
+<source xml:lang="en-us">This is an example of <bpt id="1">&lt;b></bpt>bold<ept id="1">&lt;/b></ept>, <bpt id="2">&lt;i></bpt>italic<ept id="2">&lt;/i></ept> and <bpt id="3">&lt;u></bpt>underlined<ept id="3">&lt;/u></ept> text.</source>
+<target xml:lang="fr-fr">FR This is an example of <bpt id="1">&lt;b></bpt>bold<ept id="1">&lt;/b></ept>, <bpt id="2">&lt;i></bpt>italic<ept id="2">&lt;/i></ept> and <bpt id="3">&lt;u></bpt>underlined<ept id="3">&lt;/u></ept> text.</target>
+</trans-unit>
+<trans-unit id="tu4" restype="x-paragraph">
+<source xml:lang="en-us">This paragraph <bpt id="1">[#$dp12]</bpt>has a link<ept id="1">&lt;/a></ept> and <bpt id="2">&lt;i></bpt>text <bpt id="3">&lt;b></bpt><bpt id="4">&lt;u></bpt>that is<ept id="4">&lt;/u></ept> decorated<ept id="3">&lt;/b></ept><ept id="2">&lt;/i></ept>.</source>
+<target xml:lang="fr-fr">FR This paragraph <bpt id="1">[#$dp12]</bpt>has a link<ept id="1">&lt;/a></ept> and <bpt id="2">&lt;i></bpt>text <bpt id="3">&lt;b></bpt><bpt id="4">&lt;u></bpt>that is<ept id="4">&lt;/u></ept> decorated<ept id="3">&lt;/b></ept><ept id="2">&lt;/i></ept>.</target>
+</trans-unit>
+<trans-unit id="tu6" resname="alt">
+<source xml:lang="en-us">Elephant Statue at Dusk</source>
+<target xml:lang="fr-fr">FR Elephant Statue at Dusk</target>
+</trans-unit>
+<trans-unit id="tu5" restype="x-paragraph">
+<source xml:lang="en-us">This is an image:<ph id="1">&lt;br></ph> <ph id="2">[#$dp15]</ph></source>
+<target xml:lang="fr-fr">FR This is an image:<ph id="1">&lt;br></ph> <ph id="2">[#$dp15]</ph></target>
+</trans-unit>
+<trans-unit id="tu7" restype="x-paragraph">
+<source xml:lang="en-us"> </source>
+<target xml:lang="fr-fr"> </target>
+</trans-unit>
+</body>
+</file>
+</xliff>

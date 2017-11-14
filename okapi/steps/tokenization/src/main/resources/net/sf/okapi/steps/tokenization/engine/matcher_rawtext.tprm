@@ -1,0 +1,14 @@
+#v1
+RuleCount.i=1
+
+Rule0.name=RawtextResolver
+Rule0.description=Detects RAWTEXT tokens, creates lexems with predefined lexemId (-1), understood by the the tokenization engine, which in turn runs the text contained therein through all its lexers.  
+Rule0.inTokens=RAWTEXT
+Rule0.outTokens=
+Rule0.userTokens=
+Rule0.lexemId.i=-1
+Rule0.pattern=.+
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=0
+Rule0.keepInput.b=false
+Rule0.languages=

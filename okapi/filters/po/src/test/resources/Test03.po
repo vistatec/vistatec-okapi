@@ -1,0 +1,60 @@
+﻿# Sample PO file
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyApplication 1.0\n"
+"Report-Msgid-Bugs-To: myapp@example.com\n"
+"POT-Creation-Date: 2005-09-25 19:22+1000\n"
+"PO-Revision-Date: 2005-09-26 06:17+1000\n"
+"Last-Translator: Tester 1 <tester1@example.com>\n"
+"Language-Team: French <fr@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#msgid "You have selected %d file for deletion"
+#msgid_plural "You have selected %d files for deletion"
+#msgstr[0] ""
+#msgstr[1] ""
+
+msgid "untranslated-singular"
+msgid_plural "untranslated-plural"
+msgstr[0] "translated-singular with à=agrave"
+msgstr[1] "translated-plural"
+
+msgid "Simple text string."
+msgstr ""
+
+msgid "Cannot find file '%s' (tried %d times)\n."
+msgstr ""
+
+#  translator-comments
+#. automatic-comments
+#: reference...
+#, flag...
+msgid "String in the default source language"
+msgstr "Traduction pour 'String in the default source language'"
+
+msgid "Test inline codes: [%d] [%*.*f] %% [%E] [%-s]"
+msgstr ""
+
+domain TheDomain1
+
+msgid "String 1 in domain 'TheDomain1'"
+msgstr "String 1 in domain 'TheDomain1'"
+
+domain TheDomain2
+
+msgid "String 1 in domain 'TheDomain2'"
+msgstr "String 1 in domain 'TheDomain2'"
+
+msgid "Example 1: Line 1\nLine 2\nLine 3"
+msgstr ""
+
+msgid "Example 2: Line 1\n"
+"Line 2\n"
+"Line 3"
+msgstr ""
+

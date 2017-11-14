@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="net.sf.okapi.steps.sentencealigner.SentenceAlignerStep" creationtoolversion="unknown" segtype="sentence" o-tmf="unknown" adminlang="en" srclang="en" datatype="application/x-tmx+xml"></header><body>
+	<tu>
+		<tuv xml:lang="EN">
+			<seg>Each day we have the opportunity to code. Think of the many people who have a difficult time coding, who feel lost, who even think that they should change jobs. What can you do to help? Imagine that a coder, he/she calls you for assistance. What is the right thing to do for him or her? When is the right time to do it?</seg>
+		</tuv>
+		<tuv xml:lang="FR">
+			<seg>Chaque jour nous avons l’occasion code, de faire ce qui est bien, au bon moment, sans tarder. Songez aux nombreuses personnes qui ont des difficultés qui sont coding, qui se sentent seules ou même qui change jobs. Que pouvez-vous faire pour aider ? Imaginez qu’un coder, coincé sous la pluie avec sa voiture en panne, vous appelle et vous demande de l’aide. Qu’elle est la bonne chose à faire pour lui ? Quel est le bon moment pour le faire ?</seg>
+		</tuv>
+	</tu>
+</body>
+</tmx>

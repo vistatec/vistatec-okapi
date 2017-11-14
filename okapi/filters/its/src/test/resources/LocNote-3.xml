@@ -1,0 +1,12 @@
+﻿<myRes xmlns:its="http://www.w3.org/2005/11/its">
+ <head>
+  <its:rules version="1.0">
+   <its:locNoteRule locNoteType="description"
+    selector="//msg[@id='NotFound']"
+    locNoteRef="ErrorsInfo.html#NotFound"/>
+  </its:rules>
+ </head>
+ <body>
+  <msg id="NotFound">Cannot find {0} on {1}.</msg>
+ </body>
+</myRes>

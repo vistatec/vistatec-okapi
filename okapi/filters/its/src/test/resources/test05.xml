@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "dtd/concept.dtd">
+<concept id="Example01" xml:lang="en">
+ <title>Processing XML with <tm tmtype="tm">Rainbow</tm></title>
+ <prolog><metadata><keywords>
+  <keyword>localization</keyword>
+  <keyword><tm tmtype="tm">Rainbow</tm></keyword>
+  <keyword><tm tmtype="tm">Okapi</tm></keyword>
+  <keyword>text extraction</keyword>
+ </keywords></metadata></prolog>
+ <conbody>
+  <p><tm tmtype="tm">Rainbow</tm> (<image href="rainbowIcon.png" alt="Icon for Rainbow"/>) is a <keyword>GUI</keyword> program that allows you to execute any existing <tm tmtype="tm">Okapi</tm> utility.<draft-comment>Maybe we also need to talk about Tikal for commend-line mode?</draft-comment></p>
+  <?Pub Caret?>
+  <p>Here is an example of extracting XML documents to XLIFF<fn>XLIFF is a standard format used by localization tools</fn> for translation, using <tm tmtype="tm">Rainbow</tm>.</p>
+  <ol>
+   <li>Start <tm tmtype="tm">Rainbow</tm></li>
+   <li>Drop the files to process in the <uicontrol>Input List 1</uicontrol> tab.</li>
+   <li>Associate to each XML document with its relevant parameters file.</li>
+   <li>Select the <uicontrol>Text Extraction</uicontrol> command from the <uicontrol>Utilities</uicontrol> menu. This opens the <wintitle>Text Extraction Utility</wintitle> dialog box.</li>
+   <li>Go to the <uicontrol>Format</uicontrol> tab and select <tt>XLIFF</tt>.</li>
+   <li>Go to the <uicontrol>Package</uicontrol> tab. Enter the name of the directory where you want to create the translation package in the <uicontrol>Output folder</uicontrol> field. The default is <filepath>C:\Localization Projects</filepath>.</li>
+   <li>Enter the name of the package to create in the <uicontrol>Package name</uicontrol> field. For example: <filepath translate="yes">Pack1</filepath>.</li>
+   <li>Click <uicontrol>Execute</uicontrol> to start the process.</li>
+  </ol>
+ </conbody>
+</concept>

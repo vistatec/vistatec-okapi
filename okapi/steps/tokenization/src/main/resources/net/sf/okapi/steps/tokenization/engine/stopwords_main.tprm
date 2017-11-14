@@ -1,0 +1,46 @@
+#v1
+RuleCount.i=4
+
+Rule0.name=Stopwords_English
+Rule0.description=English stop-words
+Rule0.enabled.b=true 
+Rule0.inTokens=WORD
+Rule0.outTokens=STOPWORD
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=stopwords_english.dic
+Rule0.keepInput.b=true
+Rule0.languages=en
+
+Rule1.name=Stopwords_German
+Rule1.description=German stop-words
+Rule1.enabled.b=true 
+Rule1.inTokens=WORD
+Rule1.outTokens=STOPWORD
+Rule1.userTokens=
+Rule1.lexemId.i=0
+Rule1.pattern=stopwords_german.dic
+Rule1.keepInput.b=true
+Rule1.languages=de
+
+Rule2.name=Stopwords_Polish
+Rule2.description=Polish stop-words
+Rule2.enabled.b=false 
+Rule2.inTokens=WORD
+Rule2.outTokens=STOPWORD
+Rule2.userTokens=
+Rule2.lexemId.i=0
+Rule2.pattern=stopwords_polish.dic
+Rule2.keepInput.b=true
+Rule2.languages=pl
+
+Rule3.name=Stopwords_Hindi
+Rule3.description=Hindi stop-words
+Rule3.enabled.b=false 
+Rule3.inTokens=WORD
+Rule3.outTokens=STOPWORD
+Rule3.userTokens=
+Rule3.lexemId.i=0
+Rule3.pattern=stopwords_hindi.dic
+Rule3.keepInput.b=true
+Rule3.languages=hi

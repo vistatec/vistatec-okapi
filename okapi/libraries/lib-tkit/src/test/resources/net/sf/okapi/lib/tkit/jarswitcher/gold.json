@@ -1,0 +1,60 @@
+{
+  "className" : "net.sf.okapi.lib.tkit.jarswitcher.Versions",
+  "content" : [ {
+    "label" : "m11",
+    "path" : "/D:/git_local_repo/okapi_master/m11/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.11-classes.jar",
+    "date" : "2011-4-2"
+  }, {
+    "label" : "m12",
+    "path" : "/D:/git_local_repo/okapi_master/m12/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.12-classes.jar",
+    "date" : "2011-5-31"
+  }, {
+    "label" : "m13",
+    "path" : "/D:/git_local_repo/okapi_master/m13/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.13-classes.jar",
+    "date" : "2011-7-29"
+  }, {
+    "label" : "m14",
+    "path" : "/D:/git_local_repo/okapi_master/m14/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.14-classes.jar",
+    "date" : "2011-10-1"
+  }, {
+    "label" : "m15",
+    "path" : "/D:/git_local_repo/okapi_master/m15/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.15-classes.jar",
+    "date" : "2012-1-13"
+  }, {
+    "label" : "m16",
+    "path" : "/D:/git_local_repo/okapi_master/m16/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.16-classes.jar",
+    "date" : "2012-4-15"
+  }, {
+    "label" : "m17",
+    "path" : "/D:/git_local_repo/okapi_master/m17/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.17-classes.jar",
+    "date" : "2012-7-8"
+  }, {
+    "label" : "m18",
+    "path" : "/D:/git_local_repo/okapi_master/m18/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.18-classes.jar",
+    "date" : "2012-9-8"
+  }, {
+    "label" : "m19",
+    "path" : "/D:/git_local_repo/okapi_master/m19/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.19-classes.jar",
+    "date" : "2012-11-24"
+  }, {
+    "label" : "m20",
+    "path" : "/D:/git_local_repo/okapi_master/m20/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.20-classes.jar",
+    "date" : "2013-2-17"
+  }, {
+    "label" : "m21",
+    "path" : "/D:/git_local_repo/okapi_master/m21/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.21-classes.jar",
+    "date" : "2013-4-16"
+  }, {
+    "label" : "m22",
+    "path" : "/D:/git_local_repo/okapi_master/m22/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.22-classes.jar",
+    "date" : "2013-7-19"
+  }, {
+    "label" : "m23",
+    "path" : "/D:/git_local_repo/okapi_master/m23/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.23-classes.jar",
+    "date" : "2013-9-27"
+  }, {
+    "label" : "m24",
+    "path" : "/D:/git_local_repo/okapi_master/m24/okapi/assemblies/tikal/target/okapi-assembly-tikal-0.24-classes.jar",
+    "date" : "2014-1-6"
+  } ]
+}

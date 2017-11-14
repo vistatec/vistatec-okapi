@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+    <!ELEMENT foo (content*)>    
+    <!ATTLIST content
+        id ID #IMPLIED
+        ref IDREF #IMPLIED>
+]>
+<foo>
+<content id="1">content1</content>
+<content id="2">content2</content>
+</foo>

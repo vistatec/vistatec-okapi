@@ -1,0 +1,91 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - OpenOffice / ODF Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">OpenOffice / ODF Filter (BETA)</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><br>
+			- <a href="#knownIssues">Known issues</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=OpenOffice_Filter">http://okapiframework.org/wiki/index.php?title=OpenOffice_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The OpenOffice Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+OpenOffice.org documents: ODT (text), ODS (spreadsheet), ODP (slides), and ODG 
+(graphics). The filter is implemented in the class <code>
+net.sf.okapi.filters.openoffice.OpenOfficeFilter</code> of the Okapi library.</p>
+<p>This first filter is actually a wrapper that internally calls a second 
+filter: The ODF Filter is an Okapi component that implements the <code>IFilter</code> 
+interface for raw OpenDocument XML files. That filter is implement in the class <code>
+net.sf.okapi.filters.openoffice.ODFFilter</code> of the Okapi library.</p>
+<p>Having access to the two filters allows you to process OpenOffice.org documents, or directly raw ODF 
+documents if needed.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Encodings</h3>
+<p>The input encoding is automatically detected.</p>
+<p>Any user-specified encoding is ignored by these filters. they always use 
+UTF-8.</p>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is always set to a simple linefeed 
+(LF).</p>
+<h3>Sub-Documents</h3>
+<p>An OpenOffice documents is a ZIP file with several documents inside. The main 
+one (<code>content.xml</code>) contains the body of the data. But other files 
+may also contain translatable text: <code>meta.xml</code> and <code>style.xml</code>.</p>
+<p>All the different embedded files are treated as sub-documents by the filter. 
+This means that, for example, when represented in XLIFF, a single ODT extracted 
+to a single XLIFF document is made up three XLIFF <code>&lt;file&gt;</code> elements: 
+One for <code>content.xml</code>, one for <code>style.xml</code>, and one for
+<code>meta.xml</code>. Note that very often, only <code>content.xml</code> will 
+have extracted text.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Options Tab</h3>
+<p><cite>Extract notes</cite> -- Set this option to extract the content of <code>
+&lt;office:annotation&gt;</code> elements (notes) as translatable text. If this option 
+is not set, notes are not extracted.</p>
+<p><cite>Extract references</cite> -- Set this option to extract the content of
+<code>&lt;text:bookmark-ref&gt;</code> elements. the content of these element is only 
+a copy of the content of the referent. It is updated automatically within 
+OpenOffice, so any translation done for these content will be automatically 
+overwritten as soon as the document is updated. However, in some cases it may be 
+useful to be able to have the referenced text as part of the segment where it is 
+inserted.</p>
+<h2><a name="knownIssues"></a>Known Issues</h2>
+<p>This filter has several know issues:</p>
+<ul>
+	<li>Some deleted text may get extracted. Make sure you have accepted or 
+	rejected the revisions changes before processing the input document, as 
+	currently some text marked as deleted is still extracted.</li>
+	<li>The options to extract or not the notes and the references is not 
+	working yet. They wll be extracted regardless of the option settings.</li>
+	<li>Sequential tabs may get reduced to a single tab during an extraction and 
+	merge round trip: The elements for spaces and tabs are supported in output 
+	but still incorrectly handled on input.</li>
+</ul>
+<p>Please, report any other issues to the
+<a href="http://code.google.com/p/okapi/issues/list">Issues List of the project</a>.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

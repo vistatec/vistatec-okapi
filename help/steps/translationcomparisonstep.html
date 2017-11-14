@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Translation Comparison</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Translation Comparison Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Translation_Comparison_Step">http://okapiframework.org/wiki/index.php?title=Translation_Comparison_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step compares the translation between two (or three) documents.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+<p>The input is two or three documents, the first document contains the base 
+translations, the second one (and optionally the third one, contain the translations to compare to the base translations. The 
+input 
+documents <b>must have the same number of text units</b> and the <b>text units must be in the same 
+order</b> (but you can have different events between text units).</p>
+<p>For each entry the step compares the translated texts and calculates a 
+score that measures how similar the text of the second document (and optionally 
+the third one) is to the 
+text of the baseline translation. The score is a number between 0 and 100. The 
+score is based on the <i>Levenstein distance</i> and additional processing. You 
+can find more information on that metric at
+<a href="http://www.merriampark.com/ld.htm">http://www.merriampark.com/ld.htm</a> 
+and <a href="http://en.wikipedia.org/wiki/Levenshtein_distance">
+http://en.wikipedia.org/wiki/Levenshtein_distance</a>.</p>
+<p>The utility outputs an HTML document for each input documents. The HTML
+document lists the source text, the translation text and the resulting scores. You can also generate a 
+TMX document containing the same information.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Generate output tables in HTML</cite> -- Set this option to create one 
+HTML file for each input document, where the results of the comparisons 
+are listed. The name of the HTML result file is the name of the first document to 
+compare with the base document, plus an <code>.html</code> extension.</p>
+<p><cite>Open the first HTML output after completion</cite> -- Set this option 
+to open the first HTML result file created when the process is completed.</p>
+<p><cite>Generate a TMX output document</cite> -- Set this option to create one 
+single TMX document that contains all the translations compared and their 
+scores, for all input documents.</p>
+<p>Enter the full path of the TMX document to generate.</p>
+<p><cite>Suffix for the target language code of the document 2</cite> -- Enter the suffix 
+to append to the target language code for the second set of target entries. For 
+example, enter <code>-mt</code> to indicate that the second target language is a 
+machine-translation generated text. If you do not enter a suffix, the language 
+code for both target entries will be the same and the TMX document will include 
+only the last one.</p>
+<p><cite>Suffix for the target language code of the document 3</cite> -- Enter 
+the suffix to append to the target language code for the third set of target 
+entries.</p>
+<p><cite>Label for the document 1</cite> -- Enter an optional label that is used 
+in the report to label the base translation.</p>
+<p><cite>Label for the document 2</cite> -- Enter an optional label that is used 
+in the report to label the second translation.</p>
+<p><cite>Label for the document 3</cite> -- Enter an optional label that is used 
+in the report to label the optional third translation.</p>
+<p><cite>Take into account case differences</cite> -- Set this option to take 
+into account case differences when calculating the scores.</p>
+<p><cite>Take into account white-space differences</cite> -- Set this option to 
+take into account white-space differences when calculating the scores.</p>
+<p><cite>Take into account punctuation differences</cite> -- Set this option to 
+take into account punctuation differences when calculating the scores.</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+config:
+  title: "My Rails Website"
+config2:
+  - test1
+  - test2

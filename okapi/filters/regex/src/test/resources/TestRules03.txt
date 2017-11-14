@@ -1,0 +1,17 @@
+#_skip 
+[ID1]	Text of ID1, no extraction if locDir on
+[ID2]	Text of ID2
+#_bskip
+[ID3]	Text of ID3, no extraction if locDir on
+[ID4]	Text of ID4, no extraction if locDir on
+#_btext
+[ID5]	Text of ID5
+#_skip
+[ID6]	Text of ID6, no extraction if locDir on
+[ID7]	Text of ID7
+#_etext
+[ID8]	Text of ID8, no extraction if locDir on
+#_text
+[ID8]	Text of ID8
+#_eskip
+[ID9]	Text of ID0

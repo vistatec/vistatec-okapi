@@ -1,0 +1,5 @@
+assumeWellformed: false
+preserve_whitespace: false
+elements:
+  あか:
+    ruleTypes: [ATTRIBUTES_ONLY]

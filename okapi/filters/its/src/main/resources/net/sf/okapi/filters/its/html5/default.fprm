@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Default rules for HTML5 -->
+<!-- All configurations to use with the HTML5+ITS filter MUST map 'h' to the HTML namespace. -->
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="2.0"
+ xmlns:h="http://www.w3.org/1999/xhtml">
+ 
+ <!-- Inline elements
+ <its:withinTextRule withinText="yes"
+  selector="//h:abbr | //h:acronym | //h:br | //h:cite | //h:code | //h:dfn
+  | //h:kbd | //h:q | //h:samp | //h:span | //h:strong | //h:var | //h:b | //h:em
+  | //h:big | //h:hr | //h:i | //h:small | //h:sub | //h:sup | //h:tt | //h:del
+  | //h:ins | //h:bdo | //h:img | //h:a | //h:font | //h:center | //h:s | //h:strike
+  | //h:u | //h:isindex" />
+  -->
+  
+ <!-- Non-translatable elements -->
+ <its:translateRule selector="//h:script|//h:style" translate="no"/>
+ 
+ <its:translateRule selector="//h:del" translate="no"/>
+ <its:translateRule selector="//h:del/descendant-or-self::*/@*" translate="no"/>
+ 
+ <!-- Translatable attribute -->
+ <its:translateRule selector="//h:*/@abbr|//h:*/@alt|//h:*/@prompt|//h:*/@standby|//h:*/@summary|//h:*/@title" translate="yes"/>
+ 
+ <its:translateRule selector="//h:meta[@name='keywords']/@content" translate="yes"/>
+ <its:translateRule selector="//h:meta[@name='description']/@content" translate="yes"/>
+		     
+ <!-- Attributes for the input element -->
+ <its:translateRule selector="//h:input/@value" translate="yes"/>
+ <its:translateRule selector="//h:input[@type='hidden']/@value" translate="no"/>
+ 
+ <!-- Bidirectional information. Note: No direct support for 'auto' value -->
+ <its:dirRule selector="//h:*[@dir='ltr']" dir="ltr"/>
+ <its:dirRule selector="//h:*[@dir='rtl']" dir="rtl"/>
+ <its:dirRule selector="//h:bdo[@dir='ltr']" dir="lro"/>
+ <its:dirRule selector="//h:bdo[@dir='rtl']" dir="rlo"/>
+
+ <!-- Note: dfn and dt don't match exactly the Terminology data category -->
+  
+ <!-- Id Value -->
+ <its:idValueRule selector="//h:*[@id]" idValue="@id"/>
+ 
+ <!-- Preserve space -->
+ <its:preserveSpaceRule selector="//h:pre|//h:textarea" space="preserve"/>
+ 
+ <!-- Domain -->
+ <its:domainRule selector="/h:html"
+ 	domainPointer="/h:html/h:head/h:meta[@name='dcterms.subject' or @name='keywords']/@content"/>
+
+</its:rules>

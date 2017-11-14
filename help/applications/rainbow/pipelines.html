@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rainbow - Pipelines</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Rainbow</h1>
+		<h2 class="head2">Pipelines</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<ul>
+	<li><a href="#Overview">Overview</a></li>
+	<li><a href="#BasicDocDriven">Basic Raw Document-Base Pipeline</a></li>
+	<li><a href="#Complex">Complex Pipelines</a></li>
+	<li><a href="#FAQ">Frequently Asked Questions</a></li>
+</ul>
+<h2><a name="Overview"></a>Overview</h2>
+<p>A pipeline is a customizable set of steps that takes the input documents 
+provided in the input lists of Rainbow and execute each step in sequential 
+order.</p>
+<p>A step is a small component that takes a specific input (e.g a raw 
+document), perform a specific 
+task (e.g. parse the document extract text units out of it) on it and send a specific output 
+(e.g. filter events) to the next step in the pipeline.</p>
+<p>The Okapi distribution comes with a set of <a href="../../steps/index.html">
+pre-existing steps you can use right out of the box</a>, and you may have 
+additional plugin steps as well.</p>
+<p>The steps communicate through their input and output. There are two main 
+types of input and output:</p>
+<ol>
+	<li>Raw document, which is simply a file.</li>
+	<li>Filter events, which are the content of a raw document broken down into 
+	standardized parts that include text units, start and end group, etc.</li>
+</ol>
+<p>Any step that takes a raw document as input can be placed at the front of the 
+pipeline or after any step that outputs a raw document. Any setp that takes 
+filter events as input needs to be placed after a step that outputs filter 
+events.</p>
+<p>The step <b>Raw Document to Filter Events</b> is the normal way to get a filter 
+events output from a raw document input. And the step <b>Filter Events to Raw 
+Document</b> provides a way to create a raw document from an input of filter 
+events, in the format of the original raw document. So, to simply extract and 
+merge an input file, without doing anything special to it, the pipeline would be 
+made of:</p>
+<ol>
+	<li>raw document ==&gt; <b>Raw Document to Filter Events</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Filter Events to Raw Document</b> ==&gt; raw document</li>
+</ol>
+<p>To perform any kind of action that modify the extracted content, you simply 
+add the necessary step or steps between those two. For example, imgine that you 
+would want to make sure the Japanese text of a file uses full-width characters 
+and never half-width ones, you would use the <b>Full-Width Conversion</b> step that 
+allows you to convert the extacted text from half-width characters to full-width 
+characters. You would have the following pipeline:</p>
+<ol>
+	<li>raw document ==&gt; <b>Raw Document to Filter Events</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Full-Width Conversion</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Filter Events to Raw Document</b> ==&gt; raw document</li>
+</ol>
+<p>Any number of steps could be added between the extraction and the merging, 
+allowing you to perform several tasks in a single process.</p>
+<h2><a name="BasicDocDriven"></a>Basic Raw Document-Base Pipeline</h2>
+<p>Not all steps require filter events. Some steps take a raw document and output a raw document, for example when they perform tasks on the fille as a whole 
+rather than its translatable text.</p>
+<p>For example, the step <b>Encoding Conversion</b> reads a text file (without 
+any filter) in a given encoding, and re-writes it in a different one. This step 
+can be used in a one-step pipeline:</p>
+<ol>
+	<li>raw document ==&gt; <b>Encoding Conversion</b> ==&gt; raw document</li>
+</ol>
+<p>Note that a few steps, such as <b>Search And Replace</b>, can take either a raw document 
+or filter events as input and output either as well, depending on the step&#39;s 
+options.</p>
+<h2><a name="Complex"></a>Complex Pipelines</h2>
+<p>The real power of pipelines really comes to light when you chain multiple 
+steps without having to re-extract the text, or perform different raw-document 
+taks one after the other automatically. You can also change the type of 
+input/output several times in a single pipeline. For example, you could convert 
+the content of an input document to full-width Japanese characters, then make 
+sure its encoding&nbsp; is Shift-JIS, and then make sure all line-breaks are 
+Unix line-breaks.</p>
+<ol>
+	<li>raw document ==&gt; <b>Raw Document to Filter Events</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Full-Width Conversion</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Filter Events to Raw Document</b> ==&gt; raw document</li>
+	<li>raw document ==&gt; <b>Encoding Conversion</b> ==&gt; raw document</li>
+	<li>raw document ==&gt; <b>Line-Break Conversion</b> ==&gt; raw document</li>
+</ol>
+<p>You can even add more steps to this pipeline that would go back to act on 
+filter events. For example, to do a last search and replace on a specific 
+pattern only inside the extracted text:</p>
+<ol>
+	<li>raw document ==&gt; <b>Raw Document to Filter Events</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Full-Width Conversion</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Filter Events to Raw Document</b> ==&gt; raw document</li>
+	<li>raw document ==&gt; <b>Encoding Conversion</b> ==&gt; raw document</li>
+	<li>raw document ==&gt; <b>Line-Break Conversion</b> ==&gt; raw document</li>
+	<li>raw document ==&gt; <b>Raw Document to Filter Events</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Search And Replace</b> ==&gt; filter events</li>
+	<li>filter events ==&gt; <b>Filter Events to Raw Document</b> ==&gt; raw document</li>
+</ol>
+<p>Note that some steps generate outputs that are not necessarily passed on to 
+the pipeline. For example, the <b>Used Character Listing</b> step generates one 
+output file that contains the list of all characters used in all the text unit 
+content of all the input files. It takes filter events as input and passes on 
+(un-modified) filter events as output.</p>
+<h2><a name="FAQ"></a>Frequently Asked Questions</h2>
+<p>Q: How do I specify what filter configuration to use with the <b>Raw Document to 
+Filter Events</b> step?<br>
+A: In the Rainbow <cite>Input List</cite> tabs, you associate one filter configuration per 
+input file.</p>
+<p>Q: How do I specify the name of the output file?<br>
+A: In the Rainbow&#39;s <cite>Other Settings</cite> tab, you can define the names and locations of all 
+the input files based on their input file paths.</p>
+<p>Q: How many steps can I chain together?<br>
+A: There is no specific limit to the number of steps in a pipeline, only the 
+available memory will limit what you can do (and pipeline definitions do not take up a lof 
+of memory).</p>
+<p>Q: What kind of file formats are supported?<br>
+A: It depends. Filter events are generated only for files associated with 
+filters, so to use a step that takes filter events, you must have a filter that 
+support the given input file format. Some other steps act directly on the raw 
+documents, often the only requirements for those is that they need to be 
+text-based files.</p>
+<p>&nbsp;</p>
+</body>
+</html>

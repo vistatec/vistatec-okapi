@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - Trados-Tagged RTF Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Trados-Tagged RTF Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#limitations">Limitations</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer's Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Trados-Tagged_RTF_Filter">http://okapiframework.org/wiki/index.php?title=Trados-Tagged_RTF_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The <a href="#tradosTaggedRTF">Trados-Tagged RTF</a> Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+RTF files prepared with the Trados translation layer of styles. The filter is implement in the class <code>
+net.sf.okapi.filters.rtf.RTFFilter</code> of the Okapi library.</p>
+<p>This is a filter for READING ONLY and supports only RTF files where inline 
+codes are represented with Trados styles (not RTF with &quot;normal&quot; formatting).</p>
+<h3><a name="tradosTaggedRTF"></a>Trados-Tagged RTF format</h3>
+<p>A Trados-Tagged RTF document is an RTF file that has special Trados styles 
+associated to different parts of the content and has segmentation markers.</p>
+<p>Note that a &quot;normal&quot; RTF file translated with Trados and showing segment is 
+not a full Trados-Tagged RTF because the formatting information are true RTF 
+codes rather than some code inside the text with the <code>tw4wInternal</code> 
+style. That is you see the selected text in bold rather than see the <code>&lt;b&gt;</code> 
+and <code>&lt;/b&gt;</code> tags. An example of Trados-Tagged RTF is an HTML document 
+where all the HTML tags are visible and are marked with either the <code>
+tw4wInternal</code> (red) or <code>tw4wExternal</code> (gray) style.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>The document has encoding information defined for each font in the 
+	document. The default encoding is also normally declared in the document.</li>
+	<li>If there is no default encoding declared, the encoding specified by the 
+	user is used as the default.</li>
+</ul>
+<h3>Segmentation</h3>
+<p>Only the text marked by the Trados segmentation markers is taken into 
+account. Any text outside the segments markers are ignored. </p>
+<p>he file may or may not contain translation.</p>
+
+<h2><a name="limitations"></a>Limitations</h2>
+<p>This is a READING ONLY filter. This filter does not generate an output 
+corresponding to the input. It must be used for input only.</p>
+
+<p>The filter understands <a href="#tradosTaggedRTF">only inline codes that are represented with Trados 
+styles</a> (not RTF with &quot;normal&quot; formatting).</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

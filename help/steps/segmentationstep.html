@@ -1,0 +1,80 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - segmentation</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Segmentation Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Segmentation_Step">http://okapiframework.org/wiki/index.php?title=Segmentation_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step segments the content of extracted text 
+units.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+<p>The separation between text units is based on the structure of the original 
+file format, for example the content of two <code>&lt;p&gt;</code> elements in HTML 
+gives you two text unit. This step allows you to break down the content of the 
+text units into smaller parts, usually corresponding to sentences.</p>
+<p>The segmentation is done using segmentation rules defined in a <b>SRX document</b>. 
+This step support SRX&nbsp;2.0. 
+The <a href="http://okapiframework.org/standards.html#srx">SRX (Segmentation 
+Rules eXchange) format</a> is a standard way of describing rules on how to break 
+text. It used regular expressions to specify patterns before and after a break 
+or a non-break position.</p>
+<p>Text units flagged as non-translatable are not segmented.</p>
+<p>Text units that are already segmented are not re-segmented.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Source</h3>
+<p><cite>Segment the source text using the following SRX rules</cite> -- Set 
+this option to segment the source text of the text units.</p>
+<p>Enter the full path of the SRX document to use for segmenting the source 
+text.&nbsp;You can use the variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Edit</cite> -- Click this button to open the SRX document in <b>Ratel</b>, 
+the SRX editor of the Okapi framework. Note that when when you exit the editor 
+the file being edited is set as the file to use.</p>
+<h3>Target</h3>
+<p><cite>Segment existing target text using the following SRX rules</cite> -- 
+Set this option to segment the target text of the text unit, if there is a text 
+for the target locale being processed.</p>
+<p>Enter the full path of the SRX document to use for segmenting the target 
+text. This can be the same document as for the rules for the source.&nbsp;You can use 
+the variable <code>${rootDir}</code> in the path.</p>
+<p><cite>Edit</cite> -- Click this button to open the SRX document in <b>Ratel</b>, 
+the SRX editor of the Okapi framework. Note that when when you exit the editor 
+the file being edited is set as the file to use.</p>
+<h3>Options</h3>
+<p><cite>Copy source into target if no target exists</cite> -- Set this option 
+to copy the source content into the target if no target is already available.</p>
+<p><cite>Verify that a target segment matches each source segment when a target 
+content exists</cite> -- Set this option to verify that, if there is a target 
+available, all the source segment have a corresponding target segment in the 
+target content. this laos verifies that both source and target have the same 
+number of segments. Note that this verification does not ensure the the content 
+of a target segment is the translation of its corresponding source text. It only 
+matches their segment ID.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

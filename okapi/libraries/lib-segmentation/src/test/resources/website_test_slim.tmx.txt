@@ -1,0 +1,219 @@
+Sample:
+title
+ASCII -- The American Standard Code for Information Interchange
+Introduction
+The ASCII code was the first 8-bit standard code that let characters - letters,numbers, punctuation, and other symbols - be represented by the same 8-bits on many different kinds of computers.
+It is limitted to the alphabet popular at the time in the USA but was adopted internationally( see ISO_Latin_1).
+Prior to ASCII each computer manufacturer tended to use their own code.
+IBM for example had EBCDIC.
+These might be ad hoc, based on pattern of holes punched on cards, based on the pattern of holes punched in paper tape, or the sequence of bits transmitted by teletypes on the Telex (telegram) network.
+ASCII is the code used on the Internet.
+In the 1990's a 16-bit code was developed that will handle alphabets of many nations.
+It contains the ASCII sequence.
+The new code is called UNICODE.
+The ASCII code includes control characters that do not print a character.
+These have a short standard name, a standard function plus a large number of non-standard applications.
+The original code was developed in the days of mechanical terminals such as Teletypes.
+The meaning of the control codes are defined in terms of typewriter like actions - Tab, ring bell, back-space, return, and line feed.
+A competent software engineer will know about the control codes; what they were designed to mean, and how they are used or mis-used in real systems.
+In many high level languages the ASCII characters are representable as a function, (eg Pascal - chr(i), C - (char)i, or Ada - CHAR'VAL(i) ) where "i" is an integer.
+Ada specifies a special standard package that defines ASCII with standard names for constants representing the coded character.
+In C they can be indicated by a backslash character (\) followed by either a special letter, or as a hexadecimal or octal number.
+The following dictionary defines the ASCII name, its position in the ASCII code, its original meaning, and Ada 83 symbol.
+Control characters
+ASCII::=
+Net{
+There are 128 ASCII codes numbered from 0 to 128. I will use the notation of
+character_nbr(i)
+to indicate the i'th ASCII character:
+character_nbr::0..127---char, -- The "---" indicates that there are precisely 128 standard characters that correspond, one-for-one, to their code numbers 0..127.
+$character_nbr(65)
+is "A".
+I use the C/C++ abbreviation to indicate the set of all ASCII codes:
+char::= character_nbr(0..127), --all the ASCII codes.
+CTRL_CHARS::=
+NUL::= character_nbr(0)::= <1>Fills in time* (ASCII'NUL)</1>.
+SOH::= character_nbr(1)::= <1>Start Of Header (routing info)(ASCII'SOH)</1>.
+STX::= character_nbr(2)::= <1>Start Of Text (end of header)(ASCII'STX)</1>.
+ETX::= character_nbr(3)::= <1>End Of Text(ASCII'ETX)</1>.
+EOT::= character_nbr(4)::= <1>End Of Transmission(ASCII'EOT)</1>.
+ENQ::= character_nbr(5)::= <1>ENQuiry, asking who is there(ASCII'ENQ)</1>.
+ACK::= character_nbr(6)::= <1>Receiver ACKnowledges positively(ASCII'ACK)</1>.
+bell::= BEL.
+BEL::= character_nbr(7)::= <1>Rings BELl or beeps(ASCII'BEL)\a</1>.
+backspace::= BS.
+BS::= character_nbr(8)::= <1>Move print head Back one Space(ASCII'BS)\b</1>.
+HT::= character_nbr(9)::= <1>Move to next Tab-stop(ASCII'HT)\t</1>.
+LF::= character_nbr(10)::= <1>Line Feed (ASCII'LF)\n</1>.
+VT::= character_nbr(11)::= <1>Vertical Tabulation(ASCII'VT)\v</1>.
+FF::= character_nbr(12)::= <1>Form Feed - skip to new page(ASCII'FF)\f</1>.
+CR::= character_nbr(13)::= <1>Carriage Return to left margin(ASCII'CR)\r</1>.
+SO::= character_nbr(14)::= <1>Shift Out of ASCII(ASCII'SO)</1>.
+SI::= character_nbr(15)::= <1>Shift into ASCII(ASCII'SI)</1>.
+DLE::= character_nbr(16)::= <1>Data Link Escape(ASCII'DLE)</1>.
+DC1::= character_nbr(17)::= <1>Device control(ASCII'DC1)</1>.
+DC2::= character_nbr(18)::= <1>Device control(ASCII'DC2)</1>.
+DC3::= character_nbr(19)::= <1>Device control(ASCII'DC3)</1>.
+DC4::= character_nbr(20)::= <1>Device control(ASCII'DC4)</1>.
+NAK::= character_nbr(21)::= <1>Negative Acknowledgment(ASCII'NAK)</1>.
+SYN::= character_nbr(22)::= <1>Sent in place of data to keep systems synchronized(ASCII'SYN)</1>.
+ETB::= character_nbr(23)::= <1>End of transmission block(ASCII'ETB)</1>.
+CAN::= character_nbr(24)::= <1>Cancel previous data(ASCII'CAN)</1>.
+EM::= character_nbr(25)::= <1>End of Medium(ASCII'EM)</1>.
+SUB::= character_nbr(26)::= <1>Substitute(ASCII'SUB)</1>.
+escape::= ESC.
+ESC::= character_nbr(27)::= <1>Escape to extended character set(ASCII'ESC)</1>.
+FS::= character_nbr(28)::= <1>File separator(ASCII'FS)</1>.
+GS::= character_nbr(29)::= <1>Group separator(ASCII'GS)</1>.
+RS::= character_nbr(30)::= <1>Record separator(ASCII'RS)</1>.
+US::= character_nbr(31)::= <1>Unit separator(ASCII'US)</1>.
+space::= SP.
+SP::= character_nbr(32)::= <1>Blank Space character(ASCII'SP)</1>.
+delete::= DEL.
+DEL::= character_nbr(127)::= <1>Punch out all bits on paper tape(delete)</1>.
+CTRL_CHARS.
+Normal Characters
+OTHER_CHARS::=
+The Ada standard defines a name for all printable characters.
+MATHS inherits these and adds some.
+Here are the standard MATHS names for the common characters in ASCII.
+exclam::= character_nbr(33)::="!".
+quotes::= character_nbr(34)::="\"".
+number::= hash.
+sharp::= hash.
+hash::= character_nbr(35)::="#", also called the "octothorpe".
+dollar::= character_nbr(36)::="$".
+per_cent::= character_nbr(37)::="%".
+ampersand::= character_nbr(38)::="&".
+apostrophe::= character_nbr(39)::="'".
+l_paren::= character_nbr(40)::="(".
+r_paren::= character_nbr(41)::=")".
+asterisk::= star, also known as "splat".
+star::= character_nbr(42)::="*".
+plus::= character_nbr(43)::="+", also called the "quadrathorpe".
+comma::= character_nbr(44)::=",".
+minus::= character_nbr(45)::="-".
+dot::= character_nbr(46)::=".", used as a decimal point and end of sentence in many cultures.
+divide::= slash.
+slash::= character_nbr(47)::="/".
+digits::= character_nbr(48)..character_nbr(57).
+colon::= character_nbr(58)::=":".
+semicolon::= character_nbr(59)::=";".
+less_than::= character_nbr(60)::="<".
+equal::= character_nbr(61)::="=".
+greater_than::= character_nbr(62)::=">".
+query::= character_nbr(63)::="?".
+at_sign::= character_nbr(64)::="@".
+upper_case_letters::=character_nbrs(65).. character_nbr(90).
+l_bracket::= character_nbr(91)::="[".
+backslash::= character_nbr(92)::="\".
+r_bracket::= character_nbr(93)::="]".
+caret::= circumflex.
+circumflex::= character_nbr(94)::="^".
+underscore::= character_nbr(95)::="_".
+grave::= reverse_quote.
+reverse_quote::= character_nbr(96)::="`".
+lower_case_letters::= character_nbr(97)..character_nbr(122).
+Corrected Tue Jul 29 2003 by jklipa of Hot Mail.
+l_brace::= character_nbr(123)::="{".
+bar::= character_nbr(124)::="|".
+r_brace::= character_nbr(125)::="}".
+tilde::= character_nbr(126)::="~".
+Character number 127 is the DEL control character.
+OTHER_CHARS.
+Note -- DISCONNECT and BREAK etc
+Notice that NO ASCII character sends a signal that terminates transmission.
+This is not a character.
+It is transmitted thru an RS232 cable by dropping the DTR line to the signal ground, or thru a modem by ceasing to send the carrier frequency for a fixed length of time.
+Some people call this a DISCONNECT and others call it BREAK (in my experience).
+NUL transmits a character (with all bits=0), DISCONNECT does not.
+Tom Zerucha (June 2009) notes that a BREAK -- in the sense of an attempt to interrupt a process.
+He writes
+A standard break, or "attention" is NOT dropping the DTR line or stopping the carrier which will normally DISCONNECT.
+A break is sent by holding down the tranmit data line to the state that would transmit a zero bit, causing a framing error.
+Normal ASCII is transmitted using a zero start-bit, data bits, optional parity bits, and a one for a stop bit.
+A break will look like a null (0x00) but not have any stop bit until the break is released.
+This would be an out-of-band signal, but the other lines including data terminal ready (DTR) would remain in their normal state for a connection.
+Most older systems also interpretted some of the control characters as an interupt.
+For example CTRL/C was commonly used.
+And on UNIXen CTRL/Z interupts a running program but suspends it.
+You can then use the UNIX commands like "kill" and UNIX shell commands like "bg" and "fg" to control the process.
+Whitespace
+whitespace::= whitespace_char #(whitespace_char).
+whitespace_char::= SP | CR | LF | HT | ...
+End of line strings
+EOLN::= <1>End Of Line string -- depends on the system you are using</1>.
+EOLN ==> ( CR | LF) #( CR | LF | HT | VT | ...).
+<e1/> [ 001319.html ] (Coding Horror on the the great line break schism).
+Periods and Decimal Points
+In COBOL and MATHS the "." character is both a punctuator and a decimal point.
+The following defines the cases when a "." is acting as a punctuator:
+period::="." whitespace,-- A dot followed by white space is treated as a period.
+Note that in Europe, a comma is used in numbers as the decimal point.
+Standard Character Sets
+char is the set of all ASCII characters.
+digit::="0".."9".
+See digits.
+letter::= upper_case_letter | l lower_case_letter.
+upper_case_letter::="A".."Z".
+See upper_case_letters:
+characters 65..90.
+lower_case_letter::="a".."z".
+See lower_case_letters:
+Useful mappings
+The upper and lower case letters have a traditional one-to-one correspondence:
+Upper   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Lower   abcdefghijklmnopqrstuvwxyz
+So subtracting 32 from the number of an lower-case character gives and upper-case character.
+The following define some maps that help to define the syntax of case insensitive languages.
+to_upper::lower_case---upper_case, this is a one-to-one map between the cases.
+For l:lower_case, to_upper(l)= character_nbr( l./character_nbr - 32 ).
+to_upper::char->char= to_upper |+> Id, extending to all ASCII characters.
+to_upper::#char->#char= ""+>"" |+> (1st;to_upper rest;to_upper), extending to strings of characters.
+to_upper("123abc+x/Z")= to_upper("1") to_upper("23abc+x/Z")="123ABC+X/Z".
+to_lower::upper_case---lower_case= /to_lower.
+to_lower::char->char= to_lower|+>Id.
+to_lower::#char->#char= ""+>"" |+> (1st;to_lower rest;to_lower).
+to_lower("123abc+x/Z")="123abc+x/z".
+Notice that to_lower and to_upper are not inverse function when applied to strings of mix-cased characters:
+to_upper(to_lower("aA"))="AA" <> "aA".
+The above maps were implemented in C and are now part of the C++ cctype [ c++.libraries.html#cctype ] library.
+ignore_case::char->@char=map[c:char]( to_lower(c) | to_upper(c) ).
+ignore_case("h") = "h" | "H".
+ignore_case::#char->@#char= ""+>{""} |+> (1st;ignore_case rest;ignore_case).
+ignore_case("href")=("h"|"H") ("r"|"R") ("e"|"E") ("f"|"F).
+equal_but_for_case::@(#char, #char), an equivalence relation on strings.
+equal_but_for_case = rel[x,y](to_upper(x)=to_upper(y)).
+( above)|- <1>"a1Z" equal_but_for_case "A1z".</1>
+ASCII.
+Extensions
+EXTENDED_ASCII::=following,
+Net
+On many modern computers ASCII treast the parity bit as data and so there are 256 different characters:
+character_nbr::0..255---extended_char, -- The "---" indicates that there are precisely 128 standard characters that correspond, one-for-one, to their code numbers.
+extended_char::= character_nbr(0..255).
+The standard ASCII code still work:
+(End of Net)
+See Also
+Information on ASCII [ ASCII ] [ ascii.html ] and other codes [ http://www.lookuptables.com/ ]
+Tables of ISO Latin 1 codes:
+ISO_Latin_1::= See http://www.bbsinc.com/symbol.html
+16-bit international code:
+UNICODE::= See http://www.csci.csusb.edu/dick/samples/glossary.html#UNICODE.
+Notes on special uses of special characters
+The following have been used to mark the end of a string:
+NUL, ESC, 2 ESCs, grave accent, apostrophe, quotation, EOLN, slash.
+The following have been used to indicate the end of input:
+EOT, SUB, 2 CRs
+The following have been used to kill or delete the previous character:
+DEL, BS, #.
+The following have been used to cancel the current line of input:
+DEL, NAK(^U), hash(#)
+On a network the special character take on yet more meanings.
+For example, commonly RS232 communications use DC3(^S) and DC1(^Q) to delay and restart data transmission (originally to allow data to be punched).
+In an X.25 packet switched network SI(^O) forces the data through the intervening machines and DLE(^P) allows you to send commands to your local "Pad".
+Proprietary networks often have a special 'escape' character as well.
+The following can allow a following control character to appear in text:
+SYN(^V),
+( end of section ASCII -- The American Standard Code for Information Interchange) <<Contents | End >>
+End

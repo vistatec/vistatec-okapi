@@ -1,0 +1,2 @@
+Code part "Text 1 to extract" code part
+"Text 2 to extract", "text 3 to extract", etc.

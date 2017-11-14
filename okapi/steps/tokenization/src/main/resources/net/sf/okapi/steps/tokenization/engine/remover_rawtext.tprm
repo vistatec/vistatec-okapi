@@ -1,0 +1,20 @@
+#v1
+RuleCount.i=2
+
+Rule0.name=RawtextCleaner
+Rule0.description=Removes occurrences of RAWTEXT from a list of tokens
+Rule0.inTokens=RAWTEXT
+Rule0.outTokens=
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=
+Rule0.languages=
+
+Rule1.name=ProtectedCleaner
+Rule1.description=Removes occurrences of PROTECTED from a list of tokens
+Rule1.inTokens=PROTECTED
+Rule1.outTokens=
+Rule1.userTokens=
+Rule1.lexemId.i=0
+Rule1.pattern=
+Rule1.languages=

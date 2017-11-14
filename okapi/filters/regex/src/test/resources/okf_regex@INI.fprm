@@ -1,0 +1,53 @@
+#v1
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+oneLevelGroups.b=true
+regexOptions.i=40
+mimeType=text/plain
+ruleCount.i=3
+rule0.ruleName=Comments
+rule0.ruleType.i=2
+rule0.expr=^;(.*?)$
+rule0.groupSource.i=1
+rule0.groupTarget.i=-1
+rule0.groupName.i=-1
+rule0.groupNote.i=-1
+rule0.preserveWS.b=true
+rule0.useCodeFinder.b=false
+rule0.sample=Not comment$0a$; This is a comment$0a$	; Annother comment$0a$
+rule0.codeFinderRules.count.i=0
+rule0.codeFinderRules.sample=
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false
+rule1.ruleName=Strings
+rule1.ruleType.i=1
+rule1.expr=^(.*?)(\s*?)=(\s*?)(.*?)$
+rule1.groupSource.i=4
+rule1.groupTarget.i=-1
+rule1.groupName.i=1
+rule1.groupNote.i=-1
+rule1.preserveWS.b=true
+rule1.useCodeFinder.b=true
+rule1.sample=Key1=Text1$0a$Key2   =   Text2$0a$
+rule1.codeFinderRules.count.i=3
+rule1.codeFinderRules.rule0=%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgCGpn]
+rule1.codeFinderRules.rule1=(\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v|\{\d.*?\}
+rule1.codeFinderRules.rule2=%\d
+rule1.codeFinderRules.sample=:%n%n%1%n%nexiste déjà. Souhaitez-vous installer dans ce dossier malgré tout ?$0a$
+rule1.codeFinderRules.useAllRulesWhenTesting.b=true
+rule2.ruleName=Group Markers
+rule2.ruleType.i=4
+rule2.expr=^\[(.*?)]$
+rule2.groupSource.i=0
+rule2.groupTarget.i=-1
+rule2.groupName.i=1
+rule2.groupNote.i=-1
+rule2.preserveWS.b=true
+rule2.useCodeFinder.b=false
+rule2.sample=[GroupName]$0a$Key=text
+rule2.codeFinderRules.count.i=0
+rule2.codeFinderRules.sample=
+rule2.codeFinderRules.useAllRulesWhenTesting.b=false

@@ -1,0 +1,6 @@
+# No-start words default list for English
+
+and
+in
+of
+or

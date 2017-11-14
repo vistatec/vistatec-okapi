@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="net.sf.okapi.steps.leveraging.LeveragingStep" creationtoolversion="1" segtype="sentence" o-tmf="undefined" adminlang="en" srclang="en-US" datatype="undefined"></header><body>
+<tu>
+<tuv xml:lang="en-US"><seg>A simple sentence with nothing special.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une phrase simple sans rien de spécial.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>A simple <bpt i="1" type="Xpt">&lt;b&gt;</bpt>sentence<ept i="1">&lt;/b&gt;</ept> with nothing special.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une <bpt i="1" type="bold">&lt;b&gt;</bpt>phrase<ept i="1">&lt;/b&gt;</ept> simple sans rien de spécial.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>A simple sentence with nothing special.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une phrase simple sans rien de spécial.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>Another sentence.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une autre phrase.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>Another sentence.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une phrase différente.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>A simple sentence with nothing special.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une phrase simple sans rien de spécial.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>Another sentence.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une autre phrase.</seg></tuv>
+</tu>
+<tu>
+<tuv xml:lang="en-US"><seg>Another sentence.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une phrase différente.</seg></tuv>
+</tu>
+</body>
+</tmx>

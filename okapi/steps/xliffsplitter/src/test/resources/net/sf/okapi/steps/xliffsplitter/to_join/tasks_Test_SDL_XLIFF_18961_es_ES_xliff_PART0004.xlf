@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:iws="http://www.idiominc.com/ws/asset" version="1.2"><iws:tm-attribute-metadata><iws:attribute-descr flags="2" name="_tm_created_by" ui_name="Created By" type="text" display_order="-6"></iws:attribute-descr><iws:attribute-descr flags="2" name="_tm_created_date" ui_name="Created On" type="date" display_order="-5"></iws:attribute-descr><iws:attribute-descr flags="2" name="_tm_modified_by" ui_name="Modified By" type="text" display_order="-4"></iws:attribute-descr><iws:attribute-descr flags="2" name="_tm_modified_date" ui_name="Modified On" type="date" display_order="-3"></iws:attribute-descr><iws:attribute-descr flags="2" name="_tm_sid" ui_name="SID" type="text" display_order="-2"></iws:attribute-descr><iws:attribute-descr flags="2" name="_tm_import_job" ui_name="Import Job Id" type="integer" display_order="-1"></iws:attribute-descr><iws:attribute-descr flags="8" name="_tm_entry_comment" ui_name="Comment" type="large-text-area" display_order="1"></iws:attribute-descr></iws:tm-attribute-metadata><iws:project-attribute-metadata><iws:attribute-descr flags="2" name="#project_name#" ui_name="Project Name" type="text" display_order="-3"></iws:attribute-descr><iws:attribute-descr flags="2" name="#project_descr#" ui_name="Project Description" type="text" display_order="-2"></iws:attribute-descr><iws:attribute-descr flags="2" name="#project_id#" ui_name="Project Id" type="integer" display_order="-1"></iws:attribute-descr><iws:attribute-descr flags="12" name="apiCommunityProject" ui_name="Community Project" type="selector" display_order="1"><iws:attr-option name="False"></iws:attr-option><iws:attr-option name="True"></iws:attr-option></iws:attribute-descr><iws:attribute-descr flags="12" name="apiCustomerEmail" ui_name="Customer Emails" type="text-area" display_order="1"></iws:attribute-descr><iws:attribute-descr flags="8" name="apiEmailSubjectPrefix" ui_name="Email Subject Prefix" type="text" display_order="1"></iws:attribute-descr></iws:project-attribute-metadata><iws:project-attributes><iws:attribute name="apiCommunityProject">False</iws:attribute><iws:attribute name="apiCustomerEmail">hargraveje@ldschurch.org</iws:attribute><iws:attribute name="apiEmailSubjectPrefix">LT</iws:attribute><iws:attribute name="#project_name#">Test SDL XLIFF</iws:attribute><iws:attribute name="#project_descr#">Test SDL Xliff</iws:attribute><iws:attribute name="#project_id#">18961</iws:attribute></iws:project-attributes><iws:quality-model></iws:quality-model><iws:project-ais-property-metadata></iws:project-ais-property-metadata><iws:scoping-configuration name="WorldServer default configuration"><iws:scoping-range start="0" end="60"></iws:scoping-range><iws:scoping-range start="60" end="70"></iws:scoping-range><iws:scoping-range start="70" end="80"></iws:scoping-range><iws:scoping-range start="80" end="90"></iws:scoping-range><iws:scoping-range start="90" end="100"></iws:scoping-range></iws:scoping-configuration><iws:dwb-project-info session_fingerprint="Oc/NzoijBYfN2C7T89GYM8sgQdU=" session_id="1431505993" project_name="Test SDL XLIFF_es_20100927_160121" live_tm="false" ws_url="http://chqpvuw2095.ldschurch.org/ws" instance_id="-1431270263"></iws:dwb-project-info><iws:extension-level version="000001"></iws:extension-level><file content="gen" xml:space="default" build-num="38" tool="Idiom WorldServer 9.0.5" source-language="en" target-language="es" original="/Worldserver Projects/TEST/yyyyyyy/Source/d_Lux_MediaArts.htm" datatype="x-text/html"><header><phase-group><phase phase-name="Translate (7)" contact-name="Jim Hargrave" process-name="Filesystem (Default)" date="2010-09-27T22:16:47Z" contact-email="HargraveJE@ldschurch.org" company-name="lds"></phase></phase-group><count-group name="Total Word Count"><count count-type="total">133</count></count-group><glossary><external-file href="terminology_data.tbx"></external-file></glossary><iws:split-merge disable="false"></iws:split-merge><iws:merge-across-markup disable="true"></iws:merge-across-markup><iws:create-background-job disable="false"></iws:create-background-job><iws:create-foreground-job disable="false"></iws:create-foreground-job><iws:asset-data><iws:seg_asset_id>172266</iws:seg_asset_id><iws:task_id>175907</iws:task_id><iws:display_task_id>5</iws:display_task_id><iws:ais_src_path>/Worldserver Projects/TEST/yyyyyyy/Source/d_Lux_MediaArts.htm</iws:ais_src_path><iws:src_fingerprint>pN0QDDT8wZZ9/dIM1iY2qhCMTd8=</iws:src_fingerprint><iws:ais_tgt_path>/Worldserver Projects/TEST/yyyyyyy/Target Languages/002_Spanish/Translations/d_Lux_MediaArts.htm</iws:ais_tgt_path><iws:tgt_fingerprint>WkehNPepvhuHx9C8vWsArJou47U=</iws:tgt_fingerprint><iws:steplock>None</iws:steplock><iws:steptype>Translate</iws:steptype><iws:source_lang_id>9</iws:source_lang_id><iws:target_lang_id>10</iws:target_lang_id><iws:show_markup>true</iws:show_markup><iws:tm_id>1017</iws:tm_id><iws:tm_name>Test+</iws:tm_name><iws:tm_group><iws:tm name="Test" penalty="0.0"></iws:tm><iws:tm name="FCH Indexing" penalty="0.0"></iws:tm></iws:tm_group><iws:asset-encoding source="UTF8" target="UTF8"></iws:asset-encoding><iws:asset-properties></iws:asset-properties></iws:asset-data><iws:TM-Weights><iws:tm_score_number_weight weight="0.2"></iws:tm_score_number_weight><iws:tm_score_outer_placeholder_weight weight="0.1"></iws:tm_score_outer_placeholder_weight><iws:tm_score_inner_placeholder_weight weight="0.25"></iws:tm_score_inner_placeholder_weight></iws:TM-Weights><iws:TM-Penalties><iws:tm_score_capitalization_penalty penalty="0.01"></iws:tm_score_capitalization_penalty><iws:tm_score_punctuation_penalty penalty="0.0050"></iws:tm_score_punctuation_penalty><iws:tm_score_placeholder_sequence_penalty penalty="0.01"></iws:tm_score_placeholder_sequence_penalty><iws:tm_score_maximum_target_length_penalty penalty="0.01"></iws:tm_score_maximum_target_length_penalty><iws:tm_score_number_difference_penalty penalty="0.2"></iws:tm_score_number_difference_penalty><iws:tm_score_asset_mismatch_penalty penalty="0.0"></iws:tm_score_asset_mismatch_penalty><iws:tm_score_metadata_mismatch_penalty penalty="0.0"></iws:tm_score_metadata_mismatch_penalty><iws:tm_score_multiple_exact_match_penalty penalty="0.0"></iws:tm_score_multiple_exact_match_penalty><iws:tm_score_whitespace_difference_penalty penalty="0.0"></iws:tm_score_whitespace_difference_penalty><iws:tm_score_unreviewed_match_penalty penalty="0.0"></iws:tm_score_unreviewed_match_penalty><iws:tm_score_reverse_leverage_penalty penalty="0.0"></iws:tm_score_reverse_leverage_penalty></iws:TM-Penalties><iws:update-translation-memory-setting update="true" default="false"></iws:update-translation-memory-setting><iws:exclude_segment_filter type="None"></iws:exclude_segment_filter><iws:treat-whitespace-as-significant significant="false"></iws:treat-whitespace-as-significant><iws:comment-on-locked-segments disable="false"></iws:comment-on-locked-segments></header><body><trans-unit id="0000000002" datatype="x-text/html" restype="string"><source>d/Lux/MediaArts</source><target></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:boundary-seg ais-tgt-path="/Worldserver Projects/TEST/yyyyyyy/Target Languages/002_Spanish/Translations/d_Lux_MediaArts.htm" sequence="bs333918" datatype="x-text/html" ais-src-path="/Worldserver Projects/TEST/yyyyyyy/Source/d_Lux_MediaArts.htm" seg_doc_id="333918"></iws:boundary-seg><iws:markup-seg sequence="0000000001">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xml:lang="en-gb" xmlns="http://www.w3.org/1999/xhtml" lang="en-gb"&gt;&lt;head&gt;
+
+	
+		  &lt;!-- base href="http://www.dlux.org.au/cms/" --&gt;
+  &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+  &lt;meta name="robots" content="index, follow"&gt;
+  &lt;meta name="keywords" content="d/lux/mediaarts, new media, digital arts, video art, gps, locative media"&gt;
+  &lt;meta name="description" content="d/Lux/MediaArts - one of Australia's key digital arts and media organisations"&gt;
+  
+  &lt;title&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000004" datatype="x-text/html" restype="string"><source><ph id="1" x="&lt;a href=&quot;http://www.dlux.org.au/cms/&quot;&gt;">{1}</ph><ph id="2" x="&lt;span&gt;">{2}</ph>Home<ph id="3" x="&lt;/span&gt;">{3}</ph><ph id="4" x="&lt;/a&gt;">{4}</ph></source><target><ph id="1" x="&lt;a href=&quot;http://www.dlux.org.au/cms/&quot;&gt;">{1}</ph><ph id="2" x="&lt;span&gt;">{2}</ph><ph id="3" x="&lt;/span&gt;">{3}</ph><ph id="4" x="&lt;/a&gt;">{4}</ph></target><iws:segment-metadata ws_word_count="1" tm_score="71.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000003">&lt;/title&gt;
+  &lt;link href="http://www.dlux.org.au/cms/index.php?/feed/rss.html" rel="alternate" type="application/rss+xml" title="RSS 2.0"&gt;
+  &lt;link href="http://www.dlux.org.au/cms/index.php?/feed/atom.html" rel="alternate" type="application/atom+xml" title="Atom 1.0"&gt;
+  &lt;script type="text/javascript" src="d_Lux_MediaArts_files/mootools.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="d_Lux_MediaArts_files/caption.js"&gt;&lt;/script&gt;
+
+		
+&lt;link rel="shortcut icon" href="http://www.dlux.org.au/cms/images/favicon.ico"&gt;
+&lt;link href="d_Lux_MediaArts_files/template.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/style1.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/rokmininews.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/typography.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/system.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/general.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="d_Lux_MediaArts_files/rokmoomenu.css" rel="stylesheet" type="text/css"&gt;
+&lt;style type="text/css"&gt;
+	div.wrapper,#main-body-bg { margin: 0 auto; width: 958px;padding:0;background:#fff url('/cms/templates/rt_mixxmag_j15/images/pagebg.png') repeat-y scroll 50%;}
+	#leftcol { width:0px;padding:0;}
+	#rightcol { width:260px;padding:0;}
+	#inset-block-left { width:0px;padding:0;}
+	#inset-block-right { width:0px;padding:0;}
+	#maincontent-block { margin-right:0px;margin-left:0px;padding:0;}
+&lt;/style&gt;	
+&lt;script type="text/javascript" src="d_Lux_MediaArts_files/rokutils.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="d_Lux_MediaArts_files/rokmoomenu.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="d_Lux_MediaArts_files/mootools_002.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+window.addEvent('domready', function() {
+	new Rokmoomenu($E('ul.menutop '), {
+		bgiframe: false,
+		delay: 500,
+		animate: {
+			props: ['height'],
+			opts: {
+				duration: 600,
+				fps: 200,
+				transition: Fx.Transitions.Sine.easeOut			}
+		},
+		bg: {
+			enabled: false,
+			overEffect: {
+				duration: 100,
+				transition: Fx.Transitions.Expo.easeOut			},
+			outEffect: {
+				duration: 800,
+				transition: Fx.Transitions.Sine.easeOut			}
+		},
+		submenus: {
+			enabled: true,
+			overEffect: {
+				duration: 50,
+				transition: Fx.Transitions.Expo.easeOut			},
+			outEffect: {
+				duration: 600,
+				transition: Fx.Transitions.Sine.easeIn			},
+			offsets: {
+				top: 5,
+				right: 15,
+				bottom: 5,
+				left: 5			}
+		}
+	});
+});
+&lt;/script&gt;
+	&lt;meta http-equiv="Content-Language" content="en"&gt;&lt;script charset="utf-8" id="injection_graph_func" src="d_Lux_MediaArts_files/injection_graph_func.js"&gt;&lt;/script&gt;&lt;script id="_nameHighlight_injection"&gt;&lt;/script&gt;&lt;link class="skype_name_highlight_style" href="d_Lux_MediaArts_files/injection_nh_graph.css" type="text/css" rel="stylesheet" charset="utf-8" id="_injection_graph_nh_css"&gt;&lt;link href="d_Lux_MediaArts_files/skypeplugin_dropdownmenu.css" type="text/css" rel="stylesheet" charset="utf-8" id="_skypeplugin_dropdownmenu_css"&gt;&lt;/head&gt;&lt;body id="ff-helveticaneue" class="f-default style1 iehandle"&gt;
+		&lt;div id="page-bg"&gt;
+			&lt;!--Begin Top Header Bar--&gt;
+			&lt;div id="top-bar" class="png"&gt;
+				&lt;div class="wrapper2"&gt;
+										             					&lt;a href="http://www.dlux.org.au/cms" class="nounder"&gt;&lt;img src="d_Lux_MediaArts_files/blank.gif" alt="" id="logo" border="0"&gt;&lt;/a&gt;
+															&lt;div class="right-module-block"&gt;
+						
+					&lt;/div&gt;
+									&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!--End Top Header Bar--&gt;
+			&lt;div class="wrapper"&gt;&lt;div class="side-shadow-l png"&gt;&lt;div class="side-shadow-r png"&gt;
+			&lt;!--Begin Main Header--&gt;
+			&lt;div id="top-divider" class="png"&gt;&lt;/div&gt;
+			&lt;div id="main-header"&gt;
+				&lt;!--				&lt;div id="logo-bg-area"&gt;&lt;/div&gt;
+				&lt;div id="logo-surround"&gt;&lt;div id="logo-banner"&gt;&lt;div id="logo-banner2" class="png"&gt;&lt;div id="logo-banner3"&gt;
+					&lt;a href="/cms" class="nounder"&gt;&lt;img src="/cms/templates/rt_mixxmag_j15/images/blank.gif" border="0" alt="logo" id="logo" /&gt;&lt;/a&gt;
+				&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; 
+				--&gt;			    
+				
+								&lt;div id="horiz-menu" class="moomenu"&gt;
+					&lt;div class="wrapper"&gt;
+											&lt;ul class="menutop"&gt;&lt;li id="current" class="active item1"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000006" datatype="x-text/html" restype="string"><source><ph id="5" x="&lt;span class=&quot;separator topdaddy&quot;&gt;">{5}</ph><ph id="6" x="&lt;span&gt;">{6}</ph>Program<ph id="7" x="&lt;/span&gt;">{7}</ph><ph id="8" x="&lt;/span&gt;">{8}</ph></source><target><ph id="5" x="&lt;span class=&quot;separator topdaddy&quot;&gt;">{5}</ph><ph id="6" x="&lt;span&gt;">{6}</ph><ph id="7" x="&lt;/span&gt;">{7}</ph><ph id="8" x="&lt;/span&gt;">{8}</ph></target><iws:segment-metadata ws_word_count="1" tm_score="70.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000005">&lt;/li&gt;&lt;li class="parent item2"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000008" datatype="x-text/html" restype="string"><source><ph id="9" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/&quot;&gt;">{9}</ph><ph id="10" x="&lt;span&gt;">{10}</ph>Touring Media Exhibitions<ph id="11" x="&lt;/span&gt;">{11}</ph><ph id="12" x="&lt;/a&gt;">{12}</ph></source><target><ph id="9" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/&quot;&gt;">{9}</ph><ph id="10" x="&lt;span&gt;">{10}</ph><ph id="11" x="&lt;/span&gt;">{11}</ph><ph id="12" x="&lt;/a&gt;">{12}</ph></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000007">&lt;ul&gt;&lt;li class="item3"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000010" datatype="x-text/html" restype="string"><source><ph id="13" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dlux-mobile/&quot;&gt;">{13}</ph><ph id="14" x="&lt;span&gt;">{14}</ph>d/Lux Mobile<ph id="15" x="&lt;/span&gt;">{15}</ph><ph id="16" x="&lt;/a&gt;">{16}</ph></source><target><ph id="13" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dlux-mobile/&quot;&gt;">{13}</ph><ph id="14" x="&lt;span&gt;">{14}</ph><ph id="15" x="&lt;/span&gt;">{15}</ph><ph id="16" x="&lt;/a&gt;">{16}</ph></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000009">&lt;div style="width: 162px; height: 23px; position: absolute; top: 5px; left: 5px; visibility: hidden; opacity: 0;" class="submenu-animation-left"&gt;&lt;div class="submenu-animation-right"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class="item9"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000012" datatype="x-text/html" restype="string"><source><ph id="17" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/other/&quot;&gt;">{17}</ph><ph id="18" x="&lt;span&gt;">{18}</ph>Other Projects<ph id="19" x="&lt;/span&gt;">{19}</ph><ph id="20" x="&lt;/a&gt;">{20}</ph></source><target><ph id="17" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/other/&quot;&gt;">{17}</ph><ph id="18" x="&lt;span&gt;">{18}</ph><ph id="19" x="&lt;/span&gt;">{19}</ph><ph id="20" x="&lt;/a&gt;">{20}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="41.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000011">&lt;div style="width: 162px; height: 23px; position: absolute; top: 5px; left: 5px; visibility: hidden; opacity: 0;" class="submenu-animation-left"&gt;&lt;div class="submenu-animation-right"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class="item27"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000014" datatype="x-text/html" restype="string"><source><ph id="21" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/recent/&quot;&gt;">{21}</ph><ph id="22" x="&lt;span&gt;">{22}</ph>Recent programs<ph id="23" x="&lt;/span&gt;">{23}</ph><ph id="24" x="&lt;/a&gt;">{24}</ph></source><target><ph id="21" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/recent/&quot;&gt;">{21}</ph><ph id="22" x="&lt;span&gt;">{22}</ph><ph id="23" x="&lt;/span&gt;">{23}</ph><ph id="24" x="&lt;/a&gt;">{24}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000013">&lt;div style="width: 162px; height: 23px; position: absolute; top: 5px; left: 5px; visibility: hidden; opacity: 0;" class="submenu-animation-left"&gt;&lt;div class="submenu-animation-right"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class="item21"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000016" datatype="x-text/html" restype="string"><source><ph id="25" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/Publications/&quot;&gt;">{25}</ph><ph id="26" x="&lt;span&gt;">{26}</ph>Publications<ph id="27" x="&lt;/span&gt;">{27}</ph><ph id="28" x="&lt;/a&gt;">{28}</ph></source><target><ph id="25" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/Publications/&quot;&gt;">{25}</ph><ph id="26" x="&lt;span&gt;">{26}</ph><ph id="27" x="&lt;/span&gt;">{27}</ph><ph id="28" x="&lt;/a&gt;">{28}</ph></target><iws:segment-metadata ws_word_count="1" tm_score="70.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000015">&lt;div style="width: 162px; height: 23px; position: absolute; top: 5px; left: 5px; visibility: hidden; opacity: 0;" class="submenu-animation-left"&gt;&lt;div class="submenu-animation-right"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class="item6"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000018" datatype="x-text/html" restype="string"><source><ph id="29" x="&lt;span class=&quot;separator topdaddy&quot;&gt;">{29}</ph><ph id="30" x="&lt;span&gt;">{30}</ph>Resources<ph id="31" x="&lt;/span&gt;">{31}</ph><ph id="32" x="&lt;/span&gt;">{32}</ph></source><target><ph id="29" x="&lt;span class=&quot;separator topdaddy&quot;&gt;">{29}</ph><ph id="30" x="&lt;span&gt;">{30}</ph><ph id="31" x="&lt;/span&gt;">{31}</ph><ph id="32" x="&lt;/span&gt;">{32}</ph></target><iws:segment-metadata ws_word_count="1" tm_score="43.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000017">&lt;/li&gt;&lt;li class="parent item11"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000020" datatype="x-text/html" restype="string"><source><ph id="33" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/Info/gallery-and-museums-new-media-resources.html&quot;&gt;">{33}</ph><ph id="34" x="&lt;span&gt;">{34}</ph>For galleries<ph id="35" x="&lt;/span&gt;">{35}</ph><ph id="36" x="&lt;/a&gt;">{36}</ph></source><target><ph id="33" x="&lt;a style=&quot;position: relative;&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/Info/gallery-and-museums-new-media-resources.html&quot;&gt;">{33}</ph><ph id="34" x="&lt;span&gt;">{34}</ph><ph id="35" x="&lt;/span&gt;">{35}</ph><ph id="36" x="&lt;/a&gt;">{36}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="41.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000019">&lt;ul&gt;&lt;li class="item12"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000022" datatype="x-text/html" restype="string"><source><ph id="37" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/d/Archive.html&quot;&gt;">{37}</ph><ph id="38" x="&lt;span&gt;">{38}</ph>d/Archive<ph id="39" x="&lt;/span&gt;">{39}</ph><ph id="40" x="&lt;/a&gt;">{40}</ph></source><target><ph id="37" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/d/Archive.html&quot;&gt;">{37}</ph><ph id="38" x="&lt;span&gt;">{38}</ph><ph id="39" x="&lt;/span&gt;">{39}</ph><ph id="40" x="&lt;/a&gt;">{40}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="41.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000021">&lt;div style="width: 162px; height: 23px; position: absolute; top: 5px; left: 5px; visibility: hidden; opacity: 0;" class="submenu-animation-left"&gt;&lt;div class="submenu-animation-right"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class="item4"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000024" datatype="x-text/html" restype="string"><source><ph id="41" x="&lt;a href=&quot;http://dlux.org.au/news&quot; target=&quot;_blank&quot;&gt;">{41}</ph><ph id="42" x="&lt;span&gt;">{42}</ph>Blog<ph id="43" x="&lt;/span&gt;">{43}</ph><ph id="44" x="&lt;/a&gt;">{44}</ph></source><target><ph id="41" x="&lt;a href=&quot;http://dlux.org.au/news&quot; target=&quot;_blank&quot;&gt;">{41}</ph><ph id="42" x="&lt;span&gt;">{42}</ph><ph id="43" x="&lt;/span&gt;">{43}</ph><ph id="44" x="&lt;/a&gt;">{44}</ph></target><iws:segment-metadata ws_word_count="1" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000023">&lt;/li&gt;&lt;li class="item18"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000026" datatype="x-text/html" restype="string"><source><ph id="45" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/Info/about-us.html&quot;&gt;">{45}</ph><ph id="46" x="&lt;span&gt;">{46}</ph>About Us<ph id="47" x="&lt;/span&gt;">{47}</ph><ph id="48" x="&lt;/a&gt;">{48}</ph></source><target><ph id="45" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/Info/about-us.html&quot;&gt;">{45}</ph><ph id="46" x="&lt;span&gt;">{46}</ph>Quiénes somos<ph id="47" x="&lt;/span&gt;">{47}</ph><ph id="48" x="&lt;/a&gt;">{48}</ph></target><alt-trans match-quality="83.33" origin="FCH Indexing"><source>About Us</source><target>Quiénes somos</target><iws:tm_entry_id tm_entry_id_value="4091498"></iws:tm_entry_id><iws:is-reverse-leveraged reverse="false"></iws:is-reverse-leveraged><iws:is-repaired-match repaired="true"></iws:is-repaired-match><iws:status translation_status="finished"></iws:status><iws:asset-origin origin="/CURRICUL/70000/71236/v.93/71236_C44/Source/Portal/useradminmessages.properties"></iws:asset-origin><iws:attribute name="_tm_created_by">automation automation</iws:attribute><iws:attribute name="_tm_created_date">1243369910000</iws:attribute><iws:attribute name="_tm_modified_by">automation automation</iws:attribute><iws:attribute name="_tm_modified_date">1243369910000</iws:attribute><iws:attribute name="_tm_sid">aboutus_header</iws:attribute><iws:attribute name="_tm_import_job">1173</iws:attribute></alt-trans><iws:segment-metadata ws_word_count="2" tm_score="83.33" max_segment_length="0"><iws:status repair_status="repaired" translation_status="pending" tm_origin="from_ws_tm" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000025">&lt;/li&gt;&lt;li class="item5"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000028" datatype="x-text/html" restype="string"><source><ph id="49" x="&lt;input value=&quot;">{49}</ph>Search<ph id="50" x="&quot; class=&quot;button&quot; onclick=&quot;this.form.searchword.focus();&quot; type=&quot;submit&quot;&gt;">{50}</ph></source><target><ph id="49" x="&lt;input value=&quot;">{49}</ph>Búsqueda<ph id="50" x="&quot; class=&quot;button&quot; onclick=&quot;this.form.searchword.focus();&quot; type=&quot;submit&quot;&gt;">{50}</ph></target><alt-trans match-quality="83.33" origin="FCH Indexing"><source>Search</source><target>Buscar</target><iws:tm_entry_id tm_entry_id_value="4091703"></iws:tm_entry_id><iws:is-reverse-leveraged reverse="false"></iws:is-reverse-leveraged><iws:is-repaired-match repaired="true"></iws:is-repaired-match><iws:status translation_status="finished"></iws:status><iws:asset-origin origin="/CURRICUL/70000/71236/v.93/71236_C44/Source/Portal/useradminmessages.properties"></iws:asset-origin><iws:attribute name="_tm_created_by">automation automation</iws:attribute><iws:attribute name="_tm_created_date">1243369910000</iws:attribute><iws:attribute name="_tm_modified_by">automation automation</iws:attribute><iws:attribute name="_tm_modified_date">1243369910000</iws:attribute><iws:attribute name="_tm_sid">buttonSearch</iws:attribute><iws:attribute name="_tm_import_job">1173</iws:attribute></alt-trans><alt-trans match-quality="83.33" origin="FCH Indexing"><source>Search</source><target>Búsqueda</target><iws:tm_entry_id tm_entry_id_value="4094447"></iws:tm_entry_id><iws:is-reverse-leveraged reverse="false"></iws:is-reverse-leveraged><iws:is-repaired-match repaired="true"></iws:is-repaired-match><iws:status translation_status="finished"></iws:status><iws:asset-origin origin="/CURRICUL/04000/04074/04074_C05/Source/Administrator.doc"></iws:asset-origin><iws:attribute name="_tm_created_by">automation automation</iws:attribute><iws:attribute name="_tm_created_date">1246049341000</iws:attribute><iws:attribute name="_tm_modified_by">automation automation</iws:attribute><iws:attribute name="_tm_modified_date">1246049341000</iws:attribute><iws:attribute name="_tm_import_job">1173</iws:attribute></alt-trans><iws:segment-metadata ws_word_count="1" tm_score="83.33" max_segment_length="0"><iws:status repair_status="repaired" translation_status="pending" tm_origin="from_ws_tm" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000027">&lt;/li&gt;&lt;/ul&gt;					
+				&lt;div id="header-tools"&gt;
+					&lt;div id="searchmod"&gt;
+								&lt;div class="moduletable"&gt;
+					&lt;form action="http://www.dlux.org.au/cms/" method="post"&gt;
+	&lt;div class="search"&gt;
+		&lt;input gtbfieldid="1" name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" size="20" value="search..." onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" type="text"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000030" datatype="x-text/html" restype="string"><source><ph id="51" x="&lt;span class=&quot;breadcrumbs pathway&quot;&gt;">{51}</ph> Home<ph id="52" x="&lt;/span&gt;">{52}</ph></source><target><ph id="51" x="&lt;span class=&quot;breadcrumbs pathway&quot;&gt;">{51}</ph>Inicio<ph id="52" x="&lt;/span&gt;">{52}</ph></target><alt-trans match-quality="83.33" origin="FCH Indexing"><source>Home</source><target>Inicio</target><iws:tm_entry_id tm_entry_id_value="118486"></iws:tm_entry_id><iws:is-reverse-leveraged reverse="false"></iws:is-reverse-leveraged><iws:is-repaired-match repaired="true"></iws:is-repaired-match><iws:status translation_status="finished"></iws:status><iws:asset-origin origin="/CURRICUL/70000/71236/v.93/71236_C34/Source/com/iarchives/apps/iude/Strings.properties"></iws:asset-origin><iws:attribute name="_tm_created_by">Greg Perkins</iws:attribute><iws:attribute name="_tm_created_date">1233043740000</iws:attribute><iws:attribute name="_tm_modified_by">Greg Perkins</iws:attribute><iws:attribute name="_tm_modified_date">1233043740000</iws:attribute><iws:attribute name="_tm_sid">action.Home</iws:attribute><iws:attribute name="_tm_import_job">1009</iws:attribute></alt-trans><alt-trans match-quality="82.50" origin="FCH Indexing"><source>HOME</source><target>INICIO</target><iws:tm_entry_id tm_entry_id_value="4090551"></iws:tm_entry_id><iws:is-reverse-leveraged reverse="false"></iws:is-reverse-leveraged><iws:is-repaired-match repaired="true"></iws:is-repaired-match><iws:status translation_status="finished"></iws:status><iws:asset-origin origin="/CURRICUL/70000/71236/v.93/71236_C44/Source/Portal/sitemessages.properties"></iws:asset-origin><iws:attribute name="_tm_created_by">automation automation</iws:attribute><iws:attribute name="_tm_created_date">1243369917000</iws:attribute><iws:attribute name="_tm_modified_by">automation automation</iws:attribute><iws:attribute name="_tm_modified_date">1243369917000</iws:attribute><iws:attribute name="_tm_sid">homeTab</iws:attribute><iws:attribute name="_tm_import_job">1173</iws:attribute></alt-trans><iws:segment-metadata ws_word_count="1" tm_score="83.33" max_segment_length="0"><iws:status repair_status="repaired" translation_status="pending" tm_origin="from_ws_tm" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000029">	&lt;/div&gt;
+	&lt;input name="task" value="search" type="hidden"&gt;
+	&lt;input name="option" value="com_search" type="hidden"&gt;
+&lt;/form&gt;		&lt;/div&gt;
+	
+					&lt;/div&gt;
+				&lt;/div&gt;
+				
+				&lt;/div&gt;
+									&lt;/div&gt;
+				&lt;div class="clr"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!--End Main Header--&gt;
+
+						&lt;div id="breadcrumbs"&gt;
+									&lt;div class="moduletable"&gt;
+					</iws:markup-seg></trans-unit><trans-unit id="0000000032" datatype="x-text/html" restype="string"><source>ON EXHIBITION:</source><target></target><iws:segment-metadata ws_word_count="2" tm_score="49.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000031">
+		&lt;/div&gt;
+	
+						&lt;/div&gt;
+					
+&lt;!-- begin featured area --&gt;
+								&lt;div class="clr"&gt;&lt;/div&gt;
+				&lt;!-- end featured area --&gt;
+
+			&lt;!--Begin Main Content Area--&gt;
+			&lt;div id="main-body-bg"&gt;
+			&lt;div id="main-body"&gt;
+				&lt;!--Begin Left Column--&gt;
+								&lt;!--End Left Column--&gt;
+				&lt;!--Begin Main Column--&gt;
+				&lt;div id="maincol" style="width: 695px;"&gt;
+					&lt;div class="padding"&gt;
+					
+
+
+
+					&lt;p style="padding: 4px; position: absolute; top: 0.5em; left: 2em; width: 120px; font-weight: 300; font-size: 16px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102); opacity: 0.7;"&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000034" datatype="x-text/html" restype="string"><source><ph id="53" x="&lt;span&gt;">{53}</ph>Program<ph id="54" x="&lt;/span&gt;">{54}</ph> <ph id="55" x="&lt;span&gt;">{55}</ph>dTour<ph id="56" x="&lt;/span&gt;">{56}</ph></source><target><ph id="53" x="&lt;span&gt;">{53}</ph><ph id="54" x="&lt;/span&gt;">{54}</ph><ph id="55" x="&lt;span&gt;">{55}</ph><ph id="56" x="&lt;/span&gt;">{56}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="37.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000033"> &lt;/p&gt;
+					&lt;div id="featured-block"&gt;
+
+                                        
+						&lt;div id="s5_nd_content" style="display: none;"&gt;
+
+	
+
+&lt;!-- START 'Display News by BK 1.5.10' --&gt;
+
+ 
+  
+ 
+&lt;div class="s5_nd_introtext"&gt;
+	&lt;div&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000036" datatype="x-text/html" restype="string"><source><ph id="57" x="&lt;span class=&quot;s5_nd_title&quot;&gt;">{57}</ph><ph id="58" x="&lt;a id=&quot;s5_nd_title_1&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/face-to-face-portraiture-in-a-digital-age.html&quot; class=&quot;s5_nd_title&quot;&gt;">{58}</ph>Face to Face: Portraiture in a Digital Age: National Tour<ph id="59" x="&lt;/a&gt;">{59}</ph><ph id="60" x="&lt;/span&gt;">{60}</ph></source><target><ph id="57" x="&lt;span class=&quot;s5_nd_title&quot;&gt;">{57}</ph><ph id="58" x="&lt;a id=&quot;s5_nd_title_1&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/face-to-face-portraiture-in-a-digital-age.html&quot; class=&quot;s5_nd_title&quot;&gt;">{58}</ph><ph id="59" x="&lt;/a&gt;">{59}</ph><ph id="60" x="&lt;/span&gt;">{60}</ph></target><iws:segment-metadata ws_word_count="10" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000035">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000038" datatype="x-text/html" restype="string"><source><ph id="61" x="&lt;span class=&quot;createdate&quot;&gt;">{61}</ph>Tuesday, 13 January 2009<ph id="62" x="&lt;/span&gt;">{62}</ph> - <ph id="63" x="&lt;span class=&quot;small&quot;&gt;">{63}</ph>dlux<ph id="64" x="&lt;/span&gt;">{64}</ph></source><target><ph id="61" x="&lt;span class=&quot;createdate&quot;&gt;">{61}</ph><ph id="62" x="&lt;/span&gt;">{62}</ph><ph id="63" x="&lt;span class=&quot;small&quot;&gt;">{63}</ph><ph id="64" x="&lt;/span&gt;">{64}</ph></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000037">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000040" datatype="x-text/html" restype="string"><source><ph id="65" x="&lt;span id=&quot;s5_nd_text_1&quot; class=&quot;s5_nd_introtext&quot;&gt;">{65}</ph><ph id="66" x="&lt;span id=&quot;s5_nd_image_1&quot; class=&quot;s5_nd_image&quot; style=&quot;display: none;&quot;&gt;">{66}</ph>http://dlux.org.au/cms/images/stories/header/tonkinH.jpg<ph id="67" x="&lt;/span&gt;">{67}</ph></source><target><ph id="65" x="&lt;span id=&quot;s5_nd_text_1&quot; class=&quot;s5_nd_introtext&quot;&gt;">{65}</ph><ph id="66" x="&lt;span id=&quot;s5_nd_image_1&quot; class=&quot;s5_nd_image&quot; style=&quot;display: none;&quot;&gt;">{66}</ph><ph id="67" x="&lt;/span&gt;">{67}</ph></target><iws:segment-metadata ws_word_count="7" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000039">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000042" datatype="x-text/html" restype="string"><source>How have new media and digital technologies changed the way we think about portraiture, identity and faces?&amp;nbsp;What new forms of audience engagement and interaction are made possible by these new technologies?</source><target></target><iws:segment-metadata ws_word_count="33" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000041">
+&lt;p&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000044" datatype="x-text/html" restype="string"><source>Fac...</source><target></target><iws:segment-metadata ws_word_count="1" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000043">&lt;/p&gt;
+&lt;p&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000046" datatype="x-text/html" restype="string"><source><ph id="68" x="&lt;/span&gt;">{68}</ph><ph id="69" x="&lt;span class=&quot;readon&quot;&gt;">{69}</ph><ph id="70" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/face-to-face-portraiture-in-a-digital-age.html&quot; class=&quot;readon&quot;&gt;">{70}</ph>Read more...<ph id="71" x="&lt;/a&gt;">{71}</ph><ph id="72" x="&lt;/span&gt;">{72}</ph></source><target><ph id="68" x="&lt;/span&gt;">{68}</ph><ph id="69" x="&lt;span class=&quot;readon&quot;&gt;">{69}</ph><ph id="70" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/face-to-face-portraiture-in-a-digital-age.html&quot; class=&quot;readon&quot;&gt;">{70}</ph><ph id="71" x="&lt;/a&gt;">{71}</ph><ph id="72" x="&lt;/span&gt;">{72}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="47.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000045">&lt;/p&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000048" datatype="x-text/html" restype="string"><source><ph id="73" x="&lt;span&gt;">{73}</ph>Program<ph id="74" x="&lt;/span&gt;">{74}</ph> <ph id="75" x="&lt;span&gt;">{75}</ph>dTour<ph id="76" x="&lt;/span&gt;">{76}</ph></source><target><ph id="73" x="&lt;span&gt;">{73}</ph><ph id="74" x="&lt;/span&gt;">{74}</ph><ph id="75" x="&lt;span&gt;">{75}</ph><ph id="76" x="&lt;/span&gt;">{76}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="37.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000047">&lt;/div&gt;
+	&lt;div&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000050" datatype="x-text/html" restype="string"><source><ph id="77" x="&lt;span class=&quot;s5_nd_title&quot;&gt;">{77}</ph><ph id="78" x="&lt;a id=&quot;s5_nd_title_2&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/the-naughty-apartment.html&quot; class=&quot;s5_nd_title&quot;&gt;">{78}</ph>The Naughty Apartment<ph id="79" x="&lt;/a&gt;">{79}</ph><ph id="80" x="&lt;/span&gt;">{80}</ph></source><target><ph id="77" x="&lt;span class=&quot;s5_nd_title&quot;&gt;">{77}</ph><ph id="78" x="&lt;a id=&quot;s5_nd_title_2&quot; href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/the-naughty-apartment.html&quot; class=&quot;s5_nd_title&quot;&gt;">{78}</ph><ph id="79" x="&lt;/a&gt;">{79}</ph><ph id="80" x="&lt;/span&gt;">{80}</ph></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000049">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000052" datatype="x-text/html" restype="string"><source><ph id="81" x="&lt;span class=&quot;createdate&quot;&gt;">{81}</ph>Tuesday, 13 January 2009<ph id="82" x="&lt;/span&gt;">{82}</ph> - <ph id="83" x="&lt;span class=&quot;small&quot;&gt;">{83}</ph>dlux<ph id="84" x="&lt;/span&gt;">{84}</ph></source><target><ph id="81" x="&lt;span class=&quot;createdate&quot;&gt;">{81}</ph><ph id="82" x="&lt;/span&gt;">{82}</ph><ph id="83" x="&lt;span class=&quot;small&quot;&gt;">{83}</ph><ph id="84" x="&lt;/span&gt;">{84}</ph></target><iws:segment-metadata ws_word_count="3" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000051">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000054" datatype="x-text/html" restype="string"><source><ph id="85" x="&lt;span id=&quot;s5_nd_text_2&quot; class=&quot;s5_nd_introtext&quot;&gt;">{85}</ph><ph id="86" x="&lt;span id=&quot;s5_nd_image_2&quot; style=&quot;display: none;&quot; class=&quot;s5_nd_image&quot;&gt;">{86}</ph>http://dlux.org.au/cms/images/stories/header/helyer_hdr.jpg<ph id="87" x="&lt;/span&gt;">{87}</ph></source><target><ph id="85" x="&lt;span id=&quot;s5_nd_text_2&quot; class=&quot;s5_nd_introtext&quot;&gt;">{85}</ph><ph id="86" x="&lt;span id=&quot;s5_nd_image_2&quot; style=&quot;display: none;&quot; class=&quot;s5_nd_image&quot;&gt;">{86}</ph><ph id="87" x="&lt;/span&gt;">{87}</ph></target><iws:segment-metadata ws_word_count="8" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000053">&lt;br&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000056" datatype="x-text/html" restype="string"><source><ph id="88" x="&lt;em&gt;">{88}</ph>Naughty Apartment<ph id="89" x="&lt;/em&gt;">{89}</ph>&amp;nbsp;is an interactive sound-sculpture by Nigel Helyer (http://www.sonicobjects.com/), inspired by Russian writer Mikhail Bulgakov's novel "The Master and Margarita". </source><target><ph id="88" x="&lt;em&gt;">{88}</ph><ph id="89" x="&lt;/em&gt;">{89}</ph></target><iws:segment-metadata ws_word_count="23" tm_score="0.00" max_segment_length="0"><iws:status target_content="placeholders_only"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000055">
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;</iws:markup-seg></trans-unit><trans-unit id="0000000057" datatype="x-text/html" restype="string"><source>Much of the action in the...</source><target></target><iws:segment-metadata ws_word_count="6" tm_score="12.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata></trans-unit><trans-unit id="0000000059" datatype="x-text/html" restype="string"><source><ph id="90" x="&lt;/span&gt;">{90}</ph><ph id="91" x="&lt;span class=&quot;readon&quot;&gt;">{91}</ph><ph id="92" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/the-naughty-apartment.html&quot; class=&quot;readon&quot;&gt;">{92}</ph>Read more...<ph id="93" x="&lt;/a&gt;">{93}</ph><ph id="94" x="&lt;/span&gt;">{94}</ph></source><target><ph id="90" x="&lt;/span&gt;">{90}</ph><ph id="91" x="&lt;span class=&quot;readon&quot;&gt;">{91}</ph><ph id="92" x="&lt;a href=&quot;http://www.dlux.org.au/cms/index.php?/dTour/the-naughty-apartment.html&quot; class=&quot;readon&quot;&gt;">{92}</ph><ph id="93" x="&lt;/a&gt;">{93}</ph><ph id="94" x="&lt;/span&gt;">{94}</ph></target><iws:segment-metadata ws_word_count="2" tm_score="47.00" max_segment_length="0"><iws:status target_content="placeholders_only" match-quality="fuzzy"></iws:status></iws:segment-metadata><iws:markup-seg sequence="0000000058">&lt;/p&gt;</iws:markup-seg><iws:markup-seg sequence="0000000060">&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- END module 'Display News by BK 1.5.10' --&gt;
+
+&lt;/div&gt;
+
+
+
+
+&lt;script language="javascript" type="text/javascript" src="d_Lux_MediaArts_files/s5_news_display.js"&gt;&lt;/script&gt;
+
+&lt;div style="display: none;"&gt;
+
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+document.write('&lt;style type="text/css"&gt;.s5_nd_image{display:none}&lt;/style&gt;');
+//]]&gt;&lt;/script&gt;&lt;style type="text/css"&gt;.s5_nd_image{display:none}&lt;/style&gt;
+
+&lt;img src="d_Lux_MediaArts_files/tonkinH.jpg" id="s5_nd_pl_1" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/helyer_hdr.jpg" id="s5_nd_pl_2" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_3" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_4" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_5" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_6" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_7" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_8" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_9" alt=""&gt;
+&lt;img src="d_Lux_MediaArts_files/a.htm" id="s5_nd_pl_10" alt=""&gt;
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div id="s5_nd" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; overflow: hidden; height: 300px; width: 670px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"&gt;
+
+	&lt;div id="s5_nd_inner" style="opacity: 1;"&gt;
+
+		&lt;div style="overflow: hidden; cursor: pointer; height: 300px; width: 670px; background-image: url(http://dlux.org.au/cms/images/stories/header/tonkinH.jpg); background-repeat: no-repeat;" id="blenddiv_s5_nd"&gt;
+
+			&lt;img src="d_Lux_MediaArts_files/helyer_hdr.jpg" style="border: 0pt none ; cursor: pointer; opacity: 1;" id="blendimage_s5_nd" alt=""&gt;
+
+		&lt;/div&gt; 
+		
+		&lt;div id="s5_nd_content_window_bg" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; overflow: hidden; height: 100px; opacity: 0.6; width: 670px; margin-top: -100px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; position: absolute;"&gt;	
+		&lt;/div&gt;
+		
+		&lt;div id="s5_nd_content_window" style="overflow: hidden; height: 100px; width: 670px; margin-top: -100px; position: absolute; z-index: 2; opacity: 1;"&gt;
+			&lt;div id="s5_nd_content_window_inner" style="padding: 8px 0px 0px 20px;"&gt;
+			
+			&lt;div id="s5_nd_title" style="cursor: pointer; width: 650px; line-height: 110%; margin-bottom: 8px; float: left; color: rgb(255, 255, 255); font-size: 18px;"&gt;The Naughty Apartment&lt;/div&gt;
+				&lt;div style="clear: both;"&gt;&lt;/div&gt;
+			&lt;div id="s5_nd_text" style="width: 650px; line-height: 160%; float: left; color: rgb(153, 153, 153); font-size: 12px;"&gt;&lt;span id="s5_nd_image_2" style="display: none;" class="s5_nd_image"&gt;http://dlux.org.au/cms/images/stories/header/helyer_hdr.jpg&lt;/span&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Naughty Apartment&lt;/em&gt;&amp;nbsp;is an interactive sound-sculpture by
+Nigel Helyer (http://www.sonicobjects.com/), inspired by Russian writer
+Mikhail Bulgakov's novel "The Master and Margarita". Much of the action
+in the...&lt;/p&gt;&lt;/div&gt;
+			
+							&lt;div style="clear: both;"&gt;&lt;/div&gt;
+			&lt;div id="s5_nd_hyperlink" style="width: 650px; line-height: 160%; float: left; color: rgb(153, 153, 153); font-size: 12px; margin-top: 8px; cursor: pointer; font-weight: bold;"&gt;more&lt;/div&gt;
+						
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div style="width: 670px;"&gt;
+
+&lt;div id="s5_nd_buttons" style="border-left: 1px solid rgb(207, 205, 205); border-right: 1px solid rgb(207, 205, 205); border-bottom: 1px solid rgb(207, 205, 205); padding: 3px 6px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-size: 11px; float: right; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"&gt;
+
+&lt;div id="s5_nd_stop" style="margin-top: 4px; width: 5px; height: 7px; background-image: url(http://www.dlux.org.au/cms//modules/mod_s5_news_display/s5_news_display/pause.png); background-repeat: no-repeat; cursor: pointer; float: left; margin-left: 4px; margin-right: 4px;" onclick="s5_nd_stop()"&gt;&lt;/div&gt;
+
+&lt;div id="s5_nd_play" style="margin-top: 4px; width: 4px; height: 7px; background-image: url(http://www.dlux.org.au/cms//modules/mod_s5_news_display/s5_news_display/play.png); background-repeat: no-repeat; cursor: pointer; float: left; margin-left: 4px; margin-right: 8px;" onclick="s5_nd_play()"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+if (document.getElementById("s5_nd_title_1")) {
+    document.write('&lt;div id="s5_nd_1" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play1();s5_nd_stop()"&gt;1&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_2")) {
+    document.write('&lt;div id="s5_nd_2" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play2();s5_nd_stop()"&gt;2&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_3")) {
+    document.write('&lt;div id="s5_nd_3" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play3();s5_nd_stop()"&gt;3&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_4")) {
+    document.write('&lt;div id="s5_nd_4" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play4();s5_nd_stop()"&gt;4&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_5")) {
+    document.write('&lt;div id="s5_nd_5" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play5();s5_nd_stop()"&gt;5&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_6")) {
+    document.write('&lt;div id="s5_nd_6" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play6();s5_nd_stop()"&gt;6&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_7")) {
+    document.write('&lt;div id="s5_nd_7" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play7();s5_nd_stop()"&gt;7&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_8")) {
+    document.write('&lt;div id="s5_nd_8" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play8();s5_nd_stop()"&gt;8&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_9")) {
+    document.write('&lt;div id="s5_nd_9" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play9();s5_nd_stop()"&gt;9&lt;/div&gt;');
+	}
+if (document.getElementById("s5_nd_title_10")) {
+    document.write('&lt;div id="s5_nd_10" style="cursor:pointer; float:left; margin-left:3px; margin-right:3px" onclick="s5_nd_start();s5_nd_play10();s5_nd_stop()"&gt;10&lt;/div&gt;');
+	}
+//]]&gt;&lt;/script&gt;&lt;div id="s5_nd_1" style="cursor: pointer; float: left; margin-left: 3px; margin-right: 3px;" onclick="s5_nd_start();s5_nd_play1();s5_nd_stop()"&gt;1&lt;/div&gt;&lt;div id="s5_nd_2" style="cursor: pointer; float: left; margin-left: 3px; margin-right: 3px;" onclick="s5_nd_start();s5_nd_play2();s5_nd_stop()"&gt;2&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style="clear: both;"&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;script type="text/javascript"&gt;
+
+document.getElementById("blenddiv_s5_nd").style.backgroundImage = "url(" + document.getElementById("s5_nd_image_1").innerHTML + ")";
+document.getElementById("blendimage_s5_nd").src = document.getElementById("s5_nd_image_1").innerHTML;
+
+if (document.getElementById("s5_nd_image_1")) {
+	document.getElementById("s5_nd_pl_1").src = document.getElementById("s5_nd_image_1").innerHTML;
+}
+if (document.getElementById("s5_nd_image_2")) {
+	document.getElementById("s5_nd_pl_2").src = document.getElementById("s5_nd_image_2").innerHTML;
+}
+if (document.getElementById("s5_nd_image_3")) {
+	document.getElementById("s5_nd_pl_3").src = document.getElementById("s5_nd_image_3").innerHTML;
+}
+if (document.getElementById("s5_nd_image_4")) {
+	document.getElementById("s5_nd_pl_4").src = document.getElementById("s5_nd_image_4").innerHTML;
+}
+if (document.getElementById("s5_nd_image_5")) {
+	document.getElementById("s5_nd_pl_5").src = document.getElementById("s5_nd_image_5").innerHTML;
+}
+if (document.getElementById("s5_nd_image_6")) {
+	document.getElementById("s5_nd_pl_6").src = document.getElementById("s5_nd_image_6").innerHTML;
+}
+if (document.getElementById("s5_nd_image_7")) {
+	document.getElementById("s5_nd_pl_7").src = document.getElementById("s5_nd_image_7").innerHTML;
+}
+if (document.getElementById("s5_nd_image_8")) {
+	document.getElementById("s5_nd_pl_8").src = document.getElementById("s5_nd_image_8").innerHTML;
+}
+if (document.getElementById("s5_nd_image_9")) {
+	document.getElementById("s5_nd_pl_9").src = document.getElementById("s5_nd_image_9").innerHTML;
+}
+if (document.getElementById("s5_nd_image_10")) {
+	document.getElementById("s5_nd_pl_10").src = document.getElementById("s5_nd_image_10").innerHTML;
+}
+
+window.setTimeout('s5_nd_fadefirst()',1300);
+s5_nd_timer1=setTimeout('s5_nd_play2()',10300);
+
+function s5_nd_play1() {
+	s5_nd_current = 1;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_1").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_1").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play1_text_in()',300);
+	}
+	s5_nd_timer2=setTimeout('s5_nd_play1_next()',10000);
+}
+}
+	function s5_nd_play1_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_1").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_1").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click1;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click1;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click1; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play1_next() {
+		if (document.getElementById("s5_nd_title_2")) {
+			s5_nd_play2();
+		}	
+		}
+	
+		
+function s5_nd_play2() {
+	s5_nd_current = 2;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_2").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_2").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play2_text_in()',300);
+	}
+	s5_nd_timer3=setTimeout('s5_nd_play2_next()',10000);
+}
+}
+	function s5_nd_play2_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_2").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_2").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click2;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click2;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click2; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play2_next() {
+		if (document.getElementById("s5_nd_title_3")) {
+			s5_nd_play3();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play3() {
+	s5_nd_current = 3;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_3").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_3").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play3_text_in()',300);
+	}
+	s5_nd_timer4=setTimeout('s5_nd_play3_next()',10000);
+}
+}
+	function s5_nd_play3_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_3").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_3").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click3;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click3;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click3; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play3_next() {
+		if (document.getElementById("s5_nd_title_4")) {
+			s5_nd_play4();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+
+		
+function s5_nd_play4() {
+	s5_nd_current = 4;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_4").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_4").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play4_text_in()',300);
+	}
+	s5_nd_timer5=setTimeout('s5_nd_play4_next()',10000);
+}
+}
+	function s5_nd_play4_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_4").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_4").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click4;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click4;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click4; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play4_next() {
+		if (document.getElementById("s5_nd_title_5")) {
+			s5_nd_play5();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play5() {
+	s5_nd_current = 5;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_5").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_5").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play5_text_in()',300);
+	}
+	s5_nd_timer6=setTimeout('s5_nd_play5_next()',10000);
+}
+}
+	function s5_nd_play5_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_5").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_5").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click5;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click5;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click5; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play5_next() {
+		if (document.getElementById("s5_nd_title_6")) {
+			s5_nd_play6();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play6() {
+	s5_nd_current = 6;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_6").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_6").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play6_text_in()',300);
+	}
+	s5_nd_timer7=setTimeout('s5_nd_play6_next()',10000);
+}
+}
+	function s5_nd_play6_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_6").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_6").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click6;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click6;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click6; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play6_next() {
+		if (document.getElementById("s5_nd_title_7")) {
+			s5_nd_play7();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play7() {
+	s5_nd_current = 7;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_7").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_7").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play7_text_in()',300);
+	}
+	s5_nd_timer8=setTimeout('s5_nd_play7_next()',10000);
+}
+}
+	function s5_nd_play7_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_7").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_7").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click7;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click7;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click7; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play7_next() {
+		if (document.getElementById("s5_nd_title_8")) {
+			s5_nd_play8();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play8() {
+	s5_nd_current = 8;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_8").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_8").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play8_text_in()',300);
+	}
+	s5_nd_timer9=setTimeout('s5_nd_play8_next()',10000);
+}
+}
+	function s5_nd_play8_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_8").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_8").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click8;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click8;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click8; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play8_next() {
+		if (document.getElementById("s5_nd_title_9")) {
+			s5_nd_play9();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+function s5_nd_play9() {
+	s5_nd_current = 9;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_9").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_9").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play9_text_in()',300);
+	}
+	s5_nd_timer10=setTimeout('s5_nd_play9_next()',10000);
+}
+}
+	function s5_nd_play9_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_9").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_9").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click9;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click9;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click9; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play9_next() {
+		if (document.getElementById("s5_nd_title_10")) {
+			s5_nd_play10();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+		
+		
+
+function s5_nd_play10() {
+	s5_nd_current = 10;
+if (s5_nd_playing == "0") {
+	blendimage_s5_nd('blenddiv_s5_nd','blendimage_s5_nd', document.getElementById("s5_nd_image_10").innerHTML,1000);
+	if (document.getElementById("s5_nd_text").innerHTML !=document.getElementById("s5_nd_text_10").innerHTML) {
+		opacity_s5_nd('s5_nd_content_window', 100, 0, 300);
+		window.setTimeout('s5_nd_play10_text_in()',300);
+	}
+	s5_nd_timer11=setTimeout('s5_nd_play10_next()',10000);
+}
+}
+	function s5_nd_play10_text_in() {
+		document.getElementById("s5_nd_title").innerHTML = document.getElementById("s5_nd_title_10").innerHTML;
+	document.getElementById("s5_nd_text").innerHTML = document.getElementById("s5_nd_text_10").innerHTML;
+	document.getElementById("s5_nd_title").onclick = s5_nd_click10;
+	document.getElementById("blendimage_s5_nd").onclick = s5_nd_click10;
+	if (document.getElementById("s5_nd_hyperlink")) { document.getElementById("s5_nd_hyperlink").onclick = s5_nd_click10; }
+	opacity_s5_nd('s5_nd_content_window', 0, 100, 300);
+	}
+		function s5_nd_play10_next() {
+		if (document.getElementById("s5_nd_title_1")) {
+			s5_nd_play1();
+		}
+		else {
+			s5_nd_play1();
+		}
+		}
+
+		window.setTimeout('s5_nd_hyperlink()',1300);
+		
+		function s5_nd_hyperlink() {
+		if (document.getElementById("s5_nd_hyperlink")) {
+			document.getElementById("s5_nd_hyperlink").innerHTML = "more";
+		}
+		}
+	
+&lt;/script&gt;
+
+					&lt;/div&gt;
+																				&lt;div id="rokmininews-block"&gt;&lt;div id="rokmininews"&gt;
+							&lt;div class="rokmininews-surround"&gt;
+	&lt;div class="sleek"&gt;
+		&lt;div class="mainblock-mod"&gt;
+						&lt;div class="mainblock-mod2"&gt;
+				&lt;div class="mainblock-title-container"&gt;
+					&lt;h3 class="module-title"&gt;&lt;span class="bg"&gt;Coming Up&lt;/span&gt;&lt;/h3&gt;
+				&lt;/div&gt;
+								&lt;div class="module"&gt;
+					&lt;div class="rokdemo-morenews-outer"&gt;
+&lt;div class="rokdemo-morenews-block"&gt;&lt;img class="rokdemo-morenews-img1" src="d_Lux_MediaArts_files/hannah2.jpg" alt="blank" border="0"&gt; &lt;span class="highlight-bold highlight-grey"&gt;The Line of Lode ...&lt;/span&gt;&lt;br&gt;Angelica Mesiti's evocative video art work goes to Ipswich, QLD. &lt;a href="http://www.dlux.org.au/cms/index.php?/dTour/the-line-of-lode-and-death-of-charlie-day-angelica-mesiti.html"&gt;More&lt;/a&gt;&lt;/div&gt;
+&lt;div class="rokdemo-morenews-block"&gt;&lt;img class="rokdemo-morenews-img1" src="d_Lux_MediaArts_files/mervin.jpg"&gt; &lt;span class="highlight-bold highlight-grey"&gt;Mongrel Tour 2010&lt;/span&gt;&lt;br&gt;National speaking tour by mervin Jarman. &lt;a href="http://www.dlux.org.au/cms/index.php?/dTour/mongrel-tour-2010.html"&gt;More&lt;/a&gt;&lt;br&gt;&lt;/div&gt;
+&lt;div class="rokdemo-morenews-block"&gt;&lt;img class="rokdemo-morenews-img1" src="d_Lux_MediaArts_files/drifting_th.jpg" alt="blank" border="0"&gt; &lt;span class="highlight-bold highlight-grey"&gt;Drifting: Julia Burns&lt;/span&gt;&lt;br&gt;3 channel video - Feb 2009 at Griffiths Gallery. &lt;a href="http://www.dlux.org.au/cms/index.php?/dTour/drifting-julia-burns.html"&gt;More&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;				&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="mainblock-mod-bottom"&gt;&lt;div class="mainblock-mod-bottom2"&gt;&lt;div class="mainblock-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+	
+					&lt;/div&gt;&lt;/div&gt;
+										&lt;div id="main-content"&gt;
+																		&lt;div id="maincontent-block"&gt;
+							
+													&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="clr"&gt;&lt;/div&gt;
+										&lt;div id="mainmodules2" class="spacer w99"&gt;
+												&lt;div class="block last" style="width: 695px;"&gt;
+								&lt;div class="mainblock-module sleek rokmodtools-43"&gt;
+		&lt;div class="mainblock-mod"&gt;
+						&lt;div class="mainblock-mod2"&gt;
+				&lt;div class="mainblock-title-container"&gt;
+					&lt;h3 class="module-title"&gt;&lt;span class="bg"&gt;d/Archive: Featured&lt;/span&gt;&lt;/h3&gt;
+															
+				&lt;/div&gt;
+								&lt;div class="module"&gt;
+					&lt;a href="http://www.dlux.org.au/cms/index.php?/d/Archive-featured-artist.html"&gt;&lt;img src="d_Lux_MediaArts_files/plaything.jpg" alt="plaything" style="float: right; margin-bottom: 8px; margin-left: 8px;" height="276" width="270"&gt; &lt;/a&gt;
+&lt;div style="text-align: left;"&gt;
+&lt;p style="text-align: left;"&gt;&lt;span style="font-size: medium;"&gt;&lt;strong&gt;&lt;a href="http://www.dlux.org.au/cms/index.php?/d/Archive-featured-artist.html"&gt;FutureScreen Plaything (2003)&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;Plaything showcased the work of international and Australian artists who explore the language and structure of digital games.&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;As the gaming industry proliferates, many
+artists are incorporating various types of gameplay into their practice
+resulting in new hybrid forms.&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;.&lt;/p&gt;
+&lt;/div&gt;				&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="mainblock-mod-bottom"&gt;&lt;div class="mainblock-mod-bottom2"&gt;&lt;div class="mainblock-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+						&lt;/div&gt;
+																							&lt;/div&gt;
+									&lt;/div&gt;
+				&lt;!--End Main Column--&gt;
+				&lt;!--Begin Right Column--&gt;
+								&lt;div id="rightcol"&gt;
+					&lt;div class="padding"&gt;
+																			&lt;div class="side-module .sleek rokmodtools-20"&gt;
+		&lt;div class="side-mod"&gt;
+							&lt;div class="module"&gt;
+					&lt;div style="text-align: center;"&gt;&lt;a target="_blank" href="http://www.xmedialab.com/event/2009/sydney/xmedialab-sydney-opera-house-global-media-cultures"&gt;&lt;img alt="xmedialab" src="d_Lux_MediaArts_files/xmedialab.jpg" height="51" width="200"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;&lt;a target="_blank" href="http://www.xmedialab.com/event/2009/sydney/xmedialab-sydney-opera-house-global-media-cultures"&gt; “Global Media Cultures”&lt;/a&gt; : the must attend digital media and creative industries event of 2009.&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;at the Sydney Opera House&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;Fri, 27 Nov - Sun, 29 Nov&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;(We're going!)&lt;br&gt;&lt;/div&gt;				&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="side-mod-bottom"&gt;&lt;div class="side-mod-bottom2"&gt;&lt;div class="side-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+		&lt;div class="side-module promo2 rokmodtools-62"&gt;
+		&lt;div class="side-mod"&gt;
+						&lt;div class="side-mod2"&gt;
+				&lt;div class="side-title-container"&gt;
+					&lt;h3 class="module-title"&gt;&lt;span class="bg"&gt;&lt;span class="bg2"&gt;Latest Publication&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+															
+				&lt;/div&gt;
+								&lt;div class="module"&gt;
+					&lt;a href="http://www.dlux.org.au/cms/index.php?/Installation-Fact-Sheets/presenting-video-exhibitions.html"&gt;&lt;span class="download"&gt;Presenting Video Exhibitions - by John A Douglas&lt;/span&gt;&lt;/a&gt;				&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="side-mod-bottom"&gt;&lt;div class="side-mod-bottom2"&gt;&lt;div class="side-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+		&lt;div class="side-module  rokmodtools-57"&gt;
+		&lt;div class="side-mod"&gt;
+						&lt;div class="side-mod2"&gt;
+				&lt;div class="side-title-container"&gt;
+					&lt;h3 class="module-title"&gt;&lt;span class="bg"&gt;&lt;span class="bg2"&gt;From the Blog&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+															
+				&lt;/div&gt;
+								&lt;div class="module"&gt;
+					&lt;div style="direction: ltr; text-align: left ! important;"&gt;
+	&lt;table class="moduletable" cellpadding="0" cellspacing="0"&gt;
+			&lt;tbody&gt;&lt;tr&gt;
+			&lt;td&gt;
+				&lt;strong&gt;
+					&lt;a href="http://news.dlux.org.au/" target="_blank"&gt;
+						d/Lux/MediaArts&lt;/a&gt;
+				&lt;/strong&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr&gt;
+			&lt;td&gt;News and tidbits from the world of d/Lux&lt;/td&gt;
+		&lt;/tr&gt;
+			&lt;tr&gt;
+		&lt;td&gt;
+			&lt;ul class="newsfeed"&gt;
+							&lt;li&gt;
+									&lt;a href="http://news.dlux.org.au/?p=269" target="_blank"&gt;
+					XMediaLab: Global Media Cultures&lt;/a&gt;
+									&lt;div style="text-align: left ! important;" class="newsfeed_item"&gt;
+						 IS the must attend digital media and creative industries event of 2009, at the Sydney...					&lt;/div&gt;
+									&lt;/li&gt;
+								&lt;li&gt;
+									&lt;a href="http://news.dlux.org.au/?p=213" target="_blank"&gt;
+					NED KELLY meets SCI-FI at Loop Space&lt;/a&gt;
+									&lt;div style="text-align: left ! important;" class="newsfeed_item"&gt;
+						 K-Country, a video work combining comic book narrative with sound and music in a post...					&lt;/div&gt;
+									&lt;/li&gt;
+								&lt;li&gt;
+									&lt;a href="http://news.dlux.org.au/?p=187" target="_blank"&gt;
+					dlux Gets Wired  @ Electrofringe&lt;/a&gt;
+									&lt;div style="text-align: left ! important;" class="newsfeed_item"&gt;
+						 GARDEN OF FORKING PATHS opens at Loop Space as part of Electrofringe. October 2 @...					&lt;/div&gt;
+									&lt;/li&gt;
+							&lt;/ul&gt;
+		&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+				&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="side-mod-bottom"&gt;&lt;div class="side-mod-bottom2"&gt;&lt;div class="side-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+		&lt;div class="side-module  rokmodtools-69"&gt;
+		&lt;div class="side-mod"&gt;
+						&lt;div class="side-mod2"&gt;
+				&lt;div class="side-title-container"&gt;
+					&lt;h3 class="module-title"&gt;&lt;span class="bg"&gt;&lt;span class="bg2"&gt;Keep me posted!&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+															
+				&lt;/div&gt;
+								&lt;div class="module"&gt;
+					&lt;p&gt;Join our mailing list:&lt;/p&gt;
+&lt;form action="http://dluxmediaarts.createsend.com/t/r/s/ilmdh/" method="post"&gt;
+&lt;div&gt;&lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;&lt;input gtbfieldid="2" name="cm-name" id="name" type="text"&gt;&lt;br&gt; &lt;label for="ilmdh-ilmdh"&gt;Email:&lt;/label&gt;&lt;br&gt;&lt;input gtbfieldid="3" name="cm-ilmdh-ilmdh" id="ilmdh-ilmdh" type="text"&gt;&lt;br&gt; &lt;input value="Subscribe" type="submit"&gt;&lt;/div&gt;
+&lt;/form&gt;				&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+		&lt;div class="side-mod-bottom"&gt;&lt;div class="side-mod-bottom2"&gt;&lt;div class="side-mod-bottom3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	
+											&lt;/div&gt;
+				&lt;/div&gt;
+								&lt;!--End Right Column--&gt;
+			&lt;div class="clr"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- Begin Bottom Main Modules --&gt;
+										&lt;div class="ad-block-bottom"&gt;		&lt;div class="moduletable"&gt;
+					&lt;h3&gt;our partners&lt;/h3&gt;
+					&lt;div style="text-align: center;"&gt;&lt;img alt="artsblack30" src="d_Lux_MediaArts_files/artsblack30.jpg" height="41" width="220"&gt;&lt;img alt="ozco" src="d_Lux_MediaArts_files/ozco.jpg" height="76" width="220"&gt;&lt;img src="d_Lux_MediaArts_files/sa_black_logo.jpg" alt="sa_black_logo" height="66" width="NaN"&gt;&amp;nbsp;&lt;img alt="ftotitlelogo" src="d_Lux_MediaArts_files/ftotitlelogo.gif" height="78" width="100"&gt;&amp;nbsp;&lt;/div&gt;		&lt;/div&gt;
+	&lt;/div&gt;
+						&lt;!-- End Bottom Main Modules --&gt;
+		&lt;!--End Main Content Area--&gt;
+		&lt;!--Begin Bottom Area--&gt;
+		&lt;div class="bottom-padding"&gt;
+						&lt;div id="bottom-block"&gt;
+				&lt;div id="footer-bg1"&gt;&lt;div id="footer-bg2"&gt;
+							&lt;div class="moduletable"&gt;
+					d/Lux/MediaArts - PO Box A106 Sydney South NSW 1235 - dlux [at] dlux.org.au - tel: +61-2-9267 4777 abn: 18 272 438 896		&lt;/div&gt;
+	
+				&lt;/div&gt;&lt;/div&gt;
+			&lt;/div&gt;
+								&lt;/div&gt;
+		&lt;!--End Bottom Area--&gt;
+		&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id="bottom-expansion"&gt;
+			&lt;div class="wrapper"&gt;
+											&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+&lt;/script&gt;&lt;script src="d_Lux_MediaArts_files/ga.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+try {
+var pageTracker = _gat._getTracker("UA-8947129-1");
+pageTracker._trackPageview();
+} catch(err) {}&lt;/script&gt;
+
+	&lt;/body&gt;&lt;/html&gt;</iws:markup-seg></trans-unit></body></file>
+</xliff>

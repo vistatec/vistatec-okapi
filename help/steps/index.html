@@ -1,0 +1,120 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Table of Contents</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a class="current" href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Steps">http://okapiframework.org/wiki/index.php?title=Steps</a></p>
+
+<p>The default distribution of the framework comes with the pre-defined steps 
+listed below. Note that some of them may be Beta or Alpha versions. See the 
+documentation of each step for more information.</p>
+<p>The letters between parenthesis indicates what type of data the step 
+takes and what type it sends. RD=Raw Document, FE=Filter Events.</p>
+<ul>
+	<li><cite><a href="batchtranslationstep.html">Batch Translation</a></cite> 
+	(RD &gt; RD) - 
+	Creates translation memories using external tools.</li>
+	<li><cite><a href="desegmentationstep.html">Desegmentation</a></cite> (FE &gt; 
+	FE) - Joins all the segments of each source and/or target text of each text 
+	units into a single content.</li>
+	<li><cite><a href="diffleveragestep.html">Diff Leverage</a></cite> (FE &gt; FE) 
+	- Performs context-based translation leveraging between two sets of input 
+	files.</li>
+	<li><cite><a href="externalcommandstep.html">External Command</a></cite> (RD 
+	&gt; RD) - Executes an external command.</li>
+	<li><cite><a href="filtereventstorawdocumentstep.html">Filter Events to Raw 
+	Document</a></cite> (FE &gt; RD) - Merges filter events back into the original 
+	file format.</li>
+	<li><cite><a href="formatconversionstep.html">Format Conversion</a></cite> 
+	(FE &gt; FE) - Converts extracted data to a given file format.</li>
+	<li><cite><a href="fullwidthconversionstep.html">Full-Width Conversion</a></cite> 
+	(FE &gt; FE) 
+	- Converts to or from full-width characters</li>
+	<li><b><a href="generatesimpletmstep.html">Generate SimpleTM</a></b> (FE &gt; 
+	FE) Creates a SimpleTM TM from the text units of a set of bilingual 
+	documents.</li>
+	<li><cite><a href="imagemodificationstep.html">Image Modification</a></cite> (RD 
+	&gt; RD) - Changes the size and/or the format of an image file.</li>
+	<li><cite>
+	<a href="http://okapiframework.org/wiki/index.php?title=Id-Based_Aligner_Step">
+	Id-Based Aligner</a></cite> (FE &gt; FE) - Aligns text units of two input 
+	documents based on their unique ids (resname).</li>
+	<li><cite><a href="codesremovalstep.html">Inline Codes Removal</a></cite> (FE &gt; FE) 
+	- Removes markers and/or content of inline codes from text units.</li>
+	<li><cite><a href="leveragingstep.html">Leveraging</a></cite> (FE &gt; FE) - 
+	Leverages existing translations into extracted text units.</li>
+	<li><a href="linebreakconversionstep.html"><cite>Line-Break Conversion</cite></a> 
+	(RD &gt; RD) - Converts line-breaks to a specified type.</li>
+	<li><cite><a href="qualitycheckstep.html">Quality Check</a></cite> (FE &gt; FE) - 
+	Detect potential quality issues by comparing the translation with their 
+	source content.</li>
+	<li><cite><a href="rawdocumenttofiltereventsstep.html">Raw Document to 
+	Filter Events</a></cite> (RD &gt; FE) - Extracts translatable data from a raw document 
+	and convert it into filter events.</li>
+	<li><cite>
+	<a href="http://okapiframework.org/wiki/index.php?title=Resource_Simplifier_Step">
+	Resource Simplifier</a></cite> (FE &gt; FE) - Creates multiple events from 
+	events with complex resources.</li>
+	<li><cite><a href="searchandreplacestep.html">Search and Replace</a></cite> 
+	(RD/FE &gt; RD/FE) - Performs search and replace actions.</li>
+	<li><cite><a href="segmentationstep.html">Segmentation</a></cite> (FE &gt; FE) 
+	- Segments extracted text.</li>
+	<li><cite><a href="sentencealignerstep.html">Sentence Alignment</a></cite> 
+	(RD &gt; RD) - Align the sentences of the text units of two documents.</li>
+	<li><cite><a href="simpletm2tmxstep.html">SimpleTM to TMX</a></cite> (RD &gt; 
+	RD) - Converts a SimpleTM TM into a TMX document.</li>
+	<li><cite><a href="termextractionstep.html">Term Extraction</a></cite> (FE &gt; 
+	FE) - Creates a list of possible terms from the input documents.</li>
+	<li><cite><a href="textmodificationstep.html">Text Modification</a></cite> 
+	(FE &gt; FE) - Modifies the content of the text units.</li>
+	<li><cite><a href="tmimportstep.html">TM Import</a></cite> (FE &gt; FE) - 
+	Imports text units into a Pensieve TM.</li>
+	<li><cite><a href="tokenizationstep.html">Tokenization</a></cite> (FE &gt; FE) 
+	- Tokenizes the text units content into different forms.</li>
+	<li><cite><a href="translationcomparisonstep.html">Translation Comparison</a></cite> 
+	(FE &gt; FE) - Compares the translations of the same entries between several files.</li>
+	<li><cite><a href="uriconversionstep.html">URI Conversion</a></cite> (FE &gt; 
+	FE) - Converts text into or from URI escaped notation.</li>
+	<li><cite><a href="charlistingstep.html">Used Characters Listing</a></cite> 
+	(FD &gt; FD) - Generates a list of all characters used in the translatable text 
+	of a given set of documents,</li>
+	<li><cite><a href="wordcountstep.html">Word Count</a></cite> (FE &gt; FE) - 
+	Perfoms word counts on text units.</li>
+	<li><cite>
+	<a href="http://okapiframework.org/wiki/index.php?title=XLIFF_Splitter_Step">
+	XLIFF Splitter</a></cite> (RD &gt; RD) - Splits the &lt;file&gt; elements of XLIFF 
+	input into separate documents.</li>
+	<li><cite>
+	<a href="http://okapiframework.org/wiki/index.php?title=XML_Validation_Step">
+	XML Validation</a></cite> (RD &gt; RD) - Performs well-formness check and, 
+	optionally, DTD or schema validation on XML files.</li>
+	<li><cite><a href="xsltransformstep.html">XSL Transform</a></cite> (RD &gt; RD) 
+	- Applies an XSLT template on the input documents.</li>
+</ul>
+<p>You may have additional steps available as plug-ins. For more information 
+about those steps, look in the <a href="../../dropins"><code>dropins</code> 
+directory of your installation</a>.</p>
+<p>&nbsp;</p>
+</body>
+</html>

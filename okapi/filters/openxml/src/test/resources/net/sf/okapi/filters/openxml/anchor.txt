@@ -1,0 +1,7 @@
+This file is used by OpenXMLZipFullFileTest and should not be deleted.
+This file helps locate the data directory by giving an anchor to a .class.getResource() request.
+
+If you would rather not have these RSIDs in your files, it's easy enough to turn off. Just go to the trust center and turn off
+the setting: "Store random number to improve combine accuracy" 
+
+

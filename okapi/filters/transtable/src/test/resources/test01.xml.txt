@@ -1,0 +1,7 @@
+TransTableV1	en	fr
+"okpCtx:tu=1"	"Text of the first record"	
+"okpCtx:tu=2"	"Description of the first record"	
+"okpCtx:tu=3"	"  Path:"	
+"okpCtx:tu=4"	"Path of the file to process"	
+"okpCtx:tu=5"	"Text of the third record"	
+"okpCtx:tu=6"	"Description of the first record"	

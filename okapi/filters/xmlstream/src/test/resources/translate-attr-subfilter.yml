@@ -1,0 +1,9 @@
+assumeWellformed: true
+preserve_whitespace: false
+global_pcdata_subfilter: okf_html
+exclude_by_default: true
+
+elements:
+  foo:
+    conditions: [translate, EQUALS, y]
+    ruleTypes: [TEXTUNIT]

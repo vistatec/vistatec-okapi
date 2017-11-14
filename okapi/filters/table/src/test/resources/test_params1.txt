@@ -1,0 +1,16 @@
+#v1
+sendEmptyTU.b = false		
+columnNamesLineNum.i = 2
+valuesStartLineNum.i = 2
+detectColumnsMode.i = 2
+numColumns.i = 2
+sendHeaderMode.i = 2
+trimMode.i = 2	
+fieldDelimiter =2
+textQualifier =2
+sourceIdColumns=2
+sourceColumns=2
+targetColumns=2
+commentColumns=2
+preserveWS.b = false
+useCodeFinder.b = false

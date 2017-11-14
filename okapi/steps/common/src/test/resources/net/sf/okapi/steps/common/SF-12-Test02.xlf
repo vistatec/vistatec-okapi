@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+<file datatype="javalistresourcebundle" original="/home/rmraya/workspace/SRXEditor/src/com/maxprograms/srxeditor/srxeditor.properties" source-language="en" target-language="es">
+<header>
+<tool tool-id="JavaPM" tool-name="Maxprograms JavaPM"/>
+</header>
+<body>
+<trans-unit approved="yes" id="About.0" xml:space="preserve"><source xml:lang="en">About...</source><target state="needs-review-translation" xml:lang="es">Acerca de...</target><?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741923485?>
+<source xml:lang="en">About...</source>
+<target xml:lang="es">Acerca de...</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134691?>
+<source xml:lang="en">About...</source>
+<target xml:lang="es">Acerca de...</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="About.1" xml:space="preserve">
+<source xml:lang="en">SRXEditor</source>
+<target xml:lang="es">SRXEditor</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-469963248?>
+<source xml:lang="en">SRXEditor</source>
+<target xml:lang="es">SRXEditor</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="About.2" xml:space="preserve">
+<source xml:lang="en">Version {0} - Build {1}</source>
+<target xml:lang="es">Versión {0} - Distribución {1}</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-469963247?>
+<source xml:lang="en">Version {0} - Build {1}</source>
+<target xml:lang="es">Versión {0} - Distribución {1}</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-469963247?>
+<source xml:lang="en">Version {0} - Build {1}</source>
+<target xml:lang="es">Versión {0} - Distribución {1}</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="About.3" xml:space="preserve">
+<source xml:lang="en">Copyright © 2008 Maxprograms</source>
+<target xml:lang="es">Copyright © 2008 Maxprograms</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-469963250?>
+<source xml:lang="en">Copyright © 2008 Maxprograms</source>
+<target xml:lang="es">Copyright © 2008 Maxprograms</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.0" xml:space="preserve">
+<source xml:lang="en">Language Rule</source>
+<target xml:lang="es">Regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-1894079101?>
+<source xml:lang="en">Language Rule</source>
+<target xml:lang="es">Regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.1" xml:space="preserve">
+<source xml:lang="en">Language Rule Name</source>
+<target xml:lang="es">Nombre de regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1657117628?>
+<source xml:lang="en">Language Rule Name</source>
+<target xml:lang="es">Nombre de regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.2" xml:space="preserve">
+<source xml:lang="en">Language Pattern</source>
+<target xml:lang="es">Expresión para idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1894079102?>
+<source xml:lang="en">Language Pattern</source>
+<target xml:lang="es">Expresión para idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.3" xml:space="preserve">
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1120624644?>
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-684833746?>
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.4" xml:space="preserve">
+<source xml:lang="en">Language pattern is incorrect.</source>
+<target xml:lang="es">La expresión para idioma es incorrecta.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1894079106?>
+<source xml:lang="en">Language pattern is incorrect.</source>
+<target xml:lang="es">La expresión para idioma es incorrecta.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="LangMapEditor.5" xml:space="preserve">
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1120624643?>
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713493?>
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.0" xml:space="preserve">
+<source xml:lang="en">Rule Editor</source>
+<target xml:lang="es">Editor de reglas</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531307?>
+<source xml:lang="en">Rule Editor</source>
+<target xml:lang="es">Editor de reglas</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.1" xml:space="preserve">
+<source xml:lang="en">Breaks Segment</source>
+<target xml:lang="es">Separa el segmento</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531308?>
+<source xml:lang="en">Breaks Segment</source>
+<target xml:lang="es">Separa el segmento</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.2" xml:space="preserve">
+<source xml:lang="en">Before Break</source>
+<target xml:lang="es">Antes de la separación</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531309?>
+<source xml:lang="en">Before Break</source>
+<target xml:lang="es">Antes de la separación</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.3" xml:space="preserve">
+<source xml:lang="en">After Break</source>
+<target xml:lang="es">Después de la separación</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531310?>
+<source xml:lang="en">After Break</source>
+<target xml:lang="es">Después de la separación</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.4" xml:space="preserve">
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1120624644?>
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-684833746?>
+<source xml:lang="en">Accept</source>
+<target xml:lang="es">Aceptar</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.5" xml:space="preserve">
+<source xml:lang="en">Before Break pattern is incorrect.</source>
+<target xml:lang="es">La expresión para antes de la separación es incorrecta.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531312?>
+<source xml:lang="en">Before Break pattern is incorrect.</source>
+<target xml:lang="es">La expresión para antes de la separación es incorrecta.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.6" xml:space="preserve">
+<source xml:lang="en">After Break pattern is incorrect.</source>
+<target xml:lang="es">La expresión para después de la separación es incorrecta.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531313?>
+<source xml:lang="en">After Break pattern is incorrect.</source>
+<target xml:lang="es">La expresión para después de la separación es incorrecta.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RuleEditor.7" xml:space="preserve">
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1120624643?>
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713493?>
+<source xml:lang="en">Cancel</source>
+<target xml:lang="es">Cancelar</target>
+</alt-trans></trans-unit>
+<trans-unit id="RulesTester.0" xml:space="preserve">
+<source xml:lang="en">Test Rules</source>
+<?sid 2015459032-0?></trans-unit>
+<trans-unit id="RulesTester.1" xml:space="preserve">
+<source xml:lang="en">Sample Text</source>
+<?sid 2015459032-0?><alt-trans match-quality="73" origin="Swordfish" xml:space="default">
+<?id 261955765-17--1712535690?>
+<source xml:lang="en">Special Text</source>
+<target xml:lang="es">Texto especial</target>
+</alt-trans></trans-unit>
+<trans-unit id="RulesTester.10" xml:space="preserve">
+<source xml:lang="en">Unknown error displaying results.</source>
+<?sid 2015459032-0?></trans-unit>
+<trans-unit approved="yes" id="RulesTester.11" xml:space="preserve">
+<source xml:lang="en">Close</source><target xml:lang="es">Cerrar</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1995085575?>
+<source xml:lang="en">Close</source>
+<target xml:lang="es">Cerrar</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-469963251?>
+<source xml:lang="en">Close</source>
+<target xml:lang="es">Cerrar</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="RulesTester.2" xml:space="preserve">
+<source xml:lang="en">Source Language</source><target xml:lang="es">Idioma origen</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--2071831686?>
+<source xml:lang="en">Source Language</source>
+<target xml:lang="es">Idioma origen</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-982217792?>
+<source xml:lang="en">Source Language</source>
+<target xml:lang="es">Idioma origen</target>
+</alt-trans></trans-unit>
+<trans-unit id="RulesTester.22" xml:space="preserve">
+<source xml:lang="en">Segmented Text</source>
+<?sid 2015459032-0?><alt-trans match-quality="55" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134786?>
+<source xml:lang="en">Delete Segment</source>
+<target xml:lang="es">Eliminar segmento</target>
+</alt-trans></trans-unit>
+<trans-unit id="RulesTester.3" xml:space="preserve">
+<source xml:lang="en">Test Rules</source>
+<?sid 2015459032-0?></trans-unit>
+<trans-unit id="RulesTester.5" xml:space="preserve">
+<source xml:lang="en">Enter text for segmenting.</source>
+<?sid 2015459032-0?></trans-unit>
+<trans-unit approved="yes" id="RulesTester.7" xml:space="preserve">
+<source xml:lang="en">Select source language.</source><target xml:lang="es">Seleccione el idioma origen.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 261955765-17--1456509221?>
+<source xml:lang="en">Select source language.</source>
+<target xml:lang="es">Seleccione el idioma origen.</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713526?>
+<source xml:lang="en">Select source language.</source>
+<target xml:lang="es">Seleccione el idioma origen.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.0" xml:space="preserve">
+<source xml:lang="en">SRXEditor</source>
+<target xml:lang="es">SRXEditor</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-469963248?>
+<source xml:lang="en">SRXEditor</source>
+<target xml:lang="es">SRXEditor</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.1" xml:space="preserve">
+<source xml:lang="en">Select a language rule.</source>
+<target xml:lang="es">Seleccione una regla de idioma.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024919?>
+<source xml:lang="en">Select a language rule.</source>
+<target xml:lang="es">Seleccione una regla de idioma.</target>
+</alt-trans><alt-trans match-quality="78" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713526?>
+<source xml:lang="en">Select source language.</source>
+<target xml:lang="es">Seleccione el idioma origen.</target>
+</alt-trans><alt-trans match-quality="76" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1118208937?>
+<source xml:lang="en">Select a language.</source>
+<target xml:lang="es">Seleccione un idioma.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.10" xml:space="preserve">
+<source xml:lang="en">Rules</source>
+<target xml:lang="es">Reglas</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096743?>
+<source xml:lang="en">Rules</source>
+<target xml:lang="es">Reglas</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.100" xml:space="preserve">
+<source xml:lang="en">Language</source>
+<target xml:lang="es">Idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0--1995085639?>
+<source xml:lang="en">Language</source>
+<target xml:lang="es">Idioma</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713458?>
+<source xml:lang="en">Language</source>
+<target xml:lang="es">Idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.101" xml:space="preserve">
+<source xml:lang="en">Chinese (Traditional)</source>
+<target xml:lang="es">Chino (Tradicional)</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-9--1084445550?>
+<source xml:lang="en">Chinese (Traditional)</source>
+<target xml:lang="es">Chino (Tradicional)</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.102" xml:space="preserve">
+<source xml:lang="en">English</source>
+<target xml:lang="es">Inglés</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927426?>
+<source xml:lang="en">English</source>
+<target xml:lang="es">Inglés</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134657?>
+<source xml:lang="en">English</source>
+<target xml:lang="es">Inglés</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.103" xml:space="preserve">
+<source xml:lang="en">Galician</source>
+<target xml:lang="es">Gallego</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927488?>
+<source xml:lang="en">Galician</source>
+<target xml:lang="es">Gallego</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0--467337869?>
+<source xml:lang="en">Galician</source>
+<target xml:lang="es">Gallego</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.104" xml:space="preserve">
+<source xml:lang="en">German</source>
+<target xml:lang="es">Alemán</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927489?>
+<source xml:lang="en">German</source>
+<target xml:lang="es">Alemán</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0--467337843?>
+<source xml:lang="en">German</source>
+<target xml:lang="es">Alemán</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.105" xml:space="preserve">
+<source xml:lang="en">Norwegian</source>
+<target xml:lang="es">Noruego</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-25--1084445549?>
+<source xml:lang="en">Norwegian</source>
+<target xml:lang="es">Noruego</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.106" xml:space="preserve">
+<source xml:lang="en">Polish</source>
+<target xml:lang="es">Polaco</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927427?>
+<source xml:lang="en">Polish</source>
+<target xml:lang="es">Polaco</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134658?>
+<source xml:lang="en">Polish</source>
+<target xml:lang="es">Polaco</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.107" xml:space="preserve">
+<source xml:lang="en">Portuguese</source>
+<target xml:lang="es">Portugués</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927453?>
+<source xml:lang="en">Portuguese</source>
+<target xml:lang="es">Portugués</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134659?>
+<source xml:lang="en">Portuguese</source>
+<target xml:lang="es">Portugués</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.108" xml:space="preserve">
+<source xml:lang="en">Portuguese (Brazilian)</source>
+<target xml:lang="es">Portugués (Brasileño)</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927429?>
+<source xml:lang="en">Portuguese (Brazilian)</source>
+<target xml:lang="es">Portugués (Brasileño)</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.11" xml:space="preserve">
+<source xml:lang="en">Break</source>
+<target xml:lang="es">Separación</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-2084664381?>
+<source xml:lang="en">Break</source>
+<target xml:lang="es">Separación</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.12" xml:space="preserve">
+<source xml:lang="en">Before Break</source>
+<target xml:lang="es">Antes de la separación</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531309?>
+<source xml:lang="en">Before Break</source>
+<target xml:lang="es">Antes de la separación</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.13" xml:space="preserve">
+<source xml:lang="en">After Break</source>
+<target xml:lang="es">Después de la separación</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1959531310?>
+<source xml:lang="en">After Break</source>
+<target xml:lang="es">Después de la separación</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.14" xml:space="preserve">
+<source xml:lang="en">Move Rule Up</source>
+<target xml:lang="es">Subir regla</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096747?>
+<source xml:lang="en">Move Rule Up</source>
+<target xml:lang="es">Subir regla</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.15" xml:space="preserve">
+<source xml:lang="en">Move Rule Down</source>
+<target xml:lang="es">Bajar regla</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096748?>
+<source xml:lang="en">Move Rule Down</source>
+<target xml:lang="es">Bajar regla</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.16" xml:space="preserve">
+<source xml:lang="en">Add Rule</source>
+<target xml:lang="es">Añadir regla</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-2084664384?>
+<source xml:lang="en">Add Rule</source>
+<target xml:lang="es">Añadir regla</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.17" xml:space="preserve">
+<source xml:lang="en">Edit Rule</source>
+<target xml:lang="es">Modificar regla</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-200086326?>
+<source xml:lang="en">Edit Rule</source>
+<target xml:lang="es">Modificar regla</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.18" xml:space="preserve">
+<source xml:lang="en">Remove Rule</source>
+<target xml:lang="es">Eliminar regla</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-200086357?>
+<source xml:lang="en">Remove Rule</source>
+<target xml:lang="es">Eliminar regla</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.19" xml:space="preserve">
+<source xml:lang="en">New SRX File</source>
+<target xml:lang="es">Nuevo archivo SRX</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096752?>
+<source xml:lang="en">New SRX File</source>
+<target xml:lang="es">Nuevo archivo SRX</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.2" xml:space="preserve">
+<source xml:lang="en">Language Rules</source>
+<target xml:lang="es">Reglas de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-2101961222?>
+<source xml:lang="en">Language Rules</source>
+<target xml:lang="es">Reglas de idioma</target>
+</alt-trans><alt-trans match-quality="62" origin="Stingray" xml:space="default">
+<?id -1581266857-0-982217792?>
+<source xml:lang="en">Source Language</source>
+<target xml:lang="es">Idioma origen</target>
+</alt-trans></trans-unit>
+<trans-unit id="SRXEditor.20" xml:space="preserve">
+<source xml:lang="en">Test Rules</source>
+<?sid 2015459032-0?></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.21" xml:space="preserve">
+<source xml:lang="en">View Help</source>
+<target xml:lang="es">Ver ayuda</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--910635587?>
+<source xml:lang="en">View Help</source>
+<target xml:lang="es">Ver ayuda</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134603?>
+<source xml:lang="en">View Help</source>
+<target xml:lang="es">Ver ayuda</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.22" xml:space="preserve">
+<source xml:lang="en">Open SRX File</source>
+<target xml:lang="es">Abrir archivo SRX</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096776?>
+<source xml:lang="en">Open SRX File</source>
+<target xml:lang="es">Abrir archivo SRX</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.23" xml:space="preserve">
+<source xml:lang="en">At least one language rule is required.</source>
+<target xml:lang="es">Se requiere al menos una regla.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096777?>
+<source xml:lang="en">At least one language rule is required.</source>
+<target xml:lang="es">Se requiere al menos una regla.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.24" xml:space="preserve">
+<source xml:lang="en">Delete selected language rule?</source>
+<target xml:lang="es">¿Borrar regla de idioma seleccionada?</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096778?>
+<source xml:lang="en">Delete selected language rule?</source>
+<target xml:lang="es">¿Borrar regla de idioma seleccionada?</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.25" xml:space="preserve">
+<source xml:lang="en">Save SRX File</source>
+<target xml:lang="es">Guardar archivo SRX</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096779?>
+<source xml:lang="en">Save SRX File</source>
+<target xml:lang="es">Guardar archivo SRX</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.27" xml:space="preserve">
+<source xml:lang="en">Error launching help file.</source>
+<target xml:lang="es">Error al mostrar ayuda.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1103719879?>
+<source xml:lang="en">Error launching help file.</source>
+<target xml:lang="es">Error al mostrar ayuda.</target>
+</alt-trans><alt-trans match-quality="77" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1867668049?>
+<source xml:lang="en">Error displaying help file.</source>
+<target xml:lang="es">Error al visualizar el archivo de ayuda.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.28" xml:space="preserve">
+<source xml:lang="en">Unknown error saving file.</source>
+<target xml:lang="es">Error desconocido al guardar archivo.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096782?>
+<source xml:lang="en">Unknown error saving file.</source>
+<target xml:lang="es">Error desconocido al guardar archivo.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.29" xml:space="preserve">
+<source xml:lang="en">SRXEditor Help\tF1</source>
+<target xml:lang="es">Ayuda de SRXEditor\tF1</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096783?>
+<source xml:lang="en">SRXEditor Help\tF1</source>
+<target xml:lang="es">Ayuda de SRXEditor\tF1</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.3" xml:space="preserve">
+<source xml:lang="en">Language Rule Name</source>
+<target xml:lang="es">Nombre de regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1657117628?>
+<source xml:lang="en">Language Rule Name</source>
+<target xml:lang="es">Nombre de regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.30" xml:space="preserve">
+<source xml:lang="en">Requested changes will be effective after application restarts.</source>
+<target xml:lang="es">Los cambios solicitados serán aplicados al reiniciar el programa.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-1835064887?>
+<source xml:lang="en">Requested changes will be effective after application restarts.</source>
+<target xml:lang="es">Los cambios solicitados serán aplicados al reiniciar el programa.</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0--467337841?>
+<source xml:lang="en">Requested changes will be effective after application restarts.</source>
+<target xml:lang="es">Los cambios solicitados serán aplicados al reiniciar el programa.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.31" xml:space="preserve">
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 529695671-16-289393242?>
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713486?>
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.32" xml:space="preserve">
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0-2013852383?>
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713487?>
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.33" xml:space="preserve">
+<source xml:lang="en">Error saving language preferences.</source>
+<target xml:lang="es">Error al guardar preferencias de idiomas.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-144422169?>
+<source xml:lang="en">Error saving language preferences.</source>
+<target xml:lang="es">Error al guardar preferencias de idiomas.</target>
+</alt-trans><alt-trans match-quality="77" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134565?>
+<source xml:lang="en">Error saving auto-save preferences.</source>
+<target xml:lang="es">Error al guardar preferencias de respaldo automático.</target>
+</alt-trans><alt-trans match-quality="75" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1867668045?>
+<source xml:lang="en">Error saving font preferences.</source>
+<target xml:lang="es">Error al guardar preferencias de fuentes.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.34" xml:space="preserve">
+<source xml:lang="en">Selected file is not an SRX document.</source>
+<target xml:lang="es">El archivo seleccionado no es un documento SRX.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096809?>
+<source xml:lang="en">Selected file is not an SRX document.</source>
+<target xml:lang="es">El archivo seleccionado no es un documento SRX.</target>
+</alt-trans><alt-trans match-quality="79" origin="Stingray" xml:space="default">
+<?id -1581266857-0-982217756?>
+<source xml:lang="en">Select file is not a TMX document.</source>
+<target xml:lang="es">El archivo seleccionado no es un documento TMX.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.37" xml:space="preserve">
+<source xml:lang="en">Convert file to SRX 2.0 format?</source>
+<target xml:lang="es">¿Convertir archivo al formato SRX 2.0?</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096812?>
+<source xml:lang="en">Convert file to SRX 2.0 format?</source>
+<target xml:lang="es">¿Convertir archivo al formato SRX 2.0?</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.38" xml:space="preserve">
+<source xml:lang="en">Unknown error opening selected file.</source>
+<target xml:lang="es">Error desconocido al abrir el archivo seleccionado.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096813?>
+<source xml:lang="en">Unknown error opening selected file.</source>
+<target xml:lang="es">Error desconocido al abrir el archivo seleccionado.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.39" xml:space="preserve">
+<source xml:lang="en">&amp;File</source>
+<target xml:lang="es">&amp;Archivo</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1974644766?>
+<source xml:lang="en">&amp;File</source>
+<target xml:lang="es">&amp;Archivo</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134604?>
+<source xml:lang="en">&amp;File</source>
+<target xml:lang="es">&amp;Archivo</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.4" xml:space="preserve">
+<source xml:lang="en">Language Pattern</source>
+<target xml:lang="es">Expresión para idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1305743243-24-1894079102?>
+<source xml:lang="en">Language Pattern</source>
+<target xml:lang="es">Expresión para idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.40" xml:space="preserve">
+<source xml:lang="en">New File</source>
+<target xml:lang="es">Nuevo archivo</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 970027487-20--736662994?>
+<source xml:lang="en">New File</source>
+<target xml:lang="es">Nuevo archivo</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.41" xml:space="preserve">
+<source xml:lang="en">Open File</source>
+<target xml:lang="es">Abrir archivo</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1084445585?>
+<source xml:lang="en">Open File</source>
+<target xml:lang="es">Abrir archivo</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.42" xml:space="preserve">
+<source xml:lang="en">Save File</source>
+<target xml:lang="es">Guardar archivo</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1084445583?>
+<source xml:lang="en">Save File</source>
+<target xml:lang="es">Guardar archivo</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.43" xml:space="preserve">
+<source xml:lang="en">Close File</source>
+<target xml:lang="es">Cerrar archivo</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1084445584?>
+<source xml:lang="en">Close File</source>
+<target xml:lang="es">Cerrar archivo</target>
+</alt-trans><alt-trans match-quality="61" origin="Stingray" xml:space="default">
+<?id -1581266857-0-876855393?>
+<source xml:lang="en">Source File</source>
+<target xml:lang="es">Archivo origen</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.44" xml:space="preserve">
+<source xml:lang="en">Save File As...</source>
+<target xml:lang="es">Guardar archivo como...</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096840?>
+<source xml:lang="en">Save File As...</source>
+<target xml:lang="es">Guardar archivo como...</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.46" xml:space="preserve">
+<source xml:lang="en">Select a rule.</source>
+<target xml:lang="es">Seleccione una regla.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096842?>
+<source xml:lang="en">Select a rule.</source>
+<target xml:lang="es">Seleccione una regla.</target>
+</alt-trans><alt-trans match-quality="72" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713520?>
+<source xml:lang="en">Select SRX rules.</source>
+<target xml:lang="es">Seleccione reglas SRX.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.47" xml:space="preserve">
+<source xml:lang="en">Exit\tAlt + F4</source>
+<target xml:lang="es">Salir\tAlt + F4</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096843?>
+<source xml:lang="en">Exit\tAlt + F4</source>
+<target xml:lang="es">Salir\tAlt + F4</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.48" xml:space="preserve">
+<source xml:lang="en">Delete selected rule?</source>
+<target xml:lang="es">¿Eliminar la regla seleccionada?</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096844?>
+<source xml:lang="en">Delete selected rule?</source>
+<target xml:lang="es">¿Eliminar la regla seleccionada?</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.49" xml:space="preserve">
+<source xml:lang="en">Unknown error upgrading selected file.</source>
+<target xml:lang="es">Error desconocido al actualizar el archivo seleccionado.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096845?>
+<source xml:lang="en">Unknown error upgrading selected file.</source>
+<target xml:lang="es">Error desconocido al actualizar el archivo seleccionado.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.5" xml:space="preserve">
+<source xml:lang="en">Move Language Rule Up</source>
+<target xml:lang="es">Subir regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024915?>
+<source xml:lang="en">Move Language Rule Up</source>
+<target xml:lang="es">Subir regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.50" xml:space="preserve">
+<source xml:lang="en">Quit\tCmd + Q</source>
+<target xml:lang="es">Salir\tCmd + Q</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096867?>
+<source xml:lang="en">Quit\tCmd + Q</source>
+<target xml:lang="es">Salir\tCmd + Q</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.51" xml:space="preserve">
+<source xml:lang="en">Quit\tCtrl + Q</source>
+<target xml:lang="es">Salir\tCtrl + Q</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096868?>
+<source xml:lang="en">Quit\tCtrl + Q</source>
+<target xml:lang="es">Salir\tCtrl + Q</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.52" xml:space="preserve">
+<source xml:lang="en">&amp;Options</source>
+<target xml:lang="es">&amp;Opciones</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1974644761?>
+<source xml:lang="en">&amp;Options</source>
+<target xml:lang="es">&amp;Opciones</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134634?>
+<source xml:lang="en">&amp;Options</source>
+<target xml:lang="es">&amp;Opciones</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.54" xml:space="preserve">
+<source xml:lang="en">&amp;Help</source>
+<target xml:lang="es">A&amp;yuda</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--1084445641?>
+<source xml:lang="en">&amp;Help</source>
+<target xml:lang="es">A&amp;yuda</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134688?>
+<source xml:lang="en">&amp;Help</source>
+<target xml:lang="es">A&amp;yuda</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.55" xml:space="preserve">
+<source xml:lang="en">About...</source>
+<target xml:lang="es">Acerca de...</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741923485?>
+<source xml:lang="en">About...</source>
+<target xml:lang="es">Acerca de...</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134691?>
+<source xml:lang="en">About...</source>
+<target xml:lang="es">Acerca de...</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.56" xml:space="preserve">
+<source xml:lang="en">Save current file before proceeding?</source>
+<target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--910632710?>
+<source xml:lang="en">Save current file before proceeding?</source>
+<target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1867668044?>
+<source xml:lang="en">Save current file before proceeding?</source>
+<target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.6" xml:space="preserve">
+<source xml:lang="en">Move Language Rule Down</source>
+<target xml:lang="es">Bajar regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024914?>
+<source xml:lang="en">Move Language Rule Down</source>
+<target xml:lang="es">Bajar regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.60" xml:space="preserve">
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 529695671-16-289393242?>
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713486?>
+<source xml:lang="en">SRX Files [*.srx]</source>
+<target xml:lang="es">Archivos SRX [*.srx]</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.61" xml:space="preserve">
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -2007591703-0-2013852383?>
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1412713487?>
+<source xml:lang="en">All Files [*.*]</source>
+<target xml:lang="es">Todos los archivos [*.*]</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.64" xml:space="preserve">
+<source xml:lang="en">Save current file before proceeding?</source><target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12--910632710?>
+<source xml:lang="en">Save current file before proceeding?</source>
+<target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-1867668044?>
+<source xml:lang="en">Save current file before proceeding?</source>
+<target xml:lang="es">¿Guardar el archivo actual antes de proceder?</target>
+</alt-trans></trans-unit>
+<trans-unit id="SRXEditor.65" xml:space="preserve">
+<source xml:lang="en">Unknown error testing rules.</source>
+<?sid 2015459032-0?><alt-trans match-quality="70" origin="Swordfish" xml:space="default">
+<?id 532072435-14--1642317919?>
+<source xml:lang="en">Unknown error converting file.</source>
+<target xml:lang="es">Error desconocido al convertir archivo.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.66" xml:space="preserve">
+<source xml:lang="en">Russian</source>
+<target xml:lang="es">Ruso</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927452?>
+<source xml:lang="en">Russian</source>
+<target xml:lang="es">Ruso</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134660?>
+<source xml:lang="en">Russian</source>
+<target xml:lang="es">Ruso</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.68" xml:space="preserve">
+<source xml:lang="en">Spanish</source>
+<target xml:lang="es">Español</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741928164?>
+<source xml:lang="en">Spanish</source>
+<target xml:lang="es">Español</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134661?>
+<source xml:lang="en">Spanish</source>
+<target xml:lang="es">Español</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.7" xml:space="preserve">
+<source xml:lang="en">Add Language Rule</source>
+<target xml:lang="es">Añadir regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024913?>
+<source xml:lang="en">Add Language Rule</source>
+<target xml:lang="es">Añadir regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.70" xml:space="preserve">
+<source xml:lang="en">Turkish</source>
+<target xml:lang="es">Turco</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741927454?>
+<source xml:lang="en">Turkish</source>
+<target xml:lang="es">Turco</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134662?>
+<source xml:lang="en">Turkish</source>
+<target xml:lang="es">Turco</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.72" xml:space="preserve">
+<source xml:lang="en">Ukrainian</source>
+<target xml:lang="es">Ucraniano</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id -1676141813-12-741928165?>
+<source xml:lang="en">Ukrainian</source>
+<target xml:lang="es">Ucraniano</target>
+</alt-trans><alt-trans match-quality="100" origin="Stingray" xml:space="default">
+<?id -1581266857-0-2063134663?>
+<source xml:lang="en">Ukrainian</source>
+<target xml:lang="es">Ucraniano</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.75" xml:space="preserve">
+<source xml:lang="en">Unknown error creating file.</source>
+<target xml:lang="es">Error desconocido al crear archivo.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0-842096934?>
+<source xml:lang="en">Unknown error creating file.</source>
+<target xml:lang="es">Error desconocido al crear archivo.</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.8" xml:space="preserve">
+<source xml:lang="en">Edit Language Rule</source>
+<target xml:lang="es">Modificar regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024912?>
+<source xml:lang="en">Edit Language Rule</source>
+<target xml:lang="es">Modificar regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="SRXEditor.9" xml:space="preserve">
+<source xml:lang="en">Remove Language Rule</source>
+<target xml:lang="es">Eliminar regla de idioma</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--527024911?>
+<source xml:lang="en">Remove Language Rule</source>
+<target xml:lang="es">Eliminar regla de idioma</target>
+</alt-trans></trans-unit>
+<trans-unit approved="yes" id="UpgradeSRX.2" xml:space="preserve">
+<source xml:lang="en">Incorrect SRX version.</source>
+<target xml:lang="es">Versión incorrecta de SRX.</target>
+<?sid 2015459032-0?><alt-trans match-quality="100" origin="Swordfish" xml:space="default">
+<?id 2015459032-0--1184702239?>
+<source xml:lang="en">Incorrect SRX version.</source>
+<target xml:lang="es">Versión incorrecta de SRX.</target>
+</alt-trans></trans-unit>
+</body>
+</file>
+</xliff>

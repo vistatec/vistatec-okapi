@@ -1,0 +1,138 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Tokenization</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Tokenization Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Tokenization_Step">http://okapiframework.org/wiki/index.php?title=Tokenization_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step creates annotations containing different tokenized forms of the 
+text units.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+
+<p>The following token types are recognized:</p>
+
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<th>Token Type</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><code>WORD</code></td>
+		<td>A run of characters constituting a word of the given language.</td>
+	</tr>
+	<tr>
+		<td><code>NUMBER</code></td>
+		<td>Numbers, including any commas or points symbols.</td>
+	</tr>
+	<tr>
+		<td><code>WHITESPACE</code></td>
+		<td>Whitespace characters as defined by the Unicode Consortium standards.</td>
+	</tr>
+	<tr>
+		<td><code>PUNCTUATION</code></td>
+		<td>Punctuation characters as defined by the Unicode Consortium standards.</td>
+	</tr>
+	<tr>
+		<td><code>DATE</code></td>
+		<td>Dates in the <code>MM/DD/YYYY</code> format.</td>
+	</tr>
+	<tr>
+		<td><code>TIME</code></td>
+		<td>Time separated by either <code>:</code> or <code>.</code> (24 hour, 12 hour with AM or PM).</td>
+	</tr>
+	<tr>
+		<td><code>CURRENCY</code></td>
+		<td>Sums in US dollars.</td>
+	</tr>
+	<tr>
+		<td><code>ABBREVIATION</code></td>
+		<td>Abbreviations like <code>pct</code> in <code>3.3pct, U.S., USD</code>.</td>
+	</tr>
+	<tr>
+		<td><code>MARKUP</code></td>
+		<td>A run that begins with <code><</code> and ends with <code>></code> like in HTML and XML.</td>
+	</tr>
+	<tr>
+		<td><code>E-MAIL</code></td>
+		<td>E-mail addresses.</td>
+	</tr>
+	<tr>
+		<td><code>INTERNET</code></td>
+		<td>An Internet address (URI or IP): <code>http://www.somesite.org/foo/index.html, 192.168.0.5.</code></td>
+	</tr>
+	<tr>
+		<td><code>COMPANY</code></td>
+		<td>Company names like <code>AT&T, P&G, Johnson&Johnson.</code></td>
+	</tr>
+	<tr>
+		<td><code>EMOTICON</code></td>
+		<td>Emoticon sequences like <code>:-)</code>.</td>
+	</tr>
+	<tr>
+		<td><code>IDEOGRAM</code></td>
+		<td>Ideograms as defined by the Unicode Consortium standards.</td>
+	</tr>
+	<tr>
+		<td><code>KANA</code></td>
+		<td>Hiragana, Katakana (Japanese).</td>
+	</tr>
+	<tr>
+		<td><code>STOPWORD</code></td>
+		<td>Stop-word (frequent words with no important significance, often filtered out by NLP tools).</td>
+	</tr>	
+</table>
+
+<p>The created token annotations can be retrieved by other steps down the pipeline, or by external tools.</p>
+
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Tokenize source</cite> -- Set this option to tokenize the content of 
+the source.</p>
+<p><cite>Tokenize targets</cite> -- Set this option to tokenize the content of 
+the different selected targets.</p>
+<p><cite>Select languages, or specify a locale filter</cite> -- Specify what locales should be tokenized. Leave the field empty to select all locales. Press the 
+<cite>Select</cite> button to choose what languages should be tokenized, or type in a locale filter string following these syntactic rules:</p>
+<ul>
+<li>The locale filter string can list one or more locale descriptors.</li>
+<li>Locale descriptors should be separated with a space or comma.</li>
+<li>A locale descriptor represents a locale tag, mask, or regular expression.</li>
+</ul>
+<ul>
+<li>The locale tag has one to tree fields: language, region, and user data, separated with a dash. Example: <pre>en, en-us, en-us-win</pre></li>
+<li>The mask contains the * wildcard in either or all of the three fields. Examples: <pre>en-*, *-us, *-*-win</pre></li>
+<li>The regular expression (in Java regex format) describes a set of allowed locale tags. Example: this regular expression allows the en-* and es-* masks, and en-us, en-gb, es-us locale tags.<pre>e[ns]-.+</pre></li>
+<li>To specify that the given locale descriptor should be excluded, prepend it with !. Example: all English locales except English-New Zealand.<pre>en !en-nz</pre></li>
+<li>A regular expression should be prepended with @. Example: <pre>@e[ns]-.+</pre></li>
+<li>To provide flags for a regular expression, prepend the decimal flags value with ^. Example: <pre>@e[ns]-.+ ^8</pre></li>
+</ul>
+
+<p><cite>Select tokens to extract</cite> -- Specify what types of tokens should be generated. Leave the field empty to generate all types of token available. Press the 
+<cite>Select</cite> button to choose what token types should be generated, or list the token types, separating them with a comma. (The field automatically converts to 
+uppercase.)</p>
+<p>&nbsp;</p>
+</body>
+</html>

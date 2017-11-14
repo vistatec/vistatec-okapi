@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.common.removetarget.RemoveTargetStep">#v1
+tusForTargetRemoval=
+targetLocalesToKeep=
+filterBasedOnIds.b=true
+removeTUIfNoTarget.b=false</step>
+<step class="net.sf.okapi.steps.formatconversion.FormatConversionStep">#v1
+singleOutput.b=false
+autoExtensions.b=true
+targetStyle.i=0
+outputPath=
+outputFormat=table
+useGenericCodes.b=true
+skipEntriesWithoutText.b=true
+approvedEntriesOnly.b=false
+overwriteSameSource.b=false</step>
+</rainbowPipeline>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="proptest.properties" source-language="en" target-language="fr" datatype="x-text/x-properties" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="1" resname="tricky3" xml:space="preserve">
+<source xml:lang="en">\:</source>
+<target xml:lang="fr">\:</target>
+</trans-unit>
+<trans-unit id="2" resname="tricky4" xml:space="preserve">
+<source xml:lang="en">\=</source>
+<target xml:lang="fr">\=</target>
+</trans-unit>
+<trans-unit id="3" resname="tricky5" xml:space="preserve">
+<source xml:lang="en">\\</source>
+<target xml:lang="fr">\\</target>
+</trans-unit>
+<trans-unit id="4" resname="tricky6\=" xml:space="preserve">
+<source xml:lang="en">\=</source>
+<target xml:lang="fr">\=</target>
+</trans-unit>
+<trans-unit id="5" resname="key1" xml:space="preserve">
+<source xml:lang="en">Text 1</source>
+<target xml:lang="fr">Text 1</target>
+</trans-unit>
+<trans-unit id="6" resname="key2" xml:space="preserve">
+<source xml:lang="en">Text 2</source>
+<target xml:lang="fr">Text 2</target>
+</trans-unit>
+<trans-unit id="7" resname="key3" xml:space="preserve">
+<source xml:lang="en">Text 3</source>
+<target xml:lang="fr">Text 3</target>
+</trans-unit>
+<trans-unit id="8" resname="key\:\=" xml:space="preserve">
+<source xml:lang="en">Text for 'key:='</source>
+<target xml:lang="fr">Text for 'key:='</target>
+</trans-unit>
+<trans-unit id="9" resname="key4" xml:space="preserve">
+<source xml:lang="en">Text 4</source>
+<target xml:lang="fr">Text 4</target>
+</trans-unit>
+<trans-unit id="10" resname="key5" xml:space="preserve">
+<source xml:lang="en">Text 5</source>
+<target xml:lang="fr">Text 5</target>
+</trans-unit>
+<trans-unit id="11" resname="key6" xml:space="preserve">
+<source xml:lang="en">Text 6 with 4 trailing spaces    </source>
+<target xml:lang="fr">Text 6 with 4 trailing spaces    </target>
+</trans-unit>
+<trans-unit id="12" resname="key7_with\ 1-space" xml:space="preserve">
+<source xml:lang="en">[Text of this key</source>
+<target xml:lang="fr">[Text of this key</target>
+</trans-unit>
+<trans-unit id="13" resname="key8" xml:space="preserve">
+<source xml:lang="en">Text 8 originally on several lines.</source>
+<target xml:lang="fr">Text 8 originally on several lines.</target>
+</trans-unit>
+<trans-unit id="14" resname="extendedChars" xml:space="preserve">
+<source xml:lang="en">ź=z-acute</source>
+<target xml:lang="fr">ź=z-acute</target>
+<note> Comments
+ Comments</note>
+</trans-unit>
+<trans-unit id="15" resname="extchars1" xml:space="preserve">
+<source xml:lang="en">Æ=AE.</source>
+<target xml:lang="fr">Æ=AE.</target>
+</trans-unit>
+<trans-unit id="16" resname="extchars2" xml:space="preserve">
+<source xml:lang="en">Æ=AE.</source>
+<target xml:lang="fr">Æ=AE.</target>
+</trans-unit>
+<trans-unit id="17" resname="extchars3" xml:space="preserve">
+<source xml:lang="en">Æ=AE.</source>
+<target xml:lang="fr">Æ=AE.</target>
+</trans-unit>
+<trans-unit id="18" resname="menuSave" xml:space="preserve">
+<source xml:lang="en">Save</source>
+<target xml:lang="fr">Save</target>
+<note> some comment</note>
+</trans-unit>
+<trans-unit id="19" resname="menuEdit" xml:space="preserve">
+<source xml:lang="en">Edit</source>
+<target xml:lang="fr">Edit</target>
+</trans-unit>
+<trans-unit id="20" resname="errCantFindFile" xml:space="preserve">
+<source xml:lang="en">Cannot find the input file.</source>
+<target xml:lang="fr">Cannot find the input file.</target>
+<note> Error messages</note>
+</trans-unit>
+<trans-unit id="21" resname="errProcessStopped" xml:space="preserve">
+<source xml:lang="en">The process has been aborted by the user.</source>
+<target xml:lang="fr">The process has been aborted by the user.</target>
+</trans-unit>
+<trans-unit id="22" resname="template" xml:space="preserve">
+<source xml:lang="en">At <x id="1"/> on <x id="2"/>, we detected <x id="3"/> spaceships on the planet <x id="4"/>.</source>
+<target xml:lang="fr">At <x id="1"/> on <x id="2"/>, we detected <x id="3"/> spaceships on the planet <x id="4"/>.</target>
+</trans-unit>
+<trans-unit id="23" resname="planet" xml:space="preserve">
+<source xml:lang="en">Mars</source>
+<target xml:lang="fr">Mars</target>
+</trans-unit>
+<trans-unit id="24" resname="id101" xml:space="preserve">
+<source xml:lang="en">Text that must be translated</source>
+<target xml:lang="fr">Text that must be translated</target>
+</trans-unit>
+<trans-unit id="25" resname="id103" xml:space="preserve">
+<source xml:lang="en">Text should be translated.</source>
+<target xml:lang="fr">Text should be translated.</target>
+<note>_btext</note>
+</trans-unit>
+<trans-unit id="26" resname="id105" xml:space="preserve">
+<source xml:lang="en">Text should be translated.</source>
+<target xml:lang="fr">Text should be translated.</target>
+</trans-unit>
+<trans-unit id="27" resname="id107" xml:space="preserve">
+<source xml:lang="en">Text should be translated.</source>
+<target xml:lang="fr">Text should be translated.</target>
+<note>_text</note>
+</trans-unit>
+<trans-unit id="28" resname="id109" xml:space="preserve">
+<source xml:lang="en">Text should be translated.</source>
+<target xml:lang="fr">Text should be translated.</target>
+<note>_eskip</note>
+</trans-unit>
+<trans-unit id="29" resname="htmlText" xml:space="preserve">
+<source xml:lang="en"><x id="1"/>Bold text&lt;/> and some other text.</source>
+<target xml:lang="fr"><x id="1"/>Bold text&lt;/> and some other text.</target>
+</trans-unit>
+<trans-unit id="30" resname="test200" xml:space="preserve">
+<source xml:lang="en">Ć=C-acute, À=A-grave, A=A, Љ=U+0409, ß=sharp-s, etc.</source>
+<target xml:lang="fr">Ć=C-acute, À=A-grave, A=A, Љ=U+0409, ß=sharp-s, etc.</target>
+</trans-unit>
+<trans-unit id="31" resname="tricky1" xml:space="preserve">
+<source xml:lang="en">Test\\</source>
+<target xml:lang="fr">Test\\</target>
+<note> Test a few tricky entries:</note>
+</trans-unit>
+<trans-unit id="32" resname="tricky2" xml:space="preserve">
+<source xml:lang="en">Test\\_and after.</source>
+<target xml:lang="fr">Test\\_and after.</target>
+</trans-unit>
+<trans-unit id="33" resname="tricky6" xml:space="preserve">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+<note> two empty entries:</note>
+</trans-unit>
+<trans-unit id="34" resname="trick7" xml:space="preserve">
+<source xml:lang="en"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+<trans-unit id="35" resname="keyA" xml:space="preserve">
+<source xml:lang="en">Text A</source>
+<target xml:lang="fr">Text A</target>
+</trans-unit>
+<trans-unit id="36" resname="keyB" xml:space="preserve">
+<source xml:lang="en">Text B</source>
+<target xml:lang="fr">Text B</target>
+</trans-unit>
+<trans-unit id="37" resname="keyC" xml:space="preserve">
+<source xml:lang="en">Text C</source>
+<target xml:lang="fr">Text C</target>
+</trans-unit>
+<trans-unit id="38" resname="keyD" xml:space="preserve">
+<source xml:lang="en">Text D</source>
+<target xml:lang="fr">Text D</target>
+</trans-unit>
+<trans-unit id="39" resname="KeyS1" xml:space="preserve">
+<source xml:lang="en">This is the sentence 1. This is the second sentence: Which is like this, the third one.</source>
+<target xml:lang="fr">This is the sentence 1. This is the second sentence: Which is like this, the third one.</target>
+<note>Test with properties</note>
+</trans-unit>
+<trans-unit id="40" resname="KeyHTML" xml:space="preserve">
+<source xml:lang="en">Some HTML <x id="1"/>Text in HTML. With <x id="2"/>tags<x id="3"/>. And without.<x id="4"/></source>
+<target xml:lang="fr">Some HTML <x id="1"/>Text in HTML. With <x id="2"/>tags<x id="3"/>. And without.<x id="4"/></target>
+</trans-unit>
+<trans-unit id="41" resname="Key1" xml:space="preserve">
+<source xml:lang="en">Text of key1 é=aacute; à=agrave</source>
+<target xml:lang="fr">Text of key1 é=aacute; à=agrave</target>
+<note> Comments with one empty line before and one after</note>
+</trans-unit>
+<trans-unit id="42" resname="Key2" xml:space="preserve">
+<source xml:lang="en">Text of key1 é=00e9</source>
+<target xml:lang="fr">Text of key1 é=00e9</target>
+</trans-unit>
+<trans-unit id="43" resname="textID101" xml:space="preserve">
+<source xml:lang="en">This is the text for textID101</source>
+<target xml:lang="fr">This is the text for textID101</target>
+<note>_text</note>
+</trans-unit>
+<trans-unit id="44" resname="textID103" xml:space="preserve">
+<source xml:lang="en">This is the text for textID103</source>
+<target xml:lang="fr">This is the text for textID103</target>
+<note>_eskip</note>
+</trans-unit>
+<trans-unit id="45" resname="textID104" xml:space="preserve">
+<source xml:lang="en">This is the text for textID104</source>
+<target xml:lang="fr">This is the text for textID104</target>
+<note>_btext</note>
+</trans-unit>
+<trans-unit id="46" resname="textID106" xml:space="preserve">
+<source xml:lang="en">This is the text for textID106</source>
+<target xml:lang="fr">This is the text for textID106</target>
+</trans-unit>
+<trans-unit id="47" resname="textID107" xml:space="preserve">
+<source xml:lang="en">This is the text for textID107</source>
+<target xml:lang="fr">This is the text for textID107</target>
+<note>_etext</note>
+</trans-unit>
+<trans-unit id="48" resname="key4" xml:space="preserve">
+<source xml:lang="en">Text of key4</source>
+<target xml:lang="fr">Text of key4</target>
+<note>_text</note>
+</trans-unit>
+<trans-unit id="49" resname="key6" xml:space="preserve">
+<source xml:lang="en">Text of key6</source>
+<target xml:lang="fr">Text of key6</target>
+<note>_eskip</note>
+</trans-unit>
+<trans-unit id="50" resname="key7" xml:space="preserve">
+<source xml:lang="en">Text of key7</source>
+<target xml:lang="fr">Text of key7</target>
+<note>_btext</note>
+</trans-unit>
+<trans-unit id="51" resname="key9" xml:space="preserve">
+<source xml:lang="en">Text of key9</source>
+<target xml:lang="fr">Text of key9</target>
+</trans-unit>
+<trans-unit id="52" resname="key10" xml:space="preserve">
+<source xml:lang="en">Text of key10</source>
+<target xml:lang="fr">Text of key10</target>
+<note>_etext</note>
+</trans-unit>
+<trans-unit id="53" resname="endkey" xml:space="preserve">
+<source xml:lang="en">End text: No line-break after.</source>
+<target xml:lang="fr">End text: No line-break after.</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

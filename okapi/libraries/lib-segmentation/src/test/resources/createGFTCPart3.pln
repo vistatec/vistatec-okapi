@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.searchandreplace.SearchAndReplaceStep">#v1
+regEx.b=true
+dotAll.b=false
+ignoreCase.b=false
+multiLine.b=true
+count.i=1
+target.b=false
+source.b=true
+replaceALL.b=true
+use0=true
+search0=\t$
+replace0=</step>
+</rainbowPipeline>

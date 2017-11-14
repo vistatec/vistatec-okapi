@@ -1,0 +1,72 @@
+/okapi/deployment/okapi-bilingual-sdk/dependency-reduced-pom.xml
+/okapi/deployment/okapi-bilingual-lib/dependency-reduced-pom.xml
+META-INF/
+.project
+target/
+MANIFEST.MF
+
+tags
+
+*.pydevproject
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.class
+*.orig
+*~
+local.properties
+.classpath
+.settings/
+.loadpath
+/web-app/plugins
+/web-app/WEB-INF/classes
+/okapi/libraries/lib-serialization/src-gen/*
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+#python specific
+*.pyc
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
+
+*.iml
+
+## Directory-based project format:
+.idea/
+
+## File-based project format:
+*.ipr
+*.iws
+
+/okapi/deployment/okapi-lib/dependency-reduced-pom.xml
+/okapi/libraries/lib-languagetool/dependency-reduced-pom.xml
+/deployment/maven/libVersions.properties
+/deployment/maven/dist_cocoa-macosx
+/deployment/maven/dist_cocoa-macosx-x86_64
+/deployment/maven/dist_cocoa-macosx-x86_64-dmg
+/deployment/maven/dist_common/
+/deployment/maven/dist_gtk2-linux-x86
+/deployment/maven/dist_gtk2-linux-x86_64/
+/deployment/maven/dist_longhorn
+/deployment/maven/dist_omtplugins/
+/deployment/maven/dist_plugins/
+/deployment/maven/dist_win32-x86
+/deployment/maven/dist_win32-x86_64
+/deployment/maven/dist_xlifflib
+/deployment/maven/done/
+/deployment/maven/tmp/
+/deployment/website/dist
+
+/okapi/libraries/lib-segmentation/src/test/resources/_createGFTC2Log.txt
+/okapi/libraries/lib-segmentation/src/test/resources/_createGFTC1Log.txt
+
+/okapi/libraries/lib-segmentation/src/test/resources/SimpleTest.tmx
+
+/okapi/deployment/okapi-framework-sdk/dependency-reduced-pom.xml

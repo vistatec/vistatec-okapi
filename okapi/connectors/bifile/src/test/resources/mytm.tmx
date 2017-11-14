@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="unknown" creationtoolversion="unknown" segtype="paragraph" o-tmf="unknown" adminlang="en" srclang="en-us" datatype="text"></header><body>
+<tu tuid="autoID1">
+<tuv xml:lang="en-us"><seg>Elephants cannot fly.</seg></tuv>
+<tuv xml:lang="fr-fr"><seg>Les éléphants ne peuvent pas voler.</seg></tuv>
+</tu>
+<tu tuid="autoID2">
+<tuv xml:lang="en-us"><seg>Elephants <bpt i="1">&lt;b&gt;</bpt>cannot<ept i="1">&lt;/b&gt;</ept> fly.</seg></tuv>
+<tuv xml:lang="fr-fr"><seg>Les éléphants <bpt i="1">&lt;b&gt;</bpt>ne peuvent pas<ept i="1">&lt;/b&gt;</ept> voler.</seg></tuv>
+</tu>
+<tu tuid="autoID3">
+<tuv xml:lang="en-us"><seg>Elephants <bpt i="1">&lt;g0&gt;</bpt>cannot<ept i="1">&lt;/g0&gt;</ept> fly.</seg></tuv>
+<tuv xml:lang="fr-fr"><seg>Les éléphants <bpt i="1">&lt;g0&gt;</bpt>ne peuvent pas<ept i="1">&lt;/g0&gt;</ept> voler.</seg></tuv>
+</tu>
+</body>
+</tmx>

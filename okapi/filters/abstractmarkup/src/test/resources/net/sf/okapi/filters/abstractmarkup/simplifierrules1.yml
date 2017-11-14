@@ -1,0 +1,6 @@
+simplifierRules: |
+  # if ADDABLE or DELETABLE or CLONEABLE;
+  if DATA = "<a>" or DATA = "<b>" or DATA = "</a>" or DATA = "</b>";
+  if DATA = "<c>" or DATA = "<d>" or DATA = "</c>" or DATA = "</d>";
+  if DATA ~ "\\<x.+";
+  if TYPE = "g" or TYPE = "/g" or TYPE = "x"; 

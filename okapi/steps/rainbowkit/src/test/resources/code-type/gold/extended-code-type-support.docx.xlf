@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="word/styles.xml" source-language="en-US" target-language="fr" datatype="x-undefined">
+<body>
+</body>
+</file>
+<file original="word/document.xml" source-language="en-US" target-language="fr" datatype="x-undefined">
+<body>
+<trans-unit id="NFDBB2FA9-tu1" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-bold;italic;" equiv-text="&lt;run1>">This</g> <g id="2" ctype="x-color:FF0000;" equiv-text="&lt;run2>">is</g> the <g id="3" ctype="x-bold;" equiv-text="&lt;run3>">first</g> paragraph. And <g id="4" ctype="x-bold;italic;" equiv-text="&lt;run4>">it</g> has <g id="5" ctype="x-bold;underline:single;" equiv-text="&lt;run5>">two</g> sentences.</source>
+<target xml:lang="fr"><g id="1" ctype="x-bold;italic;" equiv-text="&lt;run1>">This</g> <g id="2" ctype="x-color:FF0000;" equiv-text="&lt;run2>">is</g> the <g id="3" ctype="x-bold;" equiv-text="&lt;run3>">first</g> paragraph. And <g id="4" ctype="x-bold;italic;" equiv-text="&lt;run4>">it</g> has <g id="5" ctype="x-bold;underline:single;" equiv-text="&lt;run5>">two</g> sentences.</target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu2" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-bold;highlight:yellow;underline:single;" equiv-text="&lt;run1>">Third</g><g id="2" ctype="x-bold;underline:single;" equiv-text="&lt;run2>"> paragraph</g>. <g id="3" ctype="x-link;bold;color:0563C1;underline:single;" equiv-text="&lt;hyperlink3>">A hyperlink<g id="4" ctype="x-color:0563C1;underline:single;" equiv-text="&lt;run4>"> to the strike <g id="5" ctype="x-italic;color:0563C1;underline:single;" equiv-text="&lt;run5>">HTML</g> <g id="6" ctype="x-color:0563C1;" equiv-text="&lt;run6>">element</g>.</g></g></source>
+<target xml:lang="fr"><g id="1" ctype="x-bold;highlight:yellow;underline:single;" equiv-text="&lt;run1>">Third</g><g id="2" ctype="x-bold;underline:single;" equiv-text="&lt;run2>"> paragraph</g>. <g id="3" ctype="x-link;bold;color:0563C1;underline:single;" equiv-text="&lt;hyperlink3>">A hyperlink<g id="4" ctype="x-color:0563C1;underline:single;" equiv-text="&lt;run4>"> to the strike <g id="5" ctype="x-italic;color:0563C1;underline:single;" equiv-text="&lt;run5>">HTML</g> <g id="6" ctype="x-color:0563C1;" equiv-text="&lt;run6>">element</g>.</g></g></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu3" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-empty" equiv-text="&lt;run1>">Shadow</g></source>
+<target xml:lang="fr"><g id="1" ctype="x-empty" equiv-text="&lt;run1>">Shadow</g></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu4" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-shade:pct25;" equiv-text="&lt;run1>">Shading and <g id="2" ctype="x-highlight:red;shade:pct25;" equiv-text="&lt;run2>">highlight</g></g></source>
+<target xml:lang="fr"><g id="1" ctype="x-shade:pct25;" equiv-text="&lt;run1>">Shading and <g id="2" ctype="x-highlight:red;shade:pct25;" equiv-text="&lt;run2>">highlight</g></g></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu5" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-strikethrough;" equiv-text="&lt;run1>">Strike-through</g></source>
+<target xml:lang="fr"><g id="1" ctype="x-strikethrough;" equiv-text="&lt;run1>">Strike-through</g></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu6" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-underline:dotted;" equiv-text="&lt;run1>">Underline1</g> <g id="2" ctype="x-underline:double;" equiv-text="&lt;run2>">underline2</g></source>
+<target xml:lang="fr"><g id="1" ctype="x-underline:dotted;" equiv-text="&lt;run1>">Underline1</g> <g id="2" ctype="x-underline:double;" equiv-text="&lt;run2>">underline2</g></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu7" xml:space="preserve">
+<source xml:lang="en-US"><g id="1" ctype="x-sub;underline:double;" equiv-text="&lt;run1>">subscript</g> normal <g id="2" ctype="x-sup;" equiv-text="&lt;run2>">superscript</g></source>
+<target xml:lang="fr"><g id="1" ctype="x-sub;underline:double;" equiv-text="&lt;run1>">subscript</g> normal <g id="2" ctype="x-sup;" equiv-text="&lt;run2>">superscript</g></target>
+</trans-unit>
+</body>
+</file>
+<file original="word/settings.xml" source-language="en-US" target-language="fr" datatype="x-undefined">
+<body>
+</body>
+</file>
+<file original="docProps/core.xml" source-language="en-US" target-language="fr" datatype="x-undefined">
+<body>
+<trans-unit id="tu1" xml:space="preserve">
+<source xml:lang="en-US">Denis Konovalyenko</source>
+<target xml:lang="fr">Denis Konovalyenko</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

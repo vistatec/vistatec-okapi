@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Language" content="en-us">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+  <title>Okapi Framework Developer's Guide - Coding Guidelines</title>
+  <link rel="stylesheet" type="text/css" href="../okapi.css">
+</head>
+
+
+<body>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+	<tbody>
+    <tr class="head">
+
+		<td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Developer's Guide</h1>
+
+		
+      <h2 class="head2">Coding Guidelines</h2>
+      </td>
+
+	</tr>
+
+	<tr>
+
+		<td class="smalltoc"></td>
+
+		<td class="hmenu">
+			
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+
+				<td><a href="glossary.html">Glossary</a></td>
+
+				<td><a href="index.html">Guide Content</a></td>
+
+				<td><a href="http://okapiframework.org">Okapi Framework</a></td>
+
+			</tr>
+        </tbody>
+      </table>
+      </div>
+
+		</td>
+
+	</tr>
+
+  </tbody>
+</table>
+
+
+<p>When coding a component of the framework, try to respect the following 
+guidelines:</p>
+
+<h2>Coding Style</h2>
+
+<p>Generally use the Java classic conventions described at:
+<a href="http://java.sun.com/docs/codeconv/">http://java.sun.com/docs/codeconv/&nbsp;</a></p>
+
+<h2>Exceptions</h2>
+
+<p>Checked exceptions are often not well suited for a component-based system 
+like the Okapi Framework. Avoid them when possible.</p>
+
+<p>When throwing exceptions, if possible use the appropriate common exception 
+defined in the <code>
+<a href="../javadoc/net/sf/okapi/common/exceptions/package-summary.html">
+net.sf.common.exceptions</a></code> package.</p>
+
+<p>If you have a need for a new type of exception and use it in different 
+packages, add it to the set of common exceptions. If that exception is specific 
+to a package, declare it within that package.</p>
+
+<h2>Logging</h2>
+
+<p>Generally the Java built-in <code>Logger</code> class is enough for the need 
+of the Okapi components.</p>
+
+<pre>private static final Logger LOGGER = Logger.getLogger(getClass().getName());</pre>
+
+<p>What level to use when logging:</p>
+
+<table id="table1" border="1" cellpadding="4" cellspacing="0">
+
+		<tbody>
+    <tr>
+
+			<th>Level</th>
+
+			<th>Usage</th>
+
+		</tr>
+
+		<tr>
+
+			<td><code>SEVERE</code></td>
+
+			<td>Errors the end user should see.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><code>WARNING</code></td>
+
+			<td>Important alert messages the end user should see.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><code>INFO</code></td>
+
+			<td>Additional log information, progress, etc. These messages are 
+			also shown to the user.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><code>FINE</code></td>
+
+			<td>Extra, less important information. The end user may choose to 
+			see them.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><code>FINER</code></td>
+
+			<td>Debug information. For developers.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><code>FINEST</code></td>
+
+			<td>Debug information. For developers.</td>
+
+		</tr>
+
+	
+  </tbody>
+</table>
+
+<h2>Unit Tests</h2>
+
+<p>Most classes of the framework should have a corresponding JUnit test class 
+that exercise most of its methods.</p>
+
+<ul>
+	<li>Test methods should be short and specific.</li>
+	<li>The tests should be be fast to run.</li>
+	<li>The tests should defined so they can be ran from a single location.</li>
+</ul>
+
+<h2>Java Documentation</h2>
+
+<p>All Classes, public and protected methods should have
+comprehensive JavaDoc comments. Java packages may optionally have JavaDoc by including a 
+<code>package.html</code> file.</p>
+<p>&nbsp;</p>
+
+
+</body>
+</html>

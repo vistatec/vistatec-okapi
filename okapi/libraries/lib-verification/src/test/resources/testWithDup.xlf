@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-strict.xsd">
+<file original="\TestWithDup.xml" source-language="en" target-language="fr" datatype="xml">
+<body>
+<trans-unit id="1">
+<source xml:lang="en">source text</source>
+<target xml:lang="fr">target text</target>
+</trans-unit>
+<trans-unit id="2">
+<source xml:lang="en">source text type 2</source>
+<target xml:lang="fr">target texte type 2</target>
+</trans-unit>
+<trans-unit id="3">
+<source xml:lang="en">source text</source>
+<target xml:lang="fr">target text</target>
+</trans-unit>
+<trans-unit id="4">
+<source xml:lang="en">source text type 3</source>
+<target xml:lang="fr">target texte type 3</target>
+</trans-unit>
+<trans-unit id="5">
+<source xml:lang="en">source text</source>
+<target xml:lang="fr">DIFFERENT target text</target>
+</trans-unit>
+<trans-unit id="6">
+<source xml:lang="en">source text type 3</source>
+<target xml:lang="fr">TARGET texte type 3</target>
+</trans-unit>
+
+<trans-unit id="7">
+<source xml:lang="en">sourceA sourceB sourceA</source>
+<seg-source><mrk mid='1' mtype='seg'>sourceA</mrk> <mrk mid='2' mtype='seg'>sourceB</mrk> <mrk mid='3' mtype='seg'>sourceA</mrk></seg-source>
+<target xml:lang="fr"><mrk mid='1' mtype='seg'>targetA</mrk> <mrk mid='2' mtype='seg'>targetB</mrk> <mrk mid='3' mtype='seg'>targetA-different</mrk></target>
+</trans-unit>
+
+</body>
+</file>
+</xliff>

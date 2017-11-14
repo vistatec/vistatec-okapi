@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\mandrake_fonts.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">36a72c43-a205-4baf-8386-bd9bf577fd74</value><value key="SDL:CreationDate">03/21/2011 16:54:21</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\mandrake_fonts.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\mandrake_fonts.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6546</value><value key="SDLWS:DocId">7394</value><value key="SDLWS:TaskId">8360</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:21Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-encoding detection-level="Likely" encoding="ISO-8859-1" /><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><fmt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><fmt-def id="1"><value key="FontSize">18</value><value key="Bold">True</value></fmt-def><fmt-def id="2"><value key="Bold">True</value></fmt-def><fmt-def id="3"><value key="FontSize">16</value><value key="Bold">True</value></fmt-def><fmt-def id="4"><value key="FontName">Courier New</value></fmt-def><fmt-def id="5"><value key="TextColor">Blue</value><value key="Underline">True</value></fmt-def><fmt-def id="6"><value key="FontSize">12</value><value key="Bold">True</value></fmt-def></fmt-defs><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="x-tm-heading" code="T" name="Title" descr="Title of the document" /><cxt-def id="3" type="x-tm-heading" purpose="Match"><fmt id="1" /></cxt-def><cxt-def id="4" type="sdl:paragraph" color="'0'" /><cxt-def id="5" type="x-tm-heading" purpose="Match"><fmt id="3" /></cxt-def><cxt-def id="6" type="x-tm-heading" purpose="Match"><fmt id="6" /></cxt-def><cxt-def id="7" type="sdl:unordered-list" descr="" color="'0'" /><cxt-def id="8" type="x-tm-listitem" purpose="Match" /></cxt-defs><node-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><node-def id="1" force-name="false"><cxt id="3" /></node-def><node-def id="2" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="3" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="4" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="5" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="6" force-name="false" parent="5"><cxt id="6" /></node-def><node-def id="7" force-name="false" parent="5"><cxt id="6" /></node-def><node-def id="8" force-name="false" parent="5"><cxt id="6" /></node-def><node-def id="9" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="10" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="11" force-name="false" parent="10"><cxt id="6" /></node-def><node-def id="12" force-name="false" parent="10"><cxt id="6" /></node-def><node-def id="13" force-name="false" parent="10"><cxt id="6" /></node-def><node-def id="14" force-name="false" parent="10"><cxt id="6" /></node-def><node-def id="15" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="16" force-name="false" parent="1"><cxt id="5" /></node-def><node-def id="17" force-name="false" parent="1"><cxt id="5" /></node-def></node-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="15"><bpt name="b" can-hide="true" word-end="false">&lt;b&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="b" can-hide="true" word-end="false">&lt;/b&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="2" /></tag><tag id="39"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="49"><bpt name="a" word-end="false">&lt;a href="http://freetype.sourceforge.net/patents.html"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="52"><bpt name="a" word-end="false">&lt;a href="http://freetype.sourceforge.net/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="56"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="57"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="60"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="61"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="75"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="78"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="81"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="84"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="94"><bpt name="a" word-end="false">&lt;a href="http://avi.alkalay.net/software/msfonts/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="106"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="107"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="110"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="121"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="122"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="126"><bpt name="a" word-end="false">&lt;a href="http://www.mozilla.org/products/firefox/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="132"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="135"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="139"><bpt name="a" word-end="false">&lt;a href="http://www.mandrakeclub.com/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="140"><bpt name="a" word-end="false">&lt;a href="http://www.codeweavers.com/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="146"><bpt name="pre" word-end="false">&lt;pre&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="pre" word-end="false">&lt;/pre&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="4" /></tag><tag id="161"><bpt name="a" word-end="false">&lt;a href="http://avi.alkalay.net/linux/docs/font-howto/Font.html"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="164"><bpt name="a" word-end="false">&lt;a href="http://www.tldp.org/HOWTO/FDU/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="167"><bpt name="a" word-end="false">&lt;a href="http://www.tldp.org/HOWTO/Font-HOWTO/"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="170"><bpt name="a" word-end="false">&lt;a href="http://jmason.org/howto/subpixel.html"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="173"><bpt name="a" word-end="false">&lt;a href="http://www.efuse.com/Design/web_fonts_basics.html"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="180"><bpt name="a" word-end="false">&lt;a href="http://groups.google.com/groups?q=John+Prose+fonts+group:*linux*&amp;amp;hl=en&amp;amp;lr=&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;selm=85255129.0308240535.5470576b%40posting.google.com&amp;amp;rnum=1"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="a" word-end="false">&lt;/a&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="5" /></tag><tag id="16"><ph name="br">&lt;br&gt;</ph><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="19"><ph name="br">&lt;br&gt;</ph><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="20"><ph name="br">&lt;br&gt;</ph><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="32"><ph name="Comment">&lt;!-- TODO: Screenshots --&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="62"><ph name="Comment">&lt;!--TODO: Need to restart? --&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="0"><st name="!DOCTYPE">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="1"><st name="html">&lt;html&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="head">&lt;head&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="3"><st name="title">&lt;title&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="4"><st name="title">&lt;/title&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="5"><st name="meta">&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="6"><st name="meta">&lt;meta name="GENERATOR" content="Quanta Plus"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="7"><st name="style">&lt;style&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="8"><st name="&lt;!--...">&lt;!--
+	body,td,div,.p,a,h1,h2,h3,h4 {font-family:verdana,helvetica,arial,sans-serif}
+  //--&gt;
+  </st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="9"><st name="style">&lt;/style&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="10"><st name="head">&lt;/head&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="11"><st name="body">&lt;body&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="12"><st name="h1">&lt;h1&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="13"><st name="h1">&lt;/h1&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="14"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="17"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="18"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="21"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="22"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="23"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="24"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="25"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="26"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="27"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="28"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="29"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="30"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="31"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="33"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="34"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="35"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="36"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="37"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="38"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="40"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="41"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="42"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="43"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="44"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="45"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="46"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="47"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="48"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="50"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="51"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="53"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="54"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="55"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="58"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="59"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="63"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="64"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="65"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="66"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="67"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="68"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="69"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="70"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="71"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="72"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="73"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="74"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="76"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="77"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="79"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="80"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="82"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="83"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="85"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="86"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="87"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="88"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="89"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="90"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="91"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="92"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="93"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="95"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="96"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="97"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="98"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="99"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="100"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="101"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="102"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="103"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="104"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="105"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="108"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="109"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="111"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="112"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="113"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="114"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="115"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="116"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="117"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="118"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="119"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="120"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="123"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="124"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="125"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="127"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="128"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="129"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="130"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="131"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="133"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="134"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="136"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="137"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="138"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="141"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="142"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="143"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="144"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="145"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="147"><st name="h4">&lt;h4&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="148"><st name="h4">&lt;/h4&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="149"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="150"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="151"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="152"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="153"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="154"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="155"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="156"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="157"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="158"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="159"><st name="ul">&lt;ul&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="160"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="162"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="163"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="165"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="166"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="168"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="169"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="171"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="172"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="174"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="175"><st name="ul">&lt;/ul&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="176"><st name="h2">&lt;h2&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="177"><st name="h2">&lt;/h2&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="178"><st name="ul">&lt;ul&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="179"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="181"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="182"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="183"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="184"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="185"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="186"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="187"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="188"><st name="li">&lt;li&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="189"><st name="li">&lt;/li&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="190"><st name="ul">&lt;/ul&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="191"><st name="body">&lt;/body&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="192"><st name="html">&lt;/html&gt;</st><props><value key="ttTagType">ec_End</value></props></tag></tag-defs></header><body>
+<trans-unit id="1941d882-105b-4566-8a07-b1353f684350" translate="no"><source><x id="0" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="0ee99e59-3c2e-4a84-96c0-f030bea5365e" translate="no"><source>
+<x id="1" /><x id="2" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="4627dfb5-68ef-42ff-94c6-b5e8f2fe1f23" translate="no"><source>
+
+
+
+  <x id="3" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="e4c71701-bf26-4dce-8624-1e990f438f11"><source>Mini HOWTO: Getting Perfect Fonts on Mandrake 10.1</source><seg-source><mrk mtype="seg" mid="1">Mini HOWTO:</mrk> <mrk mtype="seg" mid="2">Getting Perfect Fonts on Mandrake 10.1</mrk></seg-source><target><mrk mtype="seg" mid="1" /> <mrk mtype="seg" mid="2" /></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /><sdl:seg id="2" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="538a3365-1297-4a0b-af5a-74651df9e1c9" translate="no"><source><x id="4" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="38c53cf0-1f50-47a1-b8c9-455c3d4a6a64" translate="no"><source>
+  <x id="5" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ddcfedf1-183c-4a78-a78d-56aef9798af9" translate="no"><source>
+  <x id="6" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="5fda1c8e-5c6a-435c-b4c5-932a3b3de705" translate="no"><source>
+  
+  
+  <x id="7" /><x id="8" /><x id="9" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="d0e977f4-28f8-4982-8a8b-3ce4404b85a0" translate="no"><source>  
+  
+<x id="10" /><x id="11" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="64f15888-a13f-40cb-b26c-6c904629ab20" translate="no"><source>
+
+<x id="12" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /><sdl:node id="1" /></sdl:cxts>
+<trans-unit id="684cf97f-6091-4ea4-8f3a-044d22e04f91"><source>Mini HOWTO: Getting Perfect Fonts on Mandrake 10.1</source><seg-source><mrk mtype="seg" mid="3">Mini HOWTO:</mrk> <mrk mtype="seg" mid="4">Getting Perfect Fonts on Mandrake 10.1</mrk></seg-source><target><mrk mtype="seg" mid="3" /> <mrk mtype="seg" mid="4" /></target><sdl:seg-defs><sdl:seg id="3" origin="not-translated" /><sdl:seg id="4" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d2ea27c4-ddbb-4a62-a449-07bd1ab26a5f" translate="no"><source><x id="13" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="1" /></sdl:cxts>
+<trans-unit id="ac8a5d3c-cea6-49fa-b9c5-7468879c2d92" translate="no"><source>
+
+<x id="14" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="d4ea629e-71b3-4145-a0ff-b38aa9ad2672" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="4c03b832-7d87-4234-a761-6a4c928396c5"><source><g id="15">by Noel Llopis</g><x id="16" /> llopis (at) convexhull (dot) com</source><seg-source><mrk mtype="seg" mid="5"><g id="15">by Noel Llopis</g><x id="16" /> llopis (at) convexhull (dot) com</mrk></seg-source><target><mrk mtype="seg" mid="5"><g id="15" /><x id="16" /></mrk></target><sdl:seg-defs><sdl:seg id="5" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="77713a0f-4eb0-4a18-8858-06c4556d5a31" translate="no"><source>
+<x id="17" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="f400bb8c-d28f-48e9-b4c6-3c7e1a44b8ac" translate="no"><source>
+
+<x id="18" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="8f245477-6327-4135-b0d1-301988955a51" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="3397b3fe-1366-44a5-af71-0e37255d2741"><source>Version 1.07<x id="19" /> Last modified: 4 January 2005<x id="20" /> Original creation: 14 November 2004</source><seg-source><mrk mtype="seg" mid="6">Version 1.07<x id="19" /> Last modified:</mrk> <mrk mtype="seg" mid="7">4 January 2005<x id="20" /> Original creation:</mrk> <mrk mtype="seg" mid="8">14 November 2004</mrk></seg-source><target><mrk mtype="seg" mid="6"><x id="19" /></mrk> <mrk mtype="seg" mid="7"><x id="20" /></mrk> <mrk mtype="seg" mid="8" /></target><sdl:seg-defs><sdl:seg id="6" origin="not-translated" /><sdl:seg id="7" origin="not-translated" /><sdl:seg id="8" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="30e8b9f2-06a1-45ec-b545-aae64718f5ad" translate="no"><source>
+<x id="21" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="0b480dbe-9d92-4086-851f-091b6ee40f07" translate="no"><source>
+
+<x id="22" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="2" /></sdl:cxts>
+<trans-unit id="f032a93a-9676-4dcb-b712-fe86b2ebcce9"><source>Introduction</source><seg-source><mrk mtype="seg" mid="9">Introduction</mrk></seg-source><target><mrk mtype="seg" mid="9" /></target><sdl:seg-defs><sdl:seg id="9" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="4695b4d3-313b-4f84-b78a-5939295d2320" translate="no"><source><x id="23" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="2" /></sdl:cxts>
+<trans-unit id="3a702905-de94-4b06-a01c-4ee629c3132c" translate="no"><source>
+<x id="24" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="692019d2-48eb-4db3-81b7-7435457bbe6f"><source>Mandrake is my favorite Linux distribution for general desktop usage: It's extremely easy to install (it detects all your hardware right out of the box), it's very friendly for beginners, it has a great selection of software, and it looks very nice. The default window manager is KDE, which is like an improved version of Windows.</source><seg-source><mrk mtype="seg" mid="10">Mandrake is my favorite Linux distribution for general desktop usage:</mrk> <mrk mtype="seg" mid="11">It's extremely easy to install (it detects all your hardware right out of the box), it's very friendly for beginners, it has a great selection of software, and it looks very nice.</mrk> <mrk mtype="seg" mid="12">The default window manager is KDE, which is like an improved version of Windows.</mrk></seg-source><target><mrk mtype="seg" mid="10" /> <mrk mtype="seg" mid="11" /> <mrk mtype="seg" mid="12" /></target><sdl:seg-defs><sdl:seg id="10" origin="not-translated" /><sdl:seg id="11" origin="not-translated" /><sdl:seg id="12" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="75c4411f-504a-480b-8a8b-55ea21b0855e" translate="no"><source><x id="25" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="88774fef-43c9-46a0-9fbf-f0ed39bc0810" translate="no"><source>
+
+<x id="26" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="38d833e7-1c1f-4f97-8aa3-ca3ac077949b"><source>The last two points are key to attracting new users from Windows-land: It looks great out of the box, and it's not a totally alien environment. There's only one problem: the fonts are just plain ugly.</source><seg-source><mrk mtype="seg" mid="13">The last two points are key to attracting new users from Windows-land:</mrk> <mrk mtype="seg" mid="14">It looks great out of the box, and it's not a totally alien environment.</mrk> <mrk mtype="seg" mid="15">There's only one problem: the fonts are just plain ugly.</mrk></seg-source><target><mrk mtype="seg" mid="13" /> <mrk mtype="seg" mid="14" /> <mrk mtype="seg" mid="15" /></target><sdl:seg-defs><sdl:seg id="13" origin="not-translated" /><sdl:seg id="14" origin="not-translated" /><sdl:seg id="15" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="6048f870-a7f2-44c2-86ea-9e0758c40394" translate="no"><source><x id="27" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="6818c6d2-640f-4b9b-9014-05d69f279e59" translate="no"><source>
+
+<x id="28" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="329fb30c-a7c9-4b71-b375-fc125597d283"><source>Considering you're constantly reading text, having ugly fonts is a huge problem. They're not just ugly, they're borderline unreadable at times. This document explains how to fix this problem and have the perfect fonts you're used to from Windows.</source><seg-source><mrk mtype="seg" mid="16">Considering you're constantly reading text, having ugly fonts is a huge problem.</mrk> <mrk mtype="seg" mid="17">They're not just ugly, they're borderline unreadable at times.</mrk> <mrk mtype="seg" mid="18">This document explains how to fix this problem and have the perfect fonts you're used to from Windows.</mrk></seg-source><target><mrk mtype="seg" mid="16" /> <mrk mtype="seg" mid="17" /> <mrk mtype="seg" mid="18" /></target><sdl:seg-defs><sdl:seg id="16" origin="not-translated" /><sdl:seg id="17" origin="not-translated" /><sdl:seg id="18" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="bde0ac68-9fec-4fcb-97b9-301cdd05fcac" translate="no"><source><x id="29" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="b68ee527-dd7f-4566-9b4d-ad14de5b3cb5" translate="no"><source>
+
+<x id="30" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="c18c574f-c77c-4d55-91de-9e0fc2d8b3a2"><source>The procedure described here should work in just about any Linux distribution with KDE with none, or just minor adjustments.</source><seg-source><mrk mtype="seg" mid="19">The procedure described here should work in just about any Linux distribution with KDE with none, or just minor adjustments.</mrk></seg-source><target><mrk mtype="seg" mid="19" /></target><sdl:seg-defs><sdl:seg id="19" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2ac02298-47dd-4df8-b4a6-102e0dc6435f" translate="no"><source><x id="31" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="0444b8dd-9856-4fbc-9152-ef24faf24084" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="42db7444-1c68-48cd-8c35-2ab68c0e9608"><source><x id="32" /></source><seg-source><x id="32" /></seg-source><target><x id="32" /></target></trans-unit>
+<trans-unit id="c90906e5-5535-41db-94bb-89d29b6392fa" translate="no"><source>
+
+<x id="33" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="3" /></sdl:cxts>
+<trans-unit id="d855e711-9924-49ec-9cfc-42b0bdc0ff7e"><source>Step 1: Turn off font antialiasing</source><seg-source><mrk mtype="seg" mid="20">Step 1:</mrk> <mrk mtype="seg" mid="21">Turn off font antialiasing</mrk></seg-source><target><mrk mtype="seg" mid="20" /> <mrk mtype="seg" mid="21" /></target><sdl:seg-defs><sdl:seg id="20" origin="not-translated" /><sdl:seg id="21" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d6cacfb2-d262-47ec-8174-37d7c20353ca" translate="no"><source><x id="34" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="3" /></sdl:cxts>
+<trans-unit id="ecdf3222-4733-4171-b964-ced6d3deed5a" translate="no"><source>
+<x id="35" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="cd3c167b-7ef4-4566-8466-eb79c5e6b37d" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="def54db7-070f-452b-9e46-c2395e4aacd8"><source>Maybe it's just me, but I can't stand antialiasing in my fonts. I usually keep my fonts small (7-10 pt) and my resolution high (1600x1200), so antialiasing just makes them blurry and dirty-looking. If you have larger fonts or lower resolutions (or an LCD), you might want to leave antialiasing on. For LCD monitors, you might get particularly good results with sub-pixel hinting on. Try it both ways and decide for yourself. </source><seg-source><mrk mtype="seg" mid="22">Maybe it's just me, but I can't stand antialiasing in my fonts.</mrk> <mrk mtype="seg" mid="23">I usually keep my fonts small (7-10 pt) and my resolution high (1600x1200), so antialiasing just makes them blurry and dirty-looking.</mrk> <mrk mtype="seg" mid="24">If you have larger fonts or lower resolutions (or an LCD), you might want to leave antialiasing on.</mrk> <mrk mtype="seg" mid="25">For LCD monitors, you might get particularly good results with sub-pixel hinting on.</mrk> <mrk mtype="seg" mid="26">Try it both ways and decide for yourself.</mrk> </seg-source><target><mrk mtype="seg" mid="22" /> <mrk mtype="seg" mid="23" /> <mrk mtype="seg" mid="24" /> <mrk mtype="seg" mid="25" /> <mrk mtype="seg" mid="26" /> </target><sdl:seg-defs><sdl:seg id="22" origin="not-translated" /><sdl:seg id="23" origin="not-translated" /><sdl:seg id="24" origin="not-translated" /><sdl:seg id="25" origin="not-translated" /><sdl:seg id="26" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="33e998ab-2ba5-4e0d-bd41-f54e597560a5" translate="no"><source><x id="36" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="ce290c88-7c45-46da-91f8-5ea5fccb0881" translate="no"><source>
+<x id="37" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="4aa7ed11-598a-4f9e-a8df-ef789714d65d" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="1d2625e7-759f-42d5-add7-9a75ec81520b"><source>Go to the file /etc/fonts/local.conf, and add the following:</source><seg-source><mrk mtype="seg" mid="27">Go to the file /etc/fonts/local.conf, and add the following:</mrk></seg-source><target><mrk mtype="seg" mid="27" /></target><sdl:seg-defs><sdl:seg id="27" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ea30a3eb-5378-4ded-a46d-f0873423ebd4" translate="no"><source>
+<x id="38" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="0fea5eb0-3941-4bcb-bff2-bf37fdf294c8"><source><g id="39">    &lt;match target="font"&gt;
+        &lt;test compare="more" name="size" qual="any" &gt;
+            &lt;double&gt;0&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;test compare="less" name="size" qual="any" &gt;
+            &lt;double&gt;72&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;edit mode="assign" name="antialias" &gt;
+            &lt;bool&gt;false&lt;/bool&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;
+</g></source><seg-source><g id="39">    <mrk mtype="seg" mid="28">&lt;match target="font"&gt;
+        &lt;test compare="more" name="size" qual="any" &gt;
+            &lt;double&gt;0&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;test compare="less" name="size" qual="any" &gt;
+            &lt;double&gt;72&lt;/double&gt;
+        &lt;/test&gt;
+        &lt;edit mode="assign" name="antialias" &gt;
+            &lt;bool&gt;false&lt;/bool&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;</mrk>
+</g></seg-source><target><g id="39">    <mrk mtype="seg" mid="28" />
+</g></target><sdl:seg-defs><sdl:seg id="28" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ac97ced9-cbb7-4744-951c-a25cc3151baa" translate="no"><source>
+
+<x id="40" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="c8d1d1b9-6c76-4138-b59b-617a9ec3156c" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="a7335c6f-8fa5-4918-923a-99e4781401bf"><source>Unfortunately that doesn't turn off all antialiasing, so go to the KDE Control Center (listed under "Configure your desktop"), select LookNFeel, Fonts, and turn off "Use anti-aliasing for fonts"). You can turn on and off sub-pixel hinting from there as well.</source><seg-source><mrk mtype="seg" mid="29">Unfortunately that doesn't turn off all antialiasing, so go to the KDE Control Center (listed under "Configure your desktop"), select LookNFeel, Fonts, and turn off "Use anti-aliasing for fonts").</mrk> <mrk mtype="seg" mid="30">You can turn on and off sub-pixel hinting from there as well.</mrk></seg-source><target><mrk mtype="seg" mid="29" /> <mrk mtype="seg" mid="30" /></target><sdl:seg-defs><sdl:seg id="29" origin="not-translated" /><sdl:seg id="30" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2aff034a-b4b3-49a0-9893-19125f1b325b" translate="no"><source>
+<x id="41" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="341f1674-63d4-404b-8d8a-66aaab359b1a" translate="no"><source>
+<x id="42" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="3d91ebc9-f8b9-4c86-bfb9-020de8b52392" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="59852753-a7a2-45a0-9c86-0e36e4294c31"><source>Done. No more antialiasing.</source><seg-source><mrk mtype="seg" mid="31">Done.</mrk> <mrk mtype="seg" mid="32">No more antialiasing.</mrk></seg-source><target><mrk mtype="seg" mid="31" /> <mrk mtype="seg" mid="32" /></target><sdl:seg-defs><sdl:seg id="31" origin="not-translated" /><sdl:seg id="32" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2e19283a-4c08-4a3e-97fa-2ffd6d03c6cf" translate="no"><source>
+<x id="43" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="77d8f329-6b26-4a0a-869f-c85f926fc477" translate="no"><source>
+
+<x id="44" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="4" /></sdl:cxts>
+<trans-unit id="5705a7a1-97ba-40a0-ab13-a392ba485643"><source>Step 2: Turn on FreeType native hinting</source><seg-source><mrk mtype="seg" mid="33">Step 2:</mrk> <mrk mtype="seg" mid="34">Turn on FreeType native hinting</mrk></seg-source><target><mrk mtype="seg" mid="33" /> <mrk mtype="seg" mid="34" /></target><sdl:seg-defs><sdl:seg id="33" origin="not-translated" /><sdl:seg id="34" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="a1146870-8815-4b37-9e9c-6f994e43538f" translate="no"><source><x id="45" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="4" /></sdl:cxts>
+<trans-unit id="1e08ab86-fd90-4564-9e4c-de34d071855a" translate="no"><source>
+<x id="46" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="fcf75b89-0231-4c27-9efd-201ff5ba5568"><source>Because the default font rendering in KDE is not that great, turning off antialiasing might actually make some fonts go from being fuzzy, to being really ugly and irregular. Let's fix that.</source><seg-source><mrk mtype="seg" mid="35">Because the default font rendering in KDE is not that great, turning off antialiasing might actually make some fonts go from being fuzzy, to being really ugly and irregular.</mrk> <mrk mtype="seg" mid="36">Let's fix that.</mrk></seg-source><target><mrk mtype="seg" mid="35" /> <mrk mtype="seg" mid="36" /></target><sdl:seg-defs><sdl:seg id="35" origin="not-translated" /><sdl:seg id="36" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="e5cbea9d-5d34-4794-af13-15f43609ff5f" translate="no"><source><x id="47" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="4b01858c-2b90-4bbc-bb34-6bafdeea7794" translate="no"><source>
+
+<x id="48" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="726d8074-3766-400c-acaf-1390e2c43c35"><source>The font rendering in KDE is done through FreeType, and it already comes installed in your Mandrake installation. FreeType is really a great system, and it's capable of rendering True-Type fonts just as well as Windows or Macs. Unfortunately <g id="49">it's held back by several patents by Apple</g>, which force it to use a less-than-optimal rendering algorithm which causes the ugly fonts you're seeing. Fortunately, we can get around that quite easily. Thank open source for that :-)</source><seg-source><mrk mtype="seg" mid="37">The font rendering in KDE is done through FreeType, and it already comes installed in your Mandrake installation.</mrk> <mrk mtype="seg" mid="38">FreeType is really a great system, and it's capable of rendering True-Type fonts just as well as Windows or Macs.</mrk> <mrk mtype="seg" mid="39">Unfortunately <g id="49">it's held back by several patents by Apple</g>, which force it to use a less-than-optimal rendering algorithm which causes the ugly fonts you're seeing.</mrk> <mrk mtype="seg" mid="40">Fortunately, we can get around that quite easily.</mrk> <mrk mtype="seg" mid="41">Thank open source for that :-)</mrk></seg-source><target><mrk mtype="seg" mid="37" /> <mrk mtype="seg" mid="38" /> <mrk mtype="seg" mid="39"><g id="49" /></mrk> <mrk mtype="seg" mid="40" /> <mrk mtype="seg" mid="41" /></target><sdl:seg-defs><sdl:seg id="37" origin="not-translated" /><sdl:seg id="38" origin="not-translated" /><sdl:seg id="39" origin="not-translated" /><sdl:seg id="40" origin="not-translated" /><sdl:seg id="41" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="1a76d3ac-c63e-45af-a41b-4af3144c502b" translate="no"><source><x id="50" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="561c683a-bae3-4864-bdfd-02f5736a8c6b" translate="no"><source>
+
+<x id="51" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="eb5a6a55-fe6c-48f6-b8a6-7dd6c41d1f24"><source>Go to <g id="52">the FreeType project page</g> and download the source code for the latest version. It currently is version 2.1.9.</source><seg-source><mrk mtype="seg" mid="42">Go to <g id="52">the FreeType project page</g> and download the source code for the latest version.</mrk> <mrk mtype="seg" mid="43">It currently is version 2.1.9.</mrk></seg-source><target><mrk mtype="seg" mid="42"><g id="52" /></mrk> <mrk mtype="seg" mid="43" /></target><sdl:seg-defs><sdl:seg id="42" origin="not-translated" /><sdl:seg id="43" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="b874ba36-5e59-4db2-9129-778cdc2875b2" translate="no"><source>
+<x id="53" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="a3ed6178-97c5-45ff-9759-c019c8848c42" translate="no"><source>
+<x id="54" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="dfde5251-6e45-4278-8265-018904c8c03b" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="097fd4a5-79d5-439d-96ab-3595359faa20"><source>Gunzip/untar it to /usr/local/src. Now go to the file include/freetype/config/ftoption.h and look for the line</source><seg-source><mrk mtype="seg" mid="44">Gunzip/untar it to /usr/local/src.</mrk> <mrk mtype="seg" mid="45">Now go to the file include/freetype/config/ftoption.h and look for the line</mrk></seg-source><target><mrk mtype="seg" mid="44" /> <mrk mtype="seg" mid="45" /></target><sdl:seg-defs><sdl:seg id="44" origin="not-translated" /><sdl:seg id="45" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="a4d43467-873c-4092-a8c6-1248d6fc561c" translate="no"><source>
+<x id="55" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="494bc1b1-334e-46d5-b9e2-baacf2ebb383"><source><g id="56">/* #define TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+</g> Go ahead and uncomment it: <g id="57">#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER
+</g></source><seg-source><mrk mtype="seg" mid="46"><g id="56">/* #define TT_CONFIG_OPTION_BYTECODE_INTERPRETER */
+</g> Go ahead and uncomment it:</mrk> <g id="57"><mrk mtype="seg" mid="47">#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER</mrk>
+</g></seg-source><target><mrk mtype="seg" mid="46"><g id="56" /></mrk> <g id="57"><mrk mtype="seg" mid="47" />
+</g></target><sdl:seg-defs><sdl:seg id="46" origin="not-translated" /><sdl:seg id="47" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="af601eff-44a7-43ab-9992-36a7c4e01a3f" translate="no"><source>
+
+
+<x id="58" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="2a53d0da-997e-4cf6-a3d2-d9ec4f972698" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="9fe75434-9cd9-4e85-babb-87f10d0eea25"><source>Now compile FreeType by typing the following:</source><seg-source><mrk mtype="seg" mid="48">Now compile FreeType by typing the following:</mrk></seg-source><target><mrk mtype="seg" mid="48" /></target><sdl:seg-defs><sdl:seg id="48" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2c4d73a8-e6d3-412b-a4f3-c671919895f4" translate="no"><source>
+<x id="59" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="8cff9e8c-896f-446f-9304-c62bb771e230"><source><g id="60"># ./configure --prefix=/usr
+# make
+# make install
+</g> You will have to be logged in as root to run the last command.
+
+To make sure it worked, run the following command. It should report 9.7.3: <g id="61"># freetype-config --version
+</g>
+
+
+<x id="62" /></source><seg-source><mrk mtype="seg" mid="49"><g id="60"># ./configure --prefix=/usr
+# make
+# make install
+</g> You will have to be logged in as root to run the last command.</mrk>
+
+<mrk mtype="seg" mid="50">To make sure it worked, run the following command.</mrk> <mrk mtype="seg" mid="51">It should report 9.7.3:</mrk> <g id="61"><mrk mtype="seg" mid="52"># freetype-config --version</mrk>
+</g>
+
+
+<x id="62" /></seg-source><target><mrk mtype="seg" mid="49"><g id="60" /></mrk>
+
+<mrk mtype="seg" mid="50" /> <mrk mtype="seg" mid="51" /> <g id="61"><mrk mtype="seg" mid="52" />
+</g>
+
+
+<x id="62" /></target><sdl:seg-defs><sdl:seg id="49" origin="not-translated" /><sdl:seg id="50" origin="not-translated" /><sdl:seg id="51" origin="not-translated" /><sdl:seg id="52" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="25d5209e-29ee-483e-90fe-97541c60266c" translate="no"><source>
+<x id="63" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="305364d7-6c9f-4441-bd67-908a4c08384f" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="9a27928f-cdaa-46be-a533-451a4fb9b895"><source>At this point, the ugly, jaggedy fonts that we saw earlier should be looking a lot better. For a lot of people this could be good enough. But I was still annoyed by the slight irregularities in the default fonts used by KDE.</source><seg-source><mrk mtype="seg" mid="53">At this point, the ugly, jaggedy fonts that we saw earlier should be looking a lot better.</mrk> <mrk mtype="seg" mid="54">For a lot of people this could be good enough.</mrk> <mrk mtype="seg" mid="55">But I was still annoyed by the slight irregularities in the default fonts used by KDE.</mrk></seg-source><target><mrk mtype="seg" mid="53" /> <mrk mtype="seg" mid="54" /> <mrk mtype="seg" mid="55" /></target><sdl:seg-defs><sdl:seg id="53" origin="not-translated" /><sdl:seg id="54" origin="not-translated" /><sdl:seg id="55" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="b9979489-226d-4292-be27-41742b72c044" translate="no"><source>
+<x id="64" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="c7fbd108-1cfe-4889-9fc7-8df9d8f7d014" translate="no"><source>
+
+<x id="65" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="5" /></sdl:cxts>
+<trans-unit id="024955b2-6bdb-43ce-aed4-7325f2206b6a"><source>Step 3: Get good fonts</source><seg-source><mrk mtype="seg" mid="56">Step 3:</mrk> <mrk mtype="seg" mid="57">Get good fonts</mrk></seg-source><target><mrk mtype="seg" mid="56" /> <mrk mtype="seg" mid="57" /></target><sdl:seg-defs><sdl:seg id="56" origin="not-translated" /><sdl:seg id="57" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="7ecee5da-5a27-46e6-a243-695025e6e17b" translate="no"><source><x id="66" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="5" /></sdl:cxts>
+<trans-unit id="c40d70dd-edee-44cf-84f3-95fc80961783" translate="no"><source>
+<x id="67" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="ca7632b5-1a5c-4615-abb0-8a4c060672b2"><source>The best font rendering in the world is no good without good fonts. As much as I'm a Linux fan, I have to take my hat off to Microsoft for their really good fonts. I don't mean the silly Windings font, I mean the ones you don't think about but are used everywhere by the operating system: Tahoma, Verdana, Courier New, etc.</source><seg-source><mrk mtype="seg" mid="58">The best font rendering in the world is no good without good fonts.</mrk> <mrk mtype="seg" mid="59">As much as I'm a Linux fan, I have to take my hat off to Microsoft for their really good fonts.</mrk> <mrk mtype="seg" mid="60">I don't mean the silly Windings font, I mean the ones you don't think about but are used everywhere by the operating system:</mrk> <mrk mtype="seg" mid="61">Tahoma, Verdana, Courier New, etc.</mrk></seg-source><target><mrk mtype="seg" mid="58" /> <mrk mtype="seg" mid="59" /> <mrk mtype="seg" mid="60" /> <mrk mtype="seg" mid="61" /></target><sdl:seg-defs><sdl:seg id="58" origin="not-translated" /><sdl:seg id="59" origin="not-translated" /><sdl:seg id="60" origin="not-translated" /><sdl:seg id="61" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="5964b6ec-9786-42eb-bb66-6173e85bc30a" translate="no"><source>
+<x id="68" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="7951feb0-72c8-47c8-ba47-d21ff0fce10b" translate="no"><source>
+<x id="69" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="d8d49f50-30f7-4089-8343-5026223dc48e"><source>Here you have several options, but it boils down to using the actual True Type fonts straight from Windows. Use whichever method you're most comfortable with. I have personally always used the first method, but the other two are simpler.</source><seg-source><mrk mtype="seg" mid="62">Here you have several options, but it boils down to using the actual True Type fonts straight from Windows.</mrk> <mrk mtype="seg" mid="63">Use whichever method you're most comfortable with.</mrk> <mrk mtype="seg" mid="64">I have personally always used the first method, but the other two are simpler.</mrk></seg-source><target><mrk mtype="seg" mid="62" /> <mrk mtype="seg" mid="63" /> <mrk mtype="seg" mid="64" /></target><sdl:seg-defs><sdl:seg id="62" origin="not-translated" /><sdl:seg id="63" origin="not-translated" /><sdl:seg id="64" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="91a51ad7-50b4-417f-99ee-2698d575afb3" translate="no"><source><x id="70" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="56edb7c1-bed7-43fc-b2b6-eda4096f1383" translate="no"><source>
+ 
+<x id="71" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="6" /></sdl:cxts>
+<trans-unit id="edb1ef69-994f-4d48-a437-bd4db1c96bcb"><source>First option: Copy fonts from Windows partition</source><seg-source><mrk mtype="seg" mid="65">First option:</mrk> <mrk mtype="seg" mid="66">Copy fonts from Windows partition</mrk></seg-source><target><mrk mtype="seg" mid="65" /> <mrk mtype="seg" mid="66" /></target><sdl:seg-defs><sdl:seg id="65" origin="not-translated" /><sdl:seg id="66" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="fbebe55a-1c27-49e0-918c-e575501cb810" translate="no"><source><x id="72" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="6" /></sdl:cxts>
+<trans-unit id="8defa17a-a9c5-4905-9314-501720d05b46" translate="no"><source>
+<x id="73" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="ba2d0240-00d1-4ca4-91ad-98901cf00002" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="ab8551b6-52b9-49e3-8473-57a94d6c51f8"><source>If you already have a Windows installation handy, just look in \Windows\Fonts and copy all .TTF files to /usr/share/fonts/ttf/msfonts</source><seg-source><mrk mtype="seg" mid="67">If you already have a Windows installation handy, just look in \Windows\Fonts and copy all .TTF files to /usr/share/fonts/ttf/msfonts</mrk></seg-source><target><mrk mtype="seg" mid="67" /></target><sdl:seg-defs><sdl:seg id="67" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="e8ddb3b9-b3b0-4040-9811-5df05da93eb3" translate="no"><source>
+<x id="74" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="090c2e3b-c99d-41f7-b357-038029206238"><source><g id="75"># mkdir -p /usr/local/share/fonts/ttf/msfonts
+# cp /mnt/c/windows/fonts/*ttf /usr/local/share/fonts/ttf/msfonts
+</g></source><seg-source><g id="75"><mrk mtype="seg" mid="68"># mkdir -p /usr/local/share/fonts/ttf/msfonts
+# cp /mnt/c/windows/fonts/*ttf /usr/local/share/fonts/ttf/msfonts</mrk>
+</g></seg-source><target><g id="75"><mrk mtype="seg" mid="68" />
+</g></target><sdl:seg-defs><sdl:seg id="68" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="35fb4f4c-788f-4aad-addb-80737043f2ac" translate="no"><source>
+
+<x id="76" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="2e9c5c77-e359-4631-99dd-f044e5a80d42" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="b645c402-1b23-4cc0-9183-0709e41d6da3"><source>Change to that directory and run the following commands:</source><seg-source><mrk mtype="seg" mid="69">Change to that directory and run the following commands:</mrk></seg-source><target><mrk mtype="seg" mid="69" /></target><sdl:seg-defs><sdl:seg id="69" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="6c05bebf-3c1a-4a54-8f88-140bb5b7cd67" translate="no"><source>
+<x id="77" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="69151e88-1246-489d-8f57-2f47dec2cf42"><source><g id="78"># ttmkfdir -o fonts.scale
+# mkfontdir
+</g></source><seg-source><g id="78"><mrk mtype="seg" mid="70"># ttmkfdir -o fonts.scale
+# mkfontdir</mrk>
+</g></seg-source><target><g id="78"><mrk mtype="seg" mid="70" />
+</g></target><sdl:seg-defs><sdl:seg id="70" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="9a2d7794-ef4f-4381-96ff-fa73aa8d167f" translate="no"><source>
+
+<x id="79" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="b5faae88-f42b-4c61-9404-7982e65236f0" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="225a7fba-3113-4fe9-a80e-929a28f9ce17"><source>Almost there. One more change. Edit the /etc/X11/fs/config file to point to the fonts you just added.</source><seg-source><mrk mtype="seg" mid="71">Almost there.</mrk> <mrk mtype="seg" mid="72">One more change.</mrk> <mrk mtype="seg" mid="73">Edit the /etc/X11/fs/config file to point to the fonts you just added.</mrk></seg-source><target><mrk mtype="seg" mid="71" /> <mrk mtype="seg" mid="72" /> <mrk mtype="seg" mid="73" /></target><sdl:seg-defs><sdl:seg id="71" origin="not-translated" /><sdl:seg id="72" origin="not-translated" /><sdl:seg id="73" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="08a94ed1-0ff4-46f1-9e91-847967963032" translate="no"><source>
+<x id="80" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="e17f3423-8098-4152-a9ca-c63569d9759e"><source><g id="81">catalogue = /usr/share/fonts/ttf/msfonts,
+        /usr/X11R6/lib/X11/fonts/misc:unscaled,
+        /usr/X11R6/lib/X11/fonts/drakfont/Type1,
+        /usr/X11R6/lib/X11/fonts/drakfont/ttf,
+	...
+</g></source><seg-source><g id="81"><mrk mtype="seg" mid="74">catalogue = /usr/share/fonts/ttf/msfonts,
+        /usr/X11R6/lib/X11/fonts/misc:unscaled,
+        /usr/X11R6/lib/X11/fonts/drakfont/Type1,
+        /usr/X11R6/lib/X11/fonts/drakfont/ttf,
+	...</mrk>
+</g></seg-source><target><g id="81"><mrk mtype="seg" mid="74" />
+</g></target><sdl:seg-defs><sdl:seg id="74" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="91f7b25d-c744-4426-b394-f8196cb1f822" translate="no"><source>
+
+<x id="82" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="1f8bb9b5-2a30-4c1f-a26a-d530c3c6303f" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="531ce5ae-abed-476d-b511-f20c0735f270"><source>Finally, still as root, run the following commands to make sure the new fonts are used.</source><seg-source><mrk mtype="seg" mid="75">Finally, still as root, run the following commands to make sure the new fonts are used.</mrk></seg-source><target><mrk mtype="seg" mid="75" /></target><sdl:seg-defs><sdl:seg id="75" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ff2c1898-090f-4208-820d-3231e1817665" translate="no"><source>
+<x id="83" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="5448a60f-69ef-43f8-82ce-d5113e6bf944"><source><g id="84"># xset fp rehash
+# /etc/rc.d/init.d/xfs restart
+</g></source><seg-source><g id="84"><mrk mtype="seg" mid="76"># xset fp rehash
+# /etc/rc.d/init.d/xfs restart</mrk>
+</g></seg-source><target><g id="84"><mrk mtype="seg" mid="76" />
+</g></target><sdl:seg-defs><sdl:seg id="76" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="0848989f-0232-4264-ab67-4d2bead5d041" translate="no"><source>
+
+<x id="85" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="f03768b1-57ab-4bf4-81d6-883d293166a1"><source>At this point, you should be able to use some of those great Windows fonts. I just set the default KDE fonts to use Tahoma 7pt, and Courier New 7pt for the Fixed Width font. The Konqueror file browser or KMail should look really good now (you might have to set the file browser font in the KDE Control Center under Components | File Manager | Standard font too).</source><seg-source><mrk mtype="seg" mid="77">At this point, you should be able to use some of those great Windows fonts.</mrk> <mrk mtype="seg" mid="78">I just set the default KDE fonts to use Tahoma 7pt, and Courier New 7pt for the Fixed Width font.</mrk> <mrk mtype="seg" mid="79">The Konqueror file browser or KMail should look really good now (you might have to set the file browser font in the KDE Control Center under Components | File Manager | Standard font too).</mrk></seg-source><target><mrk mtype="seg" mid="77" /> <mrk mtype="seg" mid="78" /> <mrk mtype="seg" mid="79" /></target><sdl:seg-defs><sdl:seg id="77" origin="not-translated" /><sdl:seg id="78" origin="not-translated" /><sdl:seg id="79" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="7fb6cedc-14a9-4d89-8cf1-f9472e1f1448" translate="no"><source>
+<x id="86" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="09e7640b-640b-4825-ab97-7bdf15b5b3f0" translate="no"><source>
+
+<x id="87" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="7" /></sdl:cxts>
+<trans-unit id="503efc59-a9cf-4418-b439-414b180cb846"><source>Second option: Import the fonts</source><seg-source><mrk mtype="seg" mid="80">Second option:</mrk> <mrk mtype="seg" mid="81">Import the fonts</mrk></seg-source><target><mrk mtype="seg" mid="80" /> <mrk mtype="seg" mid="81" /></target><sdl:seg-defs><sdl:seg id="80" origin="not-translated" /><sdl:seg id="81" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="af462586-1df0-4d9f-84c5-d184c155f402" translate="no"><source><x id="88" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="7" /></sdl:cxts>
+<trans-unit id="84f6cde4-3f94-4cba-976f-5d9ebc03d675" translate="no"><source>
+<x id="89" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="d5496973-f1ea-4635-b16e-642ed129c0f2"><source>Run the Mandrakelinux Control Center ("Configure Your Computer") and select System | Fonts. From this applet you have the opportunity to import fonts. If you have an existing Windows installation on a different partition in your computer, you just need to point it there and it'll take care of copying them over. Earlier versions of Mandrake even used to have a specific button to import Windows fonts.</source><seg-source><mrk mtype="seg" mid="82">Run the Mandrakelinux Control Center ("Configure Your Computer") and select System | Fonts.</mrk> <mrk mtype="seg" mid="83">From this applet you have the opportunity to import fonts.</mrk> <mrk mtype="seg" mid="84">If you have an existing Windows installation on a different partition in your computer, you just need to point it there and it'll take care of copying them over.</mrk> <mrk mtype="seg" mid="85">Earlier versions of Mandrake even used to have a specific button to import Windows fonts.</mrk></seg-source><target><mrk mtype="seg" mid="82" /> <mrk mtype="seg" mid="83" /> <mrk mtype="seg" mid="84" /> <mrk mtype="seg" mid="85" /></target><sdl:seg-defs><sdl:seg id="82" origin="not-translated" /><sdl:seg id="83" origin="not-translated" /><sdl:seg id="84" origin="not-translated" /><sdl:seg id="85" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="8fd11f63-4445-4fde-b296-9db13df0776e" translate="no"><source>
+<x id="90" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="5d5cf41d-2716-4b61-98f6-ce7fa45e4d38" translate="no"><source>
+
+
+<x id="91" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="8" /></sdl:cxts>
+<trans-unit id="07c7f1f9-bd8f-43f7-a05e-1b95c3377644"><source>Third option: Install Microsoft fonts RPM</source><seg-source><mrk mtype="seg" mid="86">Third option:</mrk> <mrk mtype="seg" mid="87">Install Microsoft fonts RPM</mrk></seg-source><target><mrk mtype="seg" mid="86" /> <mrk mtype="seg" mid="87" /></target><sdl:seg-defs><sdl:seg id="86" origin="not-translated" /><sdl:seg id="87" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="fc4182a5-dd39-4dc6-ba89-797be30e40b8" translate="no"><source><x id="92" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="8" /></sdl:cxts>
+<trans-unit id="a23ec9b1-bf23-4943-8a67-b3e1e955102b" translate="no"><source>
+<x id="93" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="4cbc20eb-6868-4fd5-96bc-9029f8350186" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="e2b8b0d5-3880-46cf-83cc-a2816db5ccd8"><source>If you don't have Windows installed, you can just <g id="94">download them from the Web</g>. To be perfectly legal, you need to own a Windows license, but considering how difficult it is to buy a new computer nowadays without Windows bundled, that shouldn't be too hard.</source><seg-source><mrk mtype="seg" mid="88">If you don't have Windows installed, you can just <g id="94">download them from the Web</g>.</mrk> <mrk mtype="seg" mid="89">To be perfectly legal, you need to own a Windows license, but considering how difficult it is to buy a new computer nowadays without Windows bundled, that shouldn't be too hard.</mrk></seg-source><target><mrk mtype="seg" mid="88"><g id="94" /></mrk> <mrk mtype="seg" mid="89" /></target><sdl:seg-defs><sdl:seg id="88" origin="not-translated" /><sdl:seg id="89" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d30d4ac0-8218-4cfe-bd9b-1e03135c3052" translate="no"><source>
+<x id="95" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="9bfece62-1f9a-41d3-b4a8-084ca9fd678c" translate="no"><source>
+<x id="96" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="99f04d03-535d-4a32-993d-5b088ecab26e"><source>They come bundled in an rpm, and installing it will take care of doing all the manual work from you. So install it and use them right away.</source><seg-source><mrk mtype="seg" mid="90">They come bundled in an rpm, and installing it will take care of doing all the manual work from you.</mrk> <mrk mtype="seg" mid="91">So install it and use them right away.</mrk></seg-source><target><mrk mtype="seg" mid="90" /> <mrk mtype="seg" mid="91" /></target><sdl:seg-defs><sdl:seg id="90" origin="not-translated" /><sdl:seg id="91" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="051c61f9-f79a-4b55-9fb4-22741e333b46" translate="no"><source>
+<x id="97" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="8e41d985-21af-4624-b78b-9c0f9d352b94" translate="no"><source>
+
+
+
+<x id="98" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="9" /></sdl:cxts>
+<trans-unit id="ddaeff75-3ee7-4119-8502-c67628206dc3"><source>Step 4: Set your screen dpi</source><seg-source><mrk mtype="seg" mid="92">Step 4:</mrk> <mrk mtype="seg" mid="93">Set your screen dpi</mrk></seg-source><target><mrk mtype="seg" mid="92" /> <mrk mtype="seg" mid="93" /></target><sdl:seg-defs><sdl:seg id="92" origin="not-translated" /><sdl:seg id="93" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="78a45ece-1724-4a63-a131-95b6fc72fbd5" translate="no"><source><x id="99" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="9" /></sdl:cxts>
+<trans-unit id="03b77fa3-8ac5-4005-9027-73eaf7ab0e41" translate="no"><source>
+<x id="100" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="5c1208b8-7ff3-47bf-b138-c37f175294a2"><source>The fonts are already looking good, but probably the size in some applications is either too big or too small. Even though you're specifying size 9 or 10, the fonts end up being a different size. How come?</source><seg-source><mrk mtype="seg" mid="94">The fonts are already looking good, but probably the size in some applications is either too big or too small.</mrk> <mrk mtype="seg" mid="95">Even though you're specifying size 9 or 10, the fonts end up being a different size.</mrk> <mrk mtype="seg" mid="96">How come?</mrk></seg-source><target><mrk mtype="seg" mid="94" /> <mrk mtype="seg" mid="95" /> <mrk mtype="seg" mid="96" /></target><sdl:seg-defs><sdl:seg id="94" origin="not-translated" /><sdl:seg id="95" origin="not-translated" /><sdl:seg id="96" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="5aa6ac26-9699-423e-af07-456d2c14276c" translate="no"><source><x id="101" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="d89068ca-7ca4-4b05-a3f5-6f84b8db772b" translate="no"><source>
+
+<x id="102" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="8e390d57-c3eb-44c3-8cb3-2fd8488933e7"><source>That's because FreeType doesn't use exact pixel sizes for fonts, but rather, final rendered size of the font. In order to do that calculation correctly, your system needs to be aware not just of the resolution of your monitor, but of its actual physical dimensions (or, what is the same, the dpi--dots per inch of your display).</source><seg-source><mrk mtype="seg" mid="97">That's because FreeType doesn't use exact pixel sizes for fonts, but rather, final rendered size of the font.</mrk> <mrk mtype="seg" mid="98">In order to do that calculation correctly, your system needs to be aware not just of the resolution of your monitor, but of its actual physical dimensions (or, what is the same, the dpi--dots per inch of your display).</mrk></seg-source><target><mrk mtype="seg" mid="97" /> <mrk mtype="seg" mid="98" /></target><sdl:seg-defs><sdl:seg id="97" origin="not-translated" /><sdl:seg id="98" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="a20eaad0-d52b-4625-86ab-34a74188ae11" translate="no"><source><x id="103" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="6185cf8b-6326-4579-9e94-afb769fc2449" translate="no"><source>
+
+<x id="104" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="db05889d-664f-422d-a54c-ab356ab6e4b6"><source>Type the following command:</source><seg-source><mrk mtype="seg" mid="99">Type the following command:</mrk></seg-source><target><mrk mtype="seg" mid="99" /></target><sdl:seg-defs><sdl:seg id="99" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="1adeda16-f4d8-4ac2-a648-e0fd1f32ae0c" translate="no"><source>
+<x id="105" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="685025d8-d53b-493b-9e32-4041140ff423"><source><g id="106"># xdpyinfo
+</g>
+
+And look towards the top for these lines: <g id="107">screen #0:
+  dimensions:    1600x1200 pixels (457x342 millimeters)
+  resolution:    </g><g id="107">89x89 dots per inch
+</g> Most likely, you haven't set your display dimensions, so it's set to a default of 75 dpi no matter what resolution you have. That's going to cause some completely incorrect font sizes.</source><seg-source><mrk mtype="seg" mid="100"><g id="106"># xdpyinfo
+</g>
+
+And look towards the top for these lines:</mrk> <g id="107"><mrk mtype="seg" mid="101">screen #0:</mrk>
+  <mrk mtype="seg" mid="102">dimensions:</mrk>    <mrk mtype="seg" mid="103">1600x1200 pixels (457x342 millimeters)
+  resolution:</mrk>    </g><mrk mtype="seg" mid="104"><g id="107">89x89 dots per inch
+</g> Most likely, you haven't set your display dimensions, so it's set to a default of 75 dpi no matter what resolution you have.</mrk> <mrk mtype="seg" mid="105">That's going to cause some completely incorrect font sizes.</mrk></seg-source><target><mrk mtype="seg" mid="100"><g id="106" /></mrk> <g id="107"><mrk mtype="seg" mid="101" />
+  <mrk mtype="seg" mid="102" />    <mrk mtype="seg" mid="103" />    </g><mrk mtype="seg" mid="104"><g id="107" /></mrk> <mrk mtype="seg" mid="105" /></target><sdl:seg-defs><sdl:seg id="100" origin="not-translated" /><sdl:seg id="101" origin="not-translated" /><sdl:seg id="102" origin="not-translated" /><sdl:seg id="103" origin="not-translated" /><sdl:seg id="104" origin="not-translated" /><sdl:seg id="105" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="38e59367-f48b-41fc-b9dc-acfec88a7366" translate="no"><source>
+<x id="108" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="9883515f-6747-47ee-96c0-4c45e25b4ded"><source>Measure your display with a ruler (in mm), and enter the measurements in /etc/X11/XF86Config under the Monitor section with DisplaySize. The example below corresponds to the dimensions of the screen of my 19" CRT monitor.</source><seg-source><mrk mtype="seg" mid="106">Measure your display with a ruler (in mm), and enter the measurements in /etc/X11/XF86Config under the Monitor section with DisplaySize.</mrk> <mrk mtype="seg" mid="107">The example below corresponds to the dimensions of the screen of my 19" CRT monitor.</mrk></seg-source><target><mrk mtype="seg" mid="106" /> <mrk mtype="seg" mid="107" /></target><sdl:seg-defs><sdl:seg id="106" origin="not-translated" /><sdl:seg id="107" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="ca83dba5-faa3-46f0-be90-975a8a4dd959" translate="no"><source>
+<x id="109" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="a4a90b04-73d3-495a-bfe0-b669e38f7b7e"><source><g id="110">Section "Monitor"
+    Identifier "monitor1"
+    ...
+    </g><g id="110">DisplaySize 360 270
+</g>Restart XWindows (CTRL-Backspace will do fine), and check out the size of the fonts. You should adjust them so they look correctly now. Alternatively, you can always fudge the DisplaySize number to whatever you want to tweak the fonts (although I recommend leaving the DisplaySize value to represent the correct size of your monitor so other applications like The Gimp can use that information correctly).</source><seg-source><g id="110"><mrk mtype="seg" mid="108">Section "Monitor"
+    Identifier "monitor1"
+    ...</mrk>
+    </g><mrk mtype="seg" mid="109"><g id="110">DisplaySize 360 270
+</g>Restart XWindows (CTRL-Backspace will do fine), and check out the size of the fonts.</mrk> <mrk mtype="seg" mid="110">You should adjust them so they look correctly now.</mrk> <mrk mtype="seg" mid="111">Alternatively, you can always fudge the DisplaySize number to whatever you want to tweak the fonts (although I recommend leaving the DisplaySize value to represent the correct size of your monitor so other applications like The Gimp can use that information correctly).</mrk></seg-source><target><g id="110"><mrk mtype="seg" mid="108" />
+    </g><mrk mtype="seg" mid="109"><g id="110" /></mrk> <mrk mtype="seg" mid="110" /> <mrk mtype="seg" mid="111" /></target><sdl:seg-defs><sdl:seg id="108" origin="not-translated" /><sdl:seg id="109" origin="not-translated" /><sdl:seg id="110" origin="not-translated" /><sdl:seg id="111" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="bc2b6796-12d3-4010-86e8-5d1e17d265ae" translate="no"><source>
+<x id="111" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="10" /></sdl:cxts>
+<trans-unit id="0629f196-d0d7-4518-a9ca-965be1dcc345"><source>Step 5: Misc adjustments</source><seg-source><mrk mtype="seg" mid="112">Step 5:</mrk> <mrk mtype="seg" mid="113">Misc adjustments</mrk></seg-source><target><mrk mtype="seg" mid="112" /> <mrk mtype="seg" mid="113" /></target><sdl:seg-defs><sdl:seg id="112" origin="not-translated" /><sdl:seg id="113" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="af811d5b-9458-4af7-ab10-6676fc3b3746" translate="no"><source><x id="112" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="10" /></sdl:cxts>
+<trans-unit id="b4f54fc6-751d-4607-beaf-3a224d2a59fa" translate="no"><source>
+
+<x id="113" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="3f6e787a-18f9-464c-9dca-6dc0e0e04c17"><source>Almost there! Now things should be looking really good. But as you run more programs, you'll probably that some of them still have a few ugly fonts. Why aren't they respecting the font settings we so carefully set?</source><seg-source><mrk mtype="seg" mid="114">Almost there!</mrk> <mrk mtype="seg" mid="115">Now things should be looking really good.</mrk> <mrk mtype="seg" mid="116">But as you run more programs, you'll probably that some of them still have a few ugly fonts.</mrk> <mrk mtype="seg" mid="117">Why aren't they respecting the font settings we so carefully set?</mrk></seg-source><target><mrk mtype="seg" mid="114" /> <mrk mtype="seg" mid="115" /> <mrk mtype="seg" mid="116" /> <mrk mtype="seg" mid="117" /></target><sdl:seg-defs><sdl:seg id="114" origin="not-translated" /><sdl:seg id="115" origin="not-translated" /><sdl:seg id="116" origin="not-translated" /><sdl:seg id="117" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="4338032f-d090-458d-afdd-4f48866b3467" translate="no"><source>
+<x id="114" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="f60fa21e-3d79-427a-86fc-e0c8269e947c" translate="no"><source>
+
+<x id="115" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="11" /></sdl:cxts>
+<trans-unit id="b1eaae2e-3c95-42c7-b552-56e9efb5be55"><source>Gnome applications</source><seg-source><mrk mtype="seg" mid="118">Gnome applications</mrk></seg-source><target><mrk mtype="seg" mid="118" /></target><sdl:seg-defs><sdl:seg id="118" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="bf3bd045-38e5-4217-b71e-369cdfd21291" translate="no"><source><x id="116" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="11" /></sdl:cxts>
+<trans-unit id="050327ad-db31-41db-a80a-d7e0a77c68dd" translate="no"><source>
+<x id="117" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="1e57c2d1-62d1-4e7d-948f-58291e0e66b4"><source>It turns out those are probably Gnome applications, which get their font information through different sources than KDE. Don't worry, all the work we did with FreeType, turning off antialiasing, and getting the right fonts is still valid. It's just that those applications are using native fonts instead of the ones we selected.</source><seg-source><mrk mtype="seg" mid="119">It turns out those are probably Gnome applications, which get their font information through different sources than KDE.</mrk> <mrk mtype="seg" mid="120">Don't worry, all the work we did with FreeType, turning off antialiasing, and getting the right fonts is still valid.</mrk> <mrk mtype="seg" mid="121">It's just that those applications are using native fonts instead of the ones we selected.</mrk></seg-source><target><mrk mtype="seg" mid="119" /> <mrk mtype="seg" mid="120" /> <mrk mtype="seg" mid="121" /></target><sdl:seg-defs><sdl:seg id="119" origin="not-translated" /><sdl:seg id="120" origin="not-translated" /><sdl:seg id="121" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="82ceb8ac-d075-4857-9a20-ca5ca2b39693" translate="no"><source><x id="118" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="73285db2-9723-4583-b443-47a0d755eeaf" translate="no"><source>
+
+<x id="119" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="e33fc2a3-df62-421c-b375-dd5847da5c5e"><source>To change that, edit the .gtkrc file in your home directory to include the following lines:</source><seg-source><mrk mtype="seg" mid="122">To change that, edit the .gtkrc file in your home directory to include the following lines:</mrk></seg-source><target><mrk mtype="seg" mid="122" /></target><sdl:seg-defs><sdl:seg id="122" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="dc5c6c4a-ff40-4e80-a1ec-67f1439db024" translate="no"><source>
+<x id="120" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="6d632d81-a333-4336-8823-56e94b8071b8"><source><g id="121">style "user-font"
+{
+  fontset="-microsoft-tahoma-medium-r-normal-*-7-*-*-*-p-*-viscii1.1-1"
+}
+widget_class "*" style "user-font"
+</g>
+
+Some other applications use GTK 2.0, so we need to make some changes to the .gtkrc-2.0 file as well: <g id="122">style "default"
+{
+  font_name = "Tahoma 7"
+}
+class "*" style "default"
+</g>
+
+Voila! Gnome applications look gorgeous as well now.</source><seg-source><mrk mtype="seg" mid="123"><g id="121">style "user-font"
+{
+  fontset="-microsoft-tahoma-medium-r-normal-*-7-*-*-*-p-*-viscii1.1-1"
+}
+widget_class "*" style "user-font"
+</g>
+
+Some other applications use GTK 2.0, so we need to make some changes to the .gtkrc-2.0 file as well:</mrk> <mrk mtype="seg" mid="124"><g id="122">style "default"
+{
+  font_name = "Tahoma 7"
+}
+class "*" style "default"
+</g>
+
+Voila!</mrk> <mrk mtype="seg" mid="125">Gnome applications look gorgeous as well now.</mrk></seg-source><target><mrk mtype="seg" mid="123"><g id="121" /></mrk> <mrk mtype="seg" mid="124"><g id="122" /></mrk> <mrk mtype="seg" mid="125" /></target><sdl:seg-defs><sdl:seg id="123" origin="not-translated" /><sdl:seg id="124" origin="not-translated" /><sdl:seg id="125" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="918dd845-afe1-491a-a8b6-84aa1737e215" translate="no"><source>
+
+
+
+<x id="123" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="12" /></sdl:cxts>
+<trans-unit id="639b0cf9-577e-4800-9805-bebc7219a5e1"><source>Mozilla Firefox</source><seg-source><mrk mtype="seg" mid="126">Mozilla Firefox</mrk></seg-source><target><mrk mtype="seg" mid="126" /></target><sdl:seg-defs><sdl:seg id="126" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="4e2ea856-be10-4cf1-b100-c3ac2d0b7fa2" translate="no"><source><x id="124" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="12" /></sdl:cxts>
+<trans-unit id="609d6eda-8033-4cb9-a5f3-75c0d29d1809" translate="no"><source>
+
+<x id="125" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="b216cc17-a7a9-4a4e-98b0-9eb08f213430"><source><g id="126">Mozilla Firefox</g> is a great browser. I can't recommend it highly enough. It's standards-compliant, secure, extensible, and multiplatform. Unfortunately, that last point means it doesn't always behave like a native applications. And as you can imagine, its fonts don't quite behave the way they should under KDE.</source><seg-source><mrk mtype="seg" mid="127"><g id="126">Mozilla Firefox</g> is a great browser.</mrk> <mrk mtype="seg" mid="128">I can't recommend it highly enough.</mrk> <mrk mtype="seg" mid="129">It's standards-compliant, secure, extensible, and multiplatform.</mrk> <mrk mtype="seg" mid="130">Unfortunately, that last point means it doesn't always behave like a native applications.</mrk> <mrk mtype="seg" mid="131">And as you can imagine, its fonts don't quite behave the way they should under KDE.</mrk></seg-source><target><mrk mtype="seg" mid="127"><g id="126" /></mrk> <mrk mtype="seg" mid="128" /> <mrk mtype="seg" mid="129" /> <mrk mtype="seg" mid="130" /> <mrk mtype="seg" mid="131" /></target><sdl:seg-defs><sdl:seg id="127" origin="not-translated" /><sdl:seg id="128" origin="not-translated" /><sdl:seg id="129" origin="not-translated" /><sdl:seg id="130" origin="not-translated" /><sdl:seg id="131" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="5a44ae38-8739-4051-8672-15b4da20eef4" translate="no"><source>
+<x id="127" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="86a8cf81-f20d-449b-8324-502b2a51f0fd" translate="no"><source>
+<x id="128" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="839706ba-9825-4bb6-b796-c3b2e7d61e2b"><source>First of all, you need to tell it to use better fonts than the default ones. Go to Edit | Preferences | General and click on Fonts and Colors. I have my Serif one set to Times New Roman, the San-serif one to Microsoft Sans Serif, and the monospace one to Courier New. That takes care of the default fonts for rendering web pages.</source><seg-source><mrk mtype="seg" mid="132">First of all, you need to tell it to use better fonts than the default ones.</mrk> <mrk mtype="seg" mid="133">Go to Edit | Preferences | General and click on Fonts and Colors.</mrk> <mrk mtype="seg" mid="134">I have my Serif one set to Times New Roman, the San-serif one to Microsoft Sans Serif, and the monospace one to Courier New.</mrk> <mrk mtype="seg" mid="135">That takes care of the default fonts for rendering web pages.</mrk></seg-source><target><mrk mtype="seg" mid="132" /> <mrk mtype="seg" mid="133" /> <mrk mtype="seg" mid="134" /> <mrk mtype="seg" mid="135" /></target><sdl:seg-defs><sdl:seg id="132" origin="not-translated" /><sdl:seg id="133" origin="not-translated" /><sdl:seg id="134" origin="not-translated" /><sdl:seg id="135" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="cab277ad-4cd8-4935-a4b7-8de421e0f270" translate="no"><source>
+<x id="129" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="6f10dfd0-d6a9-4eb5-bb68-4da232ca1cdc" translate="no"><source>
+<x id="130" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="0815787e-be08-4f2f-8aa5-cc503ba5b4ce"><source>The menu and toolbar fonts are still looking either too large or just an ugly kind of font. To change those, you need to edit the configuration files by hand. Look for your userChrome.css file (usually under ~/.mozilla/firefox/yourprofile/chrome) and add the following entry:</source><seg-source><mrk mtype="seg" mid="136">The menu and toolbar fonts are still looking either too large or just an ugly kind of font.</mrk> <mrk mtype="seg" mid="137">To change those, you need to edit the configuration files by hand.</mrk> <mrk mtype="seg" mid="138">Look for your userChrome.css file (usually under ~/.mozilla/firefox/yourprofile/chrome) and add the following entry:</mrk></seg-source><target><mrk mtype="seg" mid="136" /> <mrk mtype="seg" mid="137" /> <mrk mtype="seg" mid="138" /></target><sdl:seg-defs><sdl:seg id="136" origin="not-translated" /><sdl:seg id="137" origin="not-translated" /><sdl:seg id="138" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="cbb8813e-e945-4109-beee-324675466189" translate="no"><source>
+<x id="131" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="eefab081-bde8-4d00-8a49-d2840be6a8ca"><source><g id="132">* {
+   font-size: 7pt !important;
+   font-family: </g><g id="132">Tahoma !important;
+}          
+</g>    
+     
+That should bring Firefox's menu and toolbar fonts in line with the rest of your system.</source><seg-source><g id="132"><mrk mtype="seg" mid="139">* {
+   font-size:</mrk> <mrk mtype="seg" mid="140">7pt !important;
+   font-family:</mrk> </g><mrk mtype="seg" mid="141"><g id="132">Tahoma !important;
+}          
+</g>    
+     
+That should bring Firefox's menu and toolbar fonts in line with the rest of your system.</mrk></seg-source><target><g id="132"><mrk mtype="seg" mid="139" /> <mrk mtype="seg" mid="140" /> </g><mrk mtype="seg" mid="141"><g id="132" /></mrk></target><sdl:seg-defs><sdl:seg id="139" origin="not-translated" /><sdl:seg id="140" origin="not-translated" /><sdl:seg id="141" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="04eaf955-314e-4769-999a-60ee1c5b81b7" translate="no"><source>
+           
+<x id="133" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="7cc37dcf-c2d9-442b-afd0-d43d6ef8b605"><source>In my case, after making all those changes, the fonts for the input fields (buttons, text entry, or drop-down menus) in some web pages like Google or Amazon were way too big and still using one of the ugly fonts. To change that, go to userContent.css (that's different from the userChrome.css file we just modified), and add the following entry:</source><seg-source><mrk mtype="seg" mid="142">In my case, after making all those changes, the fonts for the input fields (buttons, text entry, or drop-down menus) in some web pages like Google or Amazon were way too big and still using one of the ugly fonts.</mrk> <mrk mtype="seg" mid="143">To change that, go to userContent.css (that's different from the userChrome.css file we just modified), and add the following entry:</mrk></seg-source><target><mrk mtype="seg" mid="142" /> <mrk mtype="seg" mid="143" /></target><sdl:seg-defs><sdl:seg id="142" origin="not-translated" /><sdl:seg id="143" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="61cd22fa-43a9-4823-9f93-466192c0344b" translate="no"><source>
+<x id="134" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="b4018c35-2ee9-492c-b60b-7e3556d394f6"><source><g id="135">input, textarea, select, button,
+input[type="button"], input[type="reset"], input[type="submit"] {
+   font-size: 8pt !important;
+   font-family: Verdana !important;
+}
+</g></source><seg-source><g id="135"><mrk mtype="seg" mid="144">input, textarea, select, button,
+input[type="button"], input[type="reset"], input[type="submit"] {
+   font-size:</mrk> <mrk mtype="seg" mid="145">8pt !important;
+   font-family:</mrk> <mrk mtype="seg" mid="146">Verdana !important;
+}</mrk>
+</g></seg-source><target><g id="135"><mrk mtype="seg" mid="144" /> <mrk mtype="seg" mid="145" /> <mrk mtype="seg" mid="146" />
+</g></target><sdl:seg-defs><sdl:seg id="144" origin="not-translated" /><sdl:seg id="145" origin="not-translated" /><sdl:seg id="146" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d7d65eb0-17a7-452e-b3b6-aef0bd602374" translate="no"><source>
+
+
+
+<x id="136" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="13" /></sdl:cxts>
+<trans-unit id="c443f094-4606-4db9-b760-e12ab710f136"><source>Avoiding ugly fonts</source><seg-source><mrk mtype="seg" mid="147">Avoiding ugly fonts</mrk></seg-source><target><mrk mtype="seg" mid="147" /></target><sdl:seg-defs><sdl:seg id="147" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="a7288bc7-d58e-4a8d-aa92-0fbb1d175c67" translate="no"><source><x id="137" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="13" /></sdl:cxts>
+<trans-unit id="06e7f7fb-ef80-43c3-ab80-f5ce19ac5c3b" translate="no"><source>  
+<x id="138" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="8c094938-0118-4c97-87b9-7497045ac344"><source>Some web pages and applications will attempt to use some fairly ugly fonts by default. For example, <g id="139">Mandrake Club</g> uses the Helvetica font by default, or <g id="140">CodeWeavers</g> uses Bitstream Vera. I'd much rather see Arial instead of Helvetica, Verdana instead of Bitstream Vera, or Georgia instead of Palatino.</source><seg-source><mrk mtype="seg" mid="148">Some web pages and applications will attempt to use some fairly ugly fonts by default.</mrk> <mrk mtype="seg" mid="149">For example, <g id="139">Mandrake Club</g> uses the Helvetica font by default, or <g id="140">CodeWeavers</g> uses Bitstream Vera.</mrk> <mrk mtype="seg" mid="150">I'd much rather see Arial instead of Helvetica, Verdana instead of Bitstream Vera, or Georgia instead of Palatino.</mrk></seg-source><target><mrk mtype="seg" mid="148" /> <mrk mtype="seg" mid="149"><g id="139" /><g id="140" /></mrk> <mrk mtype="seg" mid="150" /></target><sdl:seg-defs><sdl:seg id="148" origin="not-translated" /><sdl:seg id="149" origin="not-translated" /><sdl:seg id="150" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="70827adb-7f15-4333-810d-fe3ebd67991f" translate="no"><source>
+<x id="141" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="371c934e-a71b-45f0-94d5-9e395e935e63" translate="no"><source>
+<x id="142" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="15c04d35-0ab6-426b-ae21-0acceded08ca"><source>Instead of uninstalling those fonts (which some applications might require, or you might want to use at some point), you can force the system to substitute in your favorite fonts.</source><seg-source><mrk mtype="seg" mid="151">Instead of uninstalling those fonts (which some applications might require, or you might want to use at some point), you can force the system to substitute in your favorite fonts.</mrk></seg-source><target><mrk mtype="seg" mid="151" /></target><sdl:seg-defs><sdl:seg id="151" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="897c6936-c378-4343-8fe9-91ad70aad7a5" translate="no"><source>
+<x id="143" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="64da9179-e4c8-48d8-8d16-7109da8e1e10" translate="no"><source>
+<x id="144" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="2921421f-8985-4217-82f2-7fd8e1ccfe72" translate="no"><source>
+</source></trans-unit>
+<trans-unit id="52ca3876-9ef8-4761-bcbc-a44ce0b53ff1"><source>Edit the /etc/fonts/local.conf file and add these lines:</source><seg-source><mrk mtype="seg" mid="152">Edit the /etc/fonts/local.conf file and add these lines:</mrk></seg-source><target><mrk mtype="seg" mid="152" /></target><sdl:seg-defs><sdl:seg id="152" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="447f07bb-d8e4-42b0-82a6-593e3828cf4b" translate="no"><source>
+<x id="145" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="99a9bb6a-1f0b-43b5-82d7-f894d1f18205"><source><g id="146">    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Bitstream Vera Sans&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Verdana&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Helvetica&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Arial&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Palatino&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Georgia&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+        &lt;test qual="any" name="family"&gt;
+            &lt;string&gt;Times&lt;/string&gt;
+        &lt;/test&gt;
+        &lt;edit name="family" mode="assign"&gt;
+            &lt;string&gt;Times New Roman&lt;/string&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;
+
+</g></source><seg-source><g id="146">    <mrk mtype="seg" mid="153">&lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Bitstream Vera Sans&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Verdana&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Helvetica&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Arial&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+            &lt;test qual="any" name="family"&gt;
+                    &lt;string&gt;Palatino&lt;/string&gt;
+            &lt;/test&gt;
+            &lt;edit name="family" mode="assign"&gt;
+                    &lt;string&gt;Georgia&lt;/string&gt;
+            &lt;/edit&gt;
+    &lt;/match&gt;
+    &lt;match target="pattern"&gt;
+        &lt;test qual="any" name="family"&gt;
+            &lt;string&gt;Times&lt;/string&gt;
+        &lt;/test&gt;
+        &lt;edit name="family" mode="assign"&gt;
+            &lt;string&gt;Times New Roman&lt;/string&gt;
+        &lt;/edit&gt;
+    &lt;/match&gt;</mrk>
+
+</g></seg-source><target><g id="146">    <mrk mtype="seg" mid="153" />
+
+</g></target><sdl:seg-defs><sdl:seg id="153" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="91f64533-258e-438e-8c7d-864d4b30a892" translate="no"><source>
+
+
+
+<x id="147" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="6" /><sdl:node id="14" /></sdl:cxts>
+<trans-unit id="88aeaf3a-20cd-4908-9bf4-75379382ead0"><source>Root</source><seg-source><mrk mtype="seg" mid="154">Root</mrk></seg-source><target><mrk mtype="seg" mid="154" /></target><sdl:seg-defs><sdl:seg id="154" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="9a33e902-c7e2-42c7-8461-da908e364776" translate="no"><source><x id="148" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="14" /></sdl:cxts>
+<trans-unit id="b2f88909-18d3-4805-a701-5667fd0dffa1" translate="no"><source>  
+<x id="149" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="5c45b6d2-6053-42b5-84f6-362147fdb0b1" translate="no"><source> </source></trans-unit>
+<trans-unit id="93b2d04a-7953-44a2-8d65-0663b1193f46"><source>One last minor tweak: When you run something as root (like packaging applications, system settings, or other configuration utilities), it will use the root's settings. You might want to copy the file ~/.kde/share/config/kdeglobals to /root/.kde/share/config/kdeglobals. That will make it use the same fonts as the ones in your account.</source><seg-source><mrk mtype="seg" mid="155">One last minor tweak:</mrk> <mrk mtype="seg" mid="156">When you run something as root (like packaging applications, system settings, or other configuration utilities), it will use the root's settings.</mrk> <mrk mtype="seg" mid="157">You might want to copy the file ~/.kde/share/config/kdeglobals to /root/.kde/share/config/kdeglobals.</mrk> <mrk mtype="seg" mid="158">That will make it use the same fonts as the ones in your account.</mrk></seg-source><target><mrk mtype="seg" mid="155" /> <mrk mtype="seg" mid="156" /> <mrk mtype="seg" mid="157" /> <mrk mtype="seg" mid="158" /></target><sdl:seg-defs><sdl:seg id="155" origin="not-translated" /><sdl:seg id="156" origin="not-translated" /><sdl:seg id="157" origin="not-translated" /><sdl:seg id="158" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d86ee0c3-44cd-44b9-8dc4-d2cd963dc41f" translate="no"><source>
+<x id="150" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="7a364413-e9dc-4796-aa85-a0aca894bc84" translate="no"><source>           
+
+               
+               
+<x id="151" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="15" /></sdl:cxts>
+<trans-unit id="d85c03d7-febc-4992-9ac0-0f1cfddad99c"><source>All done</source><seg-source><mrk mtype="seg" mid="159">All done</mrk></seg-source><target><mrk mtype="seg" mid="159" /></target><sdl:seg-defs><sdl:seg id="159" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="3da41fd5-91a4-40c8-89b1-b1ccbe51a641" translate="no"><source><x id="152" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="15" /></sdl:cxts>
+<trans-unit id="f78d6beb-2892-4fe5-86fd-d3bdadb1bd12" translate="no"><source>
+<x id="153" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="86cccfe6-36ec-42f3-a6e1-8c956ec9dacd" translate="no"><source> </source></trans-unit>
+<trans-unit id="691c8f8e-e71e-414d-b75f-3fb5ab00bd3e"><source>We're finally all done! What a difference, uh? Once you get used to these fonts, it's really hard to go back to the default ones. I really wish that Mandrake would fix this. I'm convinced that they would attract many new users that get put off by the initial ugliness of the fonts.</source><seg-source><mrk mtype="seg" mid="160">We're finally all done!</mrk> <mrk mtype="seg" mid="161">What a difference, uh?</mrk> <mrk mtype="seg" mid="162">Once you get used to these fonts, it's really hard to go back to the default ones.</mrk> <mrk mtype="seg" mid="163">I really wish that Mandrake would fix this.</mrk> <mrk mtype="seg" mid="164">I'm convinced that they would attract many new users that get put off by the initial ugliness of the fonts.</mrk></seg-source><target><mrk mtype="seg" mid="160" /> <mrk mtype="seg" mid="161" /> <mrk mtype="seg" mid="162" /> <mrk mtype="seg" mid="163" /> <mrk mtype="seg" mid="164" /></target><sdl:seg-defs><sdl:seg id="160" origin="not-translated" /><sdl:seg id="161" origin="not-translated" /><sdl:seg id="162" origin="not-translated" /><sdl:seg id="163" origin="not-translated" /><sdl:seg id="164" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="5b871eb3-ff84-4412-b5c0-7715d534b735" translate="no"><source>
+<x id="154" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="51fdcbbc-4650-46da-9316-3957f9f6c7ab" translate="no"><source>           
+<x id="155" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="4" /></sdl:cxts>
+<trans-unit id="a3485256-0148-4f7b-8307-370c00b260b1"><source>Email me if you have any corrections, suggestions, or additions. I'll be happy to update this document and give you credit for it. I'll try to post screenshots of how the fonts look at each step of the way so people can see it for themselves what a big difference it makes.</source><seg-source><mrk mtype="seg" mid="165">Email me if you have any corrections, suggestions, or additions.</mrk> <mrk mtype="seg" mid="166">I'll be happy to update this document and give you credit for it.</mrk> <mrk mtype="seg" mid="167">I'll try to post screenshots of how the fonts look at each step of the way so people can see it for themselves what a big difference it makes.</mrk></seg-source><target><mrk mtype="seg" mid="165" /> <mrk mtype="seg" mid="166" /> <mrk mtype="seg" mid="167" /></target><sdl:seg-defs><sdl:seg id="165" origin="not-translated" /><sdl:seg id="166" origin="not-translated" /><sdl:seg id="167" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2724e613-3397-42fe-bf33-ad5a582241be" translate="no"><source><x id="156" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="78a308d0-288a-43a0-ad83-5df9ede566da" translate="no"><source>
+   
+
+<x id="157" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="16" /></sdl:cxts>
+<trans-unit id="623db716-4cde-44f3-982b-d6a259d48a5f"><source>Related links</source><seg-source><mrk mtype="seg" mid="168">Related links</mrk></seg-source><target><mrk mtype="seg" mid="168" /></target><sdl:seg-defs><sdl:seg id="168" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="00db9c37-9f8c-4b1b-b657-970ce2763c38" translate="no"><source><x id="158" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="16" /></sdl:cxts>
+<trans-unit id="a82f5c4f-896c-4b90-8447-98ff97af233c" translate="no"><source>
+<x id="159" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="cbd08388-8c12-4ad8-8bcd-5dba8a504c46" translate="no"><source>
+<x id="160" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="294fbab0-3028-4a92-a036-2e77e7a2c188"><source><g id="161">Optimal Use of Fonts on Linux</g>. Another, very similar document detailing how to improve the fonts in Linux.</source><seg-source><mrk mtype="seg" mid="169"><g id="161">Optimal Use of Fonts on Linux</g>.</mrk> <mrk mtype="seg" mid="170">Another, very similar document detailing how to improve the fonts in Linux.</mrk></seg-source><target><mrk mtype="seg" mid="169"><g id="161" /></mrk> <mrk mtype="seg" mid="170" /></target><sdl:seg-defs><sdl:seg id="169" origin="not-translated" /><sdl:seg id="170" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="7c1c1a03-c237-404e-9df9-9573038240cb" translate="no"><source><x id="162" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="7f37e0c5-e907-4835-a3ec-e37e9defb6d6" translate="no"><source>
+<x id="163" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="47ba6c08-d32c-4042-8422-21ea3eafa983"><source><g id="164">XFree86 Font De-uglification HOWTO</g>. A very similar howto dealing with any XWindows distribution (not just Mandrake).</source><seg-source><mrk mtype="seg" mid="171"><g id="164">XFree86 Font De-uglification HOWTO</g>.</mrk> <mrk mtype="seg" mid="172">A very similar howto dealing with any XWindows distribution (not just Mandrake).</mrk></seg-source><target><mrk mtype="seg" mid="171"><g id="164" /></mrk> <mrk mtype="seg" mid="172" /></target><sdl:seg-defs><sdl:seg id="171" origin="not-translated" /><sdl:seg id="172" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="25a71f21-8c90-4d2a-a13f-9a02c4b00372" translate="no"><source><x id="165" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="93023fcb-a9d9-491c-86fb-adcbfe0b1d50" translate="no"><source>
+<x id="166" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="346da48e-34ea-4ab1-81dc-fadee30f4301"><source><g id="167">Font HOWTO</g>, with a very good section on making fonts available to X.</source><seg-source><mrk mtype="seg" mid="173"><g id="167">Font HOWTO</g>, with a very good section on making fonts available to X.</mrk></seg-source><target><mrk mtype="seg" mid="173"><g id="167" /></mrk></target><sdl:seg-defs><sdl:seg id="173" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="667334c2-78b9-4a1d-a523-b0d283e507e6" translate="no"><source><x id="168" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="4ef74b95-bac0-4472-b4c4-c9fafc4513eb" translate="no"><source>
+<x id="169" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="3be3c621-2818-423a-8dcf-5cff22a00055"><source><g id="170">Sub-Pixel Font Positioning on UNIX mini-HOWTO</g></source><seg-source><g id="170"><mrk mtype="seg" mid="174">Sub-Pixel Font Positioning on UNIX mini-HOWTO</mrk></g></seg-source><target><g id="170"><mrk mtype="seg" mid="174" /></g></target><sdl:seg-defs><sdl:seg id="174" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d246595d-62ed-4f93-b593-47ae7a492ee2" translate="no"><source><x id="171" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="e85b37d5-65f3-4bfa-aafb-9a7a3d345ba6" translate="no"><source>
+<x id="172" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="4d5ed7d8-6e74-4621-ba9c-351d320f4833"><source><g id="173">Web Type 101, a Primer</g>. Guidelines on how to use fonts correctly on a web page.</source><seg-source><mrk mtype="seg" mid="175"><g id="173">Web Type 101, a Primer</g>.</mrk> <mrk mtype="seg" mid="176">Guidelines on how to use fonts correctly on a web page.</mrk></seg-source><target><mrk mtype="seg" mid="175"><g id="173" /></mrk> <mrk mtype="seg" mid="176" /></target><sdl:seg-defs><sdl:seg id="175" origin="not-translated" /><sdl:seg id="176" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="d5f6e75b-747e-4688-b1eb-a18c2c29fa52" translate="no"><source><x id="174" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="e6c1ce21-96b6-4496-b6e5-66d35a3f6c6c" translate="no"><source>
+<x id="175" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="0aadd303-5365-410c-bf95-c0b8195b4c0e" translate="no"><source>
+            
+
+<x id="176" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="5" /><sdl:node id="17" /></sdl:cxts>
+<trans-unit id="63cc0c35-5b06-4b76-9523-1d7381215b6f"><source>Acknowledgements</source><seg-source><mrk mtype="seg" mid="177">Acknowledgements</mrk></seg-source><target><mrk mtype="seg" mid="177" /></target><sdl:seg-defs><sdl:seg id="177" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="51f8cc8b-5d86-4d0c-9555-f052916601fd" translate="no"><source><x id="177" /></source></trans-unit></group><group><sdl:cxts><sdl:node id="17" /></sdl:cxts>
+<trans-unit id="ec4cf0da-2196-4cfa-a5df-7606a71c20bc" translate="no"><source>
+<x id="178" /><x id="179" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="6ab0214b-2b8f-4d78-9ab9-f5dd201a6ca4"><source>I first learned the information on the FreeType modifications from <g id="180">a Usenet post by John A. Pose</g>.</source><seg-source><mrk mtype="seg" mid="178">I first learned the information on the FreeType modifications from <g id="180">a Usenet post by John A. Pose</g>.</mrk></seg-source><target><mrk mtype="seg" mid="178"><g id="180" /></mrk></target><sdl:seg-defs><sdl:seg id="178" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="09b21625-faad-4b67-bb45-34b8deac1cf2" translate="no"><source><x id="181" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="e506ace6-9ff5-4787-bb13-aafdcb4278e1" translate="no"><source>
+<x id="182" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="f0ac1e7b-1acb-45c9-900b-578fcf1edbfe"><source>Syd Hancock helped with some of the content and links.</source><seg-source><mrk mtype="seg" mid="179">Syd Hancock helped with some of the content and links.</mrk></seg-source><target><mrk mtype="seg" mid="179" /></target><sdl:seg-defs><sdl:seg id="179" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="81fd1da6-d44c-4b19-a822-21fc07a326e5" translate="no"><source><x id="183" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="4ce27340-b544-44c2-820a-ab59d0cb9270" translate="no"><source>
+<x id="184" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="16ac3406-e9f6-4d32-b5fc-f4f60c1c99b1"><source>David Jao for pointing out the importance of subpixel hinting in LCD monitors and providing a link.</source><seg-source><mrk mtype="seg" mid="180">David Jao for pointing out the importance of subpixel hinting in LCD monitors and providing a link.</mrk></seg-source><target><mrk mtype="seg" mid="180" /></target><sdl:seg-defs><sdl:seg id="180" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="b4140c6f-a25d-4694-821f-3b8c3a6354f1" translate="no"><source><x id="185" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="7c8919a2-8a98-46f7-8fff-73f56ef15b3a" translate="no"><source>
+<x id="186" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="2e28ef12-9b2d-444b-a0c3-85fc5fe71d59"><source>Michal Klimczak for catching a bunch of little mistakes.</source><seg-source><mrk mtype="seg" mid="181">Michal Klimczak for catching a bunch of little mistakes.</mrk></seg-source><target><mrk mtype="seg" mid="181" /></target><sdl:seg-defs><sdl:seg id="181" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="70bf0276-e8ed-4483-811b-245fa31c8a42" translate="no"><source><x id="187" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="e8e80e2f-ab17-40bf-a98b-e440a3fb5ebb" translate="no"><source>
+<x id="188" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="8" /><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="f7b02015-659a-424b-886d-b734a93c5d84"><source>Olivier Jadot for submitting the link to "Optimal Use of Fonts on Linux".</source><seg-source><mrk mtype="seg" mid="182">Olivier Jadot for submitting the link to "Optimal Use of Fonts on Linux".</mrk></seg-source><target><mrk mtype="seg" mid="182" /></target><sdl:seg-defs><sdl:seg id="182" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="59a9bae7-d982-439f-9ec6-29fe588542ca" translate="no"><source><x id="189" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="7" /></sdl:cxts>
+<trans-unit id="016b22d3-4039-4692-bf9c-8c60e38dd9da" translate="no"><source>
+<x id="190" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="f7752f5c-7332-4bd4-84ae-5f1bbd1a136e" translate="no"><source> <x id="191" /><x id="192" /></source></trans-unit></group></body></file></xliff>

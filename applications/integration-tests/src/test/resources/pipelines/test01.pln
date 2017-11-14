@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.common.createtarget.CreateTargetStep">#v1
+copyProperties.b=true
+copyContent.b=true
+overwriteExisting.b=false</step>
+<step class="net.sf.okapi.steps.searchandreplace.SearchAndReplaceStep">#v1
+regEx.b=false
+dotAll.b=false
+ignoreCase.b=false
+multiLine.b=false
+count.i=1
+target.b=true
+source.b=false
+use0=true
+search0=ABC
+replace0=PARAGRAPH</step>
+<step class="net.sf.okapi.steps.fullwidthconversion.FullWidthConversionStep">#v1
+toHalfWidth.b=true
+asciiOnly.b=false
+includeSLA.b=false
+includeLLS.b=false</step>
+<step class="net.sf.okapi.steps.searchandreplace.SearchAndReplaceStep">#v1
+regEx.b=true
+dotAll.b=false
+ignoreCase.b=true
+multiLine.b=false
+count.i=1
+target.b=true
+source.b=false
+use0=true
+search0=para.*?\s
+replace0=NEWSTRING </step>
+<step class="net.sf.okapi.steps.common.FilterEventsToRawDocumentStep"></step>
+</rainbowPipeline>

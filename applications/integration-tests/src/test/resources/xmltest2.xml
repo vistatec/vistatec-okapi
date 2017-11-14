@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text xmlns:its="http://www.w3.org/2005/11/its">
+ <its:rules version="1.0" xmlns:itsx="http://www.w3.org/2008/12/its-extensions">
+  <its:withinTextRule selector="//b|//img" withinText="yes"/>
+ </its:rules>
+ <p id="p1">Open file</p>
+ <p id="p2">Open new window</p>
+</text>
+<?pi pival?><!--last comment-->

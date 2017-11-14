@@ -1,0 +1,29 @@
+﻿|b000001
+|cTitle
+|v1
+SOkapi Handbook
+<TARGET>
+TOkapi Handbook
+
+|v2
+SBook 1 - test é=eacute
+<TARGET>
+TBook 1 - test é=eacute
+
+|v3
+STest Okapi
+<TARGET>
+TTest Okapi
+
+|v4
+SMore testing
+<TARGET>
+TMore testing
+
+|cCopyright
+|v1
+SPublished by
+Okapi Framework contributors
+<TARGET>
+TPublished by
+Okapi Framework contributors

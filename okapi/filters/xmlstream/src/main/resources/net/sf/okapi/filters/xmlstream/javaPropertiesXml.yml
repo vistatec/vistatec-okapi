@@ -1,0 +1,8 @@
+assumeWellformed: true
+global_cdata_subfilter: okf_html
+preserve_whitespace: false
+
+elements:
+  entry:
+    ruleTypes: [TEXTUNIT]
+    idAttributes: [key]

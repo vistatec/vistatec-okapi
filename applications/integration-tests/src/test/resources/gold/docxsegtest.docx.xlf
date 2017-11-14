@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="word/styles.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="word/document.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="NFDBB2FA9-tu2" xml:space="preserve">
+<source xml:lang="en">Text of Heading 1</source>
+<seg-source><mrk mid="0" mtype="seg">Text of Heading 1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Text of Heading 1</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu3" xml:space="preserve">
+<source xml:lang="en">Text of Heading 2</source>
+<seg-source><mrk mid="0" mtype="seg">Text of Heading 2</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Text of Heading 2</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu4" xml:space="preserve">
+<source xml:lang="en">Text of heading 3</source>
+<seg-source><mrk mid="0" mtype="seg">Text of heading 3</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Text of heading 3</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu5" xml:space="preserve">
+<source xml:lang="en">This is a test in DOCX format. This is the second sentence in this paragraph. This one is the third.</source>
+<seg-source><mrk mid="0" mtype="seg">This is a test in DOCX format.</mrk> <mrk mid="1" mtype="seg">This is the second sentence in this paragraph.</mrk> <mrk mid="2" mtype="seg">This one is the third.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">This is a test in DOCX format.</mrk> <mrk mid="1" mtype="seg">This is the second sentence in this paragraph.</mrk> <mrk mid="2" mtype="seg">This one is the third.</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu6" xml:space="preserve">
+<source xml:lang="en">There is one <g id="1">sentence</g> here. There is a <g id="2">second</g><g id="3"> sentence</g> here. And there is a third one<x id="4"/>here (next line).</source>
+<seg-source><mrk mid="0" mtype="seg">There is one <g id="1">sentence</g> here.</mrk> <mrk mid="1" mtype="seg">There is a <g id="2">second</g><g id="3"> sentence</g> here.</mrk> <mrk mid="2" mtype="seg">And there is a third one<x id="4"/>here (next line).</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">There is one <g id="1">sentence</g> here.</mrk> <mrk mid="1" mtype="seg">There is a <g id="2">second</g><g id="3"> sentence</g> here.</mrk> <mrk mid="2" mtype="seg">And there is a third one<x id="4"/>here (next line).</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu7" xml:space="preserve">
+<source xml:lang="en">Some paragraph with smart tags because of typpo..</source>
+<seg-source><mrk mid="0" mtype="seg">Some paragraph with smart tags because of typpo..</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Some paragraph with smart tags because of typpo..</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu8" xml:space="preserve">
+<source xml:lang="en">This paragraph has some <g id="1">bold</g>, <g id="2">itaclics</g>, and <g id="3">underlined</g> text. And here are a lot more different types of formatting: <g id="4">Font <g id="5">type</g></g><g id="6">, and size</g>, and <g id="7">ｏｔｈｅｒ　ｄｅｃｏｒａｔｉｏｎｓ</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">This paragraph has some <g id="1">bold</g>, <g id="2">itaclics</g>, and <g id="3">underlined</g> text.</mrk> <mrk mid="1" mtype="seg">And here are a lot more different types of formatting:</mrk> <mrk mid="2" mtype="seg"><g id="4">Font <g id="5">type</g></g><g id="6">, and size</g>, and <g id="7">ｏｔｈｅｒ　ｄｅｃｏｒａｔｉｏｎｓ</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">This paragraph has some <g id="1">bold</g>, <g id="2">itaclics</g>, and <g id="3">underlined</g> text.</mrk> <mrk mid="1" mtype="seg">And here are a lot more different types of formatting:</mrk> <mrk mid="2" mtype="seg"><g id="4">Font <g id="5">type</g></g><g id="6">, and size</g>, and <g id="7">ｏｔｈｅｒ　ｄｅｃｏｒａｔｉｏｎｓ</g>.</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu9" xml:space="preserve">
+<source xml:lang="en">There is a footnote here<x id="1"/>. And some <x id="2"/>comments<x id="3"/><x id="4"/>.</source>
+<seg-source><mrk mid="0" mtype="seg">There is a footnote here<x id="1"/>.</mrk> <mrk mid="1" mtype="seg">And some <x id="2"/>comments<x id="3"/><x id="4"/>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">There is a footnote here<x id="1"/>.</mrk> <mrk mid="1" mtype="seg">And some <x id="2"/>comments<x id="3"/><x id="4"/>.</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu11" xml:space="preserve">
+<source xml:lang="en">Second heading 1</source>
+<seg-source><mrk mid="0" mtype="seg">Second heading 1</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Second heading 1</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu12" xml:space="preserve">
+<source xml:lang="en">Second page after a forced page-break.</source>
+<seg-source><mrk mid="0" mtype="seg">Second page after a forced page-break.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Second page after a forced page-break.</mrk></target>
+</trans-unit>
+<trans-unit id="NFDBB2FA9-tu13" xml:space="preserve">
+<source xml:lang="en">Text with an index marker<x id="1"/>.</source>
+<seg-source><mrk mid="0" mtype="seg">Text with an index marker<x id="1"/>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Text with an index marker<x id="1"/>.</mrk></target>
+</trans-unit>
+</body>
+</file>
+<file original="word/footnotes.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="P67A78077-tu3" xml:space="preserve">
+<source xml:lang="en"><x id="1"/> This is the text of the <g id="2">footnote</g></source>
+<seg-source><mrk mid="0" mtype="seg"><x id="1"/> This is the text of the <g id="2">footnote</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><x id="1"/> This is the text of the <g id="2">footnote</g></mrk></target>
+</trans-unit>
+<trans-unit id="P67A78077-tu4" xml:space="preserve">
+<source xml:lang="en">And this the second paragraph in the <g id="1">footnote</g>.</source>
+<seg-source><mrk mid="0" mtype="seg">And this the second paragraph in the <g id="1">footnote</g>.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">And this the second paragraph in the <g id="1">footnote</g>.</mrk></target>
+</trans-unit>
+</body>
+</file>
+<file original="word/endnotes.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="word/comments.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="N86022802-tu1" xml:space="preserve">
+<source xml:lang="en"><x id="1"/>This is a <g id="2">comment</g> for the paragraph with the footnote.</source>
+<seg-source><mrk mid="0" mtype="seg"><x id="1"/>This is a <g id="2">comment</g> for the paragraph with the footnote.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg"><x id="1"/>This is a <g id="2">comment</g> for the paragraph with the footnote.</mrk></target>
+</trans-unit>
+</body>
+</file>
+<file original="word/settings.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+</body>
+</file>
+<file original="docProps/core.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="windows-1252">
+<body>
+<trans-unit id="tu1" xml:space="preserve">
+<source xml:lang="en">Title of the document</source>
+<seg-source><mrk mid="0" mtype="seg">Title of the document</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Title of the document</mrk></target>
+</trans-unit>
+<trans-unit id="tu2" xml:space="preserve">
+<source xml:lang="en">Subject text</source>
+<seg-source><mrk mid="0" mtype="seg">Subject text</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Subject text</mrk></target>
+</trans-unit>
+<trans-unit id="tu3" xml:space="preserve">
+<source xml:lang="en">Name of the author</source>
+<seg-source><mrk mid="0" mtype="seg">Name of the author</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Name of the author</mrk></target>
+</trans-unit>
+<trans-unit id="tu4" xml:space="preserve">
+<source xml:lang="en">Keywords</source>
+<seg-source><mrk mid="0" mtype="seg">Keywords</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Keywords</mrk></target>
+</trans-unit>
+<trans-unit id="tu5" xml:space="preserve">
+<source xml:lang="en">And this is a comment.</source>
+<seg-source><mrk mid="0" mtype="seg">And this is a comment.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">And this is a comment.</mrk></target>
+</trans-unit>
+<trans-unit id="tu6" xml:space="preserve">
+<source xml:lang="en">Categories</source>
+<seg-source><mrk mid="0" mtype="seg">Categories</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Categories</mrk></target>
+</trans-unit>
+<trans-unit id="tu7" xml:space="preserve">
+<source xml:lang="en">Status</source>
+<seg-source><mrk mid="0" mtype="seg">Status</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="0" mtype="seg">Status</mrk></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

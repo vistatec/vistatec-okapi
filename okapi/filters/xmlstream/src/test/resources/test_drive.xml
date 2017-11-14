@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<!-- # Test Drive Page -->
+<entry key="testdrive_imagetype_normal">Normal</entry>
+<entry key="testdrive_imagetype_blank">Blank</entry>
+<entry key="testdrive_imagetype_unreadable">Unreadable</entry>
+<entry key="ti_title">Try Sorting</entry>
+
+<entry key="ti_fieldNameLbl">Field Name</entry>
+<entry key="ti_fieldValueLbl">Field Value</entry>
+<entry key="ti_feedBackLbl">Answers</entry>
+<entry key="ti_fieldHelpLbl">Field Help</entry>
+<entry key="ti_correctMsg">Correct</entry>
+<entry key="ti_successText">Thank you for trying the Test Drive.</entry>
+
+<entry key="ti_answers">See correct answers here</entry>
+<entry key="ti_begin">Please begin Test Drive</entry>
+<entry key="ti_gethelp">Get help for each field here</entry>
+<entry key="ti_intro">This test drive allows you to see what EnterpriseSearch Sorting is like as you transcribe information from a sample document to a computer form.</entry>
+<entry key="ti_samplecert">Sample Document</entry>
+<entry key="ti_typehere">Type here what you see highlighted above</entry>
+<entry key="ti_welcome">Welcome to EnterpriseSearch Sorting Test Drive</entry>
+
+</properties>

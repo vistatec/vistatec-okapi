@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="unknown" creationtoolversion="unknown" segtype="paragraph" o-tmf="unknown" adminlang="en" srclang="en-US" datatype="text"></header><body>
+<tu tuid="autoID1">
+<prop type="Txt::FileName">file1</prop>
+<tuv xml:lang="en-US"><seg>Test char: &amp;=amp, &lt;=lt, &apos;=apos, &quot;=quot</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Test charactères: &amp;=amp, &lt;=lt, &apos;=apos, &quot;=quot</seg></tuv>
+</tu>
+<tu tuid="autoID2">
+<prop type="Txt::GroupName">group1</prop>
+<prop type="Txt::FileName">file1</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (file1, group1)</seg></tuv>
+</tu>
+<tu tuid="autoID3">
+<prop type="Txt::FileName">file1</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (file1, no group)</seg></tuv>
+</tu>
+<tu tuid="autoID4">
+<prop type="Txt::GroupName">group1</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (no file, group1)</seg></tuv>
+</tu>
+<tu tuid="autoID5">
+<prop type="Txt::GroupName">group2</prop>
+<prop type="Txt::FileName">file1</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (file1, group2)</seg></tuv>
+</tu>
+<tu tuid="autoID6">
+<prop type="Txt::GroupName">group2</prop>
+<prop type="Txt::FileName">file2</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (file2, group2)</seg></tuv>
+</tu>
+<tu tuid="autoID7">
+<prop type="Txt::GroupName">group1</prop>
+<prop type="Txt::FileName">file2</prop>
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (file2, group1)</seg></tuv>
+</tu>
+<tu tuid="autoID8">
+<tuv xml:lang="en-US"><seg>One entry in the TM.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Une entrée dans la MT (no file, no group)</seg></tuv>
+</tu>
+<tu tuid="autoID9">
+<tuv xml:lang="en-US"><seg>Close the <bpt i="0" type="Xpt">&lt;b&gt;</bpt>application<ept i="0">&lt;/b&gt;</ept>.</seg></tuv>
+<tuv xml:lang="fr-FR"><seg>Fermer <bpt i="0" type="Xpt">&lt;b&gt;</bpt>l&apos;application<ept i="0">&lt;/b&gt;</ept>.</seg></tuv>
+</tu>
+</body>
+</tmx>

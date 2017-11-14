@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+    <!-- By default disable translation of macros -->
+    <its:translateRule selector="//macro//parameter" translate="no"/>
+    <its:translateRule selector="//macro" translate="no"/>
+    
+    <its:translateRule  selector="//parameter[@name='Title']"  translate="yes"/>
+
+    <!-- Within rules -->
+    <its:withinTextRule selector="//parameter" withinText="yes"/>
+</its:rules>

@@ -1,0 +1,11 @@
+1	french	x-vnd.Haiku-Pulse	2756001860
+OK	PrefsWindow	comment for OK	OK
+Quit	DeskbarPulseView		Quitter
+Pulse	PulseWindow		Pulse
+Mini mode	DeskbarPulseView		Mode miniature
+Remove replicant	CPUButton		Enlever le réplicant
+Active color	ConfigView		Couleur active
+Usage: Pulse [--mini] [-w width] [--width=width]\n\t[--deskbar] [--normal] [--framecolor 0xrrggbb]\n\t[--activecolor 0xrrggbb] [--idlecolor 0xrrggbb]\n	PulseApp		Usage: Pulse [--mini] [-w width] [--width=width]\n\t[--deskbar] [--normal] [--framecolor 0xrrggbb]\n\t[--activecolor 0xrrggbb] [--idlecolor 0xrrggbb]\n
+Fade colors	ConfigView		Dégradé de couleurs
+You can't disable the last active CPU.	PulseView		Vous ne pouvez pas désactiver le dernier processeur actif.
+Test line with %s and %d	Context	Comment	Ligne de test avec %s et %d

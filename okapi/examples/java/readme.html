@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Okapi Libraries Java Examples</title>
+  </head>
+  <body>
+    <h1>Java Examples</h1>
+    <p>This directory contains a few examples on how to use the Okapi library
+      with your own Java programs.</p>
+    <p>The examples have been pre-compiled. You can execute them by running <code>
+        run_examples.bat</code> (Windows) or <code>run_examples.sh</code>
+      (Linux and Macintosh). </p>
+    <p>Make sure to have the examples in a directory where you have
+      write-rights.</p>
+    <p>If you wish to modify and re-compile the examples:</p>
+    <ul>
+      <li>Make sure you have Oracle Java or an OpenJDK compiler (v1.6 or later)
+        installed.</li>
+      <li>Run <code>build_examples.bat</code> (Windows) or <code>build_examples.sh</code>
+        (Linux and Macintosh).</li>
+    </ul>
+    <h2>Example01</h2>
+    <p>This example shows how to create and execute a pipeline with three or
+      four steps:</p>
+    <ul>
+      <li>The first step converts a given input document into a set of filter
+        events, using the appropriate filter for the given input document.</li>
+      <li>The second step pseudo-translate the translatable text of the input
+        document.</li>
+      <li>The third step converts all letters of the translatable text into
+        uppercase.</li>
+      <li>The fourth step re-create the original document with the modified
+        text.</li>
+    </ul>
+    <p>You can choose to run both middle steps or just one of them from the
+      command-line option.</p>
+    <h2>Example02</h2>
+    <p dir="ltr">This example takes a properties file or an OpenOffice.org
+      document and print to the console all translatable text. The inline codes
+      inside the text are displayed with generic markers such as: <code>&lt;1&gt;</code>...<code>&lt;/1&gt;</code>,
+      <code>&lt;2/&gt;</code>.</p>
+    <h2>Example03</h2>
+    <p>This example takes a file <code>test.xml</code> (complied into the jar,
+      but you can see it in the <code>src</code> directory) and runs a pipeline
+      with four steps:</p>
+    <ul>
+      <li>
+        <p dir="ltr">The first step takes the input document and processes it
+          with a first XSLT template that just re-create the input to an output.</p>
+      </li>
+      <li>
+        <p dir="ltr">The second step takes the output f the first one, and
+          processes with a second XSLT template that removes <code>&lt;b&gt;</code>
+          nodes.</p>
+      </li>
+      <li>
+        <p dir="ltr">The third step takes the output of the second one and
+          converts the document into filter events, using the XML filter.</p>
+      </li>
+      <li>
+        <p dir="ltr">The fourth step takes the filter events sent by the third
+          step and create an output stream. Then that output is displayed on the
+          standard output.</p>
+      </li>
+    </ul>
+    <h2>Example04</h2>
+    <p>This example shows some of the functionality provided by the segmenter
+      included in the Okapi Library. It uses the <code>myRules.srx</code> SRX
+      file included in the sample files to segment some example text.</p>
+    <h2>Example05</h2>
+    <p>This example shows how to use some of the TM and MT query connectors that
+      are provided with the Okapi Library. The first part demonstrates the <a href="http://wiki.apertium.org/wiki/Main_Page">Apertium
+        MT server</a>. The second part shows how to query the <a href="http://translate.sourceforge.net/wiki/virtaal/amagama">Amagama
+        TM</a> server. Both have public servers that should be accessible to
+      everyone running the demo.</p>
+    <p>&nbsp;</p>
+  </body>
+</html>

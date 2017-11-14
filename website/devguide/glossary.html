@@ -1,0 +1,239 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Okapi Framework Developer's Guide - Glossary</title>
+<link rel="stylesheet" type="text/css" href="../okapi.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Developer's Guide</h1>
+		<h2 class="head2">Glossary</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a class="current" href="glossary.html">Glossary</a></td>
+				<td><a href="index.html">Guide Content</a></td>
+				<td><a href="http://okapiframework.org">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<h3><a name="annotation"></a>Annotation</h3>
+<p>An annotation, in a <a href="#resource">resource</a> generated from a
+<a href="#filter">filter</a>, is a piece of information associated with a 
+specific class. An example of annotation is the information provided in the
+<code>&lt;alt-trans&gt;</code> element of an XLIFF document. This data is mapped to an 
+annotation implemented with a class called <code>
+<a href="../javadoc/net/sf/okapi/common/resource/AltTransAnnotation.html">
+AltTransAnnotation</a></code>.</p>
+<p>Note that annotation can also be added after extraction and used to attached 
+various process-specific information to an object.</p>
+<h3><a name="codedText"></a>Coded text</h3>
+<p>A coded text is a text content where <a href="#inlineCode">inline codes</a> 
+have been pre-parsed and are coded with <a href="#inlineCodeMarker">inline code 
+markers</a>.</p>
+<h3><a name="codeType"></a>Code type</h3>
+<p>The code type of a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Code.html">Code</a></code> object is an indicator of what this code represent. 
+Several code types are pre-defined and should be used whenever possible. for 
+example: <code>Code.TYPE_BOLD</code>, <code>Code.TYPE_ITALIC</code>, <code>
+Code.TYPE_UNDERLINED</code>, <code>Code.TYPE_IMAGE</code>, <code>Code.TYPE_LINK</code>, 
+etc.</p>
+<p>The code type of a code is used extensively to link opening and closing 
+codes: both opening and closing codes of the same pair must have the same code 
+type. You can use <code>null</code> for code type, but then loose any pairing 
+mechanism.</p>
+<h3><a name="event"></a>Event</h3>
+<p>An event is an unit of information that is carried through the <a href="#pipeline">
+pipeline</a>. Events can be associated with physical data: the <a href="#resource">resources</a>, 
+and in the case of filter events, with <a href="#skeleton">skeleton</a>.</p>
+<ul>
+	<li>The <code>RAW_DOCUMENT</code> event is used to pass along the 
+	information of an input document.</li>
+	<li>The filter events (<code>START_DOCUMENT</code>, <code>START_SUBDOCUMENT</code>,
+	<code>START_GROUP</code>, <code>DOCUMENT_PART</code>, <code>TEXT_UNIT</code>,
+	<code>END_GROUP</code>, <code>END_SUBDOCUMENT</code>, and <code>END_DOCUMENT</code>) 
+	are used to pass along a document broken down into translatable 
+	and non-translatable parts.</li>
+	<li>The <code>CANCELED</code> event is used when the the processed has been 
+	canceled.</li>
+	<li>The <code>FINISHED</code> event is used mark the end of a set of input 
+	documents.</li>
+	<li>The <code>NO_OP</code> event is used in some cases to send events that 
+	do nothing.</li>
+	<li>The <code>CUSTOM</code> event is used for carrying custom
+	<a href="#resource">resources</a> through the <a href="#pipeline">pipeline</a>.</li>
+</ul>
+
+<p dir="ltr">As a general rule, when a component gets an event it does not 
+understand, it should just pass it down the pipeline, without modifying it.</p>
+
+<h3><a name="filter"></a>Filter</h3>
+<p>A filter class is an implementation of the <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilter.html">IFilter</a></code> 
+interface. Its purpose is to parse an input document and break it down into
+<a href="#event">events</a>. A filter separates the input document into 
+different parts:</p>
+<ul>
+	<li>The text content, which goes into <a href="#textUnit">text units</a>.</li>
+	<li>Data that are not text content, which goes into <a href="#properties">
+	properties</a>.</li>
+	<li>Everything else, which goes into <a href="#skeleton">skeleton</a> parts.</li>
+</ul>
+<h3><a name="filterWriter"></a>Filter writer</h3>
+<p dir="ltr">A filter writer class is an implementation of the <code>
+<a href="../javadoc/net/sf/okapi/common/filterwriter/IFilterWriter.html">IFilterWriter</a></code> interface. Its purpose is to output the document processed 
+by a <a href="#filter">filter</a>. The format of the output can be different for 
+each filter writer. There is normally one filter writer that is capable of 
+re-constructing the original format of the input document. A <a href="#filter">filter</a> provides an 
+instance of such filter writer if you call the&nbsp; <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilter.html#createFilterWriter()">
+IFilter.createFilterWriter()</a></code> method.</p>
+<h3><a name="inlineCode"></a>Inline code</h3>
+<p>An inline code is some type of markup inside a run of text. For example, &quot;<code>&lt;b&gt;</code>&quot; 
+and &quot;<code>&lt;/b&gt;</code>&quot; are two inline codes in the text &quot;<code>This is 
+&lt;b&gt;bold&lt;/b&gt;.</code>&quot; Inline codes are often used to apply formatting, but they 
+can be used for other things. What is an inline code and what is not depends on 
+each <a href="#filter">filter</a> and sometimes on its parameters.</p>
+<h3><a name="inlineCodeMarker"></a>Inline code marker</h3>
+<p>An inline code marker is a pair of two special Unicode characters that are 
+inside a <a href="#codedText">coded text</a> to hold the place of an
+<a href="#inlineCode">inline code</a>. The two special characters are:</p>
+<ul>
+	<li>A code marker that indicates if the inline code should be represented as 
+	an opening (<code>TextFragment.MARKER_OPENING</code>), closing (<code>TextFragment.MARKER_CLOSING</code>), 
+	or isolated (<code>TextFragment.MARKER_ISOLATED</code>) code. These values are U+E101, 
+	U+E102, and U+E103 (part of the Private Use Area of Unicode).</li>
+	<li>An index value that points to a <code>Code</code> object in the list of 
+	codes for the fragment where this code occurs. The value is the 
+	zero-based index of the code + 57616 converted to a character: that is 0 is 
+	U+E110, 1 is U+E111, 2 is U+E112, etc. Those characters are in the Private 
+	Use Area of Unicode and allow for several thousands of index values.</li>
+</ul>
+<p>In the example below, the inline code markers for &quot;<code>&lt;b&gt;</code>&quot; and &quot;<code>&lt;/b&gt;</code>&quot; 
+are highlighted. (Note for display purpose, the special characters are noted 
+here as <code>\uHHHH</code> where <code>HHHH</code> is there Unicode value, but 
+they are raw characters in the <a href="#codedText">coded text</a> string.</p>
+<pre>Normal text: &quot;Text in &lt;b&gt;bold&lt;/b&gt;&quot;
+ Coded text: &quot;Text in <span style="background-color: #FFFF00">\uE101\u110</span>bold<span style="background-color: #00FF00">\uE102\uE111</span>&quot;</pre>
+<pre>&quot;..in <span style="background-color: #FFFF00">\uE101\uE110</span>bold...&quot;
+        |     |
+        |     +--- Index of the code
+        |
+        +--- Code marker</pre>
+<p>Inline code marker are different from but related to <a href="#tagType">tag 
+types</a>. Normally they match (i.e. a <code>TagType.OPENING</code> will be 
+represented by a <code>TextFragment.MARKER_OPENING</code>). But there are cases 
+when the opening and closing codes get split (for example in a segmented text) and 
+the inline code marker is changed to <code>TextFragment.MARKER_ISOLATED</code> 
+while the underlying code is still of the same <a href="#tagType">tag type</a>. See the section
+<a href="gettingstarted.html#tagTypeAndMarkers">Tag Type and Marker</a> for more 
+details.</p>
+<h3><a name="pipeline"></a>Pipeline</h3>
+<p dir="ltr">A pipeline is a set of steps that carry out a specific process for 
+a given list of input documents. The most common pipelines start with a step 
+that uses a <a href="#filter">filter</a> to parse the input document and ends 
+with step that uses a <a href="#filterWriter">filter writer</a> to create the 
+output.</p>
+<p dir="ltr">See the <a href="pipelines.html">Pipelines</a> section for more 
+details on pipelines.</p>
+<h3 dir="ltr"><a name="properties"></a>Properties</h3>
+<p dir="ltr">A property, in a <a href="#resource">resource</a> generated from a
+<a href="#filter">filter</a>, is a piece of information associated with a 
+specific name. Properties are used to give access to simple data that is not 
+text content. There are two types of properties:</p>
+<ul dir="ltr">
+	<li dir="ltr">
+	<p dir="ltr">Read-only properties: Their values are extracted and 
+	accessible, but cannot be modified when the document is re-generated with 
+	the <a href="#filterWriter">filter writer</a>.</p></li>
+	<li dir="ltr">
+	<p dir="ltr">Modifiable properties: Their values can be changed and it is 
+	the modified values that are output by the <a href="#filterWriter">filter 
+	writer</a>. For example, the HTML Filter extracts <code>href</code> 
+	attributes values to <i>link</i> modifiable properties.</p></li>
+</ul>
+<p dir="ltr">Note that more complex information, or information that is provided 
+after extraction, may also be associated with <a href="#resource">resources</a>: 
+the <a href="#annotation">annotations</a>.</p>
+<h3><a name="resource"></a>Resource</h3>
+<p dir="ltr">A resource is an object associated with an <a href="#event">event</a>. 
+It contains all the pre-parsed information the <a href="#event">event</a> comes with. Most 
+<a href="#event">events</a> 
+have a dedicated type of resource, but a few use the same type of resource, and 
+some may have no corresponding resource at all.</p>
+<p dir="ltr">See the
+<a href="gettingstarted.html#eventsAndResources">Events and Corresponding 
+Resources</a> table for details.</p>
+<p dir="ltr">All resources share a same 
+minimal interface: <code>
+<a href="../javadoc/net/sf/okapi/common/IResource.html">IResource</a></code>. 
+Some resources also implement the <code>
+<a href="../javadoc/net/sf/okapi/common/resource/INameable.html">INameable</a></code> 
+or <code><a href="../javadoc/net/sf/okapi/common/resource/IReferenceable.html">
+IReferenceable</a></code> interfaces.</p>
+<h3 dir="ltr"><a name="segment"></a>Segment</h3>
+<p dir="ltr">A segment, in the context of the framework, is the result of a 
+segmentation processed applied to a extracted content, generally a
+<a href="#textUnit">text unit</a>. For example, it can be a single sentence, in 
+a text unit that is the content of an HTML <code>&lt;p&gt;</code> element. 
+Segmentation services are provided through the <code>
+<a href="../javadoc/net/sf/okapi/lib/segmentation/ISegmenter.html">ISegmenter</a></code> 
+interface.</p>
+<h3><a name="skeleton"></a>Skeleton</h3>
+<p>The skeleton is the non-textual part of a document. A <a href="#filter">
+filter</a> has for function to separate text content from skeleton parts. The 
+skeleton parts are sent along with the filter <a href="#filter">events</a> and 
+can be used by the <a href="#filterWriter">filter writers</a> to construct an 
+output in the format of the original input document.</p>
+<p>Skeleton parts are usually left alone and simply carried through the
+<a href="#pipeline">pipeline</a>, but the are accessible with the <code>
+<a href="../javadoc/net/sf/okapi/common/IResource.html#getSkeleton()">
+IResource.getSkeleton()</a></code> method.</p>
+<h3><a name="tagType"></a>Tag type</h3>
+<p dir="ltr">The tag type of a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Code.html">Code</a></code> 
+object indicates if the inline code is a starting (<code><a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">TagType.OPENING</a></code>), 
+ending (<code><a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">TagType.CLOSING</a></code>), 
+or placeholder (<code><a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">TagType.PLACEHOLDER</a></code>) 
+code. For example a &quot;<code>&lt;b&gt;</code>&quot; in HTML is a
+<a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">
+<code>TagType.OPENING</code></a>, a &quot;<code>&lt;/b&gt;</code>&quot; is a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">
+TagType.CLOSING</a></code>, and a &quot;<code>&lt;br/&gt;</code>&quot; is a
+<a href="../javadoc/net/sf/okapi/common/resource/TextFragment.TagType.html">
+<code>TagType.PLACEHOLDER</code></a>.</p>
+<p dir="ltr">As opposed to <a href="#inlineCodeMarker">inline code markers</a>, 
+tag types remain unchanged when you perform some splitting or merging operations 
+on the <a href="#codedText">coded text</a>. This allows you to always know the 
+real type of the <a href="#inlineCode">inline code</a>, regardless of its representation in the context of 
+the segment.</p>
+<p dir="ltr">See the section <a href="gettingstarted.html#tagTypeAndMarkers">Tag 
+Type and Marker</a> for more details.</p>
+<h3><a name="textUnit"></a>Text unit</h3>
+<p dir="ltr">The text unit is the basic item used by a <a href="#filter">filter</a> 
+to store extracted text and its associated information. It is implemented by the
+<code><a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html">TextUnit</a></code> class, 
+which is the <a href="#resource">resource</a> associated with the <code>TEXT_UNIT</code> <a href="#event">event</a>. 
+The text unit is at the center of the text extraction mechanism. Usually it 
+corresponds to something like a paragraph. For example: the content of a <code>
+&lt;p&gt;</code> element in HTML, or the text of the value of a key/value pair in a 
+properties file.</p>
+<p dir="ltr">Often, the content of a text unit needs to be broken down into 
+smaller parts, for example sentences. This is the segmentation process, and each 
+resulting part is a <a href="#segment">segment</a>.</p>
+<p dir="ltr">See the section <a href="gettingstarted.html#TextUnits">Working 
+with Text Units</a> for more details on text units.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

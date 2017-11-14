@@ -1,0 +1,3 @@
+Source,Target,Data,Source,Target
+"Source text 1","Target text 1",third column data1,"SourceB1","TargetB1"
+"Source text 2","Target text 2",third column data2,"SourceB2","TargetB2"

@@ -1,0 +1,32 @@
+<!-- Temporary change to pass the tests -->
+<HTML title="html title">
+<HEAD>
+ <META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+ <title>Jericho HTML Parser Test Document</title>
+ <meta name="DESCRIPTION" content="Document containing many elements with optional end tags, server-side tags and some common illegal HTML constructs to demonstrate how they are interpreted by the parser." />
+ <meta name="keywords" content="HTML parser,test document,R&amp;D" />
+<BODY>
+<H2>Test HTML Document</H2>
+<P style="background-color: #e0e0e0">This document contains many elements with optional end tags, server-side tags and some
+ common illegal HTML constructs to demonstrate how they are interpreted by the parser.
+ <br><br>
+ <table border="1" summary="This table demonstrates various aspects of the parser's behaviour in relation to the TABLE element">
+  <caption>Table Example</caption>
+  <tr><th>First Column<th>Second Column
+  <tr>
+   <td><p>Cell 1</p>
+   <td>
+    <table border="2"><tbody>
+     <tr><td>This is a table within the table</tr>
+     <tr><td>Second row of inner table</td>
+     <tr><td>Third row of inner table
+    </table>
+ </table>
+ <br>
+ Note that the parser does not consider this text to be a part of the paragraph started before the table
+ because according to the HTML specification a TABLE, being a block-level element, must terminate the P element.
+ See the documentation in HTMLElementName.P for more information, including instructions on how to make this parser compatible
+ with the default behaviour of all major browsers in HTML transitional mode.
+</p>
+
+</html>

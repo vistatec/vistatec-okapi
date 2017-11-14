@@ -1,0 +1,7 @@
+The Okapi libraries are under Apache 2.0 License.
+
+You can find the source code of the libraries at:
+http://code.google.com/p/okapi/source/checkout
+
+For details and question about the Okapi Framework, please go to:
+http://code.google.com/p/okapi/

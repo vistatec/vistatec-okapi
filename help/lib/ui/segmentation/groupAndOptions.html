@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ratel - Groups and Options</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Ratel</h1>
+		<h2 class="head2">Groups and Options</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Ratel">http://okapiframework.org/wiki/index.php?title=Ratel</a></p>
+
+<p>This dialog box allows you to create, edit and remove groups of rules and 
+language maps.</p>
+<h3>Options</h3>
+<p><cite>Segment sub-flow items</cite> -- Set this option to set the SRX <code>
+segmentsubflows</code> attribute to <code>yes</code>. This option is used by 
+some tool to know if they should segment text runs embedded inside other text 
+runs.</p>
+<p><cite>Cascade language maps matching</cite> -- Set this option to enable 
+language map matches to cascade.</p>
+<p><cite>Include opening in-line codes</cite> -- Set this option to include any 
+opening in-line code located just before a break with the segment being 
+closed. If this option is not set such in-line code should be placed in the next 
+segment. For example, assuming a period follow by a space has a break after the 
+period:</p>
+<pre> ON: Sentence one.&lt;b&gt; Sentence two.&lt;/b&gt; ==&gt; [Sentence one.&lt;b&gt;][ Sentence two.&lt;/b&gt;]
+OFF: Sentence one.&lt;b&gt; Sentence two.&lt;/b&gt; ==&gt; [Sentence one.][&lt;b&gt; Sentence two.&lt;/b&gt;]</pre>
+<p><cite>Include closing in-line codes</cite> -- Set this option to include any 
+closing in-line code located just before a break with the segment being 
+closed. If this option is not set such in-line code should be placed in the next 
+segment. For example, assuming a period follow by a space has a break after the 
+period:</p>
+<pre> ON: Sentence &lt;b&gt;one.&lt;/b&gt; Sentence two. ==&gt; [Sentence &lt;b&gt;one.&lt;/b&gt;][ Sentence two.]
+OFF: Sentence &lt;b&gt;one.&lt;/b&gt; Sentence two. ==&gt; [Sentence &lt;b&gt;one.][&lt;/b&gt; Sentence two.]</pre>
+<p><cite>Include isolated in-line codes</cite> -- Set this option to include any 
+isolated code located just before a break with the segment being closed. 
+If this option is not set such in-line code should be placed in the next 
+segment. For example, assuming a period follow by a space has a break after the 
+period:</p>
+<pre> ON: Sentence one.&lt;br/&gt; Sentence two. ==&gt; [Sentence one.&lt;br/&gt;][ Sentence two.]
+OFF: Sentence one.&lt;br/&gt; Sentence two. ==&gt; [Sentence one.][&lt;br/&gt; Sentence two.]</pre>
+<h3>Language Rules</h3>
+<p>List of all the groups of rules in the document.</p>
+<p><cite>Add</cite> -- Click this button to add a group of rules to the list.</p>
+<p><cite>Rename</cite> -- Click this button to rename the group of rules 
+currently selected. Note that references to that group in the language maps are
+<b>not</b> updated automatically.</p>
+<p><cite>Remove</cite> -- Click this button to remove the group of rules 
+currently selected. The program will ask for confirmation. Note that references 
+to that group in the language maps are <b>not</b> updated automatically.</p>
+<h3>Language Maps</h3>
+<p>List of all the language maps in the document.</p>
+<p><cite>Add</cite> -- Click this button to add a language map to the list.</p>
+<p><cite>Edit</cite> -- Click this button to edit the language map currently 
+selected.</p>
+<p><cite>Remove</cite> -- Click this button to remove the language map currently 
+selected.</p>
+<p><cite>Move Up</cite> -- Click this button to move the language map currently 
+selected upward in the list.</p>
+<p><cite>Move Down</cite> -- Click this button to move the language map 
+currently selected downward in the list.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

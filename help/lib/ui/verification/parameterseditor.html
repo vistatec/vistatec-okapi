@@ -1,0 +1,259 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CheckMate - Configuration</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">CheckMate</h1>
+		<h2 class="head2">Quality Check Configuration</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=CheckMate">http://okapiframework.org/wiki/index.php?title=CheckMate</a></p>
+
+<p>This dialog box allows you to specify what checks are performed.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>General Tab</h3>
+<p>Note: a <i>text unit</i> in the Okapi tools corresponds to a unit of 
+extracted text, for example a paragraph in HTML or OpenOffice, a string table in 
+a&nbsp; Properties file, etc. while a <i>segment</i> is the unit resulting from 
+a segmentation. A text unit is composed of one or more segments and possible 
+inter-segment parts. When a text unit has not been segmented it is seen as 
+having a single segment. Some document may have been segmented, like XLIFF. 
+Other are typically not segmented, like TMX where each <code>&lt;tu&gt;</code> entry 
+corresponds to a text unit (and therefore a single segment).</p>
+<h4>Text unit verification</h4>
+<p>Verifications that are done on the whole content of each text unit:</p>
+<p><cite>Warn if an entry does not have a translation</cite> -- This 
+verification is always done. It checks if each entry has a corresponding 
+translation. That is there is no entry for the given target language 
+corresponding to the source entry. Empty translations are chcked in the option:
+<cite>Warn if a target segment is empty</cite>.</p>
+<p><cite>Warn if a target entry has a difference in leading white spaces</cite> -- Set this option&nbsp; to flag the text 
+units where the leading white spaces are different between source and target.</p>
+<p><cite>Warn if a target entry has a difference in trailing white spaces</cite> -- Set this option to flag the text units 
+where the trailing white spaces are different between source and target.</p>
+<h4>Segment verification</h4>
+<p>Verification that are done on each segment of each text unit (un-segmented 
+text unit being seen as having a single segment):</p>
+<p><cite>Warn if a source segment does not have a corresponding target</cite> -- 
+This verification is always done. It checks if all source segments have a 
+corresponding target segment. That is a source segment is identified with a 
+segment ID that does not exist in the target text unit.</p>
+<p><cite>Warn if there is an extra target segment</cite> -- This verification is 
+always done. It checks if all target segments correspond to an existing source 
+segment.</p>
+<p><cite>Warn if a target segment is empty when its source is not empty</cite> -- Set this option to flag the segments for 
+which the translation is empty (if the corresponding source is not empty).</p>
+<p><cite>Warn if a target segment is not empty when its source is empty</cite> -- Set this option to flag the segments for 
+which the target is not empty while its source is empty.</p>
+<p><cite>Warn if a target segment is the same as its source</cite> -- Set this 
+option to flag the segments where the translation is the same as the source. 
+This check is done only if the source segment contain in its text at least one 
+word-character (a character included in the regular expression: &quot;<code>[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}]</code>&quot;, 
+which is basically: any Unicode letter or digit. Note also that the inline codes 
+are not part of the text of the entry.<br>
+For example (with codes in gray):</p>
+<ul>
+	<li>The entry &quot;<code><span style="background-color: #C0C0C0">&lt;b&gt;%s&lt;/b&gt;</span> 
+	: <span style="background-color: #C0C0C0">%d</span></code>&quot; is not checked 
+	because it has no character that could be part of a word.</li>
+	<li>The entry &quot;<code>-------- S= <span style="background-color: #C0C0C0">%d</span></code>&quot; 
+	is checked because the character 'S' could be part of a word.</li>
+</ul>
+<p><cite>Include the codes in the comparison</cite> -- Set this option if the 
+comparison done when verifying if the target is the same as the source should 
+take inline codes into account. If this option is set and the only difference 
+between the source and the translation is an inline code, the segment will not 
+be flagged as having the target the same as the source (because the will have at 
+least one code different).</p>
+<p>Note that when a target is found to be the same as its source, the tool 
+checks <a href="#PatternsTab">the list of patterns</a> that have their expected 
+target set to &quot;<code>&lt;same&gt;</code>&quot;. If the string matches one of those patterns 
+no warning is generated as the target is expected to be the same.</p>
+<p><cite>Warn on doubled words</cite> -- Set this option to flag the target 
+segments where there is a sequential repetition of the same word, for example 
+&quot;<code>is is</code>&quot; in &quot;<code>this is is an example</code>&quot;. The check is not case-sensitive, for example 
+&quot;<code>This this an example</code>&quot; is flagged.</p>
+<p><cite>Exceptions</cite> -- Enter the list of words that can be repeated. For 
+example, in French some sentences may have the expressions &quot;<code>vous vous</code>&quot; 
+or &quot;<code>nous nous</code>&quot;. To allow this, enter &quot;<code>vous;nous</code>&quot;: Each 
+word for which repetition is allowed separated by semi-colons. You must not 
+leave any space around the semi-colon. The exceptions are not case-sensitive.</p>
+<h3>Length Tab</h3>
+<p><cite>Warn if a target is longer than the given percentage of the 
+character length of its source</cite> -- Set this option to flag any target text 
+that is longer than a given percentage of its source text.</p>
+<p><cite>Character length above which a text is considered &quot;long&quot;</cite> -- 
+Enter the number of characters above which you consider a text to be a long text 
+(vs. a short one). This allows you to set different percentages for short and 
+longer text.</p>
+<p><cite>Percentage for &quot;short&quot; text</cite> -- Enter the percentage to use when 
+the text is shorter or equal to the character length above which a text is 
+considered long.</p>
+<p><cite>Percentage for &quot;long&quot; text</cite> -- Enter the percentage to use when 
+the text is longer than the character length above which a text is considered 
+long.</p>
+<p>The length is based on the number 
+of characters without counting the inline codes. These values must be tuned for 
+each source/target language pair.</p>
+<p><cite>Warn if a target is shorter than the following percentage of the 
+character length of its source</cite> -- Set this option to flag any target text 
+that is shorter than a given percentage of its source text. This allows you to 
+set different percentages for short and longer text.</p>
+<p><cite>Character length above which a text is considered &quot;long&quot;</cite> -- 
+Enter the number of characters above which you consider a text to be a long text 
+(vs. a short one). This allows you to set different percentages for short and 
+longer text.</p>
+<p><cite>Percentage for &quot;short&quot; text</cite> -- Enter the percentage to use when 
+the text is shorter or equal to the character length above which a text is 
+considered long.</p>
+<p><cite>Percentage for &quot;long&quot; text</cite> -- Enter the percentage to use when 
+the text is longer than the character length above which a text is considered 
+long.</p>
+<p>The length is based on the number 
+of characters without counting the inline codes. These values must be tuned for 
+each source/target language pair.</p>
+<h3><a name="InlineCodesTab"></a>Inline Codes Tab</h3>
+<p><cite>Warn if there is a code differences between source and target segments</cite> -- Set this option to 
+verify that the target content has the same inline codes as the source content. 
+This function compares the content of the codes between the source and target. 
+Both missing codes (codes in the source but not in the target) and extra codes 
+(codes in the target but not in the source) are indicated. A difference only in 
+the order of the codes does not trigger a warning.</p>
+<p><cite><a name="MissingCodesAllowed"></a>Codes allowed to be missing from the 
+target</cite> -- List of the codes that are allowed to be missing in the 
+translation. The strings listed here are codes that are in the source segment 
+and not in its translation, and are allowed to be missing. The list applies to 
+all entries of the input documents. The strings are case-sensitive.</p>
+<p><cite><a name="ExtraCodesAllowed"></a>Codes allowed to be extra in the target</cite> 
+-- List of the codes that are allowed to be extra in the translation. The 
+strings listed here are codes that are in the translation segment but not in its 
+source, and are allowed to be extra. The list applies to all entries of the 
+input documents. The strings are case-sensitive.</p>
+<p>For both lists: Use <cite>Add</cite> to add a new string, <cite>Remove</cite> 
+to remove the selected string from the list, and <cite>Remove All</cite> to 
+clear the list.</p>
+<h3><a name="PatternsTab"></a>Patterns Tab</h3>
+<p><cite>Verify that the following source patterns are translated as expected</cite> 
+-- Set this option to verify that each source pattern defined in the list has 
+its corresponding expected part in the target content.</p>
+<ul>
+	<li>The first column shows three options associated with this item:<ul>
+	<li>If the item should be used (un-check the item to disable it)</li>
+	<li>if the item goes from source to target (&quot;<code>Src</code>&quot; indicator). 
+	That is if the source pattern is looked at first, and if found, the 
+	corresponding pattern is searched in the target. Otherwise (&quot;<code>Trg</code>&quot; 
+	indicator) the target pattern is looked at first, and then searched in the 
+	source. This allows for example to detect extra patterns in the target.</li>
+	<li>The severity of the warning.</li>
+</ul>
+	</li>
+	<li>The second column is the regular expression of the pattern to look for in 
+the source.</li>
+	<li>The third column is the target pattern corresponding to the part 
+found in the source. If the part should be the same as in the source, just use 
+the &quot;<code>&lt;same&gt;</code>&quot; keyword.</li>
+	<li>The fourth column is a short 
+description of the rule.</li>
+</ul>
+<p><cite>Add</cite> -- Click this buttion to add a new pattern to the list.</p>
+<p><cite>Edit</cite> -- Click this button to edit the pattern currently 
+selected. You can also double-click the pattern in the table.</p>
+<p><cite>Remove</cite> -- Click this button to remove the pattern currently 
+selected from the table.</p>
+<p><cite>Move Up</cite> -- Click this button to move the pattern currently 
+selected upward in the table.</p>
+<p><cite>Move Down</cite> -- Click this button to move the pattern currently 
+selected downward in the table.</p>
+<p><cite>Import</cite> -- Click this button to import an existing file in the 
+table.</p>
+<p><cite>Export</cite> -- Click this button to export the patterns in the table 
+to a tab-delimited file.</p>
+<h3>Characters Tab</h3>
+<p><cite>Warn if some possibly corrupted characters are found in the target 
+entry</cite> -- Set this option to check for special patterns that often 
+indicate a file with corrupted characters. For example a UTF-8 file opens as 
+ISO-8859-1, etc. This feature does not found all possible cases of corrupted 
+characters, only some of the frequent ones.</p>
+<p><cite>Warn if a character is not included in the following character set 
+encoding</cite> -- Set this option to check the characters of the text against a 
+given character set encoding. Enter the name of a valid character set encoding, 
+such as ISO-8859-1. You can also leave this field empty to use only the given 
+list of characters provided in the field below this one.</p>
+<p><cite>Allow the characters matching the following regular expression</cite> 
+-- Optionally enter a regular expression that matches a list of allowed 
+characters. The characters specified here will be allowed even if they are part 
+of the character set encoding specified above. Leave this field empty to not use 
+any regular expression.</p>
+<p>You can enter: only a character set encoding, or only a regular expression, 
+or both.</p>
+<h3>LanguageTool Tab</h3>
+<p><cite>Perform the verifications provided by the LanguageTool server</cite> 
+-- Set this option to run the verifications provided by a LanguageTool server. 
+To use this option you must have access to 
+<a target="_top" href="http://www.languagetool.org">LanguageTool Checker</a> run as a server. Most of the time this is simply a 
+local server. You can start the application with Java Web Start:
+<a href="http://www.languagetool.org/webstart/web/LanguageTool.jnlp">Start 
+LanguageTool Checker from the Web</a>. (You can also do this by clicking on the
+<cite>Start LanguageTool from the Web</cite> button.</p>
+<p>Note that using LanguageTool may increase significantly the processing time. 
+In addition, using the auto-translate option (see below) does increase the 
+processing time further.</p>
+<p><cite>Auto-translate the messages from the LanguageTool checker</cite> - Set 
+this option to have the messages coming from the languageTool checker translated 
+into a given language. Most of the time, the error messages of LanguageTool are provided in the same language as the text 
+verified (e.g. verifying a Polish text will give you back error messages in 
+Polish). Use this option to have the messages automatically
+<a target="_top" href="http://code.google.com/apis/ajaxlanguage/">translated using Google MT</a> 
+and displayed along with the original messages.</p>
+<p><cite>From</cite> -- Enter the language of the original messages (e.g. <code>
+po</code> for Polish).</p>
+<p><cite>Into</cite> -- Enter the code of the language into which you want to 
+translate the messages (e.g. <code>en</code> for English)</p>
+<p><cite>Start LanguageTool from the Web</cite> -- Click this button to start 
+languageTool checker directly from the Web. This command uses the Java Web Start 
+technology to download and execute the latest version of LanguageTool from its 
+Web site.</p>
+<p>You will be prompted by a Security Warning dialog asking you to confirm you 
+want to launch the application. Click <cite>Run</cite> or <cite>Yes</cite> if 
+you want to continue. Once the application is running: go to <cite>File</cite> 
+menu and select the command <cite>Options</cite>. Select the target language. 
+Make sure the option <cite>Run as server on port</cite> is set, and that the 
+port specified matches the port you have selected in CheckMate. Minimize the 
+application. Go back to CheckMate and you are now able to use LanguageTool.</p>
+<h3>Other Settings Tab</h3>
+<h3>Scope</h3>
+<p>Note that entries flagged as non-translatable are never processed, regardless 
+of the choice for the scope. When the scope is not set to all entries, it is 
+determined by the value of the <i>Approved</i> property The setting of this 
+property is specific to each&nbsp; file format.</p>
+<p><cite>Process all entries</cite> -- Select this option to process all 
+entries.</p>
+<p><cite>Process only approved entries</cite> -- Select this option to process 
+only the entries that have the property <i>Approved</i> set to &quot;yes&quot;.</p>
+<p><cite>Process only non-approved entries</cite> -- Select this option to 
+process only the entries that do not have a property <i>Approved</i>, or that 
+have one not set to &quot;yes&quot;.</p>
+<h3>Report output</h3>
+<p><cite>Path of the report file</cite> -- Enter the full path of the HTML 
+report to generate. You can use the variable <code>${rootDir}</code> in the 
+path.</p>
+<p><cite>Open the report after completion</cite> -- Set this option to 
+automatically open the report file after the process is complete.</p>
+<h3>Configuration Import / Export</h3>
+<p><cite>Import</cite> -- Click this button to import an existing configuration 
+file.</p>
+<p><cite>Export</cite> -- Click this button to export the current configuration 
+to a file.</p>
+<p>&nbsp;</p>
+</body>
+</html>

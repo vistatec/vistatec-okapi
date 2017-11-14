@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - URI Conversion</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">URI Conversion Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=URI_Conversion_Step">http://okapiframework.org/wiki/index.php?title=URI_Conversion_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step allows you to convert the translatable content of an input 
+document to and from <a target="_blank" href="http://en.wikipedia.org/wiki/URI">URI</a> escape notation.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Un-escape the URI escape sequences</cite> -- Select this option to convert URI 
+escaped sequences into normal text.</p>
+<p><cite>Escape content to URI escape sequences</cite> -- Select this option to convert normal 
+text into a text where characters are escaped into URI escape sequences. Which characters get 
+escaped is specified by the list below.</p>
+<p><cite>List of the characters to escape</cite> -- Check each character you want to be escaped. 
+Note that the character '<code>%</code>' is always escaped.</p>
+<p><cite>Escape all extended characters</cite> -- Check this option to convert all 
+non-ASCII characters to URI escape sequences.</p>
+<p><cite>All But Marks</cite> -- Click this button to reset the list of the 
+characters to escape to all, except the characters specified as "marks" 
+in <a target="_blank" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a> (which are: '<code>-</code>', '<code>_</code>', '<code>.</code>', '<code>!</code>', '<code>~</code>', '<code>*</code>','<code>'</code>', '<code>(</code>', and '<code>)</code>').</p>
+
+<p><cite>All But Marks And Reserved</cite> -- Click this button to reset the list 
+of the characters to escape to all, except the characters specified as "marks" in 
+<a target="_blank" href="http://tools.ietf.org/html/rfc2396">RFC 2396</a> (which are: '<code>-</code>', '<code>_</code>', '<code>.</code>', '<code>!</code>', '<code>~</code>', '<code>*</code>','<code>'</code>', '<code>(</code>', and '<code>)</code>'.), 
+as well as the ones specified as "reserved" (which are: '<code>;</code>', '<code>/</code>', '<code>?</code>', '<code>:</code>', '<code>@</code>', '<code>&</code>', '<code>=</code>', '<code>+</code>', '<code>$</code>', '<code>,</code>').</p>
+<p>&nbsp;</p>
+</body>
+</html>

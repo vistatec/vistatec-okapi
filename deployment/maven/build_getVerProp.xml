@@ -1,0 +1,8 @@
+<?xml version="1.0"?> 
+<project name="Generates libVersions.properties form the superpom" default="getVersionProp" basedir="."> 
+
+	<target name="getVersionProp">
+		<xslt in="../../superpom/pom.xml" out="libVersions.properties" extension=".properties" style="getVersions.xsl"/>
+	</target>
+
+</project>

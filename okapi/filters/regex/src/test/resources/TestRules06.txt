@@ -1,0 +1,13 @@
+ID1=Text for ID1
+ID2:Text for ID2
+
+//_skip
+ID3=Not to translate
+
+StartGroup GRP1
+LABEL grp1.item1 "Text in group GRP1" 1 2 3 4
+StartSubGroup SUBGRP1
+LABEL subgrp1.item1 "Text in sub-group 1" 1 2 3 4
+EndSubGroup
+LABEL grp1.item2 "Another text in group GRP1" 1 2 3 4
+EndGroup

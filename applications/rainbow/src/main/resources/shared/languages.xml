@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<okapiLanguages version="1">
+
+ <language code='ab' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Abkhazian</name>
+ </language>
+ <language code='ab-GE' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagABK'>
+  <name>Abkhazian (*Georgia)</name>
+ </language>
+
+ <language code='om' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Afaan Oromo</name>
+ </language>
+ <language code='om-ET' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagET'>
+  <name>Afaan Oromo (*Ethiopia)</name>
+ </language>
+
+ <language code='aa' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Afar</name>
+ </language>
+ <language code='aa-DJ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDJ'>
+  <name>Afar (*Djibouti)</name>
+ </language>
+
+ <language code='af' lcid='1078' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Afrikaan</name>
+ </language>
+ <language code='af-ZA' lcid='1078' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZA'>
+  <name>Afrikaan (*South Africa)</name>
+ </language>
+
+ <language code='am' lcid='-1' encoding='utf-8'>
+  <name>Amharic</name>
+ </language>
+ <language code='am-ET' lcid='-1' encoding='utf-8' flag='flagET'>
+  <name>Amharic (*Etiopia)</name>
+ </language>
+
+ <language code='ar' lcid='1025' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Arabic</name>
+ </language>
+ <language code='ar-SA' lcid='1025' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSA'>
+  <name>Arabic (*Saudi Arabia)</name>
+ </language>
+ <language code='ar-DZ' lcid='5121' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDZ'>
+  <name>Arabic (Algeria)</name>
+ </language>
+ <language code='ar-BH' lcid='15361' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBH'>
+  <name>Arabic (Bahrain)</name>
+ </language>
+ <language code='ar-KM' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKM'>
+  <name>Arabic (Comoros)</name>
+ </language>
+ <language code='ar-DJ' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDJ'>
+  <name>Arabic (Djibouti)</name>
+ </language>
+ <language code='ar-EG' lcid='3073' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagEG'>
+  <name>Arabic (Egypt)</name>
+ </language>
+ <language code='ar-IQ' lcid='2049' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIQ'>
+  <name>Arabic (Iraq)</name>
+ </language>
+ <language code='ar-JO' lcid='11265' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagJO'>
+  <name>Arabic (Jordan)</name>
+ </language>
+ <language code='ar-KW' lcid='13313' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKW'>
+  <name>Arabic (Kuwait)</name>
+ </language>
+ <language code='ar-LB' lcid='12289' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLB'>
+  <name>Arabic (Lebanon)</name>
+ </language>
+ <language code='ar-LY' lcid='4097' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLY'>
+  <name>Arabic (Libya)</name>
+ </language>
+ <language code='ar-MA' lcid='6145' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMA'>
+  <name>Arabic (Morocco)</name>
+ </language>
+ <language code='ar-OM' lcid='8193' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagOM'>
+  <name>Arabic (Oman)</name>
+ </language>
+ <language code='ar-PS' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPS'>
+  <name>Arabic (Palestine)</name>
+ </language>
+ <language code='ar-QA' lcid='16385' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagQA'>
+  <name>Arabic (Qatar)</name>
+ </language>
+ <language code='ar-SD' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSD'>
+  <name>Arabic (Sudan)</name>
+ </language>
+ <language code='ar-SY' lcid='10241' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSY'>
+  <name>Arabic (Syria)</name>
+ </language>
+ <language code='ar-TN' lcid='7169' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTN'>
+  <name>Arabic (Tunisia)</name>
+ </language>
+ <language code='ar-AE' lcid='14337' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAE'>
+  <name>Arabic (U.A.E.)</name>
+ </language>
+ <language code='ar-YE' lcid='9217' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagYE'>
+  <name>Arabic (Yemen)</name>
+ </language>
+
+ <language code='hy' lcid='1067' encoding='utf-8'>
+  <name>Armenian</name>
+ </language>
+ <language code='hy-AM' lcid='1067' encoding='utf-8' flag='flagAM'>
+  <name>Armenian (*Armenia)</name>
+ </language>
+
+ <language code='as' lcid='1101' encoding='utf-8'>
+  <name>Assamese</name>
+ </language>
+ <language code='as-IN' lcid='1101' encoding='utf-8' flag='flagIN'>
+  <name>Assamese (*India)</name>
+ </language>
+
+ <language code='ay' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Aymara</name>
+ </language>
+ <language code='ay-BO' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBO'>
+  <name>Aymara (*Bolivia)</name>
+ </language>
+
+<language code='az' lcid='1068' encoding='windows-1254' macEncoding='UTF-8' unixEncoding='UTF-8'>
+ <name>Azerbaijani</name>
+</language>
+<language code='az-AZ' lcid='1068' encoding='windows-1254' macEncoding='UTF-8' unixEncoding='UTF-8'>
+ <name>Azerbaijani (*Azerbaijan)</name>
+</language>
+<language code='az-Cyrl-AZ' lcid='2092' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+ <name>Azerbaijani (Azerbaijan, Cyrillic)</name>
+</language>
+
+ <language code='ba' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Bashkir</name>
+ </language>
+ <language code='ba-RU' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBAK'>
+  <name>Bashkir (*Russia)</name>
+ </language>
+
+ <language code='eu' lcid='1069' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Basque</name>
+ </language>
+ <language code='eu-ES' lcid='1069' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagEUS'>
+  <name>Basque (*Spain)</name>
+ </language>
+
+ <language code='be' lcid='1059' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Belarusian</name>
+ </language>
+ <language code='be-BY' lcid='1059' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBY'>
+  <name>Belarusian (*Belarus)</name>
+ </language>
+
+ <language code='bn' lcid='1093' encoding='utf-8'>
+  <name>Bengali</name>
+ </language>
+ <language code='bn-BD' lcid='1093' encoding='utf-8' flag='flagBD'>
+  <name>Bengali (*Bengladesh)</name>
+ </language>
+
+ <language code='dz' lcid='-1' encoding='utf-8'>
+  <name>Bhutani</name>
+ </language>
+ <language code='dz-BT' lcid='-1' encoding='utf-8' flag='flagBT'>
+  <name>Bhutani (*Bhutan)</name>
+ </language>
+
+ <language code='bh' lcid='-1' encoding='utf-8'>
+  <name>Bihari</name>
+ </language>
+ <language code='bh-IN' lcid='-1' encoding='utf-8' flag='flagIN'>
+  <name>Bihari (*India)</name>
+ </language>
+
+ <language code='bi' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Bislama</name>
+ </language>
+ <language code='bi-VU' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagVU'>
+  <name>Bislama (*Vanuatu)</name>
+ </language>
+
+ <language code='bs' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Bosnian</name>
+ </language>
+ <language code='bs-BA' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBA'>
+  <name>Bosnian (*Bosnia and Herzegovina)</name>
+ </language>
+
+ <language code='br' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Breton</name>
+ </language>
+ <language code='br-FR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBRE'>
+  <name>Breton (*France)</name>
+ </language>
+
+ <language code='bg' lcid='1026' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Bulgarian</name>
+ </language>
+ <language code='bg-BG' lcid='1026' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBG'>
+  <name>Bulgarian (*Bulgaria)</name>
+ </language>
+
+ <language code='my' lcid='-1' encoding='utf-8'>
+  <name>Burmese</name>
+ </language>
+ <language code='my-MM' lcid='-1' encoding='utf-8' flag='flagMM'>
+  <name>Burmese (*Myanmar)</name>
+ </language>
+
+ <language code='ca' lcid='1027' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Catalan</name>
+ </language>
+ <language code='ca-ES' lcid='1027' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCAT'>
+  <name>Catalan (*Spain)</name>
+ </language>
+
+ <language code='zh' lcid='2052' encoding='gb2312'>
+  <name>Chinese</name>
+ </language>
+ <language code='zh-CN' lcid='2052' encoding='gb2312' flag='flagCN'>
+  <name>Chinese (*China, =Simplified)</name>
+ </language>
+ <language code='zh-HK' lcid='3076' encoding='big5' flag='flagHK'>
+  <name>Chinese (Hong-Kong)</name>
+ </language>
+ <language code='zh-MO' lcid='5124' encoding='gb2312' flag='flagMO'>
+  <name>Chinese (Macau)</name>
+ </language>
+ <language code='zh-SG' lcid='4100' encoding='gb2312' flag='flagSG'>
+  <name>Chinese (Singapore)</name>
+ </language>
+ <language code='zh-TW' lcid='1028' encoding='big5' flag='flagTW'>
+  <name>Chinese (Taiwan, =Traditional)</name>
+ </language>
+ <language code='zh-Hans' lcid='-1' encoding='gb2312' flag='flagNone'>
+  <name>Chinese (Simplified)</name>
+ </language>
+ <language code='zh-Hant' lcid='-1' encoding='big5' flag='flagNone'>
+  <name>Chinese (Traditional)</name>
+ </language>
+
+ <language code='kw' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Cornish Gaelic</name>
+ </language>
+ <language code='kw-GB' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCOR'>
+  <name>Cornish Gaelic (*United Kingdom)</name>
+ </language>
+
+ <language code='co' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Corsican</name>
+ </language>
+ <language code='co-FR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCOS'>
+  <name>Corsican (*France)</name>
+ </language>
+
+ <language code='ht' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Haitian Creole</name>
+ </language>
+ <language code='ht-HT' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCOS'>
+  <name>Haitian Creole (*Haiti)</name>
+ </language>
+
+ <language code='hr' lcid='26' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Croatian</name>
+ </language>
+ <language code='hr-HR' lcid='1050' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagHR'>
+  <name>Croatian (*Croatia)</name>
+ </language>
+ <language code='hr-BA' lcid='4122' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBA'>
+  <name>Croatian (Bosnia and Herzegovina)</name>
+ </language>
+
+ <language code='cs' lcid='1029' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Czech</name>
+ </language>
+ <language code='cs-CZ' lcid='1029' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCZ'>
+  <name>Czech (*Czech Republic)</name>
+ </language>
+
+ <language code='da' lcid='1030' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Danish</name>
+ </language>
+ <language code='da-DK' lcid='1030' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDK'>
+  <name>Danish (Denmark)</name>
+ </language>
+
+ <language code='snm' lcid='-1' encoding='utf-8'>
+  <name>Dhivehi</name>
+ </language>
+ <language code='snm-MV' lcid='-1' encoding='utf-8' flag='flagMV'>
+  <name>Dhivehi (*Maldives)</name>
+ </language>
+
+ <language code='nl' lcid='1043' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Dutch</name>
+ </language>
+ <language code='nl-NL' lcid='1043' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNL'>
+  <name>Dutch (*The Netherlands)</name>
+ </language>
+ <language code='nl-BE' lcid='2067' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBE'>
+  <name>Dutch (Belgium, =Flemish)</name>
+ </language>
+ <language code='nl-SR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSR'>
+  <name>Dutch (Surinam)</name>
+ </language>
+
+ <language code='en' lcid='1033' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>English</name>
+ </language>
+ <language code='en-US' lcid='1033' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagUS'>
+  <name>English (*United States)</name>
+ </language>
+ <language code='en-AU' lcid='3081' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAU'>
+  <name>English (Australia)</name>
+ </language>
+ <language code='en-BS' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBS'>
+  <name>English (Bahamas)</name>
+ </language>
+ <language code='en-BB' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBB'>
+  <name>English (Barbados)</name>
+ </language>
+ <language code='en-BZ' lcid='10249' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBZ'>
+  <name>English (Belize)</name>
+ </language>
+ <language code='en-CA' lcid='4105' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCA'>
+  <name>English (Canada)</name>
+ </language>
+ <language code='en-DM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDM'>
+  <name>English (Dominica)</name>
+ </language>
+ <language code='en-GM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGM'>
+  <name>English (Gambia)</name>
+ </language>
+ <language code='en-GH' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGH'>
+  <name>English (Ghana)</name>
+ </language>
+ <language code='en-GD' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGD'>
+  <name>English (Grenada)</name>
+ </language>
+ <language code='en-GY' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGY'>
+  <name>English (Guyana)</name>
+ </language>
+ <language code='en-IE' lcid='6153' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIE'>
+  <name>English (Ireland)</name>
+ </language>
+ <language code='en-IN' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIN'>
+  <name>English (India)</name>
+ </language>
+ <language code='en-JM' lcid='8201' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagJM'>
+  <name>English (Jamaica)</name>
+ </language>
+ <language code='en-KI' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKI'>
+  <name>English (Kiribati)</name>
+ </language>
+ <language code='en-LS' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLS'>
+  <name>English (Lesotho)</name>
+ </language>
+ <language code='en-LR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLR'>
+  <name>English (Liberia)</name>
+ </language>
+ <language code='en-MW' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMW'>
+  <name>English (Malawi)</name>
+ </language>
+ <language code='en-MU' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMU'>
+  <name>English (Mauritius)</name>
+ </language>
+ <language code='en-NA' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNA'>
+  <name>English (Namibia)</name>
+ </language>
+ <language code='en-NZ' lcid='5129' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNZ'>
+  <name>English (New Zealand)</name>
+ </language>
+ <language code='en-NG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNG'>
+  <name>English (Nigeria)</name>
+ </language>
+ <language code='en-PG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPG'>
+  <name>English (Papua New-Guinea)</name>
+ </language>
+ <language code='en-PH' lcid='13321' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPH'>
+  <name>English (Philippines)</name>
+ </language>
+ <language code='en-ZA' lcid='7177' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZA'>
+  <name>English (South Africa)</name>
+ </language>
+ <language code='en-SL' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSL'>
+  <name>English (Sierra Leone)</name>
+ </language>
+ <language code='en-VC' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagVC'>
+  <name>English (St Vincent and the Grenadines)</name>
+ </language>
+ <language code='en-TT' lcid='11273' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTT'>
+  <name>English (Trinidad and Tobago)</name>
+ </language>
+ <language code='en-GB' lcid='2057' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGB'>
+  <name>English (United Kingdom)</name>
+ </language>
+ <language code='x-en-Carib' lcid='9225' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>English (Windows Caribbean)</name>
+ </language>
+ <language code='x-en-Neutral' lcid='9' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXMW'>
+  <name>English (Windows Neutral)</name>
+ </language>
+ <language code='en-ZM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZM'>
+  <name>English (Zambia)</name>
+ </language>
+ <language code='en-ZW' lcid='12297' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZW'>
+  <name>English (Zimbabwe)</name>
+ </language>
+
+ <language code='eo' lcid='-1' encoding='iso-8859-3' flag='flagEPO'>
+  <name>Esperanto</name>
+ </language>
+
+ <language code='et' lcid='1061' encoding='windows-1257'>
+  <name>Estonian</name>
+ </language>
+ <language code='et-EE' lcid='1061' encoding='windows-1257' flag='flagEE'>
+  <name>Estonian (*Estonia)</name>
+ </language>
+
+ <language code='fo' lcid='1080' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Faeroese</name>
+ </language>
+ <language code='fo-FO' lcid='1080' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFO'>
+  <name>Faeroese (*Faeroese Islands)</name>
+ </language>
+
+ <language code='fa' lcid='1065' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Farsi</name>
+ </language>
+ <language code='fa-IR' lcid='1065' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIR'>
+  <name>Farsi (*Iran)</name>
+ </language>
+
+ <language code='fj' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Fijian</name>
+ </language>
+ <language code='fj-FJ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFJ'>
+  <name>Fijian (*Fiji)</name>
+ </language>
+
+ <language code='fi' lcid='1035' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Finnish</name>
+ </language>
+ <language code='fi-FI' lcid='1035' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFI'>
+  <name>Finnish (*Finland)</name>
+ </language>
+
+ <language code='fr' lcid='1036' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>French</name>
+ </language>
+ <language code='fr-FR' lcid='1036' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFR'>
+  <name>French (*France)</name>
+ </language>
+ <language code='fr-BE' lcid='2060' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBE'>
+  <name>French (Belgium)</name>
+ </language>
+ <language code='fr-BF' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBF'>
+  <name>French (Burkina Faso)</name>
+ </language>
+ <language code='fr-CM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCM'>
+  <name>French (Cameroon)</name>
+ </language>
+ <language code='fr-CA' lcid='3084' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXQB'>
+  <name>French (Canada, =Québécois)</name>
+ </language>
+ <language code='fr-TD' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTD'>
+  <name>French (Chad)</name>
+ </language>
+ <language code='fr-KM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKM'>
+  <name>French (Comoros)</name>
+ </language>
+ <language code='fr-CG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCG'>
+  <name>French (Congo)</name>
+ </language>
+ <language code='fr-CI' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCI'>
+  <name>French (Côte d'Ivoire)</name>
+ </language>
+ <language code='fr-DJ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDJ'>
+  <name>French (Djibouti)</name>
+ </language>
+ <language code='fr-GA' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGA'>
+  <name>French (Gabon)</name>
+ </language>
+ <language code='fr-GN' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGN'>
+  <name>French (Guinea)</name>
+ </language>
+ <language code='fr-HT' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagHT'>
+  <name>French (Haiti)</name>
+ </language>
+ <language code='fr-LU' lcid='5132' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLU'>
+  <name>French (Luxembourg)</name>
+ </language>
+ <language code='fr-ML' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagML'>
+  <name>French (Mali)</name>
+ </language>
+ <language code='fr-MR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMR'>
+  <name>French (Mauritania)</name>
+ </language>
+ <language code='fr-MC' lcid='6156' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMC'>
+  <name>French (Monaco)</name>
+ </language>
+ <language code='fr-SN' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSN'>
+  <name>French (Senegal)</name>
+ </language>
+ <language code='fr-CH' lcid='4108' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCH'>
+  <name>French (Switzerland)</name>
+ </language>
+ <language code='fr-TG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTG'>
+  <name>French (Togo)</name>
+ </language>
+ <language code='fr-ZR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZR'>
+  <name>French (Zaire)</name>
+ </language>
+
+ <language code='fy' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Frisian</name>
+ </language>
+ <language code='fy-NL' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNL'>
+  <name>Frisian (*The Netherlands)</name>
+ </language>
+
+ <language code='gl' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Galician</name>
+ </language>
+ <language code='gl-ES' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXGL'>
+  <name>Gallegan (*Spain)</name>
+ </language>
+
+ <language code='ka' lcid='1079' encoding='utf-8'>
+  <name>Georgian</name>
+ </language>
+ <language code='ka-GE' lcid='1079' encoding='utf-8' flag='flagGE'>
+  <name>Georian (*Georgia)</name>
+ </language>
+
+ <language code='de' lcid='1031' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>German</name>
+ </language>
+ <language code='de-DE' lcid='1031' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDE'>
+  <name>German (*Germany)</name>
+ </language>
+ <language code='de-AT' lcid='3079' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAT'>
+  <name>German (Austria)</name>
+ </language>
+ <language code='de-LI' lcid='5127' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLI'>
+  <name>German (Liechtenstein)</name>
+ </language>
+ <language code='de-LU' lcid='4103' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLU'>
+  <name>German (Luxembourg)</name>
+ </language>
+ <language code='de-CH' lcid='2055' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCH'>
+  <name>German (Switzerland)</name>
+ </language>
+
+ <language code='gil' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Gilbertese</name>
+ </language>
+ <language code='gil-KI' lcid='1031' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKI'>
+  <name>Gilbertese (*Kiribati)</name>
+ </language>
+ <language code='gil-TV' lcid='1031' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTV'>
+  <name>Gilbertese (Tuvalu)</name>
+ </language>
+
+ <language code='el' lcid='1032' encoding='windows-1253'>
+  <name>Greek</name>
+ </language>
+ <language code='el-GR' lcid='1032' encoding='windows-1253' flag='flagGR'>
+  <name>Greek (*Greece)</name>
+ </language>
+ <language code='el-CY' lcid='-1' encoding='windows-1253' flag='flagCY'>
+  <name>Greek (Cyprus)</name>
+ </language>
+
+ <language code='gn' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Guarani</name>
+ </language>
+ <language code='gn-PY' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPY'>
+  <name>Guarani (*Paraguay)</name>
+ </language>
+
+ <language code='gu' lcid='1095' encoding='utf-8'>
+  <name>Gujarati</name>
+ </language>
+ <language code='gu-IN' lcid='1095' encoding='utf-8' flag='flagIN'>
+  <name>Gujarati (*India)</name>
+ </language>
+
+ <language code='ha' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Hausa</name>
+ </language>
+ <language code='ha-NG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNG'>
+  <name>Hausa (*Nigeria)</name>
+ </language>
+
+ <language code='he' lcid='1037' encoding='windows-1255'>
+  <name>Hebrew</name>
+ </language>
+ <language code='he-IL' lcid='1037' encoding='windows-1255' flag='flagIL'>
+  <name>Hebrew (*Israel)</name>
+ </language>
+
+ <language code='hi' lcid='1081' encoding='utf-8'>
+  <name>Hindi</name>
+ </language>
+ <language code='hi-IN' lcid='1081' encoding='utf-8' flag='flagIN'>
+  <name>Hindi (*India)</name>
+ </language>
+
+ <language code='hu' lcid='1038' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Hungarian</name>
+ </language>
+ <language code='hu-HU' lcid='1038' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagHU'>
+  <name>Hungarian (*Hungarian)</name>
+ </language>
+
+ <language code='is' lcid='1039' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Icelandic</name>
+ </language>
+ <language code='is-IS' lcid='1039' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIS'>
+  <name>Icelandic (*Iceland)</name>
+ </language>
+
+ <language code='id' lcid='1057' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Indonesian</name>
+ </language>
+ <language code='id-id' lcid='1057' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagID'>
+  <name>Indonesian (*Indonesia)</name>
+ </language>
+
+ <language code='ia' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXEA'>
+  <name>Interlingua</name>
+ </language>
+
+ <language code='ie' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXEA'>
+  <name>Interlingue</name>
+ </language>
+
+ <language code='iu' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Inuktitut</name>
+ </language>
+ <language code='iu-CA' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXNV'>
+  <name>Inuktitut (*Canada)</name>
+ </language>
+
+ <language code='ik' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Inupiak</name>
+ </language>
+ <language code='ik-US' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagUS'>
+  <name>Inupiak (*United States)</name>
+ </language>
+
+ <language code='ga' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Irish Gaelic</name>
+ </language>
+ <language code='ga-IE' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIE'>
+  <name>Irish Gaelic (*Ireland)</name>
+ </language>
+
+ <language code='it' lcid='1040' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Italian</name>
+ </language>
+ <language code='it-IT' lcid='1040' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIT'>
+  <name>Italian (*Italy)</name>
+ </language>
+ <language code='it-SM' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSM'>
+  <name>Italian (San Marino)</name>
+ </language>
+ <language code='it-CH' lcid='2064' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCH'>
+  <name>Italian (Switzerland)</name>
+ </language>
+
+ <language code='ja' lcid='1041' encoding='shift_jis'>
+  <name>Japanese</name>
+ </language>
+ <language code='ja-JP' lcid='1041' encoding='shift_jis' flag='flagJP'>
+  <name>Japanese (*Japan)</name>
+ </language>
+
+ <language code='jw' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Javanese</name>
+ </language>
+ <language code='jw-ID' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagID'>
+  <name>Javanese (*Indonesia)</name>
+ </language>
+
+ <language code='kl' lcid='-1' encoding='iso-8859-10'>
+  <name>Kalaallisut</name>
+ </language>
+ <language code='kl-GL' lcid='-1' encoding='iso-8859-10' flag='flagGL'>
+  <name>Kalaallisut (*Greenland)</name>
+ </language>
+
+ <language code='kn' lcid='-1' encoding='utf-8'>
+  <name>Kannada</name>
+ </language>
+ <language code='kn-IN' lcid='-1' encoding='utf-8' flag='flagGE'>
+  <name>Kannada (*India)</name>
+ </language>
+
+ <language code='ks' lcid='1120' encoding='utf-8' flag='flagKAS'>
+  <name>Kashmiri</name>
+ </language>
+ <language code='ks-IN' lcid='2144' encoding='utf-8' flag='flagIN'>
+  <name>Kashmiri (*India)</name>
+ </language>
+
+ <language code='kk' lcid='1087' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Kazakh</name>
+ </language>
+ <language code='kk-KZ' lcid='1087' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKZ'>
+  <name>Kazakh (*Kazakhstan)</name>
+ </language>
+
+ <language code='rw' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Kinyarwanda</name>
+ </language>
+ <language code='rw-RW' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagRW'>
+  <name>Kinyarwanda (*Rwanda)</name>
+ </language>
+
+ <language code='ky' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Kirghiz</name>
+ </language>
+ <language code='ky-KG' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKG'>
+  <name>Kirghiz (*Kyrgyzstan)</name>
+ </language>
+
+ <language code='rn' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Kirundi</name>
+ </language>
+ <language code='rn-BI' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBI'>
+  <name>Kirundi (*Burundi)</name>
+ </language>
+
+ <language code='km' lcid='-1' encoding='utf-8'>
+  <name>Khmer</name>
+ </language>
+ <language code='km-KH' lcid='-1' encoding='utf-8' flag='flagKH'>
+  <name>Khmer (*Cambodia)</name>
+ </language>
+
+ <language code='kok' lcid='1111' encoding='utf-8'>
+  <name>Konkani</name>
+ </language>
+ <language code='kok-IN' lcid='1111' encoding='utf-8' flag='flagIN'>
+  <name>Konkani (*India)</name>
+ </language>
+
+ <language code='ko' lcid='1042' encoding='ks_c_5601-1987'>
+  <name>Korean</name>
+ </language>
+ <language code='ko-KR' lcid='1042' encoding='ks_c_5601-1987' flag='flagKR'>
+  <name>Korean (*Korea)</name>
+ </language>
+ <language code='ko-KP' lcid='1042' encoding='ks_c_5601-1987' flag='flagKP'>
+  <name>Korean (North Korea)</name>
+ </language>
+
+ <language code='lo' lcid='-1' encoding='utf-8'>
+  <name>Lao</name>
+ </language>
+ <language code='lo-LA' lcid='-1' encoding='utf-8' flag='flagLA'>
+  <name>Lao (*Laos)</name>
+ </language>
+
+ <language code='lap' lcid='-1' encoding='iso-8859-10'>
+  <name>Lappish</name>
+ </language>
+ <language code='lap-NO' lcid='-1' encoding='iso-8859-10' flag='flagNO'>
+  <name>Lappish (*Norway)</name>
+ </language>
+
+ <language code='la' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Latin</name>
+ </language>
+ <language code='la-VA' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagVA'>
+  <name>Latin (*Vatican)</name>
+ </language>
+
+ <language code='lv' lcid='1062' encoding='windows-1257'>
+  <name>Latvian</name>
+ </language>
+ <language code='lv-LV' lcid='1062' encoding='windows-1257' flag='flagLV'>
+  <name>Latvian (*Latvia)</name>
+ </language>
+
+ <language code='ln' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Lingala</name>
+ </language>
+ <language code='ln-CG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCG'>
+  <name>Lingala (*Congo)</name>
+ </language>
+
+ <language code='lt' lcid='1063' encoding='windows-1257'>
+  <name>Lithuanian</name>
+ </language>
+ <language code='lt-LT' lcid='1063' encoding='windows-1257' flag='flagLT'>
+  <name>Lithuanian (*Lithuania)</name>
+ </language>
+ <language code='x-lt-LT-Classic' lcid='2087' encoding='windows-1257' flag='flagLT'>
+  <name>Lithuanian (Lithuania, Classical)</name>
+ </language>
+
+ <language code='lb' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Luxemburgian</name>
+ </language>
+ <language code='lb-LU' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLU'>
+  <name>Luxemburgian (*Luxembourg)</name>
+ </language>
+
+ <language code='mk' lcid='1071' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Macedonian</name>
+ </language>
+ <language code='mk-MK' lcid='1071' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMK'>
+  <name>Macedonian (*Macedonia)</name>
+ </language>
+
+ <language code='mg' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Malagasy</name>
+ </language>
+ <language code='mg-MG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMG'>
+  <name>Malagasy (*Madagascar)</name>
+ </language>
+
+ <language code='ms' lcid='1086' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Malay</name>
+ </language>
+ <language code='ms-MY' lcid='1086' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMY'>
+  <name>Malay (*Malaysia)</name>
+ </language>
+ <language code='ms-BN' lcid='2110' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBN'>
+  <name>Malay (Brunei Darussalam)</name>
+ </language>
+
+ <language code='ml' lcid='1100' encoding='utf-8'>
+  <name>Malayalam</name>
+ </language>
+ <language code='ml-IN' lcid='1100' encoding='utf-8' flag='flagIN'>
+  <name>Malayalam (*India)</name>
+ </language>
+
+ <language code='mt' lcid='-1' encoding='iso-8859-3'>
+  <name>Maltese</name>
+ </language>
+ <language code='mt-MT' lcid='-1' encoding='iso-8859-3' flag='flagMT'>
+  <name>Maltese (*Malta)</name>
+ </language>
+
+ <language code='mni' lcid='1112' encoding='utf-8'>
+  <name>Manipuri</name>
+ </language>
+ <language code='mni-IN' lcid='1112' encoding='utf-8' flag='flagIN'>
+  <name>Manipuri (*India)</name>
+ </language>
+
+ <language code='gv' lcid='-1' encoding='iso-8859-14'>
+  <name>Manx Gaelic</name>
+ </language>
+ <language code='gv-GB' lcid='-1' encoding='iso-8859-14' flag='flagMAX'>
+  <name>Manx Gaelic (*United Kingdom)</name>
+ </language>
+
+ <language code='mi' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Maori</name>
+ </language>
+ <language code='mi-NZ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXMI'>
+  <name>Maori (*New Zealand)</name>
+ </language>
+
+ <language code='mr' lcid='1102' encoding='utf-8'>
+  <name>Marathi</name>
+ </language>
+ <language code='mr-IN' lcid='1102' encoding='utf-8' flag='flagIN'>
+  <name>Marathi (*India)</name>
+ </language>
+
+ <language code='mo' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Moldovan</name>
+ </language>
+ <language code='mo-MD' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMD'>
+  <name>Moldovan (*Moldova)</name>
+ </language>
+
+ <language code='mn' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Mongolian</name>
+ </language>
+ <language code='mn-MN' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMN'>
+  <name>Mongolian (*Mongolia)</name>
+ </language>
+
+ <language code='na' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Nauruan</name>
+ </language>
+ <language code='na-NR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNR'>
+  <name>Nauruan (*Nauru)</name>
+ </language>
+
+ <language code='nv' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Navajo</name>
+ </language>
+ <language code='nv-US' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagUS'>
+  <name>Navajo (*United States)</name>
+ </language>
+
+ <language code='ne' lcid='1121' encoding='utf-8'>
+  <name>Nepali</name>
+ </language>
+ <language code='ne-NP' lcid='1121' encoding='utf-8' flag='flagNP'>
+  <name>Nepali (*Nepal)</name>
+ </language>
+ <language code='ne-IN' lcid='2145' encoding='utf-8' flag='flagIN'>
+  <name>Nepali (India)</name>
+ </language>
+
+ <language code='no' lcid='1044' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Norwegian</name>
+ </language>
+ <language code='no-NO' lcid='1044' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNO'>
+  <name>Norwegian (*Norway)</name>
+ </language>
+ <language code='nn-NO' lcid='2068' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNO'>
+  <name>Norwegian Nynorsk (*Norway)</name>
+ </language>
+
+ <language code='oc' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Occitan</name>
+ </language>
+ <language code='oc-FR' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFR'>
+  <name>Occitan (*France)</name>
+ </language>
+
+ <language code='or' lcid='1096' encoding='utf-8'>
+  <name>Oriya</name>
+ </language>
+ <language code='or-IN' lcid='1096' encoding='utf-8' flag='flagIN'>
+  <name>Oriya (*India)</name>
+ </language>
+
+ <language code='ps' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Pashto</name>
+ </language>
+ <language code='ps-AF' lcid='-1' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAF'>
+  <name>Pashto (*Afghanistan)</name>
+ </language>
+
+ <language code='pl' lcid='1045' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Polish</name>
+ </language>
+ <language code='pl-PL' lcid='1045' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPL'>
+  <name>Polish (*Poland)</name>
+ </language>
+
+ <language code='pt' lcid='1046' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Portuguese</name>
+ </language>
+ <language code='pt-BR' lcid='1046' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBR'>
+  <name>Portuguese (*Brazil)</name>
+ </language>
+ <language code='pt-AO' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAO'>
+  <name>Portuguese (Angola)</name>
+ </language>
+ <language code='pt-CV' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCV'>
+  <name>Portuguese (Cape Verde)</name>
+ </language>
+ <language code='pt-GW' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGW'>
+  <name>Portuguese (Guinea-Bissau)</name>
+ </language>
+ <language code='pt-MZ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMZ'>
+  <name>Portuguese (Mozambique)</name>
+ </language>
+ <language code='pt-PT' lcid='2070' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPT'>
+  <name>Portuguese (Portugal)</name>
+ </language>
+
+ <language code='pa' lcid='1094' encoding='utf-8'>
+  <name>Punjabi</name>
+ </language>
+ <language code='pa-IN' lcid='1094' encoding='utf-8' flag='flagIN'>
+  <name>Punjabi (*India)</name>
+ </language>
+
+ <language code='qu' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Quechua</name>
+ </language>
+ <language code='qu-PE' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPE'>
+  <name>Quechua (*Peru)</name>
+ </language>
+
+ <language code='ro' lcid='1048' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Romanian</name>
+ </language>
+ <language code='ro-ro' lcid='1048' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagRO'>
+  <name>Romanian (*Romania)</name>
+ </language>
+ <language code='ro-md' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMD'>
+  <name>Romanian (Moldova)</name>
+ </language>
+
+ <language code='rm' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Raetho-Roman</name>
+ </language>
+ <language code='rm-ch' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCH'>
+  <name>Raetho-Roman (*Switzerland)</name>
+ </language>
+
+<!-- RN-BI|RN|RUN|1|Kirundi|-1|windows-1252|flg_BI|ansi
+-->
+
+ <language code='ru' lcid='1049' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Russian</name>
+ </language>
+ <language code='ru-ru' lcid='1049' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagRU'>
+  <name>Russian (*Russia)</name>
+ </language>
+ <language code='ru-md' lcid='-1' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMD'>
+  <name>Russian (Moldova)</name>
+ </language>
+
+<!-- RW-RW|RW|KIN|1|Kinyarwanda|-1|windows-1252|flg_RW|ansi -->
+
+ <language code='sa' lcid='1103' encoding='utf-8'>
+  <name>Sanskrit</name>
+ </language>
+ <language code='sa-in' lcid='1103' encoding='utf-8' flag='flagIN'>
+  <name>Sanskrit (*India)</name>
+ </language>
+
+ <language code='sd' lcid='1113' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Sindhi</name>
+ </language>
+ <language code='sd-in' lcid='1113' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagIN'>
+  <name>Sindhi (*India)</name>
+ </language>
+
+ <language code='si' lcid='-1' encoding='utf-8'>
+  <name>Singhalese</name>
+ </language>
+ <language code='si-lk' lcid='-1' encoding='utf-8' flag='flagLK'>
+  <name>Singhalese (*Sri-Lanka)</name>
+ </language>
+
+ <language code='sk' lcid='1051' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Slovak</name>
+ </language>
+ <language code='sk-sk' lcid='1051' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSK'>
+  <name>Slovak (*Slovakia)</name>
+ </language>
+
+ <language code='sl' lcid='1060' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Slovenian</name>
+ </language>
+ <language code='sl-si' lcid='1060' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSI'>
+  <name>Slovenian (*Slovenia)</name>
+ </language>
+
+ <language code='sm' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Samoan</name>
+ </language>
+ <language code='sm-ws' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagWS'>
+  <name>Samoan (*Western Samoa)</name>
+ </language>
+
+<!-- 
+SN-ZW|SN|SNA|1|Shona|-1|windows-1252|flg_ZW|ansi
+SNM-MV|XX|SNM|1|Dhivehi|-1|utf-8|flg_MV|def
+SO-SO|SO|SOM|1|Somali|-1|windows-1252|flg_SO|ansi
+-->
+
+ <language code='sq' lcid='1052' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Albanian</name>
+ </language>
+ <language code='sq-AL' lcid='1052' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAL'>
+  <name>Albanian (*Albania)</name>
+ </language>
+
+ <!-- base on: http://www.microsoft.com/globaldev/nlsweb/default.mspx -->
+ <language code='sr' lcid='31770' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Serbian</name>
+ </language>
+ <language code='sr-Cyrl-SP' lcid='3098' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Serbian (*Serbia)</name>
+ </language>
+ <language code='sr-Cyrl-BA' lcid='7194' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Serbian (Bosnia and Herzegovina)</name>
+ </language>
+
+<!--
+SG-CF|SG|SAG|1|Sango|-1|windows-1252|flg_CF|ansi
+-->
+
+ <language code='ss' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Siswati</name>
+ </language>
+ <language code='ss-sz' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSZ'>
+  <name>Siswati (*Swaziland)</name>
+ </language>
+ <language code='ss-za' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZA'>
+  <name>Siswati (South-Africa)</name>
+ </language>
+
+ <language code='st' lcid='1072' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Sesotho</name>
+ </language>
+ <language code='st-ls' lcid='1072' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagLS'>
+  <name>Sesotho (*Lesotho)</name>
+ </language>
+
+<!--
+SU-ID|SU|SUN|1|Sundanese|-1|windows-1252|flg_ID|ansi
+-->
+
+ <language code='sv' lcid='1053' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Swedish</name>
+ </language>
+ <language code='sv-SE' lcid='1053' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSE'>
+  <name>Swedish (*Sweden)</name>
+ </language>
+ <language code='sv-AX' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAX'>
+  <name>Swedish (Åland Islands)</name>
+ </language>
+ <language code='sv-FI' lcid='2077' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagFI'>
+  <name>Swedish (Finland)</name>
+ </language>
+
+ <language code='sw' lcid='1089' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Swahili</name>
+ </language>
+ <language code='sw-KE' lcid='1089' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagKE'>
+  <name>Swahili (*Kenya)</name>
+ </language>
+
+ <language code='syr' lcid='-1' encoding='utf-8'>
+  <name>Syriac</name>
+ </language>
+
+<!--xxx -->
+
+ <language code='gd' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Scottish Gaelic</name>
+ </language>
+ <language code='gd-GB' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGDH'>
+  <name>Scottish Gaelic (*United Kingdom)</name>
+ </language>
+
+ <language code='tet' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Tetum</name>
+ </language>
+ <language code='tet-TL' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagTL'>
+  <name>Tetum (*Timor-Leste)</name>
+ </language>
+
+ <language code='yo' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Yoruba</name>
+ </language>
+ <language code='yo-NG' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNG'>
+  <name>Yoruba (*Nigeria)</name>
+ </language>
+
+ <language code='yi' lcid='-1' encoding='windows-1255'>
+  <name>Yiddish</name>
+ </language>
+ <language code='yi-IL' lcid='-1' encoding='windows-1255' flag='flagIL'>
+  <name>Yiddish (*Israel)</name>
+ </language>
+
+ <language code='vi' lcid='1066' encoding='windows-1258'>
+  <name>Vietnamese</name>
+ </language>
+ <language code='vi-VN' lcid='1066' encoding='windows-1258' flag='flagVN'>
+  <name>Vietnamese (*Vietnam)</name>
+ </language>
+
+ <language code='wo' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Wolof</name>
+ </language>
+ <language code='wo-SN' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSN'>
+  <name>Wolof (*Senegal)</name>
+ </language>
+
+ <language code='wen' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Sorbian</name>
+ </language>
+ <language code='wen-DE' lcid='-1' encoding='windows-1250' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDE'>
+  <name>Sorbian (*Germany)</name>
+ </language>
+
+ <language code='x-win-Neutral' lcid='0' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXMW'>
+  <name>Windows Neutral</name>
+ </language>
+ <language code='x-win-Default' lcid='0' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXMW'>
+  <name>Windows Neutral (Default)</name>
+ </language>
+ <language code='x-win-System' lcid='0' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagXMW'>
+  <name>Windows Neutral (System)</name>
+ </language>
+
+ <language code='bo' lcid='-1' encoding='utf-8'>
+  <name>Tibetan</name>
+ </language>
+ <language code='bo-ZH' lcid='-1' encoding='utf-8' flag='flagBOD'>
+  <name>Tibetan (*China)</name>
+ </language>
+
+ <language code='cy' lcid='-1' encoding='iso-8859-14'>
+  <name>Welsh</name>
+ </language>
+ <language code='cy-GB' lcid='-1' encoding='iso-8859-14' flag='flagCYM'>
+  <name>Welsh (*United Kingdom)</name>
+ </language>
+
+ <language code='es' lcid='1034' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Spanish</name>
+ </language>
+ <language code='es-ES' lcid='1034' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagES'>
+  <name>Spanish (*Spain)</name>
+ </language>
+ <language code='es-AR' lcid='11274' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagAR'>
+  <name>Spanish (Argentina)</name>
+ </language>
+ <language code='es-BO' lcid='16394' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagBO'>
+  <name>Spanish (Bolivia)</name>
+ </language>
+ <language code='es-CL' lcid='13322' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCL'>
+  <name>Spanish (Chile)</name>
+ </language>
+ <language code='es-CO' lcid='9226' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCO'>
+  <name>Spanish (Colombia)</name>
+ </language>
+ <language code='es-CR' lcid='5130' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCR'>
+  <name>Spanish (Costa Rica)</name>
+ </language>
+ <language code='es-CU' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagCU'>
+  <name>Spanish (Cuba)</name>
+ </language>
+ <language code='es-DO' lcid='7178' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagDO'>
+  <name>Spanish (Dominican Republic)</name>
+ </language>
+ <language code='es-EC' lcid='12298' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagEC'>
+  <name>Spanish (Ecuador)</name>
+ </language>
+ <language code='es-GQ' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGQ'>
+  <name>Spanish (Equatorial Guinea)</name>
+ </language>
+ <language code='es-GT' lcid='4106' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagGT'>
+  <name>Spanish (Guatemala)</name>
+ </language>
+ <language code='es-HN' lcid='18442' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagHN'>
+  <name>Spanish (Honduras)</name>
+ </language>
+ <language code='es-MX' lcid='2058' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagMX'>
+  <name>Spanish (Mexico)</name>
+ </language>
+ <language code='es-NI' lcid='19466' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagNI'>
+  <name>Spanish (Nicaragua)</name>
+ </language>
+ <language code='es-PA' lcid='6154' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPA'>
+  <name>Spanish (Panama)</name>
+ </language>
+ <language code='es-PE' lcid='10250' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPE'>
+  <name>Spanish (Peru)</name>
+ </language>
+ <language code='es-PR' lcid='20490' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPR'>
+  <name>Spanish (Puerto Rico)</name>
+ </language>
+ <language code='es-PY' lcid='15370' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPY'>
+  <name>Spanish (Paraguay)</name>
+ </language>
+ <language code='es-SV' lcid='17418' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagSV'>
+  <name>Spanish (El Salvador)</name>
+ </language>
+ <language code='es-UY' lcid='14346' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagUY'>
+  <name>Spanish (Uruguay)</name>
+ </language>
+ <language code='es-VE' lcid='8202' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagVE'>
+  <name>Spanish (Venezuela)</name>
+ </language>
+ <language code='es-419' lcid='-1' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Spanish (Latin American &amp; the Caribbean)</name>
+ </language>
+ <language code='es-x-Modern' lcid='3082' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Spanish (Modern Sort)</name>
+ </language>
+
+ <language code='th' lcid='1054' encoding='windows-874'>
+  <name>Thai</name>
+ </language>
+ <language code='th-TH' lcid='1054' encoding='windows-874' flag='flagTH'>
+  <name>Thai (*Thailand)</name>
+ </language>
+ <language code='tr' lcid='1055' encoding='windows-1254'>
+  <name>Turkish</name>
+ </language>
+ <language code='tr-TR' lcid='1055' encoding='windows-1254' flag='flagTR'>
+  <name>Turkish (*Turkey)</name>
+ </language>
+ <language code='tr-CY' lcid='-1' encoding='windows-1254' flag='flagCY'>
+  <name>Turkish (Cyprus)</name>
+ </language>
+
+ <language code='uk' lcid='1058' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Ukrainian</name>
+ </language>
+ <language code='uk-UA' lcid='1058' encoding='windows-1251' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagUA'>
+  <name>Ukrainian (*Ukraine)</name>
+ </language>
+ <language code='ur' lcid='1056' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Urdu</name>
+ </language>
+ <language code='uk-PK' lcid='1056' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagPK'>
+  <name>Urdu (*Pakistan)</name>
+ </language>
+ <language code='ug' lcid='1152' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Uighur</name>
+ </language>
+ <language code='ug-CN' lcid='1152' encoding='windows-1256' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Uighur (*China)</name>
+ </language>
+
+ <language code='zu' lcid='1077' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8'>
+  <name>Zulu</name>
+ </language>
+ <language code='zu-ZA' lcid='1077' encoding='windows-1252' macEncoding='UTF-8' unixEncoding='UTF-8' flag='flagZA'>
+  <name>Zulu (*south Africa)</name>
+ </language>
+
+</okapiLanguages>

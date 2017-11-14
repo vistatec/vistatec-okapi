@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\UTF8WithBOM.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">33889302-b74a-4afa-8410-1c4ce9d0011b</value><value key="SDL:CreationDate">03/21/2011 16:54:31</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\UTF8WithBOM.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\UTF8WithBOM.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6560</value><value key="SDLWS:DocId">7408</value><value key="SDLWS:TaskId">8374</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:31Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-encoding detection-level="Certain" encoding="UTF-8" /><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Has UTF-8 BOM">True</value><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="sdl:paragraph" color="'0'" /></cxt-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="0"><st name="UTF-8 BOM">﻿</st><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_ProcInstr</value></props></tag><tag id="1"><st name="html">&lt;html&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="head">&lt;head&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="3"><st name="meta">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="4"><st name="head">&lt;/head&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="5"><st name="body">&lt;body&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="6"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="7"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="8"><st name="body">&lt;/body&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="9"><st name="html">&lt;/html&gt;</st><props><value key="ttTagType">ec_End</value></props></tag></tag-defs></header><body>
+<trans-unit id="c5fddfa4-0fa7-4abb-9c23-226008da0586" translate="no"><source><x id="0" /><x id="1" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="9dea75d5-b3ee-456f-b0cd-5f4c6c2364d1" translate="no"><source>
+
+<x id="2" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="78878990-796f-454c-a83c-cf93e513acfc" translate="no"><source>
+<x id="3" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="2682edea-1ca1-44b1-b701-30ab51790219" translate="no"><source>
+<x id="4" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="d9533757-5c1b-4e8a-b99d-88e7e5b754f3" translate="no"><source>
+
+<x id="5" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="634da1cd-2901-49a4-b9ce-924cef9520eb" translate="no"><source>
+<x id="6" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /></sdl:cxts>
+<trans-unit id="f929e575-043f-484e-9d98-e083e17b45d7"><source>ß=s-zted, ü=u-umlaut</source><seg-source><mrk mtype="seg" mid="1">ß=s-zted, ü=u-umlaut</mrk></seg-source><target><mrk mtype="seg" mid="1" /></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="b582b443-7567-438e-9737-0be44ddc1f84" translate="no"><source><x id="7" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="21a138b0-8bea-4843-85e9-0779b7a98f02" translate="no"><source>
+<x id="8" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="7a80f5b4-86c3-458c-96cb-888b69ab43fc" translate="no"><source>
+
+<x id="9" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="064119b3-310b-4b0d-bf51-1921e312b5c7" translate="no"><source>
+</source></trans-unit></group></body></file></xliff>

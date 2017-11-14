@@ -1,0 +1,5 @@
+#v1
+untagXmlStructures.b=true
+extractNotes.b=true
+extractMasterSpreads.b=true
+extractHiddenLayers.b=true

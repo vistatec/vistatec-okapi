@@ -1,0 +1,14 @@
+#v1
+RuleCount.i=1
+
+Rule0.name=Dates1
+Rule0.description=The following validates dates with and without leading zeros in the following formats: MM/DD/YYYY and it also takes YYYY (this can easily be removed). All months are validated for the correct number of days for that particular month except for February which can be set to 29 days. (Author: Matt Adams, http://regexlib.com)
+Rule0.inTokens=
+Rule0.outTokens=DATE
+Rule0.userTokens=
+Rule0.lexemId.i=0
+Rule0.pattern=((((0[13578])|([13578])|(1[02]))[\/](([1-9])|([0-2][0-9])|(3[01])))|(((0[469])|([469])|(11))[\/](([1-9])|([0-2][0-9])|(30)))|((2|02)[\/](([1-9])|([0-2][0-9]))))[\/]\d{4}|^\d{4}
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=0
+Rule0.languages=
+

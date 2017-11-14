@@ -1,0 +1,14 @@
+#: ../src/file-manager/fm-icon-view.c:2086
+#, c-format
+msgid "pointing at \"%s\""
+msgstr "wys na \"%s\""
+
+#~ msgid "%'d file left to delete — %T left"
+#~ msgid_plural "%'d files left to delete — %T left"
+#~ msgstr[0] "%'d lêer oor om te skrap — %T oor"
+#~ msgstr[1] "%'d lêers oor om te skrap — %T oor"
+
+#, fuzzy
+#~ msgid "Throwing out file:"
+#~ msgstr "Die eienaar van die lêer."
+

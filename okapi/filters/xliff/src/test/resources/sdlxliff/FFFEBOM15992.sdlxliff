@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\FFFEBOM.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">b3fe043b-5bfb-43d3-a477-cd971609968a</value><value key="SDL:CreationDate">03/21/2011 16:54:24</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\FFFEBOM.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\FFFEBOM.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6551</value><value key="SDLWS:DocId">7399</value><value key="SDLWS:TaskId">8365</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:24Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-encoding detection-level="Certain" encoding="Unicode" /><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="sdl:paragraph" color="'0'" /></cxt-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="0"><st name="html">&lt;html&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="1"><st name="head">&lt;head&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="meta">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-16LE"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="3"><st name="head">&lt;/head&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="4"><st name="body">&lt;body&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="5"><st name="p">&lt;p&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="6"><st name="p">&lt;/p&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="7"><st name="body">&lt;/body&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="8"><st name="html">&lt;/html&gt;</st><props><value key="ttTagType">ec_End</value></props></tag></tag-defs></header><body>
+<trans-unit id="93c900e3-2715-471e-89c4-12924f2d7aa8" translate="no"><source><x id="0" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="94b99af6-99a1-47fa-95cc-18ac8bd747da" translate="no"><source>
+
+<x id="1" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="c8762fd7-ea2d-440a-a758-3a919ee11094" translate="no"><source>
+<x id="2" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="5df6e32e-fe25-442f-9aa3-fdcd2d3c8793" translate="no"><source>
+<x id="3" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="44431e6b-c4e6-425a-9061-ab1b264e8823" translate="no"><source>
+
+<x id="4" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="df492f98-f682-42d2-b2d8-4d3b577a5658" translate="no"><source>
+<x id="5" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /></sdl:cxts>
+<trans-unit id="4529160e-a67b-4775-9a97-0af34f0bef63"><source>ß=s-zted, ü=u-umlaut</source><seg-source><mrk mtype="seg" mid="1">ß=s-zted, ü=u-umlaut</mrk></seg-source><target><mrk mtype="seg" mid="1" /></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="5ec48f1a-6189-4811-b4b4-a283586bfca7" translate="no"><source><x id="6" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="417985df-2a12-4c21-8526-b9b504a7defb" translate="no"><source>
+<x id="7" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="4c93db67-8d08-493f-9eff-d8d83a506c26" translate="no"><source>
+
+<x id="8" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="156353e4-e419-42a4-aaaa-89e2fb8449df" translate="no"><source>
+</source></trans-unit></group></body></file></xliff>

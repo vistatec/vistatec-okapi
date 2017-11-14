@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inconsistencyCheck perFile="true">
+<targetDifferences>
+<source>Source &lt;1>text&lt;/1></source>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Target &lt;1>text&lt;/1></issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Target text&lt;1/></issue>
+<issue seg="0" tu="tu4" subDoc="1" doc="ROOT/SameSourceWithCode.html.xlf">Rawr</issue>
+</targetDifferences>
+<sourceDifferences>
+<target>Target &lt;1>text&lt;/1></target>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SameTargetWithCode.html.xlf">Source &lt;1>text&lt;/1></issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SameTargetWithCode.html.xlf">Source text&lt;1/></issue>
+<issue seg="0" tu="tu4" subDoc="1" doc="ROOT/SameTargetWithCode.html.xlf">Fairy dust</issue>
+</sourceDifferences>
+<sourceDifferences>
+<target>Target text 2</target>
+<issue seg="0" tu="tu3" subDoc="1" doc="ROOT/SameTargetWithCode.html.xlf">Source text 2</issue>
+<issue seg="0" tu="tu5" subDoc="1" doc="ROOT/SameTargetWithCode.html.xlf">Butterflys</issue>
+</sourceDifferences>
+</inconsistencyCheck>

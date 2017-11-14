@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+    <file original="test01.html" source-language="en-US" target-language="fr-FR" datatype="html">
+        <body>
+            <trans-unit id="tu1" restype="x-paragraph">
+                <source xml:lang="en-US">Source text</source>
+                <target xml:lang="fr-FR">Target text</target>
+            </trans-unit>
+            <trans-unit id="tu2" restype="x-paragraph">
+                <source xml:lang="en-US">Source text</source>
+                <target xml:lang="fr-FR">Rolls-Royce</target>
+            </trans-unit>
+            <trans-unit id="tu3" restype="x-paragraph">
+                <source xml:lang="en-US">Source text</source>
+                <target xml:lang="fr-FR">Target text</target>
+            </trans-unit>
+            <trans-unit id="tu4" restype="x-paragraph">
+                <source xml:lang="en-US">Aston Martin</source>
+                <target xml:lang="fr-FR">Target text</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

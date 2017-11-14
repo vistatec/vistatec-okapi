@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tmx version="1.4">
+    <header
+		creationtool="hand made"
+		creationtoolversion="1"
+		datatype="PlainText"
+		segtype="sentence"
+		adminlang="en-us"
+		srclang="EN"
+		o-tmf="ABCTransMem">
+    </header>
+    <body>
+        
+        <tu tuid="hello123" datatype="plaintext">
+            <prop type="Txt::FileName">GeorgeInTheJungle.hdf</prop>
+            <prop type="Txt::GroupName">ImAGroupie</prop>
+            <prop type="Att::Test">IWillGetIgnored</prop>
+            <tuv xml:lang="EN">
+                <seg>hello</seg>
+            </tuv>
+            <tuv xml:lang="IT">
+                <seg>ciao</seg>
+            </tuv>
+        </tu>
+        <tu tuid="world" datatype="plaintext">
+            <tuv xml:lang="EN">
+                <seg>world</seg>
+            </tuv>
+            <tuv xml:lang="IT">
+                <seg>mondo</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,132 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rainbow - Command Line</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Rainbow</h1>
+		<h2 class="head2">Command Line</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<p>When starting Rainbow has different behaviors depending on the arguments on 
+its command-line:</p>
+<ul>
+	<li>If Rainbow is started with just one argument: it starts in normal mode and takes the argument as a project file 
+to be loaded.</li>
+	<li>If Rainbow is started with more than one argument: it starts in 
+	command-line mode and interprets the arguments as described in the table 
+	below.</li>
+</ul>
+<p>The 
+arguments of the command-line can be the following:</p>
+<table border="1" id="table1" cellspacing="0" cellpadding="4">
+	<tr>
+		<td nowrap align="left" valign="top"><code>-p &lt;projectFilename&gt;</code></td>
+		<td>Loads an existing project file <code>&lt;projectFilename&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-x &lt;utilityId&gt;</code></td>
+		<td>Executes the utility with the ID <code>&lt;utilityId&gt;</code>. This is done after all 
+		arguments of the command line have been processed.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-pln &lt;pipelineFilename&gt;</code></td>
+		<td>Loads and execute the specified pipeline stored in <code>
+		&lt;pipelineFilename&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-se &lt;encoding&gt;</code></td>
+		<td>Sets the default source encoding to <code>&lt;encoding&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-te &lt;encoding&gt;</code></td>
+		<td>Sets the default target encoding to <code>&lt;encoding&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-sl &lt;langCode&gt;</code></td>
+		<td>Sets the source language using <code>&lt;langCode&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-tl &lt;langCode&gt;</code></td>
+		<td>Sets the target language using <code>&lt;langCode&gt;</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-opt &lt;optionFilename&gt;</code></td>
+		<td>Sets the options file to use for the utility to execute. Use the
+		<code>-np</code> flag to be prompted or not to modify the options when 
+		the command line is executed. The options file must be for the utility 
+		defined with <code>-x</code>.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-np</code></td>
+		<td>No prompt for utility&#39;s options.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>&lt;inputFile&gt;[ -fc 
+		&lt;filterConfiguration&gt;]</code></td>
+		<td>Sets the input file, and optionally sets the filter configuration to 
+		assign to it. You can specify an absolute or a local filename. The input 
+		file root is reset to the folder of the given input file. If a project 
+		was loaded, all input files in that projects are removed and the input 
+		file root reset.<br>
+		If you specify several input files (and their filter configurations) the first 
+		one will be assigned to the input list 1, the second to the input list 
+		2, etc.<br>
+		If the filter configuration is no specified in the command line, the default 
+		filter (if one can be found) is used.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-o &lt;outputFile&gt;</code></td>
+		<td>Sets the output file. If this option is not used and an input file 
+		is specified, the output file path and name is build based on the output 
+		options of the project (loaded or default).</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-pd &lt;directory&gt;</code></td>
+		<td>Sets the parameters directory (the location where the filter 
+		parameters files are stored). You can use <code>.</code> (dot) to 
+		specify the current directory. By default, if not project is loaded, the 
+		default parameters directory is the user home directory.<br>
+		When the <code>-pd</code> option is set it is also utilized as the root 
+		directory to substitute for the <code>${{rootDir}</code> variable that 
+		can be used in some path parameters.</td>
+	</tr>
+	<tr>
+		<td nowrap align="left" valign="top"><code>-?</code> or <code>-h</code></td>
+		<td>Opens this help page.</td>
+	</tr>
+</table>
+<p>Here are some example of command lines in Windows. They assume Rainbow is 
+installed in <code>C:\rnb</code> directory.</p>
+<pre>C:\&gt;java -jar \rnb\lib\rainbow.jar -x oku_textrewriting -sl EN -tl FR -opt myOptions.opt myInput.xlf -o myOutput.xlf -np</pre>
+<p>The command-line above executes the Text Rewriting utility with the source 
+language set to <code>EN</code> and the target language set to <code>FR</code>. 
+The input document is the XLIFF file <code>myInput.xlf</code>, and the modified 
+file is saved as <code>myOutput.xlf</code>. The utility will use whatever 
+options are set in the options file named <code>myOptions.opt</code>. If that 
+file does not exist, one will be created with the default options for the Text 
+Rewriting utility. In both cases the user will not be prompted to change the 
+options (<code>-np</code> parameter).</p>
+<pre>C:\&gt;java -jar \rnb\lib\rainbow.jar -x oku_transcomparison -sl EN -tl FR -pd . myHumanTrans.xlf myMachineTrans.txt -fc okf_regex@myText</pre>
+<p>The command-line above executes the Translation Comparison utility with the 
+source language set to <code>EN</code> and the target language set to <code>FR</code>. 
+The current folder (<code>.</code>) is specified as the parameters directory. 
+The input file <code>myHumanTrans.xlf</code> is the input document for the Input 
+List 1, and the default XLIFF filter assigned to it. The input file <code>
+myMachineTrans.txt</code> is the input document for the Input List 2, and the 
+custom filter parameters <code>okf_regex@myText.fprm</code> is associated with 
+it. No utility options are specified, so the use will be prompted to set the 
+options.</p>
+<pre>C:\&gt;java -jar \rnb\lib\rainbow -h</pre>
+<p>The command-line above opens this help page.</p>
+<p>&nbsp;</p>
+</body>
+</html>

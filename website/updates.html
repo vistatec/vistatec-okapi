@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="keywords" content="localization tools translation CAT filter Okapi cross-platform open-source java xml l10n i18n internationalization">
+
+<script type="text/javascript" language="JavaScript">
+<!--
+
+function CheckVersion (p_sName, p_sUserVersion, p_sLatestVersion)
+{
+	var sBuf = "";
+	
+	sBuf += "<table border='0' cellpadding='5'>"
+	sBuf += "<tr><td align='right'>Component:</td><td>" + p_sName + "</td></tr>";
+	sBuf += "<tr><td align='right'>Your version:</td><td>" + p_sUserVersion + "</td></tr>";
+	sBuf += "<tr><td align='right'>Latest version:</td><td>" + p_sLatestVersion + "</td></tr>";
+	sBuf += "<tr><td align='right'>Recommendation:</td><td>";
+
+    // 1.1.3-SNAPSHOT = app
+    // 1.2-SNAPSHOT = lib
+	userParts = p_sUserVersion.split(".");
+	if ( userParts.length == 2 ) {
+	   u1 = 0;
+	   u2 = parseInt(userParts[0]);
+	   tmp = userParts[1].split("-");
+	}
+	else {
+	   u1 = parseInt(userParts[0]);
+	   u2 = parseInt(userParts[1]);
+	   tmp = userParts[2].split("-");
+	}
+	u3 = parseInt(tmp[0]);
+	u4 = 1;
+	if ( tmp[1] == "SNAPSHOT" ) u4 = 0;
+	
+	// Latest version
+	latestParts = p_sLatestVersion.split(".");
+	if ( latestParts.length == 2 ) {
+	   l1 = 0;
+	   l2 = parseInt(latestParts[0]);
+	   tmp = latestParts[1].split("-");
+	}
+	else {
+	   l1 = parseInt(latestParts[0]);
+	   l2 = parseInt(latestParts[1]);
+	   tmp = latestParts[2].split("-");
+	}
+	l3 = parseInt(tmp[0]);
+	l4 = 1;
+	if ( tmp[1] == "SNAPSHOT" ) l4 = 0;
+
+	update = false;
+	if ( u1 < l1 ) update = true;
+	else if ( u1 == l1 ) {
+	   if ( u2 < l2 ) update = true;
+	   else if ( u2 == l2 ) {
+	      if ( u3 < l3 ) update = true;
+	      else if ( u3 == l3 ) {
+	         if ( u4 < l4 ) update = true;
+	      }
+	   }
+	}
+
+	if ( update ) {
+		sBuf += "<b>We recommend you to upgrade to the latest released version.</b><br />";
+	}
+	else {
+		sBuf += "No upgrade is needed at this time.";
+	}
+	
+	sBuf += "</td></tr></table>";
+	return sBuf;
+}
+
+
+function CheckVersions ()
+{
+	//=============================================================
+	// These variables must be set to the latest released versions
+	//-------------------------------------------------------------
+	var sRainbowVersion = "6.0.34";
+	var sOkapiLibUIVersion = "0.34";
+	//=============================================================
+
+	var sParam, aParams;
+	var sBuf = "";
+	var sBuf1;
+	
+	sParam = new String(window.self.location.search);
+	sParam = sParam.slice(1);
+	aParams = sParam.split('=');
+	
+	if ( aParams[0] == "rainbow" )
+	{
+		sBuf1 = document.getElementById('placeholder').innerHTML;
+		document.getElementById('placeholder').innerHTML
+			= sBuf1 + CheckVersion("rainbow", aParams[1], sRainbowVersion);
+	}
+	else if ( aParams[0] == "okapi-lib-ui" )
+	{
+		sBuf1 = document.getElementById('placeholder').innerHTML;
+		document.getElementById('placeholder').innerHTML
+			= sBuf1 + CheckVersion("okapi-lib-ui", aParams[1], sOkapiLibUIVersion);
+	}
+	else
+	{
+		sBuf1 = document.getElementById('placeholder').innerHTML;
+		document.getElementById('placeholder').innerHTML
+			= sBuf1 + "<p>Unknown application keyword. <br>This application is not registered in Okapi's version checking system.</p>";
+	}
+}
+
+//-->
+</script>
+
+<title>Okapi Framework - Updates</title>
+<link rel="stylesheet" type="text/css" href="okapi.css">
+</head>
+
+<body onload='CheckVersions()'>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head"><h1 class="head">Okapi Framework</h1>
+		<h2 class="head2">Updates</h2></td>
+	</tr>
+</table>
+
+<p>&nbsp;</p>
+<div id="placeholder"></div>
+
+<ul>
+	<li><a href="http://bintray.com/okapi/Distribution">All Downloads</a></li>
+	<li><a href="http://okapiframework.org/snapshots/">Latest Snapshot Download</a></li>
+	<li><a href="http://okapiframework.org/wiki/index.php?title=Main_Page">Okapi Main Page</a></li>
+</ul>
+<p>&nbsp;</p>
+
+</body>
+</html>

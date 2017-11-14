@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="oku_alignment" creationtoolversion="1" segtype="sentence" o-tmf="okp" adminlang="en" srclang="en-us" datatype="x-stringinfo"></header><body>
+<tu tuid="ACDetectionCheckFailedAction0_s02">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">ACDetectionCheckFailedAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Confirm that the AC line is in the AC fluid detector.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Sicherstellen, dass sich der AK-Schlauch im AK-Flüssigkeitsdetektor befindet.</seg></tuv>
+</tu>
+<tu tuid="ACDetectionCheckFailedAction0_s04">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">ACDetectionCheckFailedAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Touch Retry.</seg></tuv>
+<tuv xml:lang="de-de"><seg>&apos;Wiederholen&apos; drücken.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction0_s01">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Touch Retry to resume the procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Zur Fortsetzung des Verfahrens &apos;Wiederholen&apos; drücken.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s02">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Reset the system and resume the procedure, or resume the procedure in Semi-Automatic mode:</seg></tuv>
+<tuv xml:lang="de-de"><seg>System zurücksetzen und Verfahren wieder aufnehmen, oder Verfahren im halbautomatischen Modus wieder aufnehmen:</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s04">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>To reset the system and resume the procedure:</seg></tuv>
+<tuv xml:lang="de-de"><seg>Zum Zurücksetzen des Systems und Wiederaufnehmen des Verfahrens:</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s06">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Turn off the system.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Gerät ausschalten.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s08">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Wait 6 seconds.</seg></tuv>
+<tuv xml:lang="de-de"><seg>6 Sekunden warten.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s10">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Turn on the system.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Gerät einschalten.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s12">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Follow the instructions on the screen.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Den Anweisungen auf dem Bildschirm folgen.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s14">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>To resume the procedure in Semi-Automatic mode, touch Disable to disable the AIM system.</seg></tuv>
+<tuv xml:lang="de-de"><seg>&apos;Deaktivieren&apos; drücken, um das ASM-System zu deaktivieren und das Verfahren im halbautomatischen Modus wieder aufzunehmen.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s15">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Refer to the operator&apos;s manual for instructions on using Semi-Automatic mode.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Anweisungen zur Verarbeitung im halbautomatischen Modus sind der Bedienungsanleitung zu entnehmen.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1_s17">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Contact your service representative for assistance before you begin a new procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Den Kundendienst verständigen, bevor ein neues Verfahren begonnen wird.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s01">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If the inlet:AC ratio is too high, the system may not be properly anticoagulated, and clumping may occur in the collect line.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Wenn das Blut/AK-Verhältnis zu hoch ist, wird das System u. U. nicht ordnungsgemäß antikoaguliert und es können sich Koagel im Sammelschlauch bilden.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s03">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Consider decreasing the ratio by two points.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Das Verhältnis ggf. um 2 Punkte reduzieren.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s05">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Examine the collect line for clumps.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Den Sammelschlauch auf Koagel prüfen.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s07">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Touch Retry.</seg></tuv>
+<tuv xml:lang="de-de"><seg>&apos;Wiederholen&apos; drücken.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s09">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If the alarm recurs, consider decreasing the ratio again.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Falls der Alarm erneut auftritt, das Verhältnis ggf. weiter senken.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s10">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Repeat steps 2. and 3. until the alarm no longer recurs.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Schritte 2 und 3 wiederholen, bis der Alarm nicht mehr auftritt.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s12">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Once the alarm is resolved, continue to monitor the collect line for clumps.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Nach Beseitigung des Alarms den Sammelschlauch weiterhin auf Koagel überwachen.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2_s13">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If you see clumps, consider decreasing the ratio until the clumps disappear.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Bei Vorhandensein von Koagel das Verhältnis ggf. reduzieren, bis sich die Koagel aufgelöst haben.</seg></tuv>
+</tu>
+<tu tuid="InletLinePrimeFluidTooSoonAction0_s01">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">InletLinePrimeFluidTooSoonAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If the tubing set contains fluid, you may have spiked the AC container too soon, and the system cannot prime a set that contains fluid.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Wenn das Schlauchset Flüssigkeit enthält, wurde der AK-Behälter evtl. zu früh angestochen. Das System kann ein solches Set nicht vorfüllen.</seg></tuv>
+</tu>
+<tu tuid="InletLinePrimeFluidTooSoonAction0_s03">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">InletLinePrimeFluidTooSoonAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Touch Unload and unload the tubing set.</seg></tuv>
+<tuv xml:lang="de-de"><seg>&apos;Entladen&apos; drücken und das Schlauchset entladen.</seg></tuv>
+</tu>
+<tu tuid="InletLinePrimeFluidTooSoonAction0_s05">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">InletLinePrimeFluidTooSoonAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Load a new tubing set and resume the procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Neues Set laden und das Verfahren wieder aufnehmen.</seg></tuv>
+</tu>
+<tu tuid="ConfigBackupFileReadFailedExplanation_s01">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">ConfigBackupFileReadFailedExplanation</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>System could not read configuration file and used backup file to restore data.</seg></tuv>
+<tuv xml:lang="de-de"><seg>System konnte Konfigurationsdatei nicht lesen. Zum Wiederherstellen der Daten wurde die Sicherungskopie der Datei verwendet.</seg></tuv>
+</tu>
+<tu tuid="ConfigBackupFileReadFailedExplanation_s02">
+<prop type="Txt::FileName">file1_en.info</prop>
+<prop type="Txt::GroupName">ConfigBackupFileReadFailedExplanation</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg><ph x="1">\n</ph>Recent changes to configuration options may have been lost.</seg></tuv>
+<tuv xml:lang="de-de"><seg><ph x="1">\n</ph>Aktuelle Änderungen an den Konfigurationsoptionen sind möglicherweise verloren gegangen.</seg></tuv>
+</tu>
+</body>
+</tmx>

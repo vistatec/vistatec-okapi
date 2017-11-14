@@ -1,0 +1,3 @@
+en	fr
+Source text 1	Target text 1
+Source text 2	Target text 2

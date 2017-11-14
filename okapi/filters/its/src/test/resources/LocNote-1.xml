@@ -1,0 +1,16 @@
+﻿<myRes xmlns:its="http://www.w3.org/2005/11/its" >
+ <info>
+  <its:rules version="1.0" its:translate="no">
+   <its:locNoteRule locNoteType="alert" selector="//msg">
+    <its:locNote>The variable {0} has three possible values:
+     'printer', 'copier' and 'scanner'.</its:locNote>
+   </its:locNoteRule>
+  </its:rules>
+ </info>
+ <body>
+  <msg id="ON">The {0} has been enabled.</msg>
+  <msg id="OFF">The {0} has been disabled.</msg>
+  <msg id="BROKEN">The {0} is out of service.</msg>
+ </body>
+</myRes>
+<!--Note: using variables like this is not wise. -->

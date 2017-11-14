@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header
+  creationtool="LDS Translator's Workbench"
+  creationtoolversion="1.0"
+  segtype="paragraph"
+  o-tmf="WordCruncher"
+  adminlang="EN-US"
+  srclang="EN-US"
+  datatype="plaintext">
+</header>
+<body>
+  <tu tuid="/OTBible/Genesis/50/17">
+    <tuv xml:lang="EN-US">
+      <seg> 17 So shall ye say unto Joseph, Forgive, I pray thee now, the trespass of thy brethren, and their sin; for they did unto thee evil: and now, we pray thee, forgive the trespass of the servants of the God of thy father.  And Joseph wept when they spake unto him. </seg>
+    </tuv>
+    <tuv xml:lang="PT-BR">
+      <seg> 17 Assim direis a José: Perdoa, rogo-te, a transgressão de teus irmãos, e o seu peccado, porque te fizeram mal: agora pois rogamos-te que perdoes a transgressão dos servos do Deus de teu pae. E José chorou quando elles lhe fallavam. </seg>
+    </tuv>
+  </tu>
+  
+  <tu tuid="/OTBible/Genesis/50/21">
+    <tuv xml:lang="EN-US">
+      <seg> 21 Now therefore fear ye not: I will nourish you, and your little ones.  And he comforted them, and spake kindly unto them. </seg>
+    </tuv>
+    <tuv xml:lang="PT-BR">
+      <seg> 21 Agora pois não temaes: eu vos sustentarei a vós e a vossos meninos. Assim os consolou, e fallou segundo o coração dʼelles. </seg>
+    </tuv>
+  </tu>  
+</body>
+</tmx>

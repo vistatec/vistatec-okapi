@@ -1,0 +1,57 @@
+<?xml version="1.0"?> 
+<project name="All distributions" default="all" basedir="."> 
+
+	<target name="all">
+		<!-- Delete all old distributions -->
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="done"/>
+		</delete>
+
+		<!-- Generate libVersions.properties -->
+		<ant antfile="build_getVerProp.xml">
+		</ant>
+
+		<!-- One for all platforms -->
+		<ant antfile="build_okapi-lib.xml">
+		</ant>
+
+		<!-- One per platform -->
+		<ant antfile="build_okapi-apps.xml">
+			<property name="platform" value="win32-x86"/>
+		</ant>
+		<ant antfile="build_okapi-apps.xml">
+			<property name="platform" value="win32-x86_64"/>
+		</ant>
+		<ant antfile="build_okapi-apps.xml">
+			<property name="platform" value="gtk2-linux-x86"/>
+		</ant>
+		<ant antfile="build_okapi-apps.xml">
+			<property name="platform" value="gtk2-linux-x86_64"/>
+		</ant>
+		<ant antfile="build_okapi-apps.xml">
+			<property name="platform" value="cocoa-macosx-x86_64"/>
+		</ant>
+
+		<!-- Plugins -->
+		<ant antfile="build_okapi-plugins.xml">
+		</ant>
+
+	</target>
+
+	<target name="clean">
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="dist_cocoa-macosx-x86_64"/>
+			<fileset dir="dist_common"/>
+			<fileset dir="dist_gtk2-linux-x86"/>
+			<fileset dir="dist_gtk2-linux-x86_64"/>
+			<fileset dir="dist_omtplugins"/>
+			<fileset dir="dist_plugins"/>
+			<fileset dir="dist_win32-x86"/>
+			<fileset dir="dist_win32-x86_64"/>
+			<fileset dir="done"/>
+			<fileset dir="tmp"/>
+		</delete>
+		<delete file="libVersions.properties" quiet="true"/>
+	</target>
+
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowProject version="4"><fileSet id="1"><root useCustom="0">C:/Users/Yves</root><fi fs="okf_html" fo="" se="" te="">testForEncoding1.html</fi><fi fs="okf_html" fo="" se="" te="">testForEncoding2.html</fi></fileSet><fileSet id="2"><root useCustom="0">C:/Users/Yves</root></fileSet><fileSet id="3"><root useCustom="0">C:/Users/Yves</root></fileSet><output><root use="0"></root><subFolder use="0"></subFolder><extension use="1" style="0">.out</extension><replace use="0" oldText="" newText=""></replace><prefix use="0"></prefix><suffix use="0"></suffix></output><options sourceLanguage="en-us" sourceEncoding="windows-1252" targetLanguage="fr-fr" targetEncoding="us-ascii"></options><parametersFolder useCustom="0">C:/Users/Yves</parametersFolder><utilities xml:spaces="preserve"><params id="currentProjectPipeline">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;rainbowPipeline version="1">&lt;step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=true
+unescapeCER.b=false
+unescapeJava.b=false
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U1=%04X}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true&lt;/step>
+&lt;step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=false
+unescapeCER.b=true
+unescapeJava.b=false
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U2=%04x}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true&lt;/step>
+&lt;step class="net.sf.okapi.steps.encodingconversion.EncodingConversionStep">#v1
+unescapeNCR.b=false
+unescapeCER.b=false
+unescapeJava.b=true
+escapeAll.b=false
+escapeNotation.i=6
+userFormat={U3=%04X}
+useBytes.b=false
+BOMonUTF8.b=true
+reportUnsupported.b=true&lt;/step>
+&lt;/rainbowPipeline>
+</params></utilities></rainbowProject>

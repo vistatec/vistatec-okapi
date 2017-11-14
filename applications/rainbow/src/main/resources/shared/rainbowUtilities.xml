@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<okapiPlugins version="1.0">
+
+ <plugin type="utility"
+  id="oku_alignment"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.alignment.Utility"
+  editorClass="net.sf.okapi.applications.rainbow.utilities.alignment.Editor"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>ID-Based Alignment</name>
+   <description>Aligns pairs of files to create a TMX output.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin>
+
+ <plugin type="utility"
+  id="oku_extraction"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.extraction.Utility"
+  editorClass="net.sf.okapi.applications.rainbow.utilities.extraction.Editor"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>Translation Package Creation (Old)</name>
+   <description>Creates a translation package.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+  <info xml:lang="fr">
+   <name>Creer un Kit de Traduction</name>
+   <description>Crée un kit de traduction.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin>
+ 
+ <plugin type="utility"
+  id="oku_merging"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.merging.Utility"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>Translation Package Post-Processing (Old)</name>
+   <description>Post-processes translation packages.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin>
+
+<!-- <plugin type="utility"
+  id="oku_encodingconversion"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.encodingconversion.Utility"
+  editorClass="net.sf.okapi.applications.rainbow.utilities.encodingconversion.Editor"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>Encoding Conversion</name>
+   <description>Converts a text input file from one encoding to another.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin>
+-->
+
+<!-- <plugin type="utility"
+  id="oku_bomconversion"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.bomconversion.Utility"
+  editorClass="net.sf.okapi.applications.rainbow.utilities.bomconversion.Editor"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>Byte-Order-Mark Conversion</name>
+   <description>Adds or removes the Unicode Byte-Order-Mark of any text input file to a give type.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin>
+-->
+
+<!-- <plugin type="utility"
+   id="oku_rtfconversion"
+   version="1.0"
+   pluginClass="net.sf.okapi.applications.rainbow.utilities.rtfconversion.Utility"
+   updateUri="http://okapi.opentag.com/updates.html">
+   <info>
+    <name>RTF Conversion</name>
+    <description>Convers the input RTF to different formats.</description>
+    <provider>Okapi Framework</provider>
+   </info>
+  </plugin>
+-->
+
+ <!-- <plugin type="utility"
+   id="oku_ttxchecker"
+   version="1.0"
+   pluginClass="net.sf.okapi.applications.rainbow.utilities.ttxchecker.Utility"
+   updateUri="http://okapi.opentag.com/updates.html">
+   <info>
+    <name>TTX Checker</name>
+    <description>Check ttx file(s) for errors.</description>
+    <provider>Okapi Framework</provider>
+   </info>
+  </plugin>  
+-->
+
+<!-- <plugin type="utility"
+  id="oku_twbbatchanalysis"
+  version="1.0"
+  pluginClass="net.sf.okapi.applications.rainbow.utilities.twbbatchanalysis.Utility"
+  updateUri="http://okapi.opentag.com/updates.html">
+  <info>
+   <name>Trados Batch Analysis</name>
+   <description>Execute a batch TM analysis on the provided input files.</description>
+   <provider>Okapi Framework</provider>
+  </info>
+ </plugin> -->
+
+</okapiPlugins>

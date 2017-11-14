@@ -1,0 +1,846 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tikal</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+<body>
+ 
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Tikal</h1>
+		<h2 class="head2">User Guide</h2></td>
+	</tr>
+</table>
+ 
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Tikal">http://okapiframework.org/wiki/index.php?title=Tikal</a></p>
+
+<p>Tikal is a command-line tool that provides the following basic 
+localization-related utilities:</p>
+<ul>
+	<li><a href="#extract">Extract Files</a></li>
+	<li><a href="#merge">Merge Files</a></li>
+	<li><a href="#translate">Translate Files</a></li>
+	<li><a href="#query">Query Translation Resources</a></li>
+	<li><a href="#listConfig">List Filter Configurations</a></li>
+	<li><a href="#editConfig">Edit Filter Configurations</a></li>
+	<li><a href="#conv2po">Convert to PO Format</a></li>
+	<li><a href="#conv2tmx">Convert to TMX Format</a></li>
+	<li><a href="#conv2table">Convert to Table Format</a></li>
+	<li><a href="#penImport">Import into Pensieve TM</a></li>
+	<li><a href="#penExport">Export TMX from Pensieve TM</a></li>
+	<li><a href="#transResDetails">Translation Resources Details</a></li>
+</ul>
+<p>Note: The command <code>-e</code> (Edit Filter Configurations) requires 
+access to UI editors that are available only if you have one of the <b>okapi-apps</b> platform-specific distributions. It is not 
+available with the <b>okapi-lib</b> cross-platform distribution.</p>
+<h2><a name="extract"></a>Extract Files</h2>
+<p>This command extracts the translatable content of one or more given files 
+into an XLIFF document. You can then use any XLIFF-aware translation tool to 
+translate the document. Example of open-source tools that are XLIFF-capable are 
+(among others):
+<a href="http://www.omegat.org/">OmegaT</a>,
+<a href="http://translate.sourceforge.net/wiki/virtaal/index">Virtaal</a>, 
+<a href="http://qt.nokia.com/products/developer-tools">Qt Linguist</a>, and
+<a href="http://userbase.kde.org/Lokalize">Lokalize</a>. When the translation is 
+done, you can use the <a href="#merge">Merge command</a> to create a new 
+translated file in its original format.</p>
+<p>The XLIFF documents created are placed in the same directories as the 
+original files, and have the same name with an additional <code>.xlf</code> 
+extension.</p>
+<p>By default, some extensions are mapped to a specific filter configuration 
+(for example: <code>.docx</code> to <code>okf_openxml</code>, <code>.odt</code> 
+to okf_openoffice, <code>.po</code> to <code>okf_po</code>, etc.). But you can define your own configuration and specify it as well 
+using the <code>-fc</code> option. To get a list 
+of all available filter configurations use the <a href="#listConfig">List 
+Configurations command</a>. For more details the filters available and their 
+configurations, see <a href="../../filters/index.html">each filter&#39;s documentation</a>.</p>
+<p>You can use the <code>-seg</code> option to specify that the extracted text 
+should be segmented. Use <code>-seg</code> without filename to use the default segmentation 
+rules, use &quot;<code>-seg myRules.srx</code>&quot; to specify your own rules. The rules 
+file must be in SRX format. The segments are marked up according the
+<a href="http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_Segmentation">
+XLIFF 1.2 specifications</a>.</p>
+<p>The syntax of this command is:</p>
+<pre>-x [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		extraction.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this is used only if the 
+		filter cannot detect the encoding from the input file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language for the output (also used in the 
+		input if the input documents are multilingual).</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-seg [srxFile]</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">The segmentation rules to utilize. To specify the default rules 
+		that come with the installation, use <code>-seg</code> without filename. 
+		The default rules are in <code>config/defaultSegmentation.srx</code> 
+		in your Okapi main directory.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-pen tmDirectory|<br>
+		-tt hostname[:port]|<br>
+		-gs configFile|<br>
+		-mm key|<br>
+		-google|<br>
+		-apertium&nbsp;[configFile]<br>
+		-ms configFile|<br>
+		-tda configFile</code></td>
+		<td align="left" valign="top">A translation resource to use to 
+		translate the document: <a href="#pensieve"><code>-pen</code> for a 
+		Pensieve TM</a>, <a href="#translatetoolkit"><code>-tt</code> for a 
+		Translate Toolkit TM</a>, <a href="#globalsight"><code>-gs</code> for a 
+		GlobalSight TM</a>, <a href="#mymemory"><code>-mm</code> for MyMemory 
+		repository</a>, <a href="#google"><code>-google</code> for Google MT</a>,&nbsp; <a href="#apertium"><code>-apertium</code> for an Apertium server</a>., 
+		<a href="#microsoft"><code>-ms</code> for Microsoft MT</a>, and
+		<a href="#tda"><code>-tda</code> for the TDA translation repository</a>. The leveraging occurs after 
+		segmentation, if you have specify segmentation rules.<p>Note that some 
+		internet-based resource may be slow and result in lengthy processing 
+		time. Be also aware that some translation resources may not always 
+		provide a good handling of inline codes.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-opt threshold</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">TM query option: The threshold is a number between 0 and 
+		100. If this option is 
+		not set the default is 95. Note that this option may be limited for some 
+		search engines because of the way they are configured.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-maketmx [tmxFile]</code></td>
+		<td align="left" valign="top">Generates a TMX document with all the 
+		entries leveraged. You can specify the name of the document, if you do 
+		not it will be named <code>pretrans.tmx</code>.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-nocopy</code></td>
+		<td align="left" valign="top">Ensures that the generated XLIFF files do 
+		not have a copy of the source text in the target entries if the original 
+		target does not exists.</td>
+	</tr>
+</table>
+<p>For example:</p>
+<pre>tikal -x *.docx *.html</pre>
+<p>Extracts all <code>.docx</code> and <code>.html</code> files in the current 
+directory into corresponding <code>.docx.xlf</code> and <code>.html.xlf</code> 
+XLIFF documents. The source language here is the default, which is the current 
+language of the system. The target language by default is <code>fr</code>. No 
+segmentation is done.</p>
+<pre>tikal -x -sl EN tl DE -fc okf_regex-srt -ie iso-8859-1 findingNemo.srt</pre>
+<p>Extracts the sub-title file <code>findingNemo.srt</code> into a <code>
+findingNemo.srt.xlf</code> XLIFF document. The encoding <code>iso-8859-1</code> 
+is used to process the input file. The filter used is the Regex filter with the 
+pre-define configuration for SRT documents. The source language is English (<code>EN</code>) 
+and the target language is German (<code>DE</code>). No segmentation is done.</p>
+<pre>tikal -x *.docx -seg -tl BR</pre>
+<p>Extracts all <code>.docx</code> in the current 
+directory into corresponding <code>.docx.xlf</code> 
+XLIFF documents. The source language here is the default, which is the current 
+language of the system. The target language is Breton. The extracted text units 
+will be segmented according the rules defined in the default SRX segmentation 
+rules file (located in the <code>config</code> sub-directory in your Okapi main 
+directory).</p>
+<h2><a name="merge"></a>Merge Files</h2>
+<p>This command merges back into their original format one or more XLIFF 
+documents that were created using the <a href="#extract">Extract command</a>. 
+You must have the original files in the same directories as their corresponding 
+XLIFF documents.</p>
+<p>The XLIFF document names must be the name of the original files with an 
+additional <code>.xlf</code> extension. The new documents are created in the 
+directories where the XLIFF documents are, with a <code>.out</code> extension 
+pre-pended to the original extension. For example, if your original file is
+<code>myFile.html</code>, the XLIFF document should be <code>myFile.html.xlf</code>, 
+and the merged file will be <code>myFile.out.html</code>.</p>
+<p>The syntax of this command is:</p>
+<pre>-m [options] xliffFile [xliffFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table2">
+	<tr>
+		<td align="left" valign="top"><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		re-extraction of the original file.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the original files. This is used only if the 
+		filter cannot detect the encoding from the input file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><code>-oe encoding</code></td>
+		<td align="left" valign="top">The encoding name of the file to generate. The same encoding as the 
+		input file will be used if this option is not specified.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+</table>
+<p>For example:</p>
+<pre>tikal -m *.xlf -sl EN -tl DE</pre>
+<p>Merges all XLIFF documents in the directory. The original files should be in 
+the same directory as well. The source language is English and the target 
+language is German.</p>
+<h2><a name="translate"></a>Translate Files</h2>
+<p>This command creates a pre-translated version of the input files. It is 
+basically the same thing as running an <a href="#extract">Extraction command</a> 
+(with pre-translation) immediately followed by a <a href="#merge">Merge command</a>.</p>
+<p>By default, some extensions are mapped to a specific filter configuration 
+(for example: <code>.docx</code> to <code>okf_openxml</code>, <code>.odt</code> 
+to okf_openoffice, <code>.po</code> to <code>okf_po</code>, etc.). But you can define your own configuration and specify it as well 
+using the <code>-fc</code> option. To get a list 
+of all available filter configurations use the <a href="#listConfig">List 
+Configurations command</a>. For more details the filters available and their 
+configurations, see <a href="../../filters/index.html">each filter&#39;s documentation</a>.</p>
+<p>You can use the <code>-seg</code> option to specify that the extracted text 
+should be segmented. Use <code>-seg</code> without filename to use the default segmentation 
+rules, use &quot;<code>-seg myRules.srx</code>&quot; to specify your own rules. The rules 
+file must be in SRX format.</p>
+<p>The syntax of this command is:</p>
+<pre>-t [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table7">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		extraction.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this is used only if the 
+		filter cannot detect the encoding from the input file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-oe encoding</code></td>
+		<td align="left" valign="top">The encoding name of the output file to generate. The same encoding as the 
+		input file will be used if this option is not specified.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language for the output (also used in the 
+		input if the input documents are multilingual).</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-seg [srxFile]</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">The segmentation rules to utilize. To specify the default rules 
+		that come with the installation, use <code>-seg</code> without filename. 
+		The default rules are in <code>config/defaultSegmentation.srx</code> 
+		in your Okapi main directory.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-pen tmDirectory|<br>
+		-tt hostname[:port]|<br>
+		-gs configFile|<br>
+		-mm key|<br>
+		-google|<br>
+		-apertium&nbsp;[configFile]<br>
+		-ms configFile|<br>
+		-tda configFile</code></td>
+		<td align="left" valign="top">A translation resource to use to 
+		translate the document: <a href="#pensieve"><code>-pen</code> for a 
+		Pensieve TM</a>, <a href="#translatetoolkit"><code>-tt</code> for a 
+		Translate Toolkit TM</a>, <a href="#globalsight"><code>-gs</code> for a 
+		GlobalSight TM</a>, <a href="#mymemory"><code>-mm</code> for MyMemory 
+		repository</a>, <a href="#google"><code>-google</code> for Google MT</a>, 
+		<a href="#apertium"><code>-apertium</code> for an Apertium server</a>,
+		<a href="#microsoft"><code>-ms</code> for Microsoft MT</a>, and
+		<a href="#tda"><code>-tda</code> for the TDA translation repository</a>. The leveraging occurs after 
+		segmentation, if you have specify segmentation rules.<p>Note that some 
+		internet-based resource may be slow and result in lengthy processing 
+		time. Be also aware that some translation resources may not always 
+		provide a good handling of inline codes.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-opt threshold</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">TM query option: The threshold is a number between 0 and 
+		100. If this option is 
+		not set the default is 95. Note that this option may be limited for some 
+		search engines because of the way they are configured.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-maketmx [tmxFile]</code></td>
+		<td align="left" valign="top">Generates a TMX document with all the 
+		entries leveraged. You can specify the name of the document, if you do 
+		not it will be named <code>pretrans.tmx</code>.</td>
+	</tr>
+</table>
+<p>For example:</p>
+<pre>tikal -t *.html -sl en -tl eo -apertium</pre>
+<p dir="ltr">Translate from English to Esperanto all <code>.html</code> files in the current 
+directory, using the default Apertium MT demonstration server. No segmentation 
+is used.</p>
+<h2><a name="query"></a>Query Translation Resources</h2>
+<p>This command queries one or more translation resources for a given text. By 
+default the query is sent to the <a href="#google">Google MT engine</a>, but you can also query
+<a href="#pensieve">Pensieve TMs</a>, <a href="#globalsight">GlobalSight TMs</a>,
+<a href="#translatetoolkit">Translate Toolkit TMs</a>, the <a href="#opentran">Open-Tran repository</a>, the 
+<a href="#mymemory">MyMemory 
+repository</a>, as well as any <a href="#apertium">Apertium MT server</a>. See 
+the section <a href="#transResDetails">Translation Resources Details</a> for 
+more information.</p>
+<p>You can query 
+all resources at once. When querying several resources, the results are shown 
+per resource, not sorted by best score as a whole.</p>
+<p>The syntax of this command is:</p>
+<pre>-q &quot;text&quot; [options]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table1">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language (language of the text queried)</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language (language of the requested 
+		translation)</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-pen directory</code></td>
+		<td align="left" valign="top">Queries a <a href="#pensieve">Pensieve TM</a> stored in a given 
+		directory.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-opentran</code></td>
+		<td align="left" valign="top">Queries the <a href="#opentran">OpenTran translation repository</a>. This requires Internet 
+		access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-gs configFile</code></td>
+		<td align="left" valign="top">Queries a <a href="#globalsight">GlobalSight 
+		TM server</a>. This requires Internet access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tt hostname[:port]</code></td>
+		<td align="left" valign="top">Queries the specified 
+		<a href="#translatetoolkit">Translate Toolkit TM server</a>. This assumes you 
+		have access to the server (local or remote).</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-mm key</code></td>
+		<td align="left" valign="top">Queries the <a href="#mymemory">MyMemory translation repository</a> 
+		with a given key access (use <code>mmDemo123</code> for demo). This 
+		requires Internet access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-google</code></td>
+		<td align="left" valign="top">Queries the <a href="#google">Google MT 
+		server</a>. If no other type of resource is 
+		specified, this is used by default. This requires Internet access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-apertium [configFile]</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">Queries the specified <a href="#apertium">Apertium MT server</a> (local or remote). A 
+		default remote server is provided.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ms configFile</code></td>
+		<td align="left" valign="top">
+		Queries the <a href="#microsoft">Microsoft MT server</a>. This requires 
+		Internet access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tda configFile</code></td>
+		<td align="left" valign="top">
+		Queries the <a href="#tda">TDA translation repository</a>. this requires Internet access.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-opt threshold[:maxhits]</code></td>
+		<td align="left" valign="top">
+		<p dir="ltr">TM query options: The threshold is a number between 0 and 
+		100. The maximum number of hits is a number above 0. If this option is 
+		not set each TM engine uses its own defaults. If this option is set, all 
+		TM engines are set to use the specified options. Note that parameters of 
+		some engines may be limited by their configuration.</td>
+	</tr>
+	</table>
+<p>Because the text of the query cannot be associated with a given file format, 
+there is no support for format-specific inline codes. However, <b>when querying 
+a resource that in inline-code aware</b>, you can use HTML-like tags to replace 
+codes: For example, in &quot;<code>Open the &lt;x&gt;window&lt;/x&gt;&lt;x/&gt;.</code>&quot; the tags &quot;<code>&lt;x&gt;</code>&quot;, 
+&quot;<code>&lt;/x&gt;</code>&quot; and &quot;<code>&lt;x/&gt;</code>&quot; will be interpreted as opening, 
+closing and placeholder inline codes, and the query processed as such. When 
+querying resources that are not inline code-aware, the tags are treated as plain 
+text.</p>
+<p>For example:</p>
+<pre>tikal -q &quot;open file&quot; -sl en</pre>
+<p>Queries the default translation resource (Google MT system) for the text 
+&quot;open file&quot; in English. The target language by default is French. Note: You 
+could omit the <code>-sl</code> option if you are running from a English system.</p>
+<pre>tikal -q &quot;open &lt;x&gt;file&lt;/x&gt;&quot; -sl en -pen mytm -opt 60:20</pre>
+<p>Queries the Pensieve TM located in <code>mytm</code> for the text 
+&quot;open &lt;x&gt;file&lt;/x&gt;&quot; in English. The target language by default is French. 
+Because Pensieve TM can work with inline codes, the tags &quot;<code>&lt;x&gt;</code>&quot; and 
+&quot;<code>&lt;/x&gt;</code>&quot; are processed as inline codes. The threshold 
+is set to 60 and the maximum hits is set to 20.</p>
+<pre>tikal -q &quot;open file&quot; -opentran -sl en -tl zu</pre>
+<p dir="ltr">Queries the OpenTran translation repository for the English text 
+&quot;open file&quot; in Zulu.</p>
+<pre>tikal -q &quot;open file&quot; -tt localhost -sl en -tl af</pre>
+<p>Queries a local Translate Toolkit TM server located on <code>
+http://localhost:8080</code> (note that 8080 is omitted in the command line as 
+it is port by default). The source is 
+English and the requested translation is Afrikaans.</p>
+<h2><a name="listConfig"></a>List Filter Configurations</h2>
+<p>This command lists all the filter configurations available for Tikal. The 
+configurations listed are the ones you can use as filter configurations the the 
+input files (<code>-fc</code> option). This configuration indicates how to 
+extract the document.</p>
+<p>The syntax of this command is:</p>
+<pre>-lfc | --listconf</pre>
+<p>For example:</p>
+<pre>tikal -listconf</pre>
+<p>Lists all the configurations currently available.</p>
+<h2><a name="editConfig"></a>Edit Filter Configurations</h2>
+<p>This command edits or view filter configurations.</p>
+<p>Note: This command requires access to UI editors that are available only if 
+you have one of the <b>okapi-apps</b> platform-specific distribution. If you run 
+this command from the <b>okapi-lib</b> cross-platform distribution you will get 
+an error. To edit filter configurations in the <b>okapi-lib</b> distribution, 
+open the <code>.fprm</code> files. Make sure to always save your modifications 
+in UTF-8.</p>
+<p>The syntax of this command is:</p>
+<pre>-e [[-fc] configId]</pre>
+<p>For example:</p>
+<pre>tikal -e okf_regex@myConfig</pre>
+<p>Edits the filter configuration <code>okf_regex@myConfig</code>. This is a 
+user configuration for the RegEx Filter. </p>
+
+<pre>tikal -e</pre>
+<p>Opens the Filter Configurations dialog box, where all the available 
+configurations are listed and can be viewed or edited, and from where you can 
+create new configurations.</p>
+<h2><a name="conv2po"></a>Convert to PO Format</h2>
+<p>Creates a PO file for the give input file. If the input file is multilingual 
+(like a TMX or a TS file), the source and target will be in the PO file.</p>
+<p>The syntax of this command is:</p>
+<pre>-2po [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table3">
+	<tr>
+		<td valign="top" align="left" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		input files</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this is used only if the 
+		filter cannot detect the encoding from the input file itself.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-generic</code></td>
+		<td align="left" valign="top">Indicates to use generic notation for inline codes in the generated 
+		PO file, for example <code>&lt;1/&gt;</code> vs. &lt;br/&gt;. If this 
+		option is not specified the inline codes are output in their original 
+		form.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-trgsource|<br>
+		-trgempty</code></td>
+		<td align="left" valign="top">Forces the content of the output target 
+		field to be either a copy of the source or empty. If neither option is 
+		set the content of the target field is the target text or empty.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-all</code></td>
+		<td align="left" valign="top">Allows entries that have no text to be 
+		converted. If this option is not set, the entries that are empty, or 
+		contains only codes or whitespaces are not included in the output file. 
+		If this option is set all entries are included in the output.</td>
+	</tr>
+</table>
+<p>For example:</p>
+<pre>tikal -2po data.tmx -sl EN -tl ZU</pre>
+<p>Creates a PO file from the TMX document <code>data.tmx</code>. The source 
+language will be English and the target Zulu.</p>
+<h2><a name="conv2tmx"></a>Convert to TMX Format</h2>
+<p>Creates a TMX document for the give input file. If the input file is multilingual 
+(like a PO or a TS file), the source and target will be in the TMX document.</p>
+<p>The syntax of this command is:</p>
+<pre>-2tmx [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table4">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		input files</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this 
+		is used only if the filter cannot detect the encoding from the input 
+		file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-trgsource|<br>
+		-trgempty</code></td>
+		<td align="left" valign="top">Forces the content of the output target 
+		field to be either a copy of the source or empty. If neither option is 
+		set the content of the target field is the target text or empty.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-all</code></td>
+		<td align="left" valign="top">Allows entries that have no text to be 
+		converted. If this option is not set (the default), the entries that are 
+		empty, or contains only codes or whitespaces are not included in the 
+		output file. If this option is set all entries are included in the 
+		output.</td>
+	</tr>
+	</table>
+<p>For example:</p>
+<pre>tikal -2tmx data.po -sl EN -tl ZU</pre>
+<p>Creates a TMX document from the PO file <code>data.po</code>. The source 
+language will be English and the target Zulu.</p>
+<pre>tikal -2tmx data.tmx -sl EN -tl DE -trgempty</pre>
+<p>Creates a TMX document from another TMX document named <code>data.tmx</code>. The source 
+language will be English and the target German. The content of the <code>&lt;tuv&gt;</code> 
+elements for the German will be empty.</p>
+<h2><a name="conv2table"></a>Convert to Table Format</h2>
+<p>Creates a table-like output for the give input file. If the input file is multilingual 
+(like a PO or a TS file), the source and target will be in the output table.</p>
+<p>The syntax of this command is:</p>
+<pre>-2tbl [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table6">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		input files</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this 
+		is used only if the filter cannot detect the encoding from the input 
+		file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-trgsource|<br>
+		-trgempty</code></td>
+		<td align="left" valign="top">Forces the content of the output target 
+		field to be either a copy of the source or empty. If neither option is 
+		set the content of the target field is the target text or empty.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-csv|<br>
+		-tab</code></td>
+		<td align="left" valign="top">Output format: <code>csv</code> for comma-separated values, or <code>tab</code> 
+		for tab-delimited values.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-xliff|<br>
+		-xliffgx|<br>
+		-tmx|<br>
+		-generic</code></td>
+		<td align="left" valign="top">Inline codes format: <code>xliff</code> for XLIFF, <code>xliffgx</code> for 
+		XLIFF with g/x notation, <code>tmx</code> for TMX, or <code>generic</code> 
+		for generic placeholders.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-all</code></td>
+		<td align="left" valign="top">Allows entries that have no text to be 
+		converted. If this option is not set, the entries that are empty, or 
+		contains only codes or whitespaces are not included in the output file. 
+		If this option is set all entries are included in the output.</td>
+	</tr>
+	</table>
+<p>For example:</p>
+<pre>tikal -2tbl data.tmx -sl EN -tl ZU</pre>
+<p>Creates a tab-delimited file from the TMX document <code>data.tmx</code>. Any 
+inline codes is output in its original form. The source 
+language is English and the target Zulu. Any tab character within the text is 
+escaped with a backslash prefix.</p>
+<pre>tikal -2tbl data.po -sl EN -tl ES -csv -xliffgx -trgsource</pre>
+<p>Creates a comma-separated values output file from the PO file <code>data.po</code>. 
+The inline codes are represented as XLIFF elements using the &lt;g&gt; and &lt;x&gt; 
+notation. The text is between double quotes, and any double-quote and backslash 
+characters within the text is escaped with a backslash prefix. The source 
+language is English and the target Spanish. the content of the target column is 
+a copy of the source.</p>
+<h2><a name="penImport"></a>Import into Pensieve TM</h2>
+<p>Imports the specified input documents into a Pensieve TM database. If the 
+specified TM does not exists, it is created. If it does exist, the input files 
+are added to it.</p>
+<p>The syntax of this command is:</p>
+<pre>-imp myTMdirectory [options] inputFile [inputFile2...]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table5">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-fc configId</code></td>
+		<td align="left" valign="top">The identifier of the filter configuration to use for the 
+		input files</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-ie encoding</code></td>
+		<td align="left" valign="top">The encoding name of the input files. this 
+		is used only if the filter cannot detect the encoding from the input 
+		file itself.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language of the input files.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-trgsource|<br>
+		-trgempty</code></td>
+		<td align="left" valign="top">Force the content of the output target 
+		field to be either a copy of the source or empty. If neither option is 
+		set the content of the target field is the target text or empty.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-all</code></td>
+		<td align="left" valign="top">Allows entries that have no text to be 
+		imported. If this option is not set (the default), the entries that are 
+		empty, or contains only codes or whitespaces are not included in the 
+		output file. If this option is set all entries are included in the 
+		output.</td>
+	</tr>
+	</table>
+<p>For example:</p>
+<pre>tikal -imp myTMdir data.po -sl JA -tl FR</pre>
+<p>Imports the PO file <code>data.po</code> into the TM database located in
+<code>myTMDir</code>. If the directory does not exists it will be created. If a 
+TM exists, the input file9s) will be added to it. The 
+source language of the PO file is Japanese and the target French.</p>
+<h2><a name="penExport"></a>Export TMX from Pensieve TM</h2>
+<p dir="ltr">Creates a TMX output file for the the give Pensive TMs.</p>
+<p>The syntax of this command is:</p>
+<pre>-exp tmDirectory [tmDirectory2...] [options]</pre>
+<p>Where the options are:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table8">
+	<tr>
+		<td align="left" valign="top" nowrap><code>-sl srcLang</code></td>
+		<td align="left" valign="top">The code of the source language.</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" nowrap><code>-tl trgLang</code></td>
+		<td align="left" valign="top">The code of the target language.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-trgsource|<br>
+		-trgempty</code></td>
+		<td align="left" valign="top">Forces the content of the output target 
+		field to be either a copy of the source or empty. If neither option is 
+		set the content of the target field is the target text or empty.</td>
+	</tr>
+	<tr>
+		<td valign="top" align="left" nowrap><code>-all</code></td>
+		<td align="left" valign="top">Allows entries that have no text to be 
+		exported. If this option is not set (the default), the entries that are 
+		empty, or contains only codes or whitespaces are not included in the 
+		output file. If this option is set all entries are included in the 
+		output.</td>
+	</tr>
+	</table>
+<p>For example:</p>
+<pre>tikal -exp myProjectTM -sl en -tl IT</pre>
+<p>Creates a TMX document from the Pensieve TM stored in myProjectTM. The source 
+language is English and the target Italian.</p>
+<p>Note that the command <code>-exp</code> is a shortcut for the <code>-2tmx</code> 
+command (<a href="#conv2tmx">Convert to TMX Format</a>). You can export Pensieve 
+TM entries in table, TMX or PO format using the filter configuration <code>
+okf_pensieve</code>. For instance, the example above can be also execute using 
+the following command:</p>
+<pre>tikal -2tmx myProjectTM -fc okf_pensieve -sl en -tl IT</pre>
+<h2><a name="transResDetails"></a>Translation Resources Details</h2>
+<p>Tikal provides access to several translation resources, some are machine 
+translation system (MT), some are translation memory system, or some kind or 
+other searchable translation repository. the following resources are available:</p>
+<ul>
+	<li><a href="#pensieve">Pensieve TM</a></li>
+	<li><a href="#translatetoolkit">Translate Toolkit TM</a></li>
+	<li><a href="#globalsight">GlobalSight TM</a></li>
+	<li><a href="#opentran">Open-Tran Translation Repository</a></li>
+	<li><a href="#mymemory">MyMemory TM</a></li>
+	<li><a href="#google">Google MT</a></li>
+	<li><a href="#apertium">Apertium MT</a></li>
+	<li><a href="#microsoft">Microsoft MT</a></li>
+	<li><a href="#tda">TDA Translation Repository</a></li>
+</ul>
+<p>Note that some of these resources are Web-based and require an internet 
+connection, others can be installed and used locally.</p>
+<h3><a name="pensieve"></a>Pensieve TM</h3>
+<p>This is the Okapi framework&#39;s own TM engine. It is still under development, but 
+can be used. This resource is indicated by the&nbsp; option <code>-pen</code> in 
+Tikal and takes one argument: the directory of the TM for a local TM, or the URL 
+of the server for a remote TM. If no argument is provided the default host <code>
+http://localhost:8080</code> is used by default.</p>
+<pre>tikal -q &quot;text to translate&quot; -pen myTmDir</pre>
+<h3><a name="translatetoolkit"></a>Translate Toolkit TM</h3>
+<p>The Translate Toolkit TM is an engine that comes with the Translate Toolkit, 
+a nicely designed and well supported set of open-source localization tools. You 
+can run the tool called <code>tmserver</code> on your own machine, or use it 
+through the Web. You can find more information about the Translate Toolkit here:
+<a href="http://translate.sourceforge.net/wiki/toolkit/index">
+http://translate.sourceforge.net/wiki/toolkit/index</a> and the help for <code>
+tmserver</code> is here:
+<a href="http://translate.sourceforge.net/wiki/toolkit/tmserver">
+http://translate.sourceforge.net/wiki/toolkit/tmserver</a>.</p>
+<p>Note that the Translate Toolkit TM can take PO files as input. You can create 
+such PO file from TMX or other formats using the <a href="#conv2po">Convert to 
+PO Format command</a>.</p>
+<p>This resource is indicated by the option <code>-tt</code> in Tikal and takes 
+one argument: the host of the server, and optionally the port to use. Use <code>
+localhost</code> for a server running locally. If the port is omitted it is set 
+to 8080 by default.</p>
+<pre>tikal -q &quot;text to translate&quot; -tt localhost</pre>
+<h3><a name="globalsight"></a>GlobalSight TM</h3>
+<p>The GlobalSight TM engine is part of the open-source GlobalSight System. You 
+need to have access to server with the system installed in order to use this 
+resource. You can find more information about the GlobalSight TMS here:
+<a href="http://www.globalsight.com/">http://www.globalsight.com/</a></p>
+<p>This resource is indicated by the option <code>-gs</code> in Tikal and takes one 
+argument: a configuration file that contains the information about the server to 
+connect to, username and password, as well as the TM profile to use. The 
+configuration file must look like this:</p>
+<pre>#v1
+username=myusername
+password=mypassword
+serverURL=http://myhost:8080/globalsight/services/AmbassadorWebService?wsdl
+tmProfile=myprofile</pre>
+<h3><a name="opentran"></a>Open-Tran Translation Repository</h3>
+<p dir="ltr">The Open-Tran project is a open-source repository of translations 
+of open-source software. It provides access to its entries through Web services. 
+You can find more information about Open-Tran here:
+<a href="http://open-tran.eu/">http://open-tran.eu/</a></p>
+<p dir="ltr">This resource is indicated by the option <code>-opentran</code> in 
+Tikal (without argument). Note that the results returned by the Open-Tran server 
+have no meangingful scores from a TM viewpoint, so the Okapi connector 
+recalculate, re-sort and re-filter the results. Note also that this resource is 
+available only for the <a href="#query">Query command</a>, it would be too slow 
+to use for the other commands.</p>
+<pre dir="ltr">tikal -q &quot;text to translate&quot; -opentran</pre>
+<h3><a name="mymemory"></a>MyMemory TM</h3>
+<p>The MyMemory project is a central repository of public and private TMs. It 
+offers access through a Web service interface, and can provide MT fall-back 
+translation when no good matches are found. You can find more information about 
+MyMemory here: <a href="http://mymemory.translated.net/">
+http://mymemory.translated.net/</a></p>
+<p>This resources is indicated by the option <code>-mm</code> and takes one 
+argument: an access key. You can use the default access key <code>mmDemo123</code> 
+for testing the resource. For real work you may want to open an account at 
+MyMemory.</p>
+<pre>tikal -q &quot;text to translate&quot; -mm mmDemo123</pre>
+<h3><a name="google"></a>Google MT</h3>
+<p>The Google MT engine is well-known and widely used. Okapi provides a 
+connector for the Ajax API. You can find more information about Google MT here:
+<a href="http://code.google.com/apis/ajaxlanguage/">
+http://code.google.com/apis/ajaxlanguage/</a>.</p>
+<p>This resource is indicated by the option <code>-google</code> in Tikal 
+(without argument). It is the default for the <a href="#query">Query command</a>.</p>
+<pre>tikal -q &quot;text to translate&quot; -google</pre>
+<h3><a name="apertium"></a>Apertium MT</h3>
+<p>Apertium is an open-source Rule-based MT project. It provides translation for 
+many language pairs, including for less-common languages such as Catalan, 
+Galician, Welsh, Esperanto, Occitan, etc. You can find more information about 
+Apertium here: <a href="http://wiki.apertium.org/">http://wiki.apertium.org/</a>. 
+The connector uses the JSONP REST API described here:
+<a href="http://wiki.apertium.org/wiki/Apertium_web_service">
+http://wiki.apertium.org/wiki/Apertium_web_service</a></p>
+<p>This resource is indicated by the option <code>-apertium</code> and takes one 
+optional argument: a configuration file that contains the information about the 
+server to connect to. The configuration file looks something like this:</p>
+<pre>#v1
+server=http://api.apertium.org/json/translate
+apiKey=myApiKey</pre>
+<p>Note that the apiKey parameter is optional. However using an API key is 
+highly recommended. See <a href="http://api.apertium.org/register.jsp">
+http://api.apertium.org/register.jsp</a> for details and to register one.</p>
+<p>If the configuration file is omitted, the default main public apertium.org server 
+is used, without API key.</p>
+<pre>tikal -q &quot;text to translate&quot; -apertium myApertium.cfg</pre>
+<h3><a name="microsoft"></a>Microsoft MT</h3>
+<p>The Microsoft MT engine is freely available from Microsoft (<a href="http://www.microsofttranslator.com/">http://www.microsofttranslator.com/</a>). 
+Okapi provides a connector for the SOAP API. You can get more information about 
+this API and its terms here: <a href="http://sdk.microsofttranslator.com/">
+http://sdk.microsofttranslator.com/</a>. To use this connector you need a AppID 
+from Microsoft. You can get one at
+<a href="http://www.bing.com/developers/appids.aspx">
+http://www.bing.com/developers/appids.aspx</a>.</p>
+
+<p>This resource is indicated by the option <code>-ms</code> in Tikal and takes one 
+argument: a configuration file that contains the information to connect to and use 
+the Microsoft MT service. The 
+configuration file must look like this:</p>
+<pre>#v1
+appId=mypersonalappid</pre>
+<p>To use the Microsoft MT engine call Tikal like this (where <code>myMS.cfg</code> 
+is your configuration file).</p>
+<pre>tikal -q &quot;text to translate&quot; -ms myMS.cfg</pre>
+<h3><a name="tda"></a>TDA Translation Repository</h3>
+<p>The <a href="http://www.tausdata.org/">TAUS Data Association (TDA)</a> offers 
+a public Search facility on a large corpus of translations. Okapi provides a 
+connector for the REST API provided by TDA. The TDA Web Search is accessible 
+from here: <a href="http://www.tausdata.org/index.php/taus-search">
+http://www.tausdata.org/index.php/taus-search</a>.</p>
+<p>This resource is indicated by the option <code>-tda</code> in Tikal and takes 
+one argument: a configuration file that contains the information to access the 
+TDA search service. The configuration file must look like this:</p>
+<pre>#v1
+server=http://www.tausdata.org/api
+appKey=myAppKey
+username=myTDAUsername
+password=myTDAPassword
+industry.i=0
+contentType.i=0</pre>
+<p>For example, to access TDA Search, call Tikal like this (where <code>
+myTDA.cfg</code> is your configuration file):</p>
+<pre>tikal -q &quot;terms to search&quot; -tda myTDA.cfg -sl en-us -tl fr-fr</pre>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

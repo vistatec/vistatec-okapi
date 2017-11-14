@@ -1,0 +1,231 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Tutorial - Using Translation Packages</title>
+<link rel="stylesheet" type="text/css" href="../../help.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Tutorials</h1>
+		<h2 class="head2">Using Translation Packages</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Tutorials</a></td>
+				<td>
+				<a href="http://okapiframework.org/wiki/index.php?title=Main_Page">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p>This tutorial illustrates how to use the <b>
+<a href="http://okapiframework.org/wiki/index.php?title=Rainbow_-_Translation_Package_Creation">Translation Package Creation</a></b> 
+and the <b>
+<a href="http://okapiframework.org/wiki/index.php?title=Rainbow_-_Translation_Package_Post-Processing">Translation Package Post-Processing</a></b> utilities included 
+in Rainbow.</p>
+<p>The first one allows you to prepare translation kits that can be translated, 
+edited and reviewed with different translation tools. The second one is used to 
+post-process the packages after they have been translated.</p>
+<ul>
+	<li><a href="#prerequists">Pre-Requisits</a></li>
+	<li><a href="#setupinputdoc">Setting up the Input Documents</a><ul>
+	<li><a href="#savingProject">Saving the Project</a></li>
+	<li><a href="#inputdocs">Input Documents</a></li>
+	<li><a href="#langandencodings">Languages and Encodings</a></li>
+</ul>
+	</li>
+	<li><a href="#invokeutility">Invoking the Translation Package Creation 
+	Utility</a><ul>
+		<li><a href="#utilityoptions">Setting up the Utility Options</a></li>
+	</ul>
+	</li>
+	<li><a href="#packageOutput">Package Output</a></li>
+	<li><a href="#translating">Translating</a></li>
+	<li><a href="#postProcessing">Post-Processing the Translated Files</a></li>
+</ul>
+<p class="question"><b>Note:</b> There is a <b>newer way</b> to prepare files 
+for translation: the <cite>Translation Kit Creation</cite> (and the <cite>
+Translation Kit Post-Processing</cite>) utilities.<br>
+See the documentation about the
+<a href="http://okapiframework.org/wiki/index.php?title=Rainbow_Translation_Kit_Creation_Step">
+Rainbow Translation Kit Creation Step</a> for more details.</p>
+<h2><a name="prerequists"></a>Pre-Requisits</h2>
+<p>To complete this tutorial you must have Rainbow v6 installed and working. Note 
+that for Rainbow to run properly you must also have Java&nbsp;1.6 or later installed 
+on you system.</p>
+<p>You should also have a copy of the sample files for this tutorial on your machine, for example in
+<code>C:\Tmp\tutorials\turorial_02\files</code>.</p>
+<h2><a name="setupinputdoc"></a>Setting up the Input Documents</h2>
+<p>Start Rainbow.</p>
+<p>To make sure you are starting this tutorial in a fresh environment, you 
+should first create a new project: Select the command <cite>New</cite> in 
+the <cite>File</cite> menu, or press <kbd>Ctrl+N</kbd>.</p>
+<h3><a name="savingProject"></a>Saving the Project</h3>
+<p>It is recommended to start by saving the Rainbow project file. This allows 
+you to safely use relative paths for all the parameters of your project and 
+therefore to be able to move the project and its file around without having to 
+reset any paths.</p>
+<p>To save the project select the <cite>Save</cite> command from the <cite>File</cite> 
+menu. Enter a filename with the path of where your tutorial files are. for 
+example <code>C:\Tmp\tutorials\tutorial_02\files\preparation.rnb</code>.</p>
+<h3><a name="inputdocs"></a>Input Documents</h3>
+<p>Select the <cite>Input List 1</cite> tab. This is the list where we will 
+enumerate all the source documents to prepare.</p>
+<p>Select the command <cite>Add Documents</cite> from the <cite>Input</cite> 
+menu, or press <kbd>Ctrl+Insert</kbd>. This opens the <cite>Add Documents</cite> 
+dialog box where you select the source documents you want to prepare. You can 
+also simply drag and drop the documents on the list. All documents must be in or 
+below the input root directory you have chosen for the source, in our case the 
+directory where you saved the project.</p>
+<p>Select all the files named <code>file1.xxx</code> where xxx are different 
+extensions. There are also files in a sub-directory called <code>subFolder</code>.</p>
+<p><img border="0" src="rainbow1.png" width="632" height="461"></p>
+<p>Now, if needed, you need to associate each file to its filter. The filters 
+are used to parse the documents and separate the translatable text from the code 
+parts of the files. In this example all the files are associated with default 
+filters based on their extensions, so there is nothing special to do.</p>
+<h3><a name="langandencodings"></a>Languages and Encodings</h3>
+<p>The next step is to make sure languages and default encodings are set 
+properly. Select the <cite>Languages and Encodings</cite> tab.</p>
+<p>You need to specify the language of the source and target documents, as well 
+as the default encoding to use to read the documents in case they are not in a 
+format where the encoding can be auto-detected.</p>
+<p>In this example, the source language is English and we will use French as the target language. 
+We will also use UTF-8 for the source and target default encodings.</p>
+<p><img border="0" src="rainbow2.png" width="632" height="461"></p>
+<p>Move to the <cite>Other 
+Settings</cite> tab.</p>
+<p>You define here the names of the translated files as they will be generated 
+during after post-processing. By default they are the same names as the input 
+document with an additional <code>.out</code> placed just before the final 
+extension.</p>
+<p>In this example we will change the settings and replace the <code>.out</code> 
+by a <code>.${TrgLang}</code>. The macro <code>${TrgLang}</code> can be used 
+anywhere in the output option. It will be replaced at runtime by the code of the 
+target language (here &quot;<code>FR-FR</code>&quot;).</p>
+<p><img border="0" src="rainbow3.png" width="632" height="461"></p>
+<h2><a name="invokeutility"></a>Invoking the Translation Package 
+Creation Utility</h2>
+<p>All the previous steps were performed to define general settings that are used with all 
+Rainbow utilities. Now comes the part that is specific to the <b>Translation 
+package Creation</b> 
+utility.</p>
+<h3><a name="utilityoptions"></a>Setting up the Utility Options</h3>
+<p>Select the command <cite>Translation package Creation</cite> in the <cite>
+Utilities</cite> menu. This will bring up the dialog box where you set the 
+options specific to the utility and launch it.</p>
+<p>The <cite>Package Format</cite> tab allows you to select what kind 
+of translation kit you want to create. In this example we will use the one 
+called <cite>OmegaT</cite>. OmegaT is an open-source translation tool.</p>
+<p>Select <cite>OmegaT</cite> in the list of available packages.</p>
+<p><img border="0" src="package.png" width="600" height="272"></p>
+<p>Move to the <cite>Package Location</cite> tab.</p>
+<p>This is where you defined the place where you want to generate the 
+translation kit. There are two things to define: The root output directory and 
+the package name. Both are combined together to make up the final output 
+directory. For example, if you define <code>C:\Tmp\TKits</code> as the root 
+output directory and <code>Pack1</code> as the package name, the files will be 
+generated in <code>C:\Tmp\TKits\Pack1</code>.</p>
+<p><img border="0" src="location.png" width="600" height="272"></p>
+<p>In our example, we will use the default location which is 
+represented by a variable: <code>${ProjDir}</code>. It corresponds to the 
+directory where the project is saved. And for the name, we will use <code>pack1</code>.</p>
+<p>Move to the <cite>Options</cite> tab.</p>
+<p>Here you can specify to compress the package into a single ZIP 
+file. We will not do this in the example.</p>
+<p>You can also decide to pre-segment the document. This can be useful 
+when you have some existing translation memory that you want to apply for 
+example. In this example we will not pre-segment.</p>
+<p>Move to the <cite>Pre-Translation</cite> tab.</p>
+<p dir="ltr">Here you can specify to leverage 
+existing translation into the package using different translation resources 
+(Pensieve TM, machine translation, etc.). We won't use this option in this 
+example.</p>
+<p>At this point all the options we need have been set.</p>
+<p>Click <cite>OK</cite> to start the process.</p>
+<p>If all goes well, you will not get any error or warning messages.</p>
+<h2><a name="packageOutput"></a>Package Output</h2>
+<p>The result of the preparation can be seen in the <cite>Root of the 
+output directory</cite> you specified. You can open that folder from Rainbow by 
+selecting the command <cite>Open Last Output Folder</cite> from the <cite>
+Utilities</cite> menu, or pressing <kbd>Ctrl+L</kbd>.</p>
+<p>The package should look like this:</p>
+<p><img border="0" src="output.png" width="524" height="303"></p>
+<p>The file <code>manifest.xml</code> contains all the information 
+needed to merge the translation back into the original file formats. You should 
+never delete, rename or change in any way this file. The same goes for the <code>
+original</code> sub-directory. It contains all the files you need to 
+post-process the translation.</p>
+<p>For an OmegaT project, the extracted files are located in the <code>
+source</code> sub-directory. These are the documents will will need to 
+translate. Note that the directory structure has not been ported here: OmegaT 
+does not allow this. So, instead all the files have their ID as prefix to allow 
+files with the same name but in different sub-directories to be processed. the 
+correct directory structure will be re-generated when post-processing the 
+translated files.</p>
+<p>The <code>omegat</code> sub-directory may contain a file called
+<code>project_save.tmx</code> that contain any existing translation that was 
+labeled as &quot;approved&quot; in the original documents. In our example, we have such 
+file as both the PO and the XLIFF input documents have existing translations 
+that are already approved.</p>
+<p>The <code>tm</code> sub-directory may contain TMX files as well:</p>
+<ul>
+	<li>
+	<p><code>unapproved.tmx</code> for any existing translation found 
+	in the input document that was not labeled as &quot;approved&quot; yet. In out example 
+	we have such file as both the PO and the XLIFF input documents have existing 
+	translations that are not approved yet.</p></li>
+	<li>
+	<p><code>alternate.tmx</code> for any alternate translation found 
+	in the input document. In our example we have such file because the XLIFF 
+	input document has a <code>&lt;alt-trans&gt;</code> element for one of its 
+	translation units.</p></li>
+	<li>
+	<p><code>leverage.tmx</code> for any translations found in TMs used when 
+	pre-translating. In this example we do not have such output.</p></li>
+</ul>
+<h2><a name="translating"></a>Translating</h2>
+<p>You can now open the project with OmegaT and translate.</p>
+<p>Start OmegaT</p>
+<p>Select the command <cite>Open</cite> from the <cite>Project</cite> menu. And 
+select the directory of the project. The program will open the project files and 
+you can proceed to translating the documents. Any existing approved translation 
+will be set directly. Any other match will be proposed in the <cite>Fuzzy 
+Matches</cite> window.</p>
+<p><img border="0" src="omegat.png" width="663" height="401"></p>
+<p>When you are done with translating you need to generate the translated files 
+out of OmegaT. To do this select the <cite>Create Target Documents</cite> 
+command from the <cite>Project</cite> menu.</p>
+<p>This will create a translated version of the documents in the <code>target</code> 
+sub-directory of the project.</p>
+<h2><a name="postProcessing"></a>Post-Processing the Translated Files</h2>
+<p>Once the translated files have been generated, you can use the <b>
+<a href="http://okapiframework.org/wiki/index.php?title=Rainbow_-_Translation_Package_Post-Processing">Translation 
+Package Post-Processing</a></b> utility to merge the translation back into the 
+original file formats.</p>
+<p>Start Rainbow</p>
+<p>Drop the manifest of the project (<code>manifest.xml</code>) in the <cite>
+Input List 1</cite> list of Rainbow.</p>
+<p>Select the <cite>Translation Package Post-Processing</cite> command from the
+<cite>Utilities</cite> menu. the manifest is read and its content displayed in 
+the <cite>Translation Package Manifest</cite> dialog box:</p>
+<p><img border="0" src="manifest.png" width="586" height="438"></p>
+<p>If needed you can select which documents you want to post-process.</p>
+<p>Click <cite>Execute</cite> to start the post-processing.</p>
+<p>The program creates a <code>done</code> sub-directory in the project where 
+all the translated final documents are saved. The original directory structure 
+is also re-constructed when needed.</p>
+<p>You should be able to open them with their corresponding applications.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

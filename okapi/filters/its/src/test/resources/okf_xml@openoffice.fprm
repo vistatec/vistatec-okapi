@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:o="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:t="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:tbl="urn:oasis:names:tc:opendocument:xmlns:table:1.0" version="1.0">
+
+ <!-- Element within text -->
+ <its:withinTextRule selector="//t:span |             //t:a |             //t:s |             //t:tab |             //t:line-break" withinText="yes"/>
+
+ <its:withinTextRule selector="//t:reference-mark-start |             //t:reference-mark-end" withinText="yes"/>
+
+ <its:withinTextRule selector="//t:bookmark-start |             //t:bookmark-end |             //t:bookmark" withinText="yes"/>
+
+ <its:withinTextRule selector="//t:initial-creator |             //t:creation-date |             //t:creation-time |             //t:description |             //t:user-defined |             //t:print-time |             //t:print-date |             //t:printed-by |             //t:title |             //t:subject |             //t:keywords |             //t:editing-cycles |             //t:editing-duration |             //t:modification-time |             //t:modification-date |             //t:creator |             //t:page-count |             //t:paragraph-count |             //t:word-count |             //t:character-count |             //t:table-count |             //t:image-count |             //t:object-count |             //t:variable-set |             //dc:date" withinText="yes"/>
+
+ <!-- Nested elements -->
+ <its:withinTextRule selector="//t:note" withinText="nested"/>
+
+ <its:translateRule selector="//tbl:table/@name" translate="yes"/>
+
+ <!-- Non-translatable content -->
+ <its:translateRule selector="//t:tracked-changes" translate="no"/>
+
+ <its:translateRule selector="//t:initial-creator |             //t:creation-date |             //t:creation-time |             //t:description |             //t:user-defined |             //t:print-time |             //t:print-date |             //t:printed-by |             //t:title |             //t:subject |             //t:keywords |             //t:editing-cycles |             //t:editing-duration |             //t:modification-time |             //t:modification-date |             //t:creator |             //t:page-count |             //t:paragraph-count |             //t:word-count |             //t:character-count |             //t:table-count |             //t:image-count |             //t:object-count |             //t:variable-set |             //dc:date |             //t:note-citation" translate="no"/>
+
+</its:rules>

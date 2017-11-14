@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="odstest.ods/meta.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="UTF-8">
+<body>
+</body>
+</file>
+<file original="odstest.ods/content.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="1" restype="x-table:name">
+<source xml:lang="en">Sheet1</source>
+<target xml:lang="fr">Sheet1</target>
+</trans-unit>
+<trans-unit id="2" restype="x-text:p">
+<source xml:lang="en">Max 1000 signs (Do not translate)</source>
+<target xml:lang="fr">Max 1000 signs (Do not translate)</target>
+</trans-unit>
+<trans-unit id="3" restype="x-text:p">
+<source xml:lang="en">.</source>
+<target xml:lang="fr">.</target>
+</trans-unit>
+<trans-unit id="4" restype="x-text:p">
+<source xml:lang="en">Description (Do not translate)</source>
+<target xml:lang="fr">Description (Do not translate)</target>
+</trans-unit>
+<trans-unit id="5" restype="x-text:p">
+<source xml:lang="en">.</source>
+<target xml:lang="fr">.</target>
+</trans-unit>
+<trans-unit id="6" restype="x-text:p">
+<source xml:lang="en">This is the first sentence (short one).</source>
+<target xml:lang="fr">This is the first sentence (short one).</target>
+</trans-unit>
+<trans-unit id="7" restype="x-text:p">
+<source xml:lang="en">We need a lot of lovely characters. A b c d e f g h i j k l m n o p q r s t u v w x y z.</source>
+<target xml:lang="fr">We need a lot of lovely characters. A b c d e f g h i j k l m n o p q r s t u v w x y z.</target>
+</trans-unit>
+<trans-unit id="8" restype="x-text:p">
+<source xml:lang="en">One. Two. Three. Four.</source>
+<target xml:lang="fr">One. Two. Three. Four.</target>
+</trans-unit>
+<trans-unit id="9" restype="x-text:p">
+<source xml:lang="en">One. Two. Three. Four.</source>
+<target xml:lang="fr">One. Two. Three. Four.</target>
+</trans-unit>
+<trans-unit id="10" restype="x-text:p">
+<source xml:lang="en">This line contains ten whitespaces at the end          </source>
+<target xml:lang="fr">This line contains ten whitespaces at the end          </target>
+</trans-unit>
+<trans-unit id="11" restype="x-table:name">
+<source xml:lang="en">Sheet2</source>
+<target xml:lang="fr">Sheet2</target>
+</trans-unit>
+<trans-unit id="12" restype="x-table:name">
+<source xml:lang="en">Sheet3</source>
+<target xml:lang="fr">Sheet3</target>
+</trans-unit>
+</body>
+</file>
+<file original="odstest.ods/styles.xml" source-language="en" target-language="fr" datatype="x-undefined" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="1" restype="x-text:p">
+<source xml:lang="en"><g id="1">???</g></source>
+<target xml:lang="fr"><g id="1">???</g></target>
+</trans-unit>
+<trans-unit id="2" restype="x-text:p">
+<source xml:lang="en">Page <x id="1"/></source>
+<target xml:lang="fr">Page <x id="1"/></target>
+</trans-unit>
+<trans-unit id="3" restype="x-text:p">
+<source xml:lang="en"><g id="1">???</g> (<x id="2"/>)</source>
+<target xml:lang="fr"><g id="1">???</g> (<x id="2"/>)</target>
+</trans-unit>
+<trans-unit id="4" restype="x-text:p">
+<source xml:lang="en"><g id="1">00.00.0000</g>, <g id="2">00:00:00</g></source>
+<target xml:lang="fr"><g id="1">00.00.0000</g>, <g id="2">00:00:00</g></target>
+</trans-unit>
+<trans-unit id="5" restype="x-text:p">
+<source xml:lang="en">Page <x id="1"/> / <x id="2"/></source>
+<target xml:lang="fr">Page <x id="1"/> / <x id="2"/></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

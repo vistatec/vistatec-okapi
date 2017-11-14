@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<doc xmlns:its="http://www.w3.org/2005/11/its" its:version='2.0'>
+ <someContainer>
+  <its:locQualityIssues xml:id='lqi1'>
+   <its:locQualityIssue locQualityIssueComment='lqi1-comment1'/>
+   <its:locQualityIssue locQualityIssueComment='lqi1-comment2'/>
+  </its:locQualityIssues>
+  <its:locQualityIssues xml:id='lqi2'>
+   <its:locQualityIssue locQualityIssueComment='lqi2-comment1'/>
+   <its:locQualityIssue locQualityIssueComment='lqi2-comment2'/>
+  </its:locQualityIssues>
+ </someContainer>
+</doc>

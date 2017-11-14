@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="extended-code-type-support.docx" source-language="en-US" target-language="fr" datatype="x-sdlfilterframework2">
+<body>
+<group id="g1">
+<trans-unit id="954575cd-aefa-492c-a1a4-a5f53427b1f1">
+<source xml:lang="en-US"><g id="2" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">This</g> <g id="8" ctype="x-color:FF0000;" equiv-text="&lt;cf color=FF0000>">is</g> the <g id="14" ctype="x-bold;" equiv-text="&lt;cf bold=True>">first</g> paragraph. And <g id="20" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">it</g> has <g id="26" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>">two</g> sentences.</source>
+<seg-source><mrk mid="1" mtype="seg"><g id="2" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">This</g> <g id="8" ctype="x-color:FF0000;" equiv-text="&lt;cf color=FF0000>">is</g> the <g id="14" ctype="x-bold;" equiv-text="&lt;cf bold=True>">first</g> paragraph.</mrk> <mrk mid="2" mtype="seg">And <g id="20" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">it</g> has <g id="26" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>">two</g> sentences.</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="1" mtype="seg"><g id="2" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">This</g> <g id="8" ctype="x-color:FF0000;" equiv-text="&lt;cf color=FF0000>">is</g> the <g id="14" ctype="x-bold;" equiv-text="&lt;cf bold=True>">first</g> paragraph.</mrk> <mrk mid="2" mtype="seg">And <g id="20" ctype="x-bold;italic;" equiv-text="&lt;cf bold=True italic=True>">it</g> has <g id="26" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>">two</g> sentences.</mrk></target>
+</trans-unit>
+</group>
+<group id="g2">
+<trans-unit id="ce3e4ee0-51d0-48f6-8e16-e278ac61cae8" translate="no">
+<source xml:lang="en-US"></source>
+<target xml:lang="fr"></target>
+</trans-unit>
+</group>
+<group id="g3">
+<trans-unit id="004547cb-055f-4f90-ab92-7b7c67ef46c3">
+<source xml:lang="en-US"><g id="35" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>"><g id="32" ctype="x-highlight:yellow;" equiv-text="&lt;cf highlight=yellow>">Third</g> paragraph</g>. <g id="42" ctype="x-link;" equiv-text="&lt;hyperlink value=&quot;https://developer.mozilla.org/en/docs/Web/HTML/Element/strike&quot;>"><g id="45" ctype="x-bold;" equiv-text="&lt;cf bold=True>">A hyperlink</g> to the strike <g id="57" ctype="x-italic;" equiv-text="&lt;cf italic=True>">HTML</g> <g id="63" ctype="x-empty" equiv-text="&lt;cf underline=none>">element</g>.</g></source>
+<seg-source><mrk mid="3" mtype="seg"><g id="35" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>"><g id="32" ctype="x-highlight:yellow;" equiv-text="&lt;cf highlight=yellow>">Third</g> paragraph</g>.</mrk> <mrk mid="4" mtype="seg"><g id="42" ctype="x-link;" equiv-text="&lt;hyperlink value=&quot;https://developer.mozilla.org/en/docs/Web/HTML/Element/strike&quot;>"><g id="45" ctype="x-bold;" equiv-text="&lt;cf bold=True>">A hyperlink</g> to the strike <g id="57" ctype="x-italic;" equiv-text="&lt;cf italic=True>">HTML</g> <g id="63" ctype="x-empty" equiv-text="&lt;cf underline=none>">element</g>.</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="3" mtype="seg"><g id="35" ctype="x-bold;underline:single;" equiv-text="&lt;cf bold=True underline=single>"><g id="32" ctype="x-highlight:yellow;" equiv-text="&lt;cf highlight=yellow>">Third</g> paragraph</g>.</mrk> <mrk mid="4" mtype="seg"><g id="42" ctype="x-link;" equiv-text="&lt;hyperlink value=&quot;https://developer.mozilla.org/en/docs/Web/HTML/Element/strike&quot;>"><g id="45" ctype="x-bold;" equiv-text="&lt;cf bold=True>">A hyperlink</g> to the strike <g id="57" ctype="x-italic;" equiv-text="&lt;cf italic=True>">HTML</g> <g id="63" ctype="x-empty" equiv-text="&lt;cf underline=none>">element</g>.</g></mrk></target>
+</trans-unit>
+</group>
+<group id="g4">
+<trans-unit id="deb2534d-8dab-45a3-8002-b8c2269e22a8">
+<source xml:lang="en-US">https://developer.mozilla.org/en/docs/Web/HTML/Element/strike</source>
+<seg-source><mrk mid="5" mtype="seg">https://developer.mozilla.org/en/docs/Web/HTML/Element/strike</mrk></seg-source>
+<target xml:lang="fr"><mrk mid="5" mtype="seg">https://developer.mozilla.org/en/docs/Web/HTML/Element/strike</mrk></target>
+</trans-unit>
+</group>
+<group id="g5">
+<trans-unit id="2203381c-ee13-40fa-ad7c-6ff287b49f64">
+<source xml:lang="en-US"><bx id="69" ctype="x-shadow;" equiv-text="&lt;cf size=20 shadow=True>"/>Shadow<ex id="69" equiv-text="&lt;/cf>"/></source>
+<seg-source><bx id="69" ctype="x-shadow;" equiv-text="&lt;cf size=20 shadow=True>"/><mrk mid="6" mtype="seg">Shadow</mrk><ex id="69" equiv-text="&lt;/cf>"/></seg-source>
+<target xml:lang="fr"><bx id="69" ctype="x-shadow;" equiv-text="&lt;cf size=20 shadow=True>"/><mrk mid="6" mtype="seg">Shadow</mrk><ex id="69" equiv-text="&lt;/cf>"/></target>
+</trans-unit>
+</group>
+<group id="g6">
+<trans-unit id="a57ff7bf-6caa-41f4-87c5-c9862845796e">
+<source xml:lang="en-US"><bx id="72" ctype="x-empty" equiv-text="&lt;cf nfa=True>"/>Shading and <g id="75" ctype="x-highlight:red;" equiv-text="&lt;cf highlight=red>">highlight</g><ex id="72" equiv-text="&lt;/cf>"/></source>
+<seg-source><bx id="72" ctype="x-empty" equiv-text="&lt;cf nfa=True>"/><mrk mid="7" mtype="seg">Shading and <g id="75" ctype="x-highlight:red;" equiv-text="&lt;cf highlight=red>">highlight</g></mrk><ex id="72" equiv-text="&lt;/cf>"/></seg-source>
+<target xml:lang="fr"><bx id="72" ctype="x-empty" equiv-text="&lt;cf nfa=True>"/><mrk mid="7" mtype="seg">Shading and <g id="75" ctype="x-highlight:red;" equiv-text="&lt;cf highlight=red>">highlight</g></mrk><ex id="72" equiv-text="&lt;/cf>"/></target>
+</trans-unit>
+</group>
+<group id="g7">
+<trans-unit id="0c1e02a7-83c0-43e1-9da6-21d12c0b510b">
+<source xml:lang="en-US"><bx id="78" ctype="x-strikethrough;" equiv-text="&lt;cf strikethrough=single>"/>Strike-through<ex id="78" equiv-text="&lt;/cf>"/></source>
+<seg-source><bx id="78" ctype="x-strikethrough;" equiv-text="&lt;cf strikethrough=single>"/><mrk mid="8" mtype="seg">Strike-through</mrk><ex id="78" equiv-text="&lt;/cf>"/></seg-source>
+<target xml:lang="fr"><bx id="78" ctype="x-strikethrough;" equiv-text="&lt;cf strikethrough=single>"/><mrk mid="8" mtype="seg">Strike-through</mrk><ex id="78" equiv-text="&lt;/cf>"/></target>
+</trans-unit>
+</group>
+<group id="g8">
+<trans-unit id="1ea83d4a-0035-4ca3-bd8d-65909552c856">
+<source xml:lang="en-US"><g id="81" ctype="x-underline:dotted;" equiv-text="&lt;cf underline=dotted>">Underline1</g> <g id="87" ctype="x-underline:double;" equiv-text="&lt;cf underline=double>">underline2</g></source>
+<seg-source><mrk mid="9" mtype="seg"><g id="81" ctype="x-underline:dotted;" equiv-text="&lt;cf underline=dotted>">Underline1</g> <g id="87" ctype="x-underline:double;" equiv-text="&lt;cf underline=double>">underline2</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="9" mtype="seg"><g id="81" ctype="x-underline:dotted;" equiv-text="&lt;cf underline=dotted>">Underline1</g> <g id="87" ctype="x-underline:double;" equiv-text="&lt;cf underline=double>">underline2</g></mrk></target>
+</trans-unit>
+</group>
+<group id="g9">
+<trans-unit id="f471dbb4-c219-41e9-84b4-5eb38835ad4e">
+<source xml:lang="en-US"><g id="90" ctype="x-sub;underline:double;" equiv-text="&lt;cf underline=double subscript=True>">subscript</g> normal <g id="96" ctype="x-sup;" equiv-text="&lt;cf superscript=True>">superscript</g></source>
+<seg-source><mrk mid="10" mtype="seg"><g id="90" ctype="x-sub;underline:double;" equiv-text="&lt;cf underline=double subscript=True>">subscript</g> normal <g id="96" ctype="x-sup;" equiv-text="&lt;cf superscript=True>">superscript</g></mrk></seg-source>
+<target xml:lang="fr"><mrk mid="10" mtype="seg"><g id="90" ctype="x-sub;underline:double;" equiv-text="&lt;cf underline=double subscript=True>">subscript</g> normal <g id="96" ctype="x-sup;" equiv-text="&lt;cf superscript=True>">superscript</g></mrk></target>
+</trans-unit>
+</group>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,148 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Encoding Conversion</title>
+<link rel="stylesheet" type="text/css" href="../../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Utilities</h1>
+		<h2 class="head2">Encoding Conversion</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../index.html">Utilities</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Rainbow">http://okapiframework.org/wiki/index.php?title=Rainbow</a></p>
+
+<p>This utility allows you to convert the character set encoding of a input 
+document, and in some cases, to update its encoding declaration.</p>
+<p>This utility does not use filters.</p>
+<h2>Common Parameters</h2>
+<ul>
+	<li>The list of the documents to convert (Input list 1).</li>
+	<li>The default input encoding.</li>
+	<li>The output encoding.</li>
+	<li>The names and locations of the output documents.</li>
+</ul>
+<h2>Configuration</h2>
+<h3>Input Tab</h3>
+<h4>Un-escape the following notations</h4>
+<p><cite>Numeric character references</cite> -- Set this option to un-escape all 
+types of numeric character references (NCRs) when reading the input document. 
+For example: <code>&amp;#255;</code>, <code>&amp;#xE1;</code> and <code>&amp;#e1;</code> 
+will be un-escaped to &#39;<code>á</code>&#39;. If this option is not set, any NCR in 
+the input document will remain in the exact same form in the output document. For more on NCR see 
+<a target="_blank" href="http://en.wikipedia.org/wiki/Numeric_character_reference">http://en.wikipedia.org/wiki/Numeric_character_reference</a>.</p>
+<p><cite>Character entity references</cite> -- Set this option to un-escape the 
+standard HTML character entity references (CERs) when reading the input 
+document. For example: <code>&amp;aacute;</code> will be un-escaped to &#39;<code>á</code>&#39;. 
+If this option is not set, any CER in the input document will remain in the 
+exact same form in the output document. For more on CER see
+<a target="_blank" href="http://en.wikipedia.org/wiki/Character_entity_reference">http://en.wikipedia.org/wiki/Character_entity_reference</a>.
+</p>
+<p><cite>Java-style escape notation</cite> -- Set this option to un-escape the 
+Java-style escaped characters when reading the input document. For example:
+<code>\u00e1</code> and <code>\u00E1</code> will be un-escaped to &#39;<code>á</code>&#39;. 
+If this option is not set all Java-style escaped characters in the input 
+document will remain in the exact same form in the output document.</p>
+<h3>Output Tab</h3>
+<h4>Escape notation to use</h4>
+<p><cite>Uppercase hexadecimal numeric character reference</cite> -- Select this 
+option to use an uppercase hexadecimal NCR when escaping a character. For 
+example &#39;<code>á</code>&#39; will become <code>&amp;#xE1;</code>.</p>
+<p><cite>Lowercase hexadecimal numeric character reference</cite> -- Select this 
+option to use an lowercase hexadecimal NCR when escaping a character. For 
+example &#39;<code>á</code>&#39; will become <code>&amp;#xe1;</code>.</p>
+<p><cite>Decimal numeric character reference</cite> -- Select this option to use 
+a decimal NCR when escaping a character. For example &#39;<code>á</code>&#39; will 
+become <code>&amp;#255;</code>.</p>
+<p><cite>Character entity references</cite> -- Select this option to use a 
+character entity reference when escaping a character. For example &#39;<code>á</code>&#39; 
+will become <code>&amp;#aacute;</code>. If there is no corresponding entity defined 
+for the character to escape, the uppercase hexadecimal NCR form is used instead.</p>
+<p><cite>Uppercase Java-style notation</cite> -- Select this option to use an 
+uppercase Java-style notation when escaping a character. For example &#39;<code>á</code>&#39; 
+will become <code>\u00E1</code>.</p>
+<p><cite>Lowercase Java-style notation</cite> -- Select this option to use a 
+lowercase Java-style notation when escaping a character. For example &#39;<code>á</code>&#39; 
+will become <code>\u00e1</code>.</p>
+<p><cite>User-defined notation</cite> -- Select this option to use a customized 
+format when escaping a character. The user-defined format must be a Java format 
+expression that take an integer as the value to display. For example the 
+expression <code>[[%d]]</code> for &#39;<code>á</code>&#39; will give <code>[[255]]</code>., 
+and the expression <code>\&#39;%x</code> for <code>日本語</code> will give <code>
+\&#39;65e5\&#39;672c\&#39;8a9e</code>. The value display in the Unicode code point of the 
+character to escape.</p>
+<p><cite>Use the bytes value</cite> -- Set this option when you want the values 
+applied to the user-defined expression to be the byte value of the output 
+encoding rather than the Unicode code points. For example, the expression <code>
+\&#39;%x</code> for <code>日本語</code> will give <code>\&#39;93\&#39;fa\&#39;96\&#39;7b\&#39;8c\&#39;ea</code> 
+if this option is set and the output encoding is Shift-JIS.</p>
+<h4>What characters should be escaped</h4>
+<p><cite>Only the characters un-supported by the output encoding</cite> -- Select this option to escape only characters not supported by the output encoding.</p>
+<p><cite>All extended characters</cite> -- Select this option to escape all extended characters.</p>
+<h4>Miscellaneous</h4>
+<p><cite>Use Byte-Order-Mark for UTF-8 output</cite> -- Set this option to add a Byte-Order-Mark (BOM) for UTF-8 output. For more 
+information on the BOM see
+<a target="_blank" href="http://www.unicode.org/faq/utf_bom.html">http://www.unicode.org/faq/utf_bom.html</a>.</p>
+<p><cite>List characters not supported by the output encoding</cite> -- Set this option to list in the Log all characters not supported by the output encoding.</p>
+<h2>Updating Encoding Declarations</h2>
+<p>This utility can update automatically the encoding declarations of XML and 
+HTML documents, given a few conditions.</p>
+<p>The following algorithms are run on the first 1024 characters of each 
+document. Note that the routine is not XML or HTML aware and cannot make 
+distinction between normal XML/HTML code and XML/HTML comments.</p>
+<h3>Detection of XML Documents</h3>
+<ul>
+	<li>If an XML encoding declaration is detected:<ul>
+		<li>The encoding value is updated.</li>
+	</ul>
+	</li>
+	<li>Otherwise, if an XML declaration is detected:<ul>
+		<li>An encoding declaration is inserted inside the XML declaration just 
+		after the version.</li>
+	</ul>
+	</li>
+	<li>Otherwise, if the name of the file ends with a <code>.xml</code> extension:<ul>
+		<li>An XML declaration (with an encoding declaration of the output 
+		encoding) is added at the top of the document.</li>
+	</ul>
+	</li>
+</ul>
+<h3>Detection of the HTML Documents</h3>
+<ul>
+	<li>If an HTML charset declaration is detected:
+	<ul>
+	<li>The charset value is updated.</li>
+	</ul>
+	</li>
+	<li>Otherwise, if the name of the file ends with an extension that starts 
+	with <code>.htm</code>:<ul>
+	<li>If a <code>&lt;head&gt;</code> element is found:<ul>
+	<li>A charset declaration is added just after.</li>
+</ul>
+	</li>
+	<li>Otherwise, if a <code>&lt;htm</code> string is detected:<ul>
+	<li>A <code>&lt;head&gt;</code> and a charset declaration are added after the 
+	first &#39;<code>&gt;</code>&#39; after the string found.</li>
+</ul>
+	</li>
+</ul>
+	</li>
+</ul>
+<p>Note that a document can be both and XML and HTML document and have both 
+types of encoding/charset declarations.</p>
+<p>&nbsp;</p>
+</body>
+</html>

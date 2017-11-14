@@ -1,0 +1,3 @@
+parametersClass=net.sf.okapi.filters.plaintext.spliced.Parameters
+splicer=<eol>
+createPlaceholders.b=false

@@ -1,0 +1,131 @@
+Deploying
+=========
+
+--- 0) Keep track of the changes between release in the Changes Log
+in trunk/deployment/shared/changes.html
+
+
+--- 1) Make sure all unit tests pass
+
+Do a full rebuild of the Maven build:
+mvn clean install from trunk
+
+
+--- 2) Make sure platform-specific dependencies are downloaded:
+from trunk/okapi-ui/swt/core-ui run
+mvn -PWIN_SWT -PWIN_64_SWT -PCOCOA_64_SWT -PLinux_x86_swt -PLinux_x86_64_swt dependency:resolve
+
+
+--- 3) Make sure the following files have the proper version and release numbers for this release:
+
+-- All the POM.XML files
+For example from M10-SNAPSHOT to M10:
+- go to /trunk
+- search is the are any existing <version>0.10</version>. If there are you'll need to remmember them and change them back manually when moving to M11-SNAPSHOT.
+- search all pom for <version>0.10-SNAPSHOT</version> and replace by <version>0.10</version>
+
+- look also for <okapi.version>0.10-SNAPSHOT</okapi.version> and replace that one too.
+
+- Check that all references to okapi-lib-xliff2 points to the proper version.
+If it's a snapshot we need to make sure the Okapi XLIFF project increment its snapshot version.
+
+- trunk/deployment/shared/release.properties has also version numbers
+
+- The Change Log has its titles set with the proper versions
+
+--- 4) Make also sure the readme files are up-to-date:
+
+- trunk/deployment/maven/data/okapi-lib/readme.html
+- trunk/deployment/maven/data/okapi-apps/readme.html
+
+Make sure plug-ins to release are up to date:
+(e.g. comment out the one that stay snapshots)
+- trunk/deployment/maven/data/okapi-plugins/pluginsDeployment.xml
+
+
+--- 5) Rebuild all
+
+Make sure you build with Java 7
+
+/trunk> mvn clean install
+/trunk/deployment/maven> ant
+/trunk/applications/integration-tests> mvn integration-test
+or just run rebuild-all.bat
+
+This will re-compile, tests, and create the packages.
+Then rebuild all distributions for all platforms.
+Then run the integration tests for the applications
+
+NOTE: If you are not using the default local maven repository you will need to update the mavenStore property in build_okapi_apps.xml
+
+--- 6) If you have trunk/deployment/privateTests
+Go there and run the tests with non-sharable material
+
+--- 6bis) Test under different platforms
+
+--- 7) Upload the zip files to Bintray at https://bintray.com/okapi/Distribution
+You can use curl to upload the files directly (and create the proper folders at the same time).
+
+Once the files are uploaded, you need to go to Bintray and publish them, and set the short descriptions.
+
+--- 8) Make sure all files of the Web site are modified if needed (trunk/website).
+e.g. the update.html file needs the latest version info
+Build the Web site: 
+/trunk/deployment/website> ant
+And update the actual Web site with the result of the build (which is in: trunk/deployment/website/dist) 
+
+Host: ftp.opentag.com
+Username: same as for the shared documents
+Password: same as for the shared documents
+Start directory: okapi
+
+The structure in the okapi directory is the same as in trunk/website
+(but there are additional directories in the okapi web site directory)
+Note that most of the time only the javadoc and the HTML files at the root will change.
+
+- upload the files in:
+\trunk\deployment\maven\dist_plugins
+to the plugins directory of the web site.
+(and remove old versions if needed)
+
+--- 9) Commit all changed files
+Make sure the 'master' branch of the source code is updated to this 'dev' latest version.
+This revision is the one for this release.
+
+- create a tag for the release (e.g. m17)
+
+- Go to CloudBees web site and build a release for mVV
+
+
+--- 9bis)
+
+If okapi-xliff has changed since last release:
+- Update the okapi-xliff project to increment the version, even if it is just snapshot.
+- Make sure the new version is available on the continous build site.
+
+
+--- 10) switch to the dev branch
+- Update the versions numbers in the files for the next version
+- change also the version references to okapi-xliff (if needed)
+- All the POM.XML files (<version> and <okapi.version>)
+- trunk/deployment/shared/release.properties
+- trunk/deployment/shared/changes.html (make the Changes Log ready for next set of changes)
+- trunk/deployment/maven/data/okapi-plugins/okapi-plugins (e.g. un-comment snapshots plugins)
+- Rebuild all. Make sure tests pass.
+- Commit all changed files.
+- make sure 'dev' branch is up-to-date
+
+Now any new build will be a snapshot of the next release
+
+
+--- 11) Update the Main Page in the OkapiWiki to reflect the new latest release
+http://www.opentag.com/okapi/wiki/index.php?title=Main_Page
+
+--- 12) Update the Wikipedia Okapi Framework page
+
+
+--- 13) Post notification that a new release is available.
+At least here: http://tech.groups.yahoo.com/group/okapitools/
+and on Twitter
+
+-end-

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff xmlns:sdl="http://sdl.com/FileTypes/SdlXliff/1.0" version="1.2" sdl:version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.2"><file original="F:\Curriculum\HTML\Source\home_swing.html" source-language="en-US" datatype="x-sdlfilterframework2" target-language="es-ES"><header><file-info xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><value key="SDL:FileId">448a4d71-4bda-4d66-b372-82e32509824a</value><value key="SDL:CreationDate">03/21/2011 16:54:19</value><value key="SDL:OriginalFilePath">F:\Curriculum\HTML\Source\home_swing.html</value><value key="SDL:InputFilePath">F:\Curriculum\HTML\Source\home_swing.html</value><value key="SDL:OriginalEncoding">utf-8</value><value key="SDL:AutoClonedFlagSupported">True</value><value key="SDLWS:AssetId">6537</value><value key="SDLWS:DocId">7386</value><value key="SDLWS:TaskId">8351</value><value key="SDLWS:ScopingMode">0</value><value key="SDLWS:CreationDate">2011-03-21T22:54:19Z</value><value key="SDLWS:ProjectName">Test HTML_es_ES_20110321_165404</value><value key="SDLWS:UserName">Jim Hargrave</value><sniff-info><detected-source-lang detection-level="Guess" lang="en-US" /><props><value key="SDL:Sniffed">True</value></props></sniff-info></file-info><sdl:filetype-info><sdl:filetype-id>HTML v 1.0.0.0</sdl:filetype-id></sdl:filetype-info><fmt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><fmt-def id="1"><value key="TextColor">Blue</value><value key="Underline">True</value></fmt-def></fmt-defs><cxt-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><cxt-def id="1" type="sdl:meta" color="'0'" /><cxt-def id="2" type="x-tm-heading" code="T" name="Title" descr="Title of the document" /><cxt-def id="3" type="sdl:paragraph" color="'0'" /></cxt-defs><tag-defs xmlns="http://sdl.com/FileTypes/SdlXliff/1.0"><tag id="30"><bpt name="A" word-end="false">&lt;A HREF = "error_broken.html"&gt;</bpt><bpt-props><value key="ttTagType">ec_Start</value></bpt-props><ept name="A" word-end="false">&lt;/A&gt;</ept><ept-props><value key="ttTagType">ec_End</value></ept-props><fmt id="1" /></tag><tag id="11"><ph name="Comment">&lt;!-------------------------------------------------------------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="15"><ph name="Comment">&lt;!-------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="18"><ph name="Comment">&lt;!-------------------------------------------------------------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="21"><ph name="Comment">&lt;!-------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="24"><ph name="Comment">&lt;!-------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="27"><ph name="Comment">&lt;!-------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="33"><ph name="Comment">&lt;!-------------------------------------------------------------------&gt;</ph><props><value key="ttTagType">ec_StandAlone</value><value key="ttTagClass">ec_Comment</value></props></tag><tag id="0"><st name="HTML">&lt;HTML&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="1"><st name="HEAD">&lt;HEAD&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="2"><st name="TITLE">&lt;TITLE&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="3"><st name="TITLE">&lt;/TITLE&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="4"><st name="META">&lt;META NAME="description" CONTENT="home page of West Coast Swing America, inviting you to our Sring    Fling."&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="5"><st name="META">&lt;META NAME="keywords" CONTENT="dance,West Coast Swing,Swing,humor,George Woolley"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="6"><st name="STYLE">&lt;STYLE type="text/css"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="7"><st name="DUMMY...">
+   DUMMY { color: black; }
+   A:link   { color: #000; }
+   A:visited{ color: #000; }  
+    
+   BODY {
+      color: black;
+      background-color: #CF6;
+      background-image: url(stick_dancers.gif);
+      font-family: sans-serif;
+      font-size: 14pt;
+      margin-left: 3em;
+      margin-right: 3em; 
+   }
+
+   HR {
+      margin-top: 0em;
+      margin-bottom: 0em;
+   }
+   HR.end {
+      margin-top: 1em;
+   }
+       
+   P.page-title {
+      color: #000;        
+      font-size: 14pt;    
+      font-weight: bold; 
+      margin-top: 1em;
+      text-align: center;   
+   }
+   P.site-title {
+      color: #F00;
+      font-weight: bold;
+      font-size: 30pt;
+      margin-top: .25em;
+      margin-bottom: 0em;
+      text-align: center;
+      text-decoration: blink;
+      background-color: #CF6;
+   }     
+   
+   P { 
+      margin-top: 1em;
+      margin-bottom: 0em;
+      font-size: 18pt;
+      background-color: #CF6; 
+   }
+   P.invite {
+      color: #F00;    
+      font-weight: bold;
+      text-decoration: blink;      
+   } 
+   P.schedule {
+      color: #F00;     
+      font-weight: bold;
+      text-decoration: blink;     
+   }  
+   P.continuation {
+      margin-top: .5em;
+   }
+   P.links {   
+      text-align: center;
+      margin-top: 0em;
+   }
+</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="8"><st name="STYLE">&lt;/STYLE&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="9"><st name="HEAD">&lt;/HEAD&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="10"><st name="BODY">&lt;BODY&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="12"><st name="P">&lt;P CLASS="site-title"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="13"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="14"><st name="HR">&lt;HR&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="16"><st name="P">&lt;P CLASS="page-title"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="17"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="19"><st name="P">&lt;P CLASS="invite"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="20"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="22"><st name="P">&lt;P&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="23"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="25"><st name="P">&lt;P CLASS="schedule"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="26"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="28"><st name="HR">&lt;HR CLASS="end"&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="29"><st name="P">&lt;P CLASS="links"&gt;</st><props><value key="ttTagType">ec_Start</value></props></tag><tag id="31"><st name="P">&lt;/P&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="32"><st name="HR">&lt;HR&gt;</st><props><value key="ttTagType">ec_StandAlone</value></props></tag><tag id="34"><st name="BODY">&lt;/BODY&gt;</st><props><value key="ttTagType">ec_End</value></props></tag><tag id="35"><st name="HTML">&lt;/HTML&gt;</st><props><value key="ttTagType">ec_End</value></props></tag></tag-defs></header><body>
+<trans-unit id="369a00bd-7ec1-4031-bbfd-4b3db9b18803" translate="no"><source><x id="0" /></source></trans-unit><group><sdl:cxts />
+<trans-unit id="d1d7c43c-0cdd-4acf-b8df-cabcb2723192" translate="no"><source>
+<x id="1" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="2e9b8961-90c9-47cb-86db-bff2c5fa37db" translate="no"><source>
+   <x id="2" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="2" /><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="528bc6e4-d3eb-46a9-911d-7edf10c7ba5a"><source>HTML By Bad Example: West Coast America Home Page</source><seg-source><mrk mtype="seg" mid="1">HTML By Bad Example:</mrk> <mrk mtype="seg" mid="2">West Coast America Home Page</mrk></seg-source><target><mrk mtype="seg" mid="1" /> <mrk mtype="seg" mid="2" /></target><sdl:seg-defs><sdl:seg id="1" origin="not-translated" /><sdl:seg id="2" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="e0370d5f-a843-4324-b541-3d5a76d6f5dd" translate="no"><source><x id="3" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="2156341f-04df-4113-99e8-82f607058595" translate="no"><source>
+   <x id="4" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="02c43d60-8a6f-448c-aa00-6020fb238771" translate="no"><source>  
+   <x id="5" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="9efc5777-a3b1-486c-bfaf-e89d13f31959" translate="no"><source> 
+<x id="6" /><x id="7" /><x id="8" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="1" /></sdl:cxts>
+<trans-unit id="ac0b64b9-7f1f-4ed3-91d7-9f640dfa0d89" translate="no"><source> 
+<x id="9" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="e76747b6-83f4-447c-8563-a847bcda7bde" translate="no"><source>
+<x id="10" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="ab7bd3d5-8b2e-42d4-85c7-dbb1486f2d9e" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="cb1bc2c4-81b1-438c-bae6-a8df83b6fcd2"><source><x id="11" /></source><seg-source><x id="11" /></seg-source><target><x id="11" /></target></trans-unit>
+<trans-unit id="9fbcd73b-ceb9-42ad-801f-9e8357a6ba68" translate="no"><source>
+<x id="12" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="29189c0e-11bc-4899-89c9-bc819f80713e"><source>West Coast America Dance Club</source><seg-source><mrk mtype="seg" mid="3">West Coast America Dance Club</mrk></seg-source><target><mrk mtype="seg" mid="3" /></target><sdl:seg-defs><sdl:seg id="3" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="c4e4c18a-87e2-4de6-976a-922139898cb6" translate="no"><source><x id="13" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="ba0ca804-5d33-40cb-99d7-6d8c1f703e97" translate="no"><source> 
+<x id="14" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="bd76e187-5c19-4b52-804f-3d4be48aaeb1" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="be22047e-7aaf-4aa6-b20c-209ba9104699"><source><x id="15" /></source><seg-source><x id="15" /></seg-source><target><x id="15" /></target></trans-unit>
+<trans-unit id="0f6fb983-4499-4933-b8e6-460a6b07c372" translate="no"><source>
+<x id="16" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="ed68fdb7-92a9-4b11-be14-3389f7e3a747"><source>Spring Swing Fling</source><seg-source><mrk mtype="seg" mid="4">Spring Swing Fling</mrk></seg-source><target><mrk mtype="seg" mid="4" /></target><sdl:seg-defs><sdl:seg id="4" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="0b39c10e-7d43-4598-8d88-88ae31f63422" translate="no"><source><x id="17" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="f436de53-b229-4b96-9183-79d1ba3c6de7" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="9fec6c97-8535-4460-b294-3c267e19b230"><source><x id="18" /></source><seg-source><x id="18" /></seg-source><target><x id="18" /></target></trans-unit>
+<trans-unit id="8b19af31-1bf3-4243-9ee6-658a6141554d" translate="no"><source>
+<x id="19" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="f7d80113-5cd5-42a5-8aab-ff5cad2be29f"><source>Relax and enjoy our Spring West Coast "Swing Fling".</source><seg-source><mrk mtype="seg" mid="5">Relax and enjoy our Spring West Coast "Swing Fling".</mrk></seg-source><target><mrk mtype="seg" mid="5" /></target><sdl:seg-defs><sdl:seg id="5" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="65cb8fc5-ec00-4b46-9bc6-01a4fdb3457d" translate="no"><source><x id="20" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="595422f1-be41-4104-a532-079d1e290fba" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="a4b61b66-e3d3-40a8-bdf7-2629dd7e551e"><source><x id="21" /></source><seg-source><x id="21" /></seg-source><target><x id="21" /></target></trans-unit>
+<trans-unit id="bf1460d3-1132-4f81-99b5-6f0a235f1f0a" translate="no"><source>
+<x id="22" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="802fe822-fc4f-4948-b0dd-ce6dc120e3e3"><source>Come express yourself. Show off your unique way of dancing. Remember: "If you don't do your dance, who will?" (Gabrielle Roth).</source><seg-source><mrk mtype="seg" mid="6">Come express yourself.</mrk> <mrk mtype="seg" mid="7">Show off your unique way of dancing.</mrk> <mrk mtype="seg" mid="8">Remember:</mrk> <mrk mtype="seg" mid="9">"If you don't do your dance, who will?"</mrk> <mrk mtype="seg" mid="10">(Gabrielle Roth).</mrk></seg-source><target><mrk mtype="seg" mid="6" /> <mrk mtype="seg" mid="7" /> <mrk mtype="seg" mid="8" /> <mrk mtype="seg" mid="9" /> <mrk mtype="seg" mid="10" /></target><sdl:seg-defs><sdl:seg id="6" origin="not-translated" /><sdl:seg id="7" origin="not-translated" /><sdl:seg id="8" origin="not-translated" /><sdl:seg id="9" origin="not-translated" /><sdl:seg id="10" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="fa32912d-34a0-4ed9-836e-60a8909fa8ae" translate="no"><source><x id="23" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="3b257df8-039b-4f96-a2db-d1d16717fd8e" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="583d98f1-0ab1-4a37-935a-3fe879e3b9b8"><source><x id="24" /></source><seg-source><x id="24" /></seg-source><target><x id="24" /></target></trans-unit>
+<trans-unit id="ce7f391e-37d8-454e-9a34-9e75b9685a99" translate="no"><source>
+<x id="25" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="fb5aa4ea-e4ae-4e4e-8322-f244129c3e9f"><source>Schedule: All day (9am to 5pm) Saturday and Sunday, March 23-24</source><seg-source><mrk mtype="seg" mid="11">Schedule:</mrk> <mrk mtype="seg" mid="12">All day (9am to 5pm) Saturday and Sunday, March 23-24</mrk></seg-source><target><mrk mtype="seg" mid="11" /> <mrk mtype="seg" mid="12" /></target><sdl:seg-defs><sdl:seg id="11" origin="not-translated" /><sdl:seg id="12" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="c31a05fc-7020-4e67-9560-3d6784004cbc" translate="no"><source><x id="26" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="a0c2baa9-959a-4e74-9b4e-b782c33067f3" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="4f4d47af-6014-4af8-8483-e9d6223e2a03"><source><x id="27" /></source><seg-source><x id="27" /></seg-source><target><x id="27" /></target></trans-unit>
+<trans-unit id="792ee720-5093-4cea-8ae0-a1ea1cb185dc" translate="no"><source>
+<x id="28" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="beb5e6c6-2296-4aa5-b04f-0b5d1da48cf9" translate="no"><source>
+<x id="29" /></source></trans-unit></group><group><sdl:cxts><sdl:cxt id="3" /></sdl:cxts>
+<trans-unit id="986eaafd-1c0f-4830-8b45-86221f7c46aa"><source><g id="30">return to home page</g></source><seg-source><g id="30"><mrk mtype="seg" mid="13">return to home page</mrk></g></seg-source><target><g id="30"><mrk mtype="seg" mid="13" /></g></target><sdl:seg-defs><sdl:seg id="13" origin="not-translated" /></sdl:seg-defs></trans-unit>
+<trans-unit id="2b0a4907-9641-4a70-9c6c-1f1f0694766a" translate="no"><source><x id="31" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="11daa41d-bcf5-4954-8adc-d3086af6eabb" translate="no"><source>
+<x id="32" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="fe580294-ba0a-4fed-82ad-8e488b5fb026" translate="no"><source>
+
+</source></trans-unit>
+<trans-unit id="cede37c8-1d67-4c34-8bff-f9ca749a8aef"><source><x id="33" /></source><seg-source><x id="33" /></seg-source><target><x id="33" /></target></trans-unit>
+<trans-unit id="6ce9d43e-23bb-4c17-b79b-8d5214172a82" translate="no"><source>
+<x id="34" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="1bc47eaa-5a93-440c-9867-cc20daba6a85" translate="no"><source>
+<x id="35" /></source></trans-unit></group><group><sdl:cxts />
+<trans-unit id="4d78e11d-164e-41d3-918a-497c5c79210b" translate="no"><source>
+
+
+	
+</source></trans-unit></group></body></file></xliff>

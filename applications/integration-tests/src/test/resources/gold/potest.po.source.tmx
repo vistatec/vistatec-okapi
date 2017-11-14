@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="unknown" creationtoolversion="unknown" segtype="paragraph" o-tmf="unknown" adminlang="en" srclang="en" datatype="text"></header><body>
+<tu tuid="N93745AA6">
+<tuv xml:lang="en"><seg>Text with an approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+<tuv xml:lang="fr"><seg>Text with an approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+</tu>
+<tu tuid="P2FB90C53">
+<tuv xml:lang="en"><seg>Text with non-approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+<tuv xml:lang="fr"><seg>Text with non-approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+</tu>
+<tu tuid="NCDA4D8A8">
+<tuv xml:lang="en"><seg>First sentence. Second sentence with <ph x="1" type="regxph">%s</ph>.</seg></tuv>
+<tuv xml:lang="fr"><seg>First sentence. Second sentence with <ph x="1" type="regxph">%s</ph>.</seg></tuv>
+</tu>
+<tu tuid="ND00CDCC1">
+<tuv xml:lang="en"><seg>Text 2 with non-approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+<tuv xml:lang="fr"><seg>Text 2 with non-approved translation <ph x="1" type="regxph">%s</ph></seg></tuv>
+</tu>
+<tu tuid="P24749192">
+<tuv xml:lang="en"><seg>Text without translation</seg></tuv>
+<tuv xml:lang="fr"><seg>Text without translation</seg></tuv>
+</tu>
+<tu tuid="N8F2BAB8B">
+<tuv xml:lang="en"><seg>Special chars: \&quot;=quot, &amp;=amp, &lt;=lt, &gt;=gt, &apos;=apos, Ą=U+0104</seg></tuv>
+<tuv xml:lang="fr"><seg>Special chars: \&quot;=quot, &amp;=amp, &lt;=lt, &gt;=gt, &apos;=apos, Ą=U+0104</seg></tuv>
+</tu>
+<tu tuid="N90CD1911-0">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> file</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> file</seg></tuv>
+</tu>
+<tu tuid="N90CD1911-1">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> files</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> files</seg></tuv>
+</tu>
+<tu tuid="N8C072106-0">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> file left to delete</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> file left to delete</seg></tuv>
+</tu>
+<tu tuid="N8C072106-1">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> files left to delete</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> files left to delete</seg></tuv>
+</tu>
+<tu tuid="P68A1DB2F-0">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> directory left</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> directory left</seg></tuv>
+</tu>
+<tu tuid="P68A1DB2F-1">
+<tuv xml:lang="en"><seg><ph x="1" type="regxph">%d</ph> directories left</seg></tuv>
+<tuv xml:lang="fr"><seg><ph x="1" type="regxph">%d</ph> directories left</seg></tuv>
+</tu>
+</body>
+</tmx>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--=================================================================-->
+<!--PLEASE, DO NOT RENAME, MOVE, MODIFY OR ALTER IN ANY WAY THIS FILE-->
+<!--=================================================================-->
+<manifest version="2" projectId="P7CE11370" packageId="c551ac86-3276-43d8-a63b-86440747d96d" source="en-us" target="ru-ru" originalSubDir="original" sourceSubDir="xini" targetSubDir="xini" mergeSubDir="translated" tmSubDir="" date="2011-12-07 21:25:10+0100" useApprovedOnly="0" updateApprovedFlag="0">
+<creatorParameters></creatorParameters>
+<doc xml:space="preserve" docId="1" extractionType="ontram" relativeInputPath="/test1.xlf" filterId="okf_xliff" inputEncoding="UTF-8" relativeTargetPath="/test1.out.xlf" targetEncoding="windows-1251" selected="1">I3YxCnVzZUN1c3RvbVBhcnNlci5iPWZhbHNlCmZhY3RvcnlDbGFzcz1jb20uY3RjLndzdHguc3RheC5Xc3R4SW5wdXRGYWN0b3J5CmZhbGxiYWNrVG9JRC5iPWZhbHNlCmVzY2FwZUdULmI9ZmFsc2UKYWRkVGFyZ2V0TGFuZ3VhZ2UuYj10cnVlCm92ZXJyaWRlVGFyZ2V0TGFuZ3VhZ2UuYj1mYWxzZQpvdXRwdXRTZWdtZW50YXRpb25UeXBlLmk9MAppZ25vcmVJbnB1dFNlZ21lbnRhdGlvbi5iPWZhbHNlCmFkZEFsdFRyYW5zLmI9ZmFsc2UKYWRkQWx0VHJhbnNHTW9kZS5iPXRydWUKaW5jbHVkZUV4dGVuc2lvbnMuYj10cnVlCnRhcmdldFN0YXRlTW9kZS5pPTAKdGFyZ2V0U3RhdGVWYWx1ZT1uZWVkcy10cmFuc2xhdGlvbgpxdW90ZU1vZGVEZWZpbmVkLmI9dHJ1ZQpxdW90ZU1vZGUuaT0w</doc>
+</manifest>

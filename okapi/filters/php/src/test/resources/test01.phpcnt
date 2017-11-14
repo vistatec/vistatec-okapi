@@ -1,0 +1,21 @@
+// Test of PHP **Content**
+
+// +++++++
+// Language / Character Set:
+$cnt['global']['window_title'] = '| A New Free Game Download Every Day';
+$cnt['global']['meta_charset'] = 'text/html; charset=UTF-8';
+$cnt['global']['meta_keywords'] = 'games, download games, online games, free games, play games, pc games, mac games, puzzle games, mahjong games, arcade games, card games, word games, big fish games';
+$cnt['global']['meta_description'] = 'Free game downloads &amp; online games at Gandalf Games - A new game every day! PC games &amp; mac games - Play puzzle games, arcade games, mahjong games, card games, word games and more! ';
+// 'not a string'
+/* "Not a string" */
+// Frequently-Used Text:
+$cnt['global']['LearnMore'] = 'Learn More';
+$cnt['global']['ReadMore'] = 'Read more...';
+
+$cnt['test']['test1'] = <<<end
+This is the text inside
+the heredoc data
+// including this
+end;
+// not this
+

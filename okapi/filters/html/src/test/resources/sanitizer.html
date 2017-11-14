@@ -1,0 +1,1783 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>The Anomy Sanitizer manual</title></head><body alink="#880000" bgcolor="#ffffff" text="#005500" vlink="#880000" link="#880000">    
+<a name="top">
+
+</a><h1><a name="top">WARNING:</a></h1>
+
+<p><a name="top">This document is outdated!  Please refer to the CHANGELOG for up-to-date
+information on new features.</a></p>
+
+<h1><a name="top">The </a><a href="http://mailtools.anomy.net/">Anomy</a> Sanitizer</h1>
+
+<p>
+    This file is slowly turning into the Anomy sanitizer's user manual.
+    The document is organized so that it makes sense to start at the
+    beginning, and read continuously until you reach the mailer-specific
+    configuration chapters.  From that point on, everything is optional,
+    read what interests you.  Well... the 
+    <a href="#feedback">feedback chapter</a> isn't really optional. 
+    Read it. <tt>:-)</tt>
+</p>
+
+<p>
+</p><ul>
+<li>    <a href="#general">Introduction</a>
+</li><li>    <a href="#requirements">Requirements</a>
+</li><li>    <a href="#install">Installation, testing</a>
+</li><li>    <a href="#config">Configuration</a>
+<ul>
+<li>    <a href="#conf-polvir">Policies and virus scanners</a>
+</li><li>    <a href="#conf-messages">Customizing messages</a>
+</li><li>    <a href="#conf-recommendations">Recommendations</a>
+</li><li>    <a href="#conf-real">A real-world configuration</a>
+</li></ul>
+</li><li>    In-transit sanitizing
+<ul>
+<li>    <a href="#in-transit-sendmail">sendmail</a>
+</li><li>    <a href="#in-transit-qmail">qmail</a>
+</li><li>    <a href="#in-transit-others">others</a>
+</li></ul>
+</li><li>    Performance
+<ul>
+<li>    <a href="#perf-cpu">CPU</a>
+</li><li>    <a href="#perf-memory">Memory</a>
+</li></ul>
+</li><li>    Miscellanious hints / FAQs
+<ul>
+<li>    <a href="#mh-scanner-codes">Virus scanning doesn't work!</a>
+</li><li>    <a href="#mh-anomy-env">The testcases succeed, but I can't run the Sanitizer!</a>
+</li><li>    <a href="#mh-anomy-env">What is the ANOMY environment variable for?</a>
+</li><li>    <a href="#pf-solaris-procmail">Solaris and procmail</a>
+</li><li>    <a href="#pf-postfix">Incoming mail and Postfix</a>
+</li><li>    <a href="#mh-memory-hog">Large messages and memory consumption</a>
+</li><li>    <a href="#mh-html-uuencode">Corrupt attachments from Outlook users</a>
+</li><li>    <a href="#mh-style-tag">Ugly HTML mail from Outlook users</a>
+</li></ul>
+</li></ul>
+<p></p>
+
+<p>
+</p><ul>
+<li>    <a href="#hacking">Hacking the Anomy sanitizer</a>
+<ul>
+<li>    <a href="#hack-design">Basic design</a>    
+</li><li>    <a href="#hack-streams">Why treat the mail as a stream?</a>
+</li><li>    <a href="#hack-cruft">Rough edges</a>
+</li><li>    <a href="#hack-standards">Standards</a>
+</li></ul>
+</li></ul>
+<p></p>
+
+<p>
+</p><ul>
+<li>    <a href="#feedback">Feedback</a>
+</li><li>    <a href="#credits">Credits &amp; GPL</a>
+</li></ul>
+<p></p>
+
+<!-- ---------------------------------------------------------------------- -->
+<a name="general"></a><hr><h2><a name="general">    Introduction    </a></h2>
+
+<p>
+<a name="general">    The Anomy sanitizer is what most people would call "an email virus
+    scanner". That description is not totally accurate, but it does cover
+    one of the more important jobs that the sanitizer can do for you - 
+    <b>it can scan email attachments for viruses</b>.  Other things it can 
+    do:
+</a></p>
+<p></p><ul>
+<li>
+<a name="general">    Disable potentially dangerous HTML code, such as javascript, within
+    incoming email.
+</a></li><li>
+<a name="general">    Protect you from email-based break-in attempts which exploit bugs in
+    common email programs (Outlook, Eudora, Pine, ...).
+</a></li><li>
+<a name="general">    Block or "mangle" attachments based on their file names.  This way if 
+    you don't <i>need</i> to recieve e.g. visual basic scripts, then you
+    don't have to worry about the security risk they imply (the ILOVEYOU
+    virus was a visual basic program).  This lets you protect yourself and
+    your users from whole classes of attacks, without relying on complex, 
+    resource intensive and <i>outdated</i> virus scanning solutions.
+</a></li></ul><p></p>
+<p>
+<a name="general">    The sanitizer is designed not to waste important system resources 
+    (</a><a href="#perf-cpu">CPU</a>, <a href="#perf-memory">memory</a>, disk
+    space) unnecessarily, and does so by treating it's input as a stream
+    which is scanned and rewritten a little bit at a time.
+</p>
+<p>
+    One of the core ideas behind the design of the sanitizer, is that just
+    because a message contains an infected attachment doesn't mean that the
+    rest of it shouldn't be delivered.  Email often contains important
+    information, and it is vital that a tool like this interrupt the normal
+    flow of communication as little as possible.  It's common courtesy to
+    <a href="#conf-messages">inform the user</a> of any changes that are 
+    made.  The Anomy sanitizer tries to follow these rules.
+</p>
+<p>
+    The sanitizer is based on solid foundations - most of the ideas
+    implemented in the first versions of the sanitizer were ported from John
+    D. Hardin's
+    "<a href="http://www.impsec.org/email-tools/procmail-security.html">email
+    security through procmail</a>" package.  The sanitizer, like the code it
+    is based on, is <b>Free Software</b> in the 
+    <a href="http://www.gnu.org/">GNU</a> sense of the term - the sanitizer
+    may be modified and redistributed according to the terms of the GNU 
+    General Public License.
+</p>
+<p>
+    The following is a random sample of the attacks that are blocked by
+    the Anomy sanitizer in it's most common configurations (as of release
+    1.28):
+</p>
+<p></p><ul>
+
+<li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1899">Microsoft Windows 2000 ActiveX Control Buffer Overflow Vulnerability</a> 
+
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1869">Microsoft Exchange Server Invalid MIME Header charset = "" DoS 
+    Vulnerability</a> 
+
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1718">Microsoft Internet Explorer / Outlook Express GetObject() File Disclosure 
+    Vulnerability</a> 
+
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1709">Pine "From:" Buffer Overflow Vulnerability</a> 
+
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1481">Microsoft Outlook / Outlook Express GMT Field Buffer Overflow 
+    Vulnerability</a> 
+
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1394">Microsoft Internet Explorer and Outlook/Outlook Express Remote File 
+    Write Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1285">ITHouse Mail Server 1.04 Buffer Overflow Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1034">Microsoft Clip Art Buffer Overflow Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D962">MS Outlook Express 5 Javascript Email Access Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D775">Microsoft ActiveX CAB File Execution Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1754">Microsoft Virtual Machine com.ms.activeX.ActiveXComponent Arbitrary 
+    Program Execution Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1502">Microsoft Outlook Express Persistent Mail-Browser Link Vulnerability</a> 
+    
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D1195">Microsoft Outlook 98 / Outlook Express 4.x Long Filename Vulnerability</a> 
+  
+</li><li><a href="http://www.securityfocus.com/frames/?content=/vdb/bottom.html%3Fvid%3D125">Multiple Vendor Buffer Overflow in MIME-aware Mail and News Clients 
+    Vulnerability</a> 
+    
+</li></ul><p></p>
+<p>
+    In all cases the above exploits are blocked by some sort of generic
+    mechanism which will prevent a number of related attacks against similar
+    software with similar problems. This list doesn't include the
+    more common low-tech trojan-horse/social engineering attack methods
+    which are best handled with user education and an automatically
+    enforced attachment policy.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="requirements"></a><hr><h2><a name="requirements">    Requirements    </a></h2>
+
+<p>
+<a name="requirements">    The Anomy sanitizer is developed on a RedHat Linux system running
+    Perl 5.005_03.  Any newer version of Perl on a Unix platform should
+    work fine.  The sanitizer has very modest module requirements, and
+    only needs the following Perl modules to be present on your system:
+</a></p>
+<p></p><ul>
+<li><a name="requirements">    MIME::Base64
+</a></li><li><a name="requirements">    MIME::QuotedPrint
+</a></li></ul><p></p>
+<p>
+<a name="requirements">    Consult your perl documentation (hint: "man CPAN") for information on
+    how to install these if you haven't already.
+</a></p>
+<p>
+<a name="requirements">    The sanitizer makes no assumptions about what mailer you are using - it
+    has been configured to work well with 
+    </a><a href="#in-transit-sendmail">sendmail</a> and 
+    <a href="#in-transit-qmail">qmail</a>, and it should be relatively
+    easy to <a href="#in-transit-others">get it to work with others</a>, 
+    such as postfix or exim.
+</p>
+<p>
+    For testing purposes, it may be a good idea to invoke the sanitizer from
+    within <a href="http://www.procmail.org/">procmail</a>, since
+    procmail does a very good job of recovering mail if the sanitizer
+    panics (e.g. because of an invalid configuration file) and can easily be
+    configured to keep backup copies of all processed messages.
+</p>
+<p>
+    If you want to scan attachments for viruses, you will need a third party
+    virus scanner which can be invoked from the command line to scan a
+    single file.  The virus scanner must return an exit code describing
+    whether the file is infected or not, and may optionally also use exit
+    codes to indicate that the file was successfully disinfected.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="install"></a><hr><h2><a name="install">    Installation, testing    </a></h2>
+
+<p>
+<a name="install">    Download the most recent sanitizer from the web and install all the 
+    </a><a href="#requirements">prerequisites</a>.  The sanitizer can be
+    downloaded from it's home page,
+    <a href="http://mailtools.anomy.net/">mailtools.anomy.net</a>.
+</p><p>
+    Unpack the tarball somewhere on your system, e.g. in <tt>/usr/local/</tt>
+    or your home directory.  It will create a directory named <tt>anomy/</tt>
+    which will contain this file and a directory named <tt>bin/</tt> 
+    containing the sanitizer itself and the MIME parsing module it depends on.
+</p>
+<p>
+    Next, you should run the included test cases to make sure that the 
+    sanitizer functions properly on your system.  Enter the
+    <tt>anomy/testcases</tt> directory, and give the command
+    <tt>./testall.sh</tt>.  This will perform all included tests, and
+    compare their results to files named <tt>test-name.ok</tt> in the
+    subdirectory named results.def.  You can examine these files to see how
+    the sanitizer alters email.  If a test fails, a <tt>test-name.diff</tt>
+    file is created which shows the difference between the expected value
+    and the test result.  Empty lines are usually harmless, but any other
+    failures should be reported back to the author.
+</p>
+<p>
+    If you cannot figure out why a test failed and wish to submit a bug
+    report, please include information about your operating system and a
+    copy of the relevant <tt>test-name.failed</tt> file.   If all tests 
+    succeed, then the sanitizer is ready to be used.
+</p>
+<p>
+    To test the sanitizer on one of your own messages, you can invoke the it 
+    from the command line, like this (bourne shell syntax):
+</p>
+<p></p><font color="#000000"><pre>    $ cd /path/to/anomy
+    $ export ANOMY=/path/to/anomy
+    $ ./bin/sanitizer.pl &lt; /path/to/message |more
+</pre></font>
+<p>
+    This is an excellent way to test your first configuration file, simply
+    add the path to your configuration file to the command line invoking the
+    sanitizer, as the first argument:
+</p>
+<p></p><font color="#000000"><pre>    $ ./bin/sanitizer.pl /etc/sanitizer.cfg &lt; /path/to/message |more
+</pre></font>
+<p>
+    For a more extended test, you may want to sanitize only a single user's
+    mail until you are comfortable with the tool.  How this is done depends
+    on your mailer, but one common case (sendmail and procmail) is very
+    simple.  Just add the following lines to the user's <tt>.procmailrc</tt> 
+    file:
+</p>
+<p></p><font color="#000000"><pre>   :0 c
+   backup-mailbox
+
+   ANOMY=/path/to/anomy/
+   :0 fw
+   |/path/to/anomy/bin/sanitizer.pl
+</pre></font>
+<p>
+    The first rule creates a backup of all messages, in a mailbox named
+    <tt>backup-mailbox</tt>.  Since you will probably make mistakes as you
+    define your first policy, this is probably a good idea in case the
+    sanitizer mistakenly destroys your mail.  The second rule passes the
+    messages through the sanitizer, using procmail's filter feature,
+    possibly rewriting the message to deactivate virii, trojans, etc.
+</p>
+<p>
+    If you had created a configuration file named
+    <tt>/path/to/sanitizer.cfg</tt>, then the sanitization rule would be 
+    modified to read as follows:
+</p>
+<p></p><font color="#000000"><pre>   :0 fw
+   |/path/to/anomy/bin/sanitizer.pl /path/to/sanitizer.cfg
+</pre></font>
+<p>
+    Note that this is a completely valid way to invoke the sanitizer - if
+    your system administrator won't install it globally, but you have access
+    to your <tt>.procmailrc</tt> file, you can simply sanitizer your own mail
+    in this fashion.  Also, instead of putting those rules in a 
+    <tt>.procmailrc</tt> file, you can put them in <tt>/etc/procmailrc</tt>
+    instead and thus sanitize all mail delivered to local users.
+</p><p>
+</p>
+    <a href="http://www.procmail.org/">Procmail</a> is an excellent tool, and 
+    it can be configured to work with most popular MTAs, including 
+    <a href="http://www.sendmail.org/">sendmail</a>,
+    <a href="http://www.postfix.net/">postfix</a>,
+    <a href="http://www.qmail.org/">qmail</a> and
+    <a href="http://www.exim.org/">exim</a>.  Using procmail is
+    probably the easiest way to take advantage of the sanitizer.  
+<p></p>
+<p>
+    <b>Note</b>:  The above recipies may not be sufficient to get the 
+    sanitizer to work on your platform - if you have problems, please be 
+    sure to check the <a href="http://mailtools.anomy.net/sanitizer.html">newest version</a> of this manual for platform specific instructions,
+    as well as the <b>procmail(1)</b>, <b>procmailrc(1)</b> and 
+    <b>procmailex(1)</b> man pages.  Of particular interest when debugging 
+    procmail related problems are the <tt>LOGFILE</tt> and <tt>VERBOSE</tt>
+    directives.  Also be sure to check the <tt>contrib/</tt> directory of
+    the distribution for user-contributed tips and tricks.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="config"></a><hr><h2><a name="config">Configuration</a></h2>
+
+<p>
+<a name="config">    Most of the policies and messages generated by the sanitizer can be
+    customized.  The sanitizer understands a single configuration syntax,
+    accepting configuration commands either on a line-by-line basis from one
+    or more text files, or via command-line arguements (each arguement
+    corrosponding to one line from a file).  A simple configuration file
+    might look like this:
+</a></p>
+<p></p><a name="config"><font color="#000000"><pre>   # this is a comment, bla bla
+   #
+   feat_log_stderr = 1      # enable logging to stderr
+   feat_log_inline = 0      # disable logging in the message itself
+   feat_trust_pgp = 1       # trust signed or encrypted messages
+   
+   # Disable most of the advertisements the sanitizer would otherwise
+   # put in the header, replace them with our own bogus ones.
+   #
+   header_info = X-Virus-Scanned: Secured by FooCorp RealSecure MailWall
+   header_info += \nX-Garbage: \# this is not a comment # but this is
+   header_url = 0
+   header_rev = 0
+
+   # Include more configuration...
+   #
+   /path/to/policy/configuration/file
+   /path/to/another/configuration/file
+</pre></font>
+</a><p>
+<a name="config">    And could be activated like this:
+</a></p>
+<p></p><a name="config"><font color="#000000"><pre>    $ sanitizer.pl /path/to/configuration/file
+</pre></font>
+</a><p>
+<a name="config">    The first setting (logging to standard error) could also have been
+    activated with this command line:
+</a></p>
+<p></p><a name="config"><font color="#000000"><pre>    $ sanitizer.pl "feat_log_stderr = 1"
+</pre></font>
+</a><p>
+<a name="config">    The quotation marks are important, otherwise the shell would pass
+    "feat_log_stderr", "=" and "1" to the sanitizer as seperate arguements,
+    which wouldn't work.  Please resist the urge to create configuration
+    files with have '='-signs in their names.
+</a></p>
+<p>
+<a name="config">    Configuration files may be nested arbitrarily, but to prevent infinite
+    loops the sanitizer will by default stop reading after 5 levels of
+    nesting.  This maximum recursion level may be altered by setting the
+    "max_conf_recursion" variable.
+</a></p>
+<p>
+<a name="config">    Giving the sanitizer a bogus arguement will make it print an error
+    message and the current configuration to standard error.  Appending a
+    nonsensical arguement to your normal command line will thus allow you to
+    compare the sanitizer's actual configuration with what you had in mind.
+</a></p>
+<p>
+<a name="config">    The example in the next section displays the complete list of
+    configuration variables.  An effort will be made not to break
+    compatibility in future releases, although new variables will certainly
+    be introduced as the program evolves.
+</a></p>
+
+
+<p><a name="config">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="conf-polvir"></a><hr><h2><a name="conf-polvir">Configuration - Policies and virus scanners</a></h2>
+
+<p>
+<a name="conf-polvir">    The Anomy sanitizer can process any attachments using a third party
+    virus scanner.  Whether a virus scanner is used, and how it's results
+    are interpreted depends on the rules defined by the administrator.
+</a></p>
+<p>
+<a name="conf-polvir">    Rules are defined by a set of policies.  Each policy is assumed to apply
+    to all attachments not matching any previous policy, and whose file name
+    matches the policy's regulaur expression.  The policies enforced can be
+    "accept", "defang", "mangle", "save" and "drop" in order of increasing
+    strictness.  In addition, the "unknown" policy will tell the sanitizer
+    to check the next rule.  The panic policy has been depraciated and is
+    (for backwards compatibility) equivalent to the "drop" policy.
+</a></p>
+<p>
+<a name="conf-polvir">    Attachments which are accepted aren't altered at all.  The defang and
+    mangle policies effect the attachment's file name, with mangle
+    destroying the original file name completely.  The save and drop
+    policies will remove the attachment from the message, replacing it with
+    a text message.  With drop the attachment will be deleted, with save it
+    will be left on the sanitizer's host file system for examination by an
+    administrator.  If the policy is unknown, the attachment will be
+    compared with other, lower-priority policies.
+</a></p>
+<p>
+<a name="conf-polvir">    Appending an exclamation mark (!) to a policy will make it have the
+    side-effect of increasing the internal "bug score" past the "score_bad"
+    value, causing the program to return with a non-zero exit code.
+</a></p>
+<p>
+<a name="conf-polvir">    An example follows, illustrating most of the stuff involved in defining
+    a policy.  Please note that this isn't necessarily a /good/ policy, it's
+    just an example.
+</a></p>
+<p></p><a name="conf-polvir"><font color="#000000"></font></a><pre><a name="conf-polvir"><font color="#000000"> #
+ # These are the default values for all feature switches.
+ #
+ feat_verbose = 1    # Warn user about unscanned parts, etc.
+ feat_log_inline = 1 # Inline logs: 0 = Off, 1 =  Maybe, 2 = Force
+ feat_log_stderr = 1 # Print log to standard error
+ feat_log_xml = 0    # Don't use XML format for logs.
+ feat_log_trace = 0  # Omit trace info from logs.
+ feat_log_after = 0  # Don't add any scratch space to part headers.
+ feat_files = 1      # Enable filename-based policy decisions.
+ feat_force_name = 0 # Force all parts (except text/plain and
+                     # text/html parts) to have file names.
+ feat_boundaries = 0 # Replace all boundary strings with our own
+                     # NOTE:  Always breaks PGP/MIME messages!
+ feat_lengths = 1    # Protect against buffer overflows and null
+                     # values.
+ feat_scripts = 1    # Defang incoming shell scripts.
+ feat_html = 1       # Defang active HTML content.
+ feat_webbugs = 0    # Web-bugs are allowed.
+ feat_trust_pgp = 0  # Don't scan PGP signed message parts.
+ feat_uuencoded = 1  # Sanitize inline uuencoded files.
+ feat_forwards = 1   # Sanitize forwarded messages
+ feat_testing = 0    # This isn't a test-case configuration.
+ feat_fixmime = 1    # Fix invalid MIME, if possible.
+ feat_paranoid = 0   # Don't be excessively paranoid about MIME headers etc. 
+ #
+ # Scoring
+ #
+ score_bad = 100     # Any message requring this many modifications
+                     # will cause the sanitizer to return a non-zero
+		     # exit code after processing the entire message.
+ #
+ # You may need to increase the following if you have a very
+ # complex configuration split between multiple files.
+ #
+ max_conf_recursions = 5    # The default is 5.
+ #
+ # Create temporary or saved files using this template.
+ # An attachment named "dude.txt" might be saved as 
+ #
+ #  /var/quarantine/att-dude-txt.A9Y
+ #
+ # Note:  The directory must exist and be writable by
+ # the user running the sanitizer.
+ #
+ file_name_tpl = /var/quarantine/att-$F.$$$
+
+ # We have three policies, in addition to the default which is
+ # to defang file names.
+ #
+ file_list_rules = 3
+ file_default_policy = defang
+ file_default_filename = unnamed.file
+   
+ # Delete obviously executable attachments.  This list is VERY
+ # incomplete!  This is a perl regular expression, see "man 
+ # perlre" for info.  The (?i) prefix makes the regexp case 
+ # insensitive.
+ #
+ # There is only one policy, since we aren't using an external
+ # scanner.  The file list is split accross two lines, for fun.
+ #
+ file_list_1  = (?i)\.(exe|com
+ file_list_1 += |cmd|bat)$
+ file_list_1_policy = drop
+ file_list_1_scanner = 0
+
+ # Scan mp3 files for Evil Viruses, using the imaginary mp3virscan
+ # utility.  Always define FOUR potential policies, which depend on the
+ # exit code returned by the scanner.  Which code means what is 
+ # defined in the scanner line, which must contain THREE entries.
+ # The fourth policy is used for "anything else".
+ #
+ #   "accept" if the file is clean (exit status 0 or 1)
+ #   "mangle" if the file was dirty, but is now clean (2 or 4)
+ #   "drop"   if the file is still dirty (66)
+ #   "save"   if the mp3virscan utility returns some other exit code
+ #            or an error occurs.
+ #
+ file_list_2 = (?i)\.(mp3|mp2|mpg)$
+ file_list_2_policy = accept:mangle:drop:save
+ file_list_2_scanner = 0,1:2,4:66:/path/to/mp3virscan -opt -f %FILENAME
+
+ # Scan WinWord and Excel attachments with built-in macro scanner.
+ # We consider anything exceeding the score of 25 to be dangerous,
+ # and save it in the quarantine.
+ #
+ file_list_3 = (?i)\.(doc|dot|xls|xlw)$
+ file_list_3_policy = accept:accept:save:save
+ file_list_3_scanner = 0:1:2:builtin/macro 25
+</font></a></pre><a name="conf-polvir"><font color="#000000"></font>
+</a><p>
+<a name="conf-polvir">    This probably needs to be documented better - if you are brave, you can
+    try reading the comments in <tt>sanitizer.pl</tt> and/or
+    <tt>bin/Anomy/Sanitizer.pm</tt> to get a better idea 
+    of how this works.  The text messages used to replace dropped or saved 
+    attachments can be customized by setting the msg_file_save and 
+    msg_file_drop variables.
+</a></p>
+<p>
+<a name="conf-polvir">    Note that these rules don't apply to message parts without file names,
+    such parts are either treated as plain text, HTML, or left alone.  In
+    the future policies based on MIME types or "magic" guessing might be
+    added to the sanitizer.
+</a></p>
+<p>
+<a name="conf-polvir">    Please send me information about how to configure different
+    file_list_N_scanner lines for use with the commercial virus scanners out
+    there!
+</a></p>
+
+
+<p><a name="conf-polvir">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="conf-messages"></a><hr><h2><a name="conf-messages">Configuration - Customizing messages</a></h2>
+
+<p>
+<a name="conf-messages">    All messages, except for the sanitizer log file can be customized
+    from within a sanitizer configuration file.  An example:
+</a></p>
+<p></p><a name="conf-messages"><font color="#000000"></font></a><pre><a name="conf-messages"><font color="#000000"> #
+ # Add two lines of informational headers to each message.
+ #
+ header_info  = X-Sanitizer: Gotcha!
+ header_info += \nX-Gotcha: Sanitizer!
+ #
+ # Disable these builtin headers.
+ #
+ header_url = 0
+ header_rev = 0
+ #
+ # Replace the "DEFANGED" string with "FIXED".  This 
+ # string is used to mangle file names, HTML and other 
+ # stuff within the message, so the user might see it.
+ #
+ msg_defanged = FIXED
+ #
+ # Also replace a couple of other similar strings.
+ # These are only used by the filename mangling code.
+ #
+ msg_blacklisted = EVIL
+ #
+ # Replace the defaults with truly obnoxious messages.
+ # These two replace attachments which are dropped or
+ # saved.
+ #
+ msg_file_drop  = *****\n
+ msg_file_drop += HA HA, I DROPPED YOUR ATTACHMENT!\n
+ msg_file_drop += Now you'll never see %FILENAME again!
+ msg_file_drop += *****\n
+ #
+ msg_file_save  = *****\n
+ msg_file_save += Added %FILENAME as %SAVEDNAME to my\n
+ msg_file_save += stolen email collection.\n
+ msg_file_save += *****\n
+ #
+ # This is prepended to PGP signed/encrypted message
+ # parts, to warn the user.
+ #
+ msg_pgp_warning = WARNING: Unsanitized content follows.\n
+ #
+ # Tell the user what's going on.  This prefixes the
+ # sanitizer log, which is always in english.
+ #
+ msg_log_prefix  = This message has been sanitized.  Stuff\n
+ msg_log_prefix += may have been altered - the following\n
+ msg_log_prefix += log explains what was done and why.\n
+ #
+</font></a></pre><a name="conf-messages"><font color="#000000"></font>
+</a><p>
+<a name="conf-messages">    Although I can't imagine why you would want to, you can also redefine
+    the messages "msg_usage" and "msg_current".  These messages are only
+    displayed when you invoke the sanitizer incorrectly at the command line.
+</a></p>
+<p>
+<a name="conf-messages">    If you take advantage of this facility to translate the default messages
+    to your language, please consider sharing your translation with me so I
+    can include it in future releases of the sanitizer.
+</a></p>
+
+
+<p><a name="conf-messages">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="conf-recommendations"></a><hr><h2><a name="conf-recommendations">Configuration - Recommendations</a></h2>
+
+<p>
+<a name="conf-recommendations">    In general, I recommend using "defang" as a default policy since keeping
+    track of which extensions are executable or scriptable in the windows
+    world this week strikes me as a rather daunting task.  Defanging
+    (mangling the file names) allows the data to reach the user, but forces
+    users to take an extra step and think about what they are doing before
+    they can open and work with whatever they were sent.
+</a></p>
+<p>
+<a name="conf-recommendations">    A policy to "accept" safe extensions such as .gif, .jpg etc can be added
+    to make life easier for your users.
+</a></p>
+<p>
+<a name="conf-recommendations">    Microsoft Office documents, the most common executables, and archives
+    (zip etc.) should probably be scanned with a commercial virus scanner.
+    If you don't absolutely need to receive executable content via. email,
+    consider blocking it entirely.
+</a></p>
+<p>
+<a name="conf-recommendations">    It is rather important to block Microsoft application/ms-tnef files,
+    which are usually named "winmail.dat".  The TNEF encoding is currently
+    not understood by the sanitizer, which means it can easily be used to
+    smuggle malicious attachments past the sanitizer unless it is blocked.
+</a></p>
+<p>
+<a name="conf-recommendations">    The default policies coded into the sanitizer try to accept all sorts of
+    plain text files, images, audio files, archives and movies.  The most
+    common Microsoft documents are scanned by the internal macro scanner,
+    and if they exceed a threshold of 25 the attachments are removed and put
+    in quarantine. Note that their names are not defanged by default, since
+    that would probably get users up in arms.  Anything else is defanged by
+    the default policy.
+</a></p>
+<p>
+<a name="conf-recommendations">    If you are paranoid, don't use the default configuration!
+</a></p>
+<p>
+<a name="conf-recommendations">    Finally, no matter what your policy - at least <i>try</i> to educate
+    your users.  Do this both for security's sake, and to keep people from
+    getting mad when their email gets rewritten.  If people know what is
+    going on and why, then they are much less likely to complain.
+</a></p>
+<p>
+<a name="conf-recommendations">    If you intend to use the program regularly, I recommend subscribing to
+    the anomy-list mailing list (see the 
+    </a><a href="http://mailtools.anomy.net/">Anomy home page</a> for more
+    information).  The traffic is currently very low, and is primarily used
+    to announce new versions or warn users of email-related hazards.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="conf-real"></a><hr><h2><a name="conf-real">A real-world configuration</a></h2>
+
+<p>
+<a name="conf-real">    The following instructions document a real-world configuration, very
+    similar to one currently in use in a production environment, on a
+    sendmail mail gateway. Instructions for configuring sendmail itself
+    are omitted since they are identical to those covered elsewhere in
+    this document.
+</a></p>
+<p>
+<a name="conf-real">    The configuration itself is stored in <tt>/etc/sanitizer.cfg</tt>, and 
+    looks about like this:
+</a></p>
+<p></p><a name="conf-real"><font color="#000000"><pre>  # Active features.
+  #
+  feat_boundaries     = 0
+  feat_files          = 1
+  feat_forwards       = 1
+  feat_html           = 1
+  feat_lengths        = 1
+  feat_log_inline     = 1
+  feat_log_stderr     = 0
+  feat_scripts        = 1
+  feat_trust_pgp      = 0
+  feat_uuencoded      = 1
+  feat_verbose        = 1
+  file_list_rules     = 4
+  #
+  # Note:  This directory must exist and be writable by
+  # the user running the sanitizer.
+  #
+  file_name_tpl       = /var/quarantine/att-$F-$T.$$
+
+  # Files we absolutely don't want (mostly executables).
+  #
+  file_list_1_scanner = 0
+  file_list_1_policy  = save
+  file_list_1         = (?i)(winmail\.dat
+  file_list_1        += |\.(exe|vb[es]|c(om|hm)|bat|pif|s(ys|cr))
+  file_list_1        += (\.g?z|\.bz\d?)*)$
+
+  # Pure data, don't mangle this stuff (much).
+  #
+  file_list_2_scanner = 0
+  file_list_2_policy  = accept
+  file_list_2         = (?i)\.(gif|jpe?g|pn[mg]|x[pb]m|dvi|e?ps|p(df|cx)|bmp
+  file_list_2        += |mp[32]|wav|au|ram?
+  file_list_2        += |avi|mov|mpe?g
+  file_list_2        += |t(xt|ex)|csv|l(og|yx)|sql|jtmpl
+  file_list_2        += |[ch](pp|\+\+)?|s|inc|asm|pa(tch|s)|java|php\d?
+  file_list_2        += |[ja]sp
+  file_list_2        += |can|pos|ux|reg|kbf|xal|\d+)(\.g?z|\.bz\d?)*$
+
+  file_list_3_scanner = 0
+  file_list_3_policy  = accept
+  file_list_3         = ^[^\.]+$
+
+  # Archives and scriptable stuff - virus scan these.
+  # NOTE:  There must be THREE groups of exit codes and FOUR policies,
+  #      - the first three match the code groups, the fourth is default.
+  #
+  file_list_4_scanner = 0:5:3,4:/usr/local/bin/avp.sh %FILENAME
+  file_list_4_policy  = accept:accept:save:save
+  file_list_4         = (?i)\.(xls|d(at|oc)|p(pt|l)|rtf|[sp]?html?
+  file_list_4        += |class|upd|wp\d?|m?db
+  file_list_4        += |z(ip|oo)|ar[cj]|lha|[tr]ar|rpm|deb|slp|tgz
+  file_list_4        += )(\.g?z|\.bz\d?)*$
+
+  # Default policy: accept, but mangle file name.
+  #
+  file_default_policy = defang
+</pre></font>
+</a><p>
+<a name="conf-real">    This policy invokes the </a><a href="http://www.avp.ru/">AVP</a> virus 
+    scanner for common Microsoft document formats and compressed archives. 
+    The scanner (<tt>AvpLinux</tt>) is installed in <tt>/usr/local/avp</tt>, 
+    and it's virus database is in the subdirectory <tt>avc</tt>. The scanner 
+    is invoked by calling the <tt>/usr/local/bin/avp.sh</tt> script, which 
+    looks like this:
+</p>
+<font color="#000000"></font><pre><font color="#000000">  #!/bin/bash
+
+  cd /usr/local/avp/avc
+  [ "$1" = "" ] &amp;&amp; exit 21
+  [ -f "$1" ] || exit 20
+  exec ../AvpLinux -M -P -B -- $1 2&gt;/dev/null &gt;/dev/null
+</font></pre><font color="#000000"></font>
+<p>
+    Keeping the virus database in it's own special directory simplifies
+    updating it automatically. Such updates can be accomplished by invoking
+    a script once a week from cron. My script looks like this:
+</p>
+<font color="#000000"><pre>  #!/bin/bash
+  #
+  cd /usr/local/avp/
+  rm -rf avc-old
+  mkdir avc-update     || exit 1
+  cd avc-update        || exit 1
+
+  ncftpget -V -R ftp.avp.ru . '/updates/*' || (echo 'Failed!'; exit 2)
+
+  ../AvpLinux ../infected.doc &gt;/dev/null 2&gt;/dev/null
+  [ "$?" != "4" ] &amp;&amp; (echo 'Failed!'; exit 3)
+
+  echo "OK, update complete, activating new files."
+  cd ..
+  mv avc avc-old &amp;&amp; mv avc-update avc
+</pre></font>
+<p></p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="in-transit-sendmail"></a><hr><h2><a name="in-transit-sendmail">In-transit sanitizing - sendmail</a></h2>
+<p>
+<a name="in-transit-sendmail">    The following instructions describe <b>two</b> different methods to
+    sanitize in-transit email with sendmail.  This works fine on a mail
+    gateway, but if you are just sanitizing mail being delivered to local
+    recipients (on the same machine as the sanitizer) then it is far simpler
+    and safer to use procmail as your local delivery agent and invoke the
+    sanitizer as described in the </a><a href="#install">installation chapter</a>.
+</p>
+<p>
+    One method involves using procmail as an intermediate layer between
+    sendmail and the sanitizer, the other method invokes the sanitizer
+    directly.  The procmail method is recommended, since procmail provides
+    simple and robust error handling and logging functions.  On the other
+    hand, the procmail method may be signifigantly slower, since it involves
+    at least twice as many I/O operations and perhaps some disk accesses as
+    well.  On an already loaded system, this may not be acceptible overhead.
+</p>
+<p>
+    The choice is yours - but whatever you do <b>be careful</b>, and be sure
+    to test this carefully on a non-production machine before implementing
+    it anywhere important!  Keep in mind that sendmail is a tricky beast and
+    this may not work on your system without lots of modifications.  This
+    works for <i>me</i>, but <i>your</i> mileage may vary.
+</p>
+<p></p><ol>
+<li><p>
+    If you <b>are</b> using procmail, skip steps 2. and 3.<br>
+    If you <b>are not</b> using procmail, skip steps 4. and 5.
+</p>    
+</li><li><p>
+    If you <b>are</b> using procmail, <b>skip</b> this step.<br>
+    Create the following shell script,  e.g. in 
+    <tt>/usr/local/bin/sanitize</tt>.
+</p>
+<p></p><font color="#000000"><pre>  #!/bin/sh
+  #
+  export ANOMY=/path/to/anomy
+  export CFG=/path/to/sanitizer/configuration
+  exec $ANOMY/bin/sanitizer.pl $CFG | /path/to/sendmail -oi -f ${@+"$@"}
+</pre></font>
+<p>
+    Be sure to set all the paths to whatever makes sense on your system.
+    Don't forget to make the script executable 
+    (<tt>chmod +x /usr/local/bin/sanitize</tt>).
+</p>
+</li><li><p>
+    If you <b>are</b> using procmail, <b>skip</b> this step.<br>
+    Add the following mailer specification to <tt>sendmail.cf</tt>.  It's a 
+    good idea to add this to the part of the file containing the <i>other</i>
+    mailer definitions.
+</p>
+<p></p><font color="#000000"><pre>  Msanitize,
+     P=/usr/local/bin/sanitize, F=DFMmhu, 
+     S=11/31, R=21/31, T=DNS/RFC822/X-Unix, A=sanitize $f $u
+</pre></font>
+</li><li><p>
+    If you <b>are not</b> using procmail, <b>skip</b> this step.<br>
+    Create a procmail configuration file named <b>/etc/sanitizer.rc</b> 
+    like this:
+</p>
+<p></p><font color="#000000"><pre>  # Procmail filter rules for sanitizing email and then resending it.
+  # Uncomment the following lines to enable logging or verbose logging.
+  # VERBOSE=yes 
+  # LOGFILE=/var/log/procmail-sanitizer.log
+  
+  ANOMY=/path/to/anomy/
+  :0 f
+  | $ANOMY/bin/sanitizer.pl /path/to/sanitizer/configuration
+
+  :0 
+  ! -oi -f "$@"
+</pre></font>
+<p>
+    Be sure to set all the paths to whatever makes sense on your system.
+</p>
+</li><li><p>
+    If you <b>are not</b> using procmail, <b>skip</b> this step.<br>
+    Add the following mailer specification to <tt>sendmail.cf</tt>, if 
+    it doesn't exist already.  It's a good idea to add this to the part of 
+    the file containing the <i>other</i> mailer definitions.  Be sure to 
+    adjust the path to the procmail binary to match your system.
+</p> 
+<p></p><font color="#000000"><pre>  Mprocmail,
+     P=/usr/bin/procmail, F=DFMmShu, 
+     S=11/31, R=21/31, T=DNS/RFC822/X-Unix, A=procmail -m $h $f $u
+</pre></font>
+</li><li><p>
+    Add the following rules to sendmail.cf, either in ruleset 98 (local
+    hacks, on RedHat systems) or right before the virtual user stuff in
+    ruleset 0:
+</p>
+<p></p><font color="#000000"><pre>  # Sanitize with procmail:
+  #R$* &lt; @test.com. &gt; $* $#procmail $@/etc/sanitizer.rc $:$1&lt;@test.com.CLEAN.&gt;$2
+  # Sanitize without procmail:
+  #R$* &lt; @test.com. &gt; $* $#sanitize $@anomy $:$1&lt;@test.com.CLEAN.&gt;$2
+  R$* &lt; @ $+ .CLEAN. &gt; $*   $1&lt;@$2.&gt;$3
+  R$* &lt; @ $+ .CLEAN &gt; $*    $1&lt;@$2.&gt;$3 
+                          ^
+                           use TABS here!
+</pre></font>
+<p>
+    <b>Notes:</b> Only one of the two .CLEAN rules are necessary -
+    which one seems slightly system-dependant.  Having both won't hurt.  Be
+    sure to replace "test.com" with the domain for which you want to
+    sanitize mail - the example will sanitize all messages destined for
+    someone@test.com.  Multiple domains can be specified by repeating the
+    first line, once for each domain or by specifying a class of domains, as
+    described below.
+</p>
+</li><li><p>
+    Add the user sendmail runs as, on the mail port, to the list of trusted
+    users (the "<tt>t</tt>" class - search <tt>sendmail.cf</tt> for the phrase
+    "Trusted users").  This instructs sendmail not to generate a warning
+    header when the shell script sets the From-address when it resends the
+    sanitized mail.  On RedHat 6.x systems this user is named "mail".  This
+    step may not be necessary on some systems, but again, it won't hurt.
+</p>
+</li><li><p>
+    Finally, activate the sanitizing method you prefer (with or without 
+    procmail) by uncommenting (removing the leading <tt>#</tt>-sign) the 
+    relevant line added in step 6 and then restart sendmail.
+</p>
+</li></ol><p></p>
+<p>
+    Please be careful to use TABs where necessary in the <tt>sendmail.cf</tt>
+    file.  In the <tt>Msanitize</tt> and <tt>Mprocmail</tt> definitions above,
+    the lines have been split to improve readability - either copy the
+    entire text into a single line in your <tt>sendmail.cf</tt> or be sure
+    that the continuations begin with TAB characters, <b>not</b> spaces.
+</p>
+<p>
+    Although the above instructions all assume you are editing your
+    <tt>sendmail.cf</tt> file directly, they can easily be adapted for
+    people using the (recommended) m4 method to configure sendmail. Simply
+    append the mailer definitions to your m4 file in a section named
+    <tt>MAILER_DEFINITIONS</tt>, and the local hacks stuff to a section
+    named <tt>LOCAL_RULE_0</tt>.  People interested in m4 configuration 
+    might also find the <tt>anomy.m4</tt> and <tt>sendmail-m4.txt</tt> 
+    files in the <tt>contrib/</tt> directory of the distribution helpful.
+</p>
+<p>
+    To match a class of domains (instead of just test.com), you could
+    replace the first R$* line(s) with something like this:
+</p>
+<p></p><font color="#000000"><pre>  # Sanitize with procmail:
+  #R$* &lt; @ $=w . &gt; $*    $#procmail $@/etc/sanitizer.rc $:$1&lt;@$2.CLEAN.&gt;$3
+  # Sanitize without procmail:
+  #R$* &lt; @ $=w . &gt; $*    $#sanitize $@anomy $:$1&lt;@$2.CLEAN.&gt;$3
+</pre></font>
+<p>
+    This matches any host names in the "<tt>w</tt>" class (traditionally 
+    <tt>/etc/sendmail.cw</tt>).  An "<tt>X</tt>" class can be defined with 
+    "<tt>CX host</tt>" or "<tt>FX/path/to/file</tt>" lines near the 
+    beginning of the sendmail configuration file.  People using m4
+    configuration can add such definitions after the <tt>LOCAL_CONFIG</tt>
+    directive in their m4 files.
+</p>
+<p>
+    If you are somewhat reckless (or are sure you know what you are doing), 
+    you can just sanitize everything, like this:
+</p>
+<p></p><font color="#000000"><pre>  # Sanitize with procmail:
+  #R$* &lt; @ $+ . &gt; $*    $#procmail $@/etc/sanitizer.rc $:$1&lt;@$2.CLEAN.&gt;$3
+  # Sanitize without procmail:
+  #R$* &lt; @ $+ . &gt; $*    $#sanitize $@anomy $:$1&lt;@$2.CLEAN.&gt;$3
+</pre></font>
+<p>
+    Please note that sanitizing everything like this is <b>not
+    recommended</b>, since it will sanitize both incoming and outgoing email.
+</p>
+<p>
+    It is the author's humble opinion, that incoming and outgoing email
+    should be handled in fundamentally different ways; incoming email should
+    always be delivered to the recipient, if at all possible (but it's a
+    good idea to defang the dangerous bits first), but outgoing email should
+    be bounced back to the sender if it contains a virus or security hazard.
+    You don't want to send partial messages out of your organization - you
+    want to notify the sender so they can fix the problem and re-send the
+    content as quickly as possible.  Future revisions of this document will
+    describe how to use the Sanitizer to simply block risky outgoing mail.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="in-transit-qmail"></a><hr><h2><a name="in-transit-qmail">In-transit sanitizing - qmail</a></h2>
+
+<p>
+<a name="in-transit-qmail">    The following instructions describe one way to use the Anomy sanitizer
+    with qmail to filter in-transit email.  This is not the simplest way
+    to sanitize mail destined for local users, but is quite useful on a
+    gateway machine.
+</a></p>
+<p></p><ol>
+<li><p>
+<a name="in-transit-qmail">    Install qmail with the qmail-queue-patch and qmail-qfilter.
+</a></p>
+<p>
+<a name="in-transit-qmail">    From </a><a href="http://www.qmail.org/">qmail.org</a>: "Bruce Guenter has
+    written a patch which causes any program that would run qmail-queue to
+    look for an environment variable QMAILQUEUE. If it is present, it is
+    used in place of the string "bin/qmail-queue" when running qmail-queue.
+    This could be used, for example, to add a program into the 
+    qmail-smtpd-&gt;qmail-queue pipeline that could do filtering, rewrite 
+    broken headers, etc."
+</p>
+<p>
+    This is just what we are going to use. You will find the
+    qmail-queue-patch here:
+    <a href="http://www.math.ntnu.no/mirror/www.qmail.org/qmailqueue-patch">http://www.math.ntnu.no/mirror/www.qmail.org/qmailqueue-patch</a>
+    (and on every other qmail-mirrior site).
+</p>
+<p>
+    qmail-qfilter is found here: 
+    <a href="http://em.ca/%7Ebruceg/qmail-qfilter/">http://em.ca/~bruceg/qmail-qfilter/</a>.
+</p>
+
+</li><li><p>
+    Install tcpserver (ucspi).
+</p>
+<p>
+    You can find this here: 
+    <a href="http://em.ca/%7Ebruceg/rpms/ucspi-tcp/">http://em.ca/~bruceg/rpms/ucspi-tcp/</a>.
+</p>
+</li><li>
+<p>
+    Make tcpserver set the qmail-queue-parameter/variable
+</p>
+<p>
+    This is done by editing the <tt>/etc/tcpcontrol/smtp.rules</tt> file. 
+    The file should look something like:
+</p>
+<p></p><font color="#000000"><pre> # Myself going through the filter
+ 127.0.0.1:allow,RELAYCLIENT="",QMAILQUEUE="/var/qmail/filters/smtpd-queue"
+ # Server(s) allowed to relay, but not going through the filter
+ xxx.xxx.xxx.xxx:allow,RELAYCLIENT=""
+ # Default (everyone else must go through)
+ :allow,RELAYCLIENT="",QMAILQUEUE="/var/qmail/filters/smtpd-queue"
+</pre></font>
+<p>
+    Compile the file (tcpserver uses a compiled version of this file with a
+    .cdb-extension). If you also use qmail-qmqpd or any other
+    qmail daemon that receives incoming mail, be sure to edit and
+    recompile the corrosponding rule file (e.g.
+    <tt>/etc/tcpcontrol/qmqp.rules</tt>) and use the same value for 
+    QMAILQUEUE in both (or all) places.
+</p>
+<p>
+    Now you have tcpserver accepting connections, sending the incoming email
+    with the QMAILQUEUE-variable set to the script "smtpd-queue".
+</p>
+<p>
+    The script smtpd-queue (or whatever you choose to call it) should look
+    something like:
+</p>
+<p></p><font color="#000000"><pre>#!/bin/sh
+exec /usr/bin/qmail-qfilter
+    /var/qmail/filters/sanitizer /var/qmail/filters/sanitizer.cfg
+</pre></font>
+<p>
+    Note:  the exec command has been split between lines for readability.
+    It should all be in one line.
+</p>
+<p>
+    What happens here is that qmail-qfilter passes the email to sanitizer
+    (which starts with a config-file in this example). When sanitizer is
+    finished with it, it is passed back qmail so it can be sent the usual
+    way.
+</p>
+</li><li><p>
+    Configure qmail to act as a relay server.
+</p>
+<p>
+    Read the FAQ if you don't know how to do this.
+</p>
+</li></ol><p></p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="in-transit-others"></a><hr><h2><a name="in-transit-others">In-transit sanitizing - others</a></h2>
+
+<p>
+<a name="in-transit-others">    In general, the sanitizer should be able to work with any mail transfer
+    agent that runs on Unix (and with minor tweaks, the sanitizer should be
+    able to run just fine on e.g. Windows).
+</a></p>
+<p>
+<a name="in-transit-others">    The thing to look for, are filtering hooks in your MTA.  If your MTA has
+    a filtering API already defined, then try and get it to spit messages
+    out to the sanitizer on standard input and recapture the sanitizer's
+    standard output.  If that doesn't work, then you can probably wrap your
+    local delivery agent with a shell script that passes messages through
+    the sanitizer first.  Use your imagination!  Let me know how it goes.
+</a></p>
+
+
+<p><a name="in-transit-others">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="perf-cpu"></a><hr><h2><a name="perf-cpu">    Performance - CPU </a></h2>
+
+<p>
+<a name="perf-cpu">    Perl may not be a very fast language, but if speed isn't critical it is
+    a good choice for a program like this, since it has good pattern
+    matching facilities and there are no buffer overflows to worry about.
+    Implementing the scanner in C or C++ would be somewhat more efficient,
+    but would be much harder to make as secure and flexible.
+</a></p>
+<p>
+<a name="perf-cpu">    But I still want the script lean enough to be useable on a production
+    mail server with lots and lots of traffic.  To achieve this I will try
+    to keep the script's CPU usage O(length-of-message) and consumption of
+    other resources as close to a constant as possible, so the script will
+    scale well. I won't create temporary files unless/until I add support
+    for third party virus scanners (like AMaViS has).
+</a></p>
+<p>
+<a name="perf-cpu">    I ran a few tests on revision 1.10 to see if my choice of language would
+    make these design constraints pointless (basically, I wanted to answer
+    the question of whether Perl can do the job or not).
+</a></p>
+
+<a name="perf-cpu">    </a><h3><a name="perf-cpu">Test data:</a></h3>
+
+<p>
+<a name="perf-cpu">    The sanitizer was tested on my 525Mhz Celeron (bus OC'ed to 95Mhz), with
+    the following messages.
+</a></p>
+<p></p><a name="perf-cpu"><font color="#000000"></font></a><pre><a name="perf-cpu"><font color="#000000">file         size         description
+---------    ---------    -----------    
+Dev.test1         2206    a plain RFC822 message with no attachment
+Dev.test2        26227    3 parts:
+                            a text part with a UU-encoded evil HTML snippet
+                            a html part with evil html
+                            a harmless plain text part
+Dev.test3         2342    a multipart/signed message containing clean text
+Dev.test4        17139    3 parts:
+                            a uu-encoded text part
+                            a plain text part with an UU-encoded perl script
+                            an unencoded perl script (8bit, text/plain)
+Dev.test6      4984617    a multipart mixed message with a big base64-encoded
+                          jpeg attachment.
+</font></a></pre><a name="perf-cpu"><font color="#000000"></font>
+
+    </a><h3><a name="perf-cpu">Results:</a></h3>
+<a name="perf-cpu">    
+</a><p></p><a name="perf-cpu"><font color="#000000"><pre>[bre@diskordiah bin]$ time ./sanitizer.pl &lt;/dev/null
+0.10user 0.01system 0:00.10elapsed 101%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (282major+194minor)pagefaults 0swaps
+
+[bre@diskordiah bin]$ time ./sanitizer.pl &lt;../Dev.test1 &gt;/dev/null
+0.12user 0.00system 0:00.14elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (287major+201minor)pagefaults 0swaps
+
+[bre@diskordiah bin]$ time ./sanitizer.pl &lt;../Dev.test2 &gt;/dev/null
+0.47user 0.00system 0:00.47elapsed 98%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (289major+283minor)pagefaults 0swaps
+
+[bre@diskordiah bin]$ time ./sanitizer.pl &lt;../Dev.test3 &gt;/dev/null
+0.13user 0.00system 0:00.12elapsed 101%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (287major+204minor)pagefaults 0swaps
+
+[bre@diskordiah bin]$ time ./sanitizer.pl &lt;../Dev.test4 &gt;/dev/null
+0.20user 0.03system 0:00.25elapsed 91%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (288major+223minor)pagefaults 0swaps
+
+[bre@diskordiah bin]$ time ./sanitizer.pl &lt;../Dev.test6 &gt;/dev/null
+12.63user 0.05system 0:13.00elapsed 97%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+0outputs (970major+257minor)pagefaults 0swaps 
+</pre></font>
+
+    </a><h3><a name="perf-cpu">What it all means:</a></h3>
+
+<p>
+<a name="perf-cpu">    The worst case (bytes/sec) is the smallest message, due to the overhead
+    of starting perl and compiling the parser (about 0.10 seconds).  This
+    case only gives us a throughput of 15Kb/sec (kilobytes/sec), which is
+    actually rather appalling (just imagine the case if we were forking 10
+    processes, instead of one).
+</a></p>
+<p>
+<a name="perf-cpu">    The best case, Dev.text6, has a througput of over 350Kb/sec.  Most of
+    the work done in this case is just decoding/copying/encoding the Base64
+    attachment, without even examining the contents (it's a jpeg).  The
+    decoding and encoding could easily be optimized away for attachments we
+    don't intend to sanitize (such as graphics).  So large attachments
+    aren't a problem, CPU-wise - not compared to the small messages anyway.
+</a></p>
+<p>
+<a name="perf-cpu">    Since someone told me that the average size of email these days is close
+    to 20k, then either Dev.test2 (55Kb/sec) or Dev.test4 (68Kb/sec) might
+    be representative of the average throughput of the sanitizer on my
+    system.
+</a></p>
+<p>
+<a name="perf-cpu">    So for any network connection under 1MB/sec (1 megabit), a dual 500Mhz
+    PIII should be able to sanitize all the incoming mail, without any
+    noticable delays and with cycles to spare - even during peak hours.  If
+    you don't mind a slight delay (and aren't expecting any mail bombs...)
+    you can probably get away with less hardware, more bandwidth or both.
+</a></p>
+<p>
+<a name="perf-cpu">    Is this good enough?  Please </a><a href="mailto:bre@netverjar.is">let me 
+    know</a> what you think.
+</p>
+<p>
+    Since the performance is almost entirely CPU bound, throughput could be
+    increased linearly by simply adding more processing power, e.g. by
+    adding more or faster CPUs to your mail server, or by creating a
+    sanitizer farm.
+</p>
+<p>
+    Another method to speed things up would be to change the sanitizer into
+    some sort of daemon, thus avoiding the startup- and compilation costs of
+    perl entirely.  Since initialization accounts for 25-45% of the time it
+    takes to process the "average message", and over 75% of the time for the
+    small messages (which are very common), this would make quite a
+    difference.
+</p>
+<p>
+    OTOH, the performance is only going to get worse, once external virus
+    scanners are added to the mix...
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="perf-memory"></a><hr><h2><a name="perf-memory">    Performance - Memory </a></h2>
+
+<p>
+<a name="perf-memory">    <b>Note:</b> </a><a href="#mh-memory-hog">read this</a> if you are having 
+    problems with excessive memory consumption when sanitizing very large 
+    messages.
+</p>
+<p>
+    While scanning the big message (Dev.test6), top consistantly reported
+    memory usage as (SIZE, RSS, SHARE) = (2084, 2084, 1052).  For Dev.test4
+    the numbers were (1952, 1952, 1056) and for Dev.test1 they were (1860,
+    1860, 1052).
+</p>
+<p>
+    The difference is probably due to Dev.test6 maxing out all the IO
+    buffers it had available, which the other tests were too small to do.  I
+    verified this theory by tripling the size of Dev.test6 - the resulting
+    numbers were almost identical (2088 instead of 2084).  Cool!
+</p>
+<p>
+    This doesn't mean that more memory usage is impossible - the sanitizer
+    allocates a new set of buffers for each level of nesting within the
+    message. A memory DoS attack could be launched by deeply nesting
+    uuencoded parts within each other - this could at the moment raise the
+    memory (and CPU) usage arbitraily.  But this would be a deliberate
+    attack, such messages are rarely, if at all, created by normal mailers.
+</p>
+<p>
+    This could be addressed by adding a maximum recursion limit to the
+    sanitizer, but I haven't done so yet and am not sure it's necessary.
+    Aren't there easier ways to attack a mail server?
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="mh-scanner-codes"></a><hr><h2><a name="mh-scanner-codes">Virus scanning doesn't work!</a></h2>
+
+<p>
+<a name="mh-scanner-codes">    The most common reason people have a hard time getting external virus 
+    scanners to work, is they enter incorrect <tt>file_list_N_scanner</tt>
+    and/or <tt>file_list_N_policy</tt> lines.
+</a></p>
+<p>
+<a name="mh-scanner-codes">    There must be <b>four</b> policies, and <b>three</b> groups of exit
+    codes, otherwise the scan won't work.  The rationale for having three
+    code groups and four policies is that virus scan results fall into the
+    following categories:
+</a></p>
+<p>
+</p><ol>
+<li><a name="mh-scanner-codes"> Clean files - no infections found.
+</a></li><li><a name="mh-scanner-codes"> Cleaned files - infectiosn found but were successfully disinfected.
+</a></li><li><a name="mh-scanner-codes"> Infected files - unremovable infections were found.
+</a></li><li><a name="mh-scanner-codes"> Errors.
+</a></li></ol>
+<p></p>
+<p>
+<a name="mh-scanner-codes">     The </a><a href="#conf-real">real world configuration</a> example illustrates
+     this.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="mh-anomy-env"></a><hr><h2><a name="mh-anomy-env">The testcases succeed, but I can't run the sanitizer!<br>
+			       What is the ANOMY environment variable for?</a></h2>
+
+<p>
+<a name="mh-anomy-env">    The ANOMY environment tells the Sanitizer script where to look for 
+    it's modules, MIMEStream.pm and Sanitizer.pm.  Unless it is set, the 
+    Sanitizer won't run.  The test cases all set this variable properly,
+    which is why they succeed even though you can't run it yourself.
+</a></p>
+<p>
+<a name="mh-anomy-env">    Alternatives:
+</a></p><ul>
+<li><a name="mh-anomy-env">Add the <tt>/path/to/anomy/bin/</tt> directory to
+    your PERL5LIB environment variable in some global place such as
+    <tt>/etc/profile</tt>.
+</a></li><li><a name="mh-anomy-env">Add a symbolic link to some other directory normally searched by Perl 
+    for libraries.  The symbolic link should be named "Anomy" and should 
+    link to <tt>/path/to/anomy/bin/Anomy/</tt> directory.
+</a></li></ul><a name="mh-anomy-env">   
+</a><p></p>
+<p>
+<a name="mh-anomy-env">    Which method is best is simply a matter of taste.
+</a></p>
+
+<p><a name="mh-anomy-env">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="pf-solaris-procmail"></a><hr><h2><a name="pf-solaris-procmail">    Solaris and Procmail </a></h2>
+
+<p>
+<a name="pf-solaris-procmail">    A few users have reported that to get the Sanitizer to work from 
+    within procmail on Solaris the following lines must be added either
+    to <tt>/etc/procmailrc</tt> or the <tt>.procmailrc</tt> file which
+    invokes the sanitizer:
+</a></p>
+<p></p><a name="pf-solaris-procmail"><font color="#000000"><pre> PATH="/usr/bin:$PATH"
+ SHELL=/bin/sh
+</pre></font>
+</a><p>
+<a name="pf-solaris-procmail">    Special thanks to <b>Peter Burkholde</b> for his detailed feedback.
+</a></p>
+
+<p><a name="pf-solaris-procmail">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="pf-postfix"></a><hr><h2><a name="pf-postfix">    Incoming mail and Postfix </a></h2>
+
+<p>
+<a name="pf-postfix">Patrick Duane Dunston 
+&lt;</a><a href="mailto:duane@duane.yi.org">duane@duane.yi.org</a>&gt; and
+Bill Kenworthy contributed a short how-to on configuring Postfix to 
+filter messages through the sanitizer before delivery.  Their instructions 
+may be found in the <tt>contrib/</tt> directory of the program distribution.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="mh-memory-hog"></a><hr><h2><a name="mh-memory-hog">Large messages and memory consumption</a></h2>
+
+<p>
+    Some people have reported problems with very large messages 
+    and excessive memory consumption when invoking the sanitizer from within
+    procmail.  These problem is caused by procmail, not the sanitizer.  If 
+    you have this problem, consider limiting incoming message size to
+    something that will fit in your mail server's memory or invoking the 
+    sanitizer directly (without procmail).
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="mh-html-uuencode"></a><hr><h2><a name="mh-html-uuencode">Corrupt attachments from Outlook users</a></h2>
+
+<p> <b>Q:</b> <i>
+    My problem is that attachments from Exchange/Outlook users get
+    corrupted. The end result is that the document is completely unreadable
+    when detached. One of the symptoms is that it ends up with the word
+    "DEFANGED" being inserted into the body of the attachment:
+<ul>
+<tt>M````````````````&gt;&lt;DEFANGED.35 M`````````````````````````</tt>
+</ul>
+</i></p>
+<p> <b>A:</b>
+    This is HTML defanging, defanging the contents of an UU-encoded
+    attachment.  This only happens when the following conditions are all
+    met:
+    </p><ol>
+    <li> Users send attachments UU-encoded, instead of using the standard
+         MIME encoding.
+    </li><li> HTML defanging is on (feat_html=1).
+    </li><li> UUencoded attachment support is off (feat_uuencoded=0).
+    </li></ol>
+<p></p>
+<p>
+    The solution is to turn on uuencoded attachment support, or turn off
+    HTML defanging.  The latter is not recommended.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="mh-style-tag"></a><hr><h2><a name="mh-style-tag">Ugly HTML mail from Outlook users</a></h2>
+
+<p>
+    <b>Note:</b> This problem was hopefully solved when the HTML cleanup 
+    code was rewritten for revision 1.45 of the sanitizer.
+</p>
+<p> <b>Q:</b> 
+    <i>I'm not sure if this is a bug per se, but mail received 
+    from Outlook XP using Word as the editor in HTML format looks very ugly.  
+    I've attached an example.  I'm using anomy 1.35.  I'd really appreciate 
+    any hints on how to configure or patch anomy to handle this!</i>
+</p>
+<p> <b>A:</b>
+    This is a known issue with the sanitizer, inherited from John
+    Hardin's procmail ruleset.
+</p>
+<p>     
+    It has to do with the defanging of &lt;STYLE&gt;...&lt;/STYLE&gt; 
+    blocks, which were invented by someone with no clue of HTML design 
+    philosopy.  Instead of the style settings being attributes or "funny 
+    tags" they are simply written out as a CSS definition following the 
+    &lt;STYLE&gt; tag - when the &lt;STYLE&gt; tag gets defanged, the CSS 
+    info is revealed as text where it used to be invisible.
+</p>
+<p>
+    The reason this is all so stupid is <i>the exact same thing happens</i>
+    if the un-defanged HTML is viewed in a browser that doesn't know about
+    STYLE tags.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="hacking"></a><hr><h2><a name="hacking">Hacking the Anomy sanitizer</a></h2>
+
+<p>
+<a name="hacking">    These are short introductory chapters, for those interested in hacking
+    on the Anomy sanitizer.  The source code is somewhat commented, but it's
+    probably pretty hard to grasp the overall organization of the code by
+    jumping right in.  So start here. :-)
+</a></p>
+<p></p><ul>
+<li><a name="hacking">    </a><a href="#hack-design">Basic design</a>    
+</li><li>    <a href="#hack-streams">Why treat the mail as a stream?</a>
+</li><li>    <a href="#hack-cruft">Rough edges</a>
+</li><li>    <a href="#hack-standards">Standards</a>
+</li></ul><p></p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="hack-design"></a><hr><h2><a name="hack-design">Hacking - Basic design</a></h2>
+
+<p>
+<a name="hack-design">    The sanitizer is built around my MIMEStream (Anomy::MIMEStream) module,
+    which lives in the <tt>anomy/bin/Anomy/</tt> directory.  This module was
+    designed to allow parsing and editing of arbitrarily complex MIME
+    streams.  It contains facilities for decoding MIME streams, as well as
+    routines for rebuilding or creating such streams from scratch.
+</a></p>
+<p>
+<a name="hack-design">    The MIMEStream module contains a MIME parsing engine which interprets
+    the basic RFC822/MIME structure of the message and hands each part to a
+    handler provided by the application using it (in this case the
+    sanitizer).
+</a></p>
+<p>
+<a name="hack-design">    Handlers are selected based on the MIME-type of the given part.  At
+    initialization, the sanitizer registers it's handlers with the parsing
+    engine, and then essentially says "Go forth and parse" - and that's
+    that. The actual flow of the program is controlled by MIMEStream, but
+    most of the work takes place within the part handlers.
+</a></p>
+<p>
+<a name="hack-design">    Each handler makes use of Read() and Write() functions provided by the
+    parser engine, to read the decoded message part, possibly modify it, and
+    send the results back to the parser.  The parser re-encodes the data and
+    ultimately sends the results to the output stream.  The Read() and
+    Write() functions hide all buffering, decoding and encoding involved in
+    "stream editing" a typical MIME message.
+</a></p>
+<p>
+<a name="hack-design">    The decoding and encoding mechanism is designed to handle nested
+    encodings, even though such messages would violate the MIME standard
+    (you aren't allowed to e.g. Base64-encode a multipart/ part).  The need
+    for this becomes apparent when you consider that non-MIME attachments
+    (uuencoded files, forwarded messages) should be scanned as well.  For
+    example, a well formed MIME message may have a Base64 encoded text/plain
+    part, which itself contains a uuencoded file.  If that uuencoded file
+    happens to contain a RFC822 message with multipart-MIME attachments,
+    then it can be argued that the message hasn't been scanned completely
+    unless the parser nests it's decoding/encoding all the way down and
+    scans the contents of the uuencoded message.
+</a></p>
+
+
+<p><a name="hack-design">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="hack-streams"></a><hr><h2><a name="hack-streams">Hacking - Why treat the mail as a stream?</a></h2>
+
+<p>
+<a name="hack-streams">    The reason I'm focusing on streams of data instead of messages on disk,
+    is because in my opinion streams more accurately reflect the real world
+    the sanitizer must work in.  The mail system has no control over the
+    length of the messages that are sent through it, so preferably resource
+    usage should be influenced as little as possible by the size of those
+    messages.  This is not merely a performance issue, but also one of
+    security - the sanitizer is supposed to be a tool for <i>enhancing</i>
+    security, so I want to ensure that installing it opens up as few new
+    attack routes as possible.
+</a></p>
+<p>
+<a name="hack-streams">    The pros of using a stream-based model:
+</a></p><ul>
+<li>
+<a name="hack-streams">      Memory and disk space usage is not proportional to the size of the
+      message being processed, instead it is proportional to the complexity
+      of the message (MIME nesting depth etc.) and the nature of the
+      security policy (third party virus scanners generally hog both memory
+      and disk space). This makes the sanitizer much more scalable that it
+      would be otherwise.
+</a></li><li>
+<a name="hack-streams">      Solving the basic problem of a MIME-stream decoder/encoder almost
+      automatically involved solving the deeply nested encoding problem
+      described above.
+</a></li></ul>
+<p></p>
+<p>
+<a name="hack-streams">    The cons:
+</a></p><ul>
+<li>
+<a name="hack-streams">      There are tight constraints on what the sanitizer can do.  Once it has
+      moved forward in it's input stream, it must eventually flush some of
+      it's buffers and commit their contents to the output stream - and once
+      it has done so, there is no turning back.  So in general, aside from
+      very limited "look ahead" tests, all output must be based the
+      corrosponding input data or data that came before it.  For example,
+      message headers cannot be altered based on a signature at the end of
+      the message body - by the time we reach the end of the message, the
+      headers will have been committed to the output stream long ago.
+</a></li><li>
+<a name="hack-streams">      The constraints imposed by streaming can lead to hairy code,
+      especially where two unrelated scans are forced to run simultaniously
+      (e.g. in the text scanner, which must check simultaniously for
+      uuencoded attachments and HTML content - two fundamentally different
+      things).
+</a></li><li>
+<a name="hack-streams">      Sometimes, the stream model just doesn't work and I have to resort to
+      dumping part of the message to disk anyway and working with it from
+      there.  External virus scanners all (AFAIK) require this sort of
+      compromise.
+</a></li></ul>
+<p></p>
+<p>
+<a name="hack-streams">Obviously, I think the benefits of streaming (scalability) are more valuable
+than making my life as a programmer easier.  Besides, writing it the hard
+way is much more fun!
+</a></p>
+
+
+<p><a name="hack-streams">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="hack-cruft"></a><hr><h2><a name="hack-cruft">Hacking - Rough edges</a></h2>
+
+<p>
+<a name="hack-cruft">    There are quite a few things which need fixing and cleaning up in the
+    sanitizer's code.  To name a few:
+</a></p>
+<p>
+</p><ul>
+<li>
+<a name="hack-cruft">    The sanitizer and MIMEStream are too tightly coupled - there is no well
+    defined, clear interface between them.  The sanitizer's handlers
+    shamelessly assume things about how MIMEStream works and mess directly
+    with MIMEStream objects' internal variables.
+</a></li><li>
+<a name="hack-cruft">    There's so much work to be done on standards compliance, that I've 
+    devoted a </a><a href="#hack-standards">whole section</a> to the topic.
+</li><li>
+    The documentation needs lots of work.  Specifically, the sanitizer
+    should be able to work with any MTA out there, but unless I document it
+    then people won't do it.
+</li><li>
+    I really need to allow people to define policies based on MIME types or
+    "magic" in addition to the current filename policies.
+</li><li>
+    The sanitizer could really use a virus-scanner front end tool which
+    could do all the neat unpacking things that 
+    <a href="http://www.amavis.org/">AMaViS</a> does.  It should be easy 
+    enough to remove the email-related stuff from AMaViS...
+</li></ul>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="hack-standards"></a><hr><h2><a name="hack-standards">Hacking - Standards</a></h2>
+
+<p>
+<a name="hack-standards">    There are a relatively large number of MIME standards which the MIME
+    stream editor and the sanitizer need to take into account.  In general
+    security has been favored over strict compliance, especially when the
+    standards mandate "ignoring" certain message parts, such as signed parts
+    or message/rfc822 headers.  We sanitize those parts anyway, unless
+    expressly told not to.
+</a></p>
+<p>
+<a name="hack-standards">    Most features which are known to violate the MIME standards are optional
+    and efforts will be made to make the rest of them optional as well.
+</a></p>
+<p>
+<a name="hack-standards">    Currently, if given non MIME-compliant input, the sanitizer will
+    probably generate non MIME-compliant output.  One such example is an
+    illegally encoded multipart type (neither 7bit or 8bit) or an illegal
+    value for the Content-Transfer-Encoding headers.  The scanner will
+    accept and scan messages with some illegal encoding combinations, but
+    won't correct the error.
+</a></p>
+
+<p><a name="hack-standards"><b>RFC822:</b></a></p>
+<p>
+<a name="hack-standards">    The sanitizer and MIMEStream module conforms to this RFC - almost.
+    Currently there are probably bugs to do with header comments and
+    end-of-line markers (CRLF).
+</a></p>
+<p>
+<a name="hack-standards">    These problems will be fixed Real Soon Now.
+</a></p>
+
+<p>
+<a name="hack-standards"><b>RFC2045-9</b>:  Multipurpose Internet Mail Extensions (MIME)<br>
+<b>RFC2424</b>:    Content Duration MIME Header Definition<br>
+<b>RFC2387</b>:    The MIME Multipart/Related Content-type
+</a></p>
+<p>
+<a name="hack-standards">    The sanitizer appears to conform to these RFCs, as long as all scanned
+    data is completely "clean" and no defanging or rewriting is necessary to
+    enforce the selected policy.
+</a></p>
+<p>
+<a name="hack-standards">    All exceptions involve possibly rewriting parts which the RFC mandates
+    that MTAs treat as opaque, such as message/rfc822.  In the future a list
+    of such deviations will be created, and switches added to the code to
+    make such devations optional, where possible.
+</a></p>
+<p>
+<a name="hack-standards">    Support for message/partial parts is currently incomplete, and may never
+    be supported since reassembling messages is beyond the scope of this
+    program and would have serious performance implications.
+</a></p>
+
+<p>
+<a name="hack-standards"><b>RFC2231</b>:    MIME Parameter Value and Encoded Word Extensions.
+</a></p>
+<p>
+<a name="hack-standards">    Partially compliant, as of 1.45.  This on my TODO list.
+</a></p>
+
+<p>
+<a name="hack-standards"><b>RFC1847</b>:    Security Multiparts for MIME<br>
+<b>RFC2015</b>:    MIME Security with Pretty Good Privacy (PGP)<br>
+<b>RFC2480</b>:    Gateways and MIME Security Multiparts
+</a></p>
+<p>
+<a name="hack-standards">    The sanitizer and MIMEStream module conform to these RFCs, with the
+    exception of optionally sanitizing and modifying the contents of signed
+    parts.  Encrypted parts probably won't be be understood by the sanitizer
+    anyway, so they shouldn't be effected.  But don't be surprised if the
+    sanitizer breaks PGP signatures!
+</a></p>
+<p>
+<a name="hack-standards">    It's a matter of opinion whether I conform to RFC2480, which discusses    
+    exactly these problems.  At the moment there is plenty of room for
+    improvments within the sanitizer, and conformance with this RFC is one
+    of my goals.
+</a></p>
+
+<p>
+<a name="hack-standards"><b>RFC2311</b>:    S/MIME Version 2 Message Specification<br>
+<b>RFC2312</b>:    S/MIME Version 2 Certificate Handling
+</a></p>
+<p>
+<a name="hack-standards">    Compliant, subject to the caveats above about rewriting signed parts,
+    but support is very incomplete since the contents of S/MIME messages may
+    not be sanitized by the scanner since it doesn't currently recognize
+    them.
+</a></p>
+
+
+<p><a name="hack-standards">[ </a><a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="feedback"></a><hr><h2><a name="feedback">    Feedback </a></h2>
+
+<p>
+<a name="feedback">    Please let me know if you use this program!
+</a></p>
+<p>
+<a name="feedback">    Without feedback I might get discouraged and start playing video games
+    or work on my juggling - writing this is alot of work and at the moment
+    I'm not getting paid at all to do it.  IMHO the least you can do is send
+    me email...
+</a></p>
+<p>
+<a name="feedback">    My email address is 
+    </a><a href="mailto:bre@netverjar.is?Subject=Sanitizer">bre@netverjar.is</a>, 
+    please put "sanitizer" somewhere in the subject line.
+</p>
+<p>
+    Some questions:
+</p>
+<p></p><ol>
+<li>
+    Are you, or do you intend to use the program?  If not, why not?
+</li><li>
+    At what sort of site(s) are you using the sanitizer?
+</li><li>
+    What sort of email are you sanitizing? Incoming?  Outgoing?  Commercial?
+    Private?  Mailing lists?
+</li><li>
+    Would you mind sharing your policies with other users of the program?
+</li><li>
+    What do you think is the biggest problem with the sanitizer?
+</li><li>
+    What do you think is it's best feature?
+</li><li>
+    Is the sanitizer fast enough for you?  Approximately how much mail does
+    it process for you every day?  For how many users?
+</li><li>
+    Would you be willing to pay for future enhancements or support?  How
+    much?  What kind of enhancements or support?  Would you be willing to
+    donate money as a token of gratitude for what I've already done?
+</li><li>
+    Have you purchased any third party virus scanners, to use with the
+    sanitizer?  Which one(s)?
+</li></ol><p></p>
+<p>
+	Finally, if the program proves useful to you and you haven't time to
+	contribute code, documentation or bug reports - then please consider
+	<a href="http://orders.kagi.com/?35Q">supporting the project with
+	a cash donation</a>.  I'm doing this in my spare time, and all
+	encouragement helps.
+</p>
+<p>
+    Thanks!
+</p>
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<a name="credits"></a><hr><h2><a name="credits">Credits &amp; GPL</a></h2>
+
+<p>
+<a name="credits">    Copyright (C) 2000 
+    </a><a href="http://bre.klaki.net/">Bjarni R. Einarsson</a>
+    &lt;<a href="mailto:bre@netverjar.is">bre@netverjar.is</a>&gt;.<br>
+    All rights reserved.
+</p>
+<p>
+    Development of the Anomy Sanitizer, from versions 1.35 onwards, has been
+    primarily sponsored by <a href="http://www.f-prot.com/">FRISK Software 
+    International</a>.  Please consider buying their anti-virus products to 
+    show your appreciation.
+</p>
+<p>
+    The sanitizer contains code and implements ideas by John D. Hardin 
+    &lt;<a href="mailto:jhardin@wolfenet.com">jhardin@wolfenet.com</a>&gt;.
+</p>
+<p>
+    Kim Johnny Mathisen 
+    &lt;<a href="mailto:Kim.Mathisen@haukeland.no">Kim.Mathisen@haukeland.no</a>&gt;
+    contributed the instructions for 
+    <a href="#in-transit-qmail">in-transit sanitizing with qmail</a>.<br>
+    Mark Salazar 
+    &lt;<a href="mailto:msalazar@schaferdc.com">msalazar@schaferdc.com</a>&gt;
+    submitted improvements to the qmail chapter as well.<br>
+    Sterling Hanenkamp 
+    &lt;<a href="mailto:Sterling@nrg-inc.com">Sterling@nrg-inc.com</a>&gt;
+    contributed pointers on in-transit configuration of sendmail, using the
+    recommended m4 method.<br>
+    
+</p>
+<p>
+    Ideas were also borrowed from <a href="http://www.amavis.org/">AMaViS</a>
+    and <a href="http://www.inflex.co.za/">Inflex</a>.
+</p>
+<p>
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
+</p>
+<p>
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    General Public License for more details.
+</p>
+
+
+<p>[ <a href="#top">contents</a> ]</p>
+<!-- ---------------------------------------------------------------------- -->
+<hr>
+<p>$Id: sanitizer.html,v 1.20 2003/04/30 01:45:24 bre Exp $</p>
+</body></html>

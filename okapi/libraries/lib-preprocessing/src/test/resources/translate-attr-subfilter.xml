@@ -1,0 +1,14 @@
+<xml>
+    <foo translate="y">
+        &lt;html&gt;&lt;body&gt;&lt;p&gt;Translate me.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    </foo>
+    <foo translate="n">
+        &lt;html&gt;&lt;body&gt;Don't Translate me 2.&lt;/body&gt;&lt;/html&gt;
+    </foo>
+    <foo>
+        &lt;p&gt;Don't Translate me 3.&lt;p&gt;
+    </foo>
+    <foo translate="y">
+        &lt;a&gt;Translate me 4.&lt;a&gt;
+    </foo>
+</xml>

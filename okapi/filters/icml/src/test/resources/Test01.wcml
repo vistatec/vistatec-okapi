@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ea:Stories ea:WWVersion="2.0" xmlns:aic="http://ns.adobe.com/AdobeInCopy/2.0" xmlns:ea="urn:SmartConnection_v3">
+	<ea:Story ea:GUID="339267d1-0549-4983-920c-f3b5fc3e714d" pi0="style=&quot;50&quot; type=&quot;snippet&quot; readerVersion=&quot;6.0&quot; featureSet=&quot;513&quot; product=&quot;8.0(370)&quot; " pi1="SnippetType=&quot;InCopyInterchange&quot;">
+		<ea:StoryInfo>
+			<ea:SI_EL>body</ea:SI_EL>
+			<ea:SI_Words>0</ea:SI_Words>
+			<ea:SI_Chars>7</ea:SI_Chars>
+			<ea:SI_Paras>56</ea:SI_Paras>
+			<ea:SI_Lines>1</ea:SI_Lines>
+			<ea:SI_Snippet>1 – 10
+
+258
+
+9.15
+
+1 588
+
+0.04
+11 – 100
+
+895
+
+31.74
+
+48 376
+
+1.27
+101 – 1 000
+
+736
+
+26.10
+
+240 039
+
+6.32
+1 001 – 10 000
+
+168
+
+5.95
+
+527 876
+
+13.89
+10 001 – 100 000
+
+38
+
+1.35
+
+1 047 205
+
+27.56
+100 001 – 1 000 000
+
+4
+
+0.14
+
+963 306
+
+25.35
+
+			</ea:SI_Snippet>
+			<ea:SI_Version>eeb26fad-5a33-499e-9152-675bff60a4f6</ea:SI_Version>
+		</ea:StoryInfo>
+		<Document DOMVersion="8.0" Self="d">
+			<Color Self="Color/C=0 M=100 Y=0 K=0" Model="Process" Space="CMYK" ColorValue="0 100 0 0" ColorOverride="Normal" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="C=0 M=100 Y=0 K=0" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="7937"/>
+			<Color Self="Color/C=100 M=0 Y=0 K=0" Model="Process" Space="CMYK" ColorValue="100 0 0 0" ColorOverride="Normal" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="C=100 M=0 Y=0 K=0" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="7937"/>
+			<Color Self="Color/Paper" Model="Process" Space="CMYK" ColorValue="0 0 0 0" ColorOverride="Specialpaper" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="Paper" ColorEditable="true" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+			<Color Self="Color/Black" Model="Process" Space="CMYK" ColorValue="0 0 0 100" ColorOverride="Specialblack" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="Black" ColorEditable="false" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+			<Ink Self="Ink/$ID/Process Cyan" Name="$ID/Process Cyan" Angle="15" ConvertToProcess="false" Frequency="85" NeutralDensity="0.61" PrintInk="true" TrapOrder="1" InkType="Normal"/>
+			<Ink Self="Ink/$ID/Process Magenta" Name="$ID/Process Magenta" Angle="75" ConvertToProcess="false" Frequency="85" NeutralDensity="0.76" PrintInk="true" TrapOrder="2" InkType="Normal"/>
+			<Ink Self="Ink/$ID/Process Yellow" Name="$ID/Process Yellow" Angle="0" ConvertToProcess="false" Frequency="85" NeutralDensity="0.16" PrintInk="true" TrapOrder="3" InkType="Normal"/>
+			<Ink Self="Ink/$ID/Process Black" Name="$ID/Process Black" Angle="45" ConvertToProcess="false" Frequency="85" NeutralDensity="1.7" PrintInk="true" TrapOrder="4" InkType="Normal"/>
+			<Ink Self="Ink/PANTONE 348 U" Name="PANTONE 348 U" Angle="45" ConvertToProcess="false" Frequency="85" NeutralDensity="0.8669320480262032" PrintInk="true" TrapOrder="5" InkType="Normal"/>
+			<Ink Self="Ink/Stanzform" Name="Stanzform" Angle="45" ConvertToProcess="false" Frequency="85" NeutralDensity="0.7751999999999999" PrintInk="true" TrapOrder="6" InkType="Normal"/>
+			<Swatch Self="Swatch/None" Name="None" ColorEditable="false" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+			<StrokeStyle Self="StrokeStyle/$ID/Solid" StrokeStyleType="$ID/" Name="$ID/Solid"/>
+			<RootCharacterStyleGroup Self="u64">
+				<CharacterStyle Self="CharacterStyle/$ID/[No character style]" Imported="false" Name="$ID/[No character style]"/>
+			</RootCharacterStyleGroup>
+			<NumberingList Self="NumberingList/$ID/[Default]" Name="$ID/[Default]" ContinueNumbersAcrossStories="false" ContinueNumbersAcrossDocuments="false"/>
+			<RootParagraphStyleGroup Self="u63">
+				<ParagraphStyle Self="ParagraphStyle/02_Lauftext_black" Name="02_Lauftext_black" Imported="false" NextStyle="ParagraphStyle/02_Lauftext_black" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" KeepLinesTogether="true" GridAlignment="AlignBaseline">
+					<Properties>
+						<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+						<PreviewColor type="enumeration">Nothing</PreviewColor>
+						<Leading type="unit">12.5</Leading>
+						<TabList type="list">
+							<ListItem type="record">
+								<Alignment type="enumeration">LeftAlign</Alignment>
+								<AlignmentCharacter type="string">.</AlignmentCharacter>
+								<Leader type="string"/>
+								<Position type="unit">14.173228346456694</Position>
+							</ListItem>
+							<ListItem type="record">
+								<Alignment type="enumeration">LeftAlign</Alignment>
+								<AlignmentCharacter type="string">.</AlignmentCharacter>
+								<Leader type="string"/>
+								<Position type="unit">170.07874015748033</Position>
+							</ListItem>
+						</TabList>
+						<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+					</Properties>
+				</ParagraphStyle>
+				<ParagraphStyleGroup Self="ParagraphStyleGroup/$ID/TableStyles" Name="$ID/TableStyles">
+					<ParagraphStyle Self="ParagraphStyle/TableStyles%3aLINE" Name="TableStyles:LINE" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aLINE" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="7.5" DropcapDetail="1" StrikeThroughOffset="2.5" StrikeThroughWeight="0.374908447265625">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">10</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">RightAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">226.7716535433071</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/TableStyles%3aNOLINE" Name="TableStyles:NOLINE" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aNOLINE" KeyboardShortcut="0 0">
+						<Properties>
+							<BasedOn type="object">ParagraphStyle/TableStyles%3aLINE</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+						</Properties>
+					</ParagraphStyle>
+				</ParagraphStyleGroup>
+				<ParagraphStyle Self="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[No paragraph style]" Imported="false" FillColor="Color/Black" FontStyle="Regular" PointSize="12" HorizontalScale="100" KerningMethod="$ID/Metrics" Ligatures="true" PageNumberType="AutoPageNumber" StrokeWeight="1" Tracking="0" Composer="HL Composer" DropCapCharacters="0" DropCapLines="0" BaselineShift="0" Capitalization="Normal" StrokeColor="Swatch/None" HyphenateLadderLimit="3" VerticalScale="100" LeftIndent="0" RightIndent="0" FirstLineIndent="0" AutoLeading="120" AppliedLanguage="$ID/de_DE_2006" Hyphenation="true" HyphenateAfterFirst="2" HyphenateBeforeLast="2" HyphenateCapitalizedWords="true" HyphenateWordsLongerThan="5" NoBreak="false" HyphenationZone="36" SpaceBefore="0" SpaceAfter="0" Underline="false" OTFFigureStyle="Default" DesiredWordSpacing="100" MaximumWordSpacing="133" MinimumWordSpacing="80" DesiredLetterSpacing="0" MaximumLetterSpacing="0" MinimumLetterSpacing="0" DesiredGlyphScaling="100" MaximumGlyphScaling="100" MinimumGlyphScaling="100" StartParagraph="Anywhere" KeepAllLinesTogether="false" KeepWithNext="0" KeepFirstLines="2" KeepLastLines="2" Position="Normal" StrikeThru="false" CharacterAlignment="AlignEmCenter" KeepLinesTogether="false" StrokeTint="-1" FillTint="-1" OverprintStroke="false" OverprintFill="false" GradientStrokeAngle="0" GradientFillAngle="0" GradientStrokeLength="-1" GradientFillLength="-1" GradientStrokeStart="0 0" GradientFillStart="0 0" Skew="0" RuleAboveLineWeight="1" RuleAboveTint="-1" RuleAboveOffset="0" RuleAboveLeftIndent="0" RuleAboveRightIndent="0" RuleAboveWidth="ColumnWidth" RuleBelowLineWeight="1" RuleBelowTint="-1" RuleBelowOffset="0" RuleBelowLeftIndent="0" RuleBelowRightIndent="0" RuleBelowWidth="ColumnWidth" RuleAboveOverprint="false" RuleBelowOverprint="false" RuleAbove="false" RuleBelow="false" LastLineIndent="0" HyphenateLastWord="true" ParagraphBreakType="Anywhere" SingleWordJustification="FullyJustified" OTFOrdinal="false" OTFFraction="false" OTFDiscretionaryLigature="false" OTFTitling="false" RuleAboveGapTint="-1" RuleAboveGapOverprint="false" RuleBelowGapTint="-1" RuleBelowGapOverprint="false" Justification="LeftAlign" DropcapDetail="0" PositionalForm="None" OTFMark="true" HyphenWeight="5" OTFLocale="true" HyphenateAcrossColumns="true" KeepRuleAboveInFrame="false" IgnoreEdgeAlignment="false" OTFSlashedZero="false" OTFStylisticSets="0" OTFHistorical="false" OTFContextualAlternate="true" UnderlineGapOverprint="false" UnderlineGapTint="-1" UnderlineOffset="-9999" UnderlineOverprint="false" UnderlineTint="-1" UnderlineWeight="-9999" StrikeThroughGapOverprint="false" StrikeThroughGapTint="-1" StrikeThroughOffset="-9999" StrikeThroughOverprint="false" StrikeThroughTint="-1" StrikeThroughWeight="-9999" MiterLimit="4" StrokeAlignment="OutsideAlignment" EndJoin="MiterEndJoin" SpanColumnType="SingleColumn" SplitColumnInsideGutter="6" SplitColumnOutsideGutter="0" KeepWithPrevious="false" SpanColumnMinSpaceBefore="0" SpanColumnMinSpaceAfter="0" OTFSwash="false" Tsume="0" LeadingAki="-1" TrailingAki="-1" KinsokuType="KinsokuPushInFirst" KinsokuHangType="None" BunriKinshi="true" RubyOpenTypePro="true" RubyFontSize="-1" RubyAlignment="RubyJIS" RubyType="PerCharacterRuby" RubyParentSpacing="RubyParent121Aki" RubyXScale="100" RubyYScale="100" RubyXOffset="0" RubyYOffset="0" RubyPosition="AboveRight" RubyAutoAlign="true" RubyParentOverhangAmount="RubyOverhangOneRuby" RubyOverhang="false" RubyAutoScaling="false" RubyParentScalingPercent="66" RubyTint="-1" RubyOverprintFill="Auto" RubyStrokeTint="-1" RubyOverprintStroke="Auto" RubyWeight="-1" KentenKind="None" KentenFontSize="-1" KentenXScale="100" KentenYScale="100" KentenPlacement="0" KentenAlignment="AlignKentenCenter" KentenPosition="AboveRight" KentenCustomCharacter="" KentenCharacterSet="CharacterInput" KentenTint="-1" KentenOverprintFill="Auto" KentenStrokeTint="-1" KentenOverprintStroke="Auto" KentenWeight="-1" Tatechuyoko="false" TatechuyokoXOffset="0" TatechuyokoYOffset="0" AutoTcy="0" AutoTcyIncludeRoman="false" Jidori="0" GridGyoudori="0" GridAlignFirstLineOnly="false" GridAlignment="None" CharacterRotation="0" RotateSingleByteCharacters="false" Rensuuji="true" ShataiMagnification="0" ShataiDegreeAngle="4500" ShataiAdjustTsume="true" ShataiAdjustRotation="false" Warichu="false" WarichuLines="2" WarichuSize="50" WarichuLineSpacing="0" WarichuAlignment="Auto" WarichuCharsBeforeBreak="2" WarichuCharsAfterBreak="2" OTFHVKana="false" OTFProportionalMetrics="false" OTFRomanItalics="false" LeadingModel="LeadingModelAkiBelow" ScaleAffectsLineHeight="false" ParagraphGyoudori="false" CjkGridTracking="false" GlyphForm="None" RubyAutoTcyDigits="0" RubyAutoTcyIncludeRoman="false" RubyAutoTcyAutoScale="true" TreatIdeographicSpaceAsSpace="false" AllowArbitraryHyphenation="false" BulletsAndNumberingListType="NoList" NumberingStartAt="1" NumberingLevel="1" NumberingContinue="true" NumberingApplyRestartPolicy="true" BulletsAlignment="LeftAlign" NumberingAlignment="LeftAlign" NumberingExpression="^#.^t" BulletsTextAfter="^t" DigitsType="DefaultDigits" Kashidas="DefaultKashidas" DiacriticPosition="OpentypePosition" CharacterDirection="DefaultDirection" ParagraphDirection="LeftToRightDirection" ParagraphJustification="DefaultJustification" ParagraphKashidaWidth="2" XOffsetDiacritic="0" YOffsetDiacritic="0" OTFOverlapSwash="false" OTFStylisticAlternate="false" OTFJustificationAlternate="false" OTFStretchedAlternate="false" KeyboardDirection="DefaultDirection">
+					<Properties>
+						<Leading type="enumeration">Auto</Leading>
+						<TabList type="list">
+						</TabList>
+						<AppliedFont type="string">Times (TT)</AppliedFont>
+						<RuleAboveColor type="string">Text Color</RuleAboveColor>
+						<RuleBelowColor type="string">Text Color</RuleBelowColor>
+						<RuleAboveType type="object">StrokeStyle/$ID/Solid</RuleAboveType>
+						<RuleBelowType type="object">StrokeStyle/$ID/Solid</RuleBelowType>
+						<BalanceRaggedLines type="enumeration">NoBalancing</BalanceRaggedLines>
+						<RuleAboveGapColor type="object">Swatch/None</RuleAboveGapColor>
+						<RuleBelowGapColor type="object">Swatch/None</RuleBelowGapColor>
+						<UnderlineColor type="string">Text Color</UnderlineColor>
+						<UnderlineGapColor type="object">Swatch/None</UnderlineGapColor>
+						<UnderlineType type="object">StrokeStyle/$ID/Solid</UnderlineType>
+						<StrikeThroughColor type="string">Text Color</StrikeThroughColor>
+						<StrikeThroughGapColor type="object">Swatch/None</StrikeThroughGapColor>
+						<StrikeThroughType type="object">StrokeStyle/$ID/Solid</StrikeThroughType>
+						<SpanSplitColumnCount type="enumeration">All</SpanSplitColumnCount>
+						<Mojikumi type="enumeration">Nothing</Mojikumi>
+						<KinsokuSet type="enumeration">Nothing</KinsokuSet>
+						<RubyFont type="string">$ID/</RubyFont>
+						<RubyFontStyle type="enumeration">Nothing</RubyFontStyle>
+						<RubyFill type="string">Text Color</RubyFill>
+						<RubyStroke type="string">Text Color</RubyStroke>
+						<KentenFont type="string">$ID/</KentenFont>
+						<KentenFontStyle type="enumeration">Nothing</KentenFontStyle>
+						<KentenFillColor type="string">Text Color</KentenFillColor>
+						<KentenStrokeColor type="string">Text Color</KentenStrokeColor>
+						<BulletChar BulletCharacterType="UnicodeOnly" BulletCharacterValue="8226"/>
+						<NumberingFormat type="string">1, 2, 3, 4...</NumberingFormat>
+						<BulletsFont type="string">$ID/</BulletsFont>
+						<BulletsFontStyle type="enumeration">Nothing</BulletsFontStyle>
+						<AppliedNumberingList type="object">NumberingList/$ID/[Default]</AppliedNumberingList>
+						<NumberingRestartPolicies RestartPolicy="AnyPreviousLevel" LowerLevel="0" UpperLevel="0"/>
+						<BulletsCharacterStyle type="object">CharacterStyle/$ID/[No character style]</BulletsCharacterStyle>
+						<NumberingCharacterStyle type="object">CharacterStyle/$ID/[No character style]</NumberingCharacterStyle>
+					</Properties>
+				</ParagraphStyle>
+			</RootParagraphStyleGroup>
+			<RootCellStyleGroup Self="u69">
+				<CellStyle Self="CellStyle/$ID/[None]" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[None]"/>
+			</RootCellStyleGroup>
+			<RootTableStyleGroup Self="u6b">
+				<TableStyle Self="TableStyle/$ID/[Basic Table]" Name="$ID/[Basic Table]" KeyboardShortcut="0 0">
+					<Properties>
+						<BasedOn type="string">$ID/[No table style]</BasedOn>
+					</Properties>
+				</TableStyle>
+			</RootTableStyleGroup>
+			<TinDocumentDataObject>
+				<Properties>
+					<GaijiRefMaps>
+						<![CDATA[/////wAAAAAAAAAA]]>
+					</GaijiRefMaps>
+				</Properties>
+			</TinDocumentDataObject>
+			<Story Self="u1a1e" Guid="339267d1-0549-4983-920c-f3b5fc3e714d" VersionGuid="eeb26fad-5a33-499e-9152-675bff60a4f6" TrackChanges="false" StoryTitle="$ID/body" AppliedNamedGrid="n">
+				<Properties>
+					<AppliedIndexInstance type="enumeration">Nothing</AppliedIndexInstance>
+				</Properties>
+				<StoryPreference OpticalMarginAlignment="false" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection"/>
+				<MetadataPacketPreference>
+					<Properties>
+						<Contents>
+							<![CDATA[<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+         <xmp:CreateDate>2013-07-22T13:11:47</xmp:CreateDate>
+         <xmp:MetadataDate>2011-07-20T16:43:08+02:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2013-07-22T13:27:20</xmp:ModifyDate>
+         <xmp:CreatorTool>Adobe InCopy CS6 (Windows)</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#">
+         <xmpMM:InstanceID>xmp.iid:A1DCA875092068119457D84E16B0FBA3</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:FC20EDA9B2F2E211A52ABD0506CE21C7</xmpMM:DocumentID>
+         <xmpMM:OriginalDocumentID>xmp.did:A1DCA875092068119457D84E16B0FBA3</xmpMM:OriginalDocumentID>
+         <xmpMM:History>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>created</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:A1DCA875092068119457D84E16B0FBA3</stEvt:instanceID>
+                  <stEvt:when>2011-07-20T16:43:08+02:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe InDesign 6.0</stEvt:softwareAgent>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>converted</stEvt:action>
+                  <stEvt:parameters>from application/x-incopy to application/x-indesign</stEvt:parameters>
+               </rdf:li>
+            </rdf:Seq>
+         </xmpMM:History>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <dc:format>application/x-incopy</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">body</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+      </rdf:Description>
+      <rdf:Description rdf:about=""
+            xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/">
+         <xmpRights:Marked>False</xmpRights:Marked>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="r"?>]]></Contents>
+					</Properties>
+				</MetadataPacketPreference>
+				<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false"/>
+				<StandaloneDocumentPreference PageHeight="807.8740157480315" PageWidth="606.6141732283465" TextAreaWidth="523.275590551" TextAreaDepth="0" TextAreaDepthUnit="DepthColumnInches" FrameType="TextFrameType" StoryOrientation="Horizontal" CharacterAki="0" LineAki="6.909448818897637" HorizontalScale="100" VerticalScale="100" TextAreaCharPerLine="52" FacingPages="true"/>
+				<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/02_Lauftext_black">
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+						<Br />
+						<Content>Corporate Governance der Siegfried Gruppe</Content>
+					</CharacterStyleRange>
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/hochgestellt">
+						<Content>und </Content>
+					</CharacterStyleRange>
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+						<Content>das Schweizerische Obligationenrechts (OR)</Content>
+						<Br />
+						<Br />
+					</CharacterStyleRange>
+				</ParagraphStyleRange>
+				<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/02_Lauftext_black">
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+						<Br />
+					</CharacterStyleRange>
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" FillColor="Color/C=0 M=100 Y=0 K=0">
+						<Table Self="u1a1ei49e4" HeaderRowCount="0" FooterRowCount="0" BodyRowCount="9" ColumnCount="9" AppliedTableStyle="TableStyle/$ID/[Basic Table]" TableDirection="LeftToRightDirection" SpaceBefore="0" SpaceAfter="4.195275590551182">
+							<Row Self="u1a1ei49e4Row0" Name="0" SingleRowHeight="18.236220472440944" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row1" Name="1" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row2" Name="2" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row3" Name="3" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row4" Name="4" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row5" Name="5" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row6" Name="6" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row7" Name="7" SingleRowHeight="12.501850393700789" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Row Self="u1a1ei49e4Row8" Name="8" SingleRowHeight="12.501850393700787" MinimumHeight="12.500787401574803" AutoGrow="true" />
+							<Column Self="u1a1ei49e4Column0" Name="0" SingleColumnWidth="107.71653543307087" />
+							<Column Self="u1a1ei49e4Column1" Name="1" SingleColumnWidth="5.669291338582678" />
+							<Column Self="u1a1ei49e4Column2" Name="2" SingleColumnWidth="36.85039370078741" />
+							<Column Self="u1a1ei49e4Column3" Name="3" SingleColumnWidth="5.669291338582678" />
+							<Column Self="u1a1ei49e4Column4" Name="4" SingleColumnWidth="121.88976377952756" />
+							<Column Self="u1a1ei49e4Column5" Name="5" SingleColumnWidth="5.669291338582678" />
+							<Column Self="u1a1ei49e4Column6" Name="6" SingleColumnWidth="36.85039370078741" />
+							<Column Self="u1a1ei49e4Column7" Name="7" SingleColumnWidth="5.669291338582678" />
+							<Column Self="u1a1ei49e4Column8" Name="8" SingleColumnWidth="36.85039370078741" />
+							<Cell Self="u1a1ei49e4i0" Name="0:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="14" TopEdgeStrokePriority="54" BottomEdgeStrokePriority="72">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Name </Content>
+									</CharacterStyleRange>
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Vorname</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1" Name="1:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="974" LeftInset="0" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="56" BottomEdgeStrokePriority="74">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2" Name="2:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="58" BottomEdgeStrokePriority="76">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Jahrgang</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3" Name="3:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.1181102362204727" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="60" BottomEdgeStrokePriority="78">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4" Name="4:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="62" BottomEdgeStrokePriority="80">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Position</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i5" Name="5:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.1181102362204727" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="64" BottomEdgeStrokePriority="82">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i6" Name="6:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="66" BottomEdgeStrokePriority="84">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Eintritt  in die Firma</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i7" Name="7:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.1181102362204727" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="14" TopEdgeStrokePriority="68" BottomEdgeStrokePriority="86">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i8" Name="8:0" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="114" LeftInset="0.7086614173228347" TopInset="3.1181102362204727" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="14" RightEdgeStrokePriority="15" TopEdgeStrokePriority="70" BottomEdgeStrokePriority="88">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aHEAD">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>In aktueller Funktion seit</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i9" Name="0:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="72" BottomEdgeStrokePriority="90">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Rudolf Hanko</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4ia" Name="1:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="974" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="74" BottomEdgeStrokePriority="92">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4ib" Name="2:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="10" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="76" BottomEdgeStrokePriority="94">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1955</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4ic" Name="3:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="78" BottomEdgeStrokePriority="96">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4id" Name="4:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="14" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="80" BottomEdgeStrokePriority="98">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Chief Executive Officer</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4ie" Name="5:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="82" BottomEdgeStrokePriority="100">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4if" Name="6:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="84" BottomEdgeStrokePriority="102">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2009</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i10" Name="7:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="86" BottomEdgeStrokePriority="104">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i11" Name="8:1" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="66" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="88" BottomEdgeStrokePriority="106">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2009</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i12" Name="0:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="90" BottomEdgeStrokePriority="91">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Peter A. Gehler</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i13" Name="1:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="974" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="92" BottomEdgeStrokePriority="93">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i14" Name="2:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="10" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="94" BottomEdgeStrokePriority="95">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1958</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i15" Name="3:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="96" BottomEdgeStrokePriority="97">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i16" Name="4:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="14" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="98" BottomEdgeStrokePriority="99">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Corporate Center</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i17" Name="5:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="100" BottomEdgeStrokePriority="101">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i18" Name="6:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="102" BottomEdgeStrokePriority="103">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2000</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i19" Name="7:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="104" BottomEdgeStrokePriority="105">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1a" Name="8:2" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="66" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="106" BottomEdgeStrokePriority="107">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2010</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1b" Name="0:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="91" BottomEdgeStrokePriority="108">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Michael Hüsler</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1c" Name="1:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="974" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="93" BottomEdgeStrokePriority="110">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1d" Name="2:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="10" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="95" BottomEdgeStrokePriority="112">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1972</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1e" Name="3:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="97" BottomEdgeStrokePriority="114">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i1f" Name="4:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="14" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="99" BottomEdgeStrokePriority="116">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Chief Financial Officer</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i20" Name="5:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="101" BottomEdgeStrokePriority="118">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i21" Name="6:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="103" BottomEdgeStrokePriority="120">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2009</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i22" Name="7:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6066" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="105" BottomEdgeStrokePriority="122">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i23" Name="8:3" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="66" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="107" BottomEdgeStrokePriority="124">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2009</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i24" Name="0:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6138" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="108" BottomEdgeStrokePriority="126">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>René Imwinkelried</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i25" Name="1:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="7106" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="110" BottomEdgeStrokePriority="128">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i26" Name="2:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6142" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="112" BottomEdgeStrokePriority="130">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1957</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i27" Name="3:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="12198" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="114" BottomEdgeStrokePriority="132">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i28" Name="4:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6146" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="116" BottomEdgeStrokePriority="134">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Research &amp; Development</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i29" Name="5:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="12198" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="118" BottomEdgeStrokePriority="136">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2a" Name="6:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6138" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="120" BottomEdgeStrokePriority="138">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2012</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2b" Name="7:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="12198" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="122" BottomEdgeStrokePriority="140">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2c" Name="8:4" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6198" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="124" BottomEdgeStrokePriority="142">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2012</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2d" Name="0:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="70" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="126" BottomEdgeStrokePriority="126">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Walter Kittl</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2e" Name="1:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="1038" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="128" BottomEdgeStrokePriority="128">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i2f" Name="2:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="74" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="130" BottomEdgeStrokePriority="130">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1956</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i30" Name="3:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6130" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="132" BottomEdgeStrokePriority="132">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i31" Name="4:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="78" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="134" BottomEdgeStrokePriority="134">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Technical Operations</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i32" Name="5:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6130" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="136" BottomEdgeStrokePriority="136">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i33" Name="6:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="70" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="138" BottomEdgeStrokePriority="138">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2008</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i34" Name="7:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6130" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="140" BottomEdgeStrokePriority="140">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i35" Name="8:5" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="130" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="142" BottomEdgeStrokePriority="142">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2011</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i36" Name="0:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="134" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="126" BottomEdgeStrokePriority="144">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Arnoud M. Middel</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i37" Name="1:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="1102" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="128" BottomEdgeStrokePriority="146">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i38" Name="2:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="138" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="130" BottomEdgeStrokePriority="148">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1971</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i39" Name="3:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6194" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="132" BottomEdgeStrokePriority="150">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3a" Name="4:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="142" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="134" BottomEdgeStrokePriority="152">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Human Resources</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3b" Name="5:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6194" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="136" BottomEdgeStrokePriority="154">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3c" Name="6:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="134" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="138" BottomEdgeStrokePriority="156">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2011</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3d" Name="7:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6194" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="140" BottomEdgeStrokePriority="158">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3e" Name="8:6" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="194" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="142" BottomEdgeStrokePriority="160">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2011</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i3f" Name="0:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="198" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="144" BottomEdgeStrokePriority="162">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Marianne Späne</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i40" Name="1:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="1166" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="146" BottomEdgeStrokePriority="164">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i41" Name="2:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="202" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="148" BottomEdgeStrokePriority="166">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1962</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i42" Name="3:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6258" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="150" BottomEdgeStrokePriority="168">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i43" Name="4:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="206" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="152" BottomEdgeStrokePriority="170">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Business Development &amp; Sales</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i44" Name="5:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6258" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="154" BottomEdgeStrokePriority="172">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i45" Name="6:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="198" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="156" BottomEdgeStrokePriority="174">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2004</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i46" Name="7:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6258" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="158" BottomEdgeStrokePriority="176">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i47" Name="8:7" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="258" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="160" BottomEdgeStrokePriority="178">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2010</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i48" Name="0:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="262" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="1" TopEdgeStrokePriority="162" BottomEdgeStrokePriority="180">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Wolfgang Wienand</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i49" Name="1:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="1230" LeftInset="0" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="164" BottomEdgeStrokePriority="182">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4a" Name="2:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="266" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="166" BottomEdgeStrokePriority="184">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>1972</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4b" Name="3:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6322" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="168" BottomEdgeStrokePriority="186">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4c" Name="4:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="270" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="170" BottomEdgeStrokePriority="188">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>Head Strategy und M&amp;A</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4d" Name="5:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6322" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="172" BottomEdgeStrokePriority="190">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4e" Name="6:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="262" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="174" BottomEdgeStrokePriority="192">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2010</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i4f" Name="7:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="6322" LeftInset="0" TopInset="3.7587401574803154" RightInset="0" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0" BottomEdgeStrokeWeight="0" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="1" RightEdgeStrokePriority="15" TopEdgeStrokePriority="176" BottomEdgeStrokePriority="194">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" />
+								</ParagraphStyleRange>
+							</Cell>
+							<Cell Self="u1a1ei49e4i50" Name="8:8" RowSpan="1" ColumnSpan="1" AppliedCellStyle="CellStyle/$ID/[None]" AppliedCellStylePriority="322" LeftInset="0.7086614173228347" TopInset="3.7587401574803154" RightInset="0.7086614173228347" BottomInset="3.1181102362204727" LeftEdgeStrokeWeight="0" RightEdgeStrokeWeight="0" TopEdgeStrokeWeight="0.1" BottomEdgeStrokeWeight="0.1" TopEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" BottomEdgeStrokeColor="Color/C=100 M=0 Y=0 K=0" VerticalJustification="BottomAlign" LeftEdgeStrokePriority="15" RightEdgeStrokePriority="1" TopEdgeStrokePriority="178" BottomEdgeStrokePriority="196">
+								<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/TableStyles%3aLINE">
+									<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+										<Content>2011</Content>
+									</CharacterStyleRange>
+								</ParagraphStyleRange>
+							</Cell>
+						</Table>
+					</CharacterStyleRange>
+					<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+						<Br />
+						<Br />
+					</CharacterStyleRange>
+				</ParagraphStyleRange>
+			</Story>
+		</Document>
+	</ea:Story>
+	<ea:wwsd_document ea:version="1.0">
+		<ea:wwsd_styles pi0="style=&quot;50&quot; type=&quot;snippet&quot; readerVersion=&quot;6.0&quot; featureSet=&quot;513&quot; product=&quot;8.0(370)&quot; " pi1="SnippetType=&quot;PageItem&quot;">
+			<Document DOMVersion="8.0" Self="d">
+				<Color Self="Color/Black" Model="Process" Space="CMYK" ColorValue="0 0 0 100" ColorOverride="Specialblack" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="Black" ColorEditable="false" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+				<Color Self="Color/PANTONE 348 U" Model="Spot" Space="CMYK" ColorValue="100 3.1372549019607843 82.35294117647058 13.725490196078432" ColorOverride="Normal" SpotInkAliasSpotColorReference="n" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="PANTONE 348 U" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="31502"/>
+				<Color Self="Color/C=100 M=0 Y=0 K=0" Model="Process" Space="CMYK" ColorValue="100 0 0 0" ColorOverride="Normal" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="C=100 M=0 Y=0 K=0" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="7937"/>
+				<Color Self="Color/Paper" Model="Process" Space="CMYK" ColorValue="0 0 0 0" ColorOverride="Specialpaper" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="Paper" ColorEditable="true" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+				<Color Self="Color/Table_blue" Model="Process" Space="CMYK" ColorValue="100 0 0 0" ColorOverride="Normal" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="Table_blue" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="7937"/>
+				<Swatch Self="Swatch/None" Name="None" ColorEditable="false" ColorRemovable="false" Visible="true" SwatchCreatorID="7937"/>
+				<StrokeStyle Self="StrokeStyle/$ID/Solid" StrokeStyleType="$ID/" Name="$ID/Solid"/>
+				<RootCharacterStyleGroup Self="u64">
+					<CharacterStyle Self="CharacterStyle/$ID/[No character style]" Imported="false" Name="$ID/[No character style]"/>
+					<CharacterStyle Self="CharacterStyle/Bold" Imported="false" KeyboardShortcut="0 0" Name="Bold" FontStyle="65 Bold">
+						<Properties>
+							<BasedOn type="string">$ID/[No character style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+						</Properties>
+					</CharacterStyle>
+					<CharacterStyle Self="CharacterStyle/Bold_black" Imported="false" KeyboardShortcut="0 0" Name="Bold_black" FillColor="Color/Black" FontStyle="65 Bold" StrokeColor="Swatch/None">
+						<Properties>
+							<BasedOn type="string">$ID/[No character style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+						</Properties>
+					</CharacterStyle>
+					<CharacterStyle Self="CharacterStyle/hochgestellt" Imported="false" KeyboardShortcut="0 0" Name="hochgestellt" Position="Superscript">
+						<Properties>
+							<BasedOn type="string">$ID/[No character style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+						</Properties>
+					</CharacterStyle>
+					<CharacterStyleGroup Self="CharacterStyleGroup/$ID/TableStyles" Name="$ID/TableStyles">
+						<CharacterStyle Self="CharacterStyle/TableStyles%3ablack" Imported="false" KeyboardShortcut="0 0" Name="TableStyles:black" FillColor="Color/Black">
+							<Properties>
+								<BasedOn type="string">$ID/[No character style]</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+							</Properties>
+						</CharacterStyle>
+						<CharacterStyle Self="CharacterStyle/TableStyles%3asuperscript" Imported="false" KeyboardShortcut="0 0" Name="TableStyles:superscript" Position="Superscript">
+							<Properties>
+								<BasedOn type="string">$ID/[No character style]</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+							</Properties>
+						</CharacterStyle>
+					</CharacterStyleGroup>
+				</RootCharacterStyleGroup>
+				<NumberingList Self="NumberingList/$ID/[Default]" Name="$ID/[Default]" ContinueNumbersAcrossStories="false" ContinueNumbersAcrossDocuments="false"/>
+				<RootParagraphStyleGroup Self="u63">
+					<ParagraphStyle Self="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[No paragraph style]" Imported="false" FillColor="Color/Black" FontStyle="Regular" PointSize="12" HorizontalScale="100" KerningMethod="$ID/Metrics" Ligatures="true" PageNumberType="AutoPageNumber" StrokeWeight="1" Tracking="0" Composer="HL Composer" DropCapCharacters="0" DropCapLines="0" BaselineShift="0" Capitalization="Normal" StrokeColor="Swatch/None" HyphenateLadderLimit="3" VerticalScale="100" LeftIndent="0" RightIndent="0" FirstLineIndent="0" AutoLeading="120" AppliedLanguage="$ID/de_DE_2006" Hyphenation="true" HyphenateAfterFirst="2" HyphenateBeforeLast="2" HyphenateCapitalizedWords="true" HyphenateWordsLongerThan="5" NoBreak="false" HyphenationZone="36" SpaceBefore="0" SpaceAfter="0" Underline="false" OTFFigureStyle="Default" DesiredWordSpacing="100" MaximumWordSpacing="133" MinimumWordSpacing="80" DesiredLetterSpacing="0" MaximumLetterSpacing="0" MinimumLetterSpacing="0" DesiredGlyphScaling="100" MaximumGlyphScaling="100" MinimumGlyphScaling="100" StartParagraph="Anywhere" KeepAllLinesTogether="false" KeepWithNext="0" KeepFirstLines="2" KeepLastLines="2" Position="Normal" StrikeThru="false" CharacterAlignment="AlignEmCenter" KeepLinesTogether="false" StrokeTint="-1" FillTint="-1" OverprintStroke="false" OverprintFill="false" GradientStrokeAngle="0" GradientFillAngle="0" GradientStrokeLength="-1" GradientFillLength="-1" GradientStrokeStart="0 0" GradientFillStart="0 0" Skew="0" RuleAboveLineWeight="1" RuleAboveTint="-1" RuleAboveOffset="0" RuleAboveLeftIndent="0" RuleAboveRightIndent="0" RuleAboveWidth="ColumnWidth" RuleBelowLineWeight="1" RuleBelowTint="-1" RuleBelowOffset="0" RuleBelowLeftIndent="0" RuleBelowRightIndent="0" RuleBelowWidth="ColumnWidth" RuleAboveOverprint="false" RuleBelowOverprint="false" RuleAbove="false" RuleBelow="false" LastLineIndent="0" HyphenateLastWord="true" ParagraphBreakType="Anywhere" SingleWordJustification="FullyJustified" OTFOrdinal="false" OTFFraction="false" OTFDiscretionaryLigature="false" OTFTitling="false" RuleAboveGapTint="-1" RuleAboveGapOverprint="false" RuleBelowGapTint="-1" RuleBelowGapOverprint="false" Justification="LeftAlign" DropcapDetail="0" PositionalForm="None" OTFMark="true" HyphenWeight="5" OTFLocale="true" HyphenateAcrossColumns="true" KeepRuleAboveInFrame="false" IgnoreEdgeAlignment="false" OTFSlashedZero="false" OTFStylisticSets="0" OTFHistorical="false" OTFContextualAlternate="true" UnderlineGapOverprint="false" UnderlineGapTint="-1" UnderlineOffset="-9999" UnderlineOverprint="false" UnderlineTint="-1" UnderlineWeight="-9999" StrikeThroughGapOverprint="false" StrikeThroughGapTint="-1" StrikeThroughOffset="-9999" StrikeThroughOverprint="false" StrikeThroughTint="-1" StrikeThroughWeight="-9999" MiterLimit="4" StrokeAlignment="OutsideAlignment" EndJoin="MiterEndJoin" SpanColumnType="SingleColumn" SplitColumnInsideGutter="6" SplitColumnOutsideGutter="0" KeepWithPrevious="false" SpanColumnMinSpaceBefore="0" SpanColumnMinSpaceAfter="0" OTFSwash="false" Tsume="0" LeadingAki="-1" TrailingAki="-1" KinsokuType="KinsokuPushInFirst" KinsokuHangType="None" BunriKinshi="true" RubyOpenTypePro="true" RubyFontSize="-1" RubyAlignment="RubyJIS" RubyType="PerCharacterRuby" RubyParentSpacing="RubyParent121Aki" RubyXScale="100" RubyYScale="100" RubyXOffset="0" RubyYOffset="0" RubyPosition="AboveRight" RubyAutoAlign="true" RubyParentOverhangAmount="RubyOverhangOneRuby" RubyOverhang="false" RubyAutoScaling="false" RubyParentScalingPercent="66" RubyTint="-1" RubyOverprintFill="Auto" RubyStrokeTint="-1" RubyOverprintStroke="Auto" RubyWeight="-1" KentenKind="None" KentenFontSize="-1" KentenXScale="100" KentenYScale="100" KentenPlacement="0" KentenAlignment="AlignKentenCenter" KentenPosition="AboveRight" KentenCustomCharacter="" KentenCharacterSet="CharacterInput" KentenTint="-1" KentenOverprintFill="Auto" KentenStrokeTint="-1" KentenOverprintStroke="Auto" KentenWeight="-1" Tatechuyoko="false" TatechuyokoXOffset="0" TatechuyokoYOffset="0" AutoTcy="0" AutoTcyIncludeRoman="false" Jidori="0" GridGyoudori="0" GridAlignFirstLineOnly="false" GridAlignment="None" CharacterRotation="0" RotateSingleByteCharacters="false" Rensuuji="true" ShataiMagnification="0" ShataiDegreeAngle="4500" ShataiAdjustTsume="true" ShataiAdjustRotation="false" Warichu="false" WarichuLines="2" WarichuSize="50" WarichuLineSpacing="0" WarichuAlignment="Auto" WarichuCharsBeforeBreak="2" WarichuCharsAfterBreak="2" OTFHVKana="false" OTFProportionalMetrics="false" OTFRomanItalics="false" LeadingModel="LeadingModelAkiBelow" ScaleAffectsLineHeight="false" ParagraphGyoudori="false" CjkGridTracking="false" GlyphForm="None" RubyAutoTcyDigits="0" RubyAutoTcyIncludeRoman="false" RubyAutoTcyAutoScale="true" TreatIdeographicSpaceAsSpace="false" AllowArbitraryHyphenation="false" BulletsAndNumberingListType="NoList" NumberingStartAt="1" NumberingLevel="1" NumberingContinue="true" NumberingApplyRestartPolicy="true" BulletsAlignment="LeftAlign" NumberingAlignment="LeftAlign" NumberingExpression="^#.^t" BulletsTextAfter="^t" DigitsType="DefaultDigits" Kashidas="DefaultKashidas" DiacriticPosition="OpentypePosition" CharacterDirection="DefaultDirection" ParagraphDirection="LeftToRightDirection" ParagraphJustification="DefaultJustification" ParagraphKashidaWidth="2" XOffsetDiacritic="0" YOffsetDiacritic="0" OTFOverlapSwash="false" OTFStylisticAlternate="false" OTFJustificationAlternate="false" OTFStretchedAlternate="false" KeyboardDirection="DefaultDirection">
+						<Properties>
+							<Leading type="enumeration">Auto</Leading>
+							<TabList type="list">
+							</TabList>
+							<AppliedFont type="string">Times (TT)</AppliedFont>
+							<RuleAboveColor type="string">Text Color</RuleAboveColor>
+							<RuleBelowColor type="string">Text Color</RuleBelowColor>
+							<RuleAboveType type="object">StrokeStyle/$ID/Solid</RuleAboveType>
+							<RuleBelowType type="object">StrokeStyle/$ID/Solid</RuleBelowType>
+							<BalanceRaggedLines type="enumeration">NoBalancing</BalanceRaggedLines>
+							<RuleAboveGapColor type="object">Swatch/None</RuleAboveGapColor>
+							<RuleBelowGapColor type="object">Swatch/None</RuleBelowGapColor>
+							<UnderlineColor type="string">Text Color</UnderlineColor>
+							<UnderlineGapColor type="object">Swatch/None</UnderlineGapColor>
+							<UnderlineType type="object">StrokeStyle/$ID/Solid</UnderlineType>
+							<StrikeThroughColor type="string">Text Color</StrikeThroughColor>
+							<StrikeThroughGapColor type="object">Swatch/None</StrikeThroughGapColor>
+							<StrikeThroughType type="object">StrokeStyle/$ID/Solid</StrikeThroughType>
+							<SpanSplitColumnCount type="enumeration">All</SpanSplitColumnCount>
+							<Mojikumi type="enumeration">Nothing</Mojikumi>
+							<KinsokuSet type="enumeration">Nothing</KinsokuSet>
+							<RubyFont type="string">$ID/</RubyFont>
+							<RubyFontStyle type="enumeration">Nothing</RubyFontStyle>
+							<RubyFill type="string">Text Color</RubyFill>
+							<RubyStroke type="string">Text Color</RubyStroke>
+							<KentenFont type="string">$ID/</KentenFont>
+							<KentenFontStyle type="enumeration">Nothing</KentenFontStyle>
+							<KentenFillColor type="string">Text Color</KentenFillColor>
+							<KentenStrokeColor type="string">Text Color</KentenStrokeColor>
+							<BulletChar BulletCharacterType="UnicodeOnly" BulletCharacterValue="8226"/>
+							<NumberingFormat type="string">1, 2, 3, 4...</NumberingFormat>
+							<BulletsFont type="string">$ID/</BulletsFont>
+							<BulletsFontStyle type="enumeration">Nothing</BulletsFontStyle>
+							<AppliedNumberingList type="object">NumberingList/$ID/[Default]</AppliedNumberingList>
+							<NumberingRestartPolicies RestartPolicy="AnyPreviousLevel" LowerLevel="0" UpperLevel="0"/>
+							<BulletsCharacterStyle type="object">CharacterStyle/$ID/[No character style]</BulletsCharacterStyle>
+							<NumberingCharacterStyle type="object">CharacterStyle/$ID/[No character style]</NumberingCharacterStyle>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle" Imported="false" NextStyle="ParagraphStyle/$ID/NormalParagraphStyle" KeyboardShortcut="0 0">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyleGroup Self="ParagraphStyleGroup/$ID/01_Haupttitel/Lead/Zitat" Name="$ID/01_Haupttitel/Lead/Zitat">
+						<ParagraphStyle Self="ParagraphStyle/01_Haupttitel/Lead/Zitat%3a01_Haupttitel_EINS" Name="01_Haupttitel/Lead/Zitat:01_Haupttitel_EINS" Imported="false" NextStyle="ParagraphStyle/01_Haupttitel/Lead/Zitat%3a01_Haupttitel_EINS" KeyboardShortcut="0 0" FillColor="Color/PANTONE 348 U" FontStyle="Book" PointSize="22" KerningMethod="$ID/Optical" StrokeWeight="1.3951762523191087" Tracking="60" Composer="HL Single" Capitalization="AllCaps" AppliedLanguage="$ID/English: USA" HyphenationZone="8.503937007874017" RuleAboveLineWeight="1.3951762523191087" RuleBelowLineWeight="1.3951762523191087" Justification="CenterAlign" GridAlignment="AlignBaseline">
+							<Properties>
+								<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+								<Leading type="unit">14</Leading>
+								<AppliedFont type="string">Futura LT Pro</AppliedFont>
+							</Properties>
+						</ParagraphStyle>
+					</ParagraphStyleGroup>
+					<ParagraphStyle Self="ParagraphStyle/00_Inhaltsverz_cyan_13pt" Name="00_Inhaltsverz_cyan_13pt" Imported="false" NextStyle="ParagraphStyle/00_Inhaltsverz_cyan_13pt" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="13" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" Justification="LeftJustified" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">22.67716535433071</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/00_Inhaltsverz_weiss_13pt" Name="00_Inhaltsverz_weiss_13pt" Imported="false" NextStyle="ParagraphStyle/00_Inhaltsverz_weiss_13pt" KeyboardShortcut="0 0" FillColor="Color/Paper" FontStyle="45 Light" PointSize="13" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" Justification="LeftJustified" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">22.67716535433071</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/00_Inhaltsverz_black" Name="00_Inhaltsverz_black" Imported="false" NextStyle="ParagraphStyle/00_Inhaltsverz_black" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" LeftIndent="22.67716535433071" Justification="LeftJustified" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">22.67716535433071</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/00_Inhaltsverz_weiss" Name="00_Inhaltsverz_weiss" Imported="false" NextStyle="ParagraphStyle/00_Inhaltsverz_weiss" KeyboardShortcut="0 0" FillColor="Color/Paper" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" LeftIndent="22.67716535433071" Justification="LeftJustified" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">22.67716535433071</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Haupttitel_black" Name="01_Haupttitel_black" Imported="false" NextStyle="ParagraphStyle/01_Haupttitel_black" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="20" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" FillTint="100" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Haupttitel_weiss" Name="01_Haupttitel_weiss" Imported="false" NextStyle="ParagraphStyle/01_Haupttitel_weiss" KeyboardShortcut="0 0" FillColor="Color/Paper" FontStyle="45 Light" PointSize="20" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" FillTint="100" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Lead" Name="01_Lead" Imported="false" NextStyle="ParagraphStyle/01_Lead" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="20" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">25</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Untertitel_EINS" Name="01_Untertitel_EINS" Imported="false" NextStyle="ParagraphStyle/01_Untertitel_EINS" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="13" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Untertitel_ZWEI_black" Name="01_Untertitel_ZWEI_black" Imported="false" NextStyle="ParagraphStyle/01_Untertitel_ZWEI_black" KeyboardShortcut="0 0" FontStyle="65 Bold" PointSize="9.25" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Untertitel_ZWEI_cyan" Name="01_Untertitel_ZWEI_cyan" Imported="false" NextStyle="ParagraphStyle/01_Untertitel_ZWEI_cyan" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="65 Bold" PointSize="9.25" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/01_Untertitel_DREI" Name="01_Untertitel_DREI" Imported="false" NextStyle="ParagraphStyle/01_Untertitel_DREI" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/02_Lauftext_black" Name="02_Lauftext_black" Imported="false" NextStyle="ParagraphStyle/02_Lauftext_black" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" KeepLinesTogether="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">170.07874015748033</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/02_Lauftext_cyan" Name="02_Lauftext_cyan" Imported="false" NextStyle="ParagraphStyle/02_Lauftext_cyan" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/02_Lauftext_Aufzaehlung" Name="02_Lauftext_Aufzaehlung" Imported="false" NextStyle="ParagraphStyle/02_Lauftext_Aufzaehlung" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="9.25" KerningMethod="$ID/Optical" Composer="HL Single" LeftIndent="8.503937007874017" FirstLineIndent="-8.503937007874017" GridAlignment="AlignBaseline" BulletsAndNumberingListType="BulletList">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">8.503937007874017</Position>
+								</ListItem>
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">170.07874015748033</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+							<BulletChar BulletCharacterType="UnicodeWithFont" BulletCharacterValue="8211"/>
+							<BulletsFont type="string">Frutiger LT Std</BulletsFont>
+							<BulletsFontStyle type="string">45 Light</BulletsFontStyle>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/03_Bildlegende" Name="03_Bildlegende" Imported="false" NextStyle="ParagraphStyle/03_Bildlegende" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="7.5" KerningMethod="$ID/Optical" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">9.375</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/03_Marginalspalte_Auszeichnung" Name="03_Marginalspalte_Auszeichnung" Imported="false" NextStyle="ParagraphStyle/03_Marginalspalte_Auszeichnung" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="50" KerningMethod="$ID/Optical" StrokeWeight="1.85" Composer="HL Single" HyphenationZone="66.60000000000001" RuleAboveLineWeight="1.85" RuleBelowLineWeight="1.85" MiterLimit="7.4" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/03_Marginaltext_cyan_light" Name="03_Marginaltext_cyan_light" Imported="false" NextStyle="ParagraphStyle/03_Marginaltext_cyan_light" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="7.5" KerningMethod="$ID/Optical" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">9.375</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">26.92913385826772</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/03_Marginaltext_cyan_bold" Name="03_Marginaltext_cyan_bold" Imported="false" NextStyle="ParagraphStyle/03_Marginaltext_cyan_bold" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="65 Bold" PointSize="7.5" KerningMethod="$ID/Optical" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">9.375</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/04_Kapiteltrennseite_Haupttitel_cyan" Name="04_Kapiteltrennseite_Haupttitel_cyan" Imported="false" NextStyle="ParagraphStyle/04_Kapiteltrennseite_Haupttitel_cyan" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="35" KerningMethod="$ID/Optical" StrokeWeight="2.310707985332206" Tracking="20" Composer="HL Single" HyphenationZone="83.18548747195942" GradientFillAngle="75" GradientFillLength="320.36362838522814" GradientFillStart="172.49889654462578 263.13033397983037" RuleAboveLineWeight="2.310707985332206" RuleBelowLineWeight="2.310707985332206" MiterLimit="9.242831941328824" SplitColumnInsideGutter="13.864247911993232" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">30</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/04_Kapiteltrennseite_Haupttitel_weiss" Name="04_Kapiteltrennseite_Haupttitel_weiss" Imported="false" NextStyle="ParagraphStyle/04_Kapiteltrennseite_Haupttitel_weiss" KeyboardShortcut="0 0" FillColor="Color/Paper" FontStyle="45 Light" PointSize="35" KerningMethod="$ID/Optical" StrokeWeight="2.310707985332206" Tracking="15" Composer="HL Single" HyphenationZone="83.18548747195942" GradientFillAngle="75" GradientFillLength="320.36362838522814" GradientFillStart="172.49889654462578 263.13033397983037" RuleAboveLineWeight="2.310707985332206" RuleBelowLineWeight="2.310707985332206" MiterLimit="9.242831941328824" SplitColumnInsideGutter="13.864247911993232" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">35</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/04_Kapiteltrennseite_Lead" Name="04_Kapiteltrennseite_Lead" Imported="false" NextStyle="ParagraphStyle/04_Kapiteltrennseite_Lead" KeyboardShortcut="0 0" FillColor="Color/Paper" FontStyle="45 Light" PointSize="20" KerningMethod="$ID/Optical" Tracking="15" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">25</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/04_Kapiteltrennseiten_Bildlegende" Name="04_Kapiteltrennseiten_Bildlegende" Imported="false" NextStyle="ParagraphStyle/04_Kapiteltrennseiten_Bildlegende" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="10" KerningMethod="$ID/Optical" StrokeWeight="0.8136986301369864" Composer="HL Single" HyphenationZone="29.293150684931508" RuleAboveLineWeight="0.8136986301369864" RuleBelowLineWeight="0.8136986301369864" MiterLimit="3.2547945205479456" SplitColumnInsideGutter="4.882191780821919" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">13</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/05_Grafik_Titel" Name="05_Grafik_Titel" Imported="false" NextStyle="ParagraphStyle/05_Grafik_Titel" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="65 Bold" PointSize="9.25" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">12.5</Leading>
+							<TabList type="list">
+								<ListItem type="record">
+									<Alignment type="enumeration">LeftAlign</Alignment>
+									<AlignmentCharacter type="string">.</AlignmentCharacter>
+									<Leader type="string"/>
+									<Position type="unit">14.173228346456694</Position>
+								</ListItem>
+							</TabList>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/05_Grafik_Untertitel" Name="05_Grafik_Untertitel" Imported="false" NextStyle="ParagraphStyle/05_Grafik_Untertitel" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="7.5" KerningMethod="$ID/Optical" Composer="HL Single" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">9.375</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/05_Grafik_Lauftext  I–" Name="05_Grafik_Lauftext  I–" Imported="false" NextStyle="ParagraphStyle/05_Grafik_Lauftext  I–" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="6" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">6</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/05_Grafik_Lauftext  –I-" Name="05_Grafik_Lauftext  –I-" Imported="false" NextStyle="ParagraphStyle/05_Grafik_Lauftext  –I-" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="6" KerningMethod="$ID/Optical" Composer="HL Single" Justification="CenterAlign" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">7.5</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyle Self="ParagraphStyle/05_Grafik_Lauftext  –I" Name="05_Grafik_Lauftext  –I" Imported="false" NextStyle="ParagraphStyle/05_Grafik_Lauftext  –I" KeyboardShortcut="0 0" FillColor="Color/C=100 M=0 Y=0 K=0" FontStyle="45 Light" PointSize="6" KerningMethod="$ID/Optical" Tracking="10" Composer="HL Single" Justification="RightAlign" GridAlignFirstLineOnly="true">
+						<Properties>
+							<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+							<PreviewColor type="enumeration">Nothing</PreviewColor>
+							<Leading type="unit">10</Leading>
+							<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+						</Properties>
+					</ParagraphStyle>
+					<ParagraphStyleGroup Self="ParagraphStyleGroup/$ID/TableStyles" Name="$ID/TableStyles">
+						<ParagraphStyle Self="ParagraphStyle/TableStyles%3aLINE" Name="TableStyles:LINE" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aLINE" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="7.5" DropcapDetail="1" StrikeThroughOffset="2.5" StrikeThroughWeight="0.374908447265625">
+							<Properties>
+								<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+								<Leading type="unit">10</Leading>
+								<TabList type="list">
+									<ListItem type="record">
+										<Alignment type="enumeration">RightAlign</Alignment>
+										<AlignmentCharacter type="string">.</AlignmentCharacter>
+										<Leader type="string"/>
+										<Position type="unit">226.7716535433071</Position>
+									</ListItem>
+								</TabList>
+								<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+							</Properties>
+						</ParagraphStyle>
+						<ParagraphStyle Self="ParagraphStyle/TableStyles%3aHEAD" Name="TableStyles:HEAD" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aHEAD" KeyboardShortcut="0 0" PointSize="6" FillTint="100">
+							<Properties>
+								<BasedOn type="object">ParagraphStyle/TableStyles%3aLINE</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+								<Leading type="unit">7.5</Leading>
+								<TabList type="list">
+									<ListItem type="record">
+										<Alignment type="enumeration">RightAlign</Alignment>
+										<AlignmentCharacter type="string">.</AlignmentCharacter>
+										<Leader type="string"/>
+										<Position type="unit">198.42519685039372</Position>
+									</ListItem>
+								</TabList>
+							</Properties>
+						</ParagraphStyle>
+						<ParagraphStyle Self="ParagraphStyle/TableStyles%3aBLINE_BOLD" Name="TableStyles:BLINE_BOLD" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aBLINE_BOLD" KeyboardShortcut="0 0" FillColor="Color/Table_blue" FontStyle="65 Bold">
+							<Properties>
+								<BasedOn type="object">ParagraphStyle/TableStyles%3aLINE</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+							</Properties>
+						</ParagraphStyle>
+						<ParagraphStyle Self="ParagraphStyle/TableStyles%3aNOLINE" Name="TableStyles:NOLINE" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aNOLINE" KeyboardShortcut="0 0">
+							<Properties>
+								<BasedOn type="object">ParagraphStyle/TableStyles%3aLINE</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+							</Properties>
+						</ParagraphStyle>
+						<ParagraphStyle Self="ParagraphStyle/TableStyles%3aLINE_BOLD" Name="TableStyles:LINE_BOLD" Imported="false" NextStyle="ParagraphStyle/TableStyles%3aLINE_BOLD" KeyboardShortcut="0 0" FillColor="Color/Table_blue" FontStyle="65 Bold">
+							<Properties>
+								<BasedOn type="object">ParagraphStyle/TableStyles%3aLINE</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+							</Properties>
+						</ParagraphStyle>
+					</ParagraphStyleGroup>
+					<ParagraphStyleGroup Self="ParagraphStyleGroup/$ID/FootnoteStyles" Name="$ID/FootnoteStyles">
+						<ParagraphStyle Self="ParagraphStyle/FootnoteStyles%3aFOOTNOTE" Name="FootnoteStyles:FOOTNOTE" Imported="false" NextStyle="ParagraphStyle/FootnoteStyles%3aFOOTNOTE" KeyboardShortcut="0 0" FontStyle="45 Light" PointSize="6" KerningMethod="$ID/Optical" LeftIndent="0.7086614173228347" KeepAllLinesTogether="true" KeepLinesTogether="true" DropcapDetail="1" KeepWithPrevious="true">
+							<Properties>
+								<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+								<PreviewColor type="enumeration">Nothing</PreviewColor>
+								<Leading type="unit">7.815</Leading>
+								<TabList type="list">
+									<ListItem type="record">
+										<Alignment type="enumeration">LeftAlign</Alignment>
+										<AlignmentCharacter type="string">.</AlignmentCharacter>
+										<Leader type="string"/>
+										<Position type="unit">6.377952755905512</Position>
+									</ListItem>
+									<ListItem type="record">
+										<Alignment type="enumeration">RightAlign</Alignment>
+										<AlignmentCharacter type="string">.</AlignmentCharacter>
+										<Leader type="string"/>
+										<Position type="unit">198.42519685039372</Position>
+									</ListItem>
+								</TabList>
+								<AppliedFont type="string">Frutiger LT Std</AppliedFont>
+							</Properties>
+						</ParagraphStyle>
+					</ParagraphStyleGroup>
+				</RootParagraphStyleGroup>
+				<TinDocumentDataObject>
+					<Properties>
+						<GaijiRefMaps>
+							<![CDATA[/////wAAAAAAAAAA]]>
+						</GaijiRefMaps>
+					</Properties>
+				</TinDocumentDataObject>
+				<TransparencyDefaultContainerObject>
+					<TransparencySetting>
+						<BlendingSetting BlendMode="Normal" Opacity="100" KnockoutGroup="false" IsolateBlending="false"/>
+						<DropShadowSetting Mode="None" BlendMode="Multiply" Opacity="75" XOffset="7" YOffset="7" Size="5" EffectColor="n" Noise="0" Spread="0" UseGlobalLight="false" KnockedOut="true" HonorOtherEffects="false"/>
+						<FeatherSetting Mode="None" Width="9" CornerType="Diffusion" Noise="0" ChokeAmount="0"/>
+						<InnerShadowSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="75" Angle="120" Distance="7" UseGlobalLight="false" ChokeAmount="0" Size="7" Noise="0"/>
+						<OuterGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7"/>
+						<InnerGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7" Source="EdgeSourced"/>
+						<BevelAndEmbossSetting Applied="false" Style="InnerBevel" Technique="SmoothContour" Depth="100" Direction="Up" Size="7" Soften="0" Angle="120" Altitude="30" UseGlobalLight="false" HighlightColor="n" HighlightBlendMode="Screen" HighlightOpacity="75" ShadowColor="n" ShadowBlendMode="Multiply" ShadowOpacity="75"/>
+						<SatinSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="50" Angle="120" Distance="7" Size="7" InvertEffect="false"/>
+						<DirectionalFeatherSetting Applied="false" LeftWidth="0" RightWidth="0" TopWidth="0" BottomWidth="0" ChokeAmount="0" Angle="0" FollowShapeMode="LeadingEdge" Noise="0"/>
+						<GradientFeatherSetting Applied="false" Type="Linear" Angle="0" Length="0" GradientStart="0 0" HiliteAngle="0" HiliteLength="0"/>
+					</TransparencySetting>
+					<StrokeTransparencySetting>
+						<BlendingSetting BlendMode="Normal" Opacity="100" KnockoutGroup="false" IsolateBlending="false"/>
+						<DropShadowSetting Mode="None" BlendMode="Multiply" Opacity="75" XOffset="7" YOffset="7" Size="5" EffectColor="n" Noise="0" Spread="0" UseGlobalLight="false" KnockedOut="true" HonorOtherEffects="false"/>
+						<FeatherSetting Mode="None" Width="9" CornerType="Diffusion" Noise="0" ChokeAmount="0"/>
+						<InnerShadowSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="75" Angle="120" Distance="7" UseGlobalLight="false" ChokeAmount="0" Size="7" Noise="0"/>
+						<OuterGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7"/>
+						<InnerGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7" Source="EdgeSourced"/>
+						<BevelAndEmbossSetting Applied="false" Style="InnerBevel" Technique="SmoothContour" Depth="100" Direction="Up" Size="7" Soften="0" Angle="120" Altitude="30" UseGlobalLight="false" HighlightColor="n" HighlightBlendMode="Screen" HighlightOpacity="75" ShadowColor="n" ShadowBlendMode="Multiply" ShadowOpacity="75"/>
+						<SatinSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="50" Angle="120" Distance="7" Size="7" InvertEffect="false"/>
+						<DirectionalFeatherSetting Applied="false" LeftWidth="0" RightWidth="0" TopWidth="0" BottomWidth="0" ChokeAmount="0" Angle="0" FollowShapeMode="LeadingEdge" Noise="0"/>
+						<GradientFeatherSetting Applied="false" Type="Linear" Angle="0" Length="0" GradientStart="0 0" HiliteAngle="0" HiliteLength="0"/>
+					</StrokeTransparencySetting>
+					<FillTransparencySetting>
+						<BlendingSetting BlendMode="Normal" Opacity="100" KnockoutGroup="false" IsolateBlending="false"/>
+						<DropShadowSetting Mode="None" BlendMode="Multiply" Opacity="75" XOffset="7" YOffset="7" Size="5" EffectColor="n" Noise="0" Spread="0" UseGlobalLight="false" KnockedOut="true" HonorOtherEffects="false"/>
+						<FeatherSetting Mode="None" Width="9" CornerType="Diffusion" Noise="0" ChokeAmount="0"/>
+						<InnerShadowSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="75" Angle="120" Distance="7" UseGlobalLight="false" ChokeAmount="0" Size="7" Noise="0"/>
+						<OuterGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7"/>
+						<InnerGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7" Source="EdgeSourced"/>
+						<BevelAndEmbossSetting Applied="false" Style="InnerBevel" Technique="SmoothContour" Depth="100" Direction="Up" Size="7" Soften="0" Angle="120" Altitude="30" UseGlobalLight="false" HighlightColor="n" HighlightBlendMode="Screen" HighlightOpacity="75" ShadowColor="n" ShadowBlendMode="Multiply" ShadowOpacity="75"/>
+						<SatinSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="50" Angle="120" Distance="7" Size="7" InvertEffect="false"/>
+						<DirectionalFeatherSetting Applied="false" LeftWidth="0" RightWidth="0" TopWidth="0" BottomWidth="0" ChokeAmount="0" Angle="0" FollowShapeMode="LeadingEdge" Noise="0"/>
+						<GradientFeatherSetting Applied="false" Type="Linear" Angle="0" Length="0" GradientStart="0 0" HiliteAngle="0" HiliteLength="0"/>
+					</FillTransparencySetting>
+					<ContentTransparencySetting>
+						<BlendingSetting BlendMode="Normal" Opacity="100" KnockoutGroup="false" IsolateBlending="false"/>
+						<DropShadowSetting Mode="None" BlendMode="Multiply" Opacity="75" XOffset="7" YOffset="7" Size="5" EffectColor="n" Noise="0" Spread="0" UseGlobalLight="false" KnockedOut="true" HonorOtherEffects="false"/>
+						<FeatherSetting Mode="None" Width="9" CornerType="Diffusion" Noise="0" ChokeAmount="0"/>
+						<InnerShadowSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="75" Angle="120" Distance="7" UseGlobalLight="false" ChokeAmount="0" Size="7" Noise="0"/>
+						<OuterGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7"/>
+						<InnerGlowSetting Applied="false" BlendMode="Screen" Opacity="75" Noise="0" EffectColor="n" Technique="Softer" Spread="0" Size="7" Source="EdgeSourced"/>
+						<BevelAndEmbossSetting Applied="false" Style="InnerBevel" Technique="SmoothContour" Depth="100" Direction="Up" Size="7" Soften="0" Angle="120" Altitude="30" UseGlobalLight="false" HighlightColor="n" HighlightBlendMode="Screen" HighlightOpacity="75" ShadowColor="n" ShadowBlendMode="Multiply" ShadowOpacity="75"/>
+						<SatinSetting Applied="false" EffectColor="n" BlendMode="Multiply" Opacity="50" Angle="120" Distance="7" Size="7" InvertEffect="false"/>
+						<DirectionalFeatherSetting Applied="false" LeftWidth="0" RightWidth="0" TopWidth="0" BottomWidth="0" ChokeAmount="0" Angle="0" FollowShapeMode="LeadingEdge" Noise="0"/>
+						<GradientFeatherSetting Applied="false" Type="Linear" Angle="0" Length="0" GradientStart="0 0" HiliteAngle="0" HiliteLength="0"/>
+					</ContentTransparencySetting>
+				</TransparencyDefaultContainerObject>
+				<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+				<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        ">
+					<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+						<rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">
+							<dc:format>application/x-incopy</dc:format>
+						</rdf:Description>
+						<rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+							<xmp:CreatorTool>Adobe InCopy CS6 (Windows)</xmp:CreatorTool>
+							<xmp:CreateDate>2013-07-22T13:30:04+02:00</xmp:CreateDate>
+							<xmp:MetadataDate>2013-07-22T13:30:04+02:00</xmp:MetadataDate>
+							<xmp:ModifyDate>2013-07-22T13:30:04+02:00</xmp:ModifyDate>
+						</rdf:Description>
+						<rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#">
+							<xmpMM:InstanceID>xmp.iid:8655740DC2F2E2119BB9DA9A6FFEC192</xmpMM:InstanceID>
+							<xmpMM:DocumentID>xmp.did:8655740DC2F2E2119BB9DA9A6FFEC192</xmpMM:DocumentID>
+							<xmpMM:OriginalDocumentID>xmp.did:8655740DC2F2E2119BB9DA9A6FFEC192</xmpMM:OriginalDocumentID>
+							<xmpMM:History>
+								<rdf:Seq>
+									<rdf:li rdf:parseType="Resource">
+										<stEvt:action>created</stEvt:action>
+										<stEvt:instanceID>xmp.iid:8655740DC2F2E2119BB9DA9A6FFEC192</stEvt:instanceID>
+										<stEvt:when>2013-07-22T13:30:04+02:00</stEvt:when>
+										<stEvt:softwareAgent>Adobe InCopy CS6 (Windows)</stEvt:softwareAgent>
+									</rdf:li>
+								</rdf:Seq>
+							</xmpMM:History>
+						</rdf:Description>
+					</rdf:RDF>
+				</x:xmpmeta>
+				<?xpacket end="r"?>
+			</Document>
+		</ea:wwsd_styles>
+	</ea:wwsd_document>
+</ea:Stories>

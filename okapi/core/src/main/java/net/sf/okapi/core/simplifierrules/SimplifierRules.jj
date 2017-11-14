@@ -1,0 +1,193 @@
+/*
+  Okapi Simplifier Rules Parser
+  Copyright (C) 2015 by the Okapi Framework contributors
+  -----------------------------------------------------------------------------
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+*/
+options{
+  LOOKAHEAD=2;
+  FORCE_LA_CHECK=false;  GENERATE_ANNOTATIONS=true; 
+  GENERATE_CHAINED_EXCEPTION=true; 
+  SUPPORT_CLASS_VISIBILITY_PUBLIC=true; 
+  GENERATE_GENERICS=true; 
+  GENERATE_STRING_BUILDER=true; 
+  UNICODE_INPUT=true; 
+  JAVA_UNICODE_ESCAPE=true; 
+  ERROR_REPORTING = true;
+  IGNORE_CASE = false;
+  SANITY_CHECK = true;
+  STATIC = false;
+  KEEP_LINE_COLUMN = true;
+  JDK_VERSION="1.7";}PARSER_BEGIN(SimplifierRules)package net.sf.okapi.core.simplifierrules;
+
+import java.io.StringReader;
+
+import net.sf.okapi.common.resource.Code;
+import net.sf.okapi.common.resource.TextFragment.TagType;
+import net.sf.okapi.common.Util;
+
+public class SimplifierRules{
+  private Code code;
+    public static void main(String args [])  {    System.out.println("Reading from standard input...");    System.out.print("Enter an expression like \"if ADDABLE;\" :");    SimplifierRules parser = new SimplifierRules(System.in);    try    {      boolean r = parser.rules();    }    catch (Exception e)    {      System.out.println("Oops.");      System.out.println(e.getMessage());    }  }
+  
+  public final static void validate(String rules) throws ParseException {
+    SimplifierRules r = new SimplifierRules(rules, new Code());
+    r.parse();
+  }
+  
+  public SimplifierRules()
+  {   
+  }
+  
+  public SimplifierRules(String input, Code code)
+  {
+    this(new StringReader(input));
+    this.code = code;
+  }
+  
+  public boolean evaluate(String input, Code code) throws ParseException
+  {
+    if (Util.isEmpty(input) || code == null) {
+        return false;
+    }
+    
+    ReInit(new StringReader(input));
+    this.code = code;
+    return parse();
+  }
+  
+  public boolean parse() throws ParseException
+  {
+    return rules();
+  }}PARSER_END(SimplifierRules)
+// skip all whitespace and commentsSKIP :{  " "| "\t"| "\n"| "\r"| <"#" (~[ "\n", "\r" ])*    (      "\n"    | "\r"    | "\r\n"    )>| <"/*" (~[ "*" ])* "*"    (      ~[ "/" ] (~[ "*" ])* "*"    )*    "/">}
+
+TOKEN :
+{
+  <RULE_START: "if">
+| <RULE_END: ";"> 
+}
+// Code fields: data, outerData, originalId, type, TagType TOKEN :{  <DATA: "DATA">
+| <OUTER_DATA: "OUTER_DATA">  
+| <ORIGINAL_ID: "ORIGINAL_ID">
+| <TYPE: "TYPE">
+| <TAG_TYPE: "TAG_TYPE">}
+
+// literals: CLOSING, OPENING, STANDALONE, addable, deletable or cloneableTOKEN :
+{
+  <CLOSING: "CLOSING">
+| <OPENING: "OPENING">  
+| <STANDALONE: "STANDALONE">
+| <ADDABLE: "ADDABLE">
+| <DELETABLE: "DELETABLE">
+| <CLONEABLE: "CLONEABLE">
+}
+
+// boolean operators: or, andTOKEN :{  <OR  : "or">
+| <AND : "and">
+| <LPAREN: "(">
+| <RPAREN: ")">}
+// operators: =, ~, !=, !~
+TOKEN :
+{
+  <EQUAL  : "=">
+| <MATCH : "~">
+| <NOT_EQUAL  : "!=">
+| <NOT_MATCH : "!~">
+}
+
+// String tokens
+TOKEN :
+{
+  <#QUOTE_DOUBLE : "\"">
+| <STRING_DOUBLE_EMPTY : "\"\"">
+| <#STRING_DOUBLE_BODY :
+    (
+      (~[ "\"", "\\", "\r", "\n", "\t" ])
+    |
+      (
+        "\\"
+        (
+          "r"
+        | "n"
+        | "\\"
+        | "\""
+        | "t"
+        )
+      )
+    )+>
+| <STRING_DOUBLE_NONEMPTY : <QUOTE_DOUBLE> <STRING_DOUBLE_BODY> <QUOTE_DOUBLE>>
+}
+
+/**
+    All rules are OR'ed with each other to get the final result.
+    Short circuit and return early if any rule evaluates to true    
+*/boolean rules() :{ boolean result=false; boolean r; }{  (<RULE_START> r=expression() <RULE_END> { if (r) return true; result |= r; })+ <EOF>
+  { return result; }}boolean expression() :{ boolean result; boolean tail; }{    result=term() 
+    (
+        (<AND> tail=term() { result &= tail; } )  
+        | 
+        (<OR> tail=term() { result |= tail; })
+    )*
+    { return result; }}boolean term() :{ boolean result; TagType ctt; TagType ltt; String cs; String qs;}{  result=flagLiteral() { return result; }
+  | 
+  (ctt=codeTagTypeField() <EQUAL> ltt=tagTypeLiteral() { return ctt == ltt; }) 
+  |
+  (ctt=codeTagTypeField() <NOT_EQUAL> ltt=tagTypeLiteral() { return ctt != ltt; })
+  | 
+  (cs=codeString() <EQUAL> qs=queryString() { return cs.equals(qs); } )
+  |
+  (cs=codeString() <NOT_EQUAL> qs=queryString() { return !cs.equals(qs); })
+  |
+  (cs=codeString() <MATCH> qs=queryString() { return cs.matches(qs); })
+  |
+  (cs=codeString() <NOT_MATCH> qs=queryString() { return !cs.matches(qs); })
+  | 
+  (<LPAREN> result=expression() <RPAREN>) { return result; }}
+String codeString() : {}{  <DATA> { return code.getData() == null ? "" : code.getData(); } 
+  | 
+  <OUTER_DATA> { return code.getOuterData() == null ? "" : code.getOuterData(); } 
+  | 
+  <ORIGINAL_ID> { return code.getOriginalId() == null ? "" : code.getOriginalId(); }
+  | 
+  <TYPE> { return code.getType() == null ? "" : code.getType(); }}
+
+TagType codeTagTypeField() :
+{}
+{
+  <TAG_TYPE> { return code.getTagType(); } 
+}TagType tagTypeLiteral() :
+{}{  <CLOSING> { return TagType.CLOSING; }
+| <OPENING> { return TagType.OPENING; }  
+| <STANDALONE> { return TagType.PLACEHOLDER; }
+}
+
+boolean flagLiteral() :
+{}
+{
+ (<ADDABLE> { return code.isAdded(); }
+| <DELETABLE> { return code.isDeleteable(); }
+| <CLONEABLE> { return code.isCloneable(); })
+}
+
+String queryString() :
+{Token t; }
+{
+(t=<STRING_DOUBLE_EMPTY> 
+{ return ""; }  
+| 
+t=<STRING_DOUBLE_NONEMPTY>)
+// remove quotes and unescape all escaped chars
+{ return SimplifierRulesUtil.unescape(t.image.substring(1, t.image.length()-1)); }     
+}

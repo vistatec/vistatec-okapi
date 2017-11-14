@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" language="JavaScript">
+function checkPage() {
+ var filename = new String(window.self.location.search);
+ filename = filename.slice(1);
+ if ( filename != "" ) {
+	   window.frames.item("main").location = filename;
+ }
+}
+</script>
+<title>CheckMate</title>
+<meta http-equiv="Content-Language" content="en-us">
+</head>
+
+<frameset cols="166,*" onload="checkPage()">
+	<frame name="contents" target="main" src="toc.html" marginwidth="5" marginheight="5" scrolling="no">
+	<frame name="main" src="overview.html" marginwidth="5" marginheight="5" scrolling="auto" title="Ratel">
+	<noframes>
+	<body>
+	<p>This page uses frames, but your browser doesn't support them.</p>
+	</body>
+	</noframes>
+</frameset>
+
+</html>

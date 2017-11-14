@@ -1,0 +1,13 @@
+{
+    "start_time": "2013-01-03 10:35:00",
+    "action_nm": "went-running",
+    "end_time": "2013-01-03 11:12:00",
+    "app_id": "0",
+    "proxy_user_id": "0",
+    "location": "",
+    "user_comments" : "that was a great run, glad I went",
+    "details" : {
+          "specific_exercise.distance" : "14",
+          "specific_exercise.avg_pace" : "7.5"
+     }
+}

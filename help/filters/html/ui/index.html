@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <title>Filters - HTML Filter</title>
+  <link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+
+<body>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+	<tbody>
+    <tr class="head">
+
+		<td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Filters</h1>
+
+		
+      <h2 class="head2">HTML Filter</h2>
+      </td>
+
+	</tr>
+
+	<tr>
+
+		<td class="smalltoc">
+      <p>
+			- <a href="#overview">Overview</a><br>
+
+			- <a href="#processing">Processing Details</a><br>
+
+			- <a href="#parameters">Parameters</a></p>
+      </td>
+      <td class="hmenu">
+			
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+
+				<td><a href="../../index.html">Filters</a></td>
+
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer's Guide</a></td>
+
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+
+			</tr>
+        </tbody>
+      </table>
+      </div>
+
+		</td>
+
+	</tr>
+
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=HTML_Filter">http://okapiframework.org/wiki/index.php?title=HTML_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+
+<p>The HTML Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+HTML and XHTML documents. The filter is implemented in the class <code>
+net.sf.okapi.filters.html.HtmlFilter</code> of the Okapi library.</p>
+
+<p>In the current version of the filter the content of <code>&lt;style&gt;</code> and <code>
+&lt;script&gt;</code> elements is not extracted, and tags from server-side scripts such 
+as PHP, ASPX, JSP, etc. are not formally supported and will be treated as non-translatable.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+
+<h3>Input Encoding</h3>
+
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+
+<ul>
+  <li>If the document has an encoding declaration it is used. 
+  </li>
+  <li>Otherwise, the input encoding used is the default encoding that was specified 
+when setting the filter options.  </li>
+</ul>
+
+<h3>Output Encoding</h3>
+
+<p>If the output encoding is UTF-8:</p>
+
+<ul>
+  <li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+output document only if one was detected in the input document. 
+  </li>
+  <li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+output document. </li>
+</ul>
+
+<h3>Line-Breaks</h3>
+
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Entities</h3>
+
+<p>Character and numeric entities are converted to Unicode. Entities defined in a DTD or schema are passed through without change.</p>
+
+<h2><a name="parameters"></a>Parameters</h2>
+
+<h3>Built in Configuration Files</h3>
+<p>The HTML filter does not currently have a user interface to modify
+its configuration files. By default the HTML filter uses a minimalist
+configuration file that does not create structural groupings. For
+example, a table group or list group will never be created. There is a
+pre-defined maximalist configuration file that can be used if
+structural groupings are needed. The caveat is that any structural tags
+that map to groups must be well formed, that is, they must have a start
+and end tag. Otherwise the filter return an error.</p>
+<h3>HTML Configuration Syntax</h3>
+For the truly brave you can cerate your own HTML configuration files. See the <a href="defaultConfiguration.yml" target="_blank">defaultConfiguration.yml</a> and <a href="maximalistConfiguration.yml" target="_blank">maximalistConfiguration.yml</a> for examples.
+<p>HTML tags are associated with rules. These rules are used by the filter to 
+process the input document.</p>
+
+	<table border="1" cellspacing="0" cellpadding="4" id="table2">
+		<tr>
+			<th valign="top" colspan="2">HTML Rule Types</th>
+		</tr>
+		<tr>
+			<td valign="top"><code>INLINE</code></td>
+			<td>A&nbsp;tag which may occur inside a text run. For example <code>&lt;b&gt;</code>, 
+			<code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code>.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>GROUP</code></td>
+			<td>Defines a&nbsp;group of elements that are structurally bound. For example
+			<code>&lt;table&gt;</code>, <code>&lt;div&gt;</code> and <code>&lt;menu&gt;</code>.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>EXCLUDE</code></td>
+			<td>Prevents extraction of any text until an end element of the same tag is
+found. For example, if the content between a <code>&lt;script&gt;</code> tag should not be
+extracted then define <code>&lt;script&gt;</code> as <code>EXCLUDE</code></td>
+		</tr>
+		<tr>
+			<td valign="top"><code>INCLUDE</code></td>
+			<td>Overrides any current exclusions. This allows exceptions for children of 
+			<code>EXCLUDE</code>d tags.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>TEXTUNIT</code></td>
+			<td>A tag that starts a complex text
+unit. Examples include <code>&lt;p&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code>. Complex
+text units carry their surrounding tags along with any extracted text.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>PRESERVE_WHITESPACE</code></td>
+			<td>A tag that must preserve its whitespace and newlines as-is. For example
+			<code>&lt;pre&gt;</code>.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>ATTRIBUTES_ONLY</code></td>
+			<td>A tag that has localizable or translatable attributes and does 
+			not.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>ATTRIBUTE_TRANS</code></td>
+			<td>A translatable attribute.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>ATTRIBUTE_WRITABLE</code></td>
+			<td>A writable or modifiable attribute, but not translatable.</td>
+		</tr>
+		<tr>
+			<td valign="top"><code>ATTRIBUTE_READONLY</code></td>
+			<td>A read-only attribute, extracted by may not be modified.</td>
+		</tr>
+	</table>
+
+<h3>Inline Code Finder</h3>
+<p>You can define a set of regular expressions to capture span of extracted text 
+that should be treated as inline codes. For example, some element content may 
+have variables that need to be protected from modification and 
+treated as codes. Use the <code>useCodeFinder</code> and <code>codeFinderRules</code> 
+options for this.</p>
+<pre>useCodeFinder: true
+codeFinderRules: &quot;#v1\ncount.i=1\nrule0=\\bVAR\\d\\b&quot;</pre>
+<p>The options above will set the text &quot;<code>VAR1</code>&quot; as in-line code in 
+the follwoing HTML:</p>
+<pre>&lt;p&gt;Number of files = VAR1&lt;/p&gt;</pre>
+<p>Note that the regular expression is &quot;<code>\bVAR\d\b</code>&quot; but you must 
+escape the back-slash in the YAML notation as well.</p>
+<p>&nbsp;</p>
+</body>
+</html>

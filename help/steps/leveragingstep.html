@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Leveraging</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Leveraging Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Leveraging_Step">http://okapiframework.org/wiki/index.php?title=Leveraging_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step leverages existing translations into extracted text units.</p>
+<p>Takes: Filter events<br>
+Sends: Filter events</p>
+<p>This step allows you to send the text units (or the segments if the text 
+units are segmented) to a given translation resource and get a corresponding 
+translation, if one is available. The translation resource can be a TM engine or 
+an MT system.</p>
+<p>The text units that are flagged as non-translatable are skipped.</p>
+<p>The text units that are flagged as approved (i.e. the <i>Approved</i> 
+property is set to yes) are skipped.</p>
+<p class="question"><b>Question</b>: How can I use several translation 
+resources? For example, a TM as the first resource, them an MT system for the 
+cases where no TM match has been found.</p>
+<p class="answer"><b>Answer</b>: Use several <b>Leveraging</b> steps on after 
+the other in your pipeline.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Leverage the text units with existing translations</cite> -- Set this 
+option to enable the step. This option allows you to keep the step in your 
+pipeline and to set it on and off.</p>
+<p>Translation resource -- Select a translation resource. It can be a TM or an 
+MT engine, the list may vary based on your installation. Note that 
+Internet-based resources may be slow and result in lengthy processing time.</p>
+<p><cite>Settings</cite> -- Click this button to edit the settings associated to 
+the translation resource you have selected. Note that some translation resources 
+have no user settings.</p>
+
+<p><cite>Leverage only if the match is equal or above this score</cite> -- 
+Select the threshold value under which a match is not taken into account.</p>
+<p><cite>Fill the target with the leveraged translation</cite> -- Set this 
+option to fill the target with the leveraged translation if a match above or 
+equal to the specified threshold has been found.</p>
+<p><cite>Generate a TMX document</cite> -- Set this option to create a TMX 
+document with all the entries for which a match has been found. A single 
+document is created for all the input files.</p>
+<p><cite>Add a prefix to the source text</cite> -- Set this option to add a 
+MT-spacific prefix to the source text. this ensure the entry will be only used 
+as fuzzy match in tools that cannot identify the origin of the entry as MT using 
+the <code>creationid</code> attribute..</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

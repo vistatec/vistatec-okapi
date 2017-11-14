@@ -1,0 +1,11 @@
+{First paragraph.
+Still in the same paragraph 1.
+And this one too.}
+
+  	{Start of text
+ and that continues   until
+here.}  	
+
+{Second paragraph
+   that continues   
+	on several lines  	which should be unwrapped.}

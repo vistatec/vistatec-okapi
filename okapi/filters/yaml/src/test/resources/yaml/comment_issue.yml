@@ -1,0 +1,8 @@
+no-god-in-worlds: null
+#  - world_nether
+
+# Set to true to enable per-world permissions for teleporting between worlds with essentials commands.
+# This applies to /world, /back, /tp[a|o][here|all], but not warps.
+# Give someone permission to teleport to a world with essentials.worlds.<worldname>
+# This does not affect the /home command, there is a separate toggle below for this.
+world-teleport-permissions: false

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ============================================= -->
+<!-- GDF Application Strings -->
+<!-- Copyright © 2006 Gandalf Inc. All Rights Reserved. -->
+<!-- ============================================= -->
+<!-- FILE HISTORY -->
+<!-- Wed Jan 10 14:22:22 2007: ./xliff-deflate.pl - extracted from GDF.xlf, target-lang=fr, alt-lang=(de) -->
+<!-- Mon Jan  8 19:08:28 2007: ./xliff-add.pl - added 506 strings from collect/WinOS.xlf -->
+<!-- ============================================= -->
+
+<xliff version="1.1"
+	xmlns="urn:oasis:names:tc:xliff:document:1.1"
+	xmlns:gdf-xstr="http://www.gdf.com/xmlns/gdf-xstr.xsd">
+
+	<file source-language="en" target-language="fr" original="GDF.xlf" datatype="plaintext" xml:space="preserve">
+		<header>
+			<gdf-xstr:version>25</gdf-xstr:version>
+			<gdf-xstr:lang>de;en;fr;ja;ko;zh-CN</gdf-xstr:lang>
+		</header>
+		<body>
+
+		<group resname="!Specials-test=&lt;&quot;&apos;&amp;>">
+			<trans-unit id="S_XStr_LangCode">
+				<source>en</source>
+				<target>fr</target>
+				<note>This language's ISO-639 code</note>
+				<alt-trans>
+					<target xml:lang="de">de</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="S_XStr_Language">
+				<source>English</source>
+				<target>French</target>
+				<note>This language's name in English</note>
+				<alt-trans>
+					<target xml:lang="de">German</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="S_XStr_LangNative">
+				<source>English</source>
+				<target>Français</target>
+				<note>This language's name in its own language</note>
+				<alt-trans>
+					<target xml:lang="de">Deutsch</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="S_XStr_Charset">
+				<source>utf-8</source>
+				<target>utf-8</target>
+				<alt-trans>
+					<target xml:lang="de">utf-8</target>
+				</alt-trans>
+			</trans-unit>
+		</group>
+
+		<group resname="LinuxOS">
+
+		<group resname="Qt">
+
+		<group resname="ActivationDlg.cpp">
+			<trans-unit id="S_LinActivationDlg_Verify_proxy_settings_or_connect_xxx" restype="x-misc">
+				<source>Verify proxy settings or connection to internet.&lt;br></source>
+				<target>Vérifiez les paramètres proxy ou la connexion à Internet.&lt;br></target>
+				<alt-trans>
+					<target xml:lang="de">Prüfen Sie die Proxy-Einstellungen oder die Verbindung zum Internet.&lt;br></target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="S_LinActivationDlg_2__Request_Code__xxx" restype="x-misc">
+				<source>2. Request Code:</source>
+				<target>2. Code de requête :</target>
+				<alt-trans>
+					<target xml:lang="de">2. Request-Code:</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="TestAltTrans" restype="x-misc">
+				<source>File</source>
+				<target>Fichier</target>
+				<alt-trans>
+					<target xml:lang="de">Datei</target>
+				</alt-trans>
+				<alt-trans>
+					<target xml:lang="de">Ordner</target>
+				</alt-trans>
+				<alt-trans>
+					<source xml:lang="en">Open File</source>
+					<target xml:lang="fr">Ouvrir le fichier</target>
+				</alt-trans>
+				<alt-trans>
+					<source>Open File2</source>
+					<target xml:lang="fr">Ouvrir le fichier2</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="S_LinActivationDlg__p_Tech_Support_will_then_supply_xxx" restype="x-misc">
+				<source>&lt;p>3. Operating System Type: &amp;lt Linux&amp;gt &lt;p>&lt;p>Tech Support will then supply a 20 digit Response Code that you will need to type into the empty boxes below. If you have access to e-mail, but don't wish to use Internet Activation, you may send the Request Code to GDF Technical Support at support@gdf.com. Tech Support will reply with the Response Code, which needs to be entered into the edit boxes.&lt;p></source>
+				<target>&lt;p>3. Type de système d'exploitation : &amp;lt Linux&amp;gt &lt;p>&lt;p>L'assistance technique fournit alors un code de réponse à 20 chiffres que vous devez saisir dans les cadres vides qui se trouvent ci-dessous. Si vous avez accès au courrier électronique, mais ne voulez pas utiliser l'activation Internet, vous pouvez envoyer le code de requête à l'adresse de l'assistance technique GDF : support@gdf.com. L'assistance technique répondra avec le code de réponse à saisir dans les boîtes d'édition.&lt;p></target>
+				<alt-trans>
+					<target xml:lang="de">&lt;p>3. Die Art des Betriebssystems: &amp;lt Linux&amp;gt &lt;p>&lt;p>Der technische Support gibt Ihnen dann einen 20-stelligen Response-Code, den Sie in die folgenden leeren Felder eintragen müssen. Wenn Sie E-Mail-Zugang haben, aber keine Internetaktivierung durchführen möchten, können Sie den Request-Code auch per E-Mail an den technischen Support von GDF schicken: support@gdf.com. Der technische Support schickt Ihnen dann eine Antwort mit dem Response-Code, den Sie in die Felder eintragen müssen.&lt;p></target>
+				</alt-trans>
+			</trans-unit>
+		</group>
+		<group resname="testGrp2">
+			<trans-unit id="S_Lininstaller_To_preserve_the_GDF_submenu_in_t2_xxx" restype="x-misc">
+				<source>To preserve the GDF submenu in the Gnome Foot-menu
+it is necessary to copy files
+ to standard directories which are root protected.
+Thus, the root password will be required to preserve
+ the GDF submenu in future versions
+ of Gnome.
+
+
+Would you like to preserve the GDF submenu?</source>
+				<target>Pour conserver le sous-menu GDF dans le menu de pied de Gnome,
+il est nécessaire de copier les fichiers dans des répertoires standard qui sont protégés à la racine.
+Par conséquent, le mot de passe racine sera demandé pour conserver
+le sous-menu GDF dans les versions futures de Gnome.
+
+
+Souhaitez-vous conserver le sous-menu GDF ?</target>
+				<alt-trans>
+					<target xml:lang="de">Um das GDF-Untermenü im Gnome-Foot-Menü 
+zu erhalten, müssen die Dateien in
+ Standardverzeichnisse kopiert werden, deren Stammverzeichnis geschützt ist.
+Deshalb ist das Kennwort für das Stammverzeichnis erforderlich, um das GDF-
+Untermenü in zukünftigen Versionen von
+Gnome zu erhalten.
+
+
+Möchten Sie das GDF-Untermenü beibehalten?</target>
+				</alt-trans>
+		</trans-unit>
+		</group></group></group>
+		</body>
+	</file>
+</xliff>

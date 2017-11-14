@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="tstest.ts" source-language="en-US" target-language="fr-FR" datatype="x-application/x-ts" okp:inputEncoding="UTF-8">
+<body>
+<group id="o3" resname="context name 1">
+<group id="o4" resname="context name 2">
+<trans-unit id="1" resname="1" xml:space="preserve">
+<source xml:lang="en-US">hello <x id="1"/>world</source>
+<target xml:lang="fr-FR">hejsan <x id="1"/>varlden</target>
+<note from="translator">old hello translator comment</note>
+</trans-unit>
+<trans-unit id="2" resname="3" approved="yes" xml:space="preserve">
+<source xml:lang="en-US">hello <x id="1"/>world</source>
+<target xml:lang="fr-FR">hejsan <x id="1"/>varlden</target>
+<note from="translator">old hello translator comment</note>
+</trans-unit>
+<trans-unit id="3" resname="4" xml:space="preserve">
+<source xml:lang="en-US">hello <x id="1"/>world</source>
+<target xml:lang="fr-FR">hello <x id="1"/>world</target>
+<note from="translator">old hello translator comment</note>
+</trans-unit>
+</group>
+</group>
+</body>
+</file>
+</xliff>

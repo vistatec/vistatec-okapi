@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.textmodification.TextModificationStep">#v1
+type.i=1
+addPrefix.b=false
+prefix={START_
+addSuffix.b=false
+suffix=_END}
+applyToExistingTarget.b=false
+addName.b=false
+addID.b=false
+markSegments.b=true</step>
+<step class="net.sf.okapi.steps.common.FilterEventsToRawDocumentStep"></step>
+</rainbowPipeline>

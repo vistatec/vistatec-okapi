@@ -1,0 +1,12 @@
+﻿<msgList xmlns:its="http://www.w3.org/2005/11/its"
+ xml:space="preserve" its:version="1.0">
+ <data name="LISTFILTERS_VARIANT"
+   its:locNote="Keep the leading spaces!"
+   its:locNoteType="alert">
+  <value>   Variant {0} = {1} ({2})</value>
+ </data>
+ <data name="DATENOTE"
+   its:locNote="$1 is the original text's date in the format YYYY-MM-DD HH:MM always in UTC">
+  <value>Translated from English content dated $1 UTC.</value>
+ </data>
+</msgList>

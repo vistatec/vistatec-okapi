@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inconsistencyCheck perFile="false">
+<sourceDifferences>
+<target>Target text</target>
+<issue seg="0" tu="tu1" subDoc="1" doc="ROOT/SameTarget.html.xlf">Unicorn</issue>
+<issue seg="0" tu="tu2" subDoc="1" doc="ROOT/SameTarget.html.xlf">Fairy dust</issue>
+<issue seg="0" tu="tu3" subDoc="1" doc="ROOT/SameTarget.html.xlf">Butterflys</issue>
+</sourceDifferences>
+</inconsistencyCheck>

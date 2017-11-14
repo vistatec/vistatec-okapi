@@ -1,0 +1,9 @@
+<messages its:version="1.0" xmlns:its="http://www.w3.org/2005/11/its">
+ <its:rules version="1.0">
+  <its:withinTextRule withinText="yes" selector="//panelmsg|//ui"/>
+ </its:rules>
+ <msg num="123">Click the <ui>Resume</ui> button on the Status Display
+  or the <panelmsg its:translate="no">CONTINUE</panelmsg>
+  <?testPI data="&=amp,<=lt"?><!--test comments &=amp, <=lt--> button
+  on the printer panel</msg>
+</messages>

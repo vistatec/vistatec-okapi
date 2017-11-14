@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="fr" version="2.0">
+ <file id="f1" original="/de/HTMLEntities4_de.xliff">
+  <unit id="strings">
+   <segment id="6451">
+    <source>&lt;p&gt;This is a value that &lt;em&gt;I want&lt;/em&gt; to be correctly translated.&lt;/p&gt;</source>
+    <target/>
+   </segment>
+  </unit>
+ </file>
+</xliff>

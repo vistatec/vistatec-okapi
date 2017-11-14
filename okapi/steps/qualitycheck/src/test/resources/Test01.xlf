@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file original="testForSegments" source-language="en" target-language="fr" datatype="xml">
+<body>
+
+<trans-unit id="pre1">
+<source xml:lang="en">This is an example.</source>
+<target xml:lang="fr">c'est une exemple.</target>
+</trans-unit>
+
+<trans-unit id="1" resname="RESNAME1">
+<source xml:lang="en">Sentence 1© of p1. Sentence 2 p1.</source>
+</trans-unit>
+
+<trans-unit id="2">
+<source xml:lang="en">Sentence 1© of p2. Sentence 2 p2.</source>
+<seg-source><mrk mtype="seg" mid="s1">Sentence 1© of p2.</mrk> <mrk mtype="seg" mid="s2">Sentence 2 p2.</mrk></seg-source>
+</trans-unit>
+
+<trans-unit id="3">
+<source xml:lang="en">Sentence 1© of p3. Sentence 2 p3.</source>
+<seg-source><mrk mtype="seg" mid="s1">Sentence 1© of p3.</mrk> <mrk mtype="seg" mid="s2">Sentence 2 p3.</mrk></seg-source>
+<target xml:lang="fr"><mrk mtype="seg" mid="s1">TrgSentence 1© of p3.</mrk> <mrk mtype="seg" mid="s2">Sentence 2 p3.</mrk></target>
+</trans-unit>
+
+<trans-unit id="4" xml:space="preserve">
+<source xml:lang="en"> Sentence 1© of p4 with %d and %s.  </source>
+<target xml:lang="fr">TrgSentence 1© of p4 with %% and %s. </target>
+</trans-unit>
+
+<trans-unit id="5">
+<source xml:lang="en">Sentence 1© of p5. Sentence 2 p5.</source>
+<seg-source><mrk mtype="seg" mid="s1">Sentence 1© of p5.</mrk> <mrk mtype="seg" mid="s2">Sentence 2 p5.</mrk></seg-source>
+<target xml:lang="fr"><mrk mtype="seg" mid="s2">Swapped TrgSentence 2 p5.</mrk> <mrk mtype="seg" mid="s1">Swapped TrgSentence 1© of p5.</mrk></target>
+</trans-unit>
+
+<trans-unit id="6">
+<source xml:lang="en">Sentence 1 of p6 <ph id="1">{Code}</ph>.</source>
+<target xml:lang="fr">Sentence 1 of p6 <ph id="1">{Code}</ph>.</target>
+</trans-unit>
+
+<trans-unit id="7">
+<source xml:lang="en"><bpt id='1'>&lt;b></bpt>Sentence<ept id='1'>&lt;/b></ept> 1 of p7 <ph id="1">&lt;br/></ph>.</source>
+<target xml:lang="fr"><bpt id='1'>&lt;b></bpt>TrgSentence<ept id='1'>&lt;/b></ept> of p7 <ph id="1">&lt;BR></ph>.</target>
+</trans-unit>
+
+</body>
+</file>
+</xliff>

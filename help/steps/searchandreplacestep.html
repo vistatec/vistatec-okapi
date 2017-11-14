@@ -1,0 +1,90 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - Search and Replace</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">Search and Replace Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Search_and_Replace_Step">http://okapiframework.org/wiki/index.php?title=Search_and_Replace_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step performs search and replace actions on either the text units or the 
+full content of input documents.</p>
+<p>Takes: Raw document or Filter events<br>
+Sends: Raw document or Filter events</p>
+<p>The step provides a way to define a list of search entries and corresponding 
+replacement. You can use regular expressions if needed.</p>
+<p>The step can take ither as input either a raw document, or filter events.</p>
+<ul>
+	<li>If the step recieves filter events, the search and replace is done on 
+	the content of the text units, and the step sends updated filter events to 
+	the next step.</li>
+	<li>If the step recieves a raw document, the search and replace is done on 
+	the whole file, and the step sends an updated raw document to the next step. 
+	Note that in this case, the raw document must be in some text-based file 
+	format for the search and replace to work: The document is seen exactly like 
+	it would be in a text editor (no conversion of escaped characters is done 
+	for example).</li>
+</ul>
+<h2><a name="parameters"></a>Parameters</h2>
+<p>The items list contains three columns:
+<ul>
+	<li>The <cite>Use</cite> column where a check box indicates if the given 
+	pattern should be used (checked) or not (un-checked).</li>
+	<li>The <cite>Search for</cite> column where the text or regular expression to search for is displayed.</li>
+	<li>The <cite>Replace by</cite> column where the replacement text or regular expression is displayed.</li>
+</ul>
+<p>To edit an item : Double-click the item, or click the <cite>Edit</cite> button. To check and un-check an item: Click the checkbox, or press 
+<kbd>Space</kbd> when the item is selected.</p>
+<p><cite>Add</cite> -- Click this button to add a new item in the list.</p>
+<p><cite>Edit</cite> -- Click this button to edit the item currently selected.</p>
+<p><cite>Remove</cite> -- Click this button to remove the item currently selected from the list.</p>
+<p><cite>Move Up</cite> -- Click this button to move the item currently selected upward.</p>
+<p><cite>Move Down</cite> -- Click this button to move the item currently selected downward.</p>
+<p><cite>Import</cite> -- Click this button to import an existing file that 
+contains saved options for this step.</p>
+<p><cite>Export</cite> -- Click this button to export to a file the current 
+options for this step.</p>
+<p><cite>Use regular expressions</cite> -- Set this option to enable the 
+<a href="http://java.sun.com/j2se/1.6.0/docs/api/java/util/regex/Pattern.html">Regular Expressions</a> mode. 
+Note that the placeholders to use in the replacement string for the search group 
+are <code>$1</code>, <code>$2</code>, etc. (<code>$1</code> corresponds to the 
+part matching the first group of the search expression, etc.) See the 
+documentation on <code>
+<a href="http://java.sun.com/javase/6/docs/api/java/util/regex/Matcher.html#replaceAll(java.lang.String)">
+Matcher.replaceAll()</a></code> for more details. In addition, in the 
+replacement field you can specify &quot;<code>\n</code>&quot;, &quot;<code>\r</code>&quot;, and &quot;<code>\t</code>&quot; 
+for for line-feed, carriage-return, and tab; as well as &quot;<code>\N</code>&quot; to 
+replace by the line-break type of the current platform, for example &quot;<code>\r\n</code>&quot; 
+for Windows.</p>
+<h4>Regular expression options</h4>
+<p>When this option is checked several regular expression options are accessible. They apply to all expressions, not just the selected one:</p>
+<p><cite>Ignore case</cite> -- Set this option to ignore the cases in the matches. for example "bear" matches "<span style="background-color: #FFFF00">Bear</span>cat", "<span style="background-color: #FFFF00">BEAR</span>CAT", and "<span style="background-color: #FFFF00">bear</span>cat".</p>
+<p><cite>Multiline</cite> -- Set this option to changes the meaning of <code>^</code> and
+<code>$</code> so that they match at the beginning and end of any line, not just the beginning and end of the whole string.</p>
+<p><cite>Dot also matches line-feed</cite> -- Set this option to changes the meaning of the period character '<code>.</code>' so that it matches every character instead of every character except
+<code>\n</code>.</p>
+<p>&nbsp;</p>
+</body>
+</html>

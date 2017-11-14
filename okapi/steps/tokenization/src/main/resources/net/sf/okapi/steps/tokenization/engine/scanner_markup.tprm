@@ -1,0 +1,26 @@
+#v1
+RuleCount.i=2
+
+Rule0.name=A-tag1
+Rule0.description=Extracts href part from A-tags  
+Rule0.inTokens=MARKUP
+Rule0.outTokens=RAWTEXT
+Rule0.userTokens=
+Rule0.keepInput.b=true
+Rule0.lexemId.i=0
+Rule0.pattern=<a href="(.+)" alt="(.+)">
+Rule0.regexOptions.i=0
+Rule0.regexGroup.i=1
+Rule0.languages=
+
+Rule1.name=A-tag2
+Rule1.description=Extracts alt-text part from A-tags  
+Rule1.inTokens=MARKUP
+Rule1.outTokens=RAWTEXT
+Rule1.userTokens=
+Rule1.keepInput.b=true
+Rule1.lexemId.i=0
+Rule1.pattern=<a href="(.+)" alt="(.+)">
+Rule1.regexOptions.i=0
+Rule1.regexGroup.i=2
+Rule1.languages=

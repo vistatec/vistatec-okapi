@@ -1,0 +1,244 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  applyTagsBulk: You can automatically apply all remaining format tags in bulk. Tags that have already been applied will not be modified.
+  accepted: Accepted
+  addNote: Add Note
+  allTagsApplied: All inline format tags have been applied.
+  alreadySubmitted: You have already submitted a translation for this segment.
+  alreadyVoted: You have already voted for a translation on this segment.
+  applyFilters: Apply Filters
+  approveAll: Approve All
+  approveAllBulk: "If you are finished making edits to the translation of each segment, you can use the 'Approve All' button to mark the rest of the translated segments as approved in bulk. You'll still be able to make additional edits afterwards."
+  approveAllSegments: Approve All Segments
+  approveAndNext: Approve and Next
+  approved: Approved
+  approveFailure: An error occurred when trying to approve segments.
+  approveOnNavigate: Approve Translations when Navigating
+  approveOrEdit: Approve or edit the translation for this segment.
+  approveOrMoreOptions: "Approve the current translation or click 'More Options' to make changes."
+  approveSegmentInstructionsA: Translations can be approved when using the segment navigation controls. This includes clicking the next, previous, first or last segment arrows.
+  approveSegmentInstructionsB: A translation will also be approved when jumping to another segment by clicking on it in either the Document Viewer or Context Viewer, or by entering its number in the text field shown above.
+  approveSegmentInstructionsC: Click the "Enable" button to turn this feature on. You can always come back and "Disable" it later.
+  approveSuccess: All of the unreviewed segments were successfully approved.
+  asAModerator: As a moderator, you can choose a translation to accept or submit your own.
+  autoAppliedTagsNeedReview: Auto-applied tags will need to be reviewed and accurately placed.
+  autoApplyTags: Auto-Apply Tags
+  autoFormat: Auto Format
+  autoFormatBulk: "You can use the 'Auto Format' button to automatically apply all remaining format tags in bulk. Tags that have already been applied will not be modified."
+  autoFormatDocument: Auto Format Document
+  autoFormatError: An error occurred when trying to auto format the document.
+  autoFormatSuccess: All of the remaining format tags were successfully applied.
+  beTheFirst: Be the first to submit a translation for this segment.
+  cancel: Cancel
+  changesWillBeLost: Changes will be lost. Continue without saving?
+  chooseATranslation: Choose a translation to vote for it or submit your own.
+  classicWorkbench: Classic Workbench
+  clearAllTags: Clear All Tags
+  close: Close
+  closeFindReplace: Close find & replace
+  closeWorkbench: Close Workbench
+  closingAfterOpening: Closing tags must be placed after opening tags
+  communityTranslations: Community Translations
+  completePreviousPhase: The previous phase needs to be completed before this segment can be worked on.
+  conditionsOfUse: Conditions of Use
+  configureHotkeys: Configure Hotkeys
+  continue: Continue
+  copyOriginal: Copy Original Text
+  copyright: Copyright © {{year}} Lingotek. All rights reserved. 801.331.7777
+  currentTranslation: Current Translation
+  defaults: Defaults
+  defaultTmSearch: Default TM search
+  details: Details
+  disable: Disable
+  documentResources: Document Resources
+  docviewer: Document Viewer
+  dontForgetToChange: Don't forget to change your Save/Approve and Next setting to
+  downloads: Downloads
+  edit: Edit
+  edited: Edited
+  editTranslation: Edit the translation
+  editTranslationForThis: Edit the translation for this segment.
+  editYourSubmission: Edit your submission
+  enable: Enable
+  exact: Exact
+  exactMatch: Exact Match
+  feedbackFailure: An error occurred when trying to email your feedback.
+  feedbackRequest: "We're interested in hearing your opinion on the Workbench. If you have suggestions for improvements or requests for features, enter a short description in the box below to send an email to our Support team."
+  feedbackSuccess: Your feedback was successfully emailed.
+  find: Find
+  findIn: "Find in:"
+  findReplace: Find/Replace
+  formatTags: format tags
+  formatTagsTitle: Format Tags
+  formatting: Formatting
+  giveFeedback: Give Feedback
+  hasAcceptedTranslation: This segment already has an accepted translation.
+  help: Help
+  hideLowQuality: Hide low quality matches
+  hideRevisionHistory: Hide revision history
+  hideSecondary: Hide secondary metadata
+  hideTags: Hide inline tags
+  hideTagsRequest: One or more inline tags have not been applied. To continue saving without applying tags to your translation, select 'hide inline tags'.
+  hideTagsTitle: Hide Inline Tags?
+  holdThe: Hold the
+  hotkeys: Hotkeys
+  hotkeysWarning: Hotkeys must be unique
+  hotkeysWarningTitle: Identical Hotkeys!
+  hoursAgo: 
+    one: "Last Saved: 1 hour ago"
+    other: "Last Saved: {{count}} hours ago"
+  inactiveTooLong: We apologize for the inconvenience.  Either you were inactive for too long and or the platform received an update which requires you to log in again.  Please copy anything you were working on and then click the button to close the workbench.
+  iWillDoItLater: I will do it later
+  lastSaved: "Last saved: "
+  lexicalClass: Lexical Class
+  machineTranslation: Machine Translation
+  matchCase: Match case
+  matches: Matches
+  mergeWithNext: Merge with next segment
+  minimumMatch: Minimum Match
+  minutesAgo: 
+    one: "Last Saved: 1 minute ago"
+    other: "Last Saved: {{count}} minutes ago"
+  misorderedTagsRequest: One or more inline tags are badly formatted. Continue saving anyway?
+  misorderedTagsTitle: Continue Saving?
+  modifiedInSubsequent: This segment has been modified in a subsequent phase.
+  momentAgo: a moment ago
+  mt: MT
+  navigateToSegments: Navigate to segments ...
+  navigateWithoutSaving: Changes will be lost. Navigate without saving?
+  navigateWithoutSavingTitle: Unsaved Changes!
+  newNote: New Note
+  newSegmentClassification: "New Segment Classification:"
+  newWorkbench: New Workbench
+  next: Next
+  nextFewestVotes: Next by Fewest Votes
+  nextSegmentWithNote: Next segment with a note
+  nextSequential: Next Sequential
+  nextUnreviewed: Next Unreviewed
+  nextUntranslated: Next Untranslated
+  nextWithFormatTags: Next With Format Tags
+  nextWithUnapplied: Next With Unapplied Format Tags
+  noFormatting: This segment does not have any format tags.
+  noNotes: This segment does not have any notes.
+  noTerminology: This segment does not have any terminology.
+  notes: Notes
+  noteText: Note Text
+  noTms: This segment does not have any translation memory matches.
+  noTranslations: This segment does not have any machine translations.
+  of: of
+  ok: OK
+  openFinder: Open Finder
+  openingBeforeClosing: Opening tags must be placed before closing tags
+  originalSource: Original Source
+  originalTarget: Original Target
+  originalText: Original Text
+  overAnHourAgo: over an hour ago
+  pasteIntoCurrent: Paste into the current translation
+  pasteIntoYours: Paste into your translation
+  pdfSource: PDF Source
+  pdfTarget: PDF Target
+  phase: "Phase:"
+  poweredBy: powered by
+  privacyPolicy: Privacy Policy
+  projectManagerNote: Project Manager Note
+  replace: Replace
+  replaceAll: Replace All
+  required: Required
+  resources: Resources
+  revertChanges: Revert Changes
+  reviewTranslations: Review Translations
+  save: Save
+  saveAndClose: Save and Close
+  saveAndNext: Save and Next
+  saveNote: Save Note
+  saveOnNavigate: Save Changes when Navigating
+  saveSegmentInstructionsA: Changes you make to a translation can be saved when using the segment navigation controls. This includes clicking the next, previous, first or last segment arrows.
+  saveSegmentInstructionsB: Your changes will also save when jumping to another segment by clicking on it in either the Document Viewer or Context Viewer, or by entering its number in the text field shown above.
+  saveSegmentInstructionsC: Click the "Enable" button to turn this feature on. You can always come back and "Disable" it later.
+  saving: Saving . . .
+  searchFilter: Search Filter
+  searchFilters: Search Filters
+  searchList: Search List
+  searchPersonalGlossaries: Search my personal glossaries
+  searchPersonalVaults: Search my personal TM vaults
+  secondsAgo: 
+    one: "Last Saved: 1 second ago"
+    other: "Last Saved: {{count}} seconds ago"
+  segmentClassification: Segment Classification
+  segmentClassificationFailure: An error occurred when trying to save the segment level classification.
+  segmentClassificationSuccess: Segment level classification was successfully saved.
+  segmentLocked: This segment has been pre-filled with a translation and is locked.
+  selectedSearch: Concordance
+  sendFeedback: Send Feedback
+  sessionExpired: Your session has expired
+  shiftKey: SHIFT
+  showContext: Context Viewer
+  showFewer: Show fewer translations
+  showHistory: Show revision history
+  showLess: Show less
+  showLowQuality: 
+    one: Show 1 low quality match
+    other: Show {{count}} low quality matches
+  showMore: Show more
+  showMoreTranslations:
+    one: Show 1 more translation
+    other: Show {{count}} more translations
+  showCollapsedTags: Show collapsed inline tags
+  showOtherLocales: Show matches for other locales
+  showPublicMatches: Show matches from public vaults
+  showSecondary: Show secondary metadata
+  showStemmedMatches: Show stemmed matches
+  showTags: Show inline tags
+  showTagsWithAttributes: Show inline tags and attributes
+  sidebar: Sidebar
+  source: Source
+  specialCharacters: Special Characters
+  splitHere: Split this segment here
+  stillTagsToApply: There are still format tags that need to be applied.
+  startFormatting: Start Formatting
+  stopApproveOnNavigate: Stop Approving when Navigating
+  stopApproveSegmentInstructionsA: Translations are approved when using the segment navigation controls. This includes clicking the next, previous, first or last segment arrows.
+  stopApproveSegmentInstructionsB: A translation is also approved when jumping to another segment by clicking on it in either the Document Viewer or Context Viewer, or by entering its number in the text field shown above.
+  stopApproveSegmentInstructionsC: Click the "Disable" button to turn this feature off. You can always come back and "Enable" it later.
+  stopApproving: Stop Approving
+  stopSaveOnNavigate: Stop Saving when Navigating
+  stopSaveSegmentInstructionsA: Changes you make to a translation are saved when using the segment navigation controls. This includes clicking the next, previous, first or last segment arrows.
+  stopSaveSegmentInstructionsB: Your changes are also saved when jumping to another segment by clicking on it in either the Document Viewer or Context Viewer, or by entering its number in the text field shown above.
+  stopSaveSegmentInstructionsC: Click the "Disable" button to turn this feature off. You can always come back and "Enable" it later.
+  stopSaving: Stop Saving
+  submitYourOwn: Submit your own translation
+  tagIsInterwoven: Tag is interwoven with another tag
+  tagsApplied: tags applied
+  target: Target
+  terminology: Terminology
+  terms: Terms
+  thisDocument: 'Points this document:'
+  thisSession: 'This session:'
+  thisWillSaveTime: This will save time by taking you only to the segments that need formatting.
+  tmStats: TM Stats
+  toInsertUppercase: key while you click to insert the uppercase version.
+  trainingGuide: Training Guide
+  translation: Translation
+  translationMemory: Translation Memory
+  tryResetting: Try resetting filters?
+  unapplied: unapplied
+  unappliedFormatTags: Unapplied Format Tags
+  unappliedTags: "Unapplied Format Tags:"
+  unapproved: Unapproved
+  unlock: Unlock
+  unlockSegment: Unlock Segment
+  unlockWarning: "Warning: You are about to unlock a translation that has been previously approved. Only unlock the segment if there is a flaw in the translation memory."
+  view: View
+  votes:
+    one: 1 Vote
+    other: "{{count}} Votes"
+  weightedSearch: Weighted word search
+  with: with
+  withFormatTags: with format tags
+  words: "Words:"
+  workbench: Workbench
+  workbenchColon: "Workbench: "
+  yourTranslation: Your Translation
+  yourVote: Your Vote

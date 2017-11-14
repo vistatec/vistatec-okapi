@@ -1,0 +1,8 @@
+folded_style: >
+    This entire block of text will be the value of 'folded_style', but this
+    time, all newlines will be replaced with a single space.
+
+    Blank lines, like above, are converted to a newline character.
+
+        'More-indented' lines keep their newlines, too -
+        this text will appear over two lines.

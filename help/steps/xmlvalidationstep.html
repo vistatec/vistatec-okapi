@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Steps - XML Validation</title>
+<link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Steps</h1>
+		<h2 class="head2">XML Validation Step</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc">
+		- <a href="#overview">Overview</a><br>
+		- <a href="#parameters">Parameters</a></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="index.html">Steps</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=XML_Validation_Step">http://okapiframework.org/wiki/index.php?title=XML_Validation_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step checks xml well-formedness and validation using DTD or XML Schema.</p>
+<p>Takes: Raw document<br>
+Sends: Raw document</p>
+<p>Well-formedness checked is performed even if validation is not selected. 
+Consequently any other format than xml will most likely not pass well-formedness.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Validate the files</cite> -- Check this button to perform validation against either DTD or XML Schema.</p>
+<p><cite>Type of validation</cite> -- Select either DTD or XML Schema. 
+If using XML Schema you have the option of specifying a schema in the next option.</p>
+<p><cite>Path to XML Schema</cite> -- This is used if XML Schema was selected as type of validation. 
+Select an XML Schema to use for validation. If one is not selected the step will locate a XML Schema inside the file. If one cannot be found validation will fail.</p>
+</body>
+</html>

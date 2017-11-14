@@ -1,0 +1,19 @@
+# Source files that use a different license than the standard Okapi Apache v2.0
+
+maven module:  license_name
+Java Package or Path.File	
+
+okapi-core:  BSD
+net.sf.okapi.common.observer.BaseObservable
+net.sf.okapi.common.observer.IObservable
+net.sf.okapi.common.observer.IObserver
+net.sf.okapi.common.observer.WeakReferenceObservable
+
+okapi-core:  LGPL
+net.sf.okapi.common.Base64
+
+Segmentation rules: LGPL
+./okapi/steps/aligner/src/main/resources/net/sf/okapi/steps/gcaligner/default.srx
+./okapi/steps/whitespacecorrection/src/test/resources/segmentation-rules.srx
+./okapi/steps/scopingreport/src/test/resources/net/sf/okapi/steps/scopingreport/default.srx
+./okapi/steps/repetitionanalysis/src/test/resources/net/sf/okapi/steps/repetitionanalysis/default.srx

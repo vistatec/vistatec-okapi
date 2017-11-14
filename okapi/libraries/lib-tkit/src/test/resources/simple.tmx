@@ -1,0 +1,17 @@
+<tmx version="1.4b">
+ <header creationtool="XYZTool" creationtoolversion="1.01-023"
+  datatype="PlainText" segtype="sentence"
+  adminlang="en-us" srclang="en"
+  o-tmf="ABCTransMem">
+ </header>
+ <body>
+  <tu>
+   <tuv xml:lang="en">
+    <seg>Text in <bpt i="1">&lt;B&gt;</bpt>bold<ept i="1">&lt;/B&gt;</ept>.</seg>
+   </tuv>
+   <tuv xml:lang="fr">
+    <seg>Texte en <bpt i="1">&lt;B&gt;</bpt>gras<ept i="1">&lt;/B&gt;</ept>.</seg>
+   </tuv>
+  </tu>
+ </body>
+</tmx>

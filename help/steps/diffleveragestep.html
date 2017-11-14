@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Steps - Diff Leverage Step</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr class="head">
+      <td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Steps</h1>
+      <h2 class="head2">Diff Leverage Step</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="smalltoc"> - <a href="#overview">Overview</a><br>
+- <a href="#parameters">Parameters</a></td>
+      <td class="hmenu">
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+            <td><a href="index.html">Steps</a></td>
+            <td><a href="http://okapiframework.org/devguide/index.html">Developer's
+Guide</a></td>
+            <td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Diff_Leverage_Step">http://okapiframework.org/wiki/index.php?title=Diff_Leverage_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step compares the source text of two documents to try to leverage 
+existing translation for a new source content.</p>
+<p>Takes: Filter events<span style="background-color: rgb(255, 255, 0);"></span><br>
+Sends: Filter events</p>
+<h3>Input</h3>
+<p>This step requires two inputs:</p>
+<ul>
+	<li>The first one is the new document that needs to be translated.</li>
+	<li>The second one is a bilingual document with the old source and its 
+	corresponding old translation.</li>
+</ul>
+<p>or</p>
+<ul>
+	<li>The first one is the new document that needs to be translated.</li>
+	<li>The second one is the document with the old source.</li>
+	<li>The third one is the document with the old translation.</li>
+</ul>
+<p>When using three documents, the text units between the second and the third 
+must be aligned (same number, same order)</p>
+<h3>Limitations</h3>
+<p>The comparison process is done of the list of all the text units, in memory. 
+You may not be able to process very large documents.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<p><cite>Leverage only if the match is equal or above this score</cite> -- Set 
+the leverage threshold. If the result of the process is equal or above the 
+specified threshold, the old target text is leveraged, otherwise it is ignored.</p>
+<p><cite>Include inline codes in the comparison</cite> -- Set this option to 
+take the inline codes into consideration when computing the quality of the 
+matches.</p>
+<p>&nbsp;</p>
+</body>
+</html>

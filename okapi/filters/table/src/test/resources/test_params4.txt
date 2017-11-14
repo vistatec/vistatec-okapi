@@ -1,0 +1,9 @@
+#v1
+sendEmptyFields.b = true		
+fieldNamesLineNum.i = 1
+valuesStartLineNum.i = 2
+numColumns.i = -1
+sendHeaderMode.i = 1
+trimMode.i = 1	
+textQualifier =\"
+columnWidths =19, 30, 21, 16, 15, 21, 20

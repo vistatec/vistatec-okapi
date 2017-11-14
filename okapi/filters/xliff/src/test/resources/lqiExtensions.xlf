@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsx="http://www.w3.org/2008/12/its-extensions" version="1.2" its:version="2.0">
+<file original="test.pot" source-language="en" target-language="fr" datatype="x-application/x-gettext" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="1" resname="NCAA7FD17" xml:space="preserve" its:locQualityIssuesRef="#RW1">
+<source xml:lang="en">Source segment.</source>
+<target xml:lang="fr">Target segment.</target>
+</trans-unit>
+</body>
+</file>
+<its:locQualityIssues xmlns:its="http://www.w3.org/2005/11/its" xmlns:okp="okapi-framework:xliff-extensions" version="2.0" xml:id="RW1">
+<its:locQualityIssue locQualityIssueComment="" locQualityIssueSeverity="75" locQualityIssueType="mistranslation" okp:lqiType="OTHER" okp:lqiPos="0 -1 0 -1"/>
+</its:locQualityIssues>
+</xliff>

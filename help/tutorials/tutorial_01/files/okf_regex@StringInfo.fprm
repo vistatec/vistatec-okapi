@@ -1,0 +1,26 @@
+
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+regexOptions.i=8
+mimeType=text/plain
+ruleCount.i=1
+rule0.ruleName=Rule1
+rule0.ruleType.i=0
+rule0.expr=(\n(.*?)\t)(.*?)(\t1$)
+rule0.groupSource.i=3
+rule0.groupTarget.i=-1
+rule0.groupName.i=2
+rule0.groupNote.i=-1
+rule0.preserveWS.b=true
+rule0.useCodeFinder.b=true
+rule0.sample=BEGIN$0a$ID1	"Text"	1	2	  etc.	0$0a$ID2	"Text"	a	c	 b	1$0a$END
+rule0.codeFinderRules.count.i=3
+rule0.codeFinderRules.rule0=#!\[.*?\]
+rule0.codeFinderRules.rule1=#!\{.*?\}
+rule0.codeFinderRules.rule2=\\[nrt]
+rule0.codeFinderRules.sample=test #![var] and #!{var} and \n and \t etc.
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false

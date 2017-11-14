@@ -1,0 +1,5 @@
+double_quotes: "\u0200 accented \" 'character"
+
+single_quotes: 'Ȁ accented " character'
+
+plain: Ȁ accented " 'character

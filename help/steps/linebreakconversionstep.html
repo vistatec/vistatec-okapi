@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Steps - Line-Break Conversion</title>
+  <link rel="stylesheet" type="text/css" href="../help.css">
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr class="head">
+      <td class="head" colspan="2">
+      <h1 class="head">Okapi Framework - Steps</h1>
+      <h2 class="head2">Line-Break Conversion Step</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="smalltoc"> - <a href="#overview">Overview</a><br>
+- <a href="#parameters">Parameters</a></td>
+      <td class="hmenu">
+      <div class="hmenu">
+      <table align="right">
+        <tbody>
+          <tr>
+            <td><a href="index.html">Steps</a></td>
+            <td><a href="http://okapiframework.org/devguide/index.html">Developer's
+Guide</a></td>
+            <td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Line-Break_Conversion_Step">http://okapiframework.org/wiki/index.php?title=Line-Break_Conversion_Step</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>This step converts all line-breaks in the input document to a specified type.</p>
+<p>Takes: Raw document<br>
+Sends: Raw document</p>
+<p>The encoding of the document is not modified in any way and Byte-Order-Marks are not added or deleted.</p>
+<p>The type of line-break in the input file is detected automatically, and the 
+file may contain a mix of different types of line-breaks.</p>
+<h2><a name="parameters"></a>Parameters</h2>
+<h4>Convert line-breaks to the following type</h4>
+<p><cite>DOS/Windows</cite> -- Select this option to change all the line-breaks 
+to DOS/Windows line-breaks (CR+LF: 0x0D+0x0A: <code>\r\n</code>).</p>
+<p><cite>Unix/Linux</cite> -- Select this option to change all the line-breaks 
+to Unix/Linux line-breaks (LF: 0x0A: <code>\n</code>).</p>
+<p><cite>Macintosh</cite> -- Select this option to change all the line-breaks to 
+Macintosh line-breaks (CR: 0x0D: <code>\r</code>).</p>
+<p>&nbsp;</p>
+</body>
+</html>

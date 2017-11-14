@@ -1,0 +1,5 @@
+Test with &lt;=lt, >=gt, &amp;=amp, &#13;=CR, etc...
+First segment.
+Second segment<lb/>and it goes onto<lb/>three lines.
+<mrk mtype="seg">Third segment with optional markers.</mrk>
+<mrk mtype="seg" mid="should be preserved">Fourth segment<lb/>on two lines.</mrk>

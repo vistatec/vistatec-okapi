@@ -1,0 +1,9 @@
+preserve_whitespace: false
+
+elements:
+  # test read-only, writable attributes
+  dummy: 
+      ruleTypes: [ATTRIBUTES_ONLY]
+      translatableAttributes: [trans]  
+      writableLocalizableAttributes: [write]
+      readOnlyLocalizableAttributes: [readonly]

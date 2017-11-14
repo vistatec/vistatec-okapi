@@ -1,0 +1,169 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - Properties Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Properties Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer&#39;s Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Properties_Filter">http://okapiframework.org/wiki/index.php?title=Properties_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The Properties Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+properties files. The filter is implemented in the class <code>
+net.sf.okapi.filters.properties.PropertiesFilter</code> of the Okapi library.</p>
+<p>The implementation is based on the specification found in the Java
+<a target="_blank" href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html#load(java.io.InputStream)">
+<code>java.util.Properties</code> class documentation</a>. Support for a few 
+additional features is also provided for compatibility with other type of 
+properties files.</p>
+<p>The following is an example of a very simple properties file. The translatable text 
+is marked in <b>bold</b>.</p>
+<pre># This is a comment
+
+Key1 : <b>This the text for Key1</b>
+Key2 = <b>This is the text for Key2</b></pre>
+<p>Note that Java properties can also be represented in XML. To process such 
+document, use the <a href="../xml/index.html">XML Filter</a>.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input file using the 
+following logic:</p>
+<ul>
+	<li>If the file has a Unicode Byte-Order-Mark:<ul>
+		<li>Then, the corresponding encoding (e.g. UTF-8, UTF-16, etc.) is used.</li>
+	</ul>
+	</li>
+	<li>Otherwise, the input encoding used is the default encoding that was specified when 
+	setting the filter options.</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Mapping</h3>
+<p>Each entry of the property file is mapped to a text unit resource as follow:</p>
+<table border="1" cellspacing="0" cellpadding="4" id="table1">
+	<tr>
+		<th>Properties File</th>
+		<th>Resource</th>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The key of the entry</td>
+		<td align="left" valign="top">The name of the text unit</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">The text of the entry</td>
+		<td align="left" valign="top">The source content of the text unit</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">Comments (before the entry)</td>
+		<td align="left" valign="top">The <i>note</i> property of the text unit 
+		(if the option <cite>Extract comments to note properties</cite> is set)
+		</td>
+	</tr>
+</table>
+
+<h2><a name="parameters"></a>Parameters</h2>
+<h3>Options Tab</h3>
+<h4>Localization directives</h4>
+<p>Localization directives are special comments you can use to override the 
+default behavior of the filter regarding the parts to extract. The syntax and 
+behavior of the directives are the same across all Okapi filters.Note that the directives override key conditions.</p>
+<p><cite>Use localization directives when they are present</cite> -- Set this option to enable the filter to recognize localization directives. If this option is not set, any localization directive in the input file will be ignored.</p>
+<p><cite>Extract items outside the scope of localization directives</cite> -- Set this option to extract any translatable item that is not within the scope of a localization directive. Selecting to extract or not outside localization directives allows you to mark up fewer parts of the source document. This option is enabled only when the <cite>Use localization directives when they are present</cite> option is set.</p>
+<h4>Key filtering</h4>
+<p><cite>Use the following key condition:</cite> -- Set this option to extract items based on their keys. You specify a regular expression pattern, if the key matches the pattern, the item is extracted or not depending on the action you specify. Note that directives have precedence over key condition.</p>
+<p><cite>Extract only the items with a key matching the given expression</cite> -- Select this option to extract only the items with keys that match the specified pattern.</p>
+<p><cite>Do not extract the items with a key matching the given expression</cite> -- Select this option to not extract the items with keys that match the specified pattern.</p>
+<p>Enter the pattern to test against the key. The pattern must be a valid
+<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html">regular expression</a>. For example, 
+with the following settings:</p>
+<pre>Use the following key condition = set
+Extract only the items with a key matching the specified pattern = set
+Pattern = .*text.*</pre>
+<p>The extracted text is highlighted:</p>
+<pre>key1 = <b>Text for key1</b>
+text.err1 = <span style="font-weight: 700; background-color: #FFFF00">Text for text.err1</span>
+menu_text_file = <span style="font-weight: 700; background-color: #FFFF00">Text for menu_text_file</span></pre>
+<p><cite>Recognize additional comment markers</cite> -- Set this option to take into account other comment styles in addition to the strict Java comments (single-line starting with '<code>#</code>' or '<code>!</code>'). When this option is set, the filter also recognizes comments single-lines starting with '<code>;</code>', as well as single-line where 
+&quot;<code>//</code>&quot; is the first no-whitespace sequence. Note that <code>//</code> after a 
+<code>=</code> are considered part of the value of the entry, not a comment.</p>
+<p><cite>Extract comments to note properties</cite> -- Set this option to 
+include the comments before each entry as a <i>note</i> property on the text 
+unit of the corresponding entry. All comments lines are grouped into a single 
+note.</p>
+<p><cite>Convert \n and \t to linre-break and tab</cite> -- Set this option to 
+convert the escaped codes <code>\n</code> and <code>\t</code> to true 
+line-breaks and tabs. All the other escaped characters remain escaped.</p>
+
+<h3>Inline Codes Tab</h3>
+<p><cite>Has inline codes as defined below:</cite> -- Set this option to use the specified regular expression to be use against the text of the extracted items. Any match will be converted to an inline code. By default the expression is:</p>
+<pre>((%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgGpn])
+|((\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v)
+|(\{\d.*?\}))</pre>
+<p><cite>Add</cite> -- Click this button to add a new rule.</p>
+<p><cite>Remove</cite> -- Click this button to remove the current rule.</p>
+<p><cite>Move Up</cite> -- Click this button to move the current rule upward.</p>
+<p><cite>Move down</cite> -- Click this button to move the current rule 
+downward.</p>
+<p>[Top-right text box] -- Enter the regular expression for the 
+current rule. Use the <cite>Modify</cite> button to enter the edit mode. The 
+expression must be a valid
+<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html">
+regular expression</a>. You can check the syntax 
+(and the effect of the rule) as it automatically tests it against the test data in the text box below and shows the result in the bottom-right text box.</p>
+<p><cite>Modify</cite> -- Click this button to edit the expression of the 
+current rule. This button is labeled <cite>Accept</cite> when you are in 
+edit mode.</p>
+<p><cite>Accept</cite> -- Click this button to save any changes you have 
+made to the expression and leave the edit mode. This button is labeled <cite>
+Modify</cite> when you are not in edit mode.</p>
+<p><cite>Discard</cite> -- Click this button to leave the edit mode and 
+revert the current rule to the expression it had before you started the edit 
+mode.</p>
+<p><cite>Patterns</cite> -- Click this button to display a list of "guideline" regular 
+expression patterns then select a pattern to insert it the edit box. The inserted text replaces whatever text is 
+currently selected.</p>
+<p><cite>Test using all rules</cite> -- Set this option to test all the rules at the same 
+time. The syntax of the current rule is automatically checked. See the effect it has on the sample text. The result of the test are displayed in the bottom right result box. The parts of the text that are 
+matches of the expressions are displayed in <> brackets. If the <cite>Test using all rules</cite> option is set, the test takes all rules of the set in account, if it is not set only the current rule is 
+tested.</p>
+<p>[Middle-right text box] -- Optional test data to test the regular expression for the 
+current rule or all rules depending on the <cite>Test using all rules</cite> option.</p>
+<p>[Bottom-right text box] -- Shows the result of the regular expression applied to the test data.</p>
+<h3>Options Tab</h3>
+<p><cite>Escape all extended characters</cite> -- Set this option to convert all characters above U+007F into Unicode escape sequences (<code>\uHHHH</code>). When this option is not set, only the characters not supported by the output encoding are escaped.</p>
+
+<p>&nbsp;</p>
+
+</body>
+</html>

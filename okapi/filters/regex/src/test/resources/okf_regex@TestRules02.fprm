@@ -1,0 +1,23 @@
+
+useLD.b=true
+localizeOutside.b=true
+startString="
+endString="
+extractOuterStrings.b=false
+useBSlashEscape.b=true
+regexOptions.i=32
+mimeType=text/plain
+ruleCount.i=1
+rule0.ruleName=Rule1
+rule0.ruleType.i=1
+rule0.expr=\{(.*?)}
+rule0.groupSource.i=1
+rule0.groupTarget.i=-1
+rule0.groupName.i=-1
+rule0.groupNote.i=-1
+rule0.preserveWS.b=false
+rule0.useCodeFinder.b=false
+rule0.sample={First paragraph.$0a$Still in the same paragraph 1.$0a$And this one too.}$0a$$0a$  	{Start of text$0a$ and that continues   until$0a$here.}  	$0a$
+rule0.codeFinderRules.count.i=0
+rule0.codeFinderRules.sample=
+rule0.codeFinderRules.useAllRulesWhenTesting.b=false

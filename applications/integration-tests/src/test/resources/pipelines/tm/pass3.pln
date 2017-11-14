@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.common.RawDocumentToFilterEventsStep"></step>
+<step class="net.sf.okapi.steps.segmentation.SegmentationStep">#v1
+segmentSource.b=true
+segmentTarget.b=false
+sourceSrxPath=${rootDir}/defaultSegmentation.srx
+targetSrxPath=
+copySource.b=true
+checkSegments.b=false</step>
+<step class="net.sf.okapi.steps.leveraging.LeveragingStep">#v1
+resourceClassName=net.sf.okapi.connectors.pensieve.PensieveTMConnector
+resourceParameters.dbDirectory=${rootDir}/out2.pentm
+threshold.i=95
+fillTarget.b=true
+makeTMX.b=false
+tmxPath=
+useMTPrefix.b=true
+leverage.b=true</step>
+<step class="net.sf.okapi.steps.common.FilterEventsToRawDocumentStep"></step>
+</rainbowPipeline>

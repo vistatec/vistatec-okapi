@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xlf:xliff version="1.2" xmlns:xlf="urn:oasis:names:tc:xliff:document:1.2" xmlns:htm="http://www.w3.org/1999/xhtml" xmlns:l10nmgr="http://l10ntech.de/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+	<xlf:file datatype="database" original="TYPO3" source-language="EN" target-language="DE" category="Subject field" date="2002-01-25T21:06:00Z">
+		<xlf:header>
+			<!-- Localization process information -->
+			<xlf:phase-group>
+				<xlf:phase process-name="Export" phase-name="l10nmgr-export" company-name="Your company" contact-name="Your name" contact-email="you@company.de" contact-phone="0012 2345 67890"/>
+				<xlf:phase process-name="Translation" phase-name="translation" company-name="Translation acengy" contact-name="Project manager" contact-email="pm@some.org" contact-phone="00498 123 14 56" />
+				<xlf:phase process-name="Import" phase-name="Import" company-name="Your company" contact-name="Your name" contact-email="you@company.de" contact-phone="0012 2345 67890" />
+			</xlf:phase-group>
+			<!-- Link to terminology to be used for translation job -->
+			<xlf:glossary>
+				<xlf:external-file href="http://server.org/glossary/"/>
+			</xlf:glossary>
+			<!-- Link to localisation & translation guidelines -->
+			<xlf:reference>
+				<xlf:external-file href="http://server.org/instructions.html"/>
+			</xlf:reference>
+			<xlf:count-group name="fields">
+				<xlf:count count-type="total" unit="word">1</xlf:count>
+				<xlf:count count-type="total" unit="character">10</xlf:count>
+				<xlf:count count-type="total" unit="x-fields">1</xlf:count>
+			</xlf:count-group>
+			<xlf:tool tool-name="TYPO3 Localisation Manager" tool-id="tx_l10nmgr" tool-version="v3"/>
+			<xlf:note from="Project manager" xml:lang="EN">Note for translator here</xlf:note>
+			<!-- Localisation configuration used for generating this file -->
+			<l10nmgr:l10ncfg>3</l10nmgr:l10ncfg>
+			<!-- Internal TYPO3 language parameter needed for constructing source preview link -->
+			<l10nmgr:sysLang>0</l10nmgr:sysLang>
+			<l10nmgr:workspaceId>-1</l10nmgr:workspaceId>
+			<!-- URL of TYPO3 server for preview and service -->
+			<l10nmgr:baseUrl>http://l10ntech.de</l10nmgr:baseUrl>
+			<!-- Internal messages if something got wrong with the export -->
+			<l10nmgr:internal>
+				<l10nmgr:skippedItem>
+					<l10nmgr:description></l10nmgr:description>
+					<l10nmgr:key></l10nmgr:key>
+				</l10nmgr:skippedItem>
+			</l10nmgr:internal>
+		</xlf:header>
+		<xlf:body>
+			<!-- xlf-group corresponds to page group -->
+			<xlf:group id="123" l10nmgr:context-type="page" l10nmgr:contact-name="$author" l10nmgr:contact-email="$author-email">
+				<!-- Example for XLIFF using restype, maxwidth, minwidth (in number of chars) -->
+				<xlf:trans-unit id="1" resname="$key" datatype="plaintext" restype="heading" maxwidth="50" minwidth="10">
+					<xlf:source xml:lang="EN">I am a headline</xlf:source>
+					<xlf:target xml:lang="DE">Ich bin eine Überschrift</xlf:target>
+				</xlf:trans-unit>
+				<!-- Example for XLIFF using restype -->
+				<xlf:trans-unit id="2" resname="$key" datatype="plaintext" restype="string" >
+					<xlf:source xml:lang="EN">This is my source text to be translated.</xlf:source>
+					<xlf:target xml:lang="DE">Dies ist der übersetzte Text.</xlf:target>
+				</xlf:trans-unit>
+				<!-- Example for transformation of inline tags in XLIFF. Note:User defined elements not allowed in source and target elements! -->
+				<xlf:trans-unit id="3" resname="$key" datatype="html" restype="string" >
+					<xlf:source xml:lang="EN">This is a sentence with a <xlf:g id="1" ctype="bold">bold</xlf:g>word.</xlf:source>
+					<xlf:target xml:lang="DE">Dies ist ein Satz mit einem <xlf:g id="1" ctype="bold">fettgedruckten Wort</xlf:g></xlf:target>
+				</xlf:trans-unit>
+				<!-- Example for workaround where no HTML to XLIFF transformation is needed. Use of CDATA however is not recommended. -->
+				<xlf:trans-unit id="4" resname="$key" datatype="html" restype="string" >
+					<xlf:source xml:lang="EN"><![CDATA[This is a sentence with a <b>bold</b>word.]]></xlf:source>
+					<xlf:target xml:lang="DE"><![CDATA[Dies ist ein Satz mit einem <bold>fettgedruckten</bold> Wort.]]></xlf:target>
+				</xlf:trans-unit>
+				<!-- Example for workaround where no HTML to XLIFF transformation is needed. CAT tools and l10nmgr only working on l10nmgr:translation element as in current CATXML approach. -->
+				<xlf:trans-unit id="5" resname="$key" datatype="html" restype="string" >
+					<xlf:source xml:lang="EN">--empty--</xlf:source>
+					<l10nmgr:translation xml:lang="EN">I am a headline in <b>bold</b></l10nmgr:translation>
+				</xlf:trans-unit>
+				<!-- Example for use of l10n metadata for menu entry -->
+				<xlf:trans-unit id="6" resname="$key" datatype="plaintext" maxwidth="12" restype="menuitem">
+					<xlf:source xml:lang="EN">Menu entry</xlf:source>
+				</xlf:trans-unit>
+			</xlf:group>
+		</xlf:body>
+	</xlf:file>
+</xlf:xliff>

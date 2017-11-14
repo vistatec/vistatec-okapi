@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowProject version="4"><fileSet id="1"><root useCustom="0">C:/Users/Yves</root><fi fs="okf_vignette" fo="" se="" te="">vignetteTest01.xml</fi></fileSet><fileSet id="2"><root useCustom="0">C:/Users/Yves</root></fileSet><fileSet id="3"><root useCustom="0">C:/Users/Yves</root></fileSet><output><root use="0"></root><subFolder use="0"></subFolder><extension use="1" style="0">.out</extension><replace use="0" oldText="" newText=""></replace><prefix use="0"></prefix><suffix use="0"></suffix></output><options sourceLanguage="en-us" sourceEncoding="UTF-8" targetLanguage="es-es" targetEncoding="UTF-8"></options><parametersFolder useCustom="0">C:/Users/Yves</parametersFolder><utilities xml:spaces="preserve"><params id="oku_extraction">#v1
+pkgType=rtf
+createZip.b=false
+pkgName=vignettePack1
+outputFolder=${ProjDir}
+preSegment.b=false
+sourceSRX=
+targetSRX=
+preTranslate.b=false
+useFileName.b=false
+useGroupName.b=false
+protectAccepted.b=true
+xliffOptions.gMode.b=false
+xliffOptions.includeNoTranslate.b=true
+xliffOptions.setApprovedAsNoTranslate.b=false
+xliffOptions.message=
+threshold.i=95
+transResClass=net.sf.okapi.connectors.simpletm.SimpleTMConnector
+useTransRes2.b=false
+transResClass2=net.sf.okapi.connectors.apertium.ApertiumMTConnector</params></utilities></rainbowProject>

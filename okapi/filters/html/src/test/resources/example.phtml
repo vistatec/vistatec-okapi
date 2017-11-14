@@ -1,0 +1,12 @@
+	  <li id="trial" <? if ($this->controller == "trial"): ?> class="current" <? endif ?> >
+	     <a href="<?= $this->url(array('controller' => 'trial', 'action' => 'index'), '', true) ?>">Text 1</a>
+   	     <ul class="subnav"> 
+		<li id="defense"><a href="<?= $this->url(array('controller' => 'trial', 'action' => 'defense'), '', true) ?>">Text 2</a></li>
+		<li id="transcripts"><a href="<?= $this->url(array('controller' => 'trial', 'action' => 'transcripts'), '', true) ?>">Text 3</a></li>
+		<li id="judgement">
+		  <a href="<?= $this->url(array('controller' => 'trial', 'action' => 'judgement'), '', true) ?>">Text 4</a></li>
+		<li id="appeal">
+		  <a href="<?= $this->url(array('controller' => 'trial', 'action' => 'appeal'), '', true) ?>">Text 5</a>
+		</li>
+	     </ul>
+	  </li>

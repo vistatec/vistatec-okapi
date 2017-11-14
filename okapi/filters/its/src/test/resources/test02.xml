@@ -1,0 +1,23 @@
+﻿<myDoc>
+ <head>
+  <test>No trans: ø=o-slash; Ą=A-ogonek, ＡＢＣ=ABC-fulwidth</test>
+  <author>Norbert Griphook</author>
+  <comments>This is the instructions for the ordering process.</comments>
+  <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+   <its:translateRule selector="/myDoc/head" translate="no"/>
+   <its:translateRule selector="//*/@alt" translate="yes"/> 
+   <its:translateRule selector="//del" translate="no" />
+   <its:translateRule selector="//@*[ancestor::del]" translate="no"/>
+   <its:withinTextRule selector="//ui|//ins|//del|//imgRef" withinText="yes"/>
+  </its:rules>
+ </head>
+ <test>Trans: ø=o-slash; Ą=A-ogonek, ＡＢＣ=ABC-fulwidth</test>
+ <par>To start click <ins>the <ui>Begin</ui>
+  button</ins><del> the icon <imgRef file="btnStart.png" alt="Start"/></del>
+  and fill the form labeled with the following icon:
+  <imgRef file="vat.png" alt="Value Added Tax Form"/>
+ </par>
+ <par><![CDATA[&=amp, <=lt, &#xAAA;=not-a-ncr.]]></par>
+ <par>Before comment <!--comment xyz  --> and after.</par>
+ <par>Before PI <?abc attr="value"  ?> and after.</par>
+</myDoc>

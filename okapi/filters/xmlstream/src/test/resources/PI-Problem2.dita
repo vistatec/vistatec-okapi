@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="1">
+    <conbody>
+        <p>
+            <b>Discussing issues with Okapi</b>
+            <ph conref="2" translate="no"><?xm-replace_text Phrase?></ph>
+        </p>
+        <p>
+            <b>Discussing issues with Okapi</b>
+            <ph conref="2"><?xm-replace_text Phrase?></ph>
+        </p>
+        <ul id="5">
+            <li id="6"><ph conref="7"><?xm-replace_text Phrase?></ph>
+            </li>
+            <li id="10"><ph conref="11"><?xm-replace_text Phrase?></ph>
+            </li>
+        </ul>
+    </conbody>
+</concept>

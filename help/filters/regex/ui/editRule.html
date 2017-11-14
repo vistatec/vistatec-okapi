@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Regex Filter - Edit Rule Dialog</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">Regex Filter - Edit Rule Dialog</h2></td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=Regex_Filter">http://okapiframework.org/wiki/index.php?title=Regex_Filter</a></p>
+
+<p>This dialog box allows you to edit a rule of the <a href="index.html">Regex 
+Filter</a>.</p>
+<h4>Regular expression</h4>
+<p dir="ltr">Enter the regular expression for this rule. The expression must be 
+a valid Java regular expression. The capturing groups you define inside this 
+expression are used to specify what parts is what in the generated events.</p>
+<p><cite>Example</cite> -- Enter a example of text to process. The result of 
+the rule applied to the example is shown below the example, as you modify the parameters. 
+All matches for the given rule are provided.</p>
+<p>Example of expressions:</p>
+<pre>Expression: ^<span style="background-color: #FFFF00">(.*?)</span>=\[<span style="background-color: #00FF00">(.*?)</span>]\Z
+
+    Sample: <span style="background-color: #FFFF00">ID001</span>=[<span style="background-color: #00FF00">Source text</span>]</pre>
+<h3>Action and Groups</h3>
+<p><cite>Action</cite> -- Select the action to perform for this rule. Which 
+fields can be used depends on the action selected. There are the following choices:</p>
+<ul>
+	<li><cite>Extract the strings in the source group</cite>: Extracts each 
+	strings within the source capturing group defined for this rule. The content into a separate text unit. The beginning and 
+	ending of the strings are defined <a href="#OptionsStrings">in the <cite>
+	Options</cite> tab</a>.</li>
+	<li><cite>Extract the content of the source group</cite>: Extracts the content into a single 
+	text unit, according the different capturing groups defined for the rule.</li>
+	<li><cite>Treat the source group content as comment</cite>: Does not extract anything, 
+	but process the content as a comment and search for localization directives 
+	if that option is set.</li>
+	<li><cite>Do not extract</cite>: Leaves the content alone.</li>
+	<li><cite>Start a section</cite>: Sends a <code>START_GROUP</code> event.</li>
+	<li><cite>End a section</cite>: Sends an <code>END_GROUP</code> event.</li>
+</ul>
+<p>See the <a href="index.html#actions">Actions</a> section for more detailed 
+information on how actions work.</p>
+<p><cite>Source group number</cite> -- Enter the number of the capturing corresponding to 
+the source content for this rule. If this field is enabled, you must provide a 
+value.</p>
+<p><cite>Target group number</cite> -- Enter the number of the capturing corresponding to 
+the target content for this rule. Use -1 to leave this group undefined.</p>
+<p><cite>Identifier group number</cite> -- Enter the number of the capturing corresponding 
+to the identifier content for this rule. Use -1 to leave this group undefined.</p>
+<p><cite>Note group number</cite> -- Enter the number of the capturing corresponding to the 
+note content for this rule. Use -1 to leave this group undefined.</p>
+<p>Note that capturing groups are numbered by counting their opening parentheses from 
+left to right. For example, in the expression <code>((A)(B(C)))</code> there are 
+four groups:</p>
+<ol>
+	<li><code>((A)(B(C)))</code></li>
+	<li><code>(A)</code></li>
+	<li><code>(B(C))</code></li>
+	<li><code>(C)</code></li>
+</ol>
+<p>&nbsp;</p>
+</body>
+</html>

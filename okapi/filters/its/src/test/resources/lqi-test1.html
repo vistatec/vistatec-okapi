@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Title</title>
+<script type=application/its+xml>
+<its:rules xmlns:its='http://www.w3.org/2005/11/its' version='2.0' 
+ xmlns:h='http://www.w3.org/1999/xhtml'>
+ <its:locQualityIssueRule selector='//h:p/@title' locQualityIssuesRefPointer='../@attref'/>
+ <its:locQualityIssueRule selector='//h:p' locQualityIssuesRef='lqi-test1-standoff.xml#lqi2'/>
+</its:rules>
+</script>
+</head>
+<body>
+<p its-loc-quality-issues-ref='lqi-test1-standoff.html#lqi3'>Paragraph 1</p>
+<p title='Text' attref='lqi-test1-standoff.xml#lqi1'>Paragraph 2</p>
+</body>
+</html>

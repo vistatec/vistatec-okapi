@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<srx xmlns="http://www.lisa.org/srx20" xmlns:okpsrx="http://okapi.sf.net/srx-extensions" version="2.0">
+<header segmentsubflows="yes" cascade="no">
+<formathandle type="start" include="no"></formathandle>
+<formathandle type="end" include="yes"></formathandle>
+<formathandle type="isolated" include="no"></formathandle>
+<okpsrx:options oneSegmentIncludesAll="no" trimLeadingWhitespaces="no" trimTrailingWhitespaces="no"></okpsrx:options>
+<okpsrx:sample language="en" useMappedRules="yes">"Mr. Holmes is from the U.K. not the U.S." &lt;B>Is Dr. Watson from there too?&lt;/B> Yes: both are.&lt;BR/>I use 3ds Max. To the max. degree? Why yes! 「こんいちは．．．」これは日本語です。 ( self = mask ? -v : v )
+( self = (sSign &lt; 0) ? -v : v )</okpsrx:sample>
+<okpsrx:rangeRule></okpsrx:rangeRule>
+</header>
+<body>
+<languagerules>
+<languagerule languagerulename="Japanese">
+<!--Fix for overzealous Trados rule.-->
+<rule break="no">
+<beforebreak>[:]+[\p{Pe}\p{Pf}\p{Po}"-[\u002C\u003A\u003B\u055D\u060C\u061B\u0703\u0704\u0705\u0706\u0707\u0708\u0709\u07F8\u1363\u1364\u1365\u1366\u1802\u1804\u1808\u204F\u205D\u3001\uA60D\uFE10\uFE11\uFE13\uFE14\uFE50\uFE51\uFE54\uFE55\uFF0C\uFF1A\uFF1B\uFF64]]*</beforebreak>
+<afterbreak>\s+\P{Lu}</afterbreak>
+</rule>
+<!--Trados rule.-->
+<rule break="yes">
+<beforebreak>[:]+[\p{Pe}\p{Pf}\p{Po}"-[\u002C\u003A\u003B\u055D\u060C\u061B\u0703\u0704\u0705\u0706\u0707\u0708\u0709\u07F8\u1363\u1364\u1365\u1366\u1802\u1804\u1808\u204F\u205D\u3001\uA60D\uFE10\uFE11\uFE13\uFE14\uFE50\uFE51\uFE54\uFE55\uFF0C\uFF1A\uFF1B\uFF64]]*</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>[。．！？…]+</beforebreak>
+<afterbreak>.</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\.\.\.</beforebreak>
+<afterbreak>\s+\P{Lu}</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>^\s*\p{Nd}+[\p{Nd}\.\)\]]+\s+</beforebreak>
+<afterbreak>\p{Lu}</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>[\.\?\!]+</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+</languagerule>
+<languagerule languagerulename="English">
+<rule break="no">
+<beforebreak>etc\.</beforebreak>
+<afterbreak>\s+\P{Lu}</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Dr\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>U\.K\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>M\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Mr\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Mrs\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Ms\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Prof\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>(?i)e\.g\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>(?i)i\.e\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>resp\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\stel\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>(?i)fig\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>St\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\s[A-Z]\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>[apAP]\.?[mM]\.</beforebreak>
+<afterbreak>\s[a-z]</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Mt\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>No\.</beforebreak>
+<afterbreak>\s\d</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>[Aa]pprox\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\d\smi?n\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\d\ssec\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\s[vV][sS]?\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>a\.k\.a\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Ltd\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>Inc\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>L\.A\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>U\.S\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>N\.B\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>G\.I\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>vs\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>(?&lt;!3ds )[Mm]ax\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<!--Shorthand conditional:
+
+
+
+
+
+
+
+result = condition ? then : else-->
+<rule break="no">
+<beforebreak>=[^?:]+\?</beforebreak>
+<afterbreak>[^?:]+:</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>w\.?r\.?t\.</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<!--Fix for overzealous Trados rule.-->
+<rule break="no">
+<beforebreak>[:]+[\p{Pe}\p{Pf}\p{Po}"-[\u002C\u003A\u003B\u055D\u060C\u061B\u0703\u0704\u0705\u0706\u0707\u0708\u0709\u07F8\u1363\u1364\u1365\u1366\u1802\u1804\u1808\u204F\u205D\u3001\uA60D\uFE10\uFE11\uFE13\uFE14\uFE50\uFE51\uFE54\uFE55\uFF0C\uFF1A\uFF1B\uFF64]]*</beforebreak>
+<afterbreak>\s+\P{Lu}</afterbreak>
+</rule>
+<!--Trados rule.-->
+<rule break="yes">
+<beforebreak>[:]+[\p{Pe}\p{Pf}\p{Po}"-[\u002C\u003A\u003B\u055D\u060C\u061B\u0703\u0704\u0705\u0706\u0707\u0708\u0709\u07F8\u1363\u1364\u1365\u1366\u1802\u1804\u1808\u204F\u205D\u3001\uA60D\uFE10\uFE11\uFE13\uFE14\uFE50\uFE51\uFE54\uFE55\uFF0C\uFF1A\uFF1B\uFF64]]*</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\.\.\.</beforebreak>
+<afterbreak>\s+\P{Lu}</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>^\s*\p{Nd}+[\p{Nd}\.\)\]]+\s+</beforebreak>
+<afterbreak>^\s*\p{Nd}+[\p{Nd}\.\)\]]+\s+</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>[\.\?\!]+</beforebreak>
+<afterbreak>\s</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>\n</beforebreak>
+<afterbreak> +</afterbreak>
+</rule>
+<rule break="yes">
+<beforebreak>&lt;br\d+/?></beforebreak>
+<afterbreak>.</afterbreak>
+</rule>
+</languagerule>
+</languagerules>
+<maprules>
+<languagemap languagepattern="(en|EN).*" languagerulename="English"></languagemap>
+<languagemap languagepattern="(ja|JA).*" languagerulename="Japanese"></languagemap>
+</maprules>
+</body>
+</srx>

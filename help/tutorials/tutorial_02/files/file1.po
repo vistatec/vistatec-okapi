@@ -1,0 +1,19 @@
+msgid "" 
+msgstr "" 
+"Project-Id-Version: test\n" 
+"POT-Creation-Date: 2009-03-22\n" 
+"PO-Revision-Date: 2003-03-22\n" 
+"MIME-Version: 1.0\n" 
+"Content-Type: text/plain; charset=iso-8859-1\n" 
+"Content-Transfer-Encoding: 8bit\n" 
+
+msgid "Message one" 
+msgstr "" 
+
+#, fuzzy
+msgid "New post in blog:" 
+msgstr "Poster dans le blog:" 
+
+msgid "File not found." 
+msgstr "Fichier non trouvé." 
+

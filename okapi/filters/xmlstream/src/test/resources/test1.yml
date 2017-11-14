@@ -1,0 +1,7 @@
+assumeWellformed: true
+preserve_whitespace: true
+elements:
+  tag1:
+    ruleTypes: [INLINE, EXCLUDE]
+  tag2:
+    ruleTypes: [INLINE]

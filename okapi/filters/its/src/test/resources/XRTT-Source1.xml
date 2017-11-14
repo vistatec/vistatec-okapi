@@ -1,0 +1,18 @@
+<rooty sort="o12345">
+ <just_wrappin id="gabbagabbahey">
+  <intro_para id="kickoutthejams">And here's <icon src="my-pic.png" alt="hello" /> some <b>text <i>that has</i> some nested</b> texts.</intro_para>
+  <wrapped_wrapper2>
+   <just_wrappin3>
+    <mixed>And here's some more
+      <wrap4>
+       <inner_wrap5>
+        <p id="allalongthewatchtower">Hello world.</p>
+        <p1>It's just a beautiful day.</p1>
+       </inner_wrap5>
+       <one_out>Loose text</one_out>
+      </wrap4>
+    </mixed>
+   </just_wrappin3>
+  </wrapped_wrapper2>
+ </just_wrappin>
+</rooty>

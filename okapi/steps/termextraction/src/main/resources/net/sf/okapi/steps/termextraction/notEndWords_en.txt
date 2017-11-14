@@ -1,0 +1,9 @@
+# No-end words default list for English
+
+a
+and
+in
+of
+or
+the
+to

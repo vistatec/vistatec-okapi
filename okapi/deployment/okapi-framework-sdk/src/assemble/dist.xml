@@ -1,0 +1,39 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id></id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<scope>compile</scope>
+			<excludes>
+				<exclude>okapi-*</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>../../../deployment/shared/licenses</directory>
+			<outputDirectory>lib/licenses</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/resources/dropins</directory>
+			<outputDirectory>dropins</outputDirectory>
+		</fileSet>
+		
+		
+	</fileSets>
+	<files>
+		<file>
+			<source>target/${project.artifactId}-${project.version}.jar</source>
+			<outputDirectory>lib</outputDirectory>
+		</file>
+	</files>
+
+
+</assembly>

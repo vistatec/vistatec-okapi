@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rainbowPipeline version="1"><step class="net.sf.okapi.steps.tradosutils.TradosAnalysisStep">#v1
+useExisting.b=false
+existingTm=
+user=ysavourel
+pass=
+logPath=${inputRootDir}/_log.txt
+autoOpenLog.b=false
+appendToLog.b=true
+createPrjTm.b=false
+prjTmPath=${inputRootDir}/project.tmw
+exportUnknown.b=true
+tmxPath=${inputRootDir}/unknownSegments.tmx
+maxMatch.i=90
+sendTmx.b=false</step>
+</rainbowPipeline>

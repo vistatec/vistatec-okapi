@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file datatype="x-test" original="manual"
+ source-language="EN-US" target-language="FR-FR">
+<body>
+   <trans-unit id="1">
+      <source xml:lang="EN-US">Untranslated text.</source>
+   </trans-unit>
+   <trans-unit id="2">
+      <source xml:lang="EN-US">Translated but un-approved text.</source>
+      <target xml:lang="FR-FR">text traduit mais pas encore approuvé.</target>
+   </trans-unit>
+   <trans-unit id="3" approved="yes">
+      <source xml:lang="EN-US">Translated and approved text.</source>
+      <target xml:lang="FR-FR">Texte traduit et approuvé.</target>
+   </trans-unit>
+   <trans-unit id="4">
+      <source xml:lang="EN-US">Some other text.</source>
+      <alt-trans>
+         <source xml:lang="EN-US">Other text.</source>
+         <target xml:lang="FR-FR">Autre text.</target>
+      </alt-trans>
+   </trans-unit>
+</body>
+</file>
+</xliff>

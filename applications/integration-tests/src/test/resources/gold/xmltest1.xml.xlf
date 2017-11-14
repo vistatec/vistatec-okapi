@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="xmltest1.xml" source-language="en" target-language="fr" datatype="xml" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="1">
+<source xml:lang="en">Text of paragraph 1 with &amp;=amp, "=quot, &lt;=lt, >=gt, '=apos.</source>
+<target xml:lang="fr">Text of paragraph 1 with &amp;=amp, "=quot, &lt;=lt, >=gt, '=apos.</target>
+</trans-unit>
+<trans-unit id="2">
+<source xml:lang="en">Text of paragraph 2.<x id="1"/></source>
+<target xml:lang="fr">Text of paragraph 2.<x id="1"/></target>
+</trans-unit>
+<trans-unit id="3">
+<source xml:lang="en">Text of paragraph 3.<x id="1"/></source>
+<target xml:lang="fr">Text of paragraph 3.<x id="1"/></target>
+</trans-unit>
+<trans-unit id="4">
+<source xml:lang="en"> Text &amp;=amp, &lt;=lt, >=gt, ]=cbracket, [=obracket </source>
+<target xml:lang="fr"> Text &amp;=amp, &lt;=lt, >=gt, ]=cbracket, [=obracket </target>
+</trans-unit>
+<trans-unit id="5">
+<source xml:lang="en">Before <x id="1"/> after.</source>
+<target xml:lang="fr">Before <x id="1"/> after.</target>
+</trans-unit>
+<trans-unit id="6">
+<source xml:lang="en">Text for p <g id="1"><x id="2"/></g> text for p again</source>
+<target xml:lang="fr">Text for p <g id="1"><x id="2"/></g> text for p again</target>
+</trans-unit>
+<trans-unit id="7">
+<source xml:lang="en">Text for p <g id="1">within text text for b</g> text for p again</source>
+<target xml:lang="fr">Text for p <g id="1">within text text for b</g> text for p again</target>
+</trans-unit>
+<trans-unit id="8">
+<source xml:lang="en">Text for p </source>
+<target xml:lang="fr">Text for p </target>
+</trans-unit>
+<trans-unit id="9">
+<source xml:lang="en"> text for p again</source>
+<target xml:lang="fr"> text for p again</target>
+</trans-unit>
+<trans-unit id="10">
+<source xml:lang="en">Text for p </source>
+<target xml:lang="fr">Text for p </target>
+</trans-unit>
+<trans-unit id="11">
+<source xml:lang="en">embedded text for q</source>
+<target xml:lang="fr">embedded text for q</target>
+</trans-unit>
+<trans-unit id="12">
+<source xml:lang="en"> text for p again</source>
+<target xml:lang="fr"> text for p again</target>
+</trans-unit>
+<trans-unit id="13">
+<source xml:lang="en"> Text with ws [ ] <g id="1">and more [ ]</g> after </source>
+<target xml:lang="fr"> Text with ws [ ] <g id="1">and more [ ]</g> after </target>
+</trans-unit>
+<trans-unit id="14" xml:space="preserve">
+<source xml:lang="en">Text with ws [  		] <g id="1">and more [  		]</g> after</source>
+<target xml:lang="fr">Text with ws [  		] <g id="1">and more [  		]</g> after</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

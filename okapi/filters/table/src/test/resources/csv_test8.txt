@@ -1,0 +1,9 @@
+Test table
+Contains column names in the 4-th line, a table caption in the 1-st line, and 4 lines of description. This is the 1-st header row.
+This is the 2-nd header row. This table also delimits the number of columns by their names (5 columns only are extracted here)
+FieldName1         Field Name 2                  Field Name 3         FieldName4      FieldName5
+This is the 4-th header row.
+This is the 5-th header row. Data start right after here.
+Value11            Value12                       Value13              Value14         Value15
+Value21            Value22                       Value23
+Value31            Value32                       Value33              Value34         Value35

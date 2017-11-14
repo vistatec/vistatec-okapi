@@ -1,0 +1,24 @@
+<!--
+THIS IS A TEMPORARY COMMENT -- REMOVE WHEN NOT WORKING LOCALLY --change filename to .vm
+
+##Include the style sheet
+#include("/velocity/emailTemplate.css") -->
+<!-- REMOVE THE LINK BELOW BEFORE COMMITING -->
+<link rel="stylesheet" href="../../../emailTemplate.css">
+<div>
+<table class="custTable">
+<tr>
+  <td colspan="2" class="topHeader">An automated file load was successful with warnings.  Please forward this email to the appropriate account contact(s) for review.</td>
+</tr>
+  <tr>
+    <td width="276" class="label">$customLabels.getLabel("buyerOrganization")</td>
+    <td width="462" class="textGray">$buyerFirmName</td>
+  </tr>
+    <tr>
+      <td colspan="2">$emailFooter<span style="float:right;"> Powered by <a style="text-decoration:none; color: #003366; font-weight:bold" href="http://myhref">Masked</a></span></td>
+    </tr>
+  </table>
+</td></tr></table>
+<p>&nbsp;</p>
+</div>
+

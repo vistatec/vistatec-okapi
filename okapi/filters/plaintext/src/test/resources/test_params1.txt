@@ -1,0 +1,4 @@
+#v1
+rule=(.)
+sourceGroup.i=1
+regexOptions.i=8

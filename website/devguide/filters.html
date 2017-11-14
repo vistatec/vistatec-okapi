@@ -1,0 +1,341 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Okapi Framework Developer's Guide - Filters</title>
+<link rel="stylesheet" type="text/css" href="../okapi.css">
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Developer's Guide</h1>
+		<h2 class="head2">Filters</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#filterEvents">Filter Events</a><br>
+			- <a href="#languages">Languages</a><br/>
+			- <a href="#encodings">Encodings</a><br/>
+			- <a href="#lineBreaks">Line-Breaks</a><br/>
+			- <a href="#filterParameters">Filter Parameters</a></p></td>
+		<td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="glossary.html">Glossary</a></td>
+				<td><a href="index.html">Guide Content</a></td>
+				<td><a href="http://okapiframework.org">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<h2><a name="filterEvents"></a>Filter Events</h2>
+<p>A filter sends at least two events: <code>START_DOCUMENT</code> and <code>
+END_DOCUMENT</code>. All other filter events may or may not be send depending on 
+the filter and the input document. The possible sequence of filter events can be 
+expressed as follow:</p>
+<pre>         FilterEvents ::= START_DOCUMENT, DocumentContentEvents, END_DOCUMENT
+DocumentContentEvents ::= (SubDocumentEvents | SimpleEvents)*
+    SubDocumentEvents ::= START_SUBDOCUMENT, SimpleEvents, END_SUBDOCUMENT
+         SimpleEvents ::= (GroupEvents | TEXT_UNIT | DOCUMENT_PART)*
+          GroupEvents ::= START_GROUP, SimpleEvents, END_GROUP</pre>
+<h3>START_DOCUMENT</h3>
+<p>The <code>START_DOCUMENT</code> is sent as the first event for the document. 
+It is associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">
+StartDocument</a></code> resource that contains general information about the 
+document. Each <code>
+<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">
+StartDocument</a></code> resource is expected to have at least the following 
+information:</p>
+<ul>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/BaseNameable.html#getName()">
+	getName()</a></code> gives name of the full path or URI of the document, if possible.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getEncoding()">getEncoding()</a></code> gives the encoding that is being used to read the 
+	document. It may be different from the default encoding provided when the 
+	document is opened, for example when the filter can detect automatically the real 
+	encoding of the document.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#hasUTF8BOM()">hasUTF8BOM()</a></code> indicates if the input document is encoded in UTF-8 
+	and has a Byte-Order-Mark.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getLocale()">getLocale()</a></code> gives the code of the source locale of the 
+	document (the same as the one specified when opening the document).</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#isMultilingual()">isMultilingual()</a></code> indicates if the document is multilingual (See 
+	more on <a href="#monolingual">monolingual</a> and <a href="#multilingual">multilingual</a> in 
+	<a href="#languages">the Languages section</a>).</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#setLineBreak(java.lang.String)">getLineBreak()</a></code> gives the type of line-break used in the document.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getFilterParameters()">getFilterParameters()</a></code> gives the parameters used for processing 
+	this document (including if they are the default parameters). It may return <code>null</code> 
+	if the filter does not use parameters at all.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getFilter()">
+	getFilter()</a></code> gives the filter that is being used to parse this 
+	document.</li>
+</ul>
+<p>Each <code>START_DOCUMENT</code> must have a corresponding <code>END_DOCUMENT</code> 
+event sent as the last event for this document.</p>
+<h3>END_DOCUMENT</h3>
+<p>The <code>END_DOCUMENT</code> event is sent to close a previous <code>
+START_DOCUMENT</code> event. It is associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Ending.html">Ending</a></code> 
+resource.</p>
+<h3>START_SUBDOCUMENT</h3>
+<p>The <code>START_SUBDOCUMENT</code> may be sent by a filter when the input 
+document is composed of several separate logical parts. For example, an IDML 
+document (InDesign file) is really a ZIP file that may contain dozens of 
+different XML documents (stories) that may have translatable text: each one is a 
+sub-document. Another example is an XLIFF document: It may be composed of 
+several <code>&lt;file&gt;</code> elements, each corresponding to a separate 
+sub-document.</p>
+<h3>END_SUBDOCUMENT</h3>
+<p>The <code>END_SUBDOCUMENT</code> event is sent to close a previous <code>
+START_SUBDOCUMENT</code> event. It is associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Ending.html">Ending</a></code> 
+resource.</p>
+<h3>START_GROUP</h3>
+<p>The <code>START_GROUP</code> event may be sent by a filter to 
+indicate the start of some logical grouping of events, for example to indicate 
+the start of a <code>&lt;table&gt;</code>, a <code>&lt;script&gt;</code>, or a <code>&lt;style&gt;</code> 
+element in an HTML document, or a dialog box in a Windows RC file.</p>
+<p>A group may contain other groups. Each <code>START_GROUP</code> must have a 
+corresponding <code>END_GROUP</code> event, and groups must not overlap. It is 
+associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/StartGroup.html">StartGroup</a></code> 
+resource.</p>
+<h3>END_GROUP</h3>
+<p>The <code>END_GROUP</code> event is sent to close a previous <code>
+START_GROUP</code> event. It is associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/Ending.html">Ending</a></code> 
+resource.</p>
+<h3>DOCUMENT_PART</h3>
+<p>The <code>DOCUMENT_PART</code> event may be sent by a filter to carry parts 
+of the original document that do not contain directly translatable text. It is 
+associated with a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/DocumentPart.html">DocumentPart</a></code> 
+resource. Note that a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/DocumentPart.html">DocumentPart</a></code> 
+may have read-only or modifiable properties, and may have references to previous 
+events that have translatable text or other read-only or modifiable properties. 
+All translatable text is always passed through using the <code>TEXT_UNIT</code> 
+event.</p>
+<h3>TEXT_UNIT</h3>
+<p>The <code>TEXT_UNIT</code> event may be sent by a filter to carry parts of 
+the original document that has extractable text. Note that a <code>
+<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html">TextUnit</a></code> 
+may have read-only or modifiable properties, and may have references to previous 
+events that have translatable text or other read-only or modifiable properties.</p>
+<p>A <a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html"><code>
+TextUnit</code></a> resource provides various information related to the 
+extracted text:</p>
+<ul>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getName()">getName()</a></code> gives the original identified the resource, for example 
+	the key of entry in a Java properties file. If the text unit has no such 
+	identifier, this method should return <code>null</code>.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getId()">getId()</a></code> gives the unique extraction-ID for this text unit. This 
+	value is filter specific and is only meaningful for the filter. It can be 
+	sequential or not, continue or not, numbers or names, basically anything. Some filters may return the same values for 
+	<code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getId()">getId()</a></code> and 
+	<code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getName()">getName()</a></code>, but both object represent different things.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#isTranslatable()">isTranslatable()</a></code> indicates if this text unit is translatable.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#getMimeType()">getMimeType()</a></code> gives the type of content the text unit contains.</li>
+	<li><code>
+	<a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html#preserveWhitespaces()">preserveWhitespaces()</a></code> indicates if the white spaces inside the 
+	content of the text unit must be preserved (for example, as the content of a 
+	HTML <code>&lt;pre&gt;</code> element).</li>
+</ul>
+
+<p>Filters should make sure that the text units they create can have text added 
+or removed anywhere within the text unit, including before the first inline code 
+and after the last inline code.</p>
+
+<h2><a name="languages"></a>Languages</h2>
+<p>The documents a filter processes can be monolingual or multilingual. The 
+filter is responsible for knowing if it processes a monolingual or a 
+multilingual document.</p>
+<p><b>Note:</b> Locale and Languages. Nowadays there is not many difference 
+	between a language code and a locale code, as the new language tags of the 
+	BCP-47 includes sub-tags that represent various regional or special 
+	variants, as well as script difference. For example, <code>ES-419</code> 
+	stands for Spanish for Latin-America and the Caribbean, <code>zh-Hant-tw</code> for Traditional 
+	Chinese used in Taiwan, etc. For more information about BCP-47 see
+	<a href="http://www.w3.org/International/articles/bcp47/">
+	http://www.w3.org/International/articles/bcp47</a>. The terms <b>locale</b> 
+	and <b>language</b> are sometimes used interchangeably in this 
+documentation.</p>
+<h3><a name="monolingual"></a>Monolingual Documents</h3>
+<p>Monolingual documents have their content in a single main language/locale. In such 
+document any target data replaces the source data. Examples of monolingual 
+documents are Java properties file and OpenDocument files. Note that such 
+documents may contain text in different languages (like citations), but their 
+structure is designed to have a single main language.</p>
+<p>Before starting to send events:</p>
+<ul>
+	<li>The caller of the filter must set the source language when opening the 
+	document.</li>
+</ul>
+<p>When sending the <code>START_DOCUMENT</code> event:</p>
+<ul>
+	<li>The filter must indicate the source locale of the document in the <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource, using <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#setLocale(net.sf.okapi.common.LocaleId)">StartDocument.setLocale()</a></code>. The caller of the 
+	filter can retrieve the source locale by calling <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getLocale()">StartDocument.getLocale()</a></code>.</li>
+</ul>
+<p>At any time when sending an event:</p>
+<ul>
+	<li>The filter should try to capture any information where the source 
+	language is defined and create a modifiable property for it. This will allow 
+	the writer to update the language settings of the output to the target 
+	language. The filter should create read-only properties for language 
+	information that are not source language.</li>
+</ul>
+<h3><a name="multilingual"></a>Multilingual Documents</h3>
+<p>Multilingual documents have their content in several languages. They have a 
+structure that is designed to hold the same content in different languages. The 
+actual input document may contain only the source language content, but any 
+target data will be placed along with the source data rather than over it. In such documents the 
+source data is not overwritten by the target data. Examples of multilingual documents are PO files 
+and XLIFF files.</p>
+<p>Before starting to send events:</p>
+<ul>
+	<li>The caller of the filter must set the source and the target languages when 
+	opening the document.</li>
+</ul>
+<p>When the filter sends the <code>START_DOCUMENT</code> event:</p>
+<ul>
+	<li>The filter must indicate that the document is multilingual in the <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource using <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#setMultilingual(boolean)">StartDocument.setMultilingual()</a></code>. 
+	The caller of the filter can retrieve that information using the <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#isMultilingual()">StartDocument.isMultilingual()</a></code>.</li>
+	<li>The filter must indicate the source locale in the <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource using <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#setLanguage(net.sf.okapi.common.LocaleId)">StartDocument.setLocale()</a></code>.&nbsp; 
+	The caller of the filter can retrieve the source locale by calling <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getLocale()">StartDocument.getLocale()</a></code>.</li>
+</ul>
+<p>At any time when sending an event:</p>
+<ul>
+	<li>The filter should try to capture any information where the source 
+	locale is defined and create a modifiable property for it. This will allow 
+	the writer to update the locale settings of the output to the target 
+	language. The filter should create read-only properties for locale 
+	information that are not source locale.</li>
+</ul>
+<h2><a name="encodings"></a>Encodings</h2>
+<h3>Input</h3>
+<p>The filter is responsible for detecting the encoding of the input document 
+when possible. If the encoding cannot be detected, the filter should use the 
+default encoding the caller has provided when opening the document.</p>
+<p>If the input encoding is UTF-8. The filter must handle the possible 
+presence of a Byte-Order-Mark, and if it exists, not include it in the content 
+of the document.</p>
+<p>When sending the <code>START_DOCUMENT</code> event:</p>
+<ul>
+	<li>
+	<p>The filter must 
+set the encoding used for the input in the <code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource. 
+If the encoding is UTF-8, the filter must also indicate whether the original 
+document has a BOM or not. If the encoding is not UTF-8 that indicator must be 
+set to false (including for other UTF encodings). Both parameters are set using the
+	<code>
+	<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#setEncoding(java.lang.String, boolean)">StartDocument.setEncoding()</a></code> method.</p>
+	</li>
+</ul>
+<h3>Output</h3>
+<p>The encoding of an output generate by a writer (<code><a href="../javadoc/net/sf/okapi/common/filterwriter/IFilterWriter.html">IFilterWriter</a></code> object) is 
+not necessarily the same as the input encoding. The encoding to use is set by 
+the caller through the <code>
+<a href="../javadoc/net/sf/okapi/common/filterwriter/IFilterWriter.html#setOptions(java.lang.String, java.lang.String)">IFilterWriter.setOption()</a></code> method. If the output encoding specified by that method is 
+<code>null</code>, the 
+filter should use the same encoding as the input document.</p>
+<p>The writer should create the output document only when 
+or after receiving the <code>START_DOCUMENT</code> event. The <code>
+<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource contains information such as:</p>
+<ul>
+	<li>The encoding of the input document.</li>
+	<li>A flag set to true if the input encoding was UTF-8 and was using a 
+	Byte-Order-Mark, set to false in all other cases.</li>
+</ul>
+<h2><a name="lineBreaks"></a>Line-Breaks</h2>
+<h3>Input</h3>
+<p>The filter is responsible for detecting the type of line-break of the input 
+document when possible. If the type of line-break cannot be detected (for 
+example the input document has no line-breaks), the filter should assume the 
+type of line-break to use is the one of the current platform.</p>
+<ul>
+	<li>All line-breaks passed in resources objects, for example the content of 
+	a <code><a href="../javadoc/net/sf/okapi/common/resource/TextUnit.html">TextUnit</a></code> object, must be standardized to a single line-feed 
+	character (&quot;<code>\n</code>&quot;).</li>
+	<li>All line-breaks inside skeleton objects must be in the same type as the 
+	input (i.e. remain unchanged).</li>
+</ul>
+<h3>Output</h3>
+<p>The writer must not change the type of line-break of a document. The original 
+type of line-break is available in the <code>
+<a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html">StartDocument</a></code> 
+	resource (<code><a href="../javadoc/net/sf/okapi/common/resource/StartDocument.html#getLineBreak()">StartDocument.getLineBreak()</a></code>).</p>
+<p>The reason for always using the original line-breaks in the output when using 
+the filters is that the writer cannot change the line-breaks in the skeleton 
+parts, so if different types of line-breaks are used in the skeleton and in the 
+extracted content the output would end up with a mix of line-break types.</p>
+<p>he <code><a href="../javadoc/net/sf/okapi/common/resource/TextFragment.html">TextFragment</a></code> class offers methods to manipulate the text and codes.</p>
+<h2><a name="filterParameters"></a>Filter Parameters</h2>
+<p>A filter may have specific parameters associated to it. These parameters are 
+specific to each filter and indicate various specialized processing options.</p>
+<p>A filter that has parameters must always generate a default set of parameters 
+upon creation. The <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilter.html#getParameters()">IFilter.getParameters()</a></code> method may be called at 
+any time after the object has been created.</p>
+<p>The filter parameters must be accessible as object that implements 
+the interface <code><a href="../javadoc/net/sf/okapi/common/IParameters.html">IParameters</a></code>. The methods <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilter.html#getParameters()">IFilter.getParameters()</a></code>  
+and <code>
+<a href="../javadoc/net/sf/okapi/common/filters/IFilter.html#setParameters(net.sf.okapi.common.IParameters)">IFilter.setParameters()</a></code> methods allow you to set and get the 
+parameters of each filter.</p>
+<p>Some filter may have a way to edit the parameters in a dialog box, 
+through the <code>
+<a href="../javadoc/net/sf/okapi/common/IParametersEditor.html">IParametersEditor</a></code> interface. If such editor does not 
+exists for a given filter, the file where the parameters are stored must be 
+accessible through a simply text file editor. That is why the format for storing 
+filter parameters must be some kind of text-based format (e.g. properties file).</p>
+<p>The code below shows how to use the filter parameters:</p>
+<pre>// Create the filter we will use
+IFilter filter = new PropertiesFilter();
+// Get the default parameters
+IParameters params = filter.getParameters();
+if ( params != null ) {
+   params.save(&quot;defaultParameters.txt&quot;);
+   // Create the editor class
+   IParametersEditor editor = new net.sf.okapi.filters.ui.properties.Editor();
+   if ( editor.edit(params, null, null, null) ) {
+      params.save(&quot;editedParameters.txt&quot;);
+   }
+}</pre>
+<p>Note that the editor classes may be in a different package than the filter 
+itself, as the UI may be platform-dependent while the filter is not.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

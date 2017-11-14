@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4"><header creationtool="oku_alignment" creationtoolversion="unknown" segtype="paragraph" o-tmf="unknown" adminlang="en" srclang="en-us" datatype="unknown"></header><body>
+<tu tuid="ACDetectionCheckFailedAction0">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">ACDetectionCheckFailedAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">InletLinePrimeFluidTooSoonAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<seg><ph x="1">#![PG 0 1]</ph>1.<ph x="2">\t</ph>Confirm that the AC line is in the AC fluid detector.<ph x="3">\n</ph><ph x="4">\n</ph>2.<ph x="5">\t</ph>Touch Retry.</seg></tuv>
+<tuv xml:lang="de-de"><seg><ph x="1">#![PG 0 1]</ph>1.<ph x="2">\t</ph>Sicherstellen, dass sich der AK-Schlauch im AK-Flüssigkeitsdetektor befindet.<ph x="3">\n</ph><ph x="4">\n</ph>2.<ph x="5">\t</ph>&apos;Wiederholen&apos; drücken.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction0">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Touch Retry to <ut> ut content en</ut>resume the procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Zur Fortsetzung <ut> ut content de</ut>des Verfahrens &apos;Wiederholen&apos; drücken.</seg></tuv>
+</tu>
+<tu tuid="APCCalibrateTimeoutAction1">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">APCCalibrateTimeoutAction1</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg><ph x="1">#![PG 0 1]</ph>1.<ph x="2">\t</ph>Reset the system and resume the procedure, or resume the procedure in Semi-Automatic mode:<ph x="3">\n</ph><ph x="4">\n</ph><ph x="5">#![PG 1 2]</ph>·<ph x="6">\t</ph>To reset the system and resume the procedure:<ph x="7">\n</ph><ph x="8">#![PG 2 3]</ph>A.<ph x="9">\t</ph>Turn off the system.<ph x="10">\n</ph>B.<ph x="11">\t</ph>Wait 6 seconds.<ph x="12">\n</ph>C.<ph x="13">\t</ph>Turn on the system.<ph x="14">\n</ph>D.<ph x="15">\t</ph>Follow the instructions on the screen.<ph x="16">\n</ph><ph x="17">\n</ph><ph x="18">#![PG 1 2]</ph>·<ph x="19">\t</ph>To resume the procedure in Semi-Automatic mode, touch Disable to disable the AIM system. Refer to the operator&apos;s manual for instructions on using Semi-Automatic mode.<ph x="20">\n</ph><ph x="21">\n</ph><ph x="22">#![PG 0 1]</ph>2.<ph x="23">\t</ph>Contact your service representative for assistance before you begin a new procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg><ph x="1">#![PG 0 1]</ph>1.<ph x="2">\t</ph>System zurücksetzen und Verfahren wieder aufnehmen, oder Verfahren im halbautomatischen Modus wieder aufnehmen: <ph x="3">\n</ph><ph x="4">\n</ph><ph x="5">#![PG 1 2]</ph>·<ph x="6">\t</ph>Zum Zurücksetzen des Systems und Wiederaufnehmen des Verfahrens:<ph x="7">\n</ph><ph x="8">#![PG 2 3]</ph>A.<ph x="9">\t</ph>Gerät ausschalten.<ph x="10">\n</ph>B.<ph x="11">\t</ph>6 Sekunden warten.<ph x="12">\n</ph>C.<ph x="13">\t</ph>Gerät einschalten.<ph x="14">\n</ph>D.<ph x="15">\t</ph>Den Anweisungen auf dem Bildschirm folgen.<ph x="16">\n</ph><ph x="17">#![PG 1 2]</ph>·<ph x="18">\t</ph>&apos;Deaktivieren&apos; drücken, um das ASM-System zu deaktivieren und das Verfahren im halbautomatischen Modus wieder aufzunehmen. Anweisungen zur Verarbeitung im halbautomatischen Modus sind der Bedienungsanleitung zu entnehmen.<ph x="19">\n</ph><ph x="20">\n</ph><ph x="21">#![PG 0 1]</ph>2.<ph x="22">\t</ph>Den Kundendienst verständigen, bevor ein neues Verfahren begonnen wird.</seg></tuv>
+</tu>
+<tu tuid="APCControlNotStableAction2">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">APCControlNotStableAction2</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If the inlet:AC ratio is too high, the system may not be properly anticoagulated, and clumping may occur in the collect line.<ph x="1">\n</ph><ph x="2">\n</ph><ph x="3">#![PG 0 1]</ph>1.<ph x="4">\t</ph>Consider decreasing the ratio by two points.<ph x="5">\n</ph><ph x="6">\n</ph>2.<ph x="7">\t</ph>Examine the collect line for clumps.<ph x="8">\n</ph><ph x="9">\n</ph>3.<ph x="10">\t</ph>Touch Retry.<ph x="11">\n</ph><ph x="12">\n</ph>4.<ph x="13">\t</ph>If the alarm recurs, consider decreasing the ratio again.  Repeat steps 2. and 3. until the alarm no longer recurs.<ph x="14">\n</ph><ph x="15">\n</ph>5.<ph x="16">\t</ph>Once the alarm is resolved, continue to monitor the collect line for clumps. If you see clumps, consider decreasing the ratio until the clumps disappear.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Wenn das Blut/AK-Verhältnis zu hoch ist, wird das System u. U. nicht ordnungsgemäß antikoaguliert und es können sich Koagel im Sammelschlauch bilden. <ph x="1">\n</ph><ph x="2">\n</ph><ph x="3">#![PG 0 1]</ph>1.<ph x="4">\t</ph>Das Verhältnis ggf. um 2 Punkte reduzieren.<ph x="5">\n</ph><ph x="6">\n</ph>2.<ph x="7">\t</ph>Den Sammelschlauch auf Koagel prüfen.<ph x="8">\n</ph><ph x="9">\n</ph>3.<ph x="10">\t</ph>&apos;Wiederholen&apos; drücken.<ph x="11">\n</ph><ph x="12">\n</ph>4.<ph x="13">\t</ph>Falls der Alarm erneut auftritt, das Verhältnis ggf. weiter senken.  Schritte 2 und 3 wiederholen, bis der Alarm nicht mehr auftritt.<ph x="14">\n</ph><ph x="15">\n</ph>5.<ph x="16">\t</ph>Nach Beseitigung des Alarms den Sammelschlauch weiterhin auf Koagel überwachen. Bei Vorhandensein von Koagel das Verhältnis ggf. reduzieren, bis sich die Koagel aufgelöst haben.</seg></tuv>
+</tu>
+<tu tuid="InletLinePrimeFluidTooSoonAction0">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">InletLinePrimeFluidTooSoonAction0</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>If the tubing set contains fluid, you may have spiked the AC container too soon, and the system cannot prime a set that contains fluid.<ph x="1">\n</ph><ph x="2">\n</ph><ph x="3">#![PG 0 1]</ph>1.<ph x="4">\t</ph>Touch Unload and unload the tubing set.<ph x="5">\n</ph><ph x="6">\n</ph>2.<ph x="7">\t</ph>Load a new tubing set and resume the procedure.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Wenn das Schlauchset Flüssigkeit enthält, wurde der AK-Behälter evtl. zu früh angestochen. Das System kann ein solches Set nicht vorfüllen.<ph x="1">\n</ph><ph x="2">\n</ph><ph x="3">#![PG 0 1]</ph>1.<ph x="4">\t</ph>&apos;Entladen&apos; drücken und das Schlauchset entladen.<ph x="5">\n</ph><ph x="6">\n</ph>2.<ph x="7">\t</ph>Neues Set laden und das Verfahren wieder aufnehmen.</seg></tuv>
+</tu>
+<tu tuid="ConfigBackupFileReadFailedExplanation">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">ConfigBackupFileReadFailedExplanation</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>System could not read configuration file and used backup file to restore data.<ph x="1">\n</ph>Recent changes to configuration options may have been lost.</seg></tuv>
+<tuv xml:lang="de-de"><seg>System konnte Konfigurationsdatei nicht lesen. Zum Wiederherstellen der Daten wurde die Sicherungskopie der Datei verwendet.<ph x="1">\n</ph>Aktuelle Änderungen an den Konfigurationsoptionen sind möglicherweise verloren gegangen.</seg></tuv>
+</tu>
+<tu tuid="PauseStartSalineWarningExplanation">
+<prop type="Txt::FileName">StringInfoForTest3.info</prop>
+<prop type="Txt::GroupName">PauseStartSalineWarningExplanation</prop>
+<prop type="Att::Test">TestValue</prop>
+<tuv xml:lang="en-us"><seg>Pumps have been paused for 3 minutes. Consider starting a saline drip.</seg></tuv>
+<tuv xml:lang="de-de"><seg>Pumpen wurden 3 Minuten lang angehalten, ggf. NaCl-Infusion starten</seg></tuv>
+</tu>
+</body>
+</tmx>

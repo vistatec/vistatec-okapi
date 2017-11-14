@@ -1,0 +1,6 @@
+Elephant cannot fly.
+Elephant can't fly.
+Elephant can fly.
+Airplane can fly.
+Fly can fly.
+Chicken can't fly.

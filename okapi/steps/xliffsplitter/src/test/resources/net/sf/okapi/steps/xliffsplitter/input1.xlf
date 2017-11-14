@@ -1,0 +1,118 @@
+﻿<?xml version='1.0' encoding='UTF-8'?><xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:metrics="urn:lisa-metrics-tags" xmlns:term="urn:xliff-term-extensions" xmlns:xref="urn:xmlintl-xref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xtm="urn:xliff-xtm-extensions" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://www.xml-intl.com/docs/xliff-core-1.2-transitional.xsd">
+<file xmlns:px="palau:xliff-ext" datatype="xml" original="bd9c58d6510d49b1ae51b32f25ac546f" product-name="XML-INTL Ltd. xml:tm" product-version="2.0" source-language="en-US" target-language="fr-FR" tool="xml-intl_XLIFF_Extract" xml:space="default" px:jobid="1145354" px:jobname="TestWithNotesToNotExtract.pptx">
+<header><xref:prop-group name="ref-maps"><xref:prop prop-type="gmap">{i1=t1, i2=t3}</xref:prop>
+<xref:prop prop-type="xmap">{}</xref:prop>
+</xref:prop-group><metrics:metrics source-language="en-US" target-language="fr-FR" tool-name="xml-intl_XLIFF_Extract" tool-version="1.0" version="1.0"><metrics:stage date="20150724T035408Z" phase="initial" source-language="en-US"><metrics:count-group name="verifiable"><metrics:count type="TextUnitCount" value="3"/>
+<metrics:count type="x-AlphanumericOnlyTextUnitCount" value="0"/>
+<metrics:count type="x-MeasurementOnlyTextUnitCount" value="0"/>
+<metrics:count type="x-NumericOnlyTextUnitCount" value="0"/>
+<metrics:count type="x-PunctuationOnlyTextUnitCount" value="0"/>
+<metrics:count type="x-ExactMatchedTextUnitCount" value="0"/>
+<metrics:count type="x-RealTextUnitCount" value="3"/>
+<metrics:count type="x-LeveragedMatchedTextUnitCount" value="0"/>
+<metrics:count type="RepetitionMatchedTextUnitCount" value="0"/>
+<metrics:count category="95-99" type="RepetitionMatchedTextUnitCount" value="0"/>
+<metrics:count category="85-94" type="RepetitionMatchedTextUnitCount" value="0"/>
+<metrics:count category="75-84" type="RepetitionMatchedTextUnitCount" value="0"/>
+<metrics:count category="95-99" type="x-FuzzyMatchedTextUnitCount" value="0"/>
+<metrics:count category="85-94" type="x-FuzzyMatchedTextUnitCount" value="0"/>
+<metrics:count category="75-84" type="x-FuzzyMatchedTextUnitCount" value="0"/>
+<metrics:count type="TranslatableInlineCount" value="4"/>
+<metrics:count type="TotalWordCount" value="10"/>
+<metrics:count type="AlphanumericOnlyTextUnitWordCount" value="0"/>
+<metrics:count type="MeasurementOnlyTextUnitWordCount" value="0"/>
+<metrics:count type="NumericOnlyTextUnitWordCount" value="0"/>
+<metrics:count type="ExactMatchedWordCount" value="0"/>
+<metrics:count type="x-RealWordCount" value="10"/>
+<metrics:count type="LeveragedMatchedWordCount" value="0"/>
+<metrics:count type="RepetitionMatchedWordCount" value="0"/>
+<metrics:count category="95-99" type="RepetitionMatchedWordCount" value="0"/>
+<metrics:count category="85-94" type="RepetitionMatchedWordCount" value="0"/>
+<metrics:count category="75-84" type="RepetitionMatchedWordCount" value="0"/>
+<metrics:count category="95-99" type="FuzzyMatchedWordCount" value="0"/>
+<metrics:count category="85-94" type="FuzzyMatchedWordCount" value="0"/>
+<metrics:count category="75-84" type="FuzzyMatchedWordCount" value="0"/>
+<metrics:count type="TotalCharacterCount" value="32"/>
+<metrics:count type="PunctuationCharacterCount" value="0"/>
+<metrics:count type="WhiteSpaceCharacterCount" value="7"/>
+<metrics:count type="AlphanumericOnlyTextUnitCharacterCount" value="0"/>
+<metrics:count type="MeasurementOnlyTextUnitCharacterCount" value="0"/>
+<metrics:count type="NumericOnlyTextUnitCharacterCount" value="0"/>
+<metrics:count type="x-PunctuationOnlyTextUnitCharacterCount" value="0"/>
+<metrics:count type="ExactMatchedCharacterCount" value="0"/>
+<metrics:count type="x-RealCharacterCount" value="32"/>
+<metrics:count type="LeveragedMatchedCharacterCount" value="0"/>
+<metrics:count type="RepetitionMatchedCharacterCount" value="0"/>
+<metrics:count category="95-99" type="RepetitionMatchedCharacterCount" value="0"/>
+<metrics:count category="85-94" type="RepetitionMatchedCharacterCount" value="0"/>
+<metrics:count category="75-84" type="RepetitionMatchedCharacterCount" value="0"/>
+<metrics:count category="95-99" type="FuzzyMatchedCharacterCount" value="0"/>
+<metrics:count category="85-94" type="FuzzyMatchedCharacterCount" value="0"/>
+<metrics:count category="75-84" type="FuzzyMatchedCharacterCount" value="0"/>
+</metrics:count-group></metrics:stage><metrics:stage date="20150724T035408Z" phase="translation" source-language="en-US"><metrics:count-group name="verifiable"><metrics:count type="x-UnitsDone" value="0"/>
+<metrics:count type="x-WordsDone" value="0"/>
+<metrics:count type="x-CharactersDone" value="0"/>
+</metrics:count-group></metrics:stage></metrics:metrics></header>
+<body><group id="g1">
+<trans-unit id="t1" translate="yes" xtm:x-next-crc="4d3cf67e" xtm:x-previous-crc="0">
+<source>This is my <g id="i1">slide</g></source>
+<target>FR This is my <g id="i1">slide</g></target>
+</trans-unit> <!-- 4 --> <!-- Break at 3 -->
+</group>
+<group id="g2">
+<trans-unit id="t2" translate="yes" xtm:x-next-crc="8d8eaccc" xtm:x-previous-crc="7589d557">
+<source>A short test</source>
+<target>FR A test court</target>
+</trans-unit> <!-- 3 --> <!-- Break at 5 --> <!-- Break at 3 -->
+</group>
+<group id="g2b">
+<trans-unit id="t2b" translate="yes">
+<source>0086</source>
+<target state-qualifier="x-numeric">0086</target>
+</trans-unit> <!-- 0 -->
+</group>
+<group id="g2c">
+<trans-unit id="t2c" translate="yes">
+<source>•</source>
+<target state-qualifier="x-punctuation">•</target>
+</trans-unit> <!-- 0 -->
+</group>
+<group id="g2d">
+<trans-unit id="t2d" translate="yes">
+<source><x id="x38"/>MTR-LBL-000043 13SEP13</source>
+<target state-qualifier="x-alphanum"><x id="x38"/>MTR-LBL-000043 13SEP13</target>
+</trans-unit> <!-- 0 -->
+</group>
+<group id="g2e">
+<trans-unit id="t2e" translate="no">
+<source>Some text that should not be counted because it is translate='no'.</source>
+</trans-unit> <!-- 0 -->
+</group>
+
+<group translate='no'>
+	<trans-unit id="t2f">
+		<source>NOT to translate.</source>
+	</trans-unit> <!-- 0 -->
+	<group translate='yes'>
+		<trans-unit id="t2f">
+			<source>To translate.</source>
+		</trans-unit> <!-- 2 -->
+		<group translate='no'>
+			<trans-unit id="t2f">
+				<source>NOT to translate.</source>
+			</trans-unit> <!-- 0 -->
+			<trans-unit id="t2g" translate='yes'>
+				<source>To translate.</source>
+			</trans-unit> <!-- 2 --> <!-- Break at 3 -->
+		</group>
+	</group>
+</group>
+
+<group id="g3">
+<trans-unit id="t3" translate="yes" xtm:x-next-crc="0" xtm:x-previous-crc="4d3cf67e">
+<source><g id="i2">This is a comment</g></source>
+<target><g id="i2">FR This is a comment</g></target>
+</trans-unit> <!-- 4 --> <!-- Break at 5 --> <!-- Break at 3 -->
+<!-- comment -->
+</group>
+</body></file></xliff>

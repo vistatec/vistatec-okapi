@@ -1,0 +1,78 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Filters - TTX Filter</title>
+<link rel="stylesheet" type="text/css" href="../../../help.css">
+</head>
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr class="head">
+		<td class="head" colspan="2"><h1 class="head">Okapi Framework - Filters</h1>
+		<h2 class="head2">TTX Filter</h2></td>
+	</tr>
+	<tr>
+		<td class="smalltoc"><p>
+			- <a href="#overview">Overview</a><br>
+			- <a href="#processing">Processing Details</a><br>
+			- <a href="#limitations">Limitations</a><br>
+			- <a href="#parameters">Parameters</a><td class="hmenu">
+			<div class="hmenu"><table align="right"><tr>
+				<td><a href="../../index.html">Filters</a></td>
+				<td><a href="http://okapiframework.org/devguide/index.html">Developer's Guide</a></td>
+				<td><a href="http://okapi.opentag.com">Okapi Framework</a></td>
+			</tr></table></div>
+		</td>
+	</tr>
+</table>
+
+<p class="notice">If you are using an Okapi Tool after the M9 release, you should be using the wiki online help:<br>
+<a target="_top" href="http://okapiframework.org/wiki/index.php?title=TTX_Filter">http://okapiframework.org/wiki/index.php?title=TTX_Filter</a></p>
+
+<h2><a name="overview"></a>Overview</h2>
+<p>The TTX Filter is an Okapi component that implements the <code>IFilter</code> interface for 
+Trados TTX documents. The filter is implement in the class <code>
+net.sf.okapi.filters.ttx.TTXFilter</code> of the Okapi library.</p>
+<p>TTX is a bilingual format used by some of the versions of the Trados tools, and supported
+by several other tools. There are no official public specifications available.</p>
+
+<h2><a name="processing"></a>Processing Details</h2>
+<h3>Input Encoding</h3>
+<p>The filter decides which encoding to use for the input document using the 
+following logic:</p>
+<ul>
+	<li>If the document has an encoding declaration it is used.</li>
+	<li>Otherwise, UTF-8 is used as the default encoding (regardless the actual 
+	default encoding that was specified when opening the document).</li>
+</ul>
+<h3>Output Encoding</h3>
+<p>If the output encoding is UTF-8:</p>
+<ul>
+	<li>If the input encoding was also UTF-8, a Byte-Order-Mark is used for the 
+	output document only if one was detected in the input document.</li>
+	<li>If the input encoding was not UTF-8, no Byte-Order-Mark is used in the 
+	output document.</li>
+</ul>
+<h3>Line-Breaks</h3>
+<p>The type of line-breaks of the output is the same as the one of the original 
+input.</p>
+<h3>Segmentation</h3>
+<p>TTX is a format where the target text cannot be represented if the text is 
+not segmented. To resolve that issue, the filter has an option to force 
+un-segmented entires to be output as a segment. This option is set by default.</p>
+
+<h2><a name="limitations"></a>Limitations</h2>
+<p>The <code>&lt;DF&gt;</code> TTX tag causes problems in some cases.</p>
+
+<h2><a name="parameters"></a>Parameters</h2>
+<p>The filter offers the following options:</p>
+<p><cite>Force un-segmented entires to be output as a segment</cite> -- Set this 
+option to force un-segmented entries to be written out with a translation part, 
+as a single segment.</p>
+<p><cite>Escape the greater-than characters</cite> -- Set this option to have 
+all greater-than characters (&#39;<code>&gt;</code>&#39;) escaped as &quot;<code>&amp;gt;</code>&quot; in 
+the output.</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

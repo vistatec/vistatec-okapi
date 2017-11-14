@@ -1,0 +1,7 @@
+global_cdata_subfilter: okf_html
+preserve_whitespace: false
+elements:
+    resolution:
+        ruleTypes: [GROUP]
+    description:
+        ruleTypes: [GROUP]

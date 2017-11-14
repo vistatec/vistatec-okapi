@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>tag cloud from hell</title>
+<style type="text/css">
+/* 1. Inline elements */
+   a         { text-decoration: none; }
+   a:hover   { text-decoration: underline; }
+/* represent type */
+   a.tagD:link { color:  #226644; } /* disease */ 
+   a.tagM:link { color:  #662244; } /* emotion */
+   a.tagO:link { color:  #446622; } /* organization */
+   a.tagR:link { color:  #224466; } /* role */
+   a.tagV:link { color:  #664422; } /* event, state */
+   a.tagX:link { color:  #442266; } /* other */
+   /* */
+   a.tagD:visited { color:  #669933; background-color: #bb99aa; } /* GREEN on red */
+   a.tagM:visited { color:  #dd99dd; background-color: #003333; } /* purple on BLACK */
+   a.tagO:visited { color:  #9999aa; background-color: #333300; } /* blue on BLACK */
+   a.tagR:visited { color:  #444466; background-color: #999977; } /* blue on GREY */
+   a.tagV:visited { color:  #ee4433; background-color: #779999; } /* red on GREY */
+   a.tagX:visited { color:  #332233; background-color: #aaaaaa; } /* BLACK on grey */
+/* represent frequency */
+   .tag1 { font-size: 180%;  font-weight: 900; text-decoration: blink;
+           border: solid #ccffaa 2px; }
+   .tag2 { font-size: 135%;  font-weight: 500; text-decoration: blink; }
+   .tag3 { font-size: 100%;  font-weight: 300; }
+   .tag4 { font-size:  80%;  font-weight: 100; }
+/* unrelated to underlying data */
+/*   Note: don't use g for 2 */
+   .taga { font-style: italic;        }
+   .tagb { font-style: oblique;       }
+   .tagc { font-family: cursive;      }
+   .tagd { font-family: fantasy;      }
+   .tage { font-family: monospace;    }
+   .tagf { font-family: serif;        }
+   .tagg { font-variant: small-caps;  }
+/* 2. Block level elements */
+   body  { margin-left: 30%; margin-right: 30%;         background-color: #996677; }
+   h1    { font-size: 135%; color: #ff5533;             text-decoration: blink; 
+                                                        text-align: center; }
+   p     {                                              text-align: center; }
+   p.caption { color: #ff5533; }
+/* 3. Both */
+   .hell { text-decoration: blink; }
+</style>
+</head>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<body>
+   <table><tr><td>
+      <h1>A Tiny Tag Cloud from&nbsp;Hell</h1>
+      <hr>
+      <p>
+      <a class="tag3 tagV taga" href="error_tag.html">assassination</a>
+      <a class="tag1 tagD"     ><a class="tag1 tagD" href="error_tag.html">cancer</a>
+      <a class="tag1 tagV"     ><a class="tag1 tagV" href="error_tag.html">death</a>
+      <a class="tag2 tagV tagf" href="error_tag.html">debt</a>
+      <a class="tag4 tagR tagb" href="error_tag.html">debt_collector</a>
+      <a class="tag4 tagD tagc" href="error_tag.html">epilepsy</a>
+      <a class="tag3 tagV tagd" href="error_tag.html">execution</a>
+      <a class="tag2 tagM tagf" href="error_tag.html">greed</a>
+      <a class="tag4 tagV tage" href="error_tag.html">identity_theft</a>
+      <a class="tag3 tagO tagf" href="error_tag.html">the_IRS</a>
+      <a class="tag4 tagM tagg" href="error_tag.html">jealousy</a>
+      <a class="tag3 tagR taga" href="error_tag.html">lawyer</a>
+      <a class="tag4 tagR tagb" href="error_tag.html">lobbyist</a>
+      <a class="tag2 tagV tagc" href="error_tag.html">murder</a>
+      <a class="tag4 tagR tagc" href="error_tag.html">politician</a>
+      <a class="tag4 tagV tagd" href="error_tag.html">poisoning</a>
+      <a class="tag2 tagV tagd" href="error_tag.html">public_speaking</a>
+      <a class="tag4 tagR tage" href="error_tag.html">spammer</a>
+      <a class="tag2 tagV tagc" href="error_tag.html">taxes</a>
+      </p>
+      <!-- Java animation -->
+      <applet code="MPaint3.class" width=600 height=150>
+      [abstract java animation]
+      </applet>
+      <p class="hell caption">That&#039;s right.
+         Because I could!</p>
+   </td><td>
+      <p><img src="stick_dancers.gif"></p>
+      <p class="hell caption">Why did I put this animation here?
+         Because I could!</p>
+   </td></tr></table>
+      
+</body>
+</html>
+
