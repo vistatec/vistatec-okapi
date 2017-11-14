@@ -25,7 +25,7 @@ class MicrosoftMTAPIImpl implements MicrosoftMTAPI {
 	private HttpClient httpClient;
 	private TokenProvider tokenProvider;
 
-	public static final String MSMT_BASE_URL = "http://api.microsofttranslator.com/v2/Http.svc";
+	public static final String MSMT_BASE_URL = "http://api-co4.microsofttranslator.com/v2/Http.svc";
 
 	MicrosoftMTAPIImpl(Parameters params, HttpClient httpClient, TokenProvider tokenProvider) {
 		this.params = params;
